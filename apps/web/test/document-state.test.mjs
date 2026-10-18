@@ -40,7 +40,7 @@ test('状态写回只改变属性，双向切换同时更新入站高亮、缓�
   assert.equal(withoutStateTime(await readFile(path.join(root,'notes/a.md'),'utf8')),raw.replace('pending #','organized #'));
   assert.ok(Math.abs((await stat(path.join(root,'notes/a.md'))).mtimeMs-time)<1);
   assert.match(lib.documents.find(d=>d.id==='ref').html,/data-state="organized"/);
-  assert.match(lib.documents.find(d=>d.id==='ref').html,/--link-color:#e4d0ab/);
+  assert.match(lib.documents.find(d=>d.id==='ref').html,/--link-color:#8ed3a6/);
   const events=(await observed(lib)).events.filter(e=>e.source==='observed');
   assert.deepEqual(events.map(e=>[e.kind,e.from,e.to]),[['state-changed','pending','organized']]);
   assert.deepEqual(await loader(),lib);

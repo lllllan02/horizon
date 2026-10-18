@@ -1,6 +1,11 @@
 import type { DocumentReaderProps } from '../types/ui.ts';
 import type { Cluster } from '../types/reading.ts';
-import { nextDocumentState, stateLabel, stateComplete } from '../document-state.ts';
+import {
+  documentAppearance,
+  nextDocumentState,
+  stateLabel,
+  stateComplete,
+} from '../document-state.ts';
 import { useViewState } from './useViewState.ts';
 import { CollectionIcon } from './CollectionIcon.tsx';
 import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
@@ -79,6 +84,7 @@ export function DocumentReader({
         type="button"
         className="document-state-toggle"
         data-state={node.state}
+        style={{ color: documentAppearance(node).color }}
         title={stateActionLabel}
         aria-label={stateActionLabel}
         aria-pressed={stateComplete(node.state)}
@@ -90,7 +96,11 @@ export function DocumentReader({
         {stateLabel(node.state)}
       </button>
     ) : (
-      <span className="document-state-label" data-state={node.state}>
+      <span
+        className="document-state-label"
+        data-state={node.state}
+        style={{ color: documentAppearance(node).color }}
+      >
         {stateLabel(node.state)}
       </span>
     ));

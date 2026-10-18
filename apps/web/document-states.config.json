@@ -1,10 +1,10 @@
 {
   "pending": {
     "label": "待学习",
-    "color": "#a2c5ea",
+    "color": "#8ab8ff",
     "link": {
-      "color": "#acd2fa",
-      "opacity": 0.26
+      "color": "#8ab8ff",
+      "opacity": 0.24
     },
     "marker": {
       "hollow": true
@@ -17,10 +17,10 @@
   },
   "reading": {
     "label": "阅读中",
-    "color": "#aadcd8",
+    "color": "#edc56e",
     "link": {
-      "color": "#aadcd8",
-      "opacity": 0.27
+      "color": "#edc56e",
+      "opacity": 0.24
     },
     "marker": {
       "hollow": true
@@ -33,10 +33,10 @@
   },
   "organized": {
     "label": "已整理",
-    "color": "#f3e2c5",
+    "color": "#8ed3a6",
     "link": {
-      "color": "#e4d0ab",
-      "opacity": 0.18
+      "color": "#8ed3a6",
+      "opacity": 0.22
     },
     "marker": {
       "hollow": false

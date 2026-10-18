@@ -56,9 +56,9 @@ test('只改配置即可收录自定义目录、渲染图标、搜索及静态�
  if(enabled){
   assert.match(topic.html,/data-collection="reference"/);
   assert.match(topic.html,/参考 · 待学习/);
-  assert.ok(topic.html.includes('--link-color:#acd2fa;--link-opacity:0.26'));
+  assert.ok(topic.html.includes('--link-color:#8ab8ff;--link-opacity:0.24'));
   assert.equal(library.documents.find(d=>d.id==='custom').state,'pending');
-  assert.ok(library.documents.find(d=>d.id==='term').html.includes('--link-color:#acd2fa;--link-opacity:0.26'));
+  assert.ok(library.documents.find(d=>d.id==='term').html.includes('--link-color:#8ab8ff;--link-opacity:0.24'));
   assert.deepEqual(searchDocuments(createSearchIndex(library.documents),'配置驱动检索').map(d=>d.id),['custom']);
  }else{assert.ok(topic.issues.some(issue=>issue.target==='custom'));}
  assert.deepEqual((await pagesLibrary('./content')).library,library);`;
