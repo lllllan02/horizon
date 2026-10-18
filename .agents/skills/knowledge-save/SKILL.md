@@ -9,14 +9,14 @@ description: 在视界（Horizon）项目中保存讨论与理解，或调研资
 
 1. 确定本轮问题、范围与深度。沿用已明确的目标、用户判断和待核实事项；大专题边界不清时按[分层推进](../../../docs/knowledge-management.md#大专题的分层推进)处理。
 2. 按[检索与候选阅读](../../../docs/knowledge-management.md#检索与候选阅读)查重并读候选正文；新建前补齐正文检索和文件名检查。不要仅凭标题或摘要决定归属。
-3. 按[归属判断与写回](../../../docs/knowledge-management.md#归属判断与写回)决定更新、新建或无需重复保存。外部调研先执行下节，再回到这一步；写前依[面向学习的编排](../../../docs/writing-style.md#面向学习的编排)确定解释顺序。
-4. 写回前重读目标当前内容；正文按[正文写法](../../../docs/writing-style.md)，目录、属性、状态重置与链接按[格式规则](../../../docs/metadata-and-links.md)。概念自身与应用内容按[术语库边界](../../../docs/metadata-and-links.md#术语库)分工。
-5. 维护实质受影响的旧结论与[专题入口](../../../docs/knowledge-management.md#专题入口与阅读组织)。涉及结构变化时仅调用 [knowledge-maintain 修改操作](../knowledge-maintain/SKILL.md#修改操作)，不重跑整套巡检。
+3. 先按[新建授权与自动补充](../../../docs/knowledge-management.md#新建授权与自动补充)核对可补充的 Reading、术语及 Note 授权，再按[归属判断与写回](../../../docs/knowledge-management.md#归属判断与写回)决定更新、新建或无需重复保存。需要外部依据时执行下节，再回到这一步；写前依[面向学习的编排](../../../docs/writing-style.md#面向学习的编排)确定解释顺序。
+4. 写回前重读目标当前内容；正文按[正文写法](../../../docs/writing-style.md)，目录、属性、状态调整与链接按[格式规则](../../../docs/metadata-and-links.md)。概念自身与应用内容按[术语库边界](../../../docs/metadata-and-links.md#术语库)分工。
+5. 新建术语后执行[术语回查与链接补充](../../../docs/knowledge-management.md#术语回查与链接补充)，再维护实质受影响的旧结论与[专题入口](../../../docs/knowledge-management.md#专题入口与阅读组织)。涉及结构变化时仅调用 [knowledge-maintain 修改操作](../knowledge-maintain/SKILL.md#修改操作)，不重跑整套巡检。
 6. 先做[阅读验收](../../../docs/writing-style.md#阅读验收)，再核对属性、状态、来源、链接及入口覆盖。汇报实际文件与缺口；已完整覆盖时指出已有位置。
 
 ## 调研整理
 
-适用于“调研整理 X”或同义请求；仅查询、先讨论且无保存授权时不写入。以下工作接在库内检索之后、知识正文写回之前，已有结果直接复用。
+适用于“调研整理 X”或同义请求，也适用于已获准新建文档时按[自动补充规则](../../../docs/knowledge-management.md#新建授权与自动补充)检索和保存相关依据；仅查询、先讨论且无保存授权时不写入。以下工作接在库内检索之后、知识正文写回之前，已有结果直接复用。
 
 1. 按[调研覆盖](../../../docs/knowledge-management.md#调研覆盖与未展开内容)找出问题及证据缺口，按[精简与依据](../../../docs/writing-style.md#精简与依据)核对原始资料、机制与适用条件。资料类型与数量由问题决定。
 2. 按[来源规则](../../../docs/knowledge-management.md#来源与巡检)复用或完成 Reading。需要提取文章、视频或本地资料时使用 summarize；短工具摘要不能替代原文依据。
@@ -26,6 +26,6 @@ description: 在视界（Horizon）项目中保存讨论与理解，或调研资
 ## 请求分流
 
 - 补例子：读当前文档和相邻上下文，走有关步骤。
-- 转为 Reading：核对原文并按来源规则整理；只有另有知识保存需求时才提炼 notes。
+- 转为 Reading：核对原文并按来源规则整理；提炼为新 Note 时核对[新建授权](../../../docs/knowledge-management.md#新建授权与自动补充)。
 - 巡视模块：交由 [knowledge-maintain 专题巡检](../knowledge-maintain/SKILL.md#专题巡检)。
 - 普通概念答疑：留在对话中；已有保存授权时再写回。
