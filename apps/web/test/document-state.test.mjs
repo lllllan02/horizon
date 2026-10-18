@@ -111,7 +111,7 @@ test('所有目录共用三态，旧完成状态兼容且显式三态优先', as
   assert.equal(stateLabel('organized'),'已整理');
 });
 
-test('正文变化只将已整理降为阅读中，重启、旧导读与元数据修改遵循同一规则', async t=>{
+test('实质更新标记与正文变化同时存在才降级，重启、旧导读与元数据修改遵循同一规则', async t=>{
   const root=await fixture(t);
   for (const [collection,id,status] of [
     ['notes','done','learning_status: organized'],
@@ -119,7 +119,7 @@ test('正文变化只将已整理降为阅读中，重启、旧导读与元数�
     ['notes','pending','learning_status: pending'],
     ['readings','legacy','read: true'],
     ['glossary','term','learning_status: organized'],
-  ]) await writeFile(path.join(root,collection,id+'.md'),`---\ntitle: ${id}\n${status}\n---\n旧正文`);
+  ]) await writeFile(path.join(root,collection,id+'.md'),`---\ntitle: ${id}\nupdated_at: "2026-01-01"\n${status}\n---\n旧正文`);
   const initial=await loadLibrary(root);
   assert.equal(await reconcileDocumentStates(root,initial),initial); // First load establishes a baseline.
   await activityForLibrary(root,initial,{observe:true});
@@ -129,10 +129,10 @@ test('正文变化只将已整理降为阅读中，重启、旧导读与元数�
   let lib=await reconcileDocumentStates(root,await loadLibrary(root));
   assert.equal(lib.documents.find(d=>d.id==='done').state,'organized');
   await activityForLibrary(root,lib,{observe:true});
-  // Recreate loaders to model a service restart; stored body hashes remain authoritative.
+  // Recreate loaders to model a service restart; compare both revision time and body.
   for (const doc of lib.documents) {
     const file=path.join(root,doc.path);
-    await writeFile(file,(await readFile(file,'utf8')).replace('旧正文','新正文'));
+    await writeFile(file,(await readFile(file,'utf8')).replace('旧正文','新正文').replace('2026-01-01','2026-02-01'));
   }
   lib=await reconcileDocumentStates(root,await loadLibrary(root));
   for (const doc of lib.documents) {
@@ -146,21 +146,52 @@ test('正文变化只将已整理降为阅读中，重启、旧导读与元数�
   assert.equal((await reconcileDocumentStates(root,lib)).documents.find(d=>d.id==='done').state,'organized');
 });
 
-test('旧活动快照可用于正文检测，损坏快照不重写文档', async t=>{
+test('旧活动快照先建立实质更新基线，损坏快照不重写文档', async t=>{
   const root=await fixture(t),file=path.join(root,'notes/a.md');
-  await writeFile(file,'---\nlearning_status: organized\n---\n正文');
+  await writeFile(file,'---\nupdated_at: "2026-01-01"\nlearning_status: organized\n---\n正文');
   await activityForLibrary(root,await loadLibrary(root),{observe:true});
   const activityFile=path.join(root,'.activity.json');
   const state=JSON.parse(await readFile(activityFile,'utf8'));
   delete state.documents.a.bodyDigest;
+  delete state.documents.a.updatedAt;
   state.documents.a.state='understood';
   await writeFile(activityFile,JSON.stringify(state));
   await writeFile(file,(await readFile(file,'utf8'))+'\n新增');
+  assert.equal((await reconcileDocumentStates(root,await loadLibrary(root))).documents[0].state,'organized');
+  await activityForLibrary(root,await loadLibrary(root),{observe:true});
+  await writeFile(file,(await readFile(file,'utf8')).replace('2026-01-01','2026-02-01')+'\n主要内容更新');
   assert.equal((await reconcileDocumentStates(root,await loadLibrary(root))).documents[0].state,'reading');
   await writeFile(activityFile,'broken');
   const before=await readFile(file,'utf8');
   await assert.rejects(reconcileDocumentStates(root,await loadLibrary(root)),/JSON|Unexpected/);
   assert.equal(await readFile(file,'utf8'),before);
+});
+
+test('补链、换链、格式和小幅润色不降级，正文与更新时间单独变化也不推断实质修订', async t=>{
+  const root=await fixture(t),file=path.join(root,'notes/a.md');
+  const raw='---\ntitle: A\nupdated_at: "2026-01-01"\nlearning_status: organized\nlearning_status_changed_at: "2026-01-02T10:00:00.000+08:00"\n---\n熔断限制无效请求。';
+  await writeFile(file,raw);
+  await activityForLibrary(root,await loadLibrary(root),{observe:true});
+  for (const body of ['[[term|熔断]]限制无效请求。','[[other|熔断]]限制无效请求。','**熔断**限制无效请求。','熔断减少无效请求。']) {
+    const next=raw.replace('熔断限制无效请求。',body);
+    await writeFile(file,next);
+    const lib=await reconcileDocumentStates(root,await loadLibrary(root));
+    assert.equal(lib.documents[0].state,'organized');
+    assert.equal(await readFile(file,'utf8'),next);
+    await activityForLibrary(root,lib,{observe:true});
+  }
+  // A timestamp correction alone is metadata, not a body revision.
+  await writeFile(file,(await readFile(file,'utf8')).replace('2026-01-01','2026-02-01'));
+  const lib=await reconcileDocumentStates(root,await loadLibrary(root));
+  assert.equal(lib.documents[0].state,'organized');
+  // Missing or invalid revision history also must not guess.
+  for (const value of [null, 'unknown']) {
+    const activityFile=path.join(root,'.activity.json');
+    const snapshot=JSON.parse(await readFile(activityFile,'utf8'));
+    snapshot.documents.a.updatedAt=value;
+    await writeFile(activityFile,JSON.stringify(snapshot));
+    assert.equal((await reconcileDocumentStates(root,await loadLibrary(root))).documents[0].state,'organized');
+  }
 });
 
 

@@ -26,7 +26,14 @@ interface ActivityState {
   startedAt: string | null;
   documents: Record<
     string,
-    { title: string; collection: string; state: string | null; digest: string; bodyDigest?: string }
+    {
+      title: string;
+      collection: string;
+      state: string | null;
+      digest: string;
+      bodyDigest?: string;
+      updatedAt?: string | null;
+    }
   >;
   images: Record<string, ImageSnapshot>;
   events: ActivityEvent[];
@@ -136,6 +143,7 @@ const validState = object<ActivityState>({
       state: nullable(literal('pending', 'reading', 'organized', 'understood', 'unread', 'read')),
       digest: string,
       bodyDigest: optional(string),
+      updatedAt: optional(nullable(string)),
     }),
   ),
   images: dictionary(
@@ -176,12 +184,10 @@ export async function reconcileDocumentStates(
     const old = Object.hasOwn(previous.documents, doc.id) ? previous.documents[doc.id] : null;
     if (!old || normalizeState(old.state ?? '') !== 'organized' || doc.state !== 'organized')
       continue;
-    // Older activity snapshots include the title in their digest. Compare only when its title
-    // is unchanged; new snapshots always distinguish body changes from metadata edits.
-    const changed = old.bodyDigest
-      ? old.bodyDigest !== hash(doc.body)
-      : old.title === doc.title && old.digest !== hash(doc.title + '\n' + doc.body);
-    if (changed)
+    // updated_at marks a substantive revision; links, formatting and minor edits keep it.
+    // Missing/legacy baselines cannot establish revision intent, so observe them first.
+    const revisionAdvanced = documentTime(doc.updated) > documentTime(old.updatedAt);
+    if (old.bodyDigest && revisionAdvanced && old.bodyDigest !== hash(doc.body))
       current = await updateDocumentState(
         root,
         {
@@ -237,6 +243,7 @@ export async function activityForLibrary(
           state: doc.state,
           digest: hash(doc.title + '\n' + doc.body),
           bodyDigest: hash(doc.body),
+          updatedAt: doc.updated,
         },
       ]),
     );

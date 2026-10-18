@@ -50,14 +50,14 @@ test('本地接口条件请求、内容刷新、版本冲突和状态写回保�
   const root=await mkdtemp(path.join(os.tmpdir(),'horizon-http-'));
   t.after(()=>rm(root,{recursive:true,force:true}));
   for(const dir of ['notes','readings'])await mkdir(path.join(root,dir));
-  const file=path.join(root,'notes/a.md');await writeFile(file,'---\ntitle: Test\n---\nfirst');
+  const file=path.join(root,'notes/a.md');await writeFile(file,'---\ntitle: Test\nupdated_at: "2026-01-01"\n---\nfirst');
   const app=await startServer({root,port:0,optimizeDependencies:false,development:true});t.after(()=>app.close());
   const url=`http://127.0.0.1:${app.server.address().port}`;
   const first=await fetch(url+'/api/library');const etag=first.headers.get('etag');
   const library=parseLibrary(await first.json());assert.ok(etag);
   const unchanged=await fetch(url+'/api/library',{headers:{'If-None-Match':etag}});
   assert.equal(unchanged.status,304);assert.equal(await unchanged.text(),'');
-  await writeFile(file,'---\ntitle: Test\n---\nsecond');
+  await writeFile(file,'---\ntitle: Test\nupdated_at: "2026-01-01"\n---\nsecond');
   const changed=await fetch(url+'/api/library',{headers:{'If-None-Match':etag}});
   assert.equal(changed.status,200);assert.notEqual(changed.headers.get('etag'),etag);
   const next=parseLibrary(await changed.json());
@@ -68,7 +68,12 @@ test('本地接口条件请求、内容刷新、版本冲突和状态写回保�
   assert.deepEqual(parseLibrary(await (await fetch(url+'/api/library')).json()).documents,movedLibrary.documents);
   await writeFile(file,(await readFile(file,'utf8')).replace('title: Test','title: Renamed'));
   assert.equal(parseLibrary(await (await fetch(url+'/api/library')).json()).documents[0].state,'organized');
-  await writeFile(file,(await readFile(file,'utf8')).replace('second','third'));
+  // Link-only edits preserve completion and progress order through the HTTP polling path.
+  const completed=await readFile(file,'utf8');
+  await writeFile(file,completed.replace('second','[[a|second]]'));
+  assert.equal(parseLibrary(await (await fetch(url+'/api/library')).json()).documents[0].state,'organized');
+  assert.equal(await readFile(file,'utf8'),completed.replace('second','[[a|second]]'));
+  await writeFile(file,completed.replace('second','third').replace('2026-01-01','2026-02-01'));
   const edited=parseLibrary(await (await fetch(url+'/api/library')).json());
   assert.equal(edited.documents[0].state,'reading');
   assert.match(await readFile(file,'utf8'),/learning_status: reading/);
