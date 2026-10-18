@@ -1,6 +1,5 @@
 ---
 title: "Stripe：结果未知时怎样安全重试"
-parent: retry-decision
 category: "分布式系统"
 tags: ["重试", "异常分类"]
 created_at: "2026-10-10"

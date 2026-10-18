@@ -1,6 +1,5 @@
 ---
 title: "Temporal：用策略约束重试与停止条件"
-parent: retry-decision
 category: "分布式系统"
 tags: ["重试", "超时"]
 created_at: "2026-10-10"

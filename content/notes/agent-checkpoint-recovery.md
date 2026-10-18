@@ -10,9 +10,8 @@ updated_at: "2026-10-17T22:43:15+08:00"
 reading_suggestions:
   - eino-checkpoints
   - agent-checkpoint-runtime
-  - idempotency
   - langgraph-checkpoints
-learning_status_changed_at: "2026-10-17T22:46:36.224+08:00"
+learning_status_changed_at: "2026-10-18T23:34:54.675+08:00"
 ---
 
 **中断恢复（Interruption Recovery）是利用持久保存的数据与执行进度，在中断后接续未完成任务的机制。**
@@ -27,6 +26,6 @@ Agent 意外退出，或暂停等待用户[[tool-approvals|审批]]、补充信�
 
 恢复时，程序读取最近成功保存的检查点，按记录继续处理工具请求、调用模型或返回已有回答。等待中的任务仍须满足继续条件，已取消的任务不再执行；尚未保存的工作可能需要重做。
 
-检查点也不能保证外部操作只发生一次：远端已成功、本地结果未保存时，需要查询原结果或依赖远端的[[idempotency|幂等保证]]重试。
+检查点也不能保证外部操作只发生一次：远端已成功、本地结果未保存时，需要查询原结果或依赖远端的幂等保证重试。
 
 [[agent-checkpoint-runtime|中断恢复的实现]]主要确定两件事：检查点放在哪里，以及保存哪些信息。保存与恢复也可使用 [[eino-checkpoints|Eino]]、[[langgraph-checkpoints|LangGraph]] 或 [[temporal-durable-execution|Temporal]] 提供的能力。

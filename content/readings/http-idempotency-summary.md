@@ -1,6 +1,5 @@
 ---
 title: "RFC 9110：HTTP 幂等语义"
-parent: idempotency
 category: "分布式系统"
 tags: ["幂等", "重试"]
 created_at: "2026-10-12T11:18:36+08:00"

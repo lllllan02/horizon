@@ -14,7 +14,7 @@ source: "[Go Singleflight Melts in Your Code, Not in Your DB](https://victoriame
 
 Group 用锁保护在途调用表：首个请求登记并执行，后来的同 key 请求等待该调用，完成后共享结果。锁不覆盖整个业务函数，但大量请求登记仍可能产生竞争。
 
-它可在缓存未命中时合并回源，缓解[[cache-overload-protection|缓存击穿]]；执行结束后的新请求仍能重新执行，因此**「不能代替长期缓存」**。`Do` 同步等待，`DoChan` 返回结果通道；`shared` 表示结果被共享，首个执行者也可能得到 true。
+它可在缓存未命中时合并回源，缓解缓存击穿；执行结束后的新请求仍能重新执行，因此**「不能代替长期缓存」**。`Do` 同步等待，`DoChan` 返回结果通道；`shared` 表示结果被共享，首个执行者也可能得到 true。
 
 ## 超时与 Forget 不做什么
 

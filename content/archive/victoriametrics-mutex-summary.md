@@ -21,4 +21,4 @@ source: "[Go sync.Mutex: Normal and Starvation Mode](https://victoriametrics.com
 
 等待超过实现阈值后，Mutex 可转入饥饿模式：解锁者把锁交给队首，新来者排队，避免继续争抢。等待压力减轻后恢复正常模式，减少始终交接带来的吞吐损失。
 
-原文的约 1 ms 是模式切换阈值，**「不是获取锁的时限保证」**。文章解释历史实现的取舍，基本用法见 [[go-mutex|Mutex]]。
+原文的约 1 ms 是模式切换阈值，**「不是获取锁的时限保证」**。文章解释历史实现的取舍。

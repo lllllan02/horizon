@@ -1,6 +1,5 @@
 ---
 title: "Go backoff：用函数包装一次操作"
-parent: retry-wrapper
 category: "服务治理"
 tags: ["重试", "异常分类"]
 created_at: "2026-10-12T11:09:12+08:00"
@@ -26,4 +25,4 @@ source: "[backoff v7.0.0 源码](https://github.com/cenkalti/backoff/blob/v7.0.0
 
 ## 哪些信息适合记录
 
-`WithNotify` 只在失败后确定还会重试时回调，不包含最终停止事件。日志需分别记录尝试失败与最终返回，避免只知道“曾经重试”，不知道为何结束。具体用法见[[retry-wrapper|重试的封装与实现]]。
+`WithNotify` 只在失败后确定还会重试时回调，不包含最终停止事件。日志需分别记录尝试失败与最终返回，避免只知道“曾经重试”，不知道为何结束。

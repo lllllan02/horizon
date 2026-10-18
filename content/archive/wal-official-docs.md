@@ -13,7 +13,7 @@ source:
   - "https://dev.mysql.com/doc/dev/mysql-server/8.4.11/PAGE_INNODB_REDO_LOG.html"
 ---
 
-本篇节选 PostgreSQL 16、SQLite WAL 官方说明及 MySQL 8.4.11 开发文档中，与[[wal|预写日志]]的持久化顺序、提交和恢复直接相关的机制。不覆盖复制配置、完整日志格式或 SQLite 并发限制。
+本篇节选 PostgreSQL 16、SQLite WAL 官方说明及 MySQL 8.4.11 开发文档中，与预写日志的持久化顺序、提交和恢复直接相关的机制。不覆盖复制配置、完整日志格式或 SQLite 并发限制。
 
 ## 为何提交可以先于数据页写回
 

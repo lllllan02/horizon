@@ -7,13 +7,12 @@ tags: ["Agent", "沙箱"]
 created_at: "2026-10-10"
 updated_at: "2026-10-10"
 reading_suggestions:
-  - container-images
   - docker-sandboxes-practice
 ---
 
 **Docker 根据镜像启动一组隔离的进程，通过挂载、网络和资源参数形成容器边界。** 普通 Linux 容器仍共享宿主内核：命名空间分开文件挂载、网络等视图，cgroup 管资源额度；不是给每个容器启动独立内核。
 
-[[container-images|镜像]]提供工具和依赖，任务目录再按需挂入，适合重复创建相同执行环境。
+镜像提供工具和依赖，任务目录再按需挂入，适合重复创建相同执行环境。
 
 准备包含 Python 和依赖的镜像，在只放任务文件的目录执行。以下使用示例镜像，未实测：
 

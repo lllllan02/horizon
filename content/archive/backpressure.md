@@ -19,4 +19,4 @@ aliases: ["Backpressure"]
 
 ## 落地时要注意
 
-跨服务无法继续阻塞时可以拒绝、降级或丢弃，但要定义哪些工作可舍弃；背压按下游实时能力调节上游速度，[[rate-limiting|限流]]按固定速率在入口拒绝，两者常配合。队列长度、最老任务年龄、在途量和拒绝率要一起观察，入口延迟持续增长时仍需结合 [[queue-backlog-capacity|容量与恢复窗口]]，不能只以没有 OOM 判断健康。机制参考：[Reactive Streams](https://www.reactive-streams.org/)。
+跨服务无法继续阻塞时可以拒绝、降级或丢弃，但要定义哪些工作可舍弃；背压按下游实时能力调节上游速度，[[rate-limiting|限流]]按固定速率在入口拒绝，两者常配合。队列长度、最老任务年龄、在途量和拒绝率要一起观察，入口延迟持续增长时仍需结合容量与恢复窗口，不能只以没有 OOM 判断健康。机制参考：[Reactive Streams](https://www.reactive-streams.org/)。

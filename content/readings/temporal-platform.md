@@ -1,6 +1,5 @@
 ---
 title: "Temporal 官方文档：平台与执行分工"
-parent: temporal
 category: "分布式系统"
 tags: ["工作流", "持久化", "重放"]
 created_at: "2026-10-14T16:14:09+08:00"

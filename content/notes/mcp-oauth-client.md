@@ -8,8 +8,6 @@ created_at: "2026-10-11T09:58:18+08:00"
 updated_at: "2026-10-11T10:54:33+08:00"
 reading_suggestions:
   - mcp-http-client
-  - oauth-code
-  - oauth-token
 ---
 
 桌面或命令行 Client 使用当前用户的权限访问远程 MCP Server 时，可以在[[mcp-http-client|HTTP Client]]上增加 OAuth 处理器：**「应用负责浏览器授权与回调，SDK 负责协议处理与令牌使用」**，后续工具调用方式不变。
@@ -18,7 +16,7 @@ reading_suggestions:
 
 ![[assets/mcp-oauth-flow.png|MCP OAuth 接入时序图]]
 
-这是[[oauth-code|授权码流程]]。授权服务器负责登录与发令牌，MCP Server 负责校验令牌和业务权限；两者可以由同一服务方提供。浏览器回传的是临时授权码，用户密码和令牌不需要进入模型上下文。
+这是授权码流程。授权服务器负责登录与发令牌，MCP Server 负责校验令牌和业务权限；两者可以由同一服务方提供。浏览器回传的是临时授权码，用户密码和令牌不需要进入模型上下文。
 
 ## 最小接线
 
@@ -65,4 +63,4 @@ defer session.Close()
 
 - PKCE 将兑换授权码的请求与发起授权的 Client 绑定；`state` 关联本次授权，`iss` 用于检查预期签发方。应用把真实回调参数交给 SDK，不自行伪造或跳过校验。
 - `scope` 表达申请的权限，`resource` 指定目标 MCP 服务；取得令牌后，服务端仍需检查具体业务数据的访问权。[MCP 授权规范](https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization)
-- SDK 处理授权发现、换取令牌、请求头注入，并在服务方提供刷新令牌时处理续期。应用负责安全保存与恢复[[oauth-token|令牌]]，按用户和目标服务隔离；最小示例可先只保留在内存。持久化扩展点见 [SDK 配置与示例](https://pkg.go.dev/github.com/modelcontextprotocol/go-sdk@v1.7.0/auth)。
+- SDK 处理授权发现、换取令牌、请求头注入，并在服务方提供刷新令牌时处理续期。应用负责安全保存与恢复令牌，按用户和目标服务隔离；最小示例可先只保留在内存。持久化扩展点见 [SDK 配置与示例](https://pkg.go.dev/github.com/modelcontextprotocol/go-sdk@v1.7.0/auth)。

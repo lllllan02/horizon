@@ -1,6 +1,5 @@
 ---
 title: "gRPC：错误码怎样表达恢复方式"
-parent: retry-decision
 category: "分布式系统"
 tags: ["重试", "异常分类"]
 created_at: "2026-10-10"

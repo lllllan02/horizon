@@ -9,9 +9,9 @@ source:
   - "https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression"
   - "https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html"
   - "https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html"
-read: false
+learning_status: pending
 created_at: "2026-10-13T17:38:22+08:00"
-updated_at: "2026-10-14T13:59:35+08:00"
+updated_at: "2026-10-18T21:37:01+08:00"
 ---
 
 **文本分类把用户的一句话转换成预设类别：先把文字变成可计算的表示，再由模型计算各类分数。** 训练时用正确标签调整模型，预测时复用训练结果。
@@ -30,7 +30,9 @@ updated_at: "2026-10-14T13:59:35+08:00"
 
 训练建立词表，预测复用它，未收录的词会被忽略。词袋不保留词序，词相同但顺序不同的句子可能得到相同表示；加入相邻词或字符片段能保留局部顺序，仍不表示完整句法。
 
-TF-IDF 在计数基础上降低大量文本中都出现的词的影响。它改变的是输入表示，还没有决定类别。
+[TF-IDF 词项加权](https://scikit-learn.org/stable/modules/feature_extraction.html#tfidf-term-weighting) 将词频（TF）与逆文档频率（IDF）相乘。TF 反映词项在当前文档中的出现频率；IDF 依据文档总数和包含该词项的文档数，降低大量文档中都出现的词的影响。这样，文档中频繁出现且在整个集合中较少见的词通常得到较高权重，避免常见词仅凭次数掩盖更有区分力的词。
+
+scikit-learn 的默认实现使用原始词频，IDF 为 `log((1 + N) / (1 + df(t))) + 1`，其中 `N` 是文档总数，`df(t)` 是包含词项 `t` 的文档数；随后做 L2 归一化，使每篇文档的向量长度为 1。这是具体实现的约定，不能将平滑公式或归一化方式视为所有 TF-IDF 实现的统一定义。它改变的是输入表示，还没有决定类别。
 
 ## 分类模型怎样使用这些数字？
 

@@ -3,7 +3,6 @@ title: "Azure 与 OWASP：RAG 的权限和文档信任边界"
 category: "RAG"
 tags: ["RAG"]
 type: "article"
-parent: "rag-security"
 created_at: "2026-10-13T10:49:42+08:00"
 updated_at: "2026-10-13T12:48:15+08:00"
 source: ["https://learn.microsoft.com/en-us/azure/search/search-security-trimming-for-azure-search", "https://cheatsheetseries.owasp.org/cheatsheets/RAG_Security_Cheat_Sheet.html"]

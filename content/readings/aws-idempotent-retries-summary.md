@@ -1,6 +1,5 @@
 ---
 title: "AWS：用幂等 API 保证重试安全"
-parent: retry-decision
 category: "分布式系统"
 tags: ["幂等", "重试"]
 created_at: "2026-10-10"

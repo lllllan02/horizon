@@ -3,7 +3,6 @@ title: "Anthropic：为片段补背景后再建立索引"
 category: "RAG"
 tags: ["RAG"]
 type: "article"
-parent: "rag-chunking"
 created_at: "2026-10-13T10:49:42+08:00"
 updated_at: "2026-10-13T12:48:15+08:00"
 source: ["https://www.anthropic.com/engineering/contextual-retrieval"]

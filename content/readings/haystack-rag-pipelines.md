@@ -3,7 +3,6 @@ title: "Haystack：用组件连起索引与混合检索"
 category: "RAG"
 tags: ["RAG"]
 type: "article"
-parent: "rag-practice"
 created_at: "2026-10-13T10:49:42+08:00"
 updated_at: "2026-10-13T12:48:15+08:00"
 source: ["https://docs.haystack.deepset.ai/docs/creating-pipelines", "https://haystack.deepset.ai/tutorials/33_hybrid_retrieval"]

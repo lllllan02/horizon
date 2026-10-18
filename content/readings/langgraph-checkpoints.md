@@ -10,7 +10,6 @@ source:
   - "https://docs.langchain.com/oss/python/langgraph/persistence"
   - "https://docs.langchain.com/oss/python/langgraph/checkpointers"
 reading_suggestions:
-  - idempotency
   - langgraph-time-travel
 ---
 
@@ -34,6 +33,6 @@ reading_suggestions:
 | `async` | 保存与下一步并行 | 崩溃可能丢失尚未写完的进度 |
 | `exit` | 成功、错误或人工中断退出时保存 | 中途进程崩溃时没有相应中间进度 |
 
-因此，配置了存储后端后，还要核对提交时机。检查点也不与外部业务操作自动组成事务；远端已成功、本地却未保存结果时，恢复可能重复调用，需要查询原结果或依赖远端的[[idempotency|幂等保证]]。
+因此，配置了存储后端后，还要核对提交时机。检查点也不与外部业务操作自动组成事务；远端已成功、本地却未保存结果时，恢复可能重复调用，需要查询原结果或依赖远端的幂等保证。
 
 **「指定旧检查点继续会再次执行后续节点」**；主动回看历史与从最新失败处恢复的目的不同，[[langgraph-time-travel|重放与分叉导读]]保留前者的示例和边界。

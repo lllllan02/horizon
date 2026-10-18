@@ -9,7 +9,6 @@ updated_at: "2026-10-16T20:55:28+08:00"
 reading_suggestions:
   - sandbox-resources
   - tool-scheduling
-  - rate-limiting
   - sandbox-processes
 ---
 
@@ -26,7 +25,7 @@ reading_suggestions:
 
 先明确名额代表一条命令、一个容器还是一台 VM，并让限制落在实际管理该资源的服务上。安全上限由容量与负载验证决定，没有通用数量。
 
-这与[[rate-limiting|启动速率限制]]不同：每秒只启动一个任务，任务若都长时间不结束，仍会积累。并发控制要与[[sandbox-resources|单任务配额]]、[[sandbox-processes|进程清理]]配合。
+这与启动速率限制不同：每秒只启动一个任务，任务若都长时间不结束，仍会积累。并发控制要与[[sandbox-resources|单任务配额]]、[[sandbox-processes|进程清理]]配合。
 
 ## 为什么请求已经入队，用户仍然长时间等不到结果？
 

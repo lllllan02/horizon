@@ -3,7 +3,6 @@ title: "Microsoft GraphRAG：实体、社区与两类查询"
 category: "RAG"
 tags: ["RAG"]
 type: "article"
-parent: "rag-graph"
 created_at: "2026-10-13T10:49:42+08:00"
 updated_at: "2026-10-13T12:48:15+08:00"
 source: ["https://microsoft.github.io/graphrag/index/overview/", "https://microsoft.github.io/graphrag/query/overview/"]

@@ -1,6 +1,5 @@
 ---
 title: "AWS SDK：按错误语义判断是否重试"
-parent: retry-decision
 category: "分布式系统"
 tags: ["重试", "异常分类"]
 created_at: "2026-10-10"

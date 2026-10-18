@@ -16,12 +16,19 @@
       "digest": "934e386cc8d01e85380c0e88fd43b1fc4d5050873c855701324bc6688c3ced62",
       "bodyDigest": "9062c6bff30c1f50208e8b5bbd1bf33fb51327ca9c56164e96ae97f5db623ec4"
     },
+    "dense-retrieval": {
+      "title": "稠密召回",
+      "collection": "glossary",
+      "state": "pending",
+      "digest": "d573d6ea16271bdd67d0020133b4c56fe00c8dcbaf6ad7f1858f06b24dd95ee2",
+      "bodyDigest": "924e3286880e8d45aa45bf1fa5da4c94e02b596846618645181b7783246c14a5"
+    },
     "event-replay": {
       "title": "事件重放（Event Replay）",
       "collection": "glossary",
       "state": "pending",
-      "digest": "4f0d9f286bb8bccec8db169744e2bf3f8072079e84428c09b0ddf0e549662abc",
-      "bodyDigest": "6049527f20aa41e1639346f60daae61287a757995b5104984b0e3aed31a0d046"
+      "digest": "1e49a97b5cd5ac77ff6f0861c671c3d6d6fd304ce896ee7017f4d39c6ad98f3b",
+      "bodyDigest": "77e961d2e7f830979d18ff9dd040d96d95e3702d441a046ea8bdbd8465c95b0a"
     },
     "json-rpc": {
       "title": "JSON-RPC（基于 JSON 的远程过程调用协议）",
@@ -34,8 +41,8 @@
       "title": "削峰填谷（Load Leveling）",
       "collection": "glossary",
       "state": "pending",
-      "digest": "a41201612e866bf27b591c9718b3de543d759ef7f925887f63e3b217740f3fc2",
-      "bodyDigest": "b2096d9c51bd2d157df012133b7a41d9fca70104069ad99619ccde2a9df1d145"
+      "digest": "a67bbfff3bbd9d0d6c6c2f16bb56b6d40c6460c27699df941045c23af1ce9097",
+      "bodyDigest": "7282ea5c6f219ba4d594fb16957b2f73b71ab2d5312e6fafd3352437a04b6521"
     },
     "mean-reciprocal-rank": {
       "title": "MRR（平均倒数排名）",
@@ -93,6 +100,20 @@
       "digest": "b787dbb0eee6a0306e8aefdaaa28bc2b45ca5cdc32eedf96af19c0139c873977",
       "bodyDigest": "5d5f39253bf4463380b500857b7c66d7b569e08da6b76067b1bebf9e02db293c"
     },
+    "retrieval": {
+      "title": "召回",
+      "collection": "glossary",
+      "state": "pending",
+      "digest": "5993b9a48def97f4cf43d3704309adad52127f49b0be7c4ff8ac10e2e2db68fb",
+      "bodyDigest": "2711fbc5b257b756de430ae4a638ba51e81ad720f35c68f3c47e500913bbd9ed"
+    },
+    "sparse-retrieval": {
+      "title": "稀疏召回",
+      "collection": "glossary",
+      "state": "pending",
+      "digest": "1f593f5757a26090396a4b9dcbb2083ca155226e75a76baecb59c81484164d0d",
+      "bodyDigest": "9fd334cd8cd5639b77e6c1a9c7a1824d38f99f0b6d4fa6b82bac2c9e2cc30635"
+    },
     "stdio": {
       "title": "Stdio（标准输入输出）",
       "collection": "glossary",
@@ -107,6 +128,13 @@
       "digest": "1d2a4dcb79731ed2aa74e9a10c86dc53c4be75f231d19ea5eb92df0f2d2c60ec",
       "bodyDigest": "d9a6b5e6ff4418211a3460a7d55da1f221758aa88b3363247b8d18284647911e"
     },
+    "tf-idf": {
+      "title": "TF-IDF",
+      "collection": "glossary",
+      "state": "pending",
+      "digest": "d0c0dd5640cc1996aeeb6d7dc8fca4cba39e531d5716ced76bc613ae25ecc176",
+      "bodyDigest": "0d369b0819585a198d1b177e359d7fb0d24db37b5ed521be2dfbb92f8d0577b2"
+    },
     "trace-and-span": {
       "title": "Trace 与 Span",
       "collection": "glossary",
@@ -114,12 +142,138 @@
       "digest": "56daf782628f7ffcd8674aa0fa9f01d83b78c7cf8baf1688089352fb21c1cf7d",
       "bodyDigest": "e4ff630119a110f7de37f1e34ee34004f31afd74d14ff06eff0982efbb17992f"
     },
+    "agent-career-motivation": {
+      "title": "为什么想做 Agent 开发？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "311072468d243dd199742e12bf98ecd14fff711b517e5e487ddd6f05ff335d18",
+      "bodyDigest": "6893ab311d85c30b91b9a73a6505a620f0fc969a3e7660656742a43aa0b42bb6"
+    },
+    "agent-interview-hub": {
+      "title": "Agent 面试题",
+      "collection": "interviews",
+      "state": "pending",
+      "digest": "9f933ff231a44111fa8c098b2995034b10a5915d9e2addb7dfcd039ef4cacec5",
+      "bodyDigest": "bd090fa46a2d2a758593fa2939e5476e802b519ea06af507cc94d4ceda08cc56"
+    },
+    "agent-memory-leak-interview": {
+      "title": "Agent 服务最常见的生产环境内存泄漏有哪几种？如何排查和修复？",
+      "collection": "interviews",
+      "state": "pending",
+      "digest": "5a91c7520fae7eda52c96dab8012cae35ab89617d4d4b0279a12063782672d02",
+      "bodyDigest": "f60833def3fef5a92fba6644742fa1e18e5f0567ab9194129f7b7fb9901cf3fc"
+    },
+    "agent-timeout-interview": {
+      "title": "模型调用响应慢，导致 Agent 链路超时，如何设计分层超时与熔断？高并发下怎么处理？",
+      "collection": "interviews",
+      "state": "reading",
+      "digest": "e73557beef7f47b0f16f82b1b87cae7fe3e38d9bdba09ff1faa331d885f36517",
+      "bodyDigest": "cee3ef6789ea4471c2ca2206b00f84e642470688a560783a496048fea81f0f75"
+    },
+    "bm25-interview": {
+      "title": "BM25 是什么？基本原理是什么？",
+      "collection": "interviews",
+      "state": "pending",
+      "digest": "f343d41a9fa3c4d4e02dd7f80265d38a1da5974039d97dfa4edaed9f1ccdf17c",
+      "bodyDigest": "313b93796a85f3f88ae6d9bd09e1fef818930f787e55d62a177b3a281c06ed40"
+    },
+    "contest-bottleneck-interview": {
+      "title": "比赛开赛时出现瞬时洪峰，你们是怎么定位瓶颈的？",
+      "collection": "interviews",
+      "state": "reading",
+      "digest": "9ad5ee630fb82bbd3caac243ee6fd8c29436b2bdbfc50af4a943cb4520683167",
+      "bodyDigest": "c9a43ae56739beee9cf0d35d14e08434bb8ddfddfcd28549352cf32be83660f1"
+    },
+    "db-connection-wait-interview": {
+      "title": "你们怎么确认耗时主要花在等待数据库连接上？",
+      "collection": "interviews",
+      "state": "reading",
+      "digest": "a3579baeb8beb1b474600f7f60e651d5942a26a7acf2dcfb854ec7ac90996830",
+      "bodyDigest": "3964aa1d314e672808898e8cd67b8955f0323a287601ddccca61292a7d530a46"
+    },
+    "hybrid-retrieval-interview": {
+      "title": "为什么要做稀疏加稠密双路召回？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "c26900176667c41eaf7a2d0f712cf8dbdc05b79f753c931bfae90c435152dc2a",
+      "bodyDigest": "36b69da6523bae618de8a8d948333c7b63b320a2800564776b8f37a18d397a79"
+    },
+    "interview-hub": {
+      "title": "面试题",
+      "collection": "interviews",
+      "state": "reading",
+      "digest": "24cfeea791f4798aefa6cb36580ac8bc73ff2f6d184a9d3bec7c5d28ebae3e2e",
+      "bodyDigest": "dc87eaa1a780d7b558a74c5ba293e8b60130c0d19b99711e0e6a7d9e8fa642e1"
+    },
     "interview-resources": {
       "title": "Go 与 Agent 面试资料",
       "collection": "interviews",
-      "state": "reading",
+      "state": "organized",
       "digest": "ec2ed5633fbdbca2eb6cde848e943495e41ebe5d54109a6cfe88db25f75bccc1",
       "bodyDigest": "33f3afbb0946b043c7a930107babfb600b79b73d76bb790685b2f8b5ec8cc201"
+    },
+    "mysql-deadlock-interview": {
+      "title": "MySQL 遇到死锁，如何排查和优化修复？",
+      "collection": "interviews",
+      "state": "reading",
+      "digest": "41b27bc668332e54b9761a12117c4872415b818a018090ef5e9f66e242badba0",
+      "bodyDigest": "41895b5ada72eda4e9f36f2614c4c73088062811e729071c56be3629026cb535"
+    },
+    "mysql-deadlock-victim": {
+      "title": "发生死锁时，InnoDB 会回滚哪个事务？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "c7f1e7fdae3393f8c55babb2eb8b6d9fbeb7ea4cd2e99d1c3ef863cf9c507066",
+      "bodyDigest": "3d62bce70fa3e267202f39e2132afae5a58e2529e9f99f498742509a953cc6b0"
+    },
+    "mysql-interview-index": {
+      "title": "MySQL 面试题",
+      "collection": "interviews",
+      "state": "pending",
+      "digest": "3ecf05bff71927c715d459bcdd524430cbf8a67a7ea13ae53f1f3075d8962e29",
+      "bodyDigest": "7419fc78a66c0c5bd576e91bae6bf418d9493b0f8a8186fbf0af92dc8a63d838"
+    },
+    "mysql-transaction-retry": {
+      "title": "MySQL 事务失败后，哪些情况可以重试？怎么重试？",
+      "collection": "interviews",
+      "state": "reading",
+      "digest": "1bcb9a0e8c8bf2eda6c1cec07caf0be4ea2750dc5d2653a6e3fb670177679f32",
+      "bodyDigest": "d8bffbc3435127a5dac6ffdcdf925ecc4d7a9b35a79ed9aa5d982b2829b4d6ab"
+    },
+    "project-interview-index": {
+      "title": "项目经历面试题",
+      "collection": "interviews",
+      "state": "pending",
+      "digest": "3548a1a740e1500f03332bfe16c26d4603696cc97e103cdd72fff7d5cd0a959f",
+      "bodyDigest": "67ff6f2444021278d7249927a0c44f67ec746e8235a50cb51a886647e42ea809"
+    },
+    "retrieval-fusion-interview": {
+      "title": "稀疏和稠密双路召回怎么混合、怎么配合？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "720669314604879f4264340e2348746d4f542e1e07b9a0d6755dc7166fadf432",
+      "bodyDigest": "af7bd273d3387f24ac4543414840f21df7a1c81d5be46f152caeaf1584f970a0"
+    },
+    "retrieval-fusion-weight-interview": {
+      "title": "双路召回的融合比例是怎么得到的？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "27d6eb59a11688a690e095cc33ad0f8676f67306f7923fa2384a42d516aa99cc",
+      "bodyDigest": "088f42139f2a126ddc9e3f2f123094f5a9e6413870980f6c78b430419a035899"
+    },
+    "retrieval-interview-index": {
+      "title": "检索与召回面试题",
+      "collection": "interviews",
+      "state": "pending",
+      "digest": "f81c760e7282d2849646a964d70b591efba34550c9b1371ae748d4ffbbada5a6",
+      "bodyDigest": "a47061f7e810ed73170f1c19c524fa1cea1734a2cc24a3537f0c5d469e53df73"
+    },
+    "tf-idf-interview": {
+      "title": "TF-IDF 是什么？基本原理是什么？",
+      "collection": "interviews",
+      "state": "pending",
+      "digest": "08a8689dc7ee776545055ebda493f9585ffe9bb34c175986d9d0b05a540d470a",
+      "bodyDigest": "c86ce589e8232e411d3871a55e5421233ee0b069e7562a775b4d6593e854d0ec"
     },
     "a2a": {
       "title": "A2A（Agent 间通信协议）",
@@ -132,15 +286,15 @@
       "title": "Agent 的中断恢复机制",
       "collection": "notes",
       "state": "organized",
-      "digest": "82ee930c6e5199d206a6fc61a4fe525fd369285c393ae69021f0dd0ded28e376",
-      "bodyDigest": "91efe301e33620770e244f56cb069267d3826cb8808e6e5db17be82c71d98a26"
+      "digest": "41b340337fcbd2013fd2408329ab6dccc05cd7e7ec60671e5885b956981ef9c3",
+      "bodyDigest": "e51e08ac4545ce65ebaba2b9810a3e529f9852ca6ad9e7f5a05473c2bfaf5809"
     },
     "agent-checkpoint-runtime": {
       "title": "中断恢复的实现",
       "collection": "notes",
       "state": "organized",
-      "digest": "074ef9bd0fe4445a551a516d0c01c4fd82a2701560bcba668cffd929c4a330c6",
-      "bodyDigest": "1ba523f0f4b0e7950fb328597e19c79db2efb4adce7ca1ac72e26ab763069858"
+      "digest": "15723b34b7a55db724f226b828a2fa81212d78d9f71b484129da6f22a1a22fb5",
+      "bodyDigest": "8a0a7d34d553c4739d5689cb7000b6c8ce19e2472276f16bc8d5bc55de5866bd"
     },
     "agent-context-input": {
       "title": "Agent 上下文",
@@ -174,8 +328,8 @@
       "title": "Agent 的反馈与调整机制",
       "collection": "notes",
       "state": "organized",
-      "digest": "d8b82d23de7af81d020788a222ef1e249fa169cddd4bb71b2b294404754165cf",
-      "bodyDigest": "6ae30d4c9f32229d5324ac49f3b406ee258cecac8d67fdbbf2d8ab182c2ca0ef"
+      "digest": "76b5d8bc2de243d3bd28d562969f299589eda9c22ed9d1ed738d6b973d253b65",
+      "bodyDigest": "ec1acb456399e819b603966f3270ef49c4d457c0b64226cd6d77d068990b37a5"
     },
     "agent-guardrails": {
       "title": "Agent 行为约束",
@@ -209,8 +363,8 @@
       "title": "Agent 按需加载",
       "collection": "notes",
       "state": "organized",
-      "digest": "e79190c42f0a4b1deb97577976b01d0a7b67eb73840a33a721c7993e0ddcca79",
-      "bodyDigest": "a40bb48d980fe6d96a14a9963fcdbb359076de4d4f26b0414236a6ce9ca14108"
+      "digest": "a59f57a00c7c178af323f51dd171f962fb6848a456e174e17668b34719a355d6",
+      "bodyDigest": "96d9225ac27e7ce73fc76b2a53e449a8f864137dce05d7d84856ccda9e8acc6a"
     },
     "agent-loop": {
       "title": "最小 Agent Loop",
@@ -251,8 +405,8 @@
       "title": "Agent 重试",
       "collection": "notes",
       "state": "organized",
-      "digest": "04d35db62b6636c9cc6b63b1c32977a8158ce8fd1cb5ff881921e3897b38eb95",
-      "bodyDigest": "3bc81a7809214a702d63fd620d23614f2079762f341c91e3387620d49ffa7549"
+      "digest": "53ceb1f5364dbc7698664b53fedca05e663cff0289b850bfe6f8bf80a3d52bfb",
+      "bodyDigest": "8d1d01be6d4def2ca6c4fc51104ca4f7f2aa23e99a29c1b63ac04d48ebc3db69"
     },
     "agent-sandbox": {
       "title": "Agent 沙箱",
@@ -310,201 +464,12 @@
       "digest": "b7c3312e39e3e95268a73db179d72e40aa2971930f0172b0b358036a552ae9ee",
       "bodyDigest": "0604f62b2065ce3fb2d2f7c4c1e1b48c72f61839aeb4c9252ab4bfe3c2a4169c"
     },
-    "api-gateway": {
-      "title": "API 网关",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "81c68ee759202baaae4c0633dbd47b59ea2721b8a8f6a54aa0950608df9780bc",
-      "bodyDigest": "867a7740aab504eeac8ede497d7bedadcc53e7a9dd4682418eacd118279747b6"
-    },
-    "atomic-broadcast": {
-      "title": "原子广播",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "688f289064d86ca9858cb62600bfc55e2816ac91d16f4500bb3bfe85d3216496",
-      "bodyDigest": "7fe48d8e880f31ade773ca514aaf8fc3b20b31a73f3adc3652e7c007d68384de"
-    },
-    "authentication": {
-      "title": "认证",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "63ac6fec8826b77d8f3320f3ad035b7283619e670eda1c9f36cb259b33355d9d",
-      "bodyDigest": "b2e4d5379c89e4e71b992684e84d4eea681a7a29ddf93e63d98a340ea624eb61"
-    },
-    "authorization": {
-      "title": "授权",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "cdf6bf3d0bccb51b1e06be48e11a3ee7c573534ed07108eef8ee3359bec82253",
-      "bodyDigest": "60d9f109e0056fc92485bfa0dca04d22b6bfb04ac00eb09d4247ff14dd0a115d"
-    },
-    "backpressure": {
-      "title": "背压",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "c5381afe49b722c70f07142a0cc516baa221bbd29d7d36e21bbf225986621387",
-      "bodyDigest": "63849b4e6d5545cc350749da0613e3804263c6798ee0e15c2e021f16b5bdcc62"
-    },
-    "base62": {
-      "title": "Base62",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "b9831c8855614ff4088ebb3433d1a9d9f3785c7434a0840625c4a5fa5adff6e1",
-      "bodyDigest": "ab754b684075e1a986ff7592326484db37287013810c05955a15a0d6c49f54b3"
-    },
-    "base64": {
-      "title": "Base64",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "248702953443def273012c26a6d8259a65a69b598b79f0e6caab7aa965ac5dc7",
-      "bodyDigest": "47f724f478ffdb18cd5445a83a68fb71dec008d27c756cd8791dfe886dcdf569"
-    },
-    "bloom-filter": {
-      "title": "布隆过滤器",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "59e10e11a6c52a03e8b505fdfe8f100bc59e362158d9b5c88077f9f163d52e90",
-      "bodyDigest": "31509b4c0ff26d828bb1f15a006d0a2724ae43e7284715d415da362202ab8767"
-    },
     "bubblewrap-sandbox-practice": {
       "title": "bubblewrap 沙箱用法",
       "collection": "notes",
       "state": "pending",
       "digest": "f2f8512069864defcd6de95a43c0c0380fb3890e7093a449412a8d71cdef1ab4",
       "bodyDigest": "8adfd7e310a6e9d5c595fd114688069fc90f503927fe0d04e29e017c170163b6"
-    },
-    "cache-consistency": {
-      "title": "缓存与数据库的一致性",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "ccf89896847c6e9545cd2e79c2e2ee341633de174db36e049538529a45c3e86e",
-      "bodyDigest": "7c4992b9de3919b148f70ed4d3fc8170cb6739ab49a5e9c66a0df1ae42f76bc3"
-    },
-    "cache-overload-protection": {
-      "title": "缓存穿透、击穿与雪崩",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "e9620a2b6ef72a75ee3e80e2b9c258e5bc54f7326f2a6faf41aac8bfa94cbe80",
-      "bodyDigest": "e3f30d99881ab96d07daf67920b7ede7c67cd79e696c1c7c7e6c9bcba169b9dc"
-    },
-    "cache-patterns": {
-      "title": "缓存读写模式",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "35dd403acbf054f614beb2ffcbdd818f946d12372d108e24b0b156a86f54da6f",
-      "bodyDigest": "4714e406d30350d122976a6db1ba5ec9930c80c49ab35b68eb6813d2300a7df5"
-    },
-    "canal": {
-      "title": "Canal",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "08dd56c8342814dbc259c5f90161fb2cd5f2570f0cc4aef32d346ab0500dda4e",
-      "bodyDigest": "a89191183cf25b6a25a81fe90b429ff02d61a6b9d4d475373011c0994a980ac9"
-    },
-    "canary-release": {
-      "title": "灰度发布",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "7e5463be27ab70088d5ac05782eb3a121761cc83d03542f6aa533fdb7adb5b19",
-      "bodyDigest": "4e63459b6d3c4d2c09dcb2c038d27bcba67605071dc70a3531e8534001182e05"
-    },
-    "cap-theorem": {
-      "title": "CAP 定理",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "79ce5ac04321008a9d6bf88379a9f1b83ea1e29f536f607e9fd9a43c263975bf",
-      "bodyDigest": "ffd183e562d14bb2735e0debbac254a6e2a93ab8410f19bd1579fe9af5b969a9"
-    },
-    "cdc": {
-      "title": "CDC（变更数据捕获）",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "21009a7ada431ba4e63bc9a870c757a87d8318d00aad41ee0203a9cae8094967",
-      "bodyDigest": "23eed1fe0755d1975b3dcc3950c53c7b96e9d7f12d9c048d3107b1b8b0a18709"
-    },
-    "circuit-breaker-failure-classification": {
-      "title": "熔断错误分类",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "bfb90920cbb33957e8bb5bc7c2e808c3f1722c456fbf81f28a5228919720cc83",
-      "bodyDigest": "7602a34d20dceb9e4be5881682180209468df558d7edf1014fa7acd7bb600e57"
-    },
-    "circuit-breaker-fallback": {
-      "title": "熔断后的失败处理",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "f99adbd17d416620883e88a3ac0e861d505e91330d5e9e5d28d755f33f40d49d",
-      "bodyDigest": "0ab372db71d8d6d83cf1d6a14e2872ad3ed161082da65ce40d1c8765e4334feb"
-    },
-    "circuit-breaker-recovery": {
-      "title": "熔断恢复",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "5701e8dfb71969b9ef4da8275dd3d73759a0c4b53f63d30977a9f020d256f509",
-      "bodyDigest": "5551cfd8ca7ad30711d03152c56356457da55549a6e281afc707ebb651b05a33"
-    },
-    "circuit-breaker-thresholds": {
-      "title": "熔断阈值",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "06306d4cf40a29c2ba0c1c7d6adb599c1928191c7fcb2a55f07d691d49c060d6",
-      "bodyDigest": "de29e5b5f229bf250ee37e835affec9585c4ad85488631bfb1ec1d7b0ca3e769"
-    },
-    "circuit-breaker-vs-timeout": {
-      "title": "超时、重试与熔断",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "4b2d04857f6175ac1d99ca543b09a0a56d25bb97e60274946bd8e5fcaef44999",
-      "bodyDigest": "027d534b9e780f811576a6c2395ce315f0f1a0fc05f6d4062e4d1df6e0ef1777"
-    },
-    "circuit-breaker": {
-      "title": "熔断",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "80087f065aaceee56f6bf3b02d06423232994012788d774f39998ddb91ed005f",
-      "bodyDigest": "2ed71ff5bf72faae63fb3f103c74cb2a46bc3496be682416daf9272b2c00966e"
-    },
-    "clickhouse": {
-      "title": "ClickHouse",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "431de82bcfe68ec20a747e6c85ee878f64dbf094e490305206c83b58db79285f",
-      "bodyDigest": "ba1b12289cc31e30e4a8955622195d002fb690c999d6aedf18f678c1d0fcc471"
-    },
-    "config-service": {
-      "title": "配置中心",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "85755ad368f4d6cbd378877ebde15d0a8b3318cf02b056e2cb023d1e007e23fd",
-      "bodyDigest": "7aef03ab25239517185ba41497ccde373d07b476326bdf46dc47b2a9124908a4"
-    },
-    "consensus-protocol": {
-      "title": "一致性协议（共识协议）",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "8e69067d1a455b6ef77e252c95a019a1661c521795a5dfb458f851d1a80bc45b",
-      "bodyDigest": "fd2f78f819b2b2fcf91af428c69f9fb8d00e2b560151ad568fa1cf41a0045357"
-    },
-    "consistent-hashing": {
-      "title": "一致性哈希",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "29c389511c91515fb859e255c394f36757d78fb2e5472cb41861e1ff29216cc4",
-      "bodyDigest": "0a6ba9187df3311c75feb77cf3f57205b8bb6f6af6fe332d66113537b9ce6905"
-    },
-    "consul": {
-      "title": "Consul",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "23273bf64600583ada955d5b5a1afb880928b386226ed4a2868a6c7f57911002",
-      "bodyDigest": "959747b870d5f275b202d94e8773bb6ea7d9df31bda1fc54b451e4e70f4811c9"
-    },
-    "container-images": {
-      "title": "Docker 镜像与容器",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "59c116334fd9f77eead65df8e10ddf814f5d1403ccb08dd63983c8d89fb3780b",
-      "bodyDigest": "e3de6d109f9aa15f87e060ce74acb159d77e3754b5695a0b85e014620c96b096"
     },
     "context-budget": {
       "title": "上下文预算",
@@ -534,82 +499,12 @@
       "digest": "ce1a80d7ff21b66f27dfe023defd187b74ef2058fdf3e3d6091782fd47614050",
       "bodyDigest": "01039239ef1d76db65ad33ffacee70fc84c5ba6f8c91134ac0f962fc23387395"
     },
-    "cookie": {
-      "title": "Cookie",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "71fa6665cde7e040cedf152ef4d54e5e58a86fbb8194aee55198b2d3dc340ea9",
-      "bodyDigest": "6b59968460afe5627dd04f88bd157b9389b035b60c08dc8c7ec65f92729722bb"
-    },
-    "data-annotation": {
-      "title": "数据标注",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "551aea02bd2be2be2caa1689e618d27fee431c92b7af93fc02e58f86cc0de7ef",
-      "bodyDigest": "5c0c9ef98cadc1d269b034a2def2f53a75d47109b40db2b86931c881e0da9c5f"
-    },
-    "database-index": {
-      "title": "索引（Index）",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "c338c52dd52e388e8aef0a27d16aa75facd2b3cde8030249894e78f4d6756f61",
-      "bodyDigest": "f997e00607f2abfdcefa3e9afd8b8308b821441e6189c1690c5ce16a0eeb182d"
-    },
-    "database-selection": {
-      "title": "数据库选型",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "288e325f96b6bb1b868eaf8534bb342aa6cea460fd08c2773029756eeeedd149",
-      "bodyDigest": "ce1db3f268a5082b763f0f078d7ef3a62ce71017d9df0d8afac5a22e7ffcbf19"
-    },
-    "database-sharding": {
-      "title": "分库分表",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "ac5945093446201cfce6871720fa96f17c8f34df4ea28073e93688145ddb4c4a",
-      "bodyDigest": "7334c6b0d05610acb7fd771d94e27e0a8550a96dce8cc492e914cc6509d9a67e"
-    },
-    "deletion-write-barrier": {
-      "title": "删除写屏障",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "9de7c2badc24e56d373855de480594e42a3707e6e2cb570bac73d801e479d24f",
-      "bodyDigest": "72355c24b367df132d077300434a1acb32d3f95cb1b7149273e52ed35b62508a"
-    },
-    "distributed-broadcast": {
-      "title": "分布式广播",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "655af7ef66382ef91e63ceb2026081d161b4ab84af19f5b2feb8a4fa10da1ba2",
-      "bodyDigest": "03134b9d6e61c1aef6a4516f8ac20e090e16f50c22521fd46c0bea23482aa8c2"
-    },
-    "distributed-coordination-service": {
-      "title": "分布式协调服务",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "f274c98b6d725ccaab4fe8fb3efdfae8012c92c9b0d7449204657f3c5aa8fd35",
-      "bodyDigest": "9ba7873c1b4d8cfc09f1f5806e038bac21b38a600e906ad684f1665bc1ec2eb8"
-    },
-    "distributed-locks": {
-      "title": "分布式锁",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "c5f310c2ed7815e5bef695debaad5f9be7d9d92cbceffa911b2c255f304a9454",
-      "bodyDigest": "26c9c4557e5a88aa7706f01d6c3781c4d689b6a784b28b360d507a8bb3d511f6"
-    },
-    "docker-compose": {
-      "title": "Docker Compose",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "ad987354c86bd3fdaae4391a4583051362f9fce772609ee5db9054c2f1ac9f38",
-      "bodyDigest": "963311ea45704d4c0cd6c49fbc90d91bab92465922a5bcef58bbc4cb3b439172"
-    },
     "docker-sandbox-practice": {
       "title": "Docker 容器沙箱",
       "collection": "notes",
       "state": "pending",
-      "digest": "d4355348ad1a6a871eb92a89dbff02362b8878006ce58dbd1a484d40dc36b30b",
-      "bodyDigest": "00b07dea98fda3795711474184605f244983930c43f1f1708c0a190cc26041a6"
+      "digest": "39bb9794915a343057ab4a476d48159712dc1bbdd88aa6f3563ee5c721b76ed1",
+      "bodyDigest": "c9dc22630a878359b33ea151a79bf3572b3bf0b7aa4a34f7a33ca751550f6f1e"
     },
     "docker-sandboxes-practice": {
       "title": "Docker Sandboxes",
@@ -625,54 +520,12 @@
       "digest": "50cce04db9d7a304895097436cef0d49f60d907acd1abc777da863a567dc252c",
       "bodyDigest": "e8fad7e8437841f644fe2e60582dded994b57b31a542ff0b51b5a3849116bc0d"
     },
-    "elasticsearch": {
-      "title": "Elasticsearch",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "125390a4c3d9a9740ed8a05a5633f2d0700c039028cfa60439650591ae6adc0e",
-      "bodyDigest": "90b9ce305032a073f019adf9ef34c2d0100d7ff8b044b820bb9ba1bbd6ad266f"
-    },
-    "elk": {
-      "title": "ELK",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "444fb45ff39ef6a5964783a7d6ad85c06be0d865e3f7910d7009e9222521539c",
-      "bodyDigest": "2f48d504c41e6292cd6fae40250b8591aa7386bfd1862446d4e06f7540d274b0"
-    },
     "enterprise-agent-build": {
       "title": "企业何时需要自建 Agent",
       "collection": "notes",
       "state": "organized",
       "digest": "20d9778d57d92a058bbe65a72520d7ff18991bd3e78fcb2c431ba5b770106ebf",
       "bodyDigest": "9d68c354a2ad7a846f242b1dbfe0bfb95974781acfb737f04947fd377ad59914"
-    },
-    "etcd": {
-      "title": "etcd",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "233413cdf65f4a02982e95e7a3f064a9b1fad65493de4708029af94a4c9e870e",
-      "bodyDigest": "4b3c5c0d26ee33c028d359703ec3f35582eea5d61f5341b4d3d926d808367df9"
-    },
-    "eureka": {
-      "title": "Eureka",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "4d4974ecbcac8b35d876102df58fd335de00289ab0b4105c1f5333115d2174a5",
-      "bodyDigest": "adbb71e1328759d0c74eb463d1f653d51c9b742681037a98bb171431b4bd7347"
-    },
-    "eventual-consistency": {
-      "title": "最终一致性",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "3a1670a40177d4fa272493f260033e58da9ae8b9092f9ce9a9117add79feafbe",
-      "bodyDigest": "f0f309395d49348eeac99bbadf34ab5f55e176283022598bd5f47a16e16952f5"
-    },
-    "failover": {
-      "title": "故障切换",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "2a97fd2b759c784b61424831cd5fb123b3718e749ecf1abe853a542689acad6b",
-      "bodyDigest": "f6c2ced7d23de96fb1ee114669bbd0487d9938da73ab4ca5b03b9b57bc0703e8"
     },
     "firecracker-sandbox-practice": {
       "title": "Firecracker 沙箱用法",
@@ -681,293 +534,6 @@
       "digest": "534f06b1fc502bc3721deab6ff08f76ffa65009b1d83a52f90734de91a1aa960",
       "bodyDigest": "4929f5080d26450c0025c253f30141c3efab067260f22d11eaf21488f643cfcb"
     },
-    "fixed-window": {
-      "title": "固定窗口限流",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "a7adb6493df1914fc1d7f8d8df2f68574159be6d089d47a392ecf1389276318d",
-      "bodyDigest": "205cb1bf7a86a73a80a092d5671477cb7c1ccf5e463789ea0a6156bd42a81409"
-    },
-    "flink-cdc": {
-      "title": "Flink CDC",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "7874dc53ab3c53b7176bb82e0d6a557050f6339aa10c56666f841e1b5f914512",
-      "bodyDigest": "bfcbd1797960e713424f970b463140c8895b41cafa1df0c81bd4b42096a3cd8b"
-    },
-    "glob-and-grep": {
-      "title": "glob 与 grep 入门",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "2edfd48880aaa4050af8a4651ed69ed9ab2f0b8a98ace8f0b128d9a0ac140d57",
-      "bodyDigest": "850e8ef5274553aeebe60686adde1fd2f9cfe31a274e867c0e79d206a6022919"
-    },
-    "go-channel-lifecycle": {
-      "title": "Go channel 生命周期",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "5410e3ee06c0ea9739a3a1f1d1c90b773299fe3db8334ead72186ef9a1296200",
-      "bodyDigest": "a58d518c08f26b1ca122a8bada07a6255c385f907273b544b1bd72f4dbeb692e"
-    },
-    "go-closures-loops": {
-      "title": "Go 闭包与循环变量",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "f03facb3e55fcd110357a4f1a0edf98c4ca1840eef07fe8f8610b836c46d93e6",
-      "bodyDigest": "c26cdb373ebd135dc3384a434b951b3d581f9f39cd95227231817613366bbc76"
-    },
-    "go-cond": {
-      "title": "Go 条件变量（sync.Cond）",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "688d1c64aa40ccd5d6d80ad7c4addb81d5cda6541b24b74d53971f39ef8c4d60",
-      "bodyDigest": "3c120e109f2efabe61a105ce397a60b9b7af51381c59448af84efd4618f95631"
-    },
-    "go-context": {
-      "title": "Go context",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "c08beeb0fb7ed23dfb7a1a6f1ca1dc6592d81fae7ba7cfd868682fed3518aa48",
-      "bodyDigest": "b5dd3319e6044731ee80d4bd58ad686c1853000b116ff7d53a49b7bfeab5594c"
-    },
-    "go-cpu-investigation": {
-      "title": "Go 服务 CPU 排查",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "010a4cfdaaeb49630893860514a1189f34aad2ad977d19122a7da5c1c973b18d",
-      "bodyDigest": "f4c3ba14ba6c7f63515dfa0d96599c9ca285c173ec69a84fa629ba6a1ec56bdd"
-    },
-    "go-defer-return": {
-      "title": "Go defer 与返回值",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "ee24de3a0aa937207adebf2933584e95d0770178caa5cba096bfa6c8cc51eae6",
-      "bodyDigest": "4f3291dc46bf728d74796d57a14f14afb76843a28ae6ad4649de31b0c2eb6f78"
-    },
-    "go-escape-analysis": {
-      "title": "Go 逃逸分析",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "ac610839085bad2dade2243ccb6e8a583572b6dd8edfe3b263591b311e910220",
-      "bodyDigest": "ed43dfe1d3251a7eb234c241d3a3bbd47d8fe697231d622bd0c82878dc26ee9d"
-    },
-    "go-fuzzing": {
-      "title": "Go fuzzing",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "337f4e6fc1c5a101e4c7fabde117c852e3edcf6466f41548008c426e232d39f4",
-      "bodyDigest": "7fa50850d24310a4c86c05b91745656ebaded7c57ba40ccd6ea8e28323afb254"
-    },
-    "go-gc-cycle": {
-      "title": "Go GC 周期",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "40237be3358c9857e84c1993f10d8587e748cad196fff080dbc83b3bd4670228",
-      "bodyDigest": "5a7b67d3fc9b3cce73dedf83450263fedaf923a319be608981a76f1086f8fa3e"
-    },
-    "go-gc-latency": {
-      "title": "Go GC 延迟",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "d06c2df7727654cb28928e36253dff4aafbc365b86717c896bee88daa5cbdb38",
-      "bodyDigest": "f1e2028c87657731d984e6fa4736b8289befd2d967e13fdef0d078a0ca72276c"
-    },
-    "go-gc": {
-      "title": "Go GC（垃圾回收）",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "0e611b4b1c2d0a74cf20ec6bf0e711d159376a31d76288791d531e0a00c0f3c8",
-      "bodyDigest": "70337158567c9739181a5239cd24cf7d3f8ea5a55a76b7d58757257308e489f5"
-    },
-    "go-generics": {
-      "title": "Go 泛型与类型约束",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "460f3e644b67078fe140e9db5375717693f3eb2772d81403cb408d887a687de6",
-      "bodyDigest": "5bd4e16c9bec6647746df6b8dd6808cc879346f8e7e0c708c97491715f33c9e9"
-    },
-    "go-graceful-shutdown": {
-      "title": "Go 优雅退出",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "76947d6a2cb4cd391cee41c906068becb6f4259c19a889e85c8c179a473ee123",
-      "bodyDigest": "ff744c47fd2a50be8d71f1db7db4f3a71a1a7ddff4377b5a7640662cf7cc1257"
-    },
-    "go-initialization": {
-      "title": "Go 包初始化与 init",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "d34b0a45422e76b2a58bf31f20373b72290fe36bb78039be58a3df4489e45e2d",
-      "bodyDigest": "dd70b4dac959fa6e84bb48fc4c6e8adadba2aab95abc9cb6a4a7f781f8ec08d8"
-    },
-    "go-interfaces": {
-      "title": "Go 接口与 nil",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "cdef75e11366ddb4e4e6ac07df98031dc4210cd077c2da36f36ff60af44c98ca",
-      "bodyDigest": "b64aa4bb2167517c5b95f1e246d3c0d384f38078df1ca838d8485224dbaf72be"
-    },
-    "go-json-compatibility": {
-      "title": "Go JSON 类型兼容",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "50fbd43b0141c3d93f601d87eacfe363ba0c813a9af397222340c4c08d77326e",
-      "bodyDigest": "89fc003bc3110022a30b726371342cf77201258cfbf3dc02858fe2dc61f2a59b"
-    },
-    "go-map-buckets": {
-      "title": "Go map 的桶结构",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "e412270022a0f6455240aef7402f81aa3a11fae893a5551b6ae44a414c770ab7",
-      "bodyDigest": "1117c06f54d90ee24f671de462ede25d0b0fd0355890c96f5ca645074a1a791a"
-    },
-    "go-map-concurrency": {
-      "title": "Go map 的并发安全",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "545dc50ccb58fc50dec0809b17d587ef1700101ac61bcbe35ca8e220171417f5",
-      "bodyDigest": "7d74318f25adb3eca846481f96f2a2914c524d0b73a35f51f49d79491c380041"
-    },
-    "go-map-growth": {
-      "title": "Go map 的扩容",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "8716fb8495e4e8f87e49c2f7d365ee16a0c0f3ffded1f4356f153f5aa805b2e7",
-      "bodyDigest": "ecd77382782cb2a1906c3fafb317134356c525ee3c81609fa45e54d45fec363c"
-    },
-    "go-maps": {
-      "title": "Go map 的语义",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "0e6befcf7867779fa0a81be736a9bbc34e479c1bdd569edee0685b489360e1a7",
-      "bodyDigest": "63c5232cf08d3c8666de2493ec358e834aed86260a28e3b145424693b1bb322e"
-    },
-    "go-memory-allocation": {
-      "title": "Go 值的内存位置",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "289b400e570d322e0b56c0cec5e854a3f7fbbac17873affb1e827f4d19a000b7",
-      "bodyDigest": "35e4332979cfeae913adfa17f02956c7bf84d16fadedce397aaaa0cae0e79c30"
-    },
-    "go-memory-retention": {
-      "title": "Go 内存滞留",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "05c7f74bc630f9bf035e8c558370b30833a5986c8b84a5d63ac10b5732473d48",
-      "bodyDigest": "5684cebb40f12af7412a13efae52174ed48fce5c7457aef7d30c87721d7b1be2"
-    },
-    "go-mutex": {
-      "title": "Go 互斥锁（Mutex）",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "e6e3b2c82261505f423dfc0255705a24e2d0c653e500fd8234a952d48ac10c45",
-      "bodyDigest": "a568eac1bc8279866fb7e87ad38cb61a4c5cc35e8b3cd102cd900ee595dbc434"
-    },
-    "go-new-make": {
-      "title": "Go new、make 与零值",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "bdd1ab63153296c417a691394c5ba4cb3ac7df1e20c1e0e9636cfad6a7477bc7",
-      "bodyDigest": "a6a53b4a88fca8c8ed70b8b6d7f42362652d653cd66e992e1492819167dba069"
-    },
-    "go-panic-recovery": {
-      "title": "Go panic 与 recover",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "d2c0b4f1c62abce82d600be7cd62144d0a44b91fe877459c26f8d285389cdc22",
-      "bodyDigest": "512fee83fe49e6ca7831975ee5e23969aff53ca7e56908d5353c28d804674c7c"
-    },
-    "go-pool": {
-      "title": "Go sync.Pool",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "76c93017d2186918dacde7ed65d0816f4eb4743c002f7497bbf593018b07926e",
-      "bodyDigest": "2ad6a520e5946b81e35aea1d1c4ee007fe00ed1e4c29dadf41c30dbbdecc0e80"
-    },
-    "go-reflection": {
-      "title": "Go 反射（reflect）",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "4393b333ea2d43934accec22b1672f1b09ab9f91b4f637d24984162d87618c95",
-      "bodyDigest": "c23650b203b9dc741dc027508ea433053c7d070826c1cb74268357fabf44b42b"
-    },
-    "go-scheduler-blocking": {
-      "title": "Go 调度中的阻塞与抢占",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "c4df01f0f38c6c75b9a8a17b963556280936c78d0f9fd8e7e7b6bc3647ec6141",
-      "bodyDigest": "f4aec24a96e803ac9df3a7fcaad31e8e21d6ceab47ab754a86c8259ad320ec31"
-    },
-    "go-scheduler": {
-      "title": "Go 调度器（GMP）",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "f7a530564608c1dc1ec747560f61aa9c03f5adfb9d27b123f3e58ffbb9d62a14",
-      "bodyDigest": "371a98b8a35b29d650b0502d834134dfa2ab6c2216216124667b5d3fb9c6e4f9"
-    },
-    "go-slice-growth": {
-      "title": "Go 切片扩容",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "0f79e044dcaae8db4ca4e693075d6d4705832ba530c852aa8fc413645bd5ecf4",
-      "bodyDigest": "b22ea346fbee174fbdd8bb5f64e2213bb9bf3efec92a59e6e7090ff674c3703c"
-    },
-    "go-slices": {
-      "title": "Go 切片",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "12da909d0e61a0e03c262b344fc7d7fe6dfb66e014464c5763df904808570cfa",
-      "bodyDigest": "5b3697ca563c55c73ab4e8fc87e874c7314b171ad299c1f37e5e7546c33d8331"
-    },
-    "go-strings": {
-      "title": "Go string、byte 与 rune",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "d0c800322842818063ce3dfa76fcb01f51b206b7293bb64f111c4ec411a86ae8",
-      "bodyDigest": "6af7da0b0f908e6e0ea7543a9d8a56b001e5df742ae4a9ce0e9a9b80dd633c7d"
-    },
-    "go-sync-map": {
-      "title": "Go sync.Map",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "bc0f0bd9f5c784da148f3adf39e08016c8ded7078c82370873567fe599ab12b7",
-      "bodyDigest": "deaf5e7373b61f20c0c52d97bd262704972a8db2497cf4ad048586575aad0378"
-    },
-    "go-unsafe": {
-      "title": "Go unsafe",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "b1db1392f9b534b81335c7efe55cbdd1c8d205376895497ac413adb24162c189",
-      "bodyDigest": "eacb93ae3d810b22374d6738f47a634e51fd80b6bc578439a97db989f8f690fe"
-    },
-    "go-value-semantics": {
-      "title": "Go 值语义",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "2ca8b12b8a97df762250b8f7ff17015b8a2f0ca772ab7c531fdf7c22b8810c99",
-      "bodyDigest": "2434e47496ba724ed66e529c9b525d6ccdd81bf464b74e29f7ca775ba51eab8f"
-    },
-    "go-waitgroup": {
-      "title": "Go WaitGroup",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "a20c376505a311f01a8d07e6fa1bc61cae8c06dc9012d8366559bda9e03d1532",
-      "bodyDigest": "77ac31fbc43d7d95e5cb17e642980ee88f79f462203e1e761d3c738944be93aa"
-    },
-    "go-write-barrier": {
-      "title": "Go 写屏障（混合写屏障）",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "abd25f9feccf14bfd90998b3637ee89ae125af326a4cad60bb177658592ecf4f",
-      "bodyDigest": "8cfefb84ad7fdac1f49f98eb31039521d07ea4bf7bf49390bf0eaae588093131"
-    },
-    "grafana": {
-      "title": "Grafana",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "2e57822d08854f756dea34cc877e63ffdbcff46f0dedd426cfdc2a4759442be9",
-      "bodyDigest": "fe19119df2b6f6f61088002e6e46d642e714b045f4fdd58804f3c43a31e12108"
-    },
     "gvisor-sandbox-practice": {
       "title": "gVisor 沙箱用法",
       "collection": "notes",
@@ -975,40 +541,12 @@
       "digest": "06013ee57447cc38bace4889bfad4e046892bdd05d01ba25ac0f90e1332b5734",
       "bodyDigest": "73d95a9d8edbe6b80bb96455979919e1cdff772dfb639dc40989ab35c9eb9d83"
     },
-    "high-availability": {
-      "title": "高可用",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "c6f8163fc5d350bf9e46ad5189dbd7c11fbd51501730d06309f345a3764e6205",
-      "bodyDigest": "4d174e1575957024a3fa44613e0f097038093c3a763950f0190839d5bdc179d3"
-    },
     "history-storage": {
       "title": "对话历史的存储",
       "collection": "notes",
       "state": "organized",
       "digest": "4b28fde627b66d948fd72994bdbe74e37258a35334d5a1000ea6549a4340cefe",
       "bodyDigest": "b8427d81ef7f4e7719df2d5a90c05f51ca7c01d785b1338b6336b49804901949"
-    },
-    "idempotency": {
-      "title": "幂等",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "9fa165b3edd13dd1bbd875448f56a66361a90e3504a490fc4129dda115da7bbf",
-      "bodyDigest": "d1e103573d075248c42d47cda687b4e0411d3efb8f577f0b3987217c23a1919e"
-    },
-    "insertion-write-barrier": {
-      "title": "插入写屏障",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "e55a73a544a199353d1edc5ab28deeb743a40caced0355b91e63c76a5581f73e",
-      "bodyDigest": "5214bd551239b1427c57f86a290d9ea0747200a7f6dd412f9f60aed38db0a01f"
-    },
-    "instrumentation": {
-      "title": "埋点",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "63020dbc28b3b5e2b7c876208d3bbab761f086c16cb1cb1e07b73ed7c06f1bfb",
-      "bodyDigest": "c2526a2581070f6c01eb6824ff93ae8cd1c17ac96cc1d261c2870df8d64f71d2"
     },
     "intent-clarification": {
       "title": "意图澄清与回退",
@@ -1049,50 +587,8 @@
       "title": "意图分类器",
       "collection": "notes",
       "state": "pending",
-      "digest": "1f234314f2d0ddd8d4a9d03d3b9de8ceffce5ad5ed3759d707eeb27aa6cc10d1",
-      "bodyDigest": "680f481b21ad1cd567e4568b247c4969bc9360ae912f65edfcbf44feb02bc1d3"
-    },
-    "leader-election": {
-      "title": "选主",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "e591f14ade59578de7b4d7a2418bfcaf3bc8630b1ff33527fdf49771b6a5e1bd",
-      "bodyDigest": "bbfee0657f2d3bdbe588a71dce57587c8fb2064e61e04c06e0e46f866104380d"
-    },
-    "leaky-bucket": {
-      "title": "漏桶限流",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "4748b3b9ab205f8e4819620a8b659fc0d35dffd1776cbb9cbed0a0fda8b26a53",
-      "bodyDigest": "86497313b3749423ff192582f5cc6c30a474bc57aa716256583292ec223a6d79"
-    },
-    "linearizability": {
-      "title": "线性一致性",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "b38fefdca4643d470097e3daa89c8e23adb06a5ef4bf0ae6e9dd3828fa52c6a3",
-      "bodyDigest": "f71c74f21f01507345b59c3e28542f2d8e1d6c95b73c8ae3ce8010030054d8b9"
-    },
-    "load-balancing": {
-      "title": "负载均衡",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "14a7f575cbd472d2ce5b047a6b629c9a88dc36481beb3307feaa6281bf72c38c",
-      "bodyDigest": "1c8cf4fef8008cf188bf2cc6ee87e8c445a7537d4056191575a2ba63dc612a1e"
-    },
-    "logging-pipeline": {
-      "title": "日志系统",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "07635a839a74fd1df8a942014550cfea879b04be842bfc63269c42595260860b",
-      "bodyDigest": "5db429a689ec037fffed95ecc0c3a15d62fc9c5a6eb21ac7e0d0722929ac9538"
-    },
-    "loki": {
-      "title": "Loki",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "587004c6f3255b83eadd7b949fd615877ebac42dd2b59306fc95254fd0964187",
-      "bodyDigest": "243738a4c051770f765720ab0fef573feec3240f398ca794f9ec1a4955c03088"
+      "digest": "79352bcd0e8be4efb55cd6f7f18e1bb6ea42b8ea7ffc46253be9d0deff488740",
+      "bodyDigest": "4f0be59d41ca09e5cfbef149cf17555b8a6d4632bb3986c2b673c2f82a46a223"
     },
     "mcp-capabilities": {
       "title": "MCP 能力类型",
@@ -1133,8 +629,8 @@
       "title": "MCP OAuth 接入",
       "collection": "notes",
       "state": "pending",
-      "digest": "fe93f96cb996ab3fe1c408587888ecb43c0bbcf8bd25018619a84ee8b8ff3984",
-      "bodyDigest": "43e2a51ee0b25e24d65604e5e2264f219ffd8c60da83640e61a4eeb8f1ca5d5d"
+      "digest": "b3618f45930daf82f5e4253359fa3eafe918daa5a01c5a9491800e98a74efbe9",
+      "bodyDigest": "85b7a1c338ae0d1dc04c3a2e6958b4fec9b3eeaaa15232336798a4f404260bb9"
     },
     "mcp-permissions": {
       "title": "MCP 授权与权限",
@@ -1164,145 +660,12 @@
       "digest": "8006e74eb1b06a65d3b71015fd72f32e55d190f32f76b13cdaa16d993f5c2259",
       "bodyDigest": "15dc9cb89bd35c525b80eba13309252a29dfb26e7bcfdcbc64f5c7eb58ea31d3"
     },
-    "mongodb-replication": {
-      "title": "MongoDB 副本集",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "8bd87617d6cc24d5d2094bdbcced36dfedc4e22954a569aec59b03f1ed544e41",
-      "bodyDigest": "ef46ad52ddde71f9c6cc56fecff2956d04301360bf026f67c6caa6fc4b42b52e"
-    },
-    "mongodb-sharding": {
-      "title": "MongoDB 分片",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "5d7793183830b3dad4f2577c6194a746d673ead54d47b0233f0a55554c36ebfc",
-      "bodyDigest": "724a5af907b1fbd57d7e04c26d81fa34de706c6aa457eaa2b8a19becf586adfc"
-    },
-    "mongodb": {
-      "title": "MongoDB",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "98024066eb2080f17f0e4132e6e7d10ffc049d3fa48e5ab1b841f3c779ffc891",
-      "bodyDigest": "91848c49a3704d4d925e5a900d70d67a2e64d8f3311e389dd30beb5d183c3b7a"
-    },
     "multi-agent": {
       "title": "多 Agent 协作",
       "collection": "notes",
       "state": "organized",
       "digest": "a110c7f01ccbccd3586caa262dc6d4035ce58d5057953a116188e37ce6f1b8ec",
       "bodyDigest": "c7823c93c7e1ae78961e8a22233bd8a7dca922c9d28c400160ee2168ef4336bc"
-    },
-    "multi-channel-payment": {
-      "title": "多渠道重复扣款",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "b0cbb350e1f2d493efd5f00f18a5478899800ea5d064c21c68a84447eda4038c",
-      "bodyDigest": "62c7a42ec2e82372c15a2d3feec018b2bcd9432b46eda3b6b5c021a031d4ba8b"
-    },
-    "nacos": {
-      "title": "Nacos",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "f09502209282d6bb9155ce6385189345ba7399ef283273dc569bf8be998f9b20",
-      "bodyDigest": "e980dc471d9fe5309eaeb5e58c55cfef241debff6b373a81eb02ccc8a5b1b737"
-    },
-    "netty": {
-      "title": "Netty",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "97c752250ce6f5b6b5ce5d0dccde127ddabc90aaff537dc495e60cc2624709eb",
-      "bodyDigest": "917df1dcddd74115a7c630f3c577760f088ba6baa945c0209b2e9e2a8a8d94ef"
-    },
-    "nginx": {
-      "title": "Nginx",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "af03d883dc05c2a680c1a31554f1be3da741527e4d068c70c3db8bdb41021111",
-      "bodyDigest": "492dd66db46c8d5a26a3b930d8b511c21d6cceb431c381541b554bdac9f9acc5"
-    },
-    "oauth-code": {
-      "title": "OAuth 授权码流程",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "311f7ee69edee75f4886643e8ba6873a5d152c9ec78b390cbff99026857f8170",
-      "bodyDigest": "df316bde3f6231a371927156630683c3b9b07992ef46728c50dc52332668129c"
-    },
-    "oauth-token": {
-      "title": "OAuth 令牌",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "0132fce77d8919148d3b6c72a062b3c8643830d19717b27131ed51c271f12e96",
-      "bodyDigest": "10be8e39e3dc358a81c682601ae4d9e1407da17d53fce7af3556020e036841b9"
-    },
-    "oauth": {
-      "title": "OAuth 2.0（授权框架）",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "99002108e8bf03531f3d6ec367f5abbfbf045a14f20825feb257b15789f73672",
-      "bodyDigest": "f0df5ca89e99e61da24e18b8b71566f4082e0573b658ae560aaed3741acbe345"
-    },
-    "oidc": {
-      "title": "OpenID Connect（身份认证协议）",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "6823e1c100325bf9fdbafc91f5bb500057e2567d41277841c86ac5f43db96876",
-      "bodyDigest": "06eb2d6da159222d59d3f981c5b58817f2f9a5f91513ff836daba602cfd8e252"
-    },
-    "opentelemetry-collector": {
-      "title": "OpenTelemetry Collector 与采样",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "b0e105bd6db3d8815db516e4acbe0c1780703aa2517135bd485b33b97008bb28",
-      "bodyDigest": "84ff2a38b640447f8ecd6ee45d692b6622792100af6d0956c3e2841ab306607f"
-    },
-    "opentelemetry": {
-      "title": "OpenTelemetry",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "05e2b457e1b2a28ab66d098f62eaf2a73e1ce484bfb9bced69d10274d41eb2f1",
-      "bodyDigest": "5d1ee31fd98ca69c5bdeb84ed8431626b5215856fb5391e88d81441db01b67c7"
-    },
-    "oracle-database": {
-      "title": "Oracle Database",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "0e8b1f14cfd6320743a19dd26e92e0c5f2627611bb2cc705810ba0c8252478e6",
-      "bodyDigest": "6e17cba5f2011055b11f013744e2fa55cd6ac7a763bfd98a79889ffd53f7b683"
-    },
-    "paxos-two-phases": {
-      "title": "Paxos 两个阶段",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "4cca2229ca65bdf93d6e3a89521f74023c932353f74fb0d12332d1bba7cdf3d4",
-      "bodyDigest": "b0131d1ef5e7602b0dd67d820780c1ec1f4cbd67a74ca9e0775f5babfbb56188"
-    },
-    "paxos-value-selection": {
-      "title": "Paxos 选值规则",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "46cfa0aab513e7e65435edb1ec68f0bbc942af5d5c6ad8a0d5309d9ceaca9906",
-      "bodyDigest": "dc9f026acb06876b89a04f21150ff3b8a827d8f0e7aa89312e8c313396a0b64a"
-    },
-    "paxos": {
-      "title": "Paxos",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "a7d5adc36da7cd01b612ebe1a672bf9f77ddb0da37b03fd8c254465f67f1148a",
-      "bodyDigest": "17bc1c7873990c410f45572fc8f18d20605f76198ef714e38b8c9dd14759d24d"
-    },
-    "payment-state-race": {
-      "title": "支付与取消的状态竞争",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "bf4c1f5dcfa66689be2dd353c857b6620255654a4fa714545632b905601f6b10",
-      "bodyDigest": "e1cb2d3cf98609b60076000bcabb3e198c94e2112b6d0ecc73aa49e532409fd5"
-    },
-    "periodic-outage": {
-      "title": "周期性故障排查",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "cc8e9f1ae65207ce6b7d42f19518bb1fed1e11ec5283bc98a9edc43a84d453b1",
-      "bodyDigest": "1a2d3184cb4f84682859c43f2bbbc3e69fb362bc32c136a4ab5d929b23928abc"
     },
     "plan-and-execute": {
       "title": "Plan-and-Execute（先规划再执行）",
@@ -1311,237 +674,6 @@
       "digest": "bcef9820b48213a438c4ddbe8904777332447a0272e469c06ad104f5ba924fe8",
       "bodyDigest": "63acbc27c18c6a7689f3301a34025addd8021bdeb92ecc722e7f7518e77fcfa8"
     },
-    "postgresql": {
-      "title": "PostgreSQL",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "d2c54ca142217baaf86e81b9700d12901ab2313f2b4474eb17556ab7ce4be187",
-      "bodyDigest": "4b656dbafd2f42a8e7a2f8e99c21d5db35a5e737830ed35d720e884c3c0ffe0b"
-    },
-    "prometheus-alerting": {
-      "title": "Prometheus 告警",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "02bd21c729bc754dec847401520c59f171c8e86a280ec24973781f18dff4c084",
-      "bodyDigest": "afcedbfca8af6887613166c8024572107ede4c2a0d459e5b46be0c3977332793"
-    },
-    "prometheus-labels": {
-      "title": "Prometheus 标签与基数",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "47630f5882b42f41c0bb01ae6708db0d47e86ff3ebdbef61b6aac2d77d0b3823",
-      "bodyDigest": "55be7996b6c72f06c262e8b21985df569d13d960ba7f70a34def643f9b3183e3"
-    },
-    "prometheus-metrics": {
-      "title": "Prometheus 指标类型",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "17dc269a3369e4ff496393ff03f1a897d2acaf7ea2916b159b9f702f0b19d6e0",
-      "bodyDigest": "c0edaaf6f6508675af119d44c8344f2268a055ce5fad9382b4768e285f2db3bc"
-    },
-    "prometheus": {
-      "title": "Prometheus",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "65a1bccfc0a30fae2ed3baccd32c438ae07a72bf4ad055a3b39d9c46d6103e66",
-      "bodyDigest": "e870a44d13610acb7319f930cbd8004c5be6d06c73a32c63c814bc7969634657"
-    },
-    "queue-backlog-capacity": {
-      "title": "消息积压（Backlog）",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "d0d4c0ed600ca97c2899659cdc0dd15e65b63d53430b89d25f39e5a22123c359",
-      "bodyDigest": "d0848d00f0c4bcae1ce909779609ddd9160a38bc110d790f4b17ddc10315aeef"
-    },
-    "quorum": {
-      "title": "Quorum（法定人数）与多数派",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "45d6f747673dd463207e8a1b9f28ab06f27fba1a932059c79fbb82762d0ca816",
-      "bodyDigest": "1236e284cfeeb7903b69886dcbefe9aa69a444317be1152cc6e4efa062084d50"
-    },
-    "raft-leader-election": {
-      "title": "Raft 选主",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "94d28d23db134ec000590d3399487ed3d3e7a39c7c7abd4f784b8acb74e401ce",
-      "bodyDigest": "382e9a7a89f244a1bfd41a8b10243c4d14ea022191a294fcbad59a0a27148487"
-    },
-    "raft-log-replication": {
-      "title": "Raft 日志复制与提交",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "447b74bfa8db9fbf1d86e20e9329f40772281c7f45ff7f849122a75492d9e2e0",
-      "bodyDigest": "66c608465d1d5f32a9df5a5da7dd79ee14677f7feda921ae85b9edb066c577e6"
-    },
-    "raft-snapshot-and-membership": {
-      "title": "Raft 快照与成员变更",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "e6968eb326603514c029e5e386e2077ecad9d4fa854cfd91ae64c0ee0bd2e7bd",
-      "bodyDigest": "070626f7d3bbd69814dc2c39c1434fb05b201068ce1e7700315e5059fb147991"
-    },
-    "raft": {
-      "title": "Raft",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "0ff52efa1f4d13b1d2e5ca48f64e3fd01bb21907cb25c5e96b437863c16219fb",
-      "bodyDigest": "7dd6adeb95987d5a01e66ec3c6be4a1654cfc60f02ab043bbfd6c92f956467fd"
-    },
-    "rag-advanced": {
-      "title": "RAG 进阶方案",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "9d9547a281c0be4b9ce72ff6e204c55b7a9ac5954761a60df62cb2b74cb9dcf9",
-      "bodyDigest": "9aaf09b19a04e2bf71fbfe88ea8037716cddfd9a64076c7065ae26b443eef87a"
-    },
-    "rag-agentic": {
-      "title": "Agentic RAG（智能体检索）",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "df4bf09801268465ca542f5cbea355c97221b108d1edc860848a17d116af4e85",
-      "bodyDigest": "e11bbaafaf6cd62580d8ca7a302cd97e3caaa9a0bedd9c990377823b9e775e1d"
-    },
-    "rag-answer-generation": {
-      "title": "RAG 答案生成",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "0c947b6fe803e0cfb4eb295a03f2072273dd6082c991acc4ecba988d076a5706",
-      "bodyDigest": "d24b789d5ec92f93bda5682ca7ae39607d1400173639ca586fb9d7f2c82bbb50"
-    },
-    "rag-architecture": {
-      "title": "RAG 架构",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "c201e357422196fa3edbe5fb650a29fdbd180d0b684d9c96f79be78217eb650d",
-      "bodyDigest": "8b88b89d7834d0b64e5ad40e4a1f8edbf02c909ab7d56b6c1d1aa97f38f7fad6"
-    },
-    "rag-chunking": {
-      "title": "RAG 文档切分",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "55dd0b026338c7b2e6acd4a5c9cddf6dee9ecddc9681ca97e94ba6e9661189f7",
-      "bodyDigest": "30a444360cb8378a5754da587148304ef8442fe0661da4843fa63266195866cd"
-    },
-    "rag-context-construction": {
-      "title": "RAG 上下文构建",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "09c5b177a74a7f63ea5bc4fc8ab456df6ef86513b0460c9d5791bd4a57db5cab",
-      "bodyDigest": "fbce2ca9b5598edee2ea7fe4b757b6abef73a80f6636134556fd4c67e502818b"
-    },
-    "rag-data": {
-      "title": "RAG 数据准备",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "8dc5c49e3a34989b7958f700bad11c99db16c73cca48a2186de061c9941a734a",
-      "bodyDigest": "ca73846e360b0b9a318a4d6b58317c73dc4e29b5bd141f40f10bbb74d9320e55"
-    },
-    "rag-embeddings": {
-      "title": "RAG 向量表示与近邻索引",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "0f2702be1fecd22ccb732faf3d3c382f270cd757b07762c5ae28b919fc7eefb1",
-      "bodyDigest": "7103805ffd49bd0bae23c3d8f593e083798a6e51e25c45e572f0daff7b586224"
-    },
-    "rag-engineering": {
-      "title": "RAG 工程实现与运行",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "82211b8f287e0f15fc5e46998ee9ba4f22b12de7727433a1b1e711fa5d59e484",
-      "bodyDigest": "089fd54b9cd77d8d7b9d836796fbb3f73205c85a35acf9ea0c0c06934c6407d3"
-    },
-    "rag-graph": {
-      "title": "GraphRAG",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "a74d0e24c5617a128cdca5d0a32c4d99c1e443d1be79e04b431820f98178e159",
-      "bodyDigest": "12403a999b1c8ee5aa0ee6eecb443bf1cd7134320587ae01fc2fbab847ae0660"
-    },
-    "rag-hybrid-search": {
-      "title": "RAG 混合检索与排名融合",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "deb8b556479ac345d4b8f638d48e8bda0f4c2017c51d610ec576d96c8d43d41d",
-      "bodyDigest": "b77f6a5c211a6eff2dcaccb203ed054569a04ff7598e0538a8448f99dc7043f4"
-    },
-    "rag-index-lifecycle": {
-      "title": "RAG 索引维护",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "513280d12f2d3c3a4da22d57f8095c0b2fe76170d2f101e3368febab81d476af",
-      "bodyDigest": "f84d1602dca34bccddf668f587f7f3470c37ad03f5c789f1948d52fb0e83c8d0"
-    },
-    "rag-multimodal": {
-      "title": "多模态 RAG",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "339b9b4e95c0b8d5f2efac216d088fb9d72072bb00a2f5d5114c20438dd78d7f",
-      "bodyDigest": "c209c98e521fc1a2d97bc3d281889dc4edd6d093a02c60320005f649c0030df8"
-    },
-    "rag-performance": {
-      "title": "RAG 性能、成本与降级",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "6c16da48d5f52e72dc851676c356c9f9b84beaef3f9dac7ed82d44330e4c2877",
-      "bodyDigest": "b86b33f408c847c508c76e84a566f58b2c6a92d8bc290f1473a4539e8cb95016"
-    },
-    "rag-practice": {
-      "title": "RAG 实现与验证",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "526c1a586e1716ac839bfcf3fb1254c6741cf662380a4a436de23911245daacc",
-      "bodyDigest": "be63bbc66557e87b440436383408fcca49f3835c33108e2410050c9e93bdc4e5"
-    },
-    "rag-quality-evaluation": {
-      "title": "RAG 质量评测",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "66edd6bbf133192190d573a2eab8a3b44c951da26cafc9b1e8929c64ef1c6857",
-      "bodyDigest": "797c5a70765705d32b7ff473bcd3cf1770efcb1ee8a013c67160f2f60bbb3c80"
-    },
-    "rag-query": {
-      "title": "RAG 查询改写与路由",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "7bc3ad91cb951e3660907b013f42d149e40dad48bddcca8c4598e3d64d794d1e",
-      "bodyDigest": "8ae2cd476bc95ee96416db60af2570cc665d55169b09af3e878b33fb17d77733"
-    },
-    "rag-reranking": {
-      "title": "RAG 重排",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "19b61b16baa6d57f22ca55fbccce5d5fb2338f6008042b666b521cb3ec52e2ef",
-      "bodyDigest": "85e5ca2336ee9370e900f6ff8b893eecfaa2bc9038d49d5b6265dd3e6ea4976b"
-    },
-    "rag-retrieval": {
-      "title": "RAG 检索与候选选择",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "b4ef5a00df9385c72efa2bc6d0c4023c88f82dad870d2f1ff4164d5db2a58cdb",
-      "bodyDigest": "3825779a95c79d261d4777a2b6144524f7731bce26f5df59b68b66680bfb4eee"
-    },
-    "rag-security": {
-      "title": "RAG 权限与文档信任边界",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "a3e8002426aea23b4d4a15bccb36b6d3a14cf17917b2e233348e9e8ad8e88fb6",
-      "bodyDigest": "9cf93d73dba4892805ac1316104c795f2e0fcb7531cd6870064f3223a3ea227d"
-    },
-    "rag": {
-      "title": "RAG（检索增强生成）",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "8100732c25bb74087aa51a85f3843f86b4dec6b75cdf2fc54bb473e73bc67f2d",
-      "bodyDigest": "5093f24c9a6e6c4db2cf841e7562e796345a468da2c2e31e279d16a094b341d0"
-    },
-    "rate-limiting": {
-      "title": "限流",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "82baefa15e5892d832d367ecdf2c8527349b23afd9388eedc72d670c76c47afd",
-      "bodyDigest": "2c964e0149381291be828816b6687afb59a2cc669dbb273ddbee90ed5fc89c7a"
-    },
     "react-agent": {
       "title": "ReAct（推理与行动交替）",
       "collection": "notes",
@@ -1549,40 +681,12 @@
       "digest": "14da267d845c2f3fc0acb098a01637bda9ae9e89d66ec6a8ad1153f6ffda79ca",
       "bodyDigest": "547558246b1ccf66bc79329f988257ca3d7268324f2f1cf80872d617d68ead62"
     },
-    "relational-database": {
-      "title": "关系型数据库",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "7c2ee333c8530887d566881f593fa3a0d7c7d0bcbc638dec6c45e1fcd2149660",
-      "bodyDigest": "1f34e4cbdbb22e13d1df455cf00e9547fcc9b8f763c9a755233c96166227f895"
-    },
-    "retry-decision": {
-      "title": "错误分类与重试决策",
-      "collection": "notes",
-      "state": "organized",
-      "digest": "66645a53e870b3cfff9986bf27fbbc1becb7ad1201a2f50ec3d4002667958481",
-      "bodyDigest": "51794e273b40ed5b4dc6cf1924831c85327cfcbe5e9658003dd0d8e7cd2176f8"
-    },
-    "retry-wrapper": {
-      "title": "重试的封装与实现",
-      "collection": "notes",
-      "state": "organized",
-      "digest": "e26f15ffa151d73421b394bb15cecaab583301b2c6d0f349e86ff93c08bd1b52",
-      "bodyDigest": "6a75c7e79b5cdca71827bee18976da39fe753416f0fd72e5f801417d585c834d"
-    },
-    "reverse-proxy": {
-      "title": "反向代理",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "a5428837f2aad7b2278b9d310db9cd28210a065a467de7694d1c7841d4098284",
-      "bodyDigest": "dff072a0bf0601cbbaed1307927466dc89b5b17567af5b0b7305d3219eba1934"
-    },
     "sandbox-concurrency": {
       "title": "沙箱并发与容量控制",
       "collection": "notes",
       "state": "pending",
-      "digest": "f0e5e828d837dad51ce4c3c6a7af337dcc873caca0320eace0fbfcf98981fec2",
-      "bodyDigest": "f69687e519dd4c1d58ae4587bba10f4e9c2717e241d7e4db3055199323073944"
+      "digest": "623666be4cdd44f6e587b8d364263637e65841a9af4c56dc6d1032e8b5956afa",
+      "bodyDigest": "de485ace82a1b6f7905f151392370cfec38215d4b119660723f9f4bf0c9d66fa"
     },
     "sandbox-credentials": {
       "title": "沙箱凭据保护",
@@ -1595,8 +699,8 @@
       "title": "沙箱执行流程",
       "collection": "notes",
       "state": "pending",
-      "digest": "44870d0c430a17a9ce0c58027686670f9ce1923c329c71083fe54b7e92ae8c1f",
-      "bodyDigest": "7ba3416be618ee26994b58784dc375ed9f1e0228d71312b19e6af212a19ef768"
+      "digest": "fab3ca2504171a1823f7d6e4159877c935d43929d37716be0b84316f1f3275f9",
+      "bodyDigest": "e9c92da68000a691bb4551c424f43c2113d82b83fdd998594ac6ee3cd8b8a1cf"
     },
     "sandbox-filesystem": {
       "title": "沙箱文件访问控制",
@@ -1654,110 +758,12 @@
       "digest": "a3d7dc804482c061105135ee173868cd608d8df1067b1b38b9ea12447eafa708",
       "bodyDigest": "2042725b5007f54dd8a2b9cd5399ab30685099092cc04a24a766396667672dea"
     },
-    "sequential-consistency": {
-      "title": "顺序一致性",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "63bed69b80a93fc60b7d41835f158b5d7e7af7706709a96e978fdfc6b9b0e031",
-      "bodyDigest": "868a0c3874210a8d9e51ceb045127b5072415c163d5ac25dc2fe23175c6729d3"
-    },
-    "service-discovery": {
-      "title": "服务发现",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "e4ededcc05cfa8dbf663f3cfafb48ea73b1443f2e3fe9b303f8b975fc1ea50ea",
-      "bodyDigest": "78bff154642dee8a490ab72c0fc0c731b73f0cd84e1f74b47cc23cdd8e30b73b"
-    },
-    "service-registration": {
-      "title": "服务注册",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "a6db9fe59a9ae8a1a2c08109bb0f789bad5ce510f0c9c9e40a6b622e9f18398f",
-      "bodyDigest": "f2f59eaa1552e242a6c8f73474e6c1426d98909c4ef472cad44e66e701442b53"
-    },
-    "service-registry": {
-      "title": "服务注册中心",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "57199d30f1e3e8cc23aa50fc079c2111b1813c24bb02029498fcea4f9b3111c8",
-      "bodyDigest": "c1007b1a323a72ab9d55154cf7d23456b768e20aad950f0cbbdf77c687b35084"
-    },
-    "short-code": {
-      "title": "短码",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "8802570cb7667ff188829bd19cf29f02d70ae99ecd8aaa26495857ca0db3608a",
-      "bodyDigest": "fa77760e290d2d8ee77c6a3846e9dc5aaf71b3c78257d56647b39938a5d72712"
-    },
-    "short-links": {
-      "title": "短链接",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "308d24b75510587141f73de78823585f27132470577b2a7204bcdf969e5641b3",
-      "bodyDigest": "a4bed97bca2a7191e18f4229034aad7bf5ea945559f078dc160040fafa8820bb"
-    },
-    "sliding-window": {
-      "title": "滑动窗口限流",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "e5ca27cb57be27edadfe06ad732d94277cc7c8488e51cb07848fff301aeddfa7",
-      "bodyDigest": "970d0ce52085c892fc307511785d28912497cca04fccc235d2289f1adf8ea280"
-    },
-    "sql-server": {
-      "title": "SQL Server",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "adba393686cb5068084e4bc70a782ef552730fa3614a9bfb2c6acb3ab186f87a",
-      "bodyDigest": "31a6f7339a2072641d13325777ff0e42f2d976603eeaae7144f579b9dccd603b"
-    },
     "srt-sandbox-practice": {
       "title": "srt 沙箱用法",
       "collection": "notes",
       "state": "pending",
       "digest": "579b4a33aeba7ab090772fd01f664f22254b6a1bfef8229366d268176fee753a",
       "bodyDigest": "72b3389bde0d6a9d571813c429c63f34a609488849303c67d87930ed3083df81"
-    },
-    "sso-session": {
-      "title": "SSO 会话建立",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "b090cb073713691d817d64affd5fe13cc74d163debc563e865cba011b123b3d8",
-      "bodyDigest": "fd0e618c6b218664ac52923a5e3d334dfcdeed9f917266b7946ea6725cc69756"
-    },
-    "sso": {
-      "title": "SSO（单点登录）",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "ae3730ac8eb987f89febd45b32af9b1de417aaaa482349a3c82752c51b94dbd4",
-      "bodyDigest": "48943f5b837f0195a2a54587b4cdb6eeafdba860b2b2f0a007a7ce6598af61d0"
-    },
-    "storage-engine": {
-      "title": "存储引擎",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "e8fb8f93de9829612c7fcf66a362643eb9e39a9a5f195fccde2b4b59dc364b5f",
-      "bodyDigest": "ee3ae65832e95ad46a39a39877f32a0743067e65e01b59d0136da36545a862c9"
-    },
-    "strong-consistency": {
-      "title": "强一致性",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "fbf3ec610c8c7a8ab1ca9ddb2aa2ded1eb6e9a01f4eaae87e1e5a644d7b3143e",
-      "bodyDigest": "f0e461a4c5cc90bc81d7aaeab9efe8000319ef14229ec6c1a3c5243b2c9fa649"
-    },
-    "temporal": {
-      "title": "Temporal",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "9500bd5d897e2241e809585be821120797e278ff736ab8c427f2124f56a10558",
-      "bodyDigest": "c6648b2226ac7e1de01128adf028d956bfb5a3ca29ea6d130279fc89d77229e9"
-    },
-    "token-bucket": {
-      "title": "令牌桶限流",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "c6039dd3d22e1f50fc2d3c21a60a10748b56649d2f4525f1469b4a36ab66d5ba",
-      "bodyDigest": "d93e1ad508559fa96bccbafc2e63ce3b299770fe72446c102a8825b98912c4f0"
     },
     "tool-approvals": {
       "title": "工具调用的审批",
@@ -1808,82 +814,12 @@
       "digest": "851e4cb88b9e1e1b2cd71d0ffe16b724aa1012235ea82214a223b71dc33f8fb0",
       "bodyDigest": "2395c8f980ecd0a690a8f64bd2f1abafd4dc303a9ae5bd1554a78eef2a77bb3b"
     },
-    "total-order": {
-      "title": "全序性",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "df7271ad2649f3167d9b706a31b139e8810c5a92680ff83dbeefe5c7106309e9",
-      "bodyDigest": "95419a76ea1dbd3aecefd2b18714c1ce087e7213d8e0ec9d4a78be943ea619b9"
-    },
-    "transaction": {
-      "title": "事务",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "2790c13ac38cc53faf4eb7b1110ece81c29c150ec0e6170f6f94eb882db01e6a",
-      "bodyDigest": "3d0462e9bcf112852ef378fa2b4dc25a4654b892e8be2ba9e6e64e1f7d06cd9f"
-    },
-    "wal": {
-      "title": "WAL（预写日志）",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "5a5be42038f6f191349814ea13a886471729d750a34958ce765656fb15db0bc8",
-      "bodyDigest": "48943ca28704ff17f4da5112506938e6b81254793cba3aff4fdf254c3f26becc"
-    },
-    "watch": {
-      "title": "Watch（监听机制）",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "96a443d271e0495fe37b93c883791273a3b4bd8218dc243b5646d2f42cba420b",
-      "bodyDigest": "ec862083f32fcb61f5854ac84f7035a9fc21ed4f9f5efea358332d921698f3c6"
-    },
     "worktree-sandbox-usage": {
       "title": "Worktree 与执行沙箱",
       "collection": "notes",
       "state": "pending",
       "digest": "3a3369c93a3e01f185472c928cf03f8316a8c58ffcd83cc678107bacd5f1fbe7",
       "bodyDigest": "b9143e39a371fbcec595be782ba6ae4a569297ecad9cfa2a40cd1719b0c26dbe"
-    },
-    "zab": {
-      "title": "ZAB（ZooKeeper 原子广播协议）",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "ea3729599cd27ed37f6055d18a11508e16d21787686a274e18afcfc08aace190",
-      "bodyDigest": "ff3e293f67b59eda50ca6d99a6da5a97678b2de305fa1b72245f88822b021b65"
-    },
-    "zookeeper-client": {
-      "title": "ZooKeeper 客户端通信",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "93817a618e45aa3948889d8d655da98a79933ba63938af27c309679bcdce717b",
-      "bodyDigest": "84d1dcae6b220a7149289454ba0b12b33b80343cec1035ab2041bf9ef4586e4e"
-    },
-    "zookeeper-consistency": {
-      "title": "ZooKeeper 读写与一致性",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "de3caddfb8101ae0735b1f3a3e2238b88294cec81f67fb82934e063a2d1b6795",
-      "bodyDigest": "6f54d2001dee53513b30c9aad1b601a7b9cc62ee7ab66b89bb74883993e25f06"
-    },
-    "zookeeper-roles": {
-      "title": "ZooKeeper 节点角色",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "d9e0bbec165ddfe6e514ef085f22365c2f1e4d1831d16f5f5b76762b9c93e55f",
-      "bodyDigest": "6035e7e82dd22598f4f3e8818aeaeacd418b549de59d922c5a71bd1212552223"
-    },
-    "zookeeper-znode": {
-      "title": "ZooKeeper 节点（znode）",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "01317d819a02488159e8f2a3e2a6d6e87508dcadc54500efda9244e9a273ff06",
-      "bodyDigest": "5c933873e80614f54c24a9df4ce7433d3f9a827b9f52b9081b577b9957d27b64"
-    },
-    "zookeeper": {
-      "title": "ZooKeeper",
-      "collection": "notes",
-      "state": "pending",
-      "digest": "d8e459a9eb01c59384ccd6218b24af685632901fcee0dc6c82dc20c3261d0b7a",
-      "bodyDigest": "f43c05e566096c78056c0cbac8aeea3ad12a45bec4205bb1be092a9ac3114046"
     },
     "a2a-protocol-specification": {
       "title": "A2A：发现、任务生命周期与协议边界",
@@ -1944,9 +880,9 @@
     "anthropic-context-engineering-summary": {
       "title": "Anthropic：为每一步选择有效上下文",
       "collection": "readings",
-      "state": "organized",
-      "digest": "530d4195ab68701ecaf733f7a6ac44b1ca8e5d21a83851ee781b4c4012e1ef55",
-      "bodyDigest": "9d960527f2694c21a02f2bf831f9ad72e7867ca8dfd63ee14fe35404f7df8290"
+      "state": "pending",
+      "digest": "d63aeeb2e08026c6cc70a8c1e5cd3b6f2f43e80419d8cf843faf8748468977a4",
+      "bodyDigest": "0afcd5099869f942d8036cfb54ae59ebf22f2befbee8f627520580e33cf5e0cc"
     },
     "anthropic-contextual-retrieval": {
       "title": "Anthropic：为片段补背景后再建立索引",
@@ -2043,8 +979,8 @@
       "title": "AWS：超时、重试、退避与抖动",
       "collection": "readings",
       "state": "pending",
-      "digest": "b3c004fd5b40cd0acc0a22aa83ec034c2a9baf1fa0bda4e6e4737429fda6fdbb",
-      "bodyDigest": "07caa8df8daa7563b9383d7d5fa42f16db7d5d62724dbea431cf799b30db1831"
+      "digest": "eabe93ec1f711bee9a2499b23cf4408926b74208072fee9576a4eb4e1dd012f8",
+      "bodyDigest": "fdf490f712a16b92f7d00acdea6819af8541d237c4b535a5cae674f3399624c6"
     },
     "aws-retry-errors-summary": {
       "title": "AWS SDK：按错误语义判断是否重试",
@@ -2323,8 +1259,8 @@
       "title": "Eino 的检查点与中断恢复",
       "collection": "readings",
       "state": "pending",
-      "digest": "ab1547cb5bdb8e12d0ae2409817d1a21a8e29af272df5f96a9ab0b344722ef84",
-      "bodyDigest": "ab580f1c795a652b7d96bf3ee366b69cf780634eb2b3500c61a8846a0613dc7c"
+      "digest": "c288f66ae46439f8a047c64f0f6491a1ac13aedd35f6179744d27cd8ecd58fcc",
+      "bodyDigest": "2fa86b00aebad817cdfe1f1cbf979c228f8226f725dc6ba0ea501f2d9cbe39fa"
     },
     "eino-langfuse-tracing": {
       "title": "Eino 的 Langfuse Trace 集成",
@@ -2346,6 +1282,13 @@
       "state": "pending",
       "digest": "40932aae2715375660943179c86f8637f5adf1e74b9d10626260f145f998bc2c",
       "bodyDigest": "516d80f7db231659dd5edea9869333cfbf876a07f54e46250028f477a4fcd5bc"
+    },
+    "fusion-calibration": {
+      "title": "混合检索融合权重的实验依据",
+      "collection": "readings",
+      "state": "pending",
+      "digest": "df10d9abb575c0feb0720838758f42fd2876369de121846544c8ca4d54a60c7a",
+      "bodyDigest": "d4f900d53df926bb4af240108926b4812624924c3c3a06cec013d15b4bb24d87"
     },
     "gaia-evaluation": {
       "title": "GAIA：以可核验答案评测通用助手",
@@ -2372,15 +1315,15 @@
       "title": "Go backoff：用函数包装一次操作",
       "collection": "readings",
       "state": "pending",
-      "digest": "701caa81103e9c435a3abf777db9137897727006bff27e869893856fe21d1b3f",
-      "bodyDigest": "ef36510d2ae76abf97f300c59f30bb3d6128b733aad69541c92d7609a1b2ca25"
+      "digest": "25b1dde600e83306a4eb00e5d4c9e1fb378430dc70a3dc6df50da5a6e7e96185",
+      "bodyDigest": "aed7430c0586fc2cfc4fe7f8715331e30744493fa9f600aa96e8709b7938f04a"
     },
     "go-sql-connections": {
       "title": "Go 官方文档导读：数据库连接池与资源归还",
       "collection": "readings",
       "state": "pending",
-      "digest": "3b59e84e6abe95a6d673af573350d1bcc97bd6fe0b70c0665a89cada437dcff4",
-      "bodyDigest": "c6cf15bc9606d2000e6e5e2677f8fdd847ad52f4f5cc9d991fe994ac087b569f"
+      "digest": "1174949edc8c6e964f5355016fba2b83a9fd661d5b937d2266b2f3d6a819aa43",
+      "bodyDigest": "97300fa6a664a3c061183b550dba0ba8cc549e2a4aa9c6cc1d72cf11a0a33d6c"
     },
     "graphrag-docs": {
       "title": "Microsoft GraphRAG：实体、社区与两类查询",
@@ -2416,6 +1359,13 @@
       "state": "pending",
       "digest": "61789d6dbbfbfc3835e97aa14d8110646e85f689cb0d1aa8dcbae80f743bc265",
       "bodyDigest": "54ffe8d233e1c230745e1261cd67ff4793f79c1f430076aa67c5fe1e1bf177ef"
+    },
+    "innodb-monitor-reading": {
+      "title": "MySQL 官方手册导读：InnoDB 状态报告",
+      "collection": "readings",
+      "state": "pending",
+      "digest": "85ac4a2d62913be4c4e096fff2b3e76752184f2c7212b8bf71db2ae6a3b4ad26",
+      "bodyDigest": "f3528e3270027a0f636b4b85a5e593505dc747f22d9087cdd1ef3f09c525abe7"
     },
     "inspect-agent-evaluation": {
       "title": "Inspect：任务、执行器、评分器与隔离环境",
@@ -2533,8 +1483,8 @@
       "title": "LangGraph：检查点怎样保存执行进度",
       "collection": "readings",
       "state": "pending",
-      "digest": "1bb0e6e9c7f25775477e77420f1c5be7ec69a7d0f72dfd354e1b2eb683184385",
-      "bodyDigest": "e8c46c9ab20b6233d74879e0f337dd08559fd479dbb2cda573a0faeacf8a4e30"
+      "digest": "db2212f522cf5554dc49098cb44033cd1d4c3d702ed3ad4b6d919b8cd8895192",
+      "bodyDigest": "b9c6e562e93ae79461fe5f8118f6dd453f10078469ffb9ae1a98bf60a7cde075"
     },
     "langgraph-human-interrupts": {
       "title": "LangGraph 与 LangChain：从中断原语到人工决策",
@@ -2682,6 +1632,13 @@
       "state": "pending",
       "digest": "6a9f5a8133e2f53655157d0f50c73ef4e34349c6e98167b3f4603829c151a0c7",
       "bodyDigest": "d8c55c4577867a73dc3b6c9ab1a1029296bc5cd7f25adb772481fbb48f674a47"
+    },
+    "mysql-deadlock-reading": {
+      "title": "MySQL 死锁排查资料导读",
+      "collection": "readings",
+      "state": "pending",
+      "digest": "b88a45017c302a1f758de91b5b73f42fbc05c3066692b95482c099823dc93d93",
+      "bodyDigest": "c5fbf729d79eb3ed46c234e8f366cad476b4bf4f8a15f46b1aab95b3127a3596"
     },
     "openai-agents-architecture-summary": {
       "title": "OpenAI Agents API：Harness、执行环境与应用的分工",
@@ -2876,8 +1833,8 @@
       "title": "检索官方文档：词项评分、语义表示、融合与重排",
       "collection": "readings",
       "state": "pending",
-      "digest": "46bf486f56fb0e4418cc993ba0f73740e1bf44361be847da12ab5b368f55ee58",
-      "bodyDigest": "5ffa6835ca501ea8e8f3547aa6584d24a31a6f8fd6ee69fae21076e1281c35d6"
+      "digest": "11976cc4b847aed0d753f0b7a7b79d8326d3e0ab86622650322d3def1a3eaf66",
+      "bodyDigest": "1bfab7a2884d06c84bc943d8f1189e22c372652086b91e94283f7c7913cf082e"
     },
     "rag-security-docs": {
       "title": "Azure 与 OWASP：RAG 的权限和文档信任边界",
@@ -2890,8 +1847,8 @@
       "title": "Rasa 与 scikit-learn：意图分类的样本、特征与预测",
       "collection": "readings",
       "state": "pending",
-      "digest": "db41090a1173881cedebeb6891fc62725df2b9e15a3c3443f8397c1226f3390f",
-      "bodyDigest": "e24e068a0082da57209e3333d8cb71e2490a8e4ef35b743837171ad9f0ee5ed1"
+      "digest": "2a0963a4c92fa7f4828d0dbedda77696abce9d728d2f857baa508614dea3ef50",
+      "bodyDigest": "a5fd7ebdaafd64ea188621909ebddebbc62af9a6c35249c8e5ab3091385aebb6"
     },
     "rasa-intent-fallback": {
       "title": "Rasa：低置信度回退与分阶段澄清",
@@ -2921,19 +1878,19 @@
       "digest": "5c95a38dc5774b606ef0f63519a5c9c43578fc90e9934df9d6e1a0f7a0aed2d6",
       "bodyDigest": "dbaf4e4b7c27fa97b90f033e7338366140d8e0239bab239fd3a5f93238edeedd"
     },
-    "redis-cache-docs": {
-      "title": "Azure 架构文档：Cache Aside 的一致性边界",
-      "collection": "readings",
-      "state": "pending",
-      "digest": "fc44b615f7ef92514e07d330cb85bdf679cfbfe12f4ddba790af40f485855227",
-      "bodyDigest": "86e3dbca61a958f8c0fff1213814b674f7ccd91bea3942456891335ebd10768b"
-    },
     "reflexion-summary": {
       "title": "Reflexion：把执行反馈写成经验，指导下一次尝试",
       "collection": "readings",
       "state": "pending",
       "digest": "8fbeb0d12dbf36f6cc558db4773e7535d36c497ed8ccec90c62486b116a65247",
       "bodyDigest": "51c08366009f11cd09a5311ee411ab623e457d004eb05bbc958c0f5727536379"
+    },
+    "rrf-paper-reading": {
+      "title": "RRF 原始论文：常数 60 的来源",
+      "collection": "readings",
+      "state": "pending",
+      "digest": "2ccee633fb71be6eadef6e9ae4eaad4ef61baa9a5f22cf4b61b995073b6de1ef",
+      "bodyDigest": "e8f8b19d69187d7ba4963c2e857f382ccbe2d993dd5e7ee0488faee0685d67b8"
     },
     "schema-guided-dialogue": {
       "title": "SGD：用能力描述组织意图、参数与对话状态",
@@ -3004,69 +1961,6 @@
       "state": "pending",
       "digest": "447e6c27e5733fd1d5a9ab07fa104d62e3bf0a93d925aebebc7e109e764cf3b5",
       "bodyDigest": "81ed291d600fda103258592a2bf2d10b07cb6abe66a244a09ed9971066e1c09c"
-    },
-    "victoriametrics-cond-summary": {
-      "title": "VictoriaMetrics：Cond：等待条件与通知",
-      "collection": "readings",
-      "state": "pending",
-      "digest": "78fdb780a3877f51d0061d646ffbec4881801e855f1b31728e180b8d071aaeb2",
-      "bodyDigest": "37c2670cd232d7d2cc9da0375a618db9d2d525f9f19595bbb1f3c9cbb31734f3"
-    },
-    "victoriametrics-go-concurrency": {
-      "title": "VictoriaMetrics Go 并发文章总结",
-      "collection": "readings",
-      "state": "pending",
-      "digest": "52944199040cacc21e03d45018446590a6fff3fa64db17092e8820d1cf449e04",
-      "bodyDigest": "c01b0e1c98e1b3165b84751b65044f5fae0272c99cff16fca47dbb6955e3772e"
-    },
-    "victoriametrics-mutex-summary": {
-      "title": "VictoriaMetrics：Mutex：吞吐与公平的取舍",
-      "collection": "readings",
-      "state": "pending",
-      "digest": "d71e080e31bd3bd849394b14fc94e7c87e0d9631631968f55c3ad1b338e4e37e",
-      "bodyDigest": "dd541016ebec5ff1b08c5d4ec65ee7fd98984e3a798f19cef40e20db528fce45"
-    },
-    "victoriametrics-once-summary": {
-      "title": "VictoriaMetrics：Once：执行一次与完成可见性",
-      "collection": "readings",
-      "state": "pending",
-      "digest": "527ce544c89ab8f3cbc9714950cd0e5651987a9d43c845bfbba6f7fc2dc3075b",
-      "bodyDigest": "1896dc09480fd91b92c6da156914c43c401f9ca840b321000f3217d6d592c3ad"
-    },
-    "victoriametrics-pool-summary": {
-      "title": "VictoriaMetrics：Pool：对象复用与回收",
-      "collection": "readings",
-      "state": "pending",
-      "digest": "a58e2ed785ea6ec41088eae9bad1afc3bc7153ec2bd590adc6625b55f02c344a",
-      "bodyDigest": "09dff92b3b9f22060a0790a7b2aec08382b3fd048d3501c73c2ba145196fec26"
-    },
-    "victoriametrics-singleflight-summary": {
-      "title": "VictoriaMetrics：singleflight：合并正在执行的请求",
-      "collection": "readings",
-      "state": "pending",
-      "digest": "352c2a2c40df4fd4bb936461e60df7064253f828dc6da9bded753c0058513fd6",
-      "bodyDigest": "8f28b8512b7a96c0e6de8d0ccd6ce54ff7aa298501eefec7d0d34bca6028599f"
-    },
-    "victoriametrics-sync-map-summary": {
-      "title": "VictoriaMetrics：sync.Map：双表机制与适用边界",
-      "collection": "readings",
-      "state": "pending",
-      "digest": "5cb3a1b67a27c7a1c06bc25770773e68917ec89d104499487d023f19feb2f47f",
-      "bodyDigest": "8ee840388481fc35c120db0e5eeb4856a7ffdc396f3bd7e6f86df77021600c42"
-    },
-    "victoriametrics-waitgroup-summary": {
-      "title": "VictoriaMetrics：WaitGroup：计数、唤醒与对齐",
-      "collection": "readings",
-      "state": "pending",
-      "digest": "c643d36aece1482f9673e05100ae712161392bd93e8bf2877ae064ec0953c60d",
-      "bodyDigest": "eb725b0c192718b282bb38e39ff44b4e70d05df91774fc0195644def3ccfaeed"
-    },
-    "wal-official-docs": {
-      "title": "WAL 官方文档导读：持久化顺序、提交与恢复",
-      "collection": "readings",
-      "state": "pending",
-      "digest": "13083af74689a7e16701f7551175e500a765d96b8f5f737fe7a0cb231bbfc587",
-      "bodyDigest": "8a0f5c8a95588456d398bfa95d1e0313963d496d88f8679e632637c4db4973ed"
     },
     "xiaolin-task-decomposition-summary": {
       "title": "小林：任务拆分为什么有用",
@@ -3776,9 +2670,7 @@
         "assets/retry-decision-control.png": "859d1c5aa34a19ecbdc5e274f71168d02e917b18f6781ee50d64f0ca446c21a4",
         "assets/retry-decision-control.svg": "0dce98dbccf28f67dae722eb37a54a5ae08f0621341151e8971688424e549128"
       },
-      "collections": [
-        "notes"
-      ]
+      "collections": []
     },
     "assets/retry-wrapper-mechanism": {
       "title": "retry-wrapper-mechanism",
@@ -3787,9 +2679,7 @@
         "assets/retry-wrapper-mechanism.png": "9633d16be3e00c8255e7ef70ad4a2361e1c252fc326518617f5daaf40e14dd77",
         "assets/retry-wrapper-mechanism.svg": "b5794b8a1e6d807f1cd3e21c13d0a1dce508e9c80a4aaeead861d74da1db6e65"
       },
-      "collections": [
-        "notes"
-      ]
+      "collections": []
     },
     "assets/tool-calling-partial-results": {
       "title": "tool-calling-partial-results",
@@ -3919,9 +2809,7 @@
         "assets/wal-process.png": "59113278ef7a78426734e3bdd629e89d9c23e01e56c5f90c5d809f4daf3c6ee8",
         "assets/wal-process.svg": "3be2258e1479a2537604c8ea420431a356bdb89a4ee813544cbaf4ad6a181322"
       },
-      "collections": [
-        "notes"
-      ]
+      "collections": []
     }
   },
   "events": [
@@ -32510,6 +31398,2830 @@
       "docId": "agent-task-decomposition",
       "from": "reading",
       "to": "organized"
+    },
+    {
+      "id": "746e8ad9-d61a-4e3d-8268-330a4649daa6",
+      "kind": "created",
+      "entity": "doc:mysql-deadlock-interview",
+      "title": "MySQL 遇到死锁，如何排查和优化修复？",
+      "time": "2026-10-18T03:56:27.182Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-deadlock-interview"
+    },
+    {
+      "id": "16993f0a-f208-4a5b-a4b6-4727daca66e6",
+      "kind": "created",
+      "entity": "doc:mysql-deadlock-diagnosis",
+      "title": "MySQL 死锁排查与修复",
+      "time": "2026-10-18T03:56:27.182Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "mysql-deadlock-diagnosis"
+    },
+    {
+      "id": "b66da923-d813-4884-96b9-c4a0e1d9d62c",
+      "kind": "created",
+      "entity": "doc:mysql-deadlock-reading",
+      "title": "MySQL 死锁排查资料导读",
+      "time": "2026-10-18T03:56:27.182Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "mysql-deadlock-reading"
+    },
+    {
+      "id": "06e4ce86-5212-4070-b239-028772aefdcf",
+      "kind": "state-changed",
+      "entity": "doc:mysql-deadlock-interview",
+      "title": "MySQL 遇到死锁，如何排查和优化修复？",
+      "time": "2026-10-18T04:00:19.708Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-deadlock-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "2e23b6bb-607e-4e18-b348-59efd3a28228",
+      "kind": "updated",
+      "entity": "doc:mysql-deadlock-interview",
+      "title": "MySQL 遇到死锁，如何排查和优化修复？",
+      "time": "2026-10-18T04:00:40.615Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-deadlock-interview"
+    },
+    {
+      "id": "b4ddd58d-13e0-45da-bb7e-8ae185d3e108",
+      "kind": "updated",
+      "entity": "doc:mysql-deadlock-interview",
+      "title": "MySQL 遇到死锁，如何排查和优化修复？",
+      "time": "2026-10-18T04:03:40.623Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-deadlock-interview"
+    },
+    {
+      "id": "646238ed-b574-488f-baa3-09952cbf9974",
+      "kind": "updated",
+      "entity": "doc:mysql-deadlock-interview",
+      "title": "MySQL 遇到死锁，如何排查和优化修复？",
+      "time": "2026-10-18T04:05:08.610Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-deadlock-interview"
+    },
+    {
+      "id": "94dba295-36f1-4c4c-ab6d-d3231878956c",
+      "kind": "created",
+      "entity": "doc:mysql-deadlock-victim",
+      "title": "发生死锁时，InnoDB 会回滚哪个事务？",
+      "time": "2026-10-18T04:05:08.610Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-deadlock-victim"
+    },
+    {
+      "id": "da245912-b0b7-4b19-8969-2a995eff3e10",
+      "kind": "updated",
+      "entity": "doc:mysql-deadlock-reading",
+      "title": "MySQL 死锁排查资料导读",
+      "time": "2026-10-18T04:05:08.610Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "mysql-deadlock-reading"
+    },
+    {
+      "id": "13bb664d-6a39-47f6-bdd1-347bf221b30e",
+      "kind": "created",
+      "entity": "doc:mysql-interview-index",
+      "title": "MySQL 面试题",
+      "time": "2026-10-18T04:06:52.616Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-interview-index"
+    },
+    {
+      "id": "a8e853cc-8529-4e13-bf31-0fb16d2d433e",
+      "kind": "state-changed",
+      "entity": "doc:mysql-deadlock-victim",
+      "title": "发生死锁时，InnoDB 会回滚哪个事务？",
+      "time": "2026-10-18T04:06:55.879Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-deadlock-victim",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "d75b33a3-eadc-43a9-b9bd-fbc9a09d6eb7",
+      "kind": "state-changed",
+      "entity": "doc:mysql-deadlock-victim",
+      "title": "发生死锁时，InnoDB 会回滚哪个事务？",
+      "time": "2026-10-18T04:06:56.986Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-deadlock-victim",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "12385bcf-e3bd-46fa-8f3d-74a1a67dc822",
+      "kind": "updated",
+      "entity": "doc:mysql-deadlock-interview",
+      "title": "MySQL 遇到死锁，如何排查和优化修复？",
+      "time": "2026-10-18T04:09:28.612Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-deadlock-interview"
+    },
+    {
+      "id": "fb811f38-6f67-4ee8-8fb2-19295a79c58e",
+      "kind": "updated",
+      "entity": "doc:mysql-deadlock-diagnosis",
+      "title": "MySQL 死锁排查与修复",
+      "time": "2026-10-18T04:09:28.612Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "mysql-deadlock-diagnosis"
+    },
+    {
+      "id": "3f9f60be-dd8b-4dba-a874-dcc0836430d4",
+      "kind": "created",
+      "entity": "doc:mysql-innodb-status",
+      "title": "SHOW ENGINE INNODB STATUS",
+      "time": "2026-10-18T04:09:28.612Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "mysql-innodb-status"
+    },
+    {
+      "id": "5f73563b-e824-43f5-83e9-4186cf3bea82",
+      "kind": "created",
+      "entity": "doc:innodb-monitor-reading",
+      "title": "MySQL 官方手册导读：InnoDB 状态报告",
+      "time": "2026-10-18T04:09:28.612Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "innodb-monitor-reading"
+    },
+    {
+      "id": "337466d1-79be-4123-872b-8b85a38ecfc2",
+      "kind": "updated",
+      "entity": "doc:innodb-monitor-reading",
+      "title": "MySQL 官方手册导读：InnoDB 状态报告",
+      "time": "2026-10-18T04:09:48.583Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "innodb-monitor-reading"
+    },
+    {
+      "id": "796bf40d-cfda-4426-a5ef-6446840d894f",
+      "kind": "updated",
+      "entity": "doc:mysql-deadlock-interview",
+      "title": "MySQL 遇到死锁，如何排查和优化修复？",
+      "time": "2026-10-18T04:10:32.621Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-deadlock-interview"
+    },
+    {
+      "id": "87d8fa73-53bf-4816-b3d8-8241aa190c7c",
+      "kind": "updated",
+      "entity": "doc:mysql-innodb-status",
+      "title": "SHOW ENGINE INNODB STATUS",
+      "time": "2026-10-18T04:10:32.621Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "mysql-innodb-status"
+    },
+    {
+      "id": "ff0cc867-c929-4254-a78a-99dbbd910788",
+      "kind": "updated",
+      "entity": "doc:mysql-innodb-status",
+      "title": "SHOW ENGINE INNODB STATUS",
+      "time": "2026-10-18T04:11:52.611Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "mysql-innodb-status"
+    },
+    {
+      "id": "471c19d0-6543-4e64-ae6d-c49b67f3fae6",
+      "kind": "updated",
+      "entity": "doc:mysql-innodb-status",
+      "title": "SHOW ENGINE INNODB STATUS",
+      "time": "2026-10-18T04:12:52.629Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "mysql-innodb-status"
+    },
+    {
+      "id": "90d02536-bed8-45b0-b797-847febd58fb9",
+      "kind": "updated",
+      "entity": "doc:mysql-innodb-status",
+      "title": "SHOW ENGINE INNODB STATUS",
+      "time": "2026-10-18T04:14:24.599Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "mysql-innodb-status"
+    },
+    {
+      "id": "296de2ef-3798-433c-bb9a-228d6c53549b",
+      "kind": "updated",
+      "entity": "doc:mysql-deadlock-interview",
+      "title": "MySQL 遇到死锁，如何排查和优化修复？",
+      "time": "2026-10-18T12:27:04.829Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-deadlock-interview"
+    },
+    {
+      "id": "d9f9181e-c204-49fc-91ec-5e801ff3ec56",
+      "kind": "created",
+      "entity": "doc:mysql-deadlock-retry",
+      "title": "MySQL 死锁回滚后，应用应该怎样重试？",
+      "time": "2026-10-18T12:27:04.829Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-deadlock-retry"
+    },
+    {
+      "id": "10a7c12a-516c-4ecd-8bb8-b292e32b473d",
+      "kind": "created",
+      "entity": "doc:mysql-deadlock-timeout",
+      "title": "MySQL 死锁和锁等待超时有什么区别？",
+      "time": "2026-10-18T12:27:04.829Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-deadlock-timeout"
+    },
+    {
+      "id": "170dafa3-a6e2-400e-bc7a-92d6adfc83c3",
+      "kind": "updated",
+      "entity": "doc:mysql-interview-index",
+      "title": "MySQL 面试题",
+      "time": "2026-10-18T12:27:04.829Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-interview-index"
+    },
+    {
+      "id": "fb48e17e-dc4e-4bb8-afc9-f0d0026f875b",
+      "kind": "updated",
+      "entity": "doc:mysql-deadlock-reading",
+      "title": "MySQL 死锁排查资料导读",
+      "time": "2026-10-18T12:27:04.829Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "mysql-deadlock-reading"
+    },
+    {
+      "id": "efd5d3ff-e279-4b33-996e-4dba8814ab64",
+      "kind": "updated",
+      "entity": "doc:mysql-deadlock-timeout",
+      "title": "MySQL 死锁和锁等待超时有什么区别？",
+      "time": "2026-10-18T12:30:28.780Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-deadlock-timeout"
+    },
+    {
+      "id": "a9d2691c-c132-443a-9eab-c598cc2a22ca",
+      "kind": "created",
+      "entity": "doc:mysql-lock-wait-timeout",
+      "title": "MySQL 锁等待超时",
+      "time": "2026-10-18T12:30:28.780Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "mysql-lock-wait-timeout"
+    },
+    {
+      "id": "dbaf19fd-8a3b-401a-9ce6-876197ce5df7",
+      "kind": "updated",
+      "entity": "doc:mysql-deadlock-reading",
+      "title": "MySQL 死锁排查资料导读",
+      "time": "2026-10-18T12:30:28.780Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "mysql-deadlock-reading"
+    },
+    {
+      "id": "d5f366e4-a20b-45e4-acc8-8dc75c27681c",
+      "kind": "created",
+      "entity": "doc:agent-career-motivation",
+      "title": "为什么想做 Agent 开发？",
+      "time": "2026-10-18T12:40:32.771Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-career-motivation"
+    },
+    {
+      "id": "3a677bad-dfaa-4fe5-b3c6-28b636c7d132",
+      "kind": "updated",
+      "entity": "doc:mysql-deadlock-interview",
+      "title": "MySQL 遇到死锁，如何排查和优化修复？",
+      "time": "2026-10-18T12:43:28.759Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-deadlock-interview"
+    },
+    {
+      "id": "f2bd86fe-ce87-4c57-9484-af9f51154abd",
+      "kind": "updated",
+      "entity": "doc:mysql-interview-index",
+      "title": "MySQL 面试题",
+      "time": "2026-10-18T12:43:28.759Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-interview-index"
+    },
+    {
+      "id": "ad02ea07-d7cb-4cd4-a593-687147bbdb20",
+      "kind": "created",
+      "entity": "doc:mysql-lock-timeout-interview",
+      "title": "MySQL 锁等待超时，如何排查和处理？",
+      "time": "2026-10-18T12:43:28.759Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-lock-timeout-interview"
+    },
+    {
+      "id": "40410b33-f49f-47b3-ae4b-91f5d71086a4",
+      "kind": "updated",
+      "entity": "doc:mysql-lock-wait-timeout",
+      "title": "MySQL 锁等待超时",
+      "time": "2026-10-18T12:43:28.759Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "mysql-lock-wait-timeout"
+    },
+    {
+      "id": "9049787d-18e7-4435-923c-9250c3f8487d",
+      "kind": "created",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-18T12:43:56.896Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "61414c87-9f43-43a1-98a2-b7f3bedd42c8",
+      "kind": "state-changed",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-18T12:45:36.313Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "fe45b389-940b-4aa1-bce5-e5506aa92d29",
+      "kind": "state-changed",
+      "entity": "doc:interview-resources",
+      "title": "Go 与 Agent 面试资料",
+      "time": "2026-10-18T12:45:38.264Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-resources",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "294bab68-92b2-4500-89b7-7a0235217091",
+      "kind": "state-changed",
+      "entity": "doc:agent-career-motivation",
+      "title": "为什么想做 Agent 开发？",
+      "time": "2026-10-18T12:46:26.720Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-career-motivation",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "4cade89d-822e-41c4-abc0-dff4c265fa6e",
+      "kind": "state-changed",
+      "entity": "doc:agent-career-motivation",
+      "title": "为什么想做 Agent 开发？",
+      "time": "2026-10-18T12:46:27.192Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-career-motivation",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "20b09c85-f733-45d2-9ff4-2059b0526828",
+      "kind": "updated",
+      "entity": "doc:mysql-deadlock-interview",
+      "title": "MySQL 遇到死锁，如何排查和优化修复？",
+      "time": "2026-10-18T12:46:44.770Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-deadlock-interview"
+    },
+    {
+      "id": "35b2a166-de99-407a-b3a1-ad2844ffb572",
+      "kind": "updated",
+      "entity": "doc:mysql-lock-timeout-interview",
+      "title": "MySQL 锁等待超时，如何排查和处理？",
+      "time": "2026-10-18T12:46:44.770Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-lock-timeout-interview"
+    },
+    {
+      "id": "6e4c908e-d4a4-434f-90a0-92b16c56d973",
+      "kind": "updated",
+      "entity": "doc:mysql-deadlock-reading",
+      "title": "MySQL 死锁排查资料导读",
+      "time": "2026-10-18T12:46:44.770Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "mysql-deadlock-reading"
+    },
+    {
+      "id": "8f26c918-a415-49f4-a7b0-471392a41fa2",
+      "kind": "updated",
+      "entity": "doc:mysql-deadlock-interview",
+      "title": "MySQL 遇到死锁，如何排查和优化修复？",
+      "time": "2026-10-18T12:48:52.761Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-deadlock-interview"
+    },
+    {
+      "id": "a2f6fea5-f28f-4182-bb0f-1439aafa0dbe",
+      "kind": "updated",
+      "entity": "doc:mysql-deadlock-interview",
+      "title": "MySQL 遇到死锁，如何排查和优化修复？",
+      "time": "2026-10-18T12:50:48.791Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-deadlock-interview"
+    },
+    {
+      "id": "672fe6cb-7b91-4b42-a6ed-d0a204994505",
+      "kind": "updated",
+      "entity": "doc:mysql-deadlock-interview",
+      "title": "MySQL 遇到死锁，如何排查和优化修复？",
+      "time": "2026-10-18T12:57:40.911Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-deadlock-interview"
+    },
+    {
+      "id": "5de9594d-bbb3-4b2c-aff8-fbb2317da060",
+      "kind": "state-changed",
+      "entity": "doc:mysql-deadlock-interview",
+      "title": "MySQL 遇到死锁，如何排查和优化修复？",
+      "time": "2026-10-18T12:59:49.808Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-deadlock-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "6ef7a3b4-8154-46b2-8f9e-3c526101e988",
+      "kind": "state-changed",
+      "entity": "doc:mysql-deadlock-interview",
+      "title": "MySQL 遇到死锁，如何排查和优化修复？",
+      "time": "2026-10-18T13:06:04.802Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-deadlock-interview",
+      "from": "organized",
+      "to": "reading"
+    },
+    {
+      "id": "fedee712-7675-4b2e-8b6e-3e72aaa72b5c",
+      "kind": "updated",
+      "entity": "doc:mysql-deadlock-interview",
+      "title": "MySQL 遇到死锁，如何排查和优化修复？",
+      "time": "2026-10-18T13:06:04.802Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-deadlock-interview"
+    },
+    {
+      "id": "b93dbd25-0498-45ba-b43b-2afb30581e10",
+      "kind": "updated",
+      "entity": "doc:mysql-interview-index",
+      "title": "MySQL 面试题",
+      "time": "2026-10-18T13:06:04.802Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-interview-index"
+    },
+    {
+      "id": "9b8c9e40-9319-4452-9275-3da94a2bfbf2",
+      "kind": "created",
+      "entity": "doc:mysql-transaction-retry",
+      "title": "MySQL 事务失败后，哪些情况可以重试？怎么重试？",
+      "time": "2026-10-18T13:06:04.802Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-transaction-retry"
+    },
+    {
+      "id": "a1321a8c-d5a7-4212-a746-df0bb60ccb6a",
+      "kind": "state-changed",
+      "entity": "doc:mysql-transaction-retry",
+      "title": "MySQL 事务失败后，哪些情况可以重试？怎么重试？",
+      "time": "2026-10-18T13:07:10.730Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-transaction-retry",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "11d6ad2d-6302-4981-a587-4656f2fae917",
+      "kind": "state-changed",
+      "entity": "doc:mysql-transaction-retry",
+      "title": "MySQL 事务失败后，哪些情况可以重试？怎么重试？",
+      "time": "2026-10-18T13:07:11.239Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-transaction-retry",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "c47da547-a62d-4d6d-a576-b9eb7aa56c84",
+      "kind": "state-changed",
+      "entity": "doc:mysql-deadlock-interview",
+      "title": "MySQL 遇到死锁，如何排查和优化修复？",
+      "time": "2026-10-18T13:07:17.930Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-deadlock-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "fd8e65b7-a852-43b0-9b32-bd5764c34444",
+      "kind": "state-changed",
+      "entity": "doc:bm25",
+      "title": "BM25",
+      "time": "2026-10-18T13:15:17.012Z",
+      "collections": [
+        "glossary"
+      ],
+      "source": "observed",
+      "docId": "bm25",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "b4d0ae9e-f041-48a9-8ac0-221e2a344ccc",
+      "kind": "state-changed",
+      "entity": "doc:bm25",
+      "title": "BM25",
+      "time": "2026-10-18T13:15:19.192Z",
+      "collections": [
+        "glossary"
+      ],
+      "source": "observed",
+      "docId": "bm25",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "a07d069c-4859-49a8-877d-64722446fe06",
+      "kind": "state-changed",
+      "entity": "doc:bm25",
+      "title": "BM25",
+      "time": "2026-10-18T13:15:20.439Z",
+      "collections": [
+        "glossary"
+      ],
+      "source": "observed",
+      "docId": "bm25",
+      "from": "organized",
+      "to": "pending"
+    },
+    {
+      "id": "83502ce9-f6a4-469a-a443-5becde824de8",
+      "kind": "state-changed",
+      "entity": "doc:bm25",
+      "title": "BM25",
+      "time": "2026-10-18T13:15:21.769Z",
+      "collections": [
+        "glossary"
+      ],
+      "source": "observed",
+      "docId": "bm25",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "6ee403a1-9cda-4e0b-92f3-0256a5152c96",
+      "kind": "state-changed",
+      "entity": "doc:bm25",
+      "title": "BM25",
+      "time": "2026-10-18T13:15:22.551Z",
+      "collections": [
+        "glossary"
+      ],
+      "source": "observed",
+      "docId": "bm25",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "4690de92-9c77-4d42-81ef-46a66ed818c3",
+      "kind": "state-changed",
+      "entity": "doc:bm25",
+      "title": "BM25",
+      "time": "2026-10-18T13:15:26.018Z",
+      "collections": [
+        "glossary"
+      ],
+      "source": "observed",
+      "docId": "bm25",
+      "from": "organized",
+      "to": "pending"
+    },
+    {
+      "id": "a8e8b9d8-56fc-4f4e-b80e-5317b29a246d",
+      "kind": "state-changed",
+      "entity": "doc:bm25",
+      "title": "BM25",
+      "time": "2026-10-18T13:15:27.619Z",
+      "collections": [
+        "glossary"
+      ],
+      "source": "observed",
+      "docId": "bm25",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "92f61f32-77f2-4d2e-b023-10b417d1743a",
+      "kind": "state-changed",
+      "entity": "doc:mysql-deadlock-interview",
+      "title": "MySQL 遇到死锁，如何排查和优化修复？",
+      "time": "2026-10-18T13:18:28.767Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-deadlock-interview",
+      "from": "organized",
+      "to": "reading"
+    },
+    {
+      "id": "f2b124d1-ad65-4429-9c3b-2ec4764dd0e5",
+      "kind": "updated",
+      "entity": "doc:mysql-deadlock-interview",
+      "title": "MySQL 遇到死锁，如何排查和优化修复？",
+      "time": "2026-10-18T13:18:28.767Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-deadlock-interview"
+    },
+    {
+      "id": "b454b596-e6cd-451a-9978-f0ce669982fe",
+      "kind": "updated",
+      "entity": "doc:mysql-interview-index",
+      "title": "MySQL 面试题",
+      "time": "2026-10-18T13:18:28.767Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-interview-index"
+    },
+    {
+      "id": "99d8c1a8-8da6-473e-a99e-22e1dc82e8b0",
+      "kind": "updated",
+      "entity": "doc:mysql-deadlock-interview",
+      "title": "MySQL 遇到死锁，如何排查和优化修复？",
+      "time": "2026-10-18T13:19:40.779Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-deadlock-interview"
+    },
+    {
+      "id": "6565fa86-f011-4e57-b56a-01ad611ec310",
+      "kind": "state-changed",
+      "entity": "doc:mysql-deadlock-interview",
+      "title": "MySQL 遇到死锁，如何排查和优化修复？",
+      "time": "2026-10-18T13:19:48.188Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-deadlock-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "bfefa7aa-6dc4-4c4d-a20e-2c4af1c65cf0",
+      "kind": "state-changed",
+      "entity": "doc:mysql-interview-index",
+      "title": "MySQL 面试题",
+      "time": "2026-10-18T13:19:51.958Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-interview-index",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "a1e5b11a-14bd-4fdb-84a5-a049625a437e",
+      "kind": "updated",
+      "entity": "doc:mysql-interview-index",
+      "title": "MySQL 面试题",
+      "time": "2026-10-18T13:21:12.769Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-interview-index"
+    },
+    {
+      "id": "4eaa8586-fca2-46f9-a77a-7af89096e925",
+      "kind": "state-changed",
+      "entity": "doc:mysql-interview-index",
+      "title": "MySQL 面试题",
+      "time": "2026-10-18T13:23:14.110Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-interview-index",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "4ef8341b-a6a9-421f-b29e-04a0d885ae5b",
+      "kind": "state-changed",
+      "entity": "doc:mysql-interview-index",
+      "title": "MySQL 面试题",
+      "time": "2026-10-18T13:23:15.047Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-interview-index",
+      "from": "organized",
+      "to": "pending"
+    },
+    {
+      "id": "c8066143-be35-49f8-93a6-54feeccbeff3",
+      "kind": "state-changed",
+      "entity": "doc:mysql-interview-index",
+      "title": "MySQL 面试题",
+      "time": "2026-10-18T13:23:15.895Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-interview-index",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "b1b8ea32-5706-4475-958b-236c7d04ca0c",
+      "kind": "state-changed",
+      "entity": "doc:bm25",
+      "title": "BM25",
+      "time": "2026-10-18T13:24:06.355Z",
+      "collections": [
+        "glossary"
+      ],
+      "source": "observed",
+      "docId": "bm25",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "9c2b6a21-be89-4ce4-b1f9-3f96638422d9",
+      "kind": "state-changed",
+      "entity": "doc:bm25",
+      "title": "BM25",
+      "time": "2026-10-18T13:24:07.866Z",
+      "collections": [
+        "glossary"
+      ],
+      "source": "observed",
+      "docId": "bm25",
+      "from": "organized",
+      "to": "pending"
+    },
+    {
+      "id": "7e7fd38d-884a-46e2-a395-0d4f5d6ab3db",
+      "kind": "state-changed",
+      "entity": "doc:bm25",
+      "title": "BM25",
+      "time": "2026-10-18T13:24:09.186Z",
+      "collections": [
+        "glossary"
+      ],
+      "source": "observed",
+      "docId": "bm25",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "22e1bb9d-ebcd-42ed-9a28-20e3ccee3465",
+      "kind": "state-changed",
+      "entity": "doc:bm25",
+      "title": "BM25",
+      "time": "2026-10-18T13:27:00.593Z",
+      "collections": [
+        "glossary"
+      ],
+      "source": "observed",
+      "docId": "bm25",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "813a7676-96aa-4b24-8166-c449f751bf36",
+      "kind": "state-changed",
+      "entity": "doc:bm25",
+      "title": "BM25",
+      "time": "2026-10-18T13:27:00.978Z",
+      "collections": [
+        "glossary"
+      ],
+      "source": "observed",
+      "docId": "bm25",
+      "from": "organized",
+      "to": "pending"
+    },
+    {
+      "id": "2d9b91f7-233a-4a8e-9e16-215efd038c01",
+      "kind": "created",
+      "entity": "doc:bm25-interview",
+      "title": "BM25 是什么？基本原理是什么？",
+      "time": "2026-10-18T13:28:58.866Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "bm25-interview"
+    },
+    {
+      "id": "5dae1c2d-2ebb-43fa-b496-aedc87edb051",
+      "kind": "updated",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-18T13:28:58.866Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "5534130c-c5de-464b-8d1e-71762e642a1f",
+      "kind": "state-changed",
+      "entity": "doc:bm25-interview",
+      "title": "BM25 是什么？基本原理是什么？",
+      "time": "2026-10-18T13:29:57.190Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "bm25-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "6bd5c799-b58c-486e-99a3-4af0c81ccd19",
+      "kind": "state-changed",
+      "entity": "doc:bm25-interview",
+      "title": "BM25 是什么？基本原理是什么？",
+      "time": "2026-10-18T13:29:57.943Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "bm25-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "5736a265-0741-41bd-ad9d-ec214ffa8d0e",
+      "kind": "state-changed",
+      "entity": "doc:bm25-interview",
+      "title": "BM25 是什么？基本原理是什么？",
+      "time": "2026-10-18T13:30:00.125Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "bm25-interview",
+      "from": "organized",
+      "to": "pending"
+    },
+    {
+      "id": "1c289565-eba8-4392-8cb2-2ec46e9e165d",
+      "kind": "state-changed",
+      "entity": "doc:bm25-interview",
+      "title": "BM25 是什么？基本原理是什么？",
+      "time": "2026-10-18T13:30:00.453Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "bm25-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "ae101203-cb61-448e-af77-a3c364f2a5fb",
+      "kind": "state-changed",
+      "entity": "doc:bm25-interview",
+      "title": "BM25 是什么？基本原理是什么？",
+      "time": "2026-10-18T13:30:02.185Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "bm25-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "e0ece28b-90d6-4966-9801-c92266f8fbce",
+      "kind": "state-changed",
+      "entity": "doc:bm25-interview",
+      "title": "BM25 是什么？基本原理是什么？",
+      "time": "2026-10-18T13:30:02.840Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "bm25-interview",
+      "from": "organized",
+      "to": "pending"
+    },
+    {
+      "id": "26540da7-a57b-426c-848c-1b6a73e0d923",
+      "kind": "created",
+      "entity": "doc:dense-retrieval",
+      "title": "稠密召回",
+      "time": "2026-10-18T13:33:50.751Z",
+      "collections": [
+        "glossary"
+      ],
+      "source": "observed",
+      "docId": "dense-retrieval"
+    },
+    {
+      "id": "82d544ba-c430-46ed-ace6-c2aa061790b8",
+      "kind": "created",
+      "entity": "doc:retrieval",
+      "title": "召回",
+      "time": "2026-10-18T13:33:50.751Z",
+      "collections": [
+        "glossary"
+      ],
+      "source": "observed",
+      "docId": "retrieval"
+    },
+    {
+      "id": "a5b3c3a7-c13e-49b2-8e8b-9c28d3a9c324",
+      "kind": "created",
+      "entity": "doc:sparse-retrieval",
+      "title": "稀疏召回",
+      "time": "2026-10-18T13:33:50.751Z",
+      "collections": [
+        "glossary"
+      ],
+      "source": "observed",
+      "docId": "sparse-retrieval"
+    },
+    {
+      "id": "a199cbd6-83c4-4d7f-8e5c-0555459c3607",
+      "kind": "updated",
+      "entity": "doc:rag-retrieval",
+      "title": "RAG 检索与候选选择",
+      "time": "2026-10-18T13:33:50.751Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "rag-retrieval"
+    },
+    {
+      "id": "01475a52-de5b-481e-b42f-93068567bb65",
+      "kind": "updated",
+      "entity": "doc:rag-retrieval-ranking",
+      "title": "检索官方文档：词项评分、语义表示、融合与重排",
+      "time": "2026-10-18T13:33:50.751Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "rag-retrieval-ranking"
+    },
+    {
+      "id": "6e88131b-e798-4805-ba0e-93dfb43282fb",
+      "kind": "created",
+      "entity": "doc:tf-idf",
+      "title": "TF-IDF",
+      "time": "2026-10-18T13:37:39.266Z",
+      "collections": [
+        "glossary"
+      ],
+      "source": "observed",
+      "docId": "tf-idf"
+    },
+    {
+      "id": "2970b97d-0def-4d74-be64-47d2da1a7746",
+      "kind": "updated",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-18T13:37:39.266Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "ce5f298a-9b06-4e65-9bd7-47e245069a42",
+      "kind": "created",
+      "entity": "doc:tf-idf-interview",
+      "title": "TF-IDF 是什么？基本原理是什么？",
+      "time": "2026-10-18T13:37:39.266Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "tf-idf-interview"
+    },
+    {
+      "id": "f8ff46a0-e695-4397-95bd-e15c39ca5789",
+      "kind": "updated",
+      "entity": "doc:rasa-intent-classification",
+      "title": "Rasa 与 scikit-learn：意图分类的样本、特征与预测",
+      "time": "2026-10-18T13:37:39.266Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "rasa-intent-classification"
+    },
+    {
+      "id": "3f79d8e4-3754-4b4e-b8e2-11cdd046628b",
+      "kind": "created",
+      "entity": "doc:hybrid-retrieval-interview",
+      "title": "为什么要做稀疏加稠密双路召回？",
+      "time": "2026-10-18T14:02:59.277Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "hybrid-retrieval-interview"
+    },
+    {
+      "id": "aac860a2-7067-45a9-b723-8bf952d7b944",
+      "kind": "updated",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-18T14:03:03.282Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "a46bccce-6673-479d-ac1c-d173335404a0",
+      "kind": "updated",
+      "entity": "doc:bm25-interview",
+      "title": "BM25 是什么？基本原理是什么？",
+      "time": "2026-10-18T14:04:15.284Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "bm25-interview"
+    },
+    {
+      "id": "16ca586d-36bc-408c-9206-ff5dd8937e35",
+      "kind": "updated",
+      "entity": "doc:tf-idf-interview",
+      "title": "TF-IDF 是什么？基本原理是什么？",
+      "time": "2026-10-18T14:04:15.284Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "tf-idf-interview"
+    },
+    {
+      "id": "2beafa5c-3568-44b4-9b55-3bb8f1b9601e",
+      "kind": "state-changed",
+      "entity": "doc:agent-career-motivation",
+      "title": "为什么想做 Agent 开发？",
+      "time": "2026-10-18T14:06:15.293Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-career-motivation",
+      "from": "organized",
+      "to": "reading"
+    },
+    {
+      "id": "6e0c3d24-32bf-447f-8ed3-805273fe353e",
+      "kind": "updated",
+      "entity": "doc:agent-career-motivation",
+      "title": "为什么想做 Agent 开发？",
+      "time": "2026-10-18T14:06:15.293Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-career-motivation"
+    },
+    {
+      "id": "28349300-de34-482c-834c-903022a6a87b",
+      "kind": "updated",
+      "entity": "doc:hybrid-retrieval-interview",
+      "title": "为什么要做稀疏加稠密双路召回？",
+      "time": "2026-10-18T14:06:15.293Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "hybrid-retrieval-interview"
+    },
+    {
+      "id": "3ef07156-9b80-4256-8cfa-9e60516dfb04",
+      "kind": "state-changed",
+      "entity": "doc:mysql-deadlock-victim",
+      "title": "发生死锁时，InnoDB 会回滚哪个事务？",
+      "time": "2026-10-18T14:06:15.293Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-deadlock-victim",
+      "from": "organized",
+      "to": "reading"
+    },
+    {
+      "id": "9d959ab2-55e2-47e5-8baa-53ec6e8de499",
+      "kind": "updated",
+      "entity": "doc:mysql-deadlock-victim",
+      "title": "发生死锁时，InnoDB 会回滚哪个事务？",
+      "time": "2026-10-18T14:06:15.293Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-deadlock-victim"
+    },
+    {
+      "id": "ea825314-9743-4230-aaf3-daa8892634f9",
+      "kind": "state-changed",
+      "entity": "doc:mysql-transaction-retry",
+      "title": "MySQL 事务失败后，哪些情况可以重试？怎么重试？",
+      "time": "2026-10-18T14:06:15.293Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-transaction-retry",
+      "from": "organized",
+      "to": "reading"
+    },
+    {
+      "id": "8a881a08-7fcc-4dbf-9f50-8cf51e90b68d",
+      "kind": "updated",
+      "entity": "doc:mysql-transaction-retry",
+      "title": "MySQL 事务失败后，哪些情况可以重试？怎么重试？",
+      "time": "2026-10-18T14:06:15.293Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-transaction-retry"
+    },
+    {
+      "id": "a0545c75-bc0c-445a-ad1d-1fcc5c20bff7",
+      "kind": "updated",
+      "entity": "doc:hybrid-retrieval-interview",
+      "title": "为什么要做稀疏加稠密双路召回？",
+      "time": "2026-10-18T14:06:35.283Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "hybrid-retrieval-interview"
+    },
+    {
+      "id": "521d0c76-e027-4b44-9827-83d4541fbee3",
+      "kind": "state-changed",
+      "entity": "doc:agent-career-motivation",
+      "title": "为什么想做 Agent 开发？",
+      "time": "2026-10-18T14:07:33.004Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-career-motivation",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "020f85d1-7d8a-4ba1-a287-dbe40fc7f546",
+      "kind": "state-changed",
+      "entity": "doc:mysql-deadlock-victim",
+      "title": "发生死锁时，InnoDB 会回滚哪个事务？",
+      "time": "2026-10-18T14:07:52.989Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-deadlock-victim",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "75e5567e-43b3-45fb-ba15-033cbbbec71e",
+      "kind": "updated",
+      "entity": "doc:hybrid-retrieval-interview",
+      "title": "为什么要做稀疏加稠密双路召回？",
+      "time": "2026-10-18T14:07:59.270Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "hybrid-retrieval-interview"
+    },
+    {
+      "id": "7f4bbbdd-cfff-4c9e-91a1-3bfee984a9f1",
+      "kind": "state-changed",
+      "entity": "doc:mysql-transaction-retry",
+      "title": "MySQL 事务失败后，哪些情况可以重试？怎么重试？",
+      "time": "2026-10-18T14:08:15.238Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-transaction-retry",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "42136f22-c821-4175-83d2-ae820916589d",
+      "kind": "updated",
+      "entity": "doc:hybrid-retrieval-interview",
+      "title": "为什么要做稀疏加稠密双路召回？",
+      "time": "2026-10-18T14:11:11.276Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "hybrid-retrieval-interview"
+    },
+    {
+      "id": "bb5d8008-b7f7-4ed6-b3cc-dbcf58a5edd3",
+      "kind": "state-changed",
+      "entity": "doc:hybrid-retrieval-interview",
+      "title": "为什么要做稀疏加稠密双路召回？",
+      "time": "2026-10-18T14:12:04.642Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "hybrid-retrieval-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "a197671e-2a90-48b8-bd7f-c9dd3795e61a",
+      "kind": "state-changed",
+      "entity": "doc:hybrid-retrieval-interview",
+      "title": "为什么要做稀疏加稠密双路召回？",
+      "time": "2026-10-18T14:12:04.923Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "hybrid-retrieval-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "2d53651b-e4df-41ed-a7e3-68b4649995fa",
+      "kind": "state-changed",
+      "entity": "doc:hybrid-retrieval-interview",
+      "title": "为什么要做稀疏加稠密双路召回？",
+      "time": "2026-10-18T14:12:23.297Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "hybrid-retrieval-interview",
+      "from": "organized",
+      "to": "reading"
+    },
+    {
+      "id": "2c9d8006-36b3-4ac5-bec6-a74df88cb147",
+      "kind": "updated",
+      "entity": "doc:hybrid-retrieval-interview",
+      "title": "为什么要做稀疏加稠密双路召回？",
+      "time": "2026-10-18T14:12:23.297Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "hybrid-retrieval-interview"
+    },
+    {
+      "id": "2b2c1fc2-0730-4963-9f87-648b6fc9c30d",
+      "kind": "updated",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-18T14:12:23.297Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "eca894cf-e906-40cd-b45b-246498b4b9c8",
+      "kind": "created",
+      "entity": "doc:retrieval-fusion-interview",
+      "title": "稀疏和稠密双路召回怎么混合、怎么配合？",
+      "time": "2026-10-18T14:12:23.297Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "retrieval-fusion-interview"
+    },
+    {
+      "id": "edd4566a-3c95-4de2-b1a8-333c3427623e",
+      "kind": "state-changed",
+      "entity": "doc:hybrid-retrieval-interview",
+      "title": "为什么要做稀疏加稠密双路召回？",
+      "time": "2026-10-18T14:12:58.329Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "hybrid-retrieval-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "43493bf6-361d-41d5-a126-1a21748f5d7c",
+      "kind": "updated",
+      "entity": "doc:retrieval-fusion-interview",
+      "title": "稀疏和稠密双路召回怎么混合、怎么配合？",
+      "time": "2026-10-18T14:16:43.279Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "retrieval-fusion-interview"
+    },
+    {
+      "id": "848ffcfc-6992-4c26-bd65-d5e15605f982",
+      "kind": "updated",
+      "entity": "doc:rag-hybrid-search",
+      "title": "RAG 混合检索与排名融合",
+      "time": "2026-10-18T14:16:43.279Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "rag-hybrid-search"
+    },
+    {
+      "id": "0265ee7e-c095-46a1-9c6a-d65abc96e168",
+      "kind": "updated",
+      "entity": "doc:rag-retrieval-ranking",
+      "title": "检索官方文档：词项评分、语义表示、融合与重排",
+      "time": "2026-10-18T14:16:43.279Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "rag-retrieval-ranking"
+    },
+    {
+      "id": "34a7c866-e50e-41f8-96ce-ce61eb154123",
+      "kind": "updated",
+      "entity": "doc:retrieval-fusion-interview",
+      "title": "稀疏和稠密双路召回怎么混合、怎么配合？",
+      "time": "2026-10-18T14:16:55.265Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "retrieval-fusion-interview"
+    },
+    {
+      "id": "832323fa-2505-4ca9-8cea-34a77fdd125c",
+      "kind": "updated",
+      "entity": "doc:retrieval-fusion-interview",
+      "title": "稀疏和稠密双路召回怎么混合、怎么配合？",
+      "time": "2026-10-18T14:22:55.286Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "retrieval-fusion-interview"
+    },
+    {
+      "id": "496c9254-6635-481c-b53b-376203bf1fbe",
+      "kind": "updated",
+      "entity": "doc:rag-hybrid-search",
+      "title": "RAG 混合检索与排名融合",
+      "time": "2026-10-18T14:22:55.286Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "rag-hybrid-search"
+    },
+    {
+      "id": "67448373-b6fc-4f62-985c-f1f4258eacf7",
+      "kind": "created",
+      "entity": "doc:fusion-calibration",
+      "title": "混合检索融合权重的实验依据",
+      "time": "2026-10-18T14:22:55.286Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "fusion-calibration"
+    },
+    {
+      "id": "b3143846-ddf5-4552-bfb5-20218eb5c4b4",
+      "kind": "created",
+      "entity": "doc:contest-bottleneck-interview",
+      "title": "比赛开赛时出现瞬时洪峰，你们是怎么定位瓶颈的？",
+      "time": "2026-10-18T14:23:31.295Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "contest-bottleneck-interview"
+    },
+    {
+      "id": "7566295b-03d3-4308-b662-b5936fd5fda0",
+      "kind": "updated",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-18T14:23:31.295Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "896f25e7-f21c-43f2-b5a7-f1d9208eb7f7",
+      "kind": "updated",
+      "entity": "doc:retrieval-fusion-interview",
+      "title": "稀疏和稠密双路召回怎么混合、怎么配合？",
+      "time": "2026-10-18T14:24:55.289Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "retrieval-fusion-interview"
+    },
+    {
+      "id": "42445283-1a7b-402a-894b-c3f6a39f211b",
+      "kind": "updated",
+      "entity": "doc:rag-hybrid-search",
+      "title": "RAG 混合检索与排名融合",
+      "time": "2026-10-18T14:24:55.289Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "rag-hybrid-search"
+    },
+    {
+      "id": "f626e8b8-cb1a-423b-87ba-34a6d2bea735",
+      "kind": "updated",
+      "entity": "doc:rag-retrieval-ranking",
+      "title": "检索官方文档：词项评分、语义表示、融合与重排",
+      "time": "2026-10-18T14:24:55.289Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "rag-retrieval-ranking"
+    },
+    {
+      "id": "286bb5af-ad66-4d53-bdef-382b8e48fd09",
+      "kind": "updated",
+      "entity": "doc:contest-bottleneck-interview",
+      "title": "比赛开赛时出现瞬时洪峰，你们是怎么定位瓶颈的？",
+      "time": "2026-10-18T14:26:59.290Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "contest-bottleneck-interview"
+    },
+    {
+      "id": "aa0ffaab-5d72-401e-8440-63897c8537e5",
+      "kind": "state-changed",
+      "entity": "doc:retrieval-fusion-interview",
+      "title": "稀疏和稠密双路召回怎么混合、怎么配合？",
+      "time": "2026-10-18T14:28:13.075Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "retrieval-fusion-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "56e96e7d-46cb-44bd-b480-bc0e6c876743",
+      "kind": "state-changed",
+      "entity": "doc:contest-bottleneck-interview",
+      "title": "比赛开赛时出现瞬时洪峰，你们是怎么定位瓶颈的？",
+      "time": "2026-10-18T14:28:19.019Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "contest-bottleneck-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "a9912cf2-68a4-41dc-be58-890d571bdbf4",
+      "kind": "updated",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-18T14:28:43.301Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "cce704e2-c9b7-4f61-ac8b-577647749933",
+      "kind": "updated",
+      "entity": "doc:retrieval-fusion-interview",
+      "title": "稀疏和稠密双路召回怎么混合、怎么配合？",
+      "time": "2026-10-18T14:28:43.301Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "retrieval-fusion-interview"
+    },
+    {
+      "id": "159e055e-d674-44bf-8e0b-6d99558659ec",
+      "kind": "created",
+      "entity": "doc:retrieval-fusion-weight-interview",
+      "title": "双路召回的融合比例是怎么得到的？",
+      "time": "2026-10-18T14:28:43.301Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "retrieval-fusion-weight-interview"
+    },
+    {
+      "id": "e0992183-fe41-4765-bb4c-5e45ae5de626",
+      "kind": "updated",
+      "entity": "doc:contest-bottleneck-interview",
+      "title": "比赛开赛时出现瞬时洪峰，你们是怎么定位瓶颈的？",
+      "time": "2026-10-18T14:29:51.284Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "contest-bottleneck-interview"
+    },
+    {
+      "id": "75d59ba8-4dfc-4540-81aa-2bb087829dc4",
+      "kind": "state-changed",
+      "entity": "doc:retrieval-fusion-weight-interview",
+      "title": "双路召回的融合比例是怎么得到的？",
+      "time": "2026-10-18T14:35:01.286Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "retrieval-fusion-weight-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "4a878586-ce68-4a0c-8d7c-ca8301faa7cc",
+      "kind": "updated",
+      "entity": "doc:retrieval-fusion-weight-interview",
+      "title": "双路召回的融合比例是怎么得到的？",
+      "time": "2026-10-18T14:43:51.325Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "retrieval-fusion-weight-interview"
+    },
+    {
+      "id": "4df74acc-dffd-44b6-9b08-07f93b67426a",
+      "kind": "updated",
+      "entity": "doc:retrieval-fusion-weight-interview",
+      "title": "双路召回的融合比例是怎么得到的？",
+      "time": "2026-10-18T14:47:23.286Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "retrieval-fusion-weight-interview"
+    },
+    {
+      "id": "5eb89538-835c-4bbe-a408-e14f6564e304",
+      "kind": "state-changed",
+      "entity": "doc:retrieval-fusion-weight-interview",
+      "title": "双路召回的融合比例是怎么得到的？",
+      "time": "2026-10-18T14:47:33.378Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "retrieval-fusion-weight-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "f80c354c-1296-45a1-866d-c9238c4c999b",
+      "kind": "updated",
+      "entity": "doc:retrieval-fusion-interview",
+      "title": "稀疏和稠密双路召回怎么混合、怎么配合？",
+      "time": "2026-10-18T14:47:51.296Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "retrieval-fusion-interview"
+    },
+    {
+      "id": "7d750965-e1fa-496b-84d5-74aa58aadd04",
+      "kind": "created",
+      "entity": "doc:rrf-paper-reading",
+      "title": "RRF 原始论文：常数 60 的来源",
+      "time": "2026-10-18T14:47:51.296Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "rrf-paper-reading"
+    },
+    {
+      "id": "6eaa9693-4fe8-44db-8827-b7d160bf7e0d",
+      "kind": "updated",
+      "entity": "doc:retrieval-fusion-interview",
+      "title": "稀疏和稠密双路召回怎么混合、怎么配合？",
+      "time": "2026-10-18T14:48:39.311Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "retrieval-fusion-interview"
+    },
+    {
+      "id": "a5808834-4f1c-402e-a9e8-6b4c4578c811",
+      "kind": "state-changed",
+      "entity": "doc:agent-loading",
+      "title": "Agent 按需加载",
+      "time": "2026-10-18T14:48:39.311Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-loading",
+      "from": "organized",
+      "to": "reading"
+    },
+    {
+      "id": "92df8305-6445-439a-a71f-41a8b13d6a72",
+      "kind": "updated",
+      "entity": "doc:agent-loading",
+      "title": "Agent 按需加载",
+      "time": "2026-10-18T14:48:39.311Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-loading"
+    },
+    {
+      "id": "ba5ebcab-f21e-4440-b4ae-19bc9f886194",
+      "kind": "updated",
+      "entity": "doc:database-selection",
+      "title": "数据库选型",
+      "time": "2026-10-18T14:48:39.311Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "database-selection"
+    },
+    {
+      "id": "9d955692-ed6d-4ff3-9dcf-b7008fad78cd",
+      "kind": "state-changed",
+      "entity": "doc:retrieval-fusion-interview",
+      "title": "稀疏和稠密双路召回怎么混合、怎么配合？",
+      "time": "2026-10-18T14:52:41.102Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "retrieval-fusion-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "dbee6c1f-37fb-4bc1-baa0-df79cc34953b",
+      "kind": "updated",
+      "entity": "doc:contest-bottleneck-interview",
+      "title": "比赛开赛时出现瞬时洪峰，你们是怎么定位瓶颈的？",
+      "time": "2026-10-18T14:57:03.279Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "contest-bottleneck-interview"
+    },
+    {
+      "id": "0bcdbc82-c9ab-43bc-9b9a-2275d991eaec",
+      "kind": "created",
+      "entity": "doc:db-connection-wait-interview",
+      "title": "你们怎么确认耗时主要花在等待数据库连接上？",
+      "time": "2026-10-18T14:57:03.279Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "db-connection-wait-interview"
+    },
+    {
+      "id": "59364387-2661-44c1-b2da-7b8b3f92325a",
+      "kind": "updated",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-18T14:57:03.279Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "f523775f-ec6f-4758-beb4-a9b9cebdbc2e",
+      "kind": "state-changed",
+      "entity": "doc:agent-loading",
+      "title": "Agent 按需加载",
+      "time": "2026-10-18T14:57:30.002Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-loading",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "141d4973-fe56-4151-aee8-0139743847dd",
+      "kind": "state-changed",
+      "entity": "doc:db-connection-wait-interview",
+      "title": "你们怎么确认耗时主要花在等待数据库连接上？",
+      "time": "2026-10-18T14:59:10.655Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "db-connection-wait-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "d05cd0e0-5cf6-45c7-9f92-584ed02d6f2a",
+      "kind": "state-changed",
+      "entity": "doc:db-connection-wait-interview",
+      "title": "你们怎么确认耗时主要花在等待数据库连接上？",
+      "time": "2026-10-18T14:59:11.192Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "db-connection-wait-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "efe0d264-53d9-4b1f-bc3f-f79e314520c1",
+      "kind": "state-changed",
+      "entity": "doc:db-connection-wait-interview",
+      "title": "你们怎么确认耗时主要花在等待数据库连接上？",
+      "time": "2026-10-18T15:00:43.290Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "db-connection-wait-interview",
+      "from": "organized",
+      "to": "reading"
+    },
+    {
+      "id": "130cb059-d833-4efa-9cd7-670b1a833d47",
+      "kind": "updated",
+      "entity": "doc:db-connection-wait-interview",
+      "title": "你们怎么确认耗时主要花在等待数据库连接上？",
+      "time": "2026-10-18T15:00:43.290Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "db-connection-wait-interview"
+    },
+    {
+      "id": "f3234945-9bd5-468f-aa9c-bb369881cfe8",
+      "kind": "created",
+      "entity": "doc:db-pool-stats",
+      "title": "Go 数据库连接池状态",
+      "time": "2026-10-18T15:00:43.290Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "db-pool-stats"
+    },
+    {
+      "id": "8e43e4dd-493c-438e-ad4b-67275e863587",
+      "kind": "updated",
+      "entity": "doc:go-sql-connections",
+      "title": "Go 官方文档导读：数据库连接池与资源归还",
+      "time": "2026-10-18T15:00:43.290Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "go-sql-connections"
+    },
+    {
+      "id": "03baed3e-fc5e-4c48-88cd-16b6d34f8c88",
+      "kind": "updated",
+      "entity": "doc:db-connection-wait-interview",
+      "title": "你们怎么确认耗时主要花在等待数据库连接上？",
+      "time": "2026-10-18T15:06:03.293Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "db-connection-wait-interview"
+    },
+    {
+      "id": "17eb5066-03da-4f39-acb0-a619ee4da279",
+      "kind": "created",
+      "entity": "doc:agent-memory-leak-interview",
+      "title": "Agent 服务最常见的生产环境内存泄漏有哪几种？如何排查和修复？",
+      "time": "2026-10-18T15:06:55.298Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-memory-leak-interview"
+    },
+    {
+      "id": "0fafac6d-cd18-4cc0-96be-34fc31b50cbb",
+      "kind": "updated",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-18T15:06:55.298Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "bf3df513-fbc6-4328-bc8c-436252d14818",
+      "kind": "updated",
+      "entity": "doc:agent-memory-leak-interview",
+      "title": "Agent 服务最常见的生产环境内存泄漏有哪几种？如何排查和修复？",
+      "time": "2026-10-18T15:09:47.329Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-memory-leak-interview"
+    },
+    {
+      "id": "8589e6ce-88ca-40af-af94-f72cb330ebc0",
+      "kind": "created",
+      "entity": "doc:agent-interview-hub",
+      "title": "Agent 面试题",
+      "time": "2026-10-18T15:14:15.310Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-interview-hub"
+    },
+    {
+      "id": "b75bf6d8-4e84-42be-a38f-08a15b495d74",
+      "kind": "updated",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-18T15:14:15.310Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "310d9143-31ad-4750-9859-f8269812f625",
+      "kind": "created",
+      "entity": "doc:project-interview-index",
+      "title": "项目经历面试题",
+      "time": "2026-10-18T15:14:15.310Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "project-interview-index"
+    },
+    {
+      "id": "032ede28-8322-411d-838d-b5393b1fef4b",
+      "kind": "created",
+      "entity": "doc:retrieval-interview-index",
+      "title": "检索与召回面试题",
+      "time": "2026-10-18T15:14:15.310Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "retrieval-interview-index"
+    },
+    {
+      "id": "679e28f7-68fe-4f55-ab03-8336f205b520",
+      "kind": "state-changed",
+      "entity": "doc:mysql-interview-index",
+      "title": "MySQL 面试题",
+      "time": "2026-10-18T15:17:00.777Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-interview-index",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "4d9b3435-f742-4e8d-b058-cf4bf6c1f004",
+      "kind": "state-changed",
+      "entity": "doc:mysql-interview-index",
+      "title": "MySQL 面试题",
+      "time": "2026-10-18T15:19:25.709Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-interview-index",
+      "from": "organized",
+      "to": "pending"
+    },
+    {
+      "id": "9b4981dd-b946-4824-9c2b-f3a1e6f5b750",
+      "kind": "updated",
+      "entity": "doc:agent-interview-hub",
+      "title": "Agent 面试题",
+      "time": "2026-10-18T15:21:11.322Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-interview-hub"
+    },
+    {
+      "id": "11e97165-c275-4a88-adda-e5e12106fb81",
+      "kind": "created",
+      "entity": "doc:agent-timeout-interview",
+      "title": "模型调用响应慢，导致 Agent 链路超时，如何设计分层超时与熔断？高并发下怎么处理？",
+      "time": "2026-10-18T15:21:11.322Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-timeout-interview"
+    },
+    {
+      "id": "6503b449-ac24-421f-bfed-6fc23c3915cc",
+      "kind": "updated",
+      "entity": "doc:db-connection-wait-interview",
+      "title": "你们怎么确认耗时主要花在等待数据库连接上？",
+      "time": "2026-10-18T15:24:27.308Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "db-connection-wait-interview"
+    },
+    {
+      "id": "1bf683e3-690c-4ce4-b537-cd587462189a",
+      "kind": "state-changed",
+      "entity": "doc:agent-timeout-interview",
+      "title": "模型调用响应慢，导致 Agent 链路超时，如何设计分层超时与熔断？高并发下怎么处理？",
+      "time": "2026-10-18T15:26:51.024Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-timeout-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "56a0c08e-5f15-4b8e-b307-bb57af46ddd1",
+      "kind": "state-changed",
+      "entity": "doc:agent-timeout-interview",
+      "title": "模型调用响应慢，导致 Agent 链路超时，如何设计分层超时与熔断？高并发下怎么处理？",
+      "time": "2026-10-18T15:26:51.834Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-timeout-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "44ad10c7-ba42-4f60-a0ab-187f241cbe53",
+      "kind": "updated",
+      "entity": "doc:load-leveling",
+      "title": "削峰填谷（Load Leveling）",
+      "time": "2026-10-18T15:29:28.595Z",
+      "collections": [
+        "glossary"
+      ],
+      "source": "observed",
+      "docId": "load-leveling"
+    },
+    {
+      "id": "ac7c92f1-c6e3-4951-ba06-7857b6487ec0",
+      "kind": "updated",
+      "entity": "doc:db-connection-wait-interview",
+      "title": "你们怎么确认耗时主要花在等待数据库连接上？",
+      "time": "2026-10-18T15:29:28.595Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "db-connection-wait-interview"
+    },
+    {
+      "id": "ebb8d9d5-d130-421c-a219-618f7f1a1ef8",
+      "kind": "state-changed",
+      "entity": "doc:mysql-deadlock-interview",
+      "title": "MySQL 遇到死锁，如何排查和优化修复？",
+      "time": "2026-10-18T15:29:28.595Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-deadlock-interview",
+      "from": "organized",
+      "to": "reading"
+    },
+    {
+      "id": "e90188a0-a6ff-4b8b-b869-dcb3c07b0d14",
+      "kind": "updated",
+      "entity": "doc:mysql-deadlock-interview",
+      "title": "MySQL 遇到死锁，如何排查和优化修复？",
+      "time": "2026-10-18T15:29:28.595Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-deadlock-interview"
+    },
+    {
+      "id": "ab273fd9-3719-493a-9383-09938ed753d2",
+      "kind": "updated",
+      "entity": "doc:authentication",
+      "title": "认证",
+      "time": "2026-10-18T15:29:28.595Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "authentication"
+    },
+    {
+      "id": "b8e43f13-2f60-4df8-a405-357c26a4f898",
+      "kind": "updated",
+      "entity": "doc:authorization",
+      "title": "授权",
+      "time": "2026-10-18T15:29:28.595Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "authorization"
+    },
+    {
+      "id": "1ed2f0e2-650f-4e72-930e-12ed889f19d3",
+      "kind": "updated",
+      "entity": "doc:backpressure",
+      "title": "背压",
+      "time": "2026-10-18T15:29:28.595Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "backpressure"
+    },
+    {
+      "id": "d6c4918c-2c63-4224-903e-b94392874c5f",
+      "kind": "updated",
+      "entity": "doc:go-context",
+      "title": "Go context",
+      "time": "2026-10-18T15:29:28.595Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "go-context"
+    },
+    {
+      "id": "97ed34ea-acf8-4bdb-9797-df2ea9900202",
+      "kind": "updated",
+      "entity": "doc:go-memory-retention",
+      "title": "Go 内存滞留",
+      "time": "2026-10-18T15:29:28.595Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "go-memory-retention"
+    },
+    {
+      "id": "d0a26acb-b77b-4401-8b42-d7e51cefb37a",
+      "kind": "updated",
+      "entity": "doc:oauth",
+      "title": "OAuth 2.0（授权框架）",
+      "time": "2026-10-18T15:29:28.595Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "oauth"
+    },
+    {
+      "id": "68335f92-37b6-425c-ba45-8f57e8a57c89",
+      "kind": "updated",
+      "entity": "doc:rate-limiting",
+      "title": "限流",
+      "time": "2026-10-18T15:29:28.595Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "rate-limiting"
+    },
+    {
+      "id": "7aa79596-100e-4548-bd91-28fd06f6c89e",
+      "kind": "updated",
+      "entity": "doc:redis-cache-docs",
+      "title": "Azure 架构文档：Cache Aside 的一致性边界",
+      "time": "2026-10-18T15:29:28.595Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "redis-cache-docs"
+    },
+    {
+      "id": "d6ee52be-6242-4978-99fe-f93ecf78cf01",
+      "kind": "updated",
+      "entity": "doc:victoriametrics-cond-summary",
+      "title": "VictoriaMetrics：Cond：等待条件与通知",
+      "time": "2026-10-18T15:29:28.595Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "victoriametrics-cond-summary"
+    },
+    {
+      "id": "f3847177-fdad-42db-8663-93044e4e5c2e",
+      "kind": "updated",
+      "entity": "doc:victoriametrics-mutex-summary",
+      "title": "VictoriaMetrics：Mutex：吞吐与公平的取舍",
+      "time": "2026-10-18T15:29:28.595Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "victoriametrics-mutex-summary"
+    },
+    {
+      "id": "23437015-3b7b-4b5c-85c1-19f64ee89744",
+      "kind": "updated",
+      "entity": "doc:victoriametrics-once-summary",
+      "title": "VictoriaMetrics：Once：执行一次与完成可见性",
+      "time": "2026-10-18T15:29:28.595Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "victoriametrics-once-summary"
+    },
+    {
+      "id": "8ae1f719-fd92-4683-9d65-94758f5a8260",
+      "kind": "updated",
+      "entity": "doc:victoriametrics-pool-summary",
+      "title": "VictoriaMetrics：Pool：对象复用与回收",
+      "time": "2026-10-18T15:29:28.595Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "victoriametrics-pool-summary"
+    },
+    {
+      "id": "711ed70b-b2e0-4143-a118-d9224135f832",
+      "kind": "updated",
+      "entity": "doc:victoriametrics-singleflight-summary",
+      "title": "VictoriaMetrics：singleflight：合并正在执行的请求",
+      "time": "2026-10-18T15:29:28.595Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "victoriametrics-singleflight-summary"
+    },
+    {
+      "id": "0207beb8-c3a1-48a6-bd23-8d24c264bb06",
+      "kind": "updated",
+      "entity": "doc:victoriametrics-sync-map-summary",
+      "title": "VictoriaMetrics：sync.Map：双表机制与适用边界",
+      "time": "2026-10-18T15:29:28.595Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "victoriametrics-sync-map-summary"
+    },
+    {
+      "id": "93b87088-2163-43ef-a15f-6d0f7900ae6e",
+      "kind": "updated",
+      "entity": "doc:victoriametrics-waitgroup-summary",
+      "title": "VictoriaMetrics：WaitGroup：计数、唤醒与对齐",
+      "time": "2026-10-18T15:29:28.595Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "victoriametrics-waitgroup-summary"
+    },
+    {
+      "id": "484fe134-2f0a-4028-ae13-ac1be9e972fc",
+      "kind": "updated",
+      "entity": "doc:wal-official-docs",
+      "title": "WAL 官方文档导读：持久化顺序、提交与恢复",
+      "time": "2026-10-18T15:29:28.595Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "wal-official-docs"
+    },
+    {
+      "id": "3caad2a7-3e7b-4d9a-9594-75f18cb3c597",
+      "kind": "updated",
+      "entity": "doc:event-replay",
+      "title": "事件重放（Event Replay）",
+      "time": "2026-10-18T15:32:29.404Z",
+      "collections": [
+        "glossary"
+      ],
+      "source": "observed",
+      "docId": "event-replay"
+    },
+    {
+      "id": "46ddea97-167e-40ef-ad31-4da5f5bbce31",
+      "kind": "updated",
+      "entity": "doc:agent-memory-leak-interview",
+      "title": "Agent 服务最常见的生产环境内存泄漏有哪几种？如何排查和修复？",
+      "time": "2026-10-18T15:32:29.404Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-memory-leak-interview"
+    },
+    {
+      "id": "cea8abac-582b-4a89-ad32-99663ae31ecc",
+      "kind": "state-changed",
+      "entity": "doc:agent-timeout-interview",
+      "title": "模型调用响应慢，导致 Agent 链路超时，如何设计分层超时与熔断？高并发下怎么处理？",
+      "time": "2026-10-18T15:32:29.404Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-timeout-interview",
+      "from": "organized",
+      "to": "reading"
+    },
+    {
+      "id": "df69ad07-e09b-469e-b0a7-c14704e3dbea",
+      "kind": "updated",
+      "entity": "doc:agent-timeout-interview",
+      "title": "模型调用响应慢，导致 Agent 链路超时，如何设计分层超时与熔断？高并发下怎么处理？",
+      "time": "2026-10-18T15:32:29.404Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-timeout-interview"
+    },
+    {
+      "id": "f4886d98-dc73-43a5-b5a6-9dcf886a4d25",
+      "kind": "state-changed",
+      "entity": "doc:mysql-transaction-retry",
+      "title": "MySQL 事务失败后，哪些情况可以重试？怎么重试？",
+      "time": "2026-10-18T15:32:29.404Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-transaction-retry",
+      "from": "organized",
+      "to": "reading"
+    },
+    {
+      "id": "19e9b7bc-7dd2-4946-af6a-802210efd6c4",
+      "kind": "updated",
+      "entity": "doc:mysql-transaction-retry",
+      "title": "MySQL 事务失败后，哪些情况可以重试？怎么重试？",
+      "time": "2026-10-18T15:32:29.404Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-transaction-retry"
+    },
+    {
+      "id": "be2aeb0a-d2d7-4dfc-8663-7155ee659f88",
+      "kind": "state-changed",
+      "entity": "doc:agent-checkpoint-recovery",
+      "title": "Agent 的中断恢复机制",
+      "time": "2026-10-18T15:32:29.404Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-recovery",
+      "from": "organized",
+      "to": "reading"
+    },
+    {
+      "id": "e35431c7-ecb9-40c3-8858-39c7779958a3",
+      "kind": "updated",
+      "entity": "doc:agent-checkpoint-recovery",
+      "title": "Agent 的中断恢复机制",
+      "time": "2026-10-18T15:32:29.404Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-recovery"
+    },
+    {
+      "id": "8aa8d998-501e-4662-b55a-ef231682700d",
+      "kind": "state-changed",
+      "entity": "doc:agent-checkpoint-runtime",
+      "title": "中断恢复的实现",
+      "time": "2026-10-18T15:32:29.404Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-runtime",
+      "from": "organized",
+      "to": "reading"
+    },
+    {
+      "id": "786a3421-e5ec-4d4f-b01b-411f3fbe2af9",
+      "kind": "updated",
+      "entity": "doc:agent-checkpoint-runtime",
+      "title": "中断恢复的实现",
+      "time": "2026-10-18T15:32:29.404Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-runtime"
+    },
+    {
+      "id": "a8df09e2-3d79-4d94-909d-3fa1b9982c03",
+      "kind": "state-changed",
+      "entity": "doc:agent-feedback-mechanisms",
+      "title": "Agent 的反馈与调整机制",
+      "time": "2026-10-18T15:32:29.404Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-feedback-mechanisms",
+      "from": "organized",
+      "to": "reading"
+    },
+    {
+      "id": "01f73282-9558-4af6-9be3-0d79df07f00b",
+      "kind": "updated",
+      "entity": "doc:agent-feedback-mechanisms",
+      "title": "Agent 的反馈与调整机制",
+      "time": "2026-10-18T15:32:29.404Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-feedback-mechanisms"
+    },
+    {
+      "id": "484873ec-aaaf-4c21-9f86-cc39f1f092bf",
+      "kind": "state-changed",
+      "entity": "doc:agent-retry",
+      "title": "Agent 重试",
+      "time": "2026-10-18T15:32:29.404Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-retry",
+      "from": "organized",
+      "to": "reading"
+    },
+    {
+      "id": "20d14822-0043-4a6e-a043-9d4d3f668b8f",
+      "kind": "updated",
+      "entity": "doc:agent-retry",
+      "title": "Agent 重试",
+      "time": "2026-10-18T15:32:29.404Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-retry"
+    },
+    {
+      "id": "e1c52009-66e1-48cb-a2cb-84eaf4065d78",
+      "kind": "updated",
+      "entity": "doc:docker-sandbox-practice",
+      "title": "Docker 容器沙箱",
+      "time": "2026-10-18T15:32:29.404Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "docker-sandbox-practice"
+    },
+    {
+      "id": "45b1e7b4-a35f-45ea-9b52-27cc775acea0",
+      "kind": "updated",
+      "entity": "doc:intent-text-classifier",
+      "title": "意图分类器",
+      "time": "2026-10-18T15:32:29.404Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "intent-text-classifier"
+    },
+    {
+      "id": "ca36a311-db12-4b02-9558-2c9558a50ba6",
+      "kind": "updated",
+      "entity": "doc:mcp-oauth-client",
+      "title": "MCP OAuth 接入",
+      "time": "2026-10-18T15:32:29.404Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "mcp-oauth-client"
+    },
+    {
+      "id": "58c4b363-9d2d-44ce-9178-b884beea1356",
+      "kind": "updated",
+      "entity": "doc:sandbox-concurrency",
+      "title": "沙箱并发与容量控制",
+      "time": "2026-10-18T15:32:29.404Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "sandbox-concurrency"
+    },
+    {
+      "id": "daba4936-1bb2-40a0-acdf-27df0c43f6aa",
+      "kind": "updated",
+      "entity": "doc:sandbox-execution",
+      "title": "沙箱执行流程",
+      "time": "2026-10-18T15:32:29.404Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "sandbox-execution"
+    },
+    {
+      "id": "12b800c4-edfc-4118-8e84-f9043c3fab8e",
+      "kind": "state-changed",
+      "entity": "doc:anthropic-context-engineering-summary",
+      "title": "Anthropic：为每一步选择有效上下文",
+      "time": "2026-10-18T15:32:29.404Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "anthropic-context-engineering-summary",
+      "from": "organized",
+      "to": "reading"
+    },
+    {
+      "id": "a0e12e7d-0f88-45bc-aa74-0dd24acaf772",
+      "kind": "updated",
+      "entity": "doc:anthropic-context-engineering-summary",
+      "title": "Anthropic：为每一步选择有效上下文",
+      "time": "2026-10-18T15:32:29.404Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "anthropic-context-engineering-summary"
+    },
+    {
+      "id": "d3196b10-79b7-446e-ad21-3318806f124c",
+      "kind": "updated",
+      "entity": "doc:aws-retries-summary",
+      "title": "AWS：超时、重试、退避与抖动",
+      "time": "2026-10-18T15:32:29.404Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "aws-retries-summary"
+    },
+    {
+      "id": "6d3fcd5d-2f08-410d-b981-15f4c10fb35f",
+      "kind": "updated",
+      "entity": "doc:eino-checkpoints",
+      "title": "Eino 的检查点与中断恢复",
+      "time": "2026-10-18T15:32:29.404Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "eino-checkpoints"
+    },
+    {
+      "id": "8cf92532-7e2a-4ffb-82f6-50e09d989c5a",
+      "kind": "updated",
+      "entity": "doc:go-backoff-retry-summary",
+      "title": "Go backoff：用函数包装一次操作",
+      "time": "2026-10-18T15:32:29.404Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "go-backoff-retry-summary"
+    },
+    {
+      "id": "28361401-8716-4a46-aa4d-5ac24eae3dcd",
+      "kind": "updated",
+      "entity": "doc:langgraph-checkpoints",
+      "title": "LangGraph：检查点怎样保存执行进度",
+      "time": "2026-10-18T15:32:29.404Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "langgraph-checkpoints"
+    },
+    {
+      "id": "a1d96a91-f2d1-494a-b4ea-6d2e03d7dabc",
+      "kind": "state-changed",
+      "entity": "doc:agent-checkpoint-recovery",
+      "title": "Agent 的中断恢复机制",
+      "time": "2026-10-18T15:34:54.708Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-recovery",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "99688d43-f214-4fa5-87fa-8eddc4d0c023",
+      "kind": "state-changed",
+      "entity": "doc:agent-checkpoint-runtime",
+      "title": "中断恢复的实现",
+      "time": "2026-10-18T15:34:57.103Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-runtime",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "d547f8d7-f609-4966-886e-25794dde7c0b",
+      "kind": "state-changed",
+      "entity": "doc:agent-feedback-mechanisms",
+      "title": "Agent 的反馈与调整机制",
+      "time": "2026-10-18T15:35:00.479Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-feedback-mechanisms",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "14afcdc3-c5df-4fda-a13e-732efc2da3f7",
+      "kind": "state-changed",
+      "entity": "doc:agent-retry",
+      "title": "Agent 重试",
+      "time": "2026-10-18T15:35:02.863Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-retry",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "e13050cb-cc57-4490-be36-6e13b8f73582",
+      "kind": "state-changed",
+      "entity": "doc:anthropic-context-engineering-summary",
+      "title": "Anthropic：为每一步选择有效上下文",
+      "time": "2026-10-18T15:35:09.456Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "anthropic-context-engineering-summary",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "99e939b3-ce21-436c-bdbd-df3a137b277b",
+      "kind": "state-changed",
+      "entity": "doc:anthropic-context-engineering-summary",
+      "title": "Anthropic：为每一步选择有效上下文",
+      "time": "2026-10-18T15:35:10.063Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "anthropic-context-engineering-summary",
+      "from": "organized",
+      "to": "pending"
     }
   ]
 }
