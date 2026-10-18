@@ -11,7 +11,7 @@ source: "[Status Codes](https://grpc.io/docs/guides/status-codes/)"
 
 ## 三种不同的恢复层级
 
-- `UNAVAILABLE`：服务暂时不可用，可考虑[[retry-backoff-jitter|退避]]后重试该调用；非幂等操作仍需检查安全性。
+- `UNAVAILABLE`：服务暂时不可用，可考虑[[retry-backoff|退避]]后重试该调用；非幂等操作仍需检查安全性。
 - `ABORTED`：如并发版本校验或事务冲突，可能需要重新执行「读取 → 修改 → 写入」整个步骤，不能只重发最后一次写入。
 - `FAILED_PRECONDITION`：当前状态不满足要求，应先修复条件。例如删除非空目录失败，等待本身不会清空目录。
 

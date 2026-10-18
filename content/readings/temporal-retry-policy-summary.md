@@ -15,7 +15,7 @@ source: "[Retry Policies](https://docs.temporal.io/encyclopedia/retry-policies)"
 
 ## 策略包含哪些约束
 
-- 初始间隔、[[retry-backoff-jitter|退避系数]]和最大间隔：控制等待时间如何增长。
+- 初始间隔、[[retry-backoff|退避系数]]和最大间隔：控制等待时间如何增长。
 - 最大尝试次数：包含第一次执行，设为 1 表示不重试；0 表示不限制次数。
 - 不可重试错误：按错误类型排除，或将应用错误明确标为不可重试；永久性错误应尽早返回。
 

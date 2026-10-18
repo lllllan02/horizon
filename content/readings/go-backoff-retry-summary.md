@@ -13,11 +13,11 @@ source: "[backoff v7.0.0 源码](https://github.com/cenkalti/backoff/blob/v7.0.0
 
 `Operation[T]` 是 `func() (T, error)`。返回 `nil` 错误表示成功；普通错误会进入重试策略，`Permanent(err)` 表示本轮不再尝试。业务必须先识别可恢复错误，库不会判断接口权限、幂等性或副作用。
 
-`RetryAfterError` 可指定下次间隔，并重置[[retry-backoff-jitter|退避策略]]；仍受次数与时间约束。原始错误和停止原因由 `RetryError.LastErr`、`Cause` 分别保存。
+`RetryAfterError` 可指定下次间隔，并重置[[retry-backoff|退避策略]]；仍受次数与时间约束。原始错误和停止原因由 `RetryError.LastErr`、`Cause` 分别保存。
 
 ## 次数、时间与取消怎样配合
 
-`WithMaxTries(3)` **「包含首次执行，最多重试两次」**。默认指数退避带随机扰动，每个并发调用应使用独立的有状态退避实例。
+`WithMaxTries(3)` **「包含首次执行，最多重试两次」**。默认指数退避带[[jitter|随机扰动]]，每个并发调用应使用独立的有状态退避实例。
 
 `WithMaxElapsedTime` 在两次尝试之间检查，**「不能中断正在执行的操作」**；设为 0 可禁用它，改用带期限的 Context。Context 可打断等待，但业务操作还需自己接收并遵守 Context，才能响应执行中的取消。
 

@@ -50,6 +50,14 @@
       "bodyDigest": "77e961d2e7f830979d18ff9dd040d96d95e3702d441a046ea8bdbd8465c95b0a",
       "updatedAt": "2026-10-12T20:40:35+08:00"
     },
+    "jitter": {
+      "title": "抖动",
+      "collection": "glossary",
+      "state": "pending",
+      "digest": "a11ce41592c0fdb17ce23aa479a5d6aa704d0a8de705747cfdfd193960828e87",
+      "bodyDigest": "433a9f64e80aff75c51387a4d9964957aa21d1ee5b9076d7b396854edf971ea0",
+      "updatedAt": "2026-10-19T00:08:11+08:00"
+    },
     "json-rpc": {
       "title": "JSON-RPC（基于 JSON 的远程过程调用协议）",
       "collection": "glossary",
@@ -138,13 +146,13 @@
       "bodyDigest": "2711fbc5b257b756de430ae4a638ba51e81ad720f35c68f3c47e500913bbd9ed",
       "updatedAt": "2026-10-18T21:32:19+08:00"
     },
-    "retry-backoff-jitter": {
-      "title": "重试退避与抖动",
+    "retry-backoff": {
+      "title": "重试退避",
       "collection": "glossary",
       "state": "pending",
-      "digest": "cddd55919c3c7299112739c244ce224f184be38b452d01244ab5580861953540",
-      "bodyDigest": "11bb7c81902cabe03b07f31c1f8c1435356180d3a467df2e107731898cf1e953",
-      "updatedAt": "2026-10-18T23:47:18+08:00"
+      "digest": "0ac16832956ed4779ab246d153e77873ec3f57fb1600a1c16390ddf823e98e36",
+      "bodyDigest": "c7253d070f6880a193ae66130f2595f2b64bf656ba5cccf2e9c519f515bf114d",
+      "updatedAt": "2026-10-19T00:08:11+08:00"
     },
     "service-backpressure": {
       "title": "背压",
@@ -238,8 +246,8 @@
       "title": "模型调用响应慢，导致 Agent 链路超时，如何设计分层超时与熔断？高并发下怎么处理？",
       "collection": "interviews",
       "state": "organized",
-      "digest": "d5cdd9caf986f23d309812b069ba30883479e50647c61fdb5f3307e3ce34a5f8",
-      "bodyDigest": "ec5b12782d567b239bf549bf3d47016d227a6d4513e7bba2d1774daf74e7821b",
+      "digest": "4af293462d52ca5e523bf23d08e738cd56a31e3ad4679bebae0aaba1fede8a8b",
+      "bodyDigest": "940a03ec619e7661c717108fecaa84540ff189e762b01fde24b32621ea02a6b4",
       "updatedAt": "2026-10-18T23:47:18+08:00"
     },
     "bm25-interview": {
@@ -294,8 +302,8 @@
       "title": "MySQL 遇到死锁，如何排查和优化修复？",
       "collection": "interviews",
       "state": "organized",
-      "digest": "4903ea6ffb699eb331e2bdec51f3c16f146bee5512cce2d98feb7324ffb53dc8",
-      "bodyDigest": "ba495f182f30eb7628d757e617c777775b4a3e2f2518f1ad43115b2d0aa12e41",
+      "digest": "6b76a620dae8c6e6a62d992822d93a5000fe1a15e22845f1773c56cf2c169114",
+      "bodyDigest": "894d5210792dac1d0a8e96e9c65c53fcca98d17c341cec85862b1ed7751ae76c",
       "updatedAt": "2026-10-18T21:19:19+08:00"
     },
     "mysql-deadlock-victim": {
@@ -318,8 +326,8 @@
       "title": "MySQL 事务失败后，哪些情况可以重试？怎么重试？",
       "collection": "interviews",
       "state": "organized",
-      "digest": "11476ae2597ed4f3af6949d7e8b97a62683bf78663d0f55aeaca58e7a3195039",
-      "bodyDigest": "846c377314a0e63ecf94a4f9f39bc0bbaa521bc288ed7158fd8ae6ae26d9dc95",
+      "digest": "f72192af33990c210b957aab572894b50c4374d57d9adad9d34568aaa9a0205f",
+      "bodyDigest": "2f33f9ea6a96b0e7eb7d6f6776921ff05684ac36950d388f8dbadc0065b43231",
       "updatedAt": "2026-10-18T21:05:08+08:00"
     },
     "project-interview-index": {
@@ -510,8 +518,8 @@
       "title": "Agent 重试",
       "collection": "notes",
       "state": "organized",
-      "digest": "28311c552070efe687bd7cd50c4509a9030741e9f9d141eeb1e284c95a6cac77",
-      "bodyDigest": "4cd41655f0ecca3852c9c386a966597f4434bd205f9a8895cbfc091ecb275007",
+      "digest": "6379ae79167c22e486e9268c04f4193a153c4c67dc68dbc6b3c1c4479ac15c0d",
+      "bodyDigest": "c0656cf14ab736f0e507d8cc8c95eaacbc5fb331de8749cb3ff8f57c3bb5afac",
       "updatedAt": "2026-10-17T15:22:45+08:00"
     },
     "agent-sandbox": {
@@ -1166,8 +1174,8 @@
       "title": "AWS：超时、重试、退避与抖动",
       "collection": "readings",
       "state": "pending",
-      "digest": "93370e40869c98540c8557cd3590765c63d121dd865bb413935f028d52553ecc",
-      "bodyDigest": "8cb5eef356f7cf14e66b3f195c910dcf79a81b4cfe428ea6bbf1154934f36049",
+      "digest": "57ef33fd03a3ec9c8928afac7e0de5a6cb8b2e0cc3b964b72ba60a7d549e7c50",
+      "bodyDigest": "829ebcdfce8d8b67ae7c4a49d44d4878ec20e7aaf62f80f28907524ea20a90ec",
       "updatedAt": "2026-10-13T12:48:15+08:00"
     },
     "aws-retry-errors-summary": {
@@ -1550,8 +1558,8 @@
       "title": "Go backoff：用函数包装一次操作",
       "collection": "readings",
       "state": "pending",
-      "digest": "4fac16afac6c4b36741ee233ec13a130d9e8593cf8faa4ac4e5b839d18418a5d",
-      "bodyDigest": "75f62a52d108a6145e70d4187781895b7c975f0e240c3225a72f1c4f8a5cc6b3",
+      "digest": "0a113301ae15437044ff20adcbaffbd6e8df2c6ded37ed9852fd65b5f978822d",
+      "bodyDigest": "18ea394b0f91e9b6f347a35cece646428653eec592cafe1359e06659fbc643c6",
       "updatedAt": "2026-10-13T12:48:15+08:00"
     },
     "go-semaphore-summary": {
@@ -1590,8 +1598,8 @@
       "title": "gRPC：错误码怎样表达恢复方式",
       "collection": "readings",
       "state": "pending",
-      "digest": "6a6d3d7269aa0f0f91641e85a6e356f77ab4a2ea3128878079dd506f2678f25f",
-      "bodyDigest": "68677bf38969c318b2629dd38bd2dcf96f76e91d1d06440fbe52ffb8d093cc38",
+      "digest": "53f563ca2d3de3a9b2dc80b23a41e19e238b288088afc92d26448c02586dfa37",
+      "bodyDigest": "803e630a02b1e4174961b033824c91603170d88be722653d7bb5394a4a2435fc",
       "updatedAt": "2026-10-13T12:48:15+08:00"
     },
     "harbor-evaluation": {
@@ -1686,8 +1694,8 @@
       "title": "LangChain：用中间件扩展 Agent 循环",
       "collection": "readings",
       "state": "pending",
-      "digest": "bd6e3754d81f9a4fcd6d362ac8c9ef54aeeed5ebdce02d38f19a03b27346bf0b",
-      "bodyDigest": "60c999aec4d8720f171b8bfa1534563fc3465d9c1ed2019c89604fe37652fc5e",
+      "digest": "0e1afb3a2184f8296543520c47c0db77f459ee265761d476a4d4609a3f4e620d",
+      "bodyDigest": "6d342ab04b49da071ff8ae782f67b6bed11cc8b093acab4ea13d3a5db22ad7f4",
       "updatedAt": "2026-10-13T12:48:15+08:00"
     },
     "langchain-message-trimming-summary": {
@@ -2318,8 +2326,8 @@
       "title": "Temporal：用策略约束重试与停止条件",
       "collection": "readings",
       "state": "pending",
-      "digest": "e2b44747cc31c53803d32083f4e6fc137111d572bebb36552d6801514b93ba88",
-      "bodyDigest": "e7853684f6477c7c8e04f5cc9d171e197b9dae97458778a99742c642f918ee9c",
+      "digest": "84a467ab39a5c217b92ae115ebab4325332534a526b874f9d5b071712feba514",
+      "bodyDigest": "57000d28d92ece3b7d7331b677201c1c0e934ed424699c9b608ee4fb3bcf2f47",
       "updatedAt": "2026-10-13T12:48:15+08:00"
     },
     "xiaolin-task-decomposition-summary": {
@@ -35205,6 +35213,138 @@
       "docId": "contest-bottleneck-interview",
       "from": "reading",
       "to": "organized"
+    },
+    {
+      "id": "05d6d0e8-d752-42b6-a46b-2dadb6654042",
+      "kind": "created",
+      "entity": "doc:jitter",
+      "title": "抖动",
+      "time": "2026-10-18T16:11:50.687Z",
+      "collections": [
+        "glossary"
+      ],
+      "source": "observed",
+      "docId": "jitter"
+    },
+    {
+      "id": "ee3ab79a-1dd0-4f95-b2ce-14436f3256c0",
+      "kind": "created",
+      "entity": "doc:retry-backoff",
+      "title": "重试退避",
+      "time": "2026-10-18T16:11:50.687Z",
+      "collections": [
+        "glossary"
+      ],
+      "source": "observed",
+      "docId": "retry-backoff"
+    },
+    {
+      "id": "59a98599-c2ee-4a04-ac1a-fadc4af361db",
+      "kind": "updated",
+      "entity": "doc:agent-timeout-interview",
+      "title": "模型调用响应慢，导致 Agent 链路超时，如何设计分层超时与熔断？高并发下怎么处理？",
+      "time": "2026-10-18T16:11:50.687Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-timeout-interview"
+    },
+    {
+      "id": "df7e30f2-58de-4d02-9372-d32edf95987d",
+      "kind": "updated",
+      "entity": "doc:mysql-deadlock-interview",
+      "title": "MySQL 遇到死锁，如何排查和优化修复？",
+      "time": "2026-10-18T16:11:50.687Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-deadlock-interview"
+    },
+    {
+      "id": "ccff9ea7-275b-44aa-86ae-74e63624ddbf",
+      "kind": "updated",
+      "entity": "doc:mysql-transaction-retry",
+      "title": "MySQL 事务失败后，哪些情况可以重试？怎么重试？",
+      "time": "2026-10-18T16:11:50.687Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-transaction-retry"
+    },
+    {
+      "id": "d66af655-29d5-4366-b489-b17816b79031",
+      "kind": "updated",
+      "entity": "doc:agent-retry",
+      "title": "Agent 重试",
+      "time": "2026-10-18T16:11:50.687Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-retry"
+    },
+    {
+      "id": "61017248-f148-4917-a217-df0d4db0762a",
+      "kind": "updated",
+      "entity": "doc:aws-retries-summary",
+      "title": "AWS：超时、重试、退避与抖动",
+      "time": "2026-10-18T16:11:50.687Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "aws-retries-summary"
+    },
+    {
+      "id": "05478780-7336-4e8f-98e6-775534d07cee",
+      "kind": "updated",
+      "entity": "doc:go-backoff-retry-summary",
+      "title": "Go backoff：用函数包装一次操作",
+      "time": "2026-10-18T16:11:50.687Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "go-backoff-retry-summary"
+    },
+    {
+      "id": "a00dd7dd-4bb4-44b3-8732-aad11dba9e77",
+      "kind": "updated",
+      "entity": "doc:grpc-error-recovery-summary",
+      "title": "gRPC：错误码怎样表达恢复方式",
+      "time": "2026-10-18T16:11:50.687Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "grpc-error-recovery-summary"
+    },
+    {
+      "id": "5c0714bd-7d0f-4ba1-b8cc-c2ff1f35d65b",
+      "kind": "updated",
+      "entity": "doc:langchain-harness-middleware-summary",
+      "title": "LangChain：用中间件扩展 Agent 循环",
+      "time": "2026-10-18T16:11:50.687Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "langchain-harness-middleware-summary"
+    },
+    {
+      "id": "53a2c9f7-8b01-4519-a892-8dcfc1ea13f6",
+      "kind": "updated",
+      "entity": "doc:temporal-retry-policy-summary",
+      "title": "Temporal：用策略约束重试与停止条件",
+      "time": "2026-10-18T16:11:50.687Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "temporal-retry-policy-summary"
     }
   ]
 }
