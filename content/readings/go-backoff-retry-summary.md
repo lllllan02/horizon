@@ -13,7 +13,7 @@ source: "[backoff v7.0.0 源码](https://github.com/cenkalti/backoff/blob/v7.0.0
 
 `Operation[T]` 是 `func() (T, error)`。返回 `nil` 错误表示成功；普通错误会进入重试策略，`Permanent(err)` 表示本轮不再尝试。业务必须先识别可恢复错误，库不会判断接口权限、幂等性或副作用。
 
-`RetryAfterError` 可指定下次间隔，并重置退避策略；仍受次数与时间约束。原始错误和停止原因由 `RetryError.LastErr`、`Cause` 分别保存。
+`RetryAfterError` 可指定下次间隔，并重置[[retry-backoff-jitter|退避策略]]；仍受次数与时间约束。原始错误和停止原因由 `RetryError.LastErr`、`Cause` 分别保存。
 
 ## 次数、时间与取消怎样配合
 

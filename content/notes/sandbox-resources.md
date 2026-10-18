@@ -22,7 +22,7 @@ reading_suggestions:
 | 文件、日志不断变大 | 分别设置存储配额、日志轮转和输出缓冲上限 |
 | 命令迟迟不结束 | 设置运行时限，到时触发终止与清理 |
 
-各项不能互相替代：能写哪个目录不等于能写多少，日志轮转不限制任意输出文件，超时也阻止不了短时间耗尽内存。
+各项不能互相替代：能写哪个目录不等于能写多少，日志轮转不限制任意输出文件，[[timeout-and-deadline|超时]]也阻止不了短时间耗尽内存。
 
 [[docker-sandbox-practice|Docker]]用容器参数，[[e2b-sandbox-practice|E2B]]用模板规格与生命周期参数；[[firecracker-sandbox-practice|Firecracker]]需区分客户容量和宿主实际配额，[[gvisor-sandbox-practice|gVisor]]的内外进程计数也不同。
 

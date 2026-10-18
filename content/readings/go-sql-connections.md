@@ -24,7 +24,7 @@ source:
 
 `SetMaxOpenConns` 限制打开连接总量；**「达到上限时，新操作需要等待连接可用」**。这个限制也使连接成为需要协调的资源：若代码持有事务连接，又通过 DB 请求另一个连接，容量不足时可能无法继续。
 
-其他参数处理不同问题：`SetMaxIdleConns` 控制保留多少空闲连接，影响后续请求能否复用；`SetConnMaxIdleTime` 限制空闲时长，`SetConnMaxLifetime` 限制可复用寿命。它们不等于 SQL 执行超时，也不能替代总并发限制。连接文档认为多数程序不必修改默认值，参数调整应有观测依据。
+其他参数处理不同问题：`SetMaxIdleConns` 控制保留多少空闲连接，影响后续请求能否复用；`SetConnMaxIdleTime` 限制空闲时长，`SetConnMaxLifetime` 限制可复用寿命。它们不等于 SQL 执行[[timeout-and-deadline|超时]]，也不能替代[[concurrency-control|总并发限制]]。连接文档认为多数程序不必修改默认值，参数调整应有观测依据。
 
 ## 状态和累计计数分别说明什么
 

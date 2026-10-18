@@ -11,7 +11,7 @@ source: "[Status Codes](https://grpc.io/docs/guides/status-codes/)"
 
 ## 三种不同的恢复层级
 
-- `UNAVAILABLE`：服务暂时不可用，可考虑退避后重试该调用；非幂等操作仍需检查安全性。
+- `UNAVAILABLE`：服务暂时不可用，可考虑[[retry-backoff-jitter|退避]]后重试该调用；非幂等操作仍需检查安全性。
 - `ABORTED`：如并发版本校验或事务冲突，可能需要重新执行「读取 → 修改 → 写入」整个步骤，不能只重发最后一次写入。
 - `FAILED_PRECONDITION`：当前状态不满足要求，应先修复条件。例如删除非空目录失败，等待本身不会清空目录。
 
@@ -19,6 +19,6 @@ source: "[Status Codes](https://grpc.io/docs/guides/status-codes/)"
 
 ## 超时不是执行结果
 
-`DEADLINE_EXCEEDED` 表示期限已到，但**「修改操作可能已经成功，只是响应迟到」**。它不能证明操作没有生效。
+`DEADLINE_EXCEEDED` 表示[[timeout-and-deadline|期限已到]]，但**「修改操作可能已经成功，只是响应迟到」**。它不能证明操作没有生效。
 
 这份规范适合借鉴错误接口的设计：错误应帮助调用方决定**「下一步做什么」**。它定义的是状态码语义，不表示客户端收到这些码就一定自动重试。

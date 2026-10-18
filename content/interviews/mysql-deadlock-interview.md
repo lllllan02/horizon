@@ -4,10 +4,10 @@ aliases: ["MySQL 死锁面试题"]
 category: "MySQL"
 parent: mysql-interview-index
 tags: ["面试", "MySQL", "死锁", "性能排查"]
-learning_status: reading
+learning_status: organized
 created_at: "2026-10-18T11:52:26+08:00"
 updated_at: "2026-10-18T21:19:19+08:00"
-learning_status_changed_at: "2026-10-18T23:28:12.441+08:00"
+learning_status_changed_at: "2026-10-18T23:44:09.430+08:00"
 ---
 
 InnoDB 默认开着死锁检测。发生死锁后，它会[[mysql-deadlock-victim|选择一个较轻的事务回滚]]，一般会参考修改了多少行、持有多少锁，尽量选择回滚代价较小的一方，让其他事务有机会继续执行。
@@ -24,5 +24,5 @@ InnoDB 默认开着死锁检测。发生死锁后，它会[[mysql-deadlock-victi
 
 3. 看看是不是锁得太多。SQL 写得短，不代表扫描的记录少、拿的锁少。可以结合索引和执行计划，看看有没有扫太多记录，能不能减少不必要的加锁。
 
-4. 可以补充少量重试，让业务更健壮。死锁回滚的是整个事务，所以要[[mysql-transaction-retry|重新开启事务重试]]，把事务里的读取、判断、修改重新执行，不能只重试最后一条 SQL。重试要限制次数，稍微退避一下，避免马上又撞在一起。
+4. 可以补充少量重试，让业务更健壮。死锁回滚的是整个事务，所以要[[mysql-transaction-retry|重新开启事务重试]]，把事务里的读取、判断、修改重新执行，不能只重试最后一条 SQL。重试要限制次数，稍微[[retry-backoff-jitter|退避]]一下，避免马上又撞在一起。
 
