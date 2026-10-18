@@ -1,6 +1,6 @@
 ---
 title: "视界"
-updated_at: "2026-10-17"
+updated_at: "2026-10-18T11:28:58+08:00"
 category: "项目开发"
 tags: ["知识库", "图谱", "Markdown", "服务启动", "GitHub-Pages"]
 ---
@@ -249,7 +249,9 @@ npm --prefix apps/web run preview:pages
 
 推送 `main` 后，`.github/workflows/pages.yml` 自动安装依赖、执行类型检查与静态构建，再部署到 Pages。部署流程不运行回归测试，也不等待独立测试工作流；只更新笔记时无需重复安装浏览器和运行交互验收。仓库 Settings → Pages 的 Source 设为 GitHub Actions。发布地址为 [视界](https://lllllan02.github.io/brain/)。页面只读，文档更新仍直接修改源文件。
 
-开发验收使用 `make check`、`make test` 和 `make test-browser`。独立的 `.github/workflows/checks.yml` 在应用、脚本、根包配置、Makefile 或工作流变化的 PR 与 `main` 推送中运行格式、类型、单元、接口和浏览器检查，也可手动触发；仅修改 `content/` 不触发。测试使用独立样例，不依赖知识库中的固定文章或引用数量；失败时上传 `playwright-results`，保留截图与追踪 7 天。回归测试用于代码变更验收，内容发布只要求构建成功。
+开发验收使用 `make check`、`make test` 和 `make test-browser`。独立的 `.github/workflows/checks.yml` 在应用、脚本、根包配置、Makefile 或相关工作流变化的 PR 与 `main` 推送中运行格式、类型、单元和接口检查，也可手动触发；仅修改 `content/` 不触发。
+
+完整浏览器回归由 `.github/workflows/browser-checks.yml` 单独运行，仅支持手动触发：在 GitHub Actions 中选择「Check Horizon Browser」→「Run workflow」，选择待验证分支后运行；也可在本地执行 `make test-browser`。界面改动按影响范围完成浏览器验收。测试使用独立样例，不依赖知识库中的固定文章或引用数量；失败时上传 `playwright-results`，保留截图与追踪 7 天。回归测试用于代码变更验收，内容发布只要求构建成功。
 
 ## 学习与阅读状态
 
