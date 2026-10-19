@@ -20,6 +20,7 @@ import path from 'node:path';
 import { createHash } from 'node:crypto';
 import yaml from 'js-yaml';
 import { Lexer, Parser, Renderer } from 'marked';
+import { MarkdownTokenizer } from './markdown-tokenizer.ts';
 import hljs from 'highlight.js';
 import { CONTENT_COLLECTIONS } from './collections.ts';
 import { documentAppearance, documentIcon, checkPath } from './document-state.ts';
@@ -237,6 +238,7 @@ export function renderDocument(
     gfm: true,
     breaks: false,
     renderer: new Renderer(),
+    tokenizer: new MarkdownTokenizer(),
     extensions: { inline: [], startInline: [], renderers: {} },
   };
   const wiki = (target: string, label: string | undefined, embed: boolean) => {
