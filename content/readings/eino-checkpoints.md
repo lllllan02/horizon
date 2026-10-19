@@ -6,7 +6,7 @@ tags: ["Agent", "Checkpoint", "持久化", "Go"]
 learning_status: pending
 learning_status_changed_at: "2026-10-17T21:42:39.524+08:00"
 created_at: "2026-10-14T14:43:35+08:00"
-updated_at: "2026-10-19T19:27:21+08:00"
+updated_at: "2026-10-19T21:44:24+08:00"
 source:
   - "https://www.cloudwego.io/zh/docs/eino/core_modules/eino_adk/agent_hitl/"
   - "https://www.cloudwego.io/zh/docs/eino/core_modules/chain_and_graph_orchestration/checkpoint_interrupt/"
@@ -16,6 +16,12 @@ source:
   - "https://github.com/cloudwego/eino/blob/v0.9.14/adk/chatmodel.go"
   - "https://github.com/cloudwego/eino/blob/v0.9.14/adk/runctx.go"
   - "https://github.com/cloudwego/eino/blob/v0.9.14/internal/serialization/serialization.go"
+  - "https://github.com/cloudwego/eino/blob/v0.9.14/compose/graph.go"
+  - "https://github.com/cloudwego/eino/blob/v0.9.14/compose/graph_run.go"
+  - "https://github.com/cloudwego/eino/blob/v0.9.14/compose/tool_node.go"
+  - "https://github.com/cloudwego/eino/blob/v0.9.14/adk/react.go"
+  - "https://github.com/cloudwego/eino/blob/v0.9.14/adk/agent_tool.go"
+  - "https://github.com/cloudwego/eino/blob/v0.9.14/compose/dag.go"
 ---
 
 Go Agent 在工具执行前等待审批，需要把当前进度交给存储，再由后续请求接手。Eino 提供了这条路径：**工具发出中断 → 框架保存检查点 → 应用收到审批后发起恢复 → 工具读取原状态与审批结果，继续执行。**
@@ -37,6 +43,32 @@ Go Agent 在工具执行前等待审批，需要把当前进度交给存储，�
 ChatModelAgent 内部还运行着 Graph。其内部检查点通过[桥接存储](https://github.com/cloudwego/eino/blob/v0.9.14/adk/chatmodel.go)进入 Agent 的中断状态；[Graph 检查点](https://github.com/cloudwego/eino/blob/v0.9.14/compose/checkpoint.go)保存节点输入、图状态、待重跑节点、通道及子图状态。因此保存对象既有业务数据，也有框架继续调度所需的信息，并非只有对话消息。
 
 业务提供 `CheckPointStore`：v0.9.14 的接口是 `Get(ctx, id) ([]byte, bool, error)` 与 `Set(ctx, id, data) error`，通过 `adk.RunnerConfig.CheckPointStore` 注入。要跨进程恢复，存储须在进程退出后仍可读取；多实例还要能访问同一份数据。内存 map 只能演示同进程恢复。
+
+## 节点键与待执行任务
+
+[图编译实现](https://github.com/cloudwego/eino/blob/v0.9.14/compose/graph.go#L730-L757)将节点键映射到包含执行对象的 `chanSubscribeTo`。中断时，[`handleInterrupt`](https://github.com/cloudwego/eino/blob/v0.9.14/compose/graph_run.go#L501-L574)把下一批任务的节点键与输入写入 `cp.Inputs`；恢复时，[`restoreTasks`](https://github.com/cloudwego/eino/blob/v0.9.14/compose/graph_run.go#L777-L825)按键查回执行对象，再组装 task。未在新图中注册的键会导致恢复报错，不能把任意字符串或代码行号当成有效恢复位置。
+
+[`newReact`](https://github.com/cloudwego/eino/blob/v0.9.14/adk/react.go#L355-L559)注册 `ChatModel`、`ToolNode`、`CancelCheck`、`AfterToolCalls` 等节点，所以模型调用与工具执行已有不同的节点标识；实际接续节点取决于断点位置。[[eino-checkpoint|保存与恢复的学习说明]]围绕这个映射展开，[[assets/eino-checkpoint-source.txt|源码节选]]保留了完整的 `restoreTasks` 与相关状态结构。
+
+## ToolsNode 怎样保留部分完成结果？
+
+[`toolsInterruptAndRerunState`](https://github.com/cloudwego/eino/blob/v0.9.14/compose/tool_node.go#L309-L314)包含原始模型消息 `Input`、已完成普通工具结果 `ExecutedTools`、增强工具结果 `ExecutedEnhancedTools` 和中断工具列表 `RerunTools`。`ToolsNode.Invoke` 在工具发生受支持的中断时，通过 `CompositeInterrupt` 带出这些组件状态；Graph 会保存需重进的节点与中断状态。
+
+恢复重新进入工具节点后，程序从中断状态读回原始输入及完成结果，再由 [`genToolCallTasks`](https://github.com/cloudwego/eino/blob/v0.9.14/compose/tool_node.go#L777-L825)按调用 ID 匹配结果。匹配的任务标为 `executed`；[`runToolCallTaskByInvoke`](https://github.com/cloudwego/eino/blob/v0.9.14/compose/tool_node.go#L892-L933)直接跳过它，其他调用继续处理。**「重新进入 ToolNode 可以复用已完成结果」**，但这依赖中断状态已成功保存；这里仅静态核对源码，未新增部分工具中断实验。
+
+## 并行依赖怎样进入检查点？
+
+Graph 的 `Channels` 可以保留节点输入与依赖状态。v0.9.14 的 [`dagChannel`](https://github.com/cloudwego/eino/blob/v0.9.14/compose/dag.go#L42-L74)包含 `ControlPredecessors`（waiting／ready／skipped）、`DataPredecessors`、`Values` 和 `Skipped`；`load` 将保存的通道内容恢复到当前通道，随后 [`get`](https://github.com/cloudwego/eino/blob/v0.9.14/compose/dag.go#L128-L175)检查依赖，满足条件才产生节点输入。
+
+因此，并行恢复还涉及哪些前置已满足、哪些被跳过及哪些输入已到达，不能只用一个串行工具下标概括。这是 Eino Graph 的具体实现；自建调度器若能从固定依赖图与完成集合推导就绪状态，不必照抄整套字段。本节仅核对源码，未新增并行恢复实验。
+
+## AgentTool 怎样保留子 Agent 的进度？
+
+把 Agent 包装成工具后，父工具中断时需要保留子运行的检查点，才能在恢复时重新进入这个子运行。v0.9.14 的 [`AgentTool.InvokableRun`](https://github.com/cloudwego/eino/blob/v0.9.14/adk/agent_tool.go#L164-L210)区分首次执行与恢复：首次建立桥接存储并调用子 Runner 的 `Run`；恢复时从工具中断状态取出子检查点字节，重建桥接存储，再调用 `Runner.Resume`。
+
+子 Agent 中断后，[向上传播的实现](https://github.com/cloudwego/eino/blob/v0.9.14/adk/agent_tool.go#L251-L261)从桥接存储取出检查点字节，将它作为父工具 `CompositeInterrupt` 的状态；子 Agent 正常完成时，[最后输出被提取为工具结果](https://github.com/cloudwego/eino/blob/v0.9.14/adk/agent_tool.go#L268-L279)。因此，父工具的恢复状态中可以继续包含子 Agent 的恢复状态，而不只是保存工具名称。
+
+Graph 层也用 [`SubGraphs map[string]*checkpoint`](https://github.com/cloudwego/eino/blob/v0.9.14/compose/checkpoint.go#L107-L117)保存嵌套快照，并[按父节点键向子图传递](https://github.com/cloudwego/eino/blob/v0.9.14/compose/checkpoint.go#L158-L168)。这些是框架内部的层级保存机制，不等于业务 JSON 中统一存在一个 `child` 字段。这里静态核对了官方模块源码，未运行完整的 Eino 嵌套 Agent 恢复实验；[[agent-checkpoint-nesting|递归父子进度设计]]及其 Go 演示是另行编写的教学实现。
 
 ## 实际保存后的数据长什么样？
 

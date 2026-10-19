@@ -31,4 +31,4 @@ learning_status_changed_at: "2026-10-18T20:45:36.275+08:00"
 ## 准备资料
 
 - [[interview-resources|Go 与 Agent 面试资料]]
-- [[interview-experiences|Go 后端与 AI Agent 面经]]：个人面试记录、整理进度与随机复习题源。
+- [[interview-experiences|Go 后端与 AI Agent 面经]]：个人面经原帖与逐篇整理进度。

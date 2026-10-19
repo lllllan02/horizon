@@ -154,6 +154,14 @@
       "bodyDigest": "bc4acefc28a37441a571d9d4a40957afa2338aeffed0617cd238f8e3ca0477ba",
       "updatedAt": "2026-10-12T20:40:35+08:00"
     },
+    "quorum": {
+      "title": "Quorum（法定人数）",
+      "collection": "glossary",
+      "state": "pending",
+      "digest": "6f66444ed2642675e3131287308eb9d40bff50d66a0751cb31c69ffa7a635b03",
+      "bodyDigest": "0d2634f7cc47a8b34ff78074a94feecaf95a274df2252c6adffcfed7af8afe7b",
+      "updatedAt": "2026-10-19T20:39:27+08:00"
+    },
     "rate-limiting": {
       "title": "限流",
       "collection": "glossary",
@@ -307,12 +315,12 @@
       "updatedAt": "2026-10-18T20:40:18+08:00"
     },
     "agent-checkpoint-interview": {
-      "title": "Agent 的 Checkpoint 应该保存什么，才能在中断后恢复？",
+      "title": "Agent 的 Checkpoint 怎么实现？",
       "collection": "interviews",
-      "state": "reading",
-      "digest": "df63c5877724e740f57e9138c63b836b1f8c46b96a557ce1569a8429ff5a630f",
-      "bodyDigest": "27e0b004570a858b4ee5e0360496770242ac8bba343c85b9489e7b0c909f5a21",
-      "updatedAt": "2026-10-19T19:44:05+08:00"
+      "state": "organized",
+      "digest": "3f0c75dae8d556a780320e12298e37d044026d72c4ab098c3b4a6b8de439e2fb",
+      "bodyDigest": "727ca224d800ce5af95933be2f11d5618e9af1176a741b0022443a1a532dbf90",
+      "updatedAt": "2026-10-19T21:59:56+08:00"
     },
     "agent-communication-interview": {
       "title": "父子 Agent 和多 Agent 之间怎么通信？",
@@ -445,10 +453,10 @@
     "go-channel-structure-interview": {
       "title": "Go 的 chan 底层数据结构是什么？",
       "collection": "interviews",
-      "state": "reading",
-      "digest": "e417089a885fda5ad1b4a2fa8337ded5b4c7a5047650180896a074980b68e27a",
-      "bodyDigest": "4a985de9537f2d916765d4ddfb16132bd597c963dff4ef0583442411fc9c07c4",
-      "updatedAt": "2026-10-19T19:27:56+08:00"
+      "state": "organized",
+      "digest": "fd44dbac061e0e0b2c8d670871702f9486bbe5f0719024314b5a228fd2706ad9",
+      "bodyDigest": "a0b09f4e368dcd7e0f49fc1527c11baff67e652d62e8799524d3ad93e786c4a9",
+      "updatedAt": "2026-10-19T20:17:01+08:00"
     },
     "go-context-cancel-interview": {
       "title": "Go 的 WithCancel 和 WithoutCancel 有什么区别？",
@@ -477,7 +485,7 @@
     "go-gmp-interview": {
       "title": "聊一聊 Go 的 GMP 调度模型",
       "collection": "interviews",
-      "state": "reading",
+      "state": "organized",
       "digest": "d07f2ebb0a43bfcf5c473c2c5918d512aa652328f9adbc91424aca6d36ba6789",
       "bodyDigest": "0f0026c0247b08c59d02da8eff33b16b9627b764dc3bcdb6e8b298d6de1700a0",
       "updatedAt": "2026-10-19T17:31:03+08:00"
@@ -549,7 +557,7 @@
     "interview-resources": {
       "title": "Go 与 Agent 面试资料",
       "collection": "interviews",
-      "state": "reading",
+      "state": "organized",
       "digest": "841098090ade33e048465ed54723573a59d7e0c9d2f11cc5d59e0b455c232762",
       "bodyDigest": "6b8b9b03e273856d2a937e121629f94480bf1b674c81534d3ddb1ff55f1d2892",
       "updatedAt": "2026-10-19T19:42:43+08:00"
@@ -582,9 +590,17 @@
       "title": "Kafka 面试题",
       "collection": "interviews",
       "state": "pending",
-      "digest": "1cbd589700f6ee6c4a23a199c2973fe09aec82a5aa1f6faf7f05eef3b72c2b06",
-      "bodyDigest": "fe22eca3686fd9d70999d8c898c212fc4a558ef9c8238d0a4ae4f872d69c9a8f",
-      "updatedAt": "2026-10-19T16:59:29+08:00"
+      "digest": "cbec3a211eb2f011fc8e059853517a1cf322336013b3ab401d2527633f27be2a",
+      "bodyDigest": "5071b595d8f18b4e72a4a09ea658aec584a29992fa404374ee89b60d38cf6634",
+      "updatedAt": "2026-10-19T21:42:14+08:00"
+    },
+    "kafka-offset-interview": {
+      "title": "Kafka 消费者如何通过 Offset 拉取消息？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "4f15902a7ec4e6772cb21cfe1c06ce10f9a0a70e5f7ed2c80071143dc3cf76e8",
+      "bodyDigest": "fba7c093f276615580b30ec5f40c72730c690f692c2bfa8c692bfddf1368f4b5",
+      "updatedAt": "2026-10-19T21:42:14+08:00"
     },
     "kafka-ordering-interview": {
       "title": "Kafka 能保证消息顺序吗？",
@@ -714,13 +730,29 @@
       "bodyDigest": "f011a50d14837213990c203c5baafe475400f4d64c743b0db37c3dacabeadcdb",
       "updatedAt": "2026-10-19T13:42:21+08:00"
     },
+    "redis-cluster-failover-interview": {
+      "title": "Redis Cluster 模式下，主从切换的流程是怎么样的？",
+      "collection": "interviews",
+      "state": "pending",
+      "digest": "24f1d9cef147bf1f9fb805c303e76c70b194be930ac24cef58e6f9b12edb14dc",
+      "bodyDigest": "ba5c02bd77eca6f7f6c9537fecdcf8778c4f8903d5855b5f3d95e5c29baf88ea",
+      "updatedAt": "2026-10-19T20:30:13+08:00"
+    },
     "redis-cluster-interview": {
       "title": "介绍一下 Redis 的集群模式？",
       "collection": "interviews",
       "state": "organized",
-      "digest": "fc165746edfc95a4e2e1ba7d9d999a60d44dff0e2b030aa107a09c7a65e569a2",
-      "bodyDigest": "12a49683b04215c2098d051f7a2d274da3b8fbacf3d0dd8e2cc13066ee3d71cc",
+      "digest": "a60ee9a3b76aa9fbe3e0b471baf1c9e9ab40a27bdfa77d2c22319b172c6a5ba8",
+      "bodyDigest": "283943dab71ed6116ac0cd2c0d3ee1f62167555aaa96e273d998683e0c2d37ca",
       "updatedAt": "2026-10-19T19:42:57+08:00"
+    },
+    "redis-cluster-routing-interview": {
+      "title": "Redis Cluster 如何路由请求，MOVED 和 ASK 有什么区别？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "69d3b735c1059055e752c02312ac02049f0214d5923310236604f01d995bd441",
+      "bodyDigest": "2975114df984c6a7d11aa6c6b62da054e4b294d44c2b16d5c33d1f1a3259d1ae",
+      "updatedAt": "2026-10-19T20:27:42+08:00"
     },
     "redis-events-interview": {
       "title": "Redis 的事件",
@@ -742,9 +774,33 @@
       "title": "Redis 面试题",
       "collection": "interviews",
       "state": "pending",
-      "digest": "56468db5042e24181d1143879e8a73023cbbb2325b9c2fae6682f9b893cce6bf",
-      "bodyDigest": "331a6d1b4571b49d817f991482883dc40671c25844e217f0da313b03677cb4cd",
-      "updatedAt": "2026-10-19T19:42:57+08:00"
+      "digest": "cab1e59829839ee4c243e44539b439c05b8c05277bac6defc0a07ed2d9c5583d",
+      "bodyDigest": "1bc2e9d12e4bd814d86491b0b73e15988fe7cd33421412265bcf73b80dc2e4cd",
+      "updatedAt": "2026-10-19T21:05:27+08:00"
+    },
+    "redis-modes-interview": {
+      "title": "Redis 的集群、主从和哨兵分别解决什么问题？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "3207a7bbcedbd4f603dfe441fb7127c366448bbcae607ffa8f781dccb9c4387c",
+      "bodyDigest": "2d9f23e9ebe70cf10861dc9986ad4e78d74940020d89d21c7b1c8f043f9c0c43",
+      "updatedAt": "2026-10-19T20:19:34+08:00"
+    },
+    "redis-replica-promotion-interview": {
+      "title": "Redis 哨兵如何选择要提升为主节点的从节点？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "b89e306b18c27a1f1d64a9514fb6932fa319f63872262192fe2f111daf3cbd4a",
+      "bodyDigest": "f11198da05ab307ad112e53c2aca7f48a3ca537aa7188d6932c88120d3e7b621",
+      "updatedAt": "2026-10-19T21:11:02+08:00"
+    },
+    "redis-sentinel-failover-interview": {
+      "title": "Redis 主从加哨兵模式下，主从切换的流程是怎么样的？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "942ff17a4ddb3655886d7d514536934c7bc41f76f6a00f4f719ce8edefa9668e",
+      "bodyDigest": "a4a43580cf526bbda5ce5858f6cecfa55e668bacf8115e7d64fe64ddc5062a11",
+      "updatedAt": "2026-10-19T20:55:19+08:00"
     },
     "retrieval-fusion-interview": {
       "title": "稀疏和稠密双路召回怎么混合、怎么配合？",
@@ -810,21 +866,37 @@
       "bodyDigest": "99fc8061f833505b9d3e60d5662038f6eb47af988cf937e6cb77ec3f76f7a114",
       "updatedAt": "2026-10-18T00:22:52+08:00"
     },
-    "agent-checkpoint-recovery": {
-      "title": "Agent 的中断恢复机制",
+    "agent-checkpoint-nesting": {
+      "title": "嵌套 Agent 的 Checkpoint",
       "collection": "notes",
       "state": "organized",
-      "digest": "41b340337fcbd2013fd2408329ab6dccc05cd7e7ec60671e5885b956981ef9c3",
-      "bodyDigest": "e51e08ac4545ce65ebaba2b9810a3e529f9852ca6ad9e7f5a05473c2bfaf5809",
-      "updatedAt": "2026-10-17T22:43:15+08:00"
+      "digest": "c6bd0ba2a314a1993770a63e52ff0fb923d15e05681c8074e8323b6c4c3864f8",
+      "bodyDigest": "f399d20375c086bf4d5b3f923d4fc588d419a477a0803b076101ce745f6b6594",
+      "updatedAt": "2026-10-19T21:37:28+08:00"
+    },
+    "agent-checkpoint-recovery": {
+      "title": "Agent 的 Checkpoint",
+      "collection": "notes",
+      "state": "organized",
+      "digest": "54400f4f2cd8fbf6512c170b22bbe3fe4837881e999872535fca28935bdcacc1",
+      "bodyDigest": "51d66c60c7a45df0907b4ec2b92abbf873a8d21f20ccfce43d7327608fc44ab0",
+      "updatedAt": "2026-10-19T21:37:28+08:00"
     },
     "agent-checkpoint-runtime": {
-      "title": "中断恢复的实现",
+      "title": "单 Agent Loop 的 Checkpoint",
       "collection": "notes",
       "state": "organized",
-      "digest": "15723b34b7a55db724f226b828a2fa81212d78d9f71b484129da6f22a1a22fb5",
-      "bodyDigest": "8a0a7d34d553c4739d5689cb7000b6c8ce19e2472276f16bc8d5bc55de5866bd",
-      "updatedAt": "2026-10-17T21:51:42+08:00"
+      "digest": "fb2cd2f1ddc1025b7557a18785106a71b5aee1b751654bbbde62b048cd014086",
+      "bodyDigest": "e843124354f876b31c0ca3687b25271d3229f59c8f6ae304c65b4382a848220f",
+      "updatedAt": "2026-10-19T21:37:28+08:00"
+    },
+    "agent-checkpoint-scheduling": {
+      "title": "复杂调度的 Checkpoint",
+      "collection": "notes",
+      "state": "organized",
+      "digest": "6d21077afc3bde32ef97e5398974ede9d471fca8060e7b09b5d833951b5bf078",
+      "bodyDigest": "10b20fabc763d7f440e74acab42f60002463ebbf6ed01e7b9d01f4dd91966112",
+      "updatedAt": "2026-10-19T21:37:28+08:00"
     },
     "agent-context-input": {
       "title": "Agent 上下文",
@@ -1081,6 +1153,14 @@
       "digest": "50cce04db9d7a304895097436cef0d49f60d907acd1abc777da863a567dc252c",
       "bodyDigest": "e8fad7e8437841f644fe2e60582dded994b57b31a542ff0b51b5a3849116bc0d",
       "updatedAt": "2026-10-10"
+    },
+    "eino-checkpoint": {
+      "title": "Eino Checkpoint 的保存与恢复",
+      "collection": "notes",
+      "state": "pending",
+      "digest": "b8a87e19c0c61d06f03ab534853eddb1e616101ee4b8c56fc8445ebf6aa20221",
+      "bodyDigest": "1a343548822ec6ef172f3a3e9f0de1331ad6ad1dc4ecc460cb9be093bab66ddc",
+      "updatedAt": "2026-10-19T20:24:07+08:00"
     },
     "enterprise-agent-build": {
       "title": "企业何时需要自建 Agent",
@@ -1958,9 +2038,9 @@
       "title": "Eino 的检查点与中断恢复",
       "collection": "readings",
       "state": "pending",
-      "digest": "7730dd4015a0b042ee37449734f09e84f828ea4a1cac4901b071cb3f0fc7011a",
-      "bodyDigest": "fb484116e93e218ef82e113e8b92b53bb8af3b038bba128f2b938f743ba50e8d",
-      "updatedAt": "2026-10-19T19:27:21+08:00"
+      "digest": "359f3ca44f09578772f038b535a6721a4ef141706396a1d6418dfdf1f18556f8",
+      "bodyDigest": "96edab4ed89e5b3c36763e6324426bce999dd6e4262e5c3f02682298e8a83cfd",
+      "updatedAt": "2026-10-19T21:44:24+08:00"
     },
     "eino-langfuse-tracing": {
       "title": "Eino 的 Langfuse Trace 集成",
@@ -2177,6 +2257,14 @@
       "digest": "432cacfb35680461bfff238421232fc8a8a1fe167b2bf62e6bb1cb64d8aebcff",
       "bodyDigest": "eabac153d4984b3dce2fad060494bb918e3eb0e622232ae064219d24a91d1236",
       "updatedAt": "2026-10-19T16:59:29+08:00"
+    },
+    "kafka-offset-sources": {
+      "title": "Kafka 消费位置、Offset 提交与恢复导读",
+      "collection": "readings",
+      "state": "pending",
+      "digest": "3fecf62e7a938de3d4bf979465e7e2de24806b0547c4b95f81b59962ed040d23",
+      "bodyDigest": "a219354fcbfe4a5ae458f9fbe48461d814e166ca033a3482125657a868f310a7",
+      "updatedAt": "2026-10-19T21:42:14+08:00"
     },
     "kafka-partition-count-sources": {
       "title": "Kafka 分区数量与扩容代价导读",
@@ -2690,6 +2778,14 @@
       "bodyDigest": "07cc4d5fd684cdf35432b1d3fd44d3e9151b4f1db5e28fb529e4500e233ba95e",
       "updatedAt": "2026-10-13T12:48:15+08:00"
     },
+    "quorum-sources": {
+      "title": "Quorum 与多数派：官方资料导读",
+      "collection": "readings",
+      "state": "pending",
+      "digest": "aa7d20c0fc709fe39a06fa8ad32bf62ae9d82bd687d62a1098d5cd9f2936c23c",
+      "bodyDigest": "c7b9ec7f78f8369a31a42534d247679c2eb5b6577e11fa6bb3d854521bfb83e6",
+      "updatedAt": "2026-10-19T20:39:27+08:00"
+    },
     "rag-advanced-papers": {
       "title": "HyDE、RAPTOR 与 ColPali：三种检索表示的改变",
       "collection": "readings",
@@ -2793,6 +2889,14 @@
       "digest": "c270dbf1fa64cd38a4038b35050448ad1647ff2c66717e43cfc5e17457871247",
       "bodyDigest": "7d103f2e98a2f359b1ba6336ef4ea301606792d52fbb073903b284624cba8fdf",
       "updatedAt": "2026-10-19T16:19:44+08:00"
+    },
+    "redis-replica-promotion-sources": {
+      "title": "Redis 哨兵选择新主节点的规则导读",
+      "collection": "readings",
+      "state": "pending",
+      "digest": "fc0d14926581663dfed1ec099251a43efa1784b23f084cf7b5ef5499ec4bcead",
+      "bodyDigest": "b355b45ac4710b9fce3fc89c684108c8e24281956dc6f7597ce753169544ec51",
+      "updatedAt": "2026-10-19T21:11:02+08:00"
     },
     "reflexion-summary": {
       "title": "Reflexion：把执行反馈写成经验，指导下一次尝试",
@@ -3043,14 +3147,28 @@
         "notes"
       ]
     },
+    "assets/agent-loop-checkpoint-cursor": {
+      "title": "agent-loop-checkpoint-cursor",
+      "files": {
+        "assets/agent-loop-checkpoint-cursor.png": "ab20c829dc5456a25c38c0e8467fd5d4b53014a159117a904279c33faac37c6d"
+      },
+      "collections": []
+    },
+    "assets/agent-loop-checkpoint-overview": {
+      "title": "agent-loop-checkpoint-overview",
+      "files": {
+        "assets/agent-loop-checkpoint-overview.png": "8b8133a184f8399154fd0120674306382208ad417b81ee5e8db244d618934f18"
+      },
+      "collections": [
+        "notes"
+      ]
+    },
     "assets/agent-loop-checkpoints": {
       "title": "agent-loop-checkpoints",
       "files": {
         "assets/agent-loop-checkpoints.png": "5959b132a0aec7227b55c2d481b9eaf429730da20ccfeeb124c96269b0a9e75f"
       },
-      "collections": [
-        "notes"
-      ]
+      "collections": []
     },
     "assets/agent-loop": {
       "title": "agent-loop",
@@ -3113,6 +3231,15 @@
         "assets/agent-memory-update.png": "b1b90dc88e34e38fc7f66e6eb32c8aca4dfd45230830bcbb1f5fb8313f2e00c7"
       },
       "collections": []
+    },
+    "assets/agent-nested-checkpoint": {
+      "title": "agent-nested-checkpoint",
+      "files": {
+        "assets/agent-nested-checkpoint.png": "fe760cdc3307714f42dbe2c9a9112a0cb02a64a86bb5c176ed7344ddc7c5e24f"
+      },
+      "collections": [
+        "notes"
+      ]
     },
     "assets/agent-overview": {
       "title": "agent-overview",
@@ -3418,6 +3545,24 @@
       "title": "context-selection",
       "files": {
         "assets/context-selection.png": "9b3d125b255756545dd8dbdafe072252797bedcd4be3bb9f4b2ffbfb901b4f42"
+      },
+      "collections": [
+        "notes"
+      ]
+    },
+    "assets/eino-checkpoint-node-lookup": {
+      "title": "eino-checkpoint-node-lookup",
+      "files": {
+        "assets/eino-checkpoint-node-lookup.png": "ed6a25df19755f3288d1afdf5f4d825e35a3b31758f3245e189956d2d4d706bb"
+      },
+      "collections": [
+        "notes"
+      ]
+    },
+    "assets/eino-checkpoint-tool-resume": {
+      "title": "eino-checkpoint-tool-resume",
+      "files": {
+        "assets/eino-checkpoint-tool-resume.png": "44f61693e76f8377882378d331d17cee94aa8fd827b6e11f73d4c6603d2b9506"
       },
       "collections": [
         "notes"
@@ -39620,6 +39765,1212 @@
       ],
       "source": "observed",
       "docId": "redis-cluster-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "1d306ad5-3508-449f-88a8-af0ce38a7bcd",
+      "kind": "updated",
+      "entity": "doc:agent-checkpoint-interview",
+      "title": "Agent 的 Checkpoint 应该保存什么，才能在中断后恢复？",
+      "time": "2026-10-19T11:52:48.207Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-interview"
+    },
+    {
+      "id": "ae52e400-78b2-451f-a679-a77ad7c1a672",
+      "kind": "updated",
+      "entity": "doc:agent-checkpoint-recovery",
+      "title": "Agent 的中断恢复机制",
+      "time": "2026-10-19T12:17:08.201Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-recovery"
+    },
+    {
+      "id": "82ee265e-7f67-4ec8-8842-d7450b068c38",
+      "kind": "created",
+      "entity": "doc:eino-checkpoint",
+      "title": "Eino Checkpoint 的保存与恢复",
+      "time": "2026-10-19T12:17:08.201Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "eino-checkpoint"
+    },
+    {
+      "id": "cf45679e-a258-45ec-9b00-b672a0e9c810",
+      "kind": "updated",
+      "entity": "doc:eino-checkpoints",
+      "title": "Eino 的检查点与中断恢复",
+      "time": "2026-10-19T12:17:08.201Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "eino-checkpoints"
+    },
+    {
+      "id": "7d509d79-b835-41f4-956b-eafaa32b23cc",
+      "kind": "updated",
+      "entity": "doc:go-channel-structure-interview",
+      "title": "Go 的 chan 底层数据结构是什么？",
+      "time": "2026-10-19T12:17:24.185Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-channel-structure-interview"
+    },
+    {
+      "id": "11c5bcee-e307-4955-a1b3-eb7aab79b9ba",
+      "kind": "updated",
+      "entity": "doc:eino-checkpoint",
+      "title": "Eino Checkpoint 的保存与恢复",
+      "time": "2026-10-19T12:17:52.192Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "eino-checkpoint"
+    },
+    {
+      "id": "40f5f2fd-5768-4eee-a12f-e793764da276",
+      "kind": "state-changed",
+      "entity": "doc:go-channel-structure-interview",
+      "title": "Go 的 chan 底层数据结构是什么？",
+      "time": "2026-10-19T12:17:55.285Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-channel-structure-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "35e853ee-c58a-48aa-9d1b-ca91adcd6962",
+      "kind": "updated",
+      "entity": "doc:redis-interview-index",
+      "title": "Redis 面试题",
+      "time": "2026-10-19T12:19:52.192Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-interview-index"
+    },
+    {
+      "id": "6326251e-4540-45cb-9c5f-ea1d92b9173d",
+      "kind": "created",
+      "entity": "doc:redis-modes-interview",
+      "title": "Redis 的集群、主从和哨兵分别解决什么问题？",
+      "time": "2026-10-19T12:19:52.192Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-modes-interview"
+    },
+    {
+      "id": "a4c426ad-edf2-4fa8-9323-5b434bb66f8d",
+      "kind": "state-changed",
+      "entity": "doc:interview-resources",
+      "title": "Go 与 Agent 面试资料",
+      "time": "2026-10-19T12:20:37.737Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-resources",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "2a1911a2-e0f2-41eb-9f2b-f945fcac81fc",
+      "kind": "state-changed",
+      "entity": "doc:redis-modes-interview",
+      "title": "Redis 的集群、主从和哨兵分别解决什么问题？",
+      "time": "2026-10-19T12:21:15.905Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-modes-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "639ee104-6890-4756-9cdd-39ce5370ecbc",
+      "kind": "state-changed",
+      "entity": "doc:redis-modes-interview",
+      "title": "Redis 的集群、主从和哨兵分别解决什么问题？",
+      "time": "2026-10-19T12:21:16.547Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-modes-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "2e8e6c9c-b3ad-4d26-a4aa-fd0fb89552b8",
+      "kind": "image-created",
+      "entity": "image:assets/eino-checkpoint-node-lookup",
+      "title": "eino-checkpoint-node-lookup",
+      "time": "2026-10-19T12:23:29.057Z",
+      "collections": [],
+      "source": "observed",
+      "files": [
+        "assets/eino-checkpoint-node-lookup.png"
+      ]
+    },
+    {
+      "id": "cb4384d8-754a-4fb3-86a8-f23579202020",
+      "kind": "image-created",
+      "entity": "image:assets/eino-checkpoint-tool-resume",
+      "title": "eino-checkpoint-tool-resume",
+      "time": "2026-10-19T12:23:29.057Z",
+      "collections": [],
+      "source": "observed",
+      "files": [
+        "assets/eino-checkpoint-tool-resume.png"
+      ]
+    },
+    {
+      "id": "3a3fa420-1666-482d-b2c5-36bd06d091ea",
+      "kind": "updated",
+      "entity": "doc:eino-checkpoint",
+      "title": "Eino Checkpoint 的保存与恢复",
+      "time": "2026-10-19T12:24:29.239Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "eino-checkpoint"
+    },
+    {
+      "id": "99bed24d-33cc-481f-a239-9216932a9757",
+      "kind": "created",
+      "entity": "doc:redis-cluster-routing-interview",
+      "title": "Redis Cluster 如何路由请求，MOVED 和 ASK 有什么区别？",
+      "time": "2026-10-19T12:28:01.239Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-cluster-routing-interview"
+    },
+    {
+      "id": "4d682a60-46d4-4efb-bb07-3ae254a7490d",
+      "kind": "updated",
+      "entity": "doc:redis-interview-index",
+      "title": "Redis 面试题",
+      "time": "2026-10-19T12:28:01.239Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-interview-index"
+    },
+    {
+      "id": "d3e86d4e-cecd-4a65-87c1-1c9d77c0ca49",
+      "kind": "state-changed",
+      "entity": "doc:eino-checkpoint",
+      "title": "Eino Checkpoint 的保存与恢复",
+      "time": "2026-10-19T12:28:06.558Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "eino-checkpoint",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "3090a5a3-986f-4c7a-b248-a779786b6b65",
+      "kind": "updated",
+      "entity": "doc:eino-checkpoint",
+      "title": "Eino Checkpoint 的保存与恢复",
+      "time": "2026-10-19T12:28:32.563Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "eino-checkpoint"
+    },
+    {
+      "id": "246d33b0-edd3-41ca-805e-49abf0d0fb25",
+      "kind": "created",
+      "entity": "doc:redis-cluster-failover-interview",
+      "title": "Redis Cluster 模式下，主从切换的流程是怎么样的？",
+      "time": "2026-10-19T12:30:16.578Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-cluster-failover-interview"
+    },
+    {
+      "id": "476e9b60-0faf-44ac-a93a-673c899aea90",
+      "kind": "updated",
+      "entity": "doc:redis-cluster-interview",
+      "title": "介绍一下 Redis 的集群模式？",
+      "time": "2026-10-19T12:30:16.578Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-cluster-interview"
+    },
+    {
+      "id": "7c5ddb04-faf3-4076-84df-a7e636f0879e",
+      "kind": "updated",
+      "entity": "doc:redis-interview-index",
+      "title": "Redis 面试题",
+      "time": "2026-10-19T12:30:16.578Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-interview-index"
+    },
+    {
+      "id": "4a7f7039-34ad-4156-952d-5ea605cc91fb",
+      "kind": "created",
+      "entity": "doc:redis-sentinel-failover-interview",
+      "title": "Redis 主从加哨兵模式下，主从切换的流程是怎么样的？",
+      "time": "2026-10-19T12:30:16.578Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-sentinel-failover-interview"
+    },
+    {
+      "id": "5dd21567-7d1d-47ad-b193-f1b55849d25c",
+      "kind": "updated",
+      "entity": "doc:redis-cluster-routing-interview",
+      "title": "Redis Cluster 如何路由请求，MOVED 和 ASK 有什么区别？",
+      "time": "2026-10-19T12:32:32.577Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-cluster-routing-interview"
+    },
+    {
+      "id": "52d84be4-93e5-4949-9f72-4b73003dd6a3",
+      "kind": "state-changed",
+      "entity": "doc:eino-checkpoint",
+      "title": "Eino Checkpoint 的保存与恢复",
+      "time": "2026-10-19T12:34:02.585Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "eino-checkpoint",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "575bafde-8ef7-47e3-a74d-0b07f4111944",
+      "kind": "state-changed",
+      "entity": "doc:eino-checkpoint",
+      "title": "Eino Checkpoint 的保存与恢复",
+      "time": "2026-10-19T12:34:03.327Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "eino-checkpoint",
+      "from": "organized",
+      "to": "pending"
+    },
+    {
+      "id": "4f84fa05-57ee-42e4-9b09-0c700e92631a",
+      "kind": "state-changed",
+      "entity": "doc:redis-cluster-routing-interview",
+      "title": "Redis Cluster 如何路由请求，MOVED 和 ASK 有什么区别？",
+      "time": "2026-10-19T12:35:24.290Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-cluster-routing-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "67e3ff76-f585-4021-a4d7-4f2f3c5eb12d",
+      "kind": "state-changed",
+      "entity": "doc:redis-cluster-routing-interview",
+      "title": "Redis Cluster 如何路由请求，MOVED 和 ASK 有什么区别？",
+      "time": "2026-10-19T12:35:24.729Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-cluster-routing-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "77bddbf5-ecff-4809-9487-d2b2e4eb92fa",
+      "kind": "updated",
+      "entity": "doc:redis-cluster-failover-interview",
+      "title": "Redis Cluster 模式下，主从切换的流程是怎么样的？",
+      "time": "2026-10-19T12:36:52.578Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-cluster-failover-interview"
+    },
+    {
+      "id": "617b1b70-7c94-4ac8-9d39-307fb900da04",
+      "kind": "updated",
+      "entity": "doc:redis-sentinel-failover-interview",
+      "title": "Redis 主从加哨兵模式下，主从切换的流程是怎么样的？",
+      "time": "2026-10-19T12:36:52.578Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-sentinel-failover-interview"
+    },
+    {
+      "id": "bacf93e7-797b-43bd-b1a6-f886d8518e3c",
+      "kind": "state-changed",
+      "entity": "doc:agent-checkpoint-runtime",
+      "title": "单 Agent Loop 的 Checkpoint",
+      "time": "2026-10-19T12:38:56.578Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-runtime",
+      "from": "organized",
+      "to": "reading"
+    },
+    {
+      "id": "aa622d43-5c66-4497-9669-3badc23232d2",
+      "kind": "updated",
+      "entity": "doc:agent-checkpoint-runtime",
+      "title": "单 Agent Loop 的 Checkpoint",
+      "time": "2026-10-19T12:38:56.578Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-runtime"
+    },
+    {
+      "id": "7dc73851-541a-46eb-b71d-1864647123b6",
+      "kind": "image-created",
+      "entity": "image:assets/agent-loop-checkpoint-cursor",
+      "title": "agent-loop-checkpoint-cursor",
+      "time": "2026-10-19T12:39:40.428Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "files": [
+        "assets/agent-loop-checkpoint-cursor.png"
+      ]
+    },
+    {
+      "id": "76dd3f35-0f9c-4fbd-b91b-3a66e306073d",
+      "kind": "updated",
+      "entity": "doc:agent-checkpoint-recovery",
+      "title": "Agent 的中断恢复机制",
+      "time": "2026-10-19T12:39:56.570Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-recovery"
+    },
+    {
+      "id": "ffa3a66e-eaf8-46a1-9227-59649a3a502e",
+      "kind": "created",
+      "entity": "doc:quorum",
+      "title": "Quorum（法定人数）",
+      "time": "2026-10-19T12:40:08.566Z",
+      "collections": [
+        "glossary"
+      ],
+      "source": "observed",
+      "docId": "quorum"
+    },
+    {
+      "id": "95479a21-8d6c-4eab-bc14-4de670b69ff1",
+      "kind": "updated",
+      "entity": "doc:redis-cluster-failover-interview",
+      "title": "Redis Cluster 模式下，主从切换的流程是怎么样的？",
+      "time": "2026-10-19T12:40:08.566Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-cluster-failover-interview"
+    },
+    {
+      "id": "c696052f-25b0-44a6-a2cd-c9e5209e0ba1",
+      "kind": "updated",
+      "entity": "doc:redis-sentinel-failover-interview",
+      "title": "Redis 主从加哨兵模式下，主从切换的流程是怎么样的？",
+      "time": "2026-10-19T12:40:08.566Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-sentinel-failover-interview"
+    },
+    {
+      "id": "f92a3f85-476a-4e3f-b641-7de3e57f6457",
+      "kind": "created",
+      "entity": "doc:quorum-sources",
+      "title": "Quorum 与多数派：官方资料导读",
+      "time": "2026-10-19T12:40:08.566Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "quorum-sources"
+    },
+    {
+      "id": "d794d6fd-5178-4931-97ca-d1523100ad3b",
+      "kind": "state-changed",
+      "entity": "doc:redis-sentinel-failover-interview",
+      "title": "Redis 主从加哨兵模式下，主从切换的流程是怎么样的？",
+      "time": "2026-10-19T12:44:33.686Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-sentinel-failover-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "5d5d1a3a-5886-4764-a027-c553fcc4bdc3",
+      "kind": "updated",
+      "entity": "doc:agent-checkpoint-runtime",
+      "title": "单 Agent Loop 的 Checkpoint",
+      "time": "2026-10-19T12:49:24.325Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-runtime"
+    },
+    {
+      "id": "24b1dffe-e11d-458b-9a87-3e5c2e4d19ab",
+      "kind": "updated",
+      "entity": "doc:redis-sentinel-failover-interview",
+      "title": "Redis 主从加哨兵模式下，主从切换的流程是怎么样的？",
+      "time": "2026-10-19T12:55:40.196Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-sentinel-failover-interview"
+    },
+    {
+      "id": "341a08f2-7c59-4558-8b49-60f19e5130f3",
+      "kind": "updated",
+      "entity": "doc:redis-sentinel-failover-interview",
+      "title": "Redis 主从加哨兵模式下，主从切换的流程是怎么样的？",
+      "time": "2026-10-19T12:56:36.186Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-sentinel-failover-interview"
+    },
+    {
+      "id": "2eec57c9-af17-460f-8d10-818626b6a2b4",
+      "kind": "updated",
+      "entity": "doc:redis-sentinel-failover-interview",
+      "title": "Redis 主从加哨兵模式下，主从切换的流程是怎么样的？",
+      "time": "2026-10-19T12:57:28.192Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-sentinel-failover-interview"
+    },
+    {
+      "id": "6e9581e5-e117-4382-84be-f7b55ca11e9f",
+      "kind": "updated",
+      "entity": "doc:redis-sentinel-failover-interview",
+      "title": "Redis 主从加哨兵模式下，主从切换的流程是怎么样的？",
+      "time": "2026-10-19T12:58:20.233Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-sentinel-failover-interview"
+    },
+    {
+      "id": "df7385d2-b62f-4964-9d99-5cb632bd6ac4",
+      "kind": "updated",
+      "entity": "doc:agent-checkpoint-runtime",
+      "title": "单 Agent Loop 的 Checkpoint",
+      "time": "2026-10-19T12:59:52.188Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-runtime"
+    },
+    {
+      "id": "92e77caa-d5a0-4d3f-977d-e2684506860b",
+      "kind": "updated",
+      "entity": "doc:agent-checkpoint-runtime",
+      "title": "单 Agent Loop 的 Checkpoint",
+      "time": "2026-10-19T13:00:00.183Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-runtime"
+    },
+    {
+      "id": "286b6d0f-0f6b-4917-9fc9-8c90252459b1",
+      "kind": "updated",
+      "entity": "doc:agent-checkpoint-runtime",
+      "title": "单 Agent Loop 的 Checkpoint",
+      "time": "2026-10-19T13:01:32.184Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-runtime"
+    },
+    {
+      "id": "21c4d514-f277-4bde-8fd1-363976e296ba",
+      "kind": "updated",
+      "entity": "doc:agent-checkpoint-runtime",
+      "title": "单 Agent Loop 的 Checkpoint",
+      "time": "2026-10-19T13:03:32.229Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-runtime"
+    },
+    {
+      "id": "b1164175-32e8-42be-b402-e661d353d1cf",
+      "kind": "image-created",
+      "entity": "image:assets/agent-loop-checkpoint-overview",
+      "title": "agent-loop-checkpoint-overview",
+      "time": "2026-10-19T13:04:16.199Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "files": [
+        "assets/agent-loop-checkpoint-overview.png"
+      ]
+    },
+    {
+      "id": "2e8c6f66-571f-496d-9abd-d6c0fa11b3b1",
+      "kind": "updated",
+      "entity": "doc:agent-checkpoint-runtime",
+      "title": "单 Agent Loop 的 Checkpoint",
+      "time": "2026-10-19T13:05:21.174Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-runtime"
+    },
+    {
+      "id": "c32ff927-d50d-47bf-8d8c-4f92ada77d67",
+      "kind": "updated",
+      "entity": "doc:redis-interview-index",
+      "title": "Redis 面试题",
+      "time": "2026-10-19T13:05:52.228Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-interview-index"
+    },
+    {
+      "id": "922ebd23-ea0e-4c50-baeb-9d3d0d627620",
+      "kind": "created",
+      "entity": "doc:redis-replica-promotion-interview",
+      "title": "Redis 哨兵如何选择要提升为主节点的从节点？",
+      "time": "2026-10-19T13:05:52.228Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-replica-promotion-interview"
+    },
+    {
+      "id": "62743929-daba-4d19-847c-0e3c4d37c5ba",
+      "kind": "updated",
+      "entity": "doc:redis-sentinel-failover-interview",
+      "title": "Redis 主从加哨兵模式下，主从切换的流程是怎么样的？",
+      "time": "2026-10-19T13:05:52.228Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-sentinel-failover-interview"
+    },
+    {
+      "id": "b67c6565-938d-48fb-ae3f-9695d4cbeb99",
+      "kind": "state-changed",
+      "entity": "doc:redis-replica-promotion-interview",
+      "title": "Redis 哨兵如何选择要提升为主节点的从节点？",
+      "time": "2026-10-19T13:08:39.186Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-replica-promotion-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "96ede891-a321-43bc-a0ae-8bb6a62bc07f",
+      "kind": "updated",
+      "entity": "doc:agent-checkpoint-runtime",
+      "title": "单 Agent Loop 的 Checkpoint",
+      "time": "2026-10-19T13:09:56.214Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-runtime"
+    },
+    {
+      "id": "ccd8afd4-4002-4a74-8e09-a1e7b117df8d",
+      "kind": "updated",
+      "entity": "doc:redis-replica-promotion-interview",
+      "title": "Redis 哨兵如何选择要提升为主节点的从节点？",
+      "time": "2026-10-19T13:11:57.030Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-replica-promotion-interview"
+    },
+    {
+      "id": "6c7418a7-e263-4b88-888a-f5961d184a1f",
+      "kind": "created",
+      "entity": "doc:redis-replica-promotion-sources",
+      "title": "Redis 哨兵选择新主节点的规则导读",
+      "time": "2026-10-19T13:11:57.030Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "redis-replica-promotion-sources"
+    },
+    {
+      "id": "f1a2c70b-c268-42d3-9b49-1f8d21e2bc9c",
+      "kind": "state-changed",
+      "entity": "doc:redis-replica-promotion-interview",
+      "title": "Redis 哨兵如何选择要提升为主节点的从节点？",
+      "time": "2026-10-19T13:12:32.428Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-replica-promotion-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "a41656b5-e85f-4062-a3b3-1e84e922b52b",
+      "kind": "state-changed",
+      "entity": "doc:redis-replica-promotion-interview",
+      "title": "Redis 哨兵如何选择要提升为主节点的从节点？",
+      "time": "2026-10-19T13:12:33.137Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-replica-promotion-interview",
+      "from": "organized",
+      "to": "pending"
+    },
+    {
+      "id": "d4e5960f-16ea-4cc5-a7dd-e74f9d965ce8",
+      "kind": "state-changed",
+      "entity": "doc:redis-replica-promotion-interview",
+      "title": "Redis 哨兵如何选择要提升为主节点的从节点？",
+      "time": "2026-10-19T13:12:33.697Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-replica-promotion-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "ffdf05e9-6d61-446f-b343-df37189b1357",
+      "kind": "state-changed",
+      "entity": "doc:redis-replica-promotion-interview",
+      "title": "Redis 哨兵如何选择要提升为主节点的从节点？",
+      "time": "2026-10-19T13:12:34.342Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-replica-promotion-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "9d8f4862-1134-4ee2-9f34-06f28d1bfce1",
+      "kind": "state-changed",
+      "entity": "doc:redis-sentinel-failover-interview",
+      "title": "Redis 主从加哨兵模式下，主从切换的流程是怎么样的？",
+      "time": "2026-10-19T13:12:42.117Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-sentinel-failover-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "2d375a62-529a-4fec-b85a-57d95771a771",
+      "kind": "updated",
+      "entity": "doc:agent-checkpoint-runtime",
+      "title": "单 Agent Loop 的 Checkpoint",
+      "time": "2026-10-19T13:13:04.204Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-runtime"
+    },
+    {
+      "id": "6c08c60d-4906-4b32-bf0c-3d61dad92dc8",
+      "kind": "state-changed",
+      "entity": "doc:agent-checkpoint-runtime",
+      "title": "单 Agent Loop 的 Checkpoint",
+      "time": "2026-10-19T13:18:12.737Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-runtime",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "fea4639a-69cf-4a01-8a22-d3c0238544f2",
+      "kind": "created",
+      "entity": "doc:agent-checkpoint-nesting",
+      "title": "嵌套 Agent 的 Checkpoint",
+      "time": "2026-10-19T13:24:20.205Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-nesting"
+    },
+    {
+      "id": "7d0c2a67-5418-46ee-a9de-14643f624e2c",
+      "kind": "updated",
+      "entity": "doc:agent-checkpoint-recovery",
+      "title": "Agent 的中断恢复机制",
+      "time": "2026-10-19T13:24:20.205Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-recovery"
+    },
+    {
+      "id": "2d8c32e5-6838-4e7c-8f46-4e5f625101f0",
+      "kind": "updated",
+      "entity": "doc:eino-checkpoints",
+      "title": "Eino 的检查点与中断恢复",
+      "time": "2026-10-19T13:24:20.205Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "eino-checkpoints"
+    },
+    {
+      "id": "f881a77c-0da2-49b3-9250-54fafa55cad9",
+      "kind": "updated",
+      "entity": "doc:agent-checkpoint-nesting",
+      "title": "嵌套 Agent 的 Checkpoint",
+      "time": "2026-10-19T13:27:50.743Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-nesting"
+    },
+    {
+      "id": "cb69e7a4-b858-4ab7-b771-b47031a9a700",
+      "kind": "image-created",
+      "entity": "image:assets/agent-nested-checkpoint",
+      "title": "agent-nested-checkpoint",
+      "time": "2026-10-19T13:27:50.743Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "files": [
+        "assets/agent-nested-checkpoint.png"
+      ]
+    },
+    {
+      "id": "15266417-f4ce-40f9-8190-60aa92055fe0",
+      "kind": "updated",
+      "entity": "doc:agent-checkpoint-nesting",
+      "title": "嵌套 Agent 的 Checkpoint",
+      "time": "2026-10-19T13:38:31.948Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-nesting"
+    },
+    {
+      "id": "338cc5bc-b159-4655-8b21-932b91c33374",
+      "kind": "state-changed",
+      "entity": "doc:agent-checkpoint-recovery",
+      "title": "Agent 的 Checkpoint",
+      "time": "2026-10-19T13:38:31.948Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-recovery",
+      "from": "organized",
+      "to": "reading"
+    },
+    {
+      "id": "1db2d65f-80b4-4e0e-9a7b-5cf559f2baf3",
+      "kind": "updated",
+      "entity": "doc:agent-checkpoint-recovery",
+      "title": "Agent 的 Checkpoint",
+      "time": "2026-10-19T13:38:31.948Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-recovery"
+    },
+    {
+      "id": "46f1273e-a288-41bf-afb6-c8fcbb54d4c7",
+      "kind": "state-changed",
+      "entity": "doc:agent-checkpoint-runtime",
+      "title": "单 Agent Loop 的 Checkpoint",
+      "time": "2026-10-19T13:38:31.948Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-runtime",
+      "from": "organized",
+      "to": "reading"
+    },
+    {
+      "id": "56c64e86-ce47-4a1b-b01d-132d5cc4b253",
+      "kind": "updated",
+      "entity": "doc:agent-checkpoint-runtime",
+      "title": "单 Agent Loop 的 Checkpoint",
+      "time": "2026-10-19T13:38:31.948Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-runtime"
+    },
+    {
+      "id": "cc4ff4d9-a1c1-4008-8f94-4c1d09a75a4d",
+      "kind": "updated",
+      "entity": "doc:agent-checkpoint-recovery",
+      "title": "Agent 的 Checkpoint",
+      "time": "2026-10-19T13:42:53.255Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-recovery"
+    },
+    {
+      "id": "13409281-2f52-4c6a-903f-34a962d1d503",
+      "kind": "created",
+      "entity": "doc:agent-checkpoint-scheduling",
+      "title": "复杂调度的 Checkpoint",
+      "time": "2026-10-19T13:42:53.255Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-scheduling"
+    },
+    {
+      "id": "9c0fb5e5-b01e-4173-805b-0135b1dc0c9f",
+      "kind": "updated",
+      "entity": "doc:eino-checkpoints",
+      "title": "Eino 的检查点与中断恢复",
+      "time": "2026-10-19T13:42:53.255Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "eino-checkpoints"
+    },
+    {
+      "id": "ac2ccd9b-fb4e-49bf-aacb-5176cf2c2cb2",
+      "kind": "updated",
+      "entity": "doc:kafka-interview-index",
+      "title": "Kafka 面试题",
+      "time": "2026-10-19T13:43:01.224Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "kafka-interview-index"
+    },
+    {
+      "id": "a38edaf2-e3ce-4c2d-8978-2aad14c4f96c",
+      "kind": "created",
+      "entity": "doc:kafka-offset-interview",
+      "title": "Kafka 消费者如何通过 Offset 拉取消息？",
+      "time": "2026-10-19T13:43:01.224Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "kafka-offset-interview"
+    },
+    {
+      "id": "24cf1fda-7892-4d3e-937b-580d6b2aadc9",
+      "kind": "created",
+      "entity": "doc:kafka-offset-sources",
+      "title": "Kafka 消费位置、Offset 提交与恢复导读",
+      "time": "2026-10-19T13:43:01.224Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "kafka-offset-sources"
+    },
+    {
+      "id": "534fbd78-c498-4945-a1c2-b5c8c7fc9fbc",
+      "kind": "updated",
+      "entity": "doc:kafka-offset-interview",
+      "title": "Kafka 消费者如何通过 Offset 拉取消息？",
+      "time": "2026-10-19T13:43:41.236Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "kafka-offset-interview"
+    },
+    {
+      "id": "71702ef8-4af6-4d37-bb61-c16db3a80e48",
+      "kind": "updated",
+      "entity": "doc:kafka-offset-sources",
+      "title": "Kafka 消费位置、Offset 提交与恢复导读",
+      "time": "2026-10-19T13:43:41.236Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "kafka-offset-sources"
+    },
+    {
+      "id": "8b9a2232-0f59-4414-83d3-601bc8a74654",
+      "kind": "updated",
+      "entity": "doc:kafka-offset-interview",
+      "title": "Kafka 消费者如何通过 Offset 拉取消息？",
+      "time": "2026-10-19T13:46:44.464Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "kafka-offset-interview"
+    },
+    {
+      "id": "415e4e9e-11e0-422b-95af-e6e545815ac3",
+      "kind": "updated",
+      "entity": "doc:kafka-offset-sources",
+      "title": "Kafka 消费位置、Offset 提交与恢复导读",
+      "time": "2026-10-19T13:46:44.464Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "kafka-offset-sources"
+    },
+    {
+      "id": "3d37825d-bb62-4918-a92b-7aa8bf0f6f69",
+      "kind": "state-changed",
+      "entity": "doc:agent-checkpoint-runtime",
+      "title": "单 Agent Loop 的 Checkpoint",
+      "time": "2026-10-19T13:46:58.128Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-runtime",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "712475ec-8c4d-4958-bb1f-00095dcecbdd",
+      "kind": "state-changed",
+      "entity": "doc:agent-checkpoint-nesting",
+      "title": "嵌套 Agent 的 Checkpoint",
+      "time": "2026-10-19T13:48:07.401Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-nesting",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "f62bd5f8-1d2d-457e-8153-61f06a77c891",
+      "kind": "state-changed",
+      "entity": "doc:agent-checkpoint-nesting",
+      "title": "嵌套 Agent 的 Checkpoint",
+      "time": "2026-10-19T13:48:08.054Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-nesting",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "5e7d4eee-0480-43e6-9ac4-cd2613694906",
+      "kind": "state-changed",
+      "entity": "doc:agent-checkpoint-scheduling",
+      "title": "复杂调度的 Checkpoint",
+      "time": "2026-10-19T13:48:27.855Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-scheduling",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "f1e12e02-de61-42ea-99c8-f08de840b385",
+      "kind": "state-changed",
+      "entity": "doc:agent-checkpoint-scheduling",
+      "title": "复杂调度的 Checkpoint",
+      "time": "2026-10-19T13:48:28.555Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-scheduling",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "4744cff0-91d5-4290-9272-476225e74a10",
+      "kind": "state-changed",
+      "entity": "doc:go-gmp-interview",
+      "title": "聊一聊 Go 的 GMP 调度模型",
+      "time": "2026-10-19T13:49:19.782Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-gmp-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "0d541200-bfec-4b37-973a-3d5a42f92e00",
+      "kind": "state-changed",
+      "entity": "doc:kafka-offset-interview",
+      "title": "Kafka 消费者如何通过 Offset 拉取消息？",
+      "time": "2026-10-19T13:50:00.049Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "kafka-offset-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "12001229-cd6d-49e7-94b8-5190f0742940",
+      "kind": "state-changed",
+      "entity": "doc:kafka-offset-interview",
+      "title": "Kafka 消费者如何通过 Offset 拉取消息？",
+      "time": "2026-10-19T13:50:00.744Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "kafka-offset-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "968588db-b6e8-4b40-9e34-e24642ea10a1",
+      "kind": "state-changed",
+      "entity": "doc:agent-checkpoint-recovery",
+      "title": "Agent 的 Checkpoint",
+      "time": "2026-10-19T13:57:18.930Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-recovery",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "8940a30c-1b8f-4c15-9689-4e4e76856013",
+      "kind": "updated",
+      "entity": "doc:agent-checkpoint-interview",
+      "title": "Agent 的 Checkpoint 怎么实现？",
+      "time": "2026-10-19T14:09:25.374Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-interview"
+    },
+    {
+      "id": "ce832a63-105f-4c7a-b38f-dcc1bae91d67",
+      "kind": "state-changed",
+      "entity": "doc:agent-checkpoint-interview",
+      "title": "Agent 的 Checkpoint 怎么实现？",
+      "time": "2026-10-19T14:09:36.046Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-interview",
       "from": "reading",
       "to": "organized"
     }

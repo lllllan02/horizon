@@ -1,0 +1,48 @@
+{
+  "description": "自拟教学数据，非框架内部格式。单 Agent Loop，工具按模型返回顺序串行执行。states 代表由上下文管理模块另外持久化的数据；每份 checkpoint 只保存阶段、必要的工具游标和状态引用。",
+  "states": {
+    "state-1": {
+      "messages": ["用户：读取文档 A 和 B，然后总结。"],
+      "tool_calls": []
+    },
+    "state-2": {
+      "messages": ["用户：读取文档 A 和 B，然后总结。", "模型：已确定两个工具请求，依次读取 A、B。"],
+      "tool_calls": [
+        {"id": "call-A", "name": "read_doc", "arguments": "{\"document\":\"A\"}"},
+        {"id": "call-B", "name": "read_doc", "arguments": "{\"document\":\"B\"}"}
+      ]
+    },
+    "state-3": {
+      "messages": ["用户：读取文档 A 和 B，然后总结。", "模型：已确定两个工具请求，依次读取 A、B。", "工具结果 call-A：文档 A 的内容。"],
+      "tool_calls": [
+        {"id": "call-A", "name": "read_doc", "arguments": "{\"document\":\"A\"}"},
+        {"id": "call-B", "name": "read_doc", "arguments": "{\"document\":\"B\"}"}
+      ]
+    },
+    "state-4": {
+      "messages": ["用户：读取文档 A 和 B，然后总结。", "模型：已确定两个工具请求，依次读取 A、B。", "工具结果 call-A：文档 A 的内容。", "工具结果 call-B：文档 B 的内容。"],
+      "tool_calls": [
+        {"id": "call-A", "name": "read_doc", "arguments": "{\"document\":\"A\"}"},
+        {"id": "call-B", "name": "read_doc", "arguments": "{\"document\":\"B\"}"}
+      ]
+    }
+  },
+  "snapshots": [
+    {
+      "situation": "用户输入已保存，尚未调用模型",
+      "checkpoint": {"stage": "model", "state_ref": "state-1"}
+    },
+    {
+      "situation": "模型响应已保存，本批两个工具均未执行",
+      "checkpoint": {"stage": "tools", "next_tool": 0, "state_ref": "state-2"}
+    },
+    {
+      "situation": "A 的工具结果已保存，B 尚未执行",
+      "checkpoint": {"stage": "tools", "next_tool": 1, "state_ref": "state-3"}
+    },
+    {
+      "situation": "本批两个结果均已保存，下一步再次调用模型",
+      "checkpoint": {"stage": "model", "state_ref": "state-4"}
+    }
+  ]
+}

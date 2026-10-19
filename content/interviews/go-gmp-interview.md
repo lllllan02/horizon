@@ -4,10 +4,10 @@ aliases: ["GMP", "Go 调度模型", "Goroutine 调度"]
 category: "Go"
 parent: go-interview-hub
 tags: ["面试", "Go", "调度", "GMP"]
-learning_status: reading
+learning_status: organized
 created_at: "2026-10-19T17:31:03+08:00"
 updated_at: "2026-10-19T17:31:03+08:00"
-learning_status_changed_at: "2026-10-19T17:34:20.118+08:00"
+learning_status_changed_at: "2026-10-19T21:49:19.755+08:00"
 ---
 
 [[go-gmp-sources|GMP]] 是 Go 运行时的调度模型，用来把大量 goroutine 调度到操作系统线程上执行，复用线程，并利用多核并行处理任务。

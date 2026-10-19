@@ -1,97 +1,12 @@
 {
-  "_example": "自拟运行时 Checkpoint，非任何框架内部格式。场景：root → researcher → reader 三层调用，最内层模型已返回两个工具请求，一个结果已保存，另一个尚未执行。上下文和任务状态由其他模块持久化；此处只关联固定版本。所有引用与 ID 均为教学数据。",
-  "schema_version": 1,
-  "definition_version": "research-agent-v1",
-  "run_id": "run-001",
-  "checkpoint_id": "cp-003",
-  "revision": 3,
-  "saved_at": "2026-10-19T19:38:58+08:00",
-  "task_state_ref": {
-    "snapshot_id": "task-state-007",
-    "task_id": "task-001"
-  },
-  "execution_frames": [
-    {
-      "agent_run_id": "root-001",
-      "agent_name": "coordinator",
-      "status": "waiting_child",
-      "child_agent_run_id": "researcher-001",
-      "resume_after_child": {
-        "node_id": "collect_research",
-        "phase": "consume_child_result"
-      },
-      "context_ref": {
-        "snapshot_id": "context-root-v3",
-        "through_event_id": "root-event-008"
-      }
-    },
-    {
-      "agent_run_id": "researcher-001",
-      "agent_name": "researcher",
-      "parent_agent_run_id": "root-001",
-      "status": "waiting_child",
-      "child_agent_run_id": "reader-001",
-      "resume_after_child": {
-        "node_id": "summarize_sources",
-        "phase": "consume_child_result"
-      },
-      "context_ref": {
-        "snapshot_id": "context-researcher-v2",
-        "through_event_id": "researcher-event-005"
-      }
-    },
-    {
-      "agent_run_id": "reader-001",
-      "agent_name": "source_reader",
-      "parent_agent_run_id": "researcher-001",
-      "status": "runnable",
-      "node_id": "agent_loop",
-      "turn_id": "reader-turn-002",
-      "phase": "execute_tools",
-      "model_response_ref": "history://reader-001/event-010",
-      "context_ref": {
-        "snapshot_id": "context-reader-v4",
-        "through_event_id": "event-011"
-      },
-      "tool_calls": [
-        {
-          "call_id": "call-read-001",
-          "status": "succeeded",
-          "request_ref": "history://reader-001/event-010/tool-calls/call-read-001",
-          "result_ref": "history://reader-001/event-011",
-          "attempts": 1
-        },
-        {
-          "call_id": "call-read-002",
-          "status": "not_started",
-          "request_ref": "history://reader-001/event-010/tool-calls/call-read-002",
-          "attempts": 0
-        }
-      ],
-      "resume_after_tools": {
-        "node_id": "agent_loop",
-        "phase": "call_model"
-      }
-    }
-  ],
-  "scheduler": {
-    "runnable_agent_run_ids": [
-      "reader-001"
+  "next": {
+    "agent_path": [
+      "root",
+      "researcher",
+      "reader"
     ],
-    "next_action": {
-      "kind": "dispatch_tool",
-      "agent_run_id": "reader-001",
-      "call_id": "call-read-002"
-    }
+    "step": "execute_tool",
+    "tool_index": 1
   },
-  "restore_notes": [
-    "任务目标、约束、自然语言进展由 task_state_ref 定位，不在 Checkpoint 内重复维护。",
-    "每层 context_ref 固定历史与上下文的版本；model_response_ref 和 request_ref 定位原始工具名、确定参数和调用 ID，result_ref 定位已保存结果。",
-    "恢复时 root 和 researcher 继续等待，不重新发起子 Agent；reader 复用 call-read-001 的结果，先执行 call-read-002，再进入 call_model。",
-    "子 Agent 完成后，将其结果提交给父 Agent；父 Agent 按 resume_after_child 继续。更复杂的并行任务需要分别保存分支与汇合状态。",
-    "被引用的记录须先持久化并保持可访问，再提交引用它们的执行快照；读取时核对版本，不能无条件取各模块的最新值。",
-    "若调用曾发出但结果未保存，应标记 outcome_unknown，并通过稳定操作 ID 查询或按远端幂等约定重试；不能把它当成 not_started。",
-    "本样例不处于审批或取消状态；实际系统仍需恢复或重新校验相应控制状态，具体数据可由其他模块保存。",
-    "这些逻辑位置不保存进程指令地址、网络连接或任意局部变量；恢复节点时可能从节点入口重跑。"
-  ]
+  "state_ref": "snapshot-12"
 }

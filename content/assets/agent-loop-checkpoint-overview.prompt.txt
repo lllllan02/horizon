@@ -1,0 +1,30 @@
+Use case: infographic-diagram.
+Asset type: 中文知识笔记教学配图。
+Primary request: 重设计现有 Agent Checkpoint 图，补齐 stage 的含义，并保留 next_tool 对具体工具请求的定位作用。一张图读懂：stage 决定执行哪个阶段，next_tool 只在工具阶段决定执行第几个请求。
+Reference images:
+- Image 1 / agent-loop-checkpoint-cursor.png：内容参考与重设计对象。保留串行工具列表 A、B 和游标从 0 推进到 1 的解释作用，但重新布局，不要求原样拼贴。
+- Image 2 / diagram-style-reference.png：仅风格参考，迁移白底、自然轮廓、少量淡彩、目录与票据造型，不复制业务内容。
+Style: 克制二维技术编辑插画，清晰规整中文、细灰蓝轮廓，白底，小面积低饱和蓝与橙，适量文件折角/列表页签/调用入口造型。不要机器人、发光大脑、3D平台、粗黑边、夸张标题、深色代码板。
+Palette: #374151 文字；#416788 和 #eaf0f7 用于模型与记录；#b66a43 和 #fbf0e6 用于工具执行与选中下标；done 用轻灰轮廓。
+Canvas target: 1600 × 1200 px, aspect 4:3. Intended display: 640px wide in article; key labels legible at that scale. 紧凑布局，最多两层，无大块空白，标题适中。
+Composition:
+顶部约55%解释 stage，为真实状态转换图：左边模型调用入口，右边工具调用入口，左下较小的结束标记。三个对象不同造型，字段直接贴在对象上。模型到工具的箭头从左向右；工具回模型走独立回环；模型到 done 是独立向下分支，不能画成工具后必然结束。
+底部约45%是工具阶段的局部展开，两个并排小快照，每个用一张带页签的本批 ToolCalls 列表。两份列表的顺序都固定：0 read_doc("A")、1 read_doc("B")。左边 next_tool: 0 指向 A；右边 next_tool: 1 指向 B，A 标记已完成。中间箭头标注「A 结果已保存」和「下标 +1」。不要附加大段解释。
+Exact text and relationships:
+小标题「stage：下一步进入哪里」
+模型对象：「stage: model」「调用模型」
+工具对象：「stage: tools」「调用工具」
+结束对象：「stage: done」「结束」
+模型 → 工具箭头：「工具请求已保存」「next_tool = 0」
+工具 → 模型回环箭头：「全部工具结果已保存」
+模型 → done 箭头：「最终回答已保存」
+上层旁边小字「两个执行阶段，done 为结束状态」。
+下层小标题「next_tool：工具阶段执行哪一项」
+两份列表标题均为「本批 ToolCalls」
+左记录「next_tool: 0」，左列表「0  read_doc("A")」「1  read_doc("B")」，只高亮 A。
+右记录「next_tool: 1」，右列表同上，只高亮 B；A 行灰色并标记「已完成」。
+连接左到右的箭头「A 结果已保存」「下标 +1」。
+下层底部仅短注「单 Agent · 工具串行执行 · 下标从 0 开始」。
+Semantic invariants:
+stage 字段代表恢复后下一步入口，不是保存工具名称。done 是终态不是第三种调用。工具阶段结束必须回模型，不要从 tools 画到 done。工具列表是模型这一批返回的调用请求，不是全部可用工具。next_tool 0 对应 A，1 对应 B。所有箭头条件基于结果已经保存，不暗示对调用中间位置的恢复。不要画 waiting/error/approval 等新阶段。
+Validation priorities: 两个分支加回环方向正确，stage三个取值拼写准确，next_tool0和1与选中行对应，正文显示640px可读，没有重叠与漏字。

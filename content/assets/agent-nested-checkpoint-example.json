@@ -1,0 +1,60 @@
+{
+  "checkpoint": {
+    "agent_key": "planner",
+    "stage": "tools",
+    "next_tool": 1,
+    "state_ref": "root",
+    "child": {
+      "agent_key": "researcher",
+      "stage": "tools",
+      "next_tool": 0,
+      "state_ref": "root/root-research"
+    }
+  },
+  "states": {
+    "root": {
+      "input": "整理资料",
+      "tool_calls": [
+        {
+          "id": "root-local",
+          "name": "read_doc",
+          "args": {
+            "document": "overview"
+          }
+        },
+        {
+          "id": "root-research",
+          "name": "delegate",
+          "args": {
+            "agent_key": "researcher",
+            "task": "研究 A，并审查 B"
+          }
+        }
+      ],
+      "results": {
+        "root-local": "文档 overview 的内容（先前已保存）"
+      }
+    },
+    "root/root-research": {
+      "input": "研究 A，并审查 B",
+      "tool_calls": [
+        {
+          "id": "research-read",
+          "name": "read_doc",
+          "args": {
+            "document": "A"
+          }
+        },
+        {
+          "id": "research-audit",
+          "name": "delegate",
+          "args": {
+            "agent_key": "auditor",
+            "task": "审查 B"
+          }
+        }
+      ],
+      "results": {}
+    }
+  }
+}

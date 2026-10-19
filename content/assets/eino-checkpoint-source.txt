@@ -1,0 +1,102 @@
+/*
+ * Copyright 2024 CloudWeGo Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+
+Eino v0.9.14 官方源码节选；保留原代码，非独立可编译程序。
+restoreTasks 的接收者 runner 来自 Graph Compile，inputs 等参数来自已解码检查点；返回的 tasks 交回 Graph 调度。
+
+
+文件：compose/checkpoint.go
+来源：https://github.com/cloudwego/eino/blob/v0.9.14/compose/checkpoint.go
+
+type checkpoint struct {
+	Channels       map[string]channel
+	Inputs         map[string] /*node key*/ any /*input*/
+	State          any
+	SkipPreHandler map[string]bool
+	RerunNodes     []string
+
+	SubGraphs map[string]*checkpoint
+
+	InterruptID2Addr  map[string]Address
+	InterruptID2State map[string]core.InterruptState
+}
+
+
+文件：compose/graph_run.go
+来源：https://github.com/cloudwego/eino/blob/v0.9.14/compose/graph_run.go
+
+func (r *runner) restoreTasks(
+	ctx context.Context,
+	inputs map[string]any,
+	skipPreHandler map[string]bool,
+	rerunNodes []string,
+	isStream bool,
+	optMap map[string][]any) ([]*task, error) {
+	ret := make([]*task, 0, len(inputs))
+	for _, key := range rerunNodes {
+		if _, hasInput := inputs[key]; hasInput {
+			continue
+		}
+
+		call, ok := r.chanSubscribeTo[key]
+		if !ok {
+			return nil, fmt.Errorf("channel[%s] from checkpoint is not registered", key)
+		}
+		if isStream {
+			inputs[key] = call.action.inputEmptyStream()
+		} else {
+			inputs[key] = call.action.inputZeroValue()
+		}
+	}
+	for key, input := range inputs {
+		call, ok := r.chanSubscribeTo[key]
+		if !ok {
+			return nil, fmt.Errorf("channel[%s] from checkpoint is not registered", key)
+		}
+
+		if call.action.nodeInfo != nil && call.action.nodeInfo.compileOption != nil {
+			// sub graph
+			ctx = forwardCheckPoint(ctx, key)
+		}
+
+		newTask := &task{
+			ctx:            AppendAddressSegment(ctx, AddressSegmentNode, key),
+			nodeKey:        key,
+			call:           call,
+			input:          input,
+			option:         nil,
+			skipPreHandler: skipPreHandler[key],
+		}
+		if opt, ok := optMap[key]; ok {
+			newTask.option = opt
+		}
+
+		ret = append(ret, newTask)
+	}
+	return ret, nil
+}
+
+
+文件：compose/tool_node.go
+来源：https://github.com/cloudwego/eino/blob/v0.9.14/compose/tool_node.go
+
+type toolsInterruptAndRerunState struct {
+	Input                 *schema.Message
+	ExecutedTools         map[string]string
+	ExecutedEnhancedTools map[string]*schema.ToolResult
+	RerunTools            []string
+}

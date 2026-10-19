@@ -4,10 +4,10 @@ aliases: ["面经网站", "面试题库", "社招面试资料"]
 category: "面试"
 tags: ["面试", "Go", "Agent", "RAG"]
 type: overview
-learning_status: reading
+learning_status: organized
 created_at: "2026-10-18T00:54:04+08:00"
 updated_at: "2026-10-19T19:42:43+08:00"
-learning_status_changed_at: "2026-10-19T19:42:43.000+08:00"
+learning_status_changed_at: "2026-10-19T20:20:37.699+08:00"
 ---
 
 面向 **Go 后端 + AI / Agent 应用开发社招**的资料目录。优先用按主题整理的网站与仓库建立题目储备，再用个人面经补充具体场景、追问和求职经验，避免依靠大量零散帖子拼出准备范围。
@@ -47,6 +47,6 @@ learning_status_changed_at: "2026-10-19T19:42:43.000+08:00"
 
 ## 个人面经补充
 
-[[interview-experiences|个人面经清单]]按 Go 后端、AI Agent 及交叉方向组织，保留原帖背景、考点和 Todo 整理状态，供后续分散、随机抽查。
+[[interview-experiences|个人面经清单]]逐篇列出原帖链接与整理状态，供逐一学习、整理。
 
 这批资料可以建立准备范围，尚不足以证明目标岗位已全面覆盖。后续补充以现有题库的缺口、目标 JD 和个人项目为依据；优先增加新的问题或追问，多个网站重复同一题不算新增覆盖。
