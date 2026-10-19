@@ -1,7 +1,7 @@
 ---
 title: "Agent 规则与 Skill 维护"
 created_at: "2026-10-16T20:03:35+08:00"
-updated_at: "2026-10-17T11:42:08+08:00"
+updated_at: "2026-10-19T19:38:06+08:00"
 category: "知识库管理"
 tags: ["Agent", "操作约束"]
 ---
@@ -47,6 +47,8 @@ tags: ["Agent", "操作约束"]
 - excalidraw-diagram 编排知识配图，按需用 Excalidraw 交付可编辑图，或配合 imagegen 生成插画式解释图；默认画风与图文分工由写作规则决定。
 
 本项目已适配的 Obsidian、Summarize、Excalidraw 和 Three.js 能力继续保留上游来源。经正文比较，Anthropic 的 [doc-coauthoring](https://github.com/anthropics/skills/tree/main/skills/doc-coauthoring) 侧重多阶段共同写作，不替换日常入库流程；Vercel 的 [web-design-guidelines](https://github.com/vercel-labs/agent-skills/tree/main/skills/web-design-guidelines) 用于补足界面审查，采用本地适配入口，不照搬英语文案惯例、框架假设或固定性能阈值。
+
+借鉴 Arpit Bhayani 的 [ape-help-me-understand](https://github.com/arpitbbhayani/ape-skills/blob/master/ape-help-me-understand/SKILL.md)（[MIT](https://github.com/arpitbbhayani/ape-skills/blob/master/LICENSE)）中的判断与证据梳理、摘要保真和类比边界方法，按项目需要改写：来源核对集中在知识库管理细则，教学解释与图文取舍集中在正文写法，summarize 和知识配图技能只编排执行。不引入其固定四段式、品牌文案、同目录另存规则或样式依赖。
 
 替换时保留有效本地适配与上游许可，比较触发边界和实际输出；先确认旧资源的调用者，再移除被替代内容并更新引用。新增 Skill 不要求添加无用途的 README、日志或模板。不要批量更新无关全局技能、安装 hooks 或启动后台任务。
 
