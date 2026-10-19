@@ -14,6 +14,8 @@ tags: ["Agent", "知识库", "操作约束", "链接维护"]
 
 ## 任务入口
 
+主会话承担主管职责。技术答疑、方案比较和文档实质写作默认先按 [[docs/knowledge-management#回答与写作的依据|依据要求]] 检索核对，并使用 [horizon-team](.agents/skills/horizon-team/SKILL.md) 优先安排研究员；复杂整理与开发再按需加入其他成员。项目维护以当前项目文件、实现和明确反馈为依据，新增技术事实再安排研究员。纯文案小改动、流程沟通和连续互动由主会话保持，已核实依据可复用。团队角色与配置入口见 [[docs/agent-rules#Agent 团队|Agent 团队]]，各任务仍按下表执行。
+
 | 当前任务 | 执行入口与判断依据 |
 | --- | --- |
 | 查询知识库 | [[docs/knowledge-management#检索与候选阅读\|检索细则]]；优先 `npm --silent --prefix apps/web run retrieve -- query <词...>`，异常或需要行号时用 `rg`。引用实际文件，区分库内结论与额外补充 |
@@ -23,7 +25,7 @@ tags: ["Agent", "知识库", "操作约束", "链接维护"]
 | 学习范围、问题与追问 | [tech-study-map](.agents/skills/tech-study-map/SKILL.md)；[[docs/knowledge-management#学习反馈与修订\|学习反馈]] |
 | 总结原文、生成知识配图 | [summarize](.agents/skills/summarize/SKILL.md)、[excalidraw-diagram](.agents/skills/excalidraw-diagram/SKILL.md)；输出保存与否沿用用户授权 |
 | 网页开发、视觉设计、界面审查 | [[apps/web/README\|实现与验证入口]]；按需使用 frontend-design、web-design-guidelines 或对应 Three.js Skill，能力分工见 [[docs/agent-rules#Skill 选用与替换\|Skill 选用]] |
-| 维护本文件、docs 或 Skills | [[docs/agent-rules\|规则维护细则]]；不启动知识笔记保存流程 |
+| 维护本文件、项目使用文档、Skills 或角色配置 | [[docs/agent-rules\|规则维护细则]]；按需交项目维护员，不启动知识笔记保存流程 |
 
 ## 保存与修改边界
 
@@ -49,6 +51,6 @@ tags: ["Agent", "知识库", "操作约束", "链接维护"]
 
 只检查改动及受影响范围：读回差异，按任务入口完成内容、属性、状态、链接与必要功能验证。知识正文按 [[docs/writing-style#阅读验收|阅读验收]] 检查，结构调整按 knowledge-maintain 检查，规则与 Skill 按 [[docs/agent-rules#规则验收|规则验收]] 检查；全库巡检须有对应请求。
 
-开发阶段已经通过的构建、单元测试与浏览器回归，不因「保存提交」重复执行。提交前核对工作区差异和受影响文件即可；只有改动尚未验证、涉及构建产物或可能波及其他范围时，才补跑对应命令，并说明依据。知识库改动涉及链接、状态或结构时运行一次巡检，其余按内容验收读回。
+保存提交只核对工作区差异和受影响文件，不运行构建、单元测试、浏览器回归或全库巡检。代码改动由开发阶段在修改完成时验证；未验证或仍有风险的事项在交付中说明，不在提交环节补跑。
 
 完成后简短报告实际文件、实质变化与未核实事项，不生成额外操作日志，不把格式或结构检查通过称为事实、行为或视觉效果已验证。

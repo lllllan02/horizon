@@ -1,7 +1,7 @@
 ---
 title: "Agent 规则与 Skill 维护"
 created_at: "2026-10-16T20:03:35+08:00"
-updated_at: "2026-10-19T19:38:06+08:00"
+updated_at: "2026-10-19T21:20:36+08:00"
 category: "知识库管理"
 tags: ["Agent", "操作约束"]
 ---
@@ -29,10 +29,33 @@ tags: ["Agent", "操作约束"]
 | docs/writing-style.md | 个人写作与展示偏好、学习编排和阅读验收 |
 | 本文件 | 规则归属、Skill 选用与验收 |
 | .agents/skills/*/SKILL.md | 有明确触发条件的操作流程及按需参考入口 |
+| .codex/agents/*.toml | 项目专用 Agent 的职责、工作边界与返回要求 |
 | Skill 的 references、scripts、assets | 条件性详解、可执行工具、交付用素材；不是另一套项目规范 |
 | README 与 apps/web/README | 项目使用和实现说明；不复制 Agent 流程或格式规范 |
 
 修改前重读当前文件，保留并行编辑。正文、规则与代码分别在所属位置修正；代码缺陷优先修实现，不用“以后注意”替代修复。不因维护规则扩大成知识库或代码全面改写。只有偏好而没有独立流程时，不新建 Skill。
+
+## Agent 团队
+
+团队的用途是让独立的资料核对、内容整理和审查各自保持聚焦，由主会话统一协调、对用户交付。角色配置长期保留，成员随任务启动；不维护另一套知识正文、学习状态或团队工作日志。角色拆分本身不保证正确性或提速，是否有价值要看实际交付与协调成本。
+
+| 角色 | 配置入口 | 主要交付 |
+| --- | --- | --- |
+| 主管（主会话） | [horizon-team](../.agents/skills/horizon-team/SKILL.md) | 范围、分工、问题处理与最终结果 |
+| 研究员 `horizon_researcher` | [角色配置](../.codex/agents/horizon-researcher.toml) | 带来源、适用条件及未决问题的证据 |
+| 知识编辑 `horizon_editor` | [角色配置](../.codex/agents/horizon-editor.toml) | 获准范围内的学习内容、知识结构与关系维护、验收结果 |
+| 项目维护员 `horizon_maintainer` | [角色配置](../.codex/agents/horizon-maintainer.toml) | 获准范围内的规则、使用文档、Skills 与角色配置维护及校验结果 |
+| 学习教练 `horizon_coach` | [角色配置](../.codex/agents/horizon-coach.toml) | 解释、问题或练习建议；连续对话通常由主会话承担 |
+| 审查员 `horizon_reviewer` | [角色配置](../.codex/agents/horizon-reviewer.toml) | 独立只读检查，返回有具体位置、依据及影响的问题，或明确检查范围内无发现 |
+| 开发者 `horizon_developer` | [角色配置](../.codex/agents/horizon-developer.toml) | 指定代码或实验的修改与验证结果 |
+
+知识编辑负责学习内容与知识结构，配图作为按需能力交给编辑或另行委派；项目维护员负责知识内容之外的 AGENTS.md、docs、README、项目 Skills 与角色配置，依据已有授权、当前实现与明确反馈维护。功能缺陷和实现变更交开发者，审查员保持独立只读，由主管协调修正。先复用已有 Skills，不为每个 Skill 新建成员，也不为每个角色另建 Skill。项目规则只在所属 docs 中维护，角色配置引用入口，调度、交接和审查流程只在 horizon-team 中维护。
+
+技术答疑、选型与文档实质写作默认先由研究员形成依据，主管复核后再回答或安排写回；已核实依据的复用与例外见[回答与写作的依据](knowledge-management.md#回答与写作的依据)，具体委派由 horizon-team 编排。项目维护先核对当前项目文件与实现，涉及新技术事实时再安排研究员。例如：解释一个新技术概念时先安排研究员核对资料；多来源调研可将证据核对与库内覆盖检查分别委派；开发与内容整理可在文件范围独立时并行；用户逐题练习时由主管保持对话连续，必要时委派教练准备材料并让研究员核对新增技术判断。
+
+无需额外安装软件。Codex 原生配置位于 `.codex/agents/`，[项目并发设置](../.codex/config.toml) 将同时打开的子 Agent 线程限制为 3，不固定模型、推理强度或修改权限。新会话发现角色与 Skill 后可直接使用，也可以显式输入 `$horizon-team`。当前工具若不能选择自定义角色，主管读取对应 TOML 的 `developer_instructions`，在委派消息中明确要求成员按该职责工作；这属于指令委派，不等于已验证原生角色加载。若不能启动子 Agent，就在主会话按职责顺序完成，并说明实际执行方式。
+
+配置格式与继承行为依据 [Codex 官方子 Agent 文档](https://learn.chatgpt.com/docs/agent-configuration/subagents)。只读角色是工作约定，不提供独立的只读沙箱；实际权限仍继承父会话。规则或配置修改后检查原生发现与任务行为，不能用 TOML 解析通过替代运行验证。
 
 ## Skill 选用与替换
 
