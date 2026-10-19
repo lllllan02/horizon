@@ -7,7 +7,7 @@ updated_at: "2026-10-13T12:48:15+08:00"
 source: "[Retry behavior](https://docs.aws.amazon.com/sdkref/latest/guide/feature-retry-behavior.html)"
 ---
 
-**「AWS SDK 先识别服务错误码，再回退到 HTTP 状态码，把错误分为暂时故障、限流和不可重试三类。」**
+**「AWS SDK 先识别服务错误码，再回退到 HTTP 状态码」**，把错误分为暂时故障、[[rate-limiting|限流]]和不可重试三类。
 
 ## 状态码为什么不够
 

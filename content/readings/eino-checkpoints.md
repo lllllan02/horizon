@@ -6,7 +6,7 @@ tags: ["Agent", "Checkpoint", "持久化", "Go"]
 learning_status: pending
 learning_status_changed_at: "2026-10-17T21:42:39.524+08:00"
 created_at: "2026-10-14T14:43:35+08:00"
-updated_at: "2026-10-17T21:37:05+08:00"
+updated_at: "2026-10-19T19:27:21+08:00"
 source:
   - "https://www.cloudwego.io/zh/docs/eino/core_modules/eino_adk/agent_hitl/"
   - "https://www.cloudwego.io/zh/docs/eino/core_modules/chain_and_graph_orchestration/checkpoint_interrupt/"
@@ -14,11 +14,13 @@ source:
   - "https://github.com/cloudwego/eino/blob/v0.9.14/adk/interrupt.go"
   - "https://github.com/cloudwego/eino/blob/v0.9.14/compose/checkpoint.go"
   - "https://github.com/cloudwego/eino/blob/v0.9.14/adk/chatmodel.go"
+  - "https://github.com/cloudwego/eino/blob/v0.9.14/adk/runctx.go"
+  - "https://github.com/cloudwego/eino/blob/v0.9.14/internal/serialization/serialization.go"
 ---
 
 Go Agent 在工具执行前等待审批，需要把当前进度交给存储，再由后续请求接手。Eino 提供了这条路径：**工具发出中断 → 框架保存检查点 → 应用收到审批后发起恢复 → 工具读取原状态与审批结果，继续执行。**
 
-本文节选官方中断恢复文档，并核对 Eino v0.9.14 源码，重点是 ADK 的 ChatModelAgent 与 Runner。项目现有实验也锁定该版本；本文未重新运行实验，不将在线文档中的其他版本接口混入示例。
+本文节选官方中断恢复文档，并核对 Eino v0.9.14 源码，重点是 ADK 的 ChatModelAgent 与 Runner。2026-10-19 另行运行无模型的 Graph 示例验证保存与跨进程恢复；未重新运行项目原有 ADK 实验，不将在线文档中的其他版本接口混入示例。
 
 ## 工具怎样停下来，并保留待审批内容？
 
@@ -30,25 +32,27 @@ Go Agent 在工具执行前等待审批，需要把当前进度交给存储，�
 
 [Runner 的保存实现](https://github.com/cloudwego/eino/blob/v0.9.14/adk/interrupt.go)收集运行上下文、中断 ID 到组件地址的映射、各组件的中断状态和流式模式，用 gob 编码成字节，再调用存储的 `Set`。组件地址用于找到恢复路径，组件状态用于还原该路径上的执行进度。
 
+外层结构的字段是 `RunCtx`、`Info`（保留兼容）、`EnableStreaming`、`InterruptID2Address` 和 `InterruptID2State`。[RunCtx](https://github.com/cloudwego/eino/blob/v0.9.14/adk/runctx.go)保存根输入、运行路径和会话；会话中还有共享值与 Agent 事件。因此，中断工具自行保存的草稿或参数只是整份记录的一部分。
+
 ChatModelAgent 内部还运行着 Graph。其内部检查点通过[桥接存储](https://github.com/cloudwego/eino/blob/v0.9.14/adk/chatmodel.go)进入 Agent 的中断状态；[Graph 检查点](https://github.com/cloudwego/eino/blob/v0.9.14/compose/checkpoint.go)保存节点输入、图状态、待重跑节点、通道及子图状态。因此保存对象既有业务数据，也有框架继续调度所需的信息，并非只有对话消息。
 
 业务提供 `CheckPointStore`：v0.9.14 的接口是 `Get(ctx, id) ([]byte, bool, error)` 与 `Set(ctx, id, data) error`，通过 `adk.RunnerConfig.CheckPointStore` 注入。要跨进程恢复，存储须在进程退出后仍可读取；多实例还要能访问同一份数据。内存 map 只能演示同进程恢复。
+
+## 实际保存后的数据长什么样？
+
+[[assets/eino-checkpoint-demo.go|可运行的 Graph 示例]]包含 `draft → publish` 两个节点，在 `publish` 前设置静态中断。它不调用模型和外部服务，发布节点也只打印文本；在引入 Eino v0.9.14 的 Go module 中运行，`-dir` 指定保存目录，第二个进程加 `-resume` 读取同一记录。
+
+[[assets/eino-checkpoint-saved.json|实际保存的 Graph Checkpoint]]是该示例写入 Store 的原始 JSON 字节经过缩进后的完整内容：`Inputs` 中有待执行 `publish` 的输入，`State` 中有草稿和业务状态，另有通道与中断地址。**「这个例子的下一步体现在 Inputs 中，RerunNodes 为 null」**；不能把待执行节点与中断后需要重跑的节点混为一谈。
+
+Graph 默认[序列化器](https://github.com/cloudwego/eino/blob/v0.9.14/internal/serialization/serialization.go)还写入 `Type`、`MapValues`、`JSONValue` 等类型信息，以便把 `any` 恢复为原类型；例如业务状态类型名为 `horizon_checkpoint_draft_v1`。**「这是 Graph 的实际格式；ADK Runner 外层使用 gob」**，两层不能统一说成普通业务 JSON。
+
+本次两个独立 `go run` 进程的结果是：首次只执行 `draft` 并保存，恢复后只执行 `publish`，读回了原草稿。验证范围限于静态 Graph 中断与文件存储，不证明 ADK 动态审批、强杀恢复或远端操作的幂等行为。示例文件存储使用临时文件加 rename，未演示断电持久性、并发恢复与生产存储事务。
 
 ## 新请求怎样继续原任务？
 
 第一次执行时传入 `adk.WithCheckPointID(taskID)`，应用消费事件迭代器，检查 `event.Err`，并从 `event.Action.Interrupted.InterruptContexts` 取得待审批信息与中断 ID。收到可信审批结果后，恢复入口用相同 taskID 加载记录，把决定送到对应中断点。
 
-下面是依据 v0.9.14 API 编写的接入片段，未独立编译，使用标准库 `context` 与 `github.com/cloudwego/eino/adk`；由审批处理器调用，`runner` 已配置相同 Agent 与持久存储，两个 ID 来自先前中断记录，`approved` 已通过业务校验。返回的迭代器仍由调用方消费并处理事件错误。
-
-```go
-func resumeApproval(ctx context.Context, runner *adk.Runner,
-    taskID, interruptID string, approved bool,
-) (*adk.AsyncIterator[*adk.AgentEvent], error) {
-    return runner.ResumeWithParams(ctx, taskID, &adk.ResumeParams{
-        Targets: map[string]any{interruptID: approved},
-    })
-}
-```
+[[assets/eino-resume-approval.go|审批恢复接入片段]]依据 v0.9.14 API 编写，未独立编译或运行；由审批处理器调用，`runner` 已配置相同 Agent 与持久存储，两个 ID 来自先前中断记录，`approved` 已通过业务校验。返回的迭代器仍由调用方消费并处理事件错误。
 
 [恢复实现](https://github.com/cloudwego/eino/blob/v0.9.14/adk/runner.go)先读取并解码检查点，将原状态与本次恢复数据放入运行上下文，再沿组件路径恢复。工具会重新进入执行函数，通过 `compose.GetInterruptState[T]` 读取之前保存的状态，通过 `compose.GetResumeContext[bool]` 判断自己是否是恢复目标及是否收到决定：未被选中或缺少决定就再次中断，拒绝则结束相应操作，同意才使用原草稿发布。
 

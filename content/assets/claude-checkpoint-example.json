@@ -1,0 +1,32 @@
+{
+  "_example": "依据 Claude Agent SDK 公开用法自拟的应用存储示意。不是 Claude Code 内部 JSONL 或文件备份索引的实际格式，未调用 SDK 生成。所有 ID 和内容为教学数据。",
+  "application_resume_record": {
+    "session_id": "0199e0b8-4100-7000-8000-000000000002",
+    "checkpoint_id": "0199e0b8-4100-7000-8000-000000000003",
+    "checkpoint_id_source": "公开 SDK 返回的 user message.uuid",
+    "sdk_options": {
+      "enableFileCheckpointing": true,
+      "extraArgs": {"replay-user-messages": null}
+    }
+  },
+  "illustrative_file_backups": [
+    {
+      "path": "main.go",
+      "existed_at_checkpoint": true,
+      "contents_before_edit": "package main\n\nfunc main() { println(\"hello\") }\n",
+      "restore_action": "将当前文件恢复为修改前内容"
+    },
+    {
+      "path": "helper.go",
+      "existed_at_checkpoint": false,
+      "contents_before_edit": null,
+      "restore_action": "删除本次通过 Write 工具新建的文件"
+    }
+  ],
+  "restore_explanation": [
+    "应用保存 session_id 和 checkpoint_id 作为句柄；真正回退仍依赖 Claude Code 保存的会话与文件备份。",
+    "在原数据仍可用的条件下，SDK 按 session_id resume，并在响应循环内调用 rewindFiles(checkpoint_id)。",
+    "SDK 的 rewindFiles 只回退文件；交互界面的 rewind 菜单还提供回退会话或同时回退两者的选项。",
+    "文件跟踪针对 Write、Edit、NotebookEdit；Bash 改文件、数据库写入等不属于其保证范围。"
+  ]
+}

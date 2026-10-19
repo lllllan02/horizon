@@ -15,7 +15,7 @@ source: "[Status Codes](https://grpc.io/docs/guides/status-codes/)"
 - `ABORTED`：如并发版本校验或事务冲突，可能需要重新执行「读取 → 修改 → 写入」整个步骤，不能只重发最后一次写入。
 - `FAILED_PRECONDITION`：当前状态不满足要求，应先修复条件。例如删除非空目录失败，等待本身不会清空目录。
 
-此外，`INVALID_ARGUMENT` 表示参数本身不合法；认证和权限错误要修复身份或授权。`RESOURCE_EXHAUSTED` 可能是配额耗尽，也可能是磁盘已满，不能一律理解为短期限流。
+此外，`INVALID_ARGUMENT` 表示参数本身不合法；认证和权限错误要修复身份或授权。`RESOURCE_EXHAUSTED` 可能是配额耗尽，也可能是磁盘已满，不能一律理解为短期[[rate-limiting|限流]]。
 
 ## 超时不是执行结果
 

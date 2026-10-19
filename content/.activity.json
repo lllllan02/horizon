@@ -22,8 +22,8 @@
       "title": "并发控制",
       "collection": "glossary",
       "state": "pending",
-      "digest": "b1e8199b1547de6640a5f46de5b06e0f0ff41a653a3002df0210878661d7f079",
-      "bodyDigest": "d1916c5f35d8cfffd020d6577a52909d17eb8183290ffd5af5ff4bf55e610e5b",
+      "digest": "b783009dd55012868efcebd7bed2912677547660440e04e1d30cf04c0bcb6b97",
+      "bodyDigest": "1a212331b0e9b908368d4f6a1168b24049d9a5c6f56317afc32d5c52df79cada",
       "updatedAt": "2026-10-18T23:47:18+08:00"
     },
     "db-pool-metrics": {
@@ -50,6 +50,14 @@
       "bodyDigest": "77e961d2e7f830979d18ff9dd040d96d95e3702d441a046ea8bdbd8465c95b0a",
       "updatedAt": "2026-10-12T20:40:35+08:00"
     },
+    "fixed-window": {
+      "title": "固定窗口限流",
+      "collection": "glossary",
+      "state": "pending",
+      "digest": "5094f88787777522f07a0f558df1f245d93e9ad82d67af1e121a0cc00f8a35a1",
+      "bodyDigest": "d169958410f499ef3bacf5a3ed6591a7e10274a48c1d620e941abbaab1f7f8c7",
+      "updatedAt": "2026-10-19T16:19:44+08:00"
+    },
     "jitter": {
       "title": "抖动",
       "collection": "glossary",
@@ -65,6 +73,14 @@
       "digest": "5e1a497fcf8595b8d22471687494e5e852605412792b3bd67bc85000d1be0839",
       "bodyDigest": "fbac0dc3cbe18f2fd9f3998a9621e04013ba40be3587430e5b10790150c8a1c0",
       "updatedAt": null
+    },
+    "leaky-bucket": {
+      "title": "漏桶限流",
+      "collection": "glossary",
+      "state": "pending",
+      "digest": "5b7185d481abed69db6b02375ce663c4e387d9d65eb054e1823d0b9ae8086a96",
+      "bodyDigest": "a7356be6f5359ab8600c533a291846e3fa2d8affb1a28639c02e2cac741e018b",
+      "updatedAt": "2026-10-19T16:19:44+08:00"
     },
     "load-leveling": {
       "title": "削峰填谷（Load Leveling）",
@@ -82,6 +98,14 @@
       "bodyDigest": "77c7b4dec10629eefd5176e03d3a08ddc829007bca9b7fe4e72bbb933279b905",
       "updatedAt": "2026-10-13T10:59:48+08:00"
     },
+    "memory-leak": {
+      "title": "内存泄漏",
+      "collection": "glossary",
+      "state": "pending",
+      "digest": "79677f480d34eea9f529ca939e1d2dcf6873edd4fa4b4ecd1f4bc49ceb0c5f04",
+      "bodyDigest": "2e93ab78cc839462a08cfc4cf606c8f7213dc8b3282971ab1722201485a64f77",
+      "updatedAt": "2026-10-19T15:28:59+08:00"
+    },
     "multiway-balanced-search-tree": {
       "title": "多路平衡查找树（Multiway Balanced Search Tree）",
       "collection": "glossary",
@@ -97,6 +121,14 @@
       "digest": "02f2efee0d8274b9ac0bafaa01b1504cdbd434fc6128040518e77de82b122e26",
       "bodyDigest": "5076299f91d01b6c81a93c575092839ed8707b8d9b531f684d922bc3a02053c1",
       "updatedAt": "2026-10-13T11:04:51+08:00"
+    },
+    "out-of-memory": {
+      "title": "内存溢出",
+      "collection": "glossary",
+      "state": "pending",
+      "digest": "664e61c27ce8a4b36768cc726a09cc58e30a0b0dfb8d0032b2e614938740204c",
+      "bodyDigest": "5b1c945c7c38c785882148de1d28e8fdc8c667ac8b8c2c1504dc03a1b7d67d18",
+      "updatedAt": "2026-10-19T15:28:59+08:00"
     },
     "precision-at-k": {
       "title": "精确率（Precision@K）",
@@ -121,6 +153,14 @@
       "digest": "57ed705b66b9b9db1177dfe37489f7201e204ddacd2b103e54df2d74befe46c2",
       "bodyDigest": "bc4acefc28a37441a571d9d4a40957afa2338aeffed0617cd238f8e3ca0477ba",
       "updatedAt": "2026-10-12T20:40:35+08:00"
+    },
+    "rate-limiting": {
+      "title": "限流",
+      "collection": "glossary",
+      "state": "pending",
+      "digest": "83b900b0c300feb31c53601b78f4cdd62cdec54bdbc12123cbe65e258ce95ccc",
+      "bodyDigest": "d65f27f33da9c55491136278a016796e05096090d9961d6ab277ad8cccc74792",
+      "updatedAt": "2026-10-19T16:19:44+08:00"
     },
     "recall-at-k": {
       "title": "召回率（Recall@K）",
@@ -170,6 +210,14 @@
       "bodyDigest": "30af9368acb097cc30250d0323954e7c0dfd2b4e5ef9365dbb99a962b6909879",
       "updatedAt": "2026-10-18T23:47:18+08:00"
     },
+    "sliding-window": {
+      "title": "滑动窗口限流",
+      "collection": "glossary",
+      "state": "pending",
+      "digest": "7013c2e8ff3c246508d343e251ae8c5b2e06ea009bea7461d6ff1534c7bade70",
+      "bodyDigest": "9343837362c8f29333a984e2623be5f8555041471600ea284d17221f76c24623",
+      "updatedAt": "2026-10-19T16:19:44+08:00"
+    },
     "sparse-retrieval": {
       "title": "稀疏召回",
       "collection": "glossary",
@@ -177,6 +225,14 @@
       "digest": "1f593f5757a26090396a4b9dcbb2083ca155226e75a76baecb59c81484164d0d",
       "bodyDigest": "9fd334cd8cd5639b77e6c1a9c7a1824d38f99f0b6d4fa6b82bac2c9e2cc30635",
       "updatedAt": "2026-10-18T21:32:19+08:00"
+    },
+    "sse": {
+      "title": "SSE（服务端发送事件）",
+      "collection": "glossary",
+      "state": "pending",
+      "digest": "522703c079110b81f752b1c16e81497668c580a1b97123bd7eaca31d6fe97efb",
+      "bodyDigest": "e93249cae015e1f44b91c5211c9d9fca4dd84d4bb8a4fcae9176c41ba4cd8358",
+      "updatedAt": "2026-10-19T13:43:27+08:00"
     },
     "stdio": {
       "title": "Stdio（标准输入输出）",
@@ -210,6 +266,14 @@
       "bodyDigest": "a5008a127c2b34f59264b45c99e92f0bfe16248d965da927bf7e0b782f8cce84",
       "updatedAt": "2026-10-18T23:47:18+08:00"
     },
+    "token-bucket": {
+      "title": "令牌桶限流",
+      "collection": "glossary",
+      "state": "pending",
+      "digest": "593e085d2e8fd9ff9f2b47eb48c52ec527f535da7423a0e34c0c6bcbf08b1532",
+      "bodyDigest": "175cd12966ebdba60fe18b085955d5cc76bcf816121113565f970650464d255a",
+      "updatedAt": "2026-10-19T16:19:44+08:00"
+    },
     "trace-and-span": {
       "title": "Trace 与 Span",
       "collection": "glossary",
@@ -217,6 +281,22 @@
       "digest": "56daf782628f7ffcd8674aa0fa9f01d83b78c7cf8baf1688089352fb21c1cf7d",
       "bodyDigest": "e4ff630119a110f7de37f1e34ee34004f31afd74d14ff06eff0982efbb17992f",
       "updatedAt": "2026-10-18T00:28:03+08:00"
+    },
+    "websocket": {
+      "title": "WebSocket",
+      "collection": "glossary",
+      "state": "pending",
+      "digest": "0ade72c85f7d9ace6d29941531ae178322c9e31364bbcfd1ace25c9fed2a5dfd",
+      "bodyDigest": "b7d8a7ca52f8149a0c944ba0344cc7552d1cfadce5d22745220bc24e8c013c9f",
+      "updatedAt": "2026-10-19T13:43:27+08:00"
+    },
+    "a2a-interview": {
+      "title": "你对 A2A 协议了解多少？",
+      "collection": "interviews",
+      "state": "pending",
+      "digest": "e12c79241ba3c20773d83f52105cd2aa516ee9228e72ca8a446f10f54e710ef6",
+      "bodyDigest": "3dfd1f0963ed466aca498000cd78ecb1c7f05eb9e579dd981b6b7e9061693828",
+      "updatedAt": "2026-10-19T12:34:25+08:00"
     },
     "agent-career-motivation": {
       "title": "为什么想做 Agent 开发？",
@@ -226,21 +306,69 @@
       "bodyDigest": "6893ab311d85c30b91b9a73a6505a620f0fc969a3e7660656742a43aa0b42bb6",
       "updatedAt": "2026-10-18T20:40:18+08:00"
     },
+    "agent-checkpoint-interview": {
+      "title": "Agent 的 Checkpoint 应该保存什么，才能在中断后恢复？",
+      "collection": "interviews",
+      "state": "reading",
+      "digest": "df63c5877724e740f57e9138c63b836b1f8c46b96a557ce1569a8429ff5a630f",
+      "bodyDigest": "27e0b004570a858b4ee5e0360496770242ac8bba343c85b9489e7b0c909f5a21",
+      "updatedAt": "2026-10-19T19:44:05+08:00"
+    },
+    "agent-communication-interview": {
+      "title": "父子 Agent 和多 Agent 之间怎么通信？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "fadbb2ce871a3df8dce32ec888819061c3728dc7c5bfdf6e4ecf58e23429616d",
+      "bodyDigest": "83ff0928d1bb843d94b20c52eaacd8ad3be4f0a19113cfe5dc28d6b1b5bbafe1",
+      "updatedAt": "2026-10-19T12:28:23+08:00"
+    },
+    "agent-design-interview": {
+      "title": "怎样设计一个 Agent？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "1c6a5e88863899c4054cedd391f353bd1ebb7bfa565cb140be517abc3078cfa6",
+      "bodyDigest": "89a4db43565ce8ab1e22fc853cc036cdcc7cf714633b2cae28a55829ba329d30",
+      "updatedAt": "2026-10-19T16:37:33+08:00"
+    },
+    "agent-evaluation-interview": {
+      "title": "怎么判断 Agent 的效果？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "67df3fe4f66f1e982f14b076e69093bcdcf128ba995039ab6e26def010c2eddd",
+      "bodyDigest": "6149d7aa9bddec04a9267ae60d722dc97664be6db4315334d790e2f9868f4b26",
+      "updatedAt": "2026-10-19T16:40:35+08:00"
+    },
+    "agent-intent-interview": {
+      "title": "Agent 为什么知道调用哪个工具？怎么做意图识别？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "347f54dd41fe0cf3b4f281b5a4f85a304ce8695d8713f44ce346d35ab0441e33",
+      "bodyDigest": "988343ab57d4a5ebbeb600cb965a5588d634358971ff2ac4c9ecf57943dcbc4d",
+      "updatedAt": "2026-10-19T13:35:14+08:00"
+    },
     "agent-interview-hub": {
       "title": "Agent 面试题",
       "collection": "interviews",
       "state": "pending",
-      "digest": "9f933ff231a44111fa8c098b2995034b10a5915d9e2addb7dfcd039ef4cacec5",
-      "bodyDigest": "bd090fa46a2d2a758593fa2939e5476e802b519ea06af507cc94d4ceda08cc56",
-      "updatedAt": "2026-10-18T23:20:40+08:00"
+      "digest": "863ddbdd866bdf2c3409848207f930f42c884b83e44fce9a44267058ec3db1b9",
+      "bodyDigest": "6d501962dd0cb0529ed653643e20653878a222d0055ce47263e59293b3470a69",
+      "updatedAt": "2026-10-19T16:40:35+08:00"
     },
     "agent-memory-leak-interview": {
       "title": "Agent 服务最常见的生产环境内存泄漏有哪几种？如何排查和修复？",
       "collection": "interviews",
       "state": "pending",
-      "digest": "a34ca98735a3279636509186bb06e9a3160a2ac9d20651b7f9a40329d478ad3e",
-      "bodyDigest": "1e2384864953a00349dbe2f2377e745fb3a77833ffbe35b5efe313bb7d5adfeb",
+      "digest": "77df6edf806a9682032e5b368d29342f16789aa52034ac22b84ba8402733955c",
+      "bodyDigest": "bf5e55d6a13ccb06b480241416479a359dba9ce3763144b24dc5c50dfa51ce82",
       "updatedAt": "2026-10-18T23:09:04+08:00"
+    },
+    "agent-sandbox-interview": {
+      "title": "Agent 里为什么要做沙箱？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "5193a0203450bddae1fe6ceabe7bff4331dbb76d2396bf7f71bed9b98bd27fbb",
+      "bodyDigest": "8b6010af3ac447ca3a0929d113473a2d1c2f34d21cad8d63e02222b1cfd36016",
+      "updatedAt": "2026-10-19T12:36:13+08:00"
     },
     "agent-timeout-interview": {
       "title": "模型调用响应慢，导致 Agent 链路超时，如何设计分层超时与熔断？高并发下怎么处理？",
@@ -250,6 +378,14 @@
       "bodyDigest": "940a03ec619e7661c717108fecaa84540ff189e762b01fde24b32621ea02a6b4",
       "updatedAt": "2026-10-18T23:47:18+08:00"
     },
+    "api-latency-interview": {
+      "title": "接口响应慢，怎么排查和优化？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "f3eb957d2ac708b4aef91df13e26cdd39333030435a135d2cefb8c44c7eaea31",
+      "bodyDigest": "85049e031845c9f8abbc998c10dff790826a8fe7ffc82fe8abf2907e133a4a6f",
+      "updatedAt": "2026-10-19T00:49:59+08:00"
+    },
     "bm25-interview": {
       "title": "BM25 是什么？基本原理是什么？",
       "collection": "interviews",
@@ -257,6 +393,22 @@
       "digest": "f343d41a9fa3c4d4e02dd7f80265d38a1da5974039d97dfa4edaed9f1ccdf17c",
       "bodyDigest": "313b93796a85f3f88ae6d9bd09e1fef818930f787e55d62a177b3a281c06ed40",
       "updatedAt": "2026-10-18T21:27:28+08:00"
+    },
+    "cache-avalanche-interview": {
+      "title": "缓存雪崩怎么解决？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "b5489246b0b44935725405cd823c3a307a58ba330a29146ffcb839a8f2e8cff0",
+      "bodyDigest": "12498b61c8617411c35feee6777d159bb0a40d9d9e861ecfb1d257c349499854",
+      "updatedAt": "2026-10-19T17:21:53+08:00"
+    },
+    "cache-consistency-interview": {
+      "title": "数据库和缓存的一致性怎么保障？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "bce7ce25cda0280f010597beb3c12e35f9d6f89be5dcd306267ea007b3641d20",
+      "bodyDigest": "f82a3a2538ce20b9504bb719c0b9c080e042e5fa2c0af1f90ad761fb9e458531",
+      "updatedAt": "2026-10-19T17:01:43+08:00"
     },
     "contest-bottleneck-interview": {
       "title": "比赛开赛时出现瞬时洪峰，你们是怎么定位瓶颈的？",
@@ -274,6 +426,102 @@
       "bodyDigest": "71d4b48dc13878da6df61d640edfc9246dbe8ccd94a1721f587122d0d3e483bb",
       "updatedAt": "2026-10-18T23:53:19+08:00"
     },
+    "go-channel-close-interview": {
+      "title": "怎么防止 Go Channel 重复关闭？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "02690d3bcf70ee0c65af1eb0419ea26839a6774f0c80ba91e61f46f3127b9a9a",
+      "bodyDigest": "484c70ec20cf78172fcf4200005cf6b490594fc9e125d73e14896c9ea84eec12",
+      "updatedAt": "2026-10-19T11:24:03+08:00"
+    },
+    "go-channel-interview": {
+      "title": "Go 的 Channel 一般怎么用？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "d4aa62a591b8f47ee93184c8bff117badf7f983febbd78c34e74079816990481",
+      "bodyDigest": "ea047992a20891c96a3a13c3d8de409aafae2f096afe5f0550fe7a9887edf715",
+      "updatedAt": "2026-10-19T16:17:49+08:00"
+    },
+    "go-channel-structure-interview": {
+      "title": "Go 的 chan 底层数据结构是什么？",
+      "collection": "interviews",
+      "state": "reading",
+      "digest": "e417089a885fda5ad1b4a2fa8337ded5b4c7a5047650180896a074980b68e27a",
+      "bodyDigest": "4a985de9537f2d916765d4ddfb16132bd597c963dff4ef0583442411fc9c07c4",
+      "updatedAt": "2026-10-19T19:27:56+08:00"
+    },
+    "go-context-cancel-interview": {
+      "title": "Go 的 WithCancel 和 WithoutCancel 有什么区别？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "e9b56cc33726c79edd08ba1c1879fc4f7b3c0d7213bc4f026271fa2ee4472036",
+      "bodyDigest": "35f03d738861480ad2735404c1461194913af92508467166a4ddc87941a61f43",
+      "updatedAt": "2026-10-19T15:24:52+08:00"
+    },
+    "go-context-interview": {
+      "title": "Go 的 Context 是什么？怎么使用？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "f81414bfcf93c46cfe889956ecf4fee79dc3c4cf17d72aaf5d7d052d9f56adc2",
+      "bodyDigest": "04de1c32fef1f222ef03fec7113be4191dfd7fe37ef6d9b988a1fa034e343c31",
+      "updatedAt": "2026-10-19T15:27:50+08:00"
+    },
+    "go-escape-interview": {
+      "title": "Go 中哪些堆分配值得优化？怎么优化？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "f0ae92a0b98561abd3f6a21540908d487b749f35f7526899e74f8c963536f2d1",
+      "bodyDigest": "40fe98f65d90ca8a19950c01abf0759577e904326a6cfe9fbd2280e65beea645",
+      "updatedAt": "2026-10-19T15:41:05+08:00"
+    },
+    "go-gmp-interview": {
+      "title": "聊一聊 Go 的 GMP 调度模型",
+      "collection": "interviews",
+      "state": "reading",
+      "digest": "d07f2ebb0a43bfcf5c473c2c5918d512aa652328f9adbc91424aca6d36ba6789",
+      "bodyDigest": "0f0026c0247b08c59d02da8eff33b16b9627b764dc3bcdb6e8b298d6de1700a0",
+      "updatedAt": "2026-10-19T17:31:03+08:00"
+    },
+    "go-interview-hub": {
+      "title": "Go 面试题",
+      "collection": "interviews",
+      "state": "pending",
+      "digest": "3ec653ce65d9d4a39df17ab0a6edc8b9ffe040d2d7452d807febd47512ad0619",
+      "bodyDigest": "af6671dc6e04b837ea24f6a219b734cd46f4a257140eeb41d8d1f78a6eee5395",
+      "updatedAt": "2026-10-19T16:21:41+08:00"
+    },
+    "go-mutex-interview": {
+      "title": "聊一聊 Go 的互斥锁和读写锁",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "37040e98536af33f488dbc686e259c6ef4ec7cc301dfa2d080457c06d73a5de2",
+      "bodyDigest": "0971aa9d2110710c484fc01544f7b71e5fd0954abeacbf95ca423f4937dacee9",
+      "updatedAt": "2026-10-19T16:12:35+08:00"
+    },
+    "go-oom-interview": {
+      "title": "Go 程序什么情况下会内存溢出？怎么排查？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "dc9fe80bafd3e0d3fc91a19979c53823d0e66e2b3b42d25ee1cd5b9b6291dcd8",
+      "bodyDigest": "58487c08d140a04edb4020e711c692189760851e0cfb88110666dff779babc28",
+      "updatedAt": "2026-10-19T16:07:43+08:00"
+    },
+    "go-preemption-interview": {
+      "title": "Go 协程是怎么抢占的？",
+      "collection": "interviews",
+      "state": "pending",
+      "digest": "f2b27ec12d6e3090c3cb4c10f4b905c26dd2e47a58de9e44808dfa9e43e2c7cf",
+      "bodyDigest": "07cdbc48d360b785ecfc0a0109a753916386b9ecda85c9ff1faa8a95d43da516",
+      "updatedAt": "2026-10-19T11:24:21+08:00"
+    },
+    "go-singleflight-interview": {
+      "title": "Go 的 Singleflight 是怎么实现的？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "ae9d8aa483fe9802c6a872f0428c2031c14fc6e33fa42bdea7f8c7f797b388f6",
+      "bodyDigest": "5fe946958e78ae8e47f0c5ac3908b435953b6d778ecba9e3db7e66f781060582",
+      "updatedAt": "2026-10-19T19:20:51+08:00"
+    },
     "hybrid-retrieval-interview": {
       "title": "为什么要做稀疏加稠密双路召回？",
       "collection": "interviews",
@@ -282,21 +530,101 @@
       "bodyDigest": "36b69da6523bae618de8a8d948333c7b63b320a2800564776b8f37a18d397a79",
       "updatedAt": "2026-10-18T22:11:42+08:00"
     },
+    "interview-experiences": {
+      "title": "Go 后端与 AI Agent 面经",
+      "collection": "interviews",
+      "state": "reading",
+      "digest": "e9cfddc1fdc007694238b187e6d3b013189cf222b6dd4952dd2205382414bdfc",
+      "bodyDigest": "4831c53f5c522e8f8166fef63e588b561a8ed4250aad4e0af2b0978129b87715",
+      "updatedAt": "2026-10-19T19:42:43+08:00"
+    },
     "interview-hub": {
       "title": "面试题",
       "collection": "interviews",
       "state": "reading",
-      "digest": "24cfeea791f4798aefa6cb36580ac8bc73ff2f6d184a9d3bec7c5d28ebae3e2e",
-      "bodyDigest": "dc87eaa1a780d7b558a74c5ba293e8b60130c0d19b99711e0e6a7d9e8fa642e1",
-      "updatedAt": "2026-10-18T23:14:14+08:00"
+      "digest": "7ae5b4f36d2d1512eae772fbe9a57a80ef3d2e8589136a1e81bf2264f09a7fba",
+      "bodyDigest": "1d23a71cda91f485271a5a74e2b06895d2cd5a5565299aa773af71130144015e",
+      "updatedAt": "2026-10-19T17:36:41+08:00"
     },
     "interview-resources": {
       "title": "Go 与 Agent 面试资料",
       "collection": "interviews",
+      "state": "reading",
+      "digest": "841098090ade33e048465ed54723573a59d7e0c9d2f11cc5d59e0b455c232762",
+      "bodyDigest": "6b8b9b03e273856d2a937e121629f94480bf1b674c81534d3ddb1ff55f1d2892",
+      "updatedAt": "2026-10-19T19:42:43+08:00"
+    },
+    "kafka-architecture-interview": {
+      "title": "介绍一下 Kafka 的整体架构？",
+      "collection": "interviews",
+      "state": "pending",
+      "digest": "bf5880298985d6f1f568cbad1a0531484186250e44a6eec15ba79b769675d05a",
+      "bodyDigest": "f13ad380de53537dcf4c0989323a320edd352a1f466b6517d0e037cbee1364a1",
+      "updatedAt": "2026-10-19T17:12:34+08:00"
+    },
+    "kafka-consumer-lag-interview": {
+      "title": "消费者出现大量消息积压，怎么排查和处理？",
+      "collection": "interviews",
       "state": "organized",
-      "digest": "ec2ed5633fbdbca2eb6cde848e943495e41ebe5d54109a6cfe88db25f75bccc1",
-      "bodyDigest": "33f3afbb0946b043c7a930107babfb600b79b73d76bb790685b2f8b5ec8cc201",
-      "updatedAt": "2026-10-18T11:32:11+08:00"
+      "digest": "d8646ebd43287802dcea40239aa967f8b4375f4b07750d1bb352a39ea499a868",
+      "bodyDigest": "c79f8bed42db1ea9b6ee3ebd011467389f309db421b01771970b6c917607fa6d",
+      "updatedAt": "2026-10-19T11:12:42+08:00"
+    },
+    "kafka-flush-interview": {
+      "title": "Kafka 顺序追加写入后，消息会立即落盘吗？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "73562927da179afaa825fff24cd78c0e43189029d041730b9bed9f334be29cb3",
+      "bodyDigest": "edaffd56988d898f8389d3e5f6746938fe3466281dfadbc1597c6598285e8ce8",
+      "updatedAt": "2026-10-19T11:01:36+08:00"
+    },
+    "kafka-interview-index": {
+      "title": "Kafka 面试题",
+      "collection": "interviews",
+      "state": "pending",
+      "digest": "1cbd589700f6ee6c4a23a199c2973fe09aec82a5aa1f6faf7f05eef3b72c2b06",
+      "bodyDigest": "fe22eca3686fd9d70999d8c898c212fc4a558ef9c8238d0a4ae4f872d69c9a8f",
+      "updatedAt": "2026-10-19T16:59:29+08:00"
+    },
+    "kafka-ordering-interview": {
+      "title": "Kafka 能保证消息顺序吗？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "988876ead45687946e45d2fb5ab71c26a7672917c6283f54e157cc6cee77711a",
+      "bodyDigest": "5afee8d5f89f8666b96cde42d4e20ca861a08ab1fd2e3b72d2490eece209b8cf",
+      "updatedAt": "2026-10-19T11:00:33+08:00"
+    },
+    "kafka-partition-count-interview": {
+      "title": "Kafka 的分区是不是越多越好？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "ec2a2959b94a30ecc9b45103afdfe623176c0fb876b92baacfb5f7595ed82d70",
+      "bodyDigest": "954e0cd31441c39f485274516fcd2432abb6361655d30dcf3a41c82b972ef353",
+      "updatedAt": "2026-10-19T10:53:54+08:00"
+    },
+    "kafka-reliability-interview": {
+      "title": "Kafka 如何保证消息写入的可靠性？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "0209199803cd914c4c0d63712712d30a6835cf96b0c01b1120df1b1e7be782c1",
+      "bodyDigest": "48f0d59918b8069e3271c81a92dc0785bca447320a93f967ca4f4c4d430ecbd5",
+      "updatedAt": "2026-10-19T11:07:51+08:00"
+    },
+    "kafka-throughput-interview": {
+      "title": "Kafka 是怎么实现高吞吐的？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "e084db1148ac1d332a796b1d6e384bf4b6f7a4391e93d734d760e0d6fba54c4c",
+      "bodyDigest": "edc6484c3a66be74edd5376f2f2f7648d5b5793b93924bf9ff6a21f48ad4f7d6",
+      "updatedAt": "2026-10-19T10:37:47+08:00"
+    },
+    "mcp-integration-interview": {
+      "title": "MCP 工具怎么接入？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "97662cc90b9d792a247b8b728222d48fd418e1768404f82998ff4f3c7066ed4c",
+      "bodyDigest": "d50be7d44c17a5471b19ac05fd84e4f2d1023319c155bd666c1d3e52b7de2a41",
+      "updatedAt": "2026-10-19T13:33:28+08:00"
     },
     "mysql-deadlock-interview": {
       "title": "MySQL 遇到死锁，如何排查和优化修复？",
@@ -314,13 +642,29 @@
       "bodyDigest": "3d62bce70fa3e267202f39e2132afae5a58e2529e9f99f498742509a953cc6b0",
       "updatedAt": "2026-10-18T12:04:28+08:00"
     },
+    "mysql-explain-interview": {
+      "title": "怎么看 MySQL 的 EXPLAIN？",
+      "collection": "interviews",
+      "state": "pending",
+      "digest": "347a72c6296ed5dca504ae5d2560decaa7bd8dac1351041b95e94c0d9bd2d361",
+      "bodyDigest": "76b7946ca5a14c7a2aae30c0603192bb7edfd6e64ba19fd239e516a7fce1ebf7",
+      "updatedAt": "2026-10-19T19:19:47+08:00"
+    },
     "mysql-interview-index": {
       "title": "MySQL 面试题",
       "collection": "interviews",
       "state": "pending",
-      "digest": "3ecf05bff71927c715d459bcdd524430cbf8a67a7ea13ae53f1f3075d8962e29",
-      "bodyDigest": "7419fc78a66c0c5bd576e91bae6bf418d9493b0f8a8186fbf0af92dc8a63d838",
-      "updatedAt": "2026-10-18T21:18:27+08:00"
+      "digest": "a72918ce94077383bb8a46be40855a5c6640bf5be7b5a4805556c576cd627f08",
+      "bodyDigest": "939b0b1b6bd5bfb469a74209dd13e29dd7eb82e9cfda3abed680994cd3e25d61",
+      "updatedAt": "2026-10-19T19:19:47+08:00"
+    },
+    "mysql-slow-query-interview": {
+      "title": "MySQL 慢查询一般怎么优化？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "6f3157575a2529e7c0e0ac5a88afc1a7860a636bee18b21cc652a7f3564fe113",
+      "bodyDigest": "081d7d47dfdbd464490077664258f86b7fa6a235d6b4e78ee1ca06f255af2a3e",
+      "updatedAt": "2026-10-19T17:39:39+08:00"
     },
     "mysql-transaction-retry": {
       "title": "MySQL 事务失败后，哪些情况可以重试？怎么重试？",
@@ -330,6 +674,22 @@
       "bodyDigest": "2f33f9ea6a96b0e7eb7d6f6776921ff05684ac36950d388f8dbadc0065b43231",
       "updatedAt": "2026-10-18T21:05:08+08:00"
     },
+    "parent-agent-interview": {
+      "title": "父子 Agent 之间如何交互和传递上下文？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "5e723c9625b38f26b6f18f1f5b5e58acfcbb2ba08ad3d24a3ecdaaaac6b5ff51",
+      "bodyDigest": "e592ed6d7444cf9d0e11eba8e2be276bb501cefea4f2da76819d3f7cc7d70fa1",
+      "updatedAt": "2026-10-19T17:26:36+08:00"
+    },
+    "performance-interview-index": {
+      "title": "性能排查与优化面试题",
+      "collection": "interviews",
+      "state": "pending",
+      "digest": "aeb17fc1cecbdae2f26436fa7a9212313424ab0ee586accce80bebd1f2485de2",
+      "bodyDigest": "f11f395bf7e3c7fdb29670ce80b7e2ec63ab186eed3d92b36920e23c3764ddd9",
+      "updatedAt": "2026-10-19T16:21:41+08:00"
+    },
     "project-interview-index": {
       "title": "项目经历面试题",
       "collection": "interviews",
@@ -337,6 +697,54 @@
       "digest": "3548a1a740e1500f03332bfe16c26d4603696cc97e103cdd72fff7d5cd0a959f",
       "bodyDigest": "67ff6f2444021278d7249927a0c44f67ec746e8235a50cb51a886647e42ea809",
       "updatedAt": "2026-10-18T23:14:14+08:00"
+    },
+    "rate-limiting-interview": {
+      "title": "怎么做限流？有哪些常见的限流算法？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "03390bae2c4c41b42ef9136a48c0800b1264ecc57d82c01713c3646fea5ff4d7",
+      "bodyDigest": "1c2faf5bccb562f0c057573745faf75eed04543a75b8310b7db4b3cbae3061c4",
+      "updatedAt": "2026-10-19T16:16:06+08:00"
+    },
+    "react-interview": {
+      "title": "ReAct 的架构是什么？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "18481bfea356069d52c228485bbf27a8e27d0fc0c608fe9c68500105456029e4",
+      "bodyDigest": "f011a50d14837213990c203c5baafe475400f4d64c743b0db37c3dacabeadcdb",
+      "updatedAt": "2026-10-19T13:42:21+08:00"
+    },
+    "redis-cluster-interview": {
+      "title": "介绍一下 Redis 的集群模式？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "fc165746edfc95a4e2e1ba7d9d999a60d44dff0e2b030aa107a09c7a65e569a2",
+      "bodyDigest": "12a49683b04215c2098d051f7a2d274da3b8fbacf3d0dd8e2cc13066ee3d71cc",
+      "updatedAt": "2026-10-19T19:42:57+08:00"
+    },
+    "redis-events-interview": {
+      "title": "Redis 的事件",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "c51fc0b71888f3f5366c847fb92dcef55dc72f205dc7d2c5e9b52ab13fdfba7a",
+      "bodyDigest": "ccbc90782b394ed8d42bf664474913dd46d24d179b6bdc4629b988ff52d08a9f",
+      "updatedAt": "2026-10-19T10:45:49+08:00"
+    },
+    "redis-expiration-interview": {
+      "title": "Redis 的过期机制是怎么实现的？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "24e9c40d722d1ab2990af82c29c40e8d019ef1e23c39cf486111792c6aa95217",
+      "bodyDigest": "b460cf795f6a6a70456fc096fbac2da08f3ee1f135a474ebee2f0cdc8cc66575",
+      "updatedAt": "2026-10-19T10:40:20+08:00"
+    },
+    "redis-interview-index": {
+      "title": "Redis 面试题",
+      "collection": "interviews",
+      "state": "pending",
+      "digest": "56468db5042e24181d1143879e8a73023cbbb2325b9c2fae6682f9b893cce6bf",
+      "bodyDigest": "331a6d1b4571b49d817f991482883dc40671c25844e217f0da313b03677cb4cd",
+      "updatedAt": "2026-10-19T19:42:57+08:00"
     },
     "retrieval-fusion-interview": {
       "title": "稀疏和稠密双路召回怎么混合、怎么配合？",
@@ -362,6 +770,22 @@
       "bodyDigest": "a47061f7e810ed73170f1c19c524fa1cea1734a2cc24a3537f0c5d469e53df73",
       "updatedAt": "2026-10-18T23:14:14+08:00"
     },
+    "service-degradation-interview": {
+      "title": "降级是做什么的，大概怎么做？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "34b654418829169ff9e7f53ca2e221e68501d4fa8ecb49a85e9fd8c65ba51c38",
+      "bodyDigest": "4a92df7b06865b82c6383cd7057fbba5dc5ae5afe6e4db01faba408093d2dca2",
+      "updatedAt": "2026-10-19T16:47:10+08:00"
+    },
+    "temperature-interview": {
+      "title": "模型调用中的 Temperature 是什么，怎样起作用？",
+      "collection": "interviews",
+      "state": "pending",
+      "digest": "1a7d20c2b75fb5c9bec51cab2f40b49014836e6333b05ef48b004fffca389ba6",
+      "bodyDigest": "59084b60fded6cdab89ac09a77b6f9f7134cde13c3423667d08606b4372e549c",
+      "updatedAt": "2026-10-19T11:35:01+08:00"
+    },
     "tf-idf-interview": {
       "title": "TF-IDF 是什么？基本原理是什么？",
       "collection": "interviews",
@@ -370,12 +794,20 @@
       "bodyDigest": "c86ce589e8232e411d3871a55e5421233ee0b069e7562a775b4d6593e854d0ec",
       "updatedAt": "2026-10-18T21:37:01+08:00"
     },
+    "websocket-sse-interview": {
+      "title": "WebSocket 和 SSE 有什么区别？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "2f58ffb0559179187891e6156fb5e337b0a5bdca70bdd1ca60c55cfe5bf63b61",
+      "bodyDigest": "31c796562423c3e7fe6d7107c149d3024b4764e994c425659e17b337841cbeb0",
+      "updatedAt": "2026-10-19T13:37:49+08:00"
+    },
     "a2a": {
       "title": "A2A（Agent 间通信协议）",
       "collection": "notes",
       "state": "organized",
-      "digest": "9d1c32df05a57c482abc7bb1bf75f94d8fcc491a534505fbdf910cf610368221",
-      "bodyDigest": "e1a8133e2549602ca537b2f9b5d6cbf29284683f8915053c8bd79d1fcd6f55bc",
+      "digest": "205a1c7c346c0c8b58f61fefd5449ed970fe23ad31baabfb4d630c26ac01db51",
+      "bodyDigest": "99fc8061f833505b9d3e60d5662038f6eb47af988cf937e6cb77ec3f76f7a114",
       "updatedAt": "2026-10-18T00:22:52+08:00"
     },
     "agent-checkpoint-recovery": {
@@ -421,7 +853,7 @@
     "agent-evaluation": {
       "title": "Agent 评测",
       "collection": "notes",
-      "state": "reading",
+      "state": "pending",
       "digest": "2365aa5e7f3f03b90eca9a8141f398c5c6bc37810ec206b7c65bf564cd177855",
       "bodyDigest": "882b1ad6c9c36b6f7ae164233910d20ebe69587e4d15bd6282869a807d1b8893",
       "updatedAt": "2026-10-17T23:31:15+08:00"
@@ -749,10 +1181,10 @@
     "mcp-flow": {
       "title": "MCP 接入流程",
       "collection": "notes",
-      "state": "pending",
-      "digest": "fc8632b181a339ffbfd2712e8d7deb7befd78551df0d19fa1b63b8c9bcf6579e",
-      "bodyDigest": "c12c1b692246a85b87640a5d404101ff8399314e26737974053c9351c123dfd9",
-      "updatedAt": "2026-10-16T20:46:14+08:00"
+      "state": "organized",
+      "digest": "2c810e0cbef1d8a794433e745835c796eb899fcab4d64f580fb5a98fa0a87442",
+      "bodyDigest": "aa134545e1cd0b4ea752b27e044ec8962e826e24ab51d0da17764169c2e5d2b2",
+      "updatedAt": "2026-10-19T13:41:49+08:00"
     },
     "mcp-http-client": {
       "title": "MCP Streamable HTTP 客户端",
@@ -805,10 +1237,10 @@
     "mcp": {
       "title": "MCP（模型上下文协议）",
       "collection": "notes",
-      "state": "pending",
-      "digest": "89e3e30cc54bbce84eaa5370e5fab8089b29e54e061e052851760ed3de3f9259",
-      "bodyDigest": "26a79d5fdd6b538cc1cbee210ae01888c16ac640fb11b5f2121543e213eabede",
-      "updatedAt": "2026-10-16T20:46:14+08:00"
+      "state": "organized",
+      "digest": "2232676bd5305ca2b1a2b4d2e2a3e3482ac72f79c63daaa30fa6a0a904e8bd24",
+      "bodyDigest": "b2174187de93e034af6ef9460e8b99cb56b0ad18a4e4916174b61fa2f819465c",
+      "updatedAt": "2026-10-19T13:42:18+08:00"
     },
     "multi-agent": {
       "title": "多 Agent 协作",
@@ -838,8 +1270,8 @@
       "title": "沙箱并发与容量控制",
       "collection": "notes",
       "state": "pending",
-      "digest": "127893628f9d4399c978ae600af46508dfc2ea7c15671dc08904056662c8f562",
-      "bodyDigest": "5af859696acd55e43dcea6c54d025518166abf1701a13298bf36fc12130a123a",
+      "digest": "54be22b97693bf45467e7e810ac6b98d39e3098e94e87af863b63ccedb7a78ba",
+      "bodyDigest": "0fe1f288c826f0a4e052ef00ec3b58c361b0a6a81c052c5c3eb58d4ee5a43f75",
       "updatedAt": "2026-10-16T20:55:28+08:00"
     },
     "sandbox-credentials": {
@@ -910,8 +1342,8 @@
       "title": "沙箱资源限制",
       "collection": "notes",
       "state": "pending",
-      "digest": "eda765674702d24f0e703a1ba03bc2fcc3db7e117f38492e968fa82fb34e3ef7",
-      "bodyDigest": "c33baec5c66eaf76ef4252c34b5bb9fa1fc88b0d8b4f762132e64aa99ad1b4e4",
+      "digest": "d8098a0e4ad637172e036b669fd46c8b7170d1dffe2525336e4b1ca05592923c",
+      "bodyDigest": "74cee345c4372e8ba2f96019c06fd3ac717eb13e950ce6a6da6ea03ee69822db",
       "updatedAt": "2026-10-16T20:50:59+08:00"
     },
     "sandbox-verification": {
@@ -998,8 +1430,8 @@
       "title": "A2A：发现、任务生命周期与协议边界",
       "collection": "readings",
       "state": "pending",
-      "digest": "f901814f3e9d5055720f8c74a332ee6ac6a82fdb6f0ff016ce4f83319afa8c3a",
-      "bodyDigest": "c5ce2a5a471d10f6471774d9254fc59677f0b31d76c2ac8406a1d03d98e4dd86",
+      "digest": "0a73e2e2aaa8c7711c073494b768900b9fd78f9d2fc7bf10f85bfd9d73f581a9",
+      "bodyDigest": "b4001d1879421bb3ec9f2b3f952b7751f8b4d39232d057f43e928fa838f78c71",
       "updatedAt": "2026-10-18T00:22:52+08:00"
     },
     "agent-evaluation-infrastructure": {
@@ -1182,8 +1614,8 @@
       "title": "AWS SDK：按错误语义判断是否重试",
       "collection": "readings",
       "state": "pending",
-      "digest": "18194681fbe0d19cab557cc6f9c6eea91f707a37bae3cc56bd2e68dd5ad804d5",
-      "bodyDigest": "5eb40dc62971ed0c22be8dae712f6d987024a1a9d333c1107104e413a9c5670b",
+      "digest": "af67751d6a1749b17fb8ecd5ca54dc0edf6aa5ffc15f875b5bfe0107026f9db8",
+      "bodyDigest": "5982863490efbeed3ecb17a6fe71cc6668bf97567b412af26b9632ef57c0e2a1",
       "updatedAt": "2026-10-13T12:48:15+08:00"
     },
     "azure-clu-intent-design": {
@@ -1218,6 +1650,22 @@
       "bodyDigest": "abb34d6d9cbf4d35229b903b5b3061f4ef6bee0455f4d4dec8b0adb9259847f1",
       "updatedAt": "2026-10-13T12:48:15+08:00"
     },
+    "cache-avalanche-sources": {
+      "title": "缓存集中失效与回源保护资料导读",
+      "collection": "readings",
+      "state": "pending",
+      "digest": "f4a154f86a08f15f336c753deb9a94876ef9fbc18579a6c8579dc050b64bd937",
+      "bodyDigest": "6a4e43aeab99059f734a9611436d05b2739bb4700bb5ddb6ae1a17b331bfbe65",
+      "updatedAt": "2026-10-19T17:18:29+08:00"
+    },
+    "cache-consistency-sources": {
+      "title": "旁路缓存与失效通知可靠性资料导读",
+      "collection": "readings",
+      "state": "pending",
+      "digest": "b4efa4706e4f14523771d198ce011b59d2097acd21bbf95c23f2db273826143b",
+      "bodyDigest": "44543db620e40ffd612ef1b61d91db942d5570e8d40287582378c5caa11a48c9",
+      "updatedAt": "2026-10-19T16:55:15+08:00"
+    },
     "clarify-when-necessary": {
       "title": "Clarify When Necessary：何时值得追问用户",
       "collection": "readings",
@@ -1233,6 +1681,14 @@
       "digest": "474f814a8f7f9544e49cd0fd7abbe1a5d069e6314d2b618e88ba749c285db81b",
       "bodyDigest": "a4a299f7924505053b5fe7a2a9031d0472986b192606ff3ba1728ac6ddf52dcf",
       "updatedAt": "2026-10-17T23:53:29+08:00"
+    },
+    "claude-code-checkpoints": {
+      "title": "Claude Code：会话接续与文件检查点",
+      "collection": "readings",
+      "state": "pending",
+      "digest": "d5977fcc8f4c0e478a0d126bea462c366f46adbd5ae08b91e265e17665ef12aa",
+      "bodyDigest": "e92c291dc17c9ddb8ed398ebe718419ac13fef92fa51d26c640eaf243fd908f6",
+      "updatedAt": "2026-10-19T19:27:21+08:00"
     },
     "claude-code-context-budget-summary": {
       "title": "Claude Code：上下文预算与压缩阈值",
@@ -1270,8 +1726,8 @@
       "title": "Claude：上下文窗口与 Token 计数",
       "collection": "readings",
       "state": "pending",
-      "digest": "49d9588c4516f50a0bd48f35a4e958759282baec198737be2a427485230f841b",
-      "bodyDigest": "5841fa4d3ff8aab31f828a94fbe5e243356d58711d4ce81ba190cdf474f7781f",
+      "digest": "c43e09e2d944261e6becbbc48a976ba2dd87f504aaed45ff1ac956f21577b9e1",
+      "bodyDigest": "d7cf53a19ef11dfb6b59f627c56e580c56f3fc262ae1eec82ed8b25d125423dd",
       "updatedAt": "2026-10-13T12:48:15+08:00"
     },
     "claude-permissions-summary": {
@@ -1434,6 +1890,14 @@
       "bodyDigest": "e8d0c54fd4d7a8de9a25479ed4ddcca27f5524720ef7485d756d06ebee3bc0e0",
       "updatedAt": "2026-10-13T12:48:15+08:00"
     },
+    "codex-session-recovery": {
+      "title": "Codex：从 rollout 恢复会话",
+      "collection": "readings",
+      "state": "pending",
+      "digest": "210827cadfe6c206e95b3f28b718f97cce7c9d3c44e3e0a2463978193cfc5e82",
+      "bodyDigest": "31790822bde6783ffa4a5165139be397a00ac9507745640f0a6d82505446a90c",
+      "updatedAt": "2026-10-19T19:27:21+08:00"
+    },
     "codex-subagents": {
       "title": "Codex：何时委派子 Agent",
       "collection": "readings",
@@ -1494,9 +1958,9 @@
       "title": "Eino 的检查点与中断恢复",
       "collection": "readings",
       "state": "pending",
-      "digest": "c288f66ae46439f8a047c64f0f6491a1ac13aedd35f6179744d27cd8ecd58fcc",
-      "bodyDigest": "2fa86b00aebad817cdfe1f1cbf979c228f8226f725dc6ba0ea501f2d9cbe39fa",
-      "updatedAt": "2026-10-17T21:37:05+08:00"
+      "digest": "7730dd4015a0b042ee37449734f09e84f828ea4a1cac4901b071cb3f0fc7011a",
+      "bodyDigest": "fb484116e93e218ef82e113e8b92b53bb8af3b038bba128f2b938f743ba50e8d",
+      "updatedAt": "2026-10-19T19:27:21+08:00"
     },
     "eino-langfuse-tracing": {
       "title": "Eino 的 Langfuse Trace 集成",
@@ -1562,13 +2026,53 @@
       "bodyDigest": "18ea394b0f91e9b6f347a35cece646428653eec592cafe1359e06659fbc643c6",
       "updatedAt": "2026-10-13T12:48:15+08:00"
     },
+    "go-channel-sources": {
+      "title": "Go runtime 源码导读：Channel 数据结构",
+      "collection": "readings",
+      "state": "pending",
+      "digest": "b8f2b51db3389653d8b7a61f4fdaa00af7c55876dff59109374c012ec6067d7c",
+      "bodyDigest": "22cf87a68e15c9154454f0c2c6d9eef3bcc24fbf26a55002b9cbfbc6f2d78faf",
+      "updatedAt": "2026-10-19T19:27:56+08:00"
+    },
+    "go-escape-sources": {
+      "title": "Go 官方资料：逃逸与堆分配优化",
+      "collection": "readings",
+      "state": "pending",
+      "digest": "c5e6e59825ae446259ba0616289b517726a0089c0c18af4291769fcbd2f17ea6",
+      "bodyDigest": "30385c8893b480152731dc5f6a5ddd6fac923d509dc755f5fa0ec47be699b764",
+      "updatedAt": "2026-10-19T15:36:06+08:00"
+    },
+    "go-gmp-sources": {
+      "title": "Go 官方源码导读：GMP 与任务调度",
+      "collection": "readings",
+      "state": "pending",
+      "digest": "750f3110f2ee3edeb0c4ceca366955f3e9907f80b1df7b39fc6680187543a717",
+      "bodyDigest": "c720b88510403f52956faa72cf94213e7d03410688352e0d953517103aefcd9a",
+      "updatedAt": "2026-10-19T17:31:03+08:00"
+    },
+    "go-preemption-sources": {
+      "title": "Go 官方源码导读：协作式与异步抢占",
+      "collection": "readings",
+      "state": "pending",
+      "digest": "da33229fa2ea54a6337f9d81d2e1547fdfca53c6790a0f9e97661a35be8bddb2",
+      "bodyDigest": "6973f4c57637781019dac7f47a3a13755354c94e8fde5e8f6f8107d98a91d476",
+      "updatedAt": "2026-10-19T11:24:21+08:00"
+    },
     "go-semaphore-summary": {
       "title": "Go：用加权信号量限制并发资源占用",
       "collection": "readings",
       "state": "pending",
-      "digest": "29380f14ed4f300ebe76ea14a78898d9524d05c638e273ec58ddaac372b52db5",
-      "bodyDigest": "80eb9319183d66fe3450729ec6178143ace47c295e45bd138433d873be42484a",
+      "digest": "6bd0b4aab44096de5d8b13ae1cc7be7d9d44149e214b32aee474dd0b7424f288",
+      "bodyDigest": "9bdc14f9a567a8c08f6b975f2c30e256e0b874d094e96f698db1783238ac469e",
       "updatedAt": "2026-10-18T23:47:18+08:00"
+    },
+    "go-singleflight-sources": {
+      "title": "Go 官方源码导读：Singleflight 请求合并",
+      "collection": "readings",
+      "state": "pending",
+      "digest": "f76d5298563646ad9d8d6fc4ac5ccbca9a9a521ae8092eac6329d4314b68ada6",
+      "bodyDigest": "6811af9de45f4ed625d0931a079b2dbf81543dc4d84f4987261ab428caa60695",
+      "updatedAt": "2026-10-19T19:20:51+08:00"
     },
     "go-sql-connections": {
       "title": "Go 官方文档导读：数据库连接池与资源归还",
@@ -1598,8 +2102,8 @@
       "title": "gRPC：错误码怎样表达恢复方式",
       "collection": "readings",
       "state": "pending",
-      "digest": "53f563ca2d3de3a9b2dc80b23a41e19e238b288088afc92d26448c02586dfa37",
-      "bodyDigest": "803e630a02b1e4174961b033824c91603170d88be722653d7bb5394a4a2435fc",
+      "digest": "9e2ef4f0c7e533605cac77c567a3161330e11c6ca1110e91c8c5d9a73454bbad",
+      "bodyDigest": "d9c3cba74710cd9f3ae93d721bde01023a9374bc7d59edae4c6f194997145c4b",
       "updatedAt": "2026-10-13T12:48:15+08:00"
     },
     "harbor-evaluation": {
@@ -1665,6 +2169,38 @@
       "digest": "0f5abaf4ea2a11a5e78271216d27eb148a8a8c580959231b7e6b1d5dbc5d8080",
       "bodyDigest": "31017ca692711b9ab95700e5a13e77be6f2a8e7700e178bb07b0d26c025d962e",
       "updatedAt": "2026-10-13T12:48:15+08:00"
+    },
+    "kafka-architecture-sources": {
+      "title": "Kafka 整体架构与组件分工导读",
+      "collection": "readings",
+      "state": "pending",
+      "digest": "432cacfb35680461bfff238421232fc8a8a1fe167b2bf62e6bb1cb64d8aebcff",
+      "bodyDigest": "eabac153d4984b3dce2fad060494bb918e3eb0e622232ae064219d24a91d1236",
+      "updatedAt": "2026-10-19T16:59:29+08:00"
+    },
+    "kafka-partition-count-sources": {
+      "title": "Kafka 分区数量与扩容代价导读",
+      "collection": "readings",
+      "state": "pending",
+      "digest": "919f4c9b59ba54424e48baabc5c31a59381f4d39dce4e7e6264b75f8e70c059a",
+      "bodyDigest": "125bc96972b500fdee4232785fafba8360ca5b08dc183bc0472cf37258c8a5e3",
+      "updatedAt": "2026-10-19T10:51:35+08:00"
+    },
+    "kafka-reliability-sources": {
+      "title": "Kafka 副本与写入确认导读",
+      "collection": "readings",
+      "state": "pending",
+      "digest": "9d0548d6d5ace252c83d01a5e5a69af2fa49a89c29d6755417b47b080889bf18",
+      "bodyDigest": "a8fe1ab6b961b03b5163407e837bf82cb6b0e1548eaebdaef93b7c1d9271581b",
+      "updatedAt": "2026-10-19T11:07:51+08:00"
+    },
+    "kafka-throughput-sources": {
+      "title": "Kafka 高吞吐设计导读",
+      "collection": "readings",
+      "state": "pending",
+      "digest": "6fdd9576edf780b4c4266a3cbc2a5910f424402b95f988baacac4e53e8ba0509",
+      "bodyDigest": "96f55b9b418fd51978abb82c2b0f4985885b462cd8e9f98a1596212673191cd8",
+      "updatedAt": "2026-10-19T11:01:36+08:00"
     },
     "langchain-context-engineering-summary": {
       "title": "LangChain：写入、选择、压缩与隔离上下文",
@@ -1902,8 +2438,8 @@
       "title": "MCP 官方架构：发现、调用与通知",
       "collection": "readings",
       "state": "pending",
-      "digest": "e90b2e6f158670460a4bbb100bbb5ff97279598b8169a92abbe53a8be5c2fd55",
-      "bodyDigest": "5280dc1fe2ee1c05b0821ec07e71a1267f73dd132b5188a1c3a464ba4f754b3a",
+      "digest": "f641650239faab7cc79eb81b1a65edc648dd6b2f22680348442e0e213c28f42c",
+      "bodyDigest": "15dcf4e9e6b38d78f00093d115036072fe71a1038c9566e340cbccee7bcf5a3c",
       "updatedAt": "2026-10-13T12:48:15+08:00"
     },
     "mcp-resources-prompts-summary": {
@@ -1930,6 +2466,14 @@
       "bodyDigest": "1b735cdf83681e844faad700af4a7f5fbf7828c5b12748736fd3d56319fb502b",
       "updatedAt": "2026-10-13T12:48:15+08:00"
     },
+    "memory-oom-leak-sources": {
+      "title": "内存耗尽与泄漏：官方资料导读",
+      "collection": "readings",
+      "state": "pending",
+      "digest": "caa50d267f229e572b0f418ae664dd5512f25154b1efbbff62acc4869729a101",
+      "bodyDigest": "01f8743bcab287ad47be83fb222bcf5f376f8933d32da8cf899f7c8bce779ffb",
+      "updatedAt": "2026-10-19T16:01:44+08:00"
+    },
     "messaging-patterns-sources": {
       "title": "消息通信与事件处理模式导读",
       "collection": "readings",
@@ -1945,6 +2489,14 @@
       "digest": "b88a45017c302a1f758de91b5b73f42fbc05c3066692b95482c099823dc93d93",
       "bodyDigest": "c5fbf729d79eb3ed46c234e8f366cad476b4bf4f8a15f46b1aab95b3127a3596",
       "updatedAt": "2026-10-18T20:45:54+08:00"
+    },
+    "mysql-slow-query-sources": {
+      "title": "MySQL 慢查询优化资料导读",
+      "collection": "readings",
+      "state": "pending",
+      "digest": "621bda67455b23e14c622e7fcd0022807df890494f10ff4118531f1607bbe4d5",
+      "bodyDigest": "e16ece0d9c6477fd11280f32d253acbc280f402fe4956ebd33421ef31e3b4681",
+      "updatedAt": "2026-10-19T19:19:47+08:00"
     },
     "openai-agents-architecture-summary": {
       "title": "OpenAI Agents API：Harness、执行环境与应用的分工",
@@ -2070,8 +2622,8 @@
       "title": "OWASP：提示注入与 Agent 执行边界",
       "collection": "readings",
       "state": "pending",
-      "digest": "e834b5b313e6d96ad6d2c2c3b6458c2c78c51e67cd7ef3bd77a6b92e76a6ec24",
-      "bodyDigest": "84316f5659e4746fa57ea533bceb0954c9f36f7d0746d661915a434fde9792b9",
+      "digest": "4fb8a938f5719474370e674a39a64e08a72f1ce2c7be830b49c00ad969c70104",
+      "bodyDigest": "f86c2eafea40e65086f6f7f70539182007b3140bd141fc956240394b48dcbe6c",
       "updatedAt": "2026-10-13T12:48:15+08:00"
     },
     "permit-agent-approvals-summary": {
@@ -2226,6 +2778,22 @@
       "bodyDigest": "883ba74cdd6e638a32ea75ea94793781b8860229dd4662f31afedb21092eaaac",
       "updatedAt": "2026-10-18T23:47:18+08:00"
     },
+    "redis-expiration-sources": {
+      "title": "Redis 过期机制官方资料导读",
+      "collection": "readings",
+      "state": "pending",
+      "digest": "7f9f71455530b1bbe88721d440e0f044685e8fe8fdfdda35c82befdff0be6b2d",
+      "bodyDigest": "1358f571e50827fb385c593ad30bcee519f803fcb754f87bb4078680a415ea27",
+      "updatedAt": "2026-10-19T10:35:33+08:00"
+    },
+    "redis-rate-limiting-algorithms": {
+      "title": "Redis：限流算法的窗口、突发与排队",
+      "collection": "readings",
+      "state": "pending",
+      "digest": "c270dbf1fa64cd38a4038b35050448ad1647ff2c66717e43cfc5e17457871247",
+      "bodyDigest": "7d103f2e98a2f359b1ba6336ef4ea301606792d52fbb073903b284624cba8fdf",
+      "updatedAt": "2026-10-19T16:19:44+08:00"
+    },
     "reflexion-summary": {
       "title": "Reflexion：把执行反馈写成经验，指导下一次尝试",
       "collection": "readings",
@@ -2286,8 +2854,8 @@
       "title": "Stripe：结果未知时怎样安全重试",
       "collection": "readings",
       "state": "pending",
-      "digest": "e0a9d3233925b93c1a10b231e0488015603c30674ff8a7395f9053b8dc789d04",
-      "bodyDigest": "d5bfe3e8008cebd3e363dda1b1a142ae03d63753a161fe23214818394324de3d",
+      "digest": "7f1190e12cf354408f0f188c904f72c4e8d0fdc252b9f1d496a796c7b4e42e34",
+      "bodyDigest": "cdf4d4d614bb880f958050697e1b253d65be8e56b04365bed3ba668f273a0ea2",
       "updatedAt": "2026-10-13T12:48:15+08:00"
     },
     "swe-bench-evaluation": {
@@ -2329,6 +2897,14 @@
       "digest": "84a467ab39a5c217b92ae115ebab4325332534a526b874f9d5b071712feba514",
       "bodyDigest": "57000d28d92ece3b7d7331b677201c1c0e934ed424699c9b608ee4fb3bcf2f47",
       "updatedAt": "2026-10-13T12:48:15+08:00"
+    },
+    "websocket-sse-standards": {
+      "title": "WebSocket 与 SSE 标准要点",
+      "collection": "readings",
+      "state": "pending",
+      "digest": "82f539079b14bd904104cd58e0c0cf1119dcc091894741b4f74da8f8179fe08f",
+      "bodyDigest": "04f1c71b493c60cbbc665af5005b1cd96cf2cb6a81fde1a8377164932b8b642b",
+      "updatedAt": "2026-10-19T13:43:27+08:00"
     },
     "xiaolin-task-decomposition-summary": {
       "title": "小林：任务拆分为什么有用",
@@ -2913,9 +3489,9 @@
     "assets/mcp-flow": {
       "title": "mcp-flow",
       "files": {
-        "assets/mcp-flow.excalidraw": "5353e374815aa15502f7c3eccff0bbabc309fb1384d7c21f522ccb2c75a48ad4",
-        "assets/mcp-flow.png": "a2c0f29dbdc84b78ceb7048fde537dd10ffb27a0c11b5b5a0296edd6185db199",
-        "assets/mcp-flow.svg": "d73dc7e1bea2f2738ea0d75a9a7a05878e085f36bb30dc3ffe09bb20363975ed"
+        "assets/mcp-flow.excalidraw": "48f9c0f27c3651cde5381ed2b2df549610d9dfebd4696ba9d976869d01aa50c4",
+        "assets/mcp-flow.png": "993225fbca75e400441c66ba677c11abe4f23688afa1e1699cb2816d4e677c70",
+        "assets/mcp-flow.svg": "8d109d1403cb1010332904585443353246452ae6f73ab34f5d4effca72259949"
       },
       "collections": [
         "notes"
@@ -2931,6 +3507,15 @@
         "notes"
       ]
     },
+    "assets/mcp-overview-illustrated": {
+      "title": "mcp-overview-illustrated",
+      "files": {
+        "assets/mcp-overview-illustrated.png": "ee1dbd87c0ea86d86392a321cece81bce6fae0943fe49de8fecd0a4bf110673e"
+      },
+      "collections": [
+        "notes"
+      ]
+    },
     "assets/mcp-overview": {
       "title": "mcp-overview",
       "files": {
@@ -2938,9 +3523,7 @@
         "assets/mcp-overview.png": "aa4ac49c6dcdd7192b20b917ce3978139bd820467267e6b60c2eaaa0a90aa58b",
         "assets/mcp-overview.svg": "18fe5fadc5e23e4bff8841ee039af642f6337c2b885b1b9e1d27e76ce0f47370"
       },
-      "collections": [
-        "notes"
-      ]
+      "collections": []
     },
     "assets/multi-agent-delegation": {
       "title": "multi-agent-delegation",
@@ -35345,6 +35928,3700 @@
       ],
       "source": "observed",
       "docId": "temporal-retry-policy-summary"
+    },
+    {
+      "id": "53854ff9-c52a-452e-96bd-b4290661bdf0",
+      "kind": "state-changed",
+      "entity": "doc:agent-evaluation",
+      "title": "Agent 评测",
+      "time": "2026-10-18T16:33:11.868Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-evaluation",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "f92ab48c-0bee-4149-a90f-9956f7442850",
+      "kind": "state-changed",
+      "entity": "doc:agent-evaluation",
+      "title": "Agent 评测",
+      "time": "2026-10-18T16:33:12.343Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "agent-evaluation",
+      "from": "organized",
+      "to": "pending"
+    },
+    {
+      "id": "d4d612e8-6a18-4174-95ac-f6ea7efc8af5",
+      "kind": "created",
+      "entity": "doc:api-latency-interview",
+      "title": "接口响应慢，怎么排查和优化？",
+      "time": "2026-10-18T16:34:09.449Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "api-latency-interview"
+    },
+    {
+      "id": "f5671149-6527-43c5-ad62-66969052e427",
+      "kind": "updated",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-18T16:34:09.449Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "4a7000d8-b219-4168-a37a-56e6fc2f7977",
+      "kind": "updated",
+      "entity": "doc:api-latency-interview",
+      "title": "接口响应慢，怎么排查和优化？",
+      "time": "2026-10-18T16:36:57.449Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "api-latency-interview"
+    },
+    {
+      "id": "cdae144a-ff5a-45d7-9115-1a2a0be37f8f",
+      "kind": "updated",
+      "entity": "doc:api-latency-interview",
+      "title": "接口响应慢，怎么排查和优化？",
+      "time": "2026-10-18T16:37:17.619Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "api-latency-interview"
+    },
+    {
+      "id": "809a789b-dbe6-4929-9633-315876d9e672",
+      "kind": "updated",
+      "entity": "doc:api-latency-interview",
+      "title": "接口响应慢，怎么排查和优化？",
+      "time": "2026-10-18T16:38:13.440Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "api-latency-interview"
+    },
+    {
+      "id": "e0dd94e1-5e6e-4259-947d-993b7dfae4f3",
+      "kind": "updated",
+      "entity": "doc:api-latency-interview",
+      "title": "接口响应慢，怎么排查和优化？",
+      "time": "2026-10-18T16:39:21.791Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "api-latency-interview"
+    },
+    {
+      "id": "b52fbd90-3836-4b17-a59b-11863bf5feff",
+      "kind": "updated",
+      "entity": "doc:api-latency-interview",
+      "title": "接口响应慢，怎么排查和优化？",
+      "time": "2026-10-18T16:42:25.480Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "api-latency-interview"
+    },
+    {
+      "id": "bf542bf5-609a-43ba-b387-5460fcb5c899",
+      "kind": "updated",
+      "entity": "doc:api-latency-interview",
+      "title": "接口响应慢，怎么排查和优化？",
+      "time": "2026-10-18T16:44:57.436Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "api-latency-interview"
+    },
+    {
+      "id": "d9261eb6-9038-42c7-aca6-5a8eb31902db",
+      "kind": "updated",
+      "entity": "doc:api-latency-interview",
+      "title": "接口响应慢，怎么排查和优化？",
+      "time": "2026-10-18T16:46:05.426Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "api-latency-interview"
+    },
+    {
+      "id": "38eb0fba-6a27-4432-8c9b-b1554bc28d34",
+      "kind": "updated",
+      "entity": "doc:api-latency-interview",
+      "title": "接口响应慢，怎么排查和优化？",
+      "time": "2026-10-18T16:47:29.445Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "api-latency-interview"
+    },
+    {
+      "id": "91c32e37-5093-4a73-a14f-509d9b7b13ee",
+      "kind": "updated",
+      "entity": "doc:api-latency-interview",
+      "title": "接口响应慢，怎么排查和优化？",
+      "time": "2026-10-18T16:50:12.599Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "api-latency-interview"
+    },
+    {
+      "id": "2a5bacd6-c448-4ea8-aae0-548320f74248",
+      "kind": "updated",
+      "entity": "doc:api-latency-interview",
+      "title": "接口响应慢，怎么排查和优化？",
+      "time": "2026-10-18T16:50:13.564Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "api-latency-interview"
+    },
+    {
+      "id": "7acece83-c482-4aed-b04b-ba2792ef3f4f",
+      "kind": "updated",
+      "entity": "doc:api-latency-interview",
+      "title": "接口响应慢，怎么排查和优化？",
+      "time": "2026-10-18T16:52:05.419Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "api-latency-interview"
+    },
+    {
+      "id": "96b35750-aed0-4fd0-acec-5bf79b18f56f",
+      "kind": "state-changed",
+      "entity": "doc:api-latency-interview",
+      "title": "接口响应慢，怎么排查和优化？",
+      "time": "2026-10-18T16:52:37.167Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "api-latency-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "4d5476a2-a932-4d60-a884-2372e0ce6f15",
+      "kind": "updated",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-19T02:36:28.826Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "fda4dc83-6ce4-4d2e-8152-7b5583e8b89d",
+      "kind": "created",
+      "entity": "doc:kafka-throughput-interview",
+      "title": "Kafka 是怎么实现高吞吐的？",
+      "time": "2026-10-19T02:36:28.826Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "kafka-throughput-interview"
+    },
+    {
+      "id": "4c54bc9a-1ee2-4264-8062-025c171ecb33",
+      "kind": "created",
+      "entity": "doc:redis-expiration-interview",
+      "title": "Redis 的过期机制是怎么实现的？",
+      "time": "2026-10-19T02:36:28.826Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-expiration-interview"
+    },
+    {
+      "id": "a6cec99c-bb52-4e8f-b9a9-cfbd05736e6b",
+      "kind": "created",
+      "entity": "doc:kafka-throughput-sources",
+      "title": "Kafka 高吞吐设计导读",
+      "time": "2026-10-19T02:36:28.826Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "kafka-throughput-sources"
+    },
+    {
+      "id": "946409ff-3318-43ae-b24a-897dd76473d0",
+      "kind": "created",
+      "entity": "doc:redis-expiration-sources",
+      "title": "Redis 过期机制官方资料导读",
+      "time": "2026-10-19T02:36:28.826Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "redis-expiration-sources"
+    },
+    {
+      "id": "dae86d79-e9b3-468c-9df8-d2ad56020298",
+      "kind": "updated",
+      "entity": "doc:kafka-throughput-interview",
+      "title": "Kafka 是怎么实现高吞吐的？",
+      "time": "2026-10-19T02:37:58.424Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "kafka-throughput-interview"
+    },
+    {
+      "id": "13628742-bb51-4db1-8bab-6a26087c079b",
+      "kind": "state-changed",
+      "entity": "doc:kafka-throughput-interview",
+      "title": "Kafka 是怎么实现高吞吐的？",
+      "time": "2026-10-19T02:38:49.130Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "kafka-throughput-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "7bdc4d72-d7f1-4e97-bbf6-617502e34cb3",
+      "kind": "updated",
+      "entity": "doc:redis-expiration-interview",
+      "title": "Redis 的过期机制是怎么实现的？",
+      "time": "2026-10-19T02:40:38.508Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-expiration-interview"
+    },
+    {
+      "id": "bbbfa0cd-52c3-4f8c-8c14-ef86347ee069",
+      "kind": "state-changed",
+      "entity": "doc:redis-expiration-interview",
+      "title": "Redis 的过期机制是怎么实现的？",
+      "time": "2026-10-19T02:42:32.030Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-expiration-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "602c8cfc-5ea5-40c8-a440-6fe32c3f0512",
+      "kind": "state-changed",
+      "entity": "doc:redis-expiration-interview",
+      "title": "Redis 的过期机制是怎么实现的？",
+      "time": "2026-10-19T02:43:32.629Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-expiration-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "d165491a-240d-41b3-993e-db4109328283",
+      "kind": "updated",
+      "entity": "doc:redis-expiration-interview",
+      "title": "Redis 的过期机制是怎么实现的？",
+      "time": "2026-10-19T02:44:02.436Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-expiration-interview"
+    },
+    {
+      "id": "fa56d6d7-ca0b-4a16-8e37-399d18222cf7",
+      "kind": "updated",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-19T02:45:58.433Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "68e58805-2cfc-43be-bd0a-73517efe206f",
+      "kind": "created",
+      "entity": "doc:redis-events-interview",
+      "title": "Redis 的事件",
+      "time": "2026-10-19T02:45:58.433Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-events-interview"
+    },
+    {
+      "id": "ada891e0-23c9-4f7b-ac99-45ded1ad1dc1",
+      "kind": "state-changed",
+      "entity": "doc:redis-events-interview",
+      "title": "Redis 的事件",
+      "time": "2026-10-19T02:46:56.537Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-events-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "6f4ccd9d-d706-4ed1-8377-accec9690c99",
+      "kind": "state-changed",
+      "entity": "doc:redis-events-interview",
+      "title": "Redis 的事件",
+      "time": "2026-10-19T02:46:57.317Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-events-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "0a7e4e1b-5ae2-423f-9b3f-5db2d11f5584",
+      "kind": "updated",
+      "entity": "doc:redis-events-interview",
+      "title": "Redis 的事件",
+      "time": "2026-10-19T02:47:46.459Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-events-interview"
+    },
+    {
+      "id": "615988f7-7d8c-4105-b081-d55aeaa6ed9e",
+      "kind": "updated",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-19T02:51:38.422Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "caadadeb-b7b0-49c4-941c-487625da4a8b",
+      "kind": "created",
+      "entity": "doc:kafka-partition-count-interview",
+      "title": "Kafka 的分区是不是越多越好？",
+      "time": "2026-10-19T02:51:38.422Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "kafka-partition-count-interview"
+    },
+    {
+      "id": "e1c9ccdf-1619-4fc4-ae9b-fa99a56af161",
+      "kind": "created",
+      "entity": "doc:kafka-partition-count-sources",
+      "title": "Kafka 分区数量与扩容代价导读",
+      "time": "2026-10-19T02:51:38.422Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "kafka-partition-count-sources"
+    },
+    {
+      "id": "8227e445-c899-4808-bef3-ab37b54ceb00",
+      "kind": "updated",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-19T02:52:22.422Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "f1cf1730-5152-4125-ae6c-cb957d805cf1",
+      "kind": "created",
+      "entity": "doc:kafka-interview-index",
+      "title": "Kafka 面试题",
+      "time": "2026-10-19T02:52:22.422Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "kafka-interview-index"
+    },
+    {
+      "id": "29a8b55a-c7a3-48a3-a3a3-c026f89e9933",
+      "kind": "created",
+      "entity": "doc:performance-interview-index",
+      "title": "性能排查与优化面试题",
+      "time": "2026-10-19T02:52:22.422Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "performance-interview-index"
+    },
+    {
+      "id": "6147e281-74e3-4d25-8ad7-8cc90b0f3075",
+      "kind": "created",
+      "entity": "doc:redis-interview-index",
+      "title": "Redis 面试题",
+      "time": "2026-10-19T02:52:22.422Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-interview-index"
+    },
+    {
+      "id": "f779031f-03a6-4e61-a3f2-f03f1184a4e1",
+      "kind": "state-changed",
+      "entity": "doc:kafka-partition-count-interview",
+      "title": "Kafka 的分区是不是越多越好？",
+      "time": "2026-10-19T02:53:53.666Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "kafka-partition-count-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "866e61e1-bb9a-4aba-b9cf-b73b0d1294c5",
+      "kind": "state-changed",
+      "entity": "doc:kafka-throughput-interview",
+      "title": "Kafka 是怎么实现高吞吐的？",
+      "time": "2026-10-19T02:53:59.199Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "kafka-throughput-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "3299e2b2-09de-4b9f-8eab-f26d3add9e8f",
+      "kind": "state-changed",
+      "entity": "doc:api-latency-interview",
+      "title": "接口响应慢，怎么排查和优化？",
+      "time": "2026-10-19T02:54:05.950Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "api-latency-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "64117617-25fe-48b8-bfed-4c59b046fbbc",
+      "kind": "updated",
+      "entity": "doc:kafka-partition-count-interview",
+      "title": "Kafka 的分区是不是越多越好？",
+      "time": "2026-10-19T02:54:18.429Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "kafka-partition-count-interview"
+    },
+    {
+      "id": "5cf19aa0-03ed-4b57-98c1-445269c3a5c9",
+      "kind": "state-changed",
+      "entity": "doc:kafka-partition-count-interview",
+      "title": "Kafka 的分区是不是越多越好？",
+      "time": "2026-10-19T02:57:10.730Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "kafka-partition-count-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "da10a6ed-c00c-4caa-8e32-8019225aee79",
+      "kind": "updated",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-19T03:01:06.428Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "cc2d1d9e-5ff1-4a25-bea8-0f2d622b7ec7",
+      "kind": "updated",
+      "entity": "doc:kafka-interview-index",
+      "title": "Kafka 面试题",
+      "time": "2026-10-19T03:01:06.428Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "kafka-interview-index"
+    },
+    {
+      "id": "760a3e4e-d86d-41dc-b387-ef6a9f3e8bd9",
+      "kind": "created",
+      "entity": "doc:kafka-ordering-interview",
+      "title": "Kafka 能保证消息顺序吗？",
+      "time": "2026-10-19T03:01:06.428Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "kafka-ordering-interview"
+    },
+    {
+      "id": "f8ee8f62-fc18-4240-828e-e1cc0589d342",
+      "kind": "state-changed",
+      "entity": "doc:kafka-ordering-interview",
+      "title": "Kafka 能保证消息顺序吗？",
+      "time": "2026-10-19T03:01:39.401Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "kafka-ordering-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "1af6e420-3e40-4d80-983e-f9ef6e00b9c8",
+      "kind": "state-changed",
+      "entity": "doc:kafka-ordering-interview",
+      "title": "Kafka 能保证消息顺序吗？",
+      "time": "2026-10-19T03:01:39.765Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "kafka-ordering-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "5914b411-9696-49e9-a40d-d5f8c0bc99d1",
+      "kind": "created",
+      "entity": "doc:kafka-flush-interview",
+      "title": "Kafka 顺序追加写入后，消息会立即落盘吗？",
+      "time": "2026-10-19T03:02:18.432Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "kafka-flush-interview"
+    },
+    {
+      "id": "c958a9e9-aa3c-454a-9126-e1df0d926b31",
+      "kind": "updated",
+      "entity": "doc:kafka-interview-index",
+      "title": "Kafka 面试题",
+      "time": "2026-10-19T03:02:18.432Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "kafka-interview-index"
+    },
+    {
+      "id": "b8a770ab-c8fb-48ab-8608-85e749584490",
+      "kind": "updated",
+      "entity": "doc:kafka-throughput-sources",
+      "title": "Kafka 高吞吐设计导读",
+      "time": "2026-10-19T03:02:18.432Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "kafka-throughput-sources"
+    },
+    {
+      "id": "44f76b5c-afd0-486f-8966-d1ff3383e150",
+      "kind": "state-changed",
+      "entity": "doc:kafka-flush-interview",
+      "title": "Kafka 顺序追加写入后，消息会立即落盘吗？",
+      "time": "2026-10-19T03:08:17.237Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "kafka-flush-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "7c88d98b-0ce9-4574-adde-ae57adbfbc67",
+      "kind": "state-changed",
+      "entity": "doc:kafka-flush-interview",
+      "title": "Kafka 顺序追加写入后，消息会立即落盘吗？",
+      "time": "2026-10-19T03:08:17.595Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "kafka-flush-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "34718633-2978-470c-8b11-0af2d62ea27f",
+      "kind": "updated",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-19T03:08:54.429Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "d127a6cc-f8a9-4c4f-a5ca-72b34df7d3a6",
+      "kind": "updated",
+      "entity": "doc:kafka-interview-index",
+      "title": "Kafka 面试题",
+      "time": "2026-10-19T03:08:54.429Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "kafka-interview-index"
+    },
+    {
+      "id": "241a1de0-bae7-4387-bfd4-2ccb60084ad3",
+      "kind": "created",
+      "entity": "doc:kafka-reliability-interview",
+      "title": "Kafka 如何保证消息写入的可靠性？",
+      "time": "2026-10-19T03:08:54.429Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "kafka-reliability-interview"
+    },
+    {
+      "id": "23301afc-2c25-4219-a190-7ce95564d250",
+      "kind": "created",
+      "entity": "doc:kafka-reliability-sources",
+      "title": "Kafka 副本与写入确认导读",
+      "time": "2026-10-19T03:08:54.429Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "kafka-reliability-sources"
+    },
+    {
+      "id": "b152536e-5f26-45fe-be4e-450c2415bdd6",
+      "kind": "state-changed",
+      "entity": "doc:kafka-reliability-interview",
+      "title": "Kafka 如何保证消息写入的可靠性？",
+      "time": "2026-10-19T03:11:56.402Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "kafka-reliability-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "eee506eb-c678-4dd2-8724-5312dfb3c112",
+      "kind": "state-changed",
+      "entity": "doc:kafka-reliability-interview",
+      "title": "Kafka 如何保证消息写入的可靠性？",
+      "time": "2026-10-19T03:11:56.832Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "kafka-reliability-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "35d6955f-7d46-41bb-b2d5-e4bfe75b47d0",
+      "kind": "updated",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-19T03:13:59.386Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "64574b51-0e0c-4380-8c5a-964c12367437",
+      "kind": "created",
+      "entity": "doc:kafka-consumer-lag-interview",
+      "title": "消费者出现大量消息积压，怎么排查和处理？",
+      "time": "2026-10-19T03:13:59.386Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "kafka-consumer-lag-interview"
+    },
+    {
+      "id": "39b99c4e-1787-47a6-9061-fcbcfdadf581",
+      "kind": "updated",
+      "entity": "doc:kafka-interview-index",
+      "title": "Kafka 面试题",
+      "time": "2026-10-19T03:13:59.386Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "kafka-interview-index"
+    },
+    {
+      "id": "fcb261c6-fcd3-4ab8-b915-1834056084f1",
+      "kind": "state-changed",
+      "entity": "doc:kafka-consumer-lag-interview",
+      "title": "消费者出现大量消息积压，怎么排查和处理？",
+      "time": "2026-10-19T03:15:06.454Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "kafka-consumer-lag-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "e07b32a4-3991-453c-b46d-b21ee45a7314",
+      "kind": "state-changed",
+      "entity": "doc:kafka-consumer-lag-interview",
+      "title": "消费者出现大量消息积压，怎么排查和处理？",
+      "time": "2026-10-19T03:15:06.848Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "kafka-consumer-lag-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "d3463a06-edf8-4581-9b7e-87769afb4b97",
+      "kind": "created",
+      "entity": "doc:go-channel-close-interview",
+      "title": "怎么防止 Go Channel 重复关闭？",
+      "time": "2026-10-19T03:24:50.445Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-channel-close-interview"
+    },
+    {
+      "id": "1c672ece-f92d-4689-a4f6-0d5f8ffaa461",
+      "kind": "updated",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-19T03:24:50.445Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "ac9fb2f9-b7e1-4b0c-b508-ca05bfe93acd",
+      "kind": "created",
+      "entity": "doc:go-preemption-interview",
+      "title": "Go 协程是怎么抢占的？",
+      "time": "2026-10-19T03:25:02.417Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-preemption-interview"
+    },
+    {
+      "id": "d2afd0fe-8afe-43f2-873e-0e399b970411",
+      "kind": "updated",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-19T03:25:02.417Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "8d8a6eae-8fbb-4de1-afb7-5743787288c3",
+      "kind": "created",
+      "entity": "doc:go-preemption-sources",
+      "title": "Go 官方源码导读：协作式与异步抢占",
+      "time": "2026-10-19T03:25:02.417Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "go-preemption-sources"
+    },
+    {
+      "id": "7503f5c9-dba8-48c4-9c6c-2269cd4aaed0",
+      "kind": "state-changed",
+      "entity": "doc:go-channel-close-interview",
+      "title": "怎么防止 Go Channel 重复关闭？",
+      "time": "2026-10-19T03:26:07.998Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-channel-close-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "9a5ea95f-d532-481b-9739-99cf74ada423",
+      "kind": "state-changed",
+      "entity": "doc:go-channel-close-interview",
+      "title": "怎么防止 Go Channel 重复关闭？",
+      "time": "2026-10-19T03:26:08.676Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-channel-close-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "57513cf0-7004-4ced-8814-c43b6692eea1",
+      "kind": "updated",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-19T03:36:43.446Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "bf7ec249-3c49-446d-8800-d7d9932aee01",
+      "kind": "created",
+      "entity": "doc:temperature-interview",
+      "title": "模型调用中的 Temperature 是什么，怎样起作用？",
+      "time": "2026-10-19T03:36:43.446Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "temperature-interview"
+    },
+    {
+      "id": "693fc852-fd92-4d99-8193-2920a23e55de",
+      "kind": "created",
+      "entity": "doc:agent-communication-interview",
+      "title": "父子 Agent 和多 Agent 之间怎么通信？",
+      "time": "2026-10-19T04:29:34.381Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-communication-interview"
+    },
+    {
+      "id": "0000e5c3-2451-4d3f-9a6f-5ded55beb6b1",
+      "kind": "updated",
+      "entity": "doc:agent-interview-hub",
+      "title": "Agent 面试题",
+      "time": "2026-10-19T04:29:34.381Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-interview-hub"
+    },
+    {
+      "id": "92e09570-731d-4b8b-9e2c-6a434b9b6835",
+      "kind": "updated",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-19T04:29:34.381Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "c3500efd-f6fb-4e9d-99d2-3adee2b0a7b6",
+      "kind": "state-changed",
+      "entity": "doc:agent-communication-interview",
+      "title": "父子 Agent 和多 Agent 之间怎么通信？",
+      "time": "2026-10-19T04:31:25.026Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-communication-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "389fd229-2658-4967-b877-5656e83f43ef",
+      "kind": "state-changed",
+      "entity": "doc:agent-communication-interview",
+      "title": "父子 Agent 和多 Agent 之间怎么通信？",
+      "time": "2026-10-19T04:31:25.318Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-communication-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "8510075b-29ea-4aaf-a2a1-e96d08565186",
+      "kind": "created",
+      "entity": "doc:a2a-interview",
+      "title": "你对 A2A 协议了解多少？",
+      "time": "2026-10-19T04:34:47.177Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "a2a-interview"
+    },
+    {
+      "id": "83eb5589-4627-4479-a336-424273d6c138",
+      "kind": "updated",
+      "entity": "doc:agent-interview-hub",
+      "title": "Agent 面试题",
+      "time": "2026-10-19T04:34:47.177Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-interview-hub"
+    },
+    {
+      "id": "d8f04ac0-da6a-4b1e-a431-154e3625b78b",
+      "kind": "updated",
+      "entity": "doc:agent-interview-hub",
+      "title": "Agent 面试题",
+      "time": "2026-10-19T04:36:35.176Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-interview-hub"
+    },
+    {
+      "id": "99a65a08-d6a1-42a1-98b9-c01f2b233696",
+      "kind": "created",
+      "entity": "doc:agent-sandbox-interview",
+      "title": "Agent 里为什么要做沙箱？",
+      "time": "2026-10-19T04:36:35.176Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-sandbox-interview"
+    },
+    {
+      "id": "611ec749-ed6d-4190-913a-0dbc09e615ce",
+      "kind": "state-changed",
+      "entity": "doc:agent-sandbox-interview",
+      "title": "Agent 里为什么要做沙箱？",
+      "time": "2026-10-19T05:24:41.662Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-sandbox-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "3ecf7b10-42d4-4e80-88e5-78262f592192",
+      "kind": "state-changed",
+      "entity": "doc:agent-sandbox-interview",
+      "title": "Agent 里为什么要做沙箱？",
+      "time": "2026-10-19T05:24:42.331Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-sandbox-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "7a8be19f-8506-47cc-817e-825bd128ba21",
+      "kind": "created",
+      "entity": "doc:agent-intent-interview",
+      "title": "Agent 为什么知道调用哪个工具？怎么做意图识别？",
+      "time": "2026-10-19T05:37:18.742Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-intent-interview"
+    },
+    {
+      "id": "ba6f94d9-a5bd-4a1f-b84f-2c220885b96c",
+      "kind": "updated",
+      "entity": "doc:agent-interview-hub",
+      "title": "Agent 面试题",
+      "time": "2026-10-19T05:37:18.742Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-interview-hub"
+    },
+    {
+      "id": "3e17fe90-a3ce-4a1b-93fd-c992e3036ea6",
+      "kind": "created",
+      "entity": "doc:mcp-integration-interview",
+      "title": "MCP 工具怎么接入？",
+      "time": "2026-10-19T05:37:18.742Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mcp-integration-interview"
+    },
+    {
+      "id": "980b02e1-f8cb-49d0-9877-23fe7bb02314",
+      "kind": "created",
+      "entity": "doc:react-interview",
+      "title": "ReAct 的架构是什么？",
+      "time": "2026-10-19T05:37:18.742Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "react-interview"
+    },
+    {
+      "id": "7bbb57e1-219b-473f-af9b-0d56c5787a96",
+      "kind": "updated",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-19T05:37:51.180Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "9911a2be-822d-4450-93c9-e355be6a9888",
+      "kind": "created",
+      "entity": "doc:websocket-sse-interview",
+      "title": "WebSocket 和 SSE 有什么区别？",
+      "time": "2026-10-19T05:37:51.180Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "websocket-sse-interview"
+    },
+    {
+      "id": "7778daa0-e802-47ad-a814-ccdf62804ed2",
+      "kind": "state-changed",
+      "entity": "doc:mcp-integration-interview",
+      "title": "MCP 工具怎么接入？",
+      "time": "2026-10-19T05:37:51.665Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mcp-integration-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "ef05f722-935c-4ea1-bf41-64b0b0be72a8",
+      "kind": "state-changed",
+      "entity": "doc:mcp-integration-interview",
+      "title": "MCP 工具怎么接入？",
+      "time": "2026-10-19T05:37:52.139Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mcp-integration-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "eca427fe-8ec0-4985-b2ab-2594be5d8fcc",
+      "kind": "state-changed",
+      "entity": "doc:mcp-flow",
+      "title": "MCP 接入流程",
+      "time": "2026-10-19T05:38:12.216Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "mcp-flow",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "05faf4b5-b845-46f2-8422-01c67c742e17",
+      "kind": "state-changed",
+      "entity": "doc:mcp",
+      "title": "MCP（模型上下文协议）",
+      "time": "2026-10-19T05:38:44.896Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "mcp",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "190733aa-0cff-4132-9e15-b35b639af5f9",
+      "kind": "state-changed",
+      "entity": "doc:agent-intent-interview",
+      "title": "Agent 为什么知道调用哪个工具？怎么做意图识别？",
+      "time": "2026-10-19T05:39:42.702Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-intent-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "a8956bdc-326a-4398-a9f6-0a555876bcfb",
+      "kind": "state-changed",
+      "entity": "doc:agent-intent-interview",
+      "title": "Agent 为什么知道调用哪个工具？怎么做意图识别？",
+      "time": "2026-10-19T05:39:43.046Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-intent-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "c6bb5cc0-26dd-4804-a8f9-35425a6b270a",
+      "kind": "updated",
+      "entity": "doc:react-interview",
+      "title": "ReAct 的架构是什么？",
+      "time": "2026-10-19T05:41:07.189Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "react-interview"
+    },
+    {
+      "id": "c5d849a4-df83-459b-b8ac-4ced24566663",
+      "kind": "updated",
+      "entity": "doc:mcp-flow",
+      "title": "MCP 接入流程",
+      "time": "2026-10-19T05:41:51.201Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "mcp-flow"
+    },
+    {
+      "id": "26b870fb-c009-439a-8e4d-d0540ee30268",
+      "kind": "state-changed",
+      "entity": "doc:react-interview",
+      "title": "ReAct 的架构是什么？",
+      "time": "2026-10-19T05:42:17.963Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "react-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "f1909101-aa37-438a-ba36-5915f5aa1408",
+      "kind": "updated",
+      "entity": "doc:react-interview",
+      "title": "ReAct 的架构是什么？",
+      "time": "2026-10-19T05:42:35.200Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "react-interview"
+    },
+    {
+      "id": "8bef6400-e471-49cc-82e8-edbb27d992fe",
+      "kind": "image-updated",
+      "entity": "image:assets/mcp-flow",
+      "title": "mcp-flow",
+      "time": "2026-10-19T05:42:35.200Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "files": [
+        "assets/mcp-flow.excalidraw"
+      ]
+    },
+    {
+      "id": "365ff5d7-1341-4b12-af70-dfe39001aac7",
+      "kind": "updated",
+      "entity": "doc:mcp",
+      "title": "MCP（模型上下文协议）",
+      "time": "2026-10-19T05:42:43.195Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "mcp"
+    },
+    {
+      "id": "87bbd1c5-f806-4dff-84a4-d23dc0574a9c",
+      "kind": "image-created",
+      "entity": "image:assets/mcp-overview-illustrated",
+      "title": "mcp-overview-illustrated",
+      "time": "2026-10-19T05:42:59.169Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "files": [
+        "assets/mcp-overview-illustrated.png"
+      ]
+    },
+    {
+      "id": "95502318-e331-49f0-953b-315ca57b8877",
+      "kind": "image-updated",
+      "entity": "image:assets/mcp-flow",
+      "title": "mcp-flow",
+      "time": "2026-10-19T05:43:03.075Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "files": [
+        "assets/mcp-flow.png",
+        "assets/mcp-flow.svg"
+      ]
+    },
+    {
+      "id": "aaaab119-d0b3-44cc-b191-cc98030385e9",
+      "kind": "state-changed",
+      "entity": "doc:websocket-sse-interview",
+      "title": "WebSocket 和 SSE 有什么区别？",
+      "time": "2026-10-19T05:43:39.104Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "websocket-sse-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "e79b8176-8a34-4a1d-b959-833ec35de24a",
+      "kind": "state-changed",
+      "entity": "doc:react-interview",
+      "title": "ReAct 的架构是什么？",
+      "time": "2026-10-19T05:43:57.990Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "react-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "c0292646-fd27-4a28-9a20-e9d36ff48ea8",
+      "kind": "state-changed",
+      "entity": "doc:react-interview",
+      "title": "ReAct 的架构是什么？",
+      "time": "2026-10-19T05:43:58.420Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "react-interview",
+      "from": "organized",
+      "to": "pending"
+    },
+    {
+      "id": "a821d22b-4789-4f76-9e0f-5d11216984cc",
+      "kind": "state-changed",
+      "entity": "doc:react-interview",
+      "title": "ReAct 的架构是什么？",
+      "time": "2026-10-19T05:43:59.152Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "react-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "2589c993-cf0b-44f5-8e9a-aadf52ad91cc",
+      "kind": "state-changed",
+      "entity": "doc:react-interview",
+      "title": "ReAct 的架构是什么？",
+      "time": "2026-10-19T05:43:59.434Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "react-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "d531b24e-1e2d-41e4-8954-97da5bd0acc3",
+      "kind": "image-updated",
+      "entity": "image:assets/mcp-flow",
+      "title": "mcp-flow",
+      "time": "2026-10-19T05:44:12.319Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "files": [
+        "assets/mcp-flow.excalidraw"
+      ]
+    },
+    {
+      "id": "b12a4141-279e-4b44-b987-8d318beff69e",
+      "kind": "created",
+      "entity": "doc:sse",
+      "title": "SSE（服务端发送事件）",
+      "time": "2026-10-19T05:44:14.227Z",
+      "collections": [
+        "glossary"
+      ],
+      "source": "observed",
+      "docId": "sse"
+    },
+    {
+      "id": "fadc7f90-8cb9-411d-979d-9d91e62b7d6e",
+      "kind": "created",
+      "entity": "doc:websocket",
+      "title": "WebSocket",
+      "time": "2026-10-19T05:44:14.227Z",
+      "collections": [
+        "glossary"
+      ],
+      "source": "observed",
+      "docId": "websocket"
+    },
+    {
+      "id": "6888691b-ae2f-4996-b5f5-9ff15db5982f",
+      "kind": "updated",
+      "entity": "doc:websocket-sse-interview",
+      "title": "WebSocket 和 SSE 有什么区别？",
+      "time": "2026-10-19T05:44:14.227Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "websocket-sse-interview"
+    },
+    {
+      "id": "432a3f4a-c4b2-4be5-99a9-e2c2bff55a8d",
+      "kind": "created",
+      "entity": "doc:websocket-sse-standards",
+      "title": "WebSocket 与 SSE 标准要点",
+      "time": "2026-10-19T05:44:14.227Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "websocket-sse-standards"
+    },
+    {
+      "id": "9784cc37-ea1f-4cad-904a-d5404885cbd3",
+      "kind": "updated",
+      "entity": "doc:a2a",
+      "title": "A2A（Agent 间通信协议）",
+      "time": "2026-10-19T05:44:16.561Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "a2a"
+    },
+    {
+      "id": "33d00bbe-d9b6-4022-925f-d819d4070117",
+      "kind": "updated",
+      "entity": "doc:a2a-protocol-specification",
+      "title": "A2A：发现、任务生命周期与协议边界",
+      "time": "2026-10-19T05:44:16.561Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "a2a-protocol-specification"
+    },
+    {
+      "id": "172f9e51-5e0b-4a54-aeb6-2517ce7e4ec4",
+      "kind": "updated",
+      "entity": "doc:mcp-architecture-summary",
+      "title": "MCP 官方架构：发现、调用与通知",
+      "time": "2026-10-19T05:44:16.561Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "mcp-architecture-summary"
+    },
+    {
+      "id": "cf45d3c1-1f70-4c97-be5e-9cb4ba6f38ca",
+      "kind": "image-updated",
+      "entity": "image:assets/mcp-flow",
+      "title": "mcp-flow",
+      "time": "2026-10-19T05:44:20.318Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "files": [
+        "assets/mcp-flow.png",
+        "assets/mcp-flow.svg"
+      ]
+    },
+    {
+      "id": "1c1f4bc5-040b-498c-a8ac-85a7416d6c3a",
+      "kind": "state-changed",
+      "entity": "doc:mcp",
+      "title": "MCP（模型上下文协议）",
+      "time": "2026-10-19T05:45:44.381Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "mcp",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "999fdea6-7c36-4ba8-acea-28c11c3bf595",
+      "kind": "image-updated",
+      "entity": "image:assets/mcp-flow",
+      "title": "mcp-flow",
+      "time": "2026-10-19T05:48:02.225Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "files": [
+        "assets/mcp-flow.excalidraw",
+        "assets/mcp-flow.png",
+        "assets/mcp-flow.svg"
+      ]
+    },
+    {
+      "id": "b30ab00a-8a4a-4b32-a637-8d0a3d19cee4",
+      "kind": "state-changed",
+      "entity": "doc:mcp-flow",
+      "title": "MCP 接入流程",
+      "time": "2026-10-19T05:51:55.178Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "mcp-flow",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "b279dbef-9f70-4514-bad4-8bf77a0e2c3f",
+      "kind": "state-changed",
+      "entity": "doc:websocket-sse-interview",
+      "title": "WebSocket 和 SSE 有什么区别？",
+      "time": "2026-10-19T05:51:57.536Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "websocket-sse-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "f124c7f3-2525-4a62-bb04-2168674b777d",
+      "kind": "created",
+      "entity": "doc:go-context-cancel-interview",
+      "title": "Go 的 WithCancel 和 WithoutCancel 有什么区别？",
+      "time": "2026-10-19T07:27:25.772Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-context-cancel-interview"
+    },
+    {
+      "id": "8e75ad50-e133-4fec-9775-ed3c2ac273d3",
+      "kind": "created",
+      "entity": "doc:go-oom-interview",
+      "title": "Go 程序什么情况下会内存溢出？怎么排查？",
+      "time": "2026-10-19T07:27:25.772Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-oom-interview"
+    },
+    {
+      "id": "af3e6436-643c-4b0d-8036-b6dfaf15b87b",
+      "kind": "updated",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-19T07:27:25.772Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "d9676c2f-e270-43b4-9503-ce70b38abfc7",
+      "kind": "state-changed",
+      "entity": "doc:go-context-cancel-interview",
+      "title": "Go 的 WithCancel 和 WithoutCancel 有什么区别？",
+      "time": "2026-10-19T07:27:58.501Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-context-cancel-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "afe0fecd-13f1-427c-8e6d-a02a111272bd",
+      "kind": "state-changed",
+      "entity": "doc:go-context-cancel-interview",
+      "title": "Go 的 WithCancel 和 WithoutCancel 有什么区别？",
+      "time": "2026-10-19T07:27:59.380Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-context-cancel-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "15fc7b84-2ab4-40cc-9676-c3722d34b237",
+      "kind": "created",
+      "entity": "doc:go-context-interview",
+      "title": "Go 的 Context 是什么？怎么使用？",
+      "time": "2026-10-19T07:28:07.280Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-context-interview"
+    },
+    {
+      "id": "135b9728-fa45-48a4-8f7c-7eb55cc05cc8",
+      "kind": "updated",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-19T07:28:07.280Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "7efbd725-749e-43eb-933a-e041d6ae80b8",
+      "kind": "created",
+      "entity": "doc:go-escape-interview",
+      "title": "Go 对象逃逸怎么解决？",
+      "time": "2026-10-19T07:28:19.204Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-escape-interview"
+    },
+    {
+      "id": "150b32a1-6b55-4ca1-acf8-733fe7cf44ee",
+      "kind": "updated",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-19T07:28:19.204Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "8a501b0a-465b-4e33-af88-09cede2ee64a",
+      "kind": "created",
+      "entity": "doc:go-escape-sources",
+      "title": "Go 官方资料：逃逸与堆分配优化",
+      "time": "2026-10-19T07:28:19.204Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "go-escape-sources"
+    },
+    {
+      "id": "2974bd3d-4a5b-471c-8b99-c4b927bacd58",
+      "kind": "state-changed",
+      "entity": "doc:go-oom-interview",
+      "title": "Go 程序什么情况下会内存溢出？怎么排查？",
+      "time": "2026-10-19T07:29:24.742Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-oom-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "1004f879-19b4-42bf-96d2-a5889ab33efd",
+      "kind": "state-changed",
+      "entity": "doc:go-context-interview",
+      "title": "Go 的 Context 是什么？怎么使用？",
+      "time": "2026-10-19T07:29:50.817Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-context-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "f68a2ff1-fc20-42aa-9557-181df8ae7116",
+      "kind": "state-changed",
+      "entity": "doc:go-context-interview",
+      "title": "Go 的 Context 是什么？怎么使用？",
+      "time": "2026-10-19T07:29:51.224Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-context-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "44e68674-c1f5-4090-b2cd-932e6d5afc31",
+      "kind": "created",
+      "entity": "doc:memory-leak",
+      "title": "内存泄漏",
+      "time": "2026-10-19T07:30:07.209Z",
+      "collections": [
+        "glossary"
+      ],
+      "source": "observed",
+      "docId": "memory-leak"
+    },
+    {
+      "id": "8738ae7e-5bc3-4d9a-9578-5706999ca7b1",
+      "kind": "created",
+      "entity": "doc:out-of-memory",
+      "title": "内存溢出",
+      "time": "2026-10-19T07:30:07.209Z",
+      "collections": [
+        "glossary"
+      ],
+      "source": "observed",
+      "docId": "out-of-memory"
+    },
+    {
+      "id": "4c75001f-6ac4-4bb8-8ac9-bc6154ea6027",
+      "kind": "updated",
+      "entity": "doc:agent-memory-leak-interview",
+      "title": "Agent 服务最常见的生产环境内存泄漏有哪几种？如何排查和修复？",
+      "time": "2026-10-19T07:30:07.209Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-memory-leak-interview"
+    },
+    {
+      "id": "e6356f67-1319-473a-92f9-349e73899802",
+      "kind": "updated",
+      "entity": "doc:go-oom-interview",
+      "title": "Go 程序什么情况下会内存溢出？怎么排查？",
+      "time": "2026-10-19T07:30:07.209Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-oom-interview"
+    },
+    {
+      "id": "56a02ffb-c648-40d7-9e8c-bded2b928546",
+      "kind": "updated",
+      "entity": "doc:sandbox-resources",
+      "title": "沙箱资源限制",
+      "time": "2026-10-19T07:30:07.209Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "sandbox-resources"
+    },
+    {
+      "id": "aaa5482e-b11b-48ff-900a-63c92da5cb8e",
+      "kind": "created",
+      "entity": "doc:memory-oom-leak-sources",
+      "title": "内存耗尽与泄漏：官方资料导读",
+      "time": "2026-10-19T07:30:07.209Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "memory-oom-leak-sources"
+    },
+    {
+      "id": "0d0dd29f-6ff7-4f1e-82bf-873a609fc9a4",
+      "kind": "updated",
+      "entity": "doc:memory-leak",
+      "title": "内存泄漏",
+      "time": "2026-10-19T07:30:35.718Z",
+      "collections": [
+        "glossary"
+      ],
+      "source": "observed",
+      "docId": "memory-leak"
+    },
+    {
+      "id": "9214095a-9f3c-4307-9853-9276d8c3dc54",
+      "kind": "updated",
+      "entity": "doc:out-of-memory",
+      "title": "内存溢出",
+      "time": "2026-10-19T07:30:35.718Z",
+      "collections": [
+        "glossary"
+      ],
+      "source": "observed",
+      "docId": "out-of-memory"
+    },
+    {
+      "id": "3465fce4-f1a0-4ca8-bec7-7c1760fd16b5",
+      "kind": "updated",
+      "entity": "doc:memory-oom-leak-sources",
+      "title": "内存耗尽与泄漏：官方资料导读",
+      "time": "2026-10-19T07:30:35.718Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "memory-oom-leak-sources"
+    },
+    {
+      "id": "546e115b-fb57-4812-bfbf-f137fced26bc",
+      "kind": "state-changed",
+      "entity": "doc:go-escape-interview",
+      "title": "Go 对象逃逸怎么解决？",
+      "time": "2026-10-19T07:30:59.265Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-escape-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "7f942d4c-5ab4-4578-a3e6-204723d4349a",
+      "kind": "updated",
+      "entity": "doc:go-escape-interview",
+      "title": "Go 中哪些堆分配值得优化？怎么优化？",
+      "time": "2026-10-19T07:31:20.400Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-escape-interview"
+    },
+    {
+      "id": "20a990da-1bf7-4fa2-8816-7192ad73ff09",
+      "kind": "updated",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-19T07:31:20.400Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "13d227cd-15cc-4eb9-9bd2-35f5fe0dc795",
+      "kind": "updated",
+      "entity": "doc:go-oom-interview",
+      "title": "Go 程序什么情况下会内存溢出？怎么排查？",
+      "time": "2026-10-19T07:31:40.384Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-oom-interview"
+    },
+    {
+      "id": "cc2a80d7-d687-45c9-af78-89d7af988ce8",
+      "kind": "updated",
+      "entity": "doc:go-escape-interview",
+      "title": "Go 中哪些堆分配值得优化？怎么优化？",
+      "time": "2026-10-19T07:33:32.388Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-escape-interview"
+    },
+    {
+      "id": "23149c30-0b7a-430d-a746-7525bd7a64e6",
+      "kind": "updated",
+      "entity": "doc:go-oom-interview",
+      "title": "Go 程序什么情况下会内存溢出？怎么排查？",
+      "time": "2026-10-19T07:35:08.389Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-oom-interview"
+    },
+    {
+      "id": "fc061977-6152-42b1-aac4-14922320c474",
+      "kind": "updated",
+      "entity": "doc:go-escape-interview",
+      "title": "Go 中哪些堆分配值得优化？怎么优化？",
+      "time": "2026-10-19T07:36:40.380Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-escape-interview"
+    },
+    {
+      "id": "c7bab3dd-d3c2-4cfb-8149-07f1937ac4de",
+      "kind": "updated",
+      "entity": "doc:go-escape-sources",
+      "title": "Go 官方资料：逃逸与堆分配优化",
+      "time": "2026-10-19T07:36:44.386Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "go-escape-sources"
+    },
+    {
+      "id": "50a83eb2-7902-4a8a-b1b0-5cbfef9f3419",
+      "kind": "updated",
+      "entity": "doc:go-escape-interview",
+      "title": "Go 中哪些堆分配值得优化？怎么优化？",
+      "time": "2026-10-19T07:41:24.398Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-escape-interview"
+    },
+    {
+      "id": "817a7395-fd85-429f-a848-3e2c5e23a9ce",
+      "kind": "state-changed",
+      "entity": "doc:go-escape-interview",
+      "title": "Go 中哪些堆分配值得优化？怎么优化？",
+      "time": "2026-10-19T07:41:49.871Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-escape-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "178a954a-5049-4b58-8cdb-7be4892bb115",
+      "kind": "updated",
+      "entity": "doc:go-oom-interview",
+      "title": "Go 程序什么情况下会内存溢出？怎么排查？",
+      "time": "2026-10-19T07:56:00.375Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-oom-interview"
+    },
+    {
+      "id": "23edcdbf-b106-4b9b-9cbe-35bcb77cd357",
+      "kind": "updated",
+      "entity": "doc:go-oom-interview",
+      "title": "Go 程序什么情况下会内存溢出？怎么排查？",
+      "time": "2026-10-19T08:00:32.408Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-oom-interview"
+    },
+    {
+      "id": "3abefad4-0dc9-458a-92f4-1f90a8b69458",
+      "kind": "updated",
+      "entity": "doc:go-oom-interview",
+      "title": "Go 程序什么情况下会内存溢出？怎么排查？",
+      "time": "2026-10-19T08:02:48.394Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-oom-interview"
+    },
+    {
+      "id": "a2e03a8f-288f-4f30-8c90-1eb6f7e2c23f",
+      "kind": "updated",
+      "entity": "doc:memory-oom-leak-sources",
+      "title": "内存耗尽与泄漏：官方资料导读",
+      "time": "2026-10-19T08:02:48.394Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "memory-oom-leak-sources"
+    },
+    {
+      "id": "7b7058da-ab18-44a7-b51f-0edbdad0d135",
+      "kind": "updated",
+      "entity": "doc:go-oom-interview",
+      "title": "Go 程序什么情况下会内存溢出？怎么排查？",
+      "time": "2026-10-19T08:03:08.384Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-oom-interview"
+    },
+    {
+      "id": "30844d61-c312-453b-9560-db159f9d3e6d",
+      "kind": "updated",
+      "entity": "doc:go-oom-interview",
+      "title": "Go 程序什么情况下会内存溢出？怎么排查？",
+      "time": "2026-10-19T08:04:44.387Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-oom-interview"
+    },
+    {
+      "id": "2def5762-8839-452f-85ba-f365bacf8526",
+      "kind": "updated",
+      "entity": "doc:go-oom-interview",
+      "title": "Go 程序什么情况下会内存溢出？怎么排查？",
+      "time": "2026-10-19T08:09:50.812Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-oom-interview"
+    },
+    {
+      "id": "03414633-9242-483f-b1f0-3a79bc457f0f",
+      "kind": "state-changed",
+      "entity": "doc:go-oom-interview",
+      "title": "Go 程序什么情况下会内存溢出？怎么排查？",
+      "time": "2026-10-19T08:10:25.470Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-oom-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "e3c9cd32-975b-4b0c-82d4-9564299e68ff",
+      "kind": "updated",
+      "entity": "doc:api-latency-interview",
+      "title": "接口响应慢，怎么排查和优化？",
+      "time": "2026-10-19T08:17:56.649Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "api-latency-interview"
+    },
+    {
+      "id": "487e3d02-598b-41ab-abf4-6e0158ec9c4a",
+      "kind": "created",
+      "entity": "doc:go-mutex-interview",
+      "title": "聊一聊 Go 的互斥锁和读写锁",
+      "time": "2026-10-19T08:17:56.649Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-mutex-interview"
+    },
+    {
+      "id": "26a2b212-96ac-4e55-bfae-815e9998a035",
+      "kind": "updated",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-19T08:17:56.649Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "6c584934-26bc-499d-b559-18f230aa9697",
+      "kind": "created",
+      "entity": "doc:rate-limiting-interview",
+      "title": "怎么做限流？有哪些常见的限流算法？",
+      "time": "2026-10-19T08:17:56.649Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "rate-limiting-interview"
+    },
+    {
+      "id": "0dced075-1301-497b-9d1f-f3f953e17218",
+      "kind": "created",
+      "entity": "doc:go-channel-interview",
+      "title": "Go 的 Channel 一般怎么用？",
+      "time": "2026-10-19T08:18:04.393Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-channel-interview"
+    },
+    {
+      "id": "b5b40d40-ee58-4d79-b2ec-e48d3d4adc7e",
+      "kind": "updated",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-19T08:18:04.393Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "76bb7556-a938-4e5e-acf0-12f429df3b16",
+      "kind": "state-changed",
+      "entity": "doc:go-mutex-interview",
+      "title": "聊一聊 Go 的互斥锁和读写锁",
+      "time": "2026-10-19T08:18:34.366Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-mutex-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "96914116-28c5-416c-950f-4fc479fdf2fd",
+      "kind": "state-changed",
+      "entity": "doc:go-mutex-interview",
+      "title": "聊一聊 Go 的互斥锁和读写锁",
+      "time": "2026-10-19T08:18:34.681Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-mutex-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "7c377d42-27c9-4a37-b899-f55aecfb969e",
+      "kind": "state-changed",
+      "entity": "doc:rate-limiting-interview",
+      "title": "怎么做限流？有哪些常见的限流算法？",
+      "time": "2026-10-19T08:19:11.038Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "rate-limiting-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "5225c0ba-1d63-4884-8d7b-2ef123ec5fea",
+      "kind": "state-changed",
+      "entity": "doc:go-channel-interview",
+      "title": "Go 的 Channel 一般怎么用？",
+      "time": "2026-10-19T08:19:36.255Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-channel-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "ba3a3ebf-db74-433b-89ce-afc0fed86596",
+      "kind": "state-changed",
+      "entity": "doc:go-channel-interview",
+      "title": "Go 的 Channel 一般怎么用？",
+      "time": "2026-10-19T08:19:36.569Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-channel-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "ba1ad07a-94de-4258-b89f-0b1dfab73233",
+      "kind": "created",
+      "entity": "doc:fixed-window",
+      "title": "固定窗口限流",
+      "time": "2026-10-19T08:21:16.400Z",
+      "collections": [
+        "glossary"
+      ],
+      "source": "observed",
+      "docId": "fixed-window"
+    },
+    {
+      "id": "b23da290-3670-468b-b472-535a8049c000",
+      "kind": "created",
+      "entity": "doc:leaky-bucket",
+      "title": "漏桶限流",
+      "time": "2026-10-19T08:21:16.400Z",
+      "collections": [
+        "glossary"
+      ],
+      "source": "observed",
+      "docId": "leaky-bucket"
+    },
+    {
+      "id": "7cea330f-d620-4581-a801-1ad3706509eb",
+      "kind": "created",
+      "entity": "doc:rate-limiting",
+      "title": "限流",
+      "time": "2026-10-19T08:21:16.400Z",
+      "collections": [
+        "glossary"
+      ],
+      "source": "observed",
+      "docId": "rate-limiting"
+    },
+    {
+      "id": "7bd6f6eb-78d5-4d0e-98ac-db3efefecfbd",
+      "kind": "created",
+      "entity": "doc:sliding-window",
+      "title": "滑动窗口限流",
+      "time": "2026-10-19T08:21:16.400Z",
+      "collections": [
+        "glossary"
+      ],
+      "source": "observed",
+      "docId": "sliding-window"
+    },
+    {
+      "id": "d82a3f0b-9b2e-4691-9d12-352eafa266dd",
+      "kind": "created",
+      "entity": "doc:token-bucket",
+      "title": "令牌桶限流",
+      "time": "2026-10-19T08:21:16.400Z",
+      "collections": [
+        "glossary"
+      ],
+      "source": "observed",
+      "docId": "token-bucket"
+    },
+    {
+      "id": "d4fbc818-eb34-4683-8930-60d66fc516df",
+      "kind": "created",
+      "entity": "doc:redis-rate-limiting-algorithms",
+      "title": "Redis：限流算法的窗口、突发与排队",
+      "time": "2026-10-19T08:21:16.400Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "redis-rate-limiting-algorithms"
+    },
+    {
+      "id": "a4d5963a-5a01-423c-8f51-01a5afd88236",
+      "kind": "created",
+      "entity": "doc:go-interview-hub",
+      "title": "Go 面试题",
+      "time": "2026-10-19T08:21:44.399Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-interview-hub"
+    },
+    {
+      "id": "78c17dfe-d1ac-4a35-ac12-4551ff1eaace",
+      "kind": "updated",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-19T08:21:44.399Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "766ade0d-59f5-4b5f-859a-6911bbc0c32f",
+      "kind": "updated",
+      "entity": "doc:performance-interview-index",
+      "title": "性能排查与优化面试题",
+      "time": "2026-10-19T08:21:44.399Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "performance-interview-index"
+    },
+    {
+      "id": "92ca067f-cd8c-4604-ab48-13036d29a66f",
+      "kind": "updated",
+      "entity": "doc:concurrency-control",
+      "title": "并发控制",
+      "time": "2026-10-19T08:21:48.381Z",
+      "collections": [
+        "glossary"
+      ],
+      "source": "observed",
+      "docId": "concurrency-control"
+    },
+    {
+      "id": "6e0687ea-016d-4b20-9041-8cd2f9133d63",
+      "kind": "updated",
+      "entity": "doc:api-latency-interview",
+      "title": "接口响应慢，怎么排查和优化？",
+      "time": "2026-10-19T08:21:48.381Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "api-latency-interview"
+    },
+    {
+      "id": "ce639e5a-5b25-4249-8c12-f2e1b9a42241",
+      "kind": "updated",
+      "entity": "doc:go-oom-interview",
+      "title": "Go 程序什么情况下会内存溢出？怎么排查？",
+      "time": "2026-10-19T08:21:48.381Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-oom-interview"
+    },
+    {
+      "id": "ef66efc8-d61d-4e2a-ab1c-74ba62dfcc4a",
+      "kind": "updated",
+      "entity": "doc:rate-limiting-interview",
+      "title": "怎么做限流？有哪些常见的限流算法？",
+      "time": "2026-10-19T08:21:48.381Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "rate-limiting-interview"
+    },
+    {
+      "id": "036a355d-6c17-46f8-929a-28ff62f14d75",
+      "kind": "updated",
+      "entity": "doc:sandbox-concurrency",
+      "title": "沙箱并发与容量控制",
+      "time": "2026-10-19T08:21:48.381Z",
+      "collections": [
+        "notes"
+      ],
+      "source": "observed",
+      "docId": "sandbox-concurrency"
+    },
+    {
+      "id": "7d6078a3-7616-48f8-98b3-0b56a75da1f1",
+      "kind": "updated",
+      "entity": "doc:aws-retry-errors-summary",
+      "title": "AWS SDK：按错误语义判断是否重试",
+      "time": "2026-10-19T08:21:48.381Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "aws-retry-errors-summary"
+    },
+    {
+      "id": "876f5e53-e030-4160-b64b-9cf1e9717d07",
+      "kind": "updated",
+      "entity": "doc:claude-context-budget-summary",
+      "title": "Claude：上下文窗口与 Token 计数",
+      "time": "2026-10-19T08:21:48.381Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "claude-context-budget-summary"
+    },
+    {
+      "id": "7882455c-0737-4fa2-b031-d3cf885def79",
+      "kind": "updated",
+      "entity": "doc:go-semaphore-summary",
+      "title": "Go：用加权信号量限制并发资源占用",
+      "time": "2026-10-19T08:21:48.381Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "go-semaphore-summary"
+    },
+    {
+      "id": "cb8720d2-27e9-4ce9-885f-03fe84ed6603",
+      "kind": "updated",
+      "entity": "doc:grpc-error-recovery-summary",
+      "title": "gRPC：错误码怎样表达恢复方式",
+      "time": "2026-10-19T08:21:48.381Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "grpc-error-recovery-summary"
+    },
+    {
+      "id": "f05b751e-4bb9-4f17-a507-3bcf5263fef6",
+      "kind": "updated",
+      "entity": "doc:owasp-agent-boundaries-summary",
+      "title": "OWASP：提示注入与 Agent 执行边界",
+      "time": "2026-10-19T08:21:48.381Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "owasp-agent-boundaries-summary"
+    },
+    {
+      "id": "93362ccb-91e0-4adc-a086-4ef5a9cfa388",
+      "kind": "updated",
+      "entity": "doc:stripe-error-recovery-summary",
+      "title": "Stripe：结果未知时怎样安全重试",
+      "time": "2026-10-19T08:21:48.381Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "stripe-error-recovery-summary"
+    },
+    {
+      "id": "6d0e67eb-173d-463c-8beb-978746ddef25",
+      "kind": "updated",
+      "entity": "doc:fixed-window",
+      "title": "固定窗口限流",
+      "time": "2026-10-19T08:22:24.389Z",
+      "collections": [
+        "glossary"
+      ],
+      "source": "observed",
+      "docId": "fixed-window"
+    },
+    {
+      "id": "42b64c98-54ac-41d9-9a3b-2a66625e1166",
+      "kind": "updated",
+      "entity": "doc:leaky-bucket",
+      "title": "漏桶限流",
+      "time": "2026-10-19T08:22:24.389Z",
+      "collections": [
+        "glossary"
+      ],
+      "source": "observed",
+      "docId": "leaky-bucket"
+    },
+    {
+      "id": "5f721363-e043-41d7-805e-fffef244aa00",
+      "kind": "updated",
+      "entity": "doc:rate-limiting",
+      "title": "限流",
+      "time": "2026-10-19T08:22:24.389Z",
+      "collections": [
+        "glossary"
+      ],
+      "source": "observed",
+      "docId": "rate-limiting"
+    },
+    {
+      "id": "e7a227c0-e7c5-4a60-86b3-932bfcc618d1",
+      "kind": "updated",
+      "entity": "doc:sliding-window",
+      "title": "滑动窗口限流",
+      "time": "2026-10-19T08:22:24.389Z",
+      "collections": [
+        "glossary"
+      ],
+      "source": "observed",
+      "docId": "sliding-window"
+    },
+    {
+      "id": "d7f1f759-8cbb-4615-bf16-dff3f720c76a",
+      "kind": "updated",
+      "entity": "doc:token-bucket",
+      "title": "令牌桶限流",
+      "time": "2026-10-19T08:22:24.389Z",
+      "collections": [
+        "glossary"
+      ],
+      "source": "observed",
+      "docId": "token-bucket"
+    },
+    {
+      "id": "154de7e7-1d35-4503-a9cd-95f4742980d2",
+      "kind": "updated",
+      "entity": "doc:rate-limiting-interview",
+      "title": "怎么做限流？有哪些常见的限流算法？",
+      "time": "2026-10-19T08:29:48.409Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "rate-limiting-interview"
+    },
+    {
+      "id": "afe4b1ea-a3ab-4e25-b9f6-89063b058f87",
+      "kind": "state-changed",
+      "entity": "doc:rate-limiting-interview",
+      "title": "怎么做限流？有哪些常见的限流算法？",
+      "time": "2026-10-19T08:30:23.859Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "rate-limiting-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "bb941d38-856a-4754-9561-e4126ff7e922",
+      "kind": "created",
+      "entity": "doc:agent-design-interview",
+      "title": "怎样设计一个 Agent？",
+      "time": "2026-10-19T08:40:15.083Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-design-interview"
+    },
+    {
+      "id": "9f3f0c05-8cdb-4537-95e4-623532df6a24",
+      "kind": "updated",
+      "entity": "doc:agent-interview-hub",
+      "title": "Agent 面试题",
+      "time": "2026-10-19T08:40:15.083Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-interview-hub"
+    },
+    {
+      "id": "3b8cd506-b1f6-4ea2-b4d8-5cf4f8f94cad",
+      "kind": "updated",
+      "entity": "doc:performance-interview-index",
+      "title": "性能排查与优化面试题",
+      "time": "2026-10-19T08:40:48.395Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "performance-interview-index"
+    },
+    {
+      "id": "a0131585-1f12-4c28-90cf-d0ef79f18e51",
+      "kind": "created",
+      "entity": "doc:service-degradation-interview",
+      "title": "降级是做什么的，大概怎么做？",
+      "time": "2026-10-19T08:40:48.395Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "service-degradation-interview"
+    },
+    {
+      "id": "c4b28784-1b0b-4f6c-9134-880d659ac78b",
+      "kind": "created",
+      "entity": "doc:agent-evaluation-interview",
+      "title": "怎么判断 Agent 的效果？",
+      "time": "2026-10-19T08:40:52.399Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-evaluation-interview"
+    },
+    {
+      "id": "0e27bc6e-d462-4d55-be71-440223110081",
+      "kind": "updated",
+      "entity": "doc:agent-interview-hub",
+      "title": "Agent 面试题",
+      "time": "2026-10-19T08:40:52.399Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-interview-hub"
+    },
+    {
+      "id": "08006c54-3718-4d15-9059-0dcff09032a9",
+      "kind": "state-changed",
+      "entity": "doc:agent-design-interview",
+      "title": "怎样设计一个 Agent？",
+      "time": "2026-10-19T08:40:58.316Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-design-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "13650627-0f5c-4423-b6a5-96adfe4124e1",
+      "kind": "state-changed",
+      "entity": "doc:agent-design-interview",
+      "title": "怎样设计一个 Agent？",
+      "time": "2026-10-19T08:40:59.171Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-design-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "739b8695-8bf4-48d1-bf67-7707220af939",
+      "kind": "updated",
+      "entity": "doc:service-degradation-interview",
+      "title": "降级是做什么的，大概怎么做？",
+      "time": "2026-10-19T08:44:08.412Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "service-degradation-interview"
+    },
+    {
+      "id": "343c64f3-a17d-4e30-a279-5e86ae720a88",
+      "kind": "updated",
+      "entity": "doc:service-degradation-interview",
+      "title": "降级是做什么的，大概怎么做？",
+      "time": "2026-10-19T08:45:36.408Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "service-degradation-interview"
+    },
+    {
+      "id": "af9e2ece-951a-4534-aa2b-30379971d6df",
+      "kind": "updated",
+      "entity": "doc:service-degradation-interview",
+      "title": "降级是做什么的，大概怎么做？",
+      "time": "2026-10-19T08:47:32.400Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "service-degradation-interview"
+    },
+    {
+      "id": "518955f5-8557-4508-a1b9-d76c7418f24d",
+      "kind": "state-changed",
+      "entity": "doc:service-degradation-interview",
+      "title": "降级是做什么的，大概怎么做？",
+      "time": "2026-10-19T08:48:53.353Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "service-degradation-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "8deaa66b-5d4e-49af-8709-dfd1dc401aa2",
+      "kind": "state-changed",
+      "entity": "doc:service-degradation-interview",
+      "title": "降级是做什么的，大概怎么做？",
+      "time": "2026-10-19T08:48:53.621Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "service-degradation-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "b34124d0-650b-4dfc-945f-ad454c6d29fb",
+      "kind": "state-changed",
+      "entity": "doc:agent-evaluation-interview",
+      "title": "怎么判断 Agent 的效果？",
+      "time": "2026-10-19T08:49:36.712Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-evaluation-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "a77a8e3e-cbfe-48cf-933d-3625f74cc8d3",
+      "kind": "state-changed",
+      "entity": "doc:agent-evaluation-interview",
+      "title": "怎么判断 Agent 的效果？",
+      "time": "2026-10-19T08:49:36.999Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-evaluation-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "470b3e4d-292d-4828-aed7-177b838ddb33",
+      "kind": "created",
+      "entity": "doc:cache-consistency-interview",
+      "title": "数据库和缓存的一致性怎么保障？",
+      "time": "2026-10-19T08:57:40.390Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "cache-consistency-interview"
+    },
+    {
+      "id": "0eeeeffd-2a5b-40c6-8e44-11ca92c2a65f",
+      "kind": "updated",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-19T08:57:40.390Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "ca655906-8ef2-4af7-bbf3-e79b47e4dea7",
+      "kind": "updated",
+      "entity": "doc:redis-interview-index",
+      "title": "Redis 面试题",
+      "time": "2026-10-19T08:57:40.390Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-interview-index"
+    },
+    {
+      "id": "b3ee5fa6-3f32-4e54-812d-a4b0f9841dc3",
+      "kind": "created",
+      "entity": "doc:cache-consistency-sources",
+      "title": "旁路缓存与失效通知可靠性资料导读",
+      "time": "2026-10-19T08:57:40.390Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "cache-consistency-sources"
+    },
+    {
+      "id": "9570397f-aebf-4477-833a-d0f010987b94",
+      "kind": "state-changed",
+      "entity": "doc:cache-consistency-interview",
+      "title": "数据库和缓存的一致性怎么保障？",
+      "time": "2026-10-19T08:58:02.546Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "cache-consistency-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "fc520827-d835-433d-9dd5-45d937ecd355",
+      "kind": "updated",
+      "entity": "doc:cache-consistency-interview",
+      "title": "数据库和缓存的一致性怎么保障？",
+      "time": "2026-10-19T08:58:20.415Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "cache-consistency-interview"
+    },
+    {
+      "id": "eec62240-9869-4383-b975-70b0212dd535",
+      "kind": "created",
+      "entity": "doc:kafka-architecture-interview",
+      "title": "介绍一下 Kafka 的整体架构？",
+      "time": "2026-10-19T09:00:24.415Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "kafka-architecture-interview"
+    },
+    {
+      "id": "cfa2ca54-01e2-4b0d-8854-5be6b17a2c1e",
+      "kind": "updated",
+      "entity": "doc:kafka-interview-index",
+      "title": "Kafka 面试题",
+      "time": "2026-10-19T09:00:24.415Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "kafka-interview-index"
+    },
+    {
+      "id": "92d17454-7290-4c28-a904-3ae61f54e8d2",
+      "kind": "created",
+      "entity": "doc:kafka-architecture-sources",
+      "title": "Kafka 整体架构与组件分工导读",
+      "time": "2026-10-19T09:00:24.415Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "kafka-architecture-sources"
+    },
+    {
+      "id": "76290a9a-5798-4e14-ac04-a7b557c9823c",
+      "kind": "updated",
+      "entity": "doc:cache-consistency-interview",
+      "title": "数据库和缓存的一致性怎么保障？",
+      "time": "2026-10-19T09:02:04.436Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "cache-consistency-interview"
+    },
+    {
+      "id": "6a232099-58a2-4f47-a05c-a6a478fe2285",
+      "kind": "state-changed",
+      "entity": "doc:cache-consistency-interview",
+      "title": "数据库和缓存的一致性怎么保障？",
+      "time": "2026-10-19T09:02:37.451Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "cache-consistency-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "1d16fe2e-1ee2-447f-a00b-ce142460732b",
+      "kind": "state-changed",
+      "entity": "doc:cache-consistency-interview",
+      "title": "数据库和缓存的一致性怎么保障？",
+      "time": "2026-10-19T09:02:37.904Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "cache-consistency-interview",
+      "from": "organized",
+      "to": "pending"
+    },
+    {
+      "id": "a6da0db3-ebe8-4af9-8985-06e7b00eb98b",
+      "kind": "state-changed",
+      "entity": "doc:cache-consistency-interview",
+      "title": "数据库和缓存的一致性怎么保障？",
+      "time": "2026-10-19T09:02:38.431Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "cache-consistency-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "c8a2aa20-784d-4de5-8b0f-849162fb772b",
+      "kind": "state-changed",
+      "entity": "doc:cache-consistency-interview",
+      "title": "数据库和缓存的一致性怎么保障？",
+      "time": "2026-10-19T09:02:38.697Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "cache-consistency-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "6700f241-35ca-45ae-9725-a57658d6e631",
+      "kind": "updated",
+      "entity": "doc:kafka-architecture-interview",
+      "title": "介绍一下 Kafka 的整体架构？",
+      "time": "2026-10-19T09:13:08.649Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "kafka-architecture-interview"
+    },
+    {
+      "id": "c6b351c0-8330-4b38-a805-cac62367b26f",
+      "kind": "created",
+      "entity": "doc:cache-avalanche-interview",
+      "title": "缓存雪崩怎么解决？",
+      "time": "2026-10-19T09:20:09.632Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "cache-avalanche-interview"
+    },
+    {
+      "id": "90acbe43-7964-49cd-861a-9517c852398f",
+      "kind": "updated",
+      "entity": "doc:redis-interview-index",
+      "title": "Redis 面试题",
+      "time": "2026-10-19T09:20:09.632Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-interview-index"
+    },
+    {
+      "id": "133cbe0c-3bf3-4270-81b0-6de7f96977fd",
+      "kind": "created",
+      "entity": "doc:cache-avalanche-sources",
+      "title": "缓存集中失效与回源保护资料导读",
+      "time": "2026-10-19T09:20:09.632Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "cache-avalanche-sources"
+    },
+    {
+      "id": "023d71c5-6a04-49dd-85f9-c3fd40f0b1d6",
+      "kind": "updated",
+      "entity": "doc:cache-avalanche-interview",
+      "title": "缓存雪崩怎么解决？",
+      "time": "2026-10-19T09:22:12.455Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "cache-avalanche-interview"
+    },
+    {
+      "id": "b90f3adb-f84d-41b3-871c-45656e85f525",
+      "kind": "state-changed",
+      "entity": "doc:cache-avalanche-interview",
+      "title": "缓存雪崩怎么解决？",
+      "time": "2026-10-19T09:22:23.723Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "cache-avalanche-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "611751d8-4660-41e2-a4bd-3df754bffebe",
+      "kind": "state-changed",
+      "entity": "doc:cache-avalanche-interview",
+      "title": "缓存雪崩怎么解决？",
+      "time": "2026-10-19T09:22:24.364Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "cache-avalanche-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "f16b95dc-6aed-4316-be3f-be10187fb925",
+      "kind": "updated",
+      "entity": "doc:agent-communication-interview",
+      "title": "父子 Agent 和多 Agent 之间怎么通信？",
+      "time": "2026-10-19T09:27:52.555Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-communication-interview"
+    },
+    {
+      "id": "012cf69f-a862-452c-bab9-6243363dfc66",
+      "kind": "updated",
+      "entity": "doc:agent-interview-hub",
+      "title": "Agent 面试题",
+      "time": "2026-10-19T09:27:52.555Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-interview-hub"
+    },
+    {
+      "id": "ba4d2597-c779-4eb3-be36-a3821e2e7625",
+      "kind": "created",
+      "entity": "doc:parent-agent-interview",
+      "title": "父子 Agent 之间如何交互和传递上下文？",
+      "time": "2026-10-19T09:27:52.555Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "parent-agent-interview"
+    },
+    {
+      "id": "4fcf65b6-96c9-45f9-9b3b-777c5af64ba0",
+      "kind": "state-changed",
+      "entity": "doc:parent-agent-interview",
+      "title": "父子 Agent 之间如何交互和传递上下文？",
+      "time": "2026-10-19T09:28:26.015Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "parent-agent-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "f73fb231-22ce-495b-a746-03d7d3f8f761",
+      "kind": "state-changed",
+      "entity": "doc:parent-agent-interview",
+      "title": "父子 Agent 之间如何交互和传递上下文？",
+      "time": "2026-10-19T09:28:26.218Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "parent-agent-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "96993d0c-b0b4-42b9-83c3-0322b1bd58e3",
+      "kind": "created",
+      "entity": "doc:go-gmp-interview",
+      "title": "聊一聊 Go 的 GMP 调度模型",
+      "time": "2026-10-19T09:33:17.667Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-gmp-interview"
+    },
+    {
+      "id": "fa9ecba5-05e8-463f-9146-011bed0d20a2",
+      "kind": "updated",
+      "entity": "doc:go-interview-hub",
+      "title": "Go 面试题",
+      "time": "2026-10-19T09:33:17.667Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-interview-hub"
+    },
+    {
+      "id": "5762c14a-2c39-4602-b595-a73460171287",
+      "kind": "created",
+      "entity": "doc:go-singleflight-interview",
+      "title": "Go 的 Singleflight 是怎么实现的？",
+      "time": "2026-10-19T09:33:17.667Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-singleflight-interview"
+    },
+    {
+      "id": "05312a2f-4011-45ab-a14f-61b5d6d83db5",
+      "kind": "created",
+      "entity": "doc:go-gmp-sources",
+      "title": "Go 官方源码导读：GMP 与任务调度",
+      "time": "2026-10-19T09:33:17.667Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "go-gmp-sources"
+    },
+    {
+      "id": "b76df9ac-6c88-40b4-b6b4-478ed83b9f52",
+      "kind": "created",
+      "entity": "doc:go-singleflight-sources",
+      "title": "Go 官方源码导读：Singleflight 请求合并",
+      "time": "2026-10-19T09:33:17.667Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "go-singleflight-sources"
+    },
+    {
+      "id": "561e9c1b-eaa4-4147-8070-fd3105f96db2",
+      "kind": "state-changed",
+      "entity": "doc:go-gmp-interview",
+      "title": "聊一聊 Go 的 GMP 调度模型",
+      "time": "2026-10-19T09:34:20.144Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-gmp-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "27ed5382-997a-4c0d-9571-215466e78b2a",
+      "kind": "updated",
+      "entity": "doc:api-latency-interview",
+      "title": "接口响应慢，怎么排查和优化？",
+      "time": "2026-10-19T09:36:44.016Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "api-latency-interview"
+    },
+    {
+      "id": "5c25769b-351a-41ec-87e6-4780d38ef310",
+      "kind": "updated",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-19T09:36:44.016Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "7f206dd7-b9ba-4bf7-abae-d92f8716752e",
+      "kind": "updated",
+      "entity": "doc:mysql-interview-index",
+      "title": "MySQL 面试题",
+      "time": "2026-10-19T09:36:44.016Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-interview-index"
+    },
+    {
+      "id": "ef8eb50f-84de-43c3-bef5-9e293eca73f0",
+      "kind": "created",
+      "entity": "doc:mysql-slow-query-interview",
+      "title": "MySQL 慢查询一般怎么优化？",
+      "time": "2026-10-19T09:36:44.016Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-slow-query-interview"
+    },
+    {
+      "id": "df49d9bc-8f24-49ee-b432-89e0c1d15692",
+      "kind": "created",
+      "entity": "doc:mysql-slow-query-sources",
+      "title": "MySQL 慢查询优化资料导读",
+      "time": "2026-10-19T09:36:44.016Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "mysql-slow-query-sources"
+    },
+    {
+      "id": "108c22fb-4e81-4304-98a6-61a0f4bb9bb7",
+      "kind": "updated",
+      "entity": "doc:go-singleflight-interview",
+      "title": "Go 的 Singleflight 是怎么实现的？",
+      "time": "2026-10-19T09:38:26.415Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-singleflight-interview"
+    },
+    {
+      "id": "83159d82-9c0d-492b-93f3-ab9652c59912",
+      "kind": "state-changed",
+      "entity": "doc:go-singleflight-interview",
+      "title": "Go 的 Singleflight 是怎么实现的？",
+      "time": "2026-10-19T09:38:34.698Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-singleflight-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "cb37ed9d-3a95-4da4-98ce-80f5ff04ebbd",
+      "kind": "state-changed",
+      "entity": "doc:mysql-slow-query-interview",
+      "title": "MySQL 慢查询一般怎么优化？",
+      "time": "2026-10-19T09:38:46.402Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-slow-query-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "942979e4-3020-4eef-b619-f842fafc9a78",
+      "kind": "updated",
+      "entity": "doc:mysql-slow-query-interview",
+      "title": "MySQL 慢查询一般怎么优化？",
+      "time": "2026-10-19T09:39:56.197Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-slow-query-interview"
+    },
+    {
+      "id": "4541a86b-1828-45c7-8bb2-2d06911a630c",
+      "kind": "updated",
+      "entity": "doc:go-singleflight-interview",
+      "title": "Go 的 Singleflight 是怎么实现的？",
+      "time": "2026-10-19T10:35:39.797Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-singleflight-interview"
+    },
+    {
+      "id": "f6eeec3f-9cee-44bb-9b2b-9fac245fb6de",
+      "kind": "updated",
+      "entity": "doc:go-singleflight-interview",
+      "title": "Go 的 Singleflight 是怎么实现的？",
+      "time": "2026-10-19T10:39:36.156Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-singleflight-interview"
+    },
+    {
+      "id": "3df31be1-90ea-4671-afc9-baed43f76424",
+      "kind": "updated",
+      "entity": "doc:go-singleflight-sources",
+      "title": "Go 官方源码导读：Singleflight 请求合并",
+      "time": "2026-10-19T10:39:36.156Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "go-singleflight-sources"
+    },
+    {
+      "id": "d046cf08-8d1c-451c-8ef5-48cdb61b808f",
+      "kind": "updated",
+      "entity": "doc:go-singleflight-interview",
+      "title": "Go 的 Singleflight 是怎么实现的？",
+      "time": "2026-10-19T11:17:20.175Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-singleflight-interview"
+    },
+    {
+      "id": "edf55c25-aad4-4911-b1fc-dd24253b5108",
+      "kind": "updated",
+      "entity": "doc:go-singleflight-sources",
+      "title": "Go 官方源码导读：Singleflight 请求合并",
+      "time": "2026-10-19T11:17:20.175Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "go-singleflight-sources"
+    },
+    {
+      "id": "76f28715-e5e3-4b19-91f3-66a44c7baa1d",
+      "kind": "state-changed",
+      "entity": "doc:mysql-slow-query-interview",
+      "title": "MySQL 慢查询一般怎么优化？",
+      "time": "2026-10-19T11:19:23.705Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-slow-query-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "b0074141-7fe8-4d6b-b35f-df08d353afda",
+      "kind": "created",
+      "entity": "doc:mysql-explain-interview",
+      "title": "怎么看 MySQL 的 EXPLAIN？",
+      "time": "2026-10-19T11:19:48.163Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-explain-interview"
+    },
+    {
+      "id": "fdd066f8-db15-425d-8d87-c3eab1eda964",
+      "kind": "updated",
+      "entity": "doc:mysql-interview-index",
+      "title": "MySQL 面试题",
+      "time": "2026-10-19T11:19:48.163Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-interview-index"
+    },
+    {
+      "id": "ffe937c1-03c1-4352-87ff-1037fa4e4e05",
+      "kind": "updated",
+      "entity": "doc:mysql-slow-query-interview",
+      "title": "MySQL 慢查询一般怎么优化？",
+      "time": "2026-10-19T11:19:48.163Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-slow-query-interview"
+    },
+    {
+      "id": "9bb2ec9e-f00b-43c2-bf02-9069a99abb5a",
+      "kind": "updated",
+      "entity": "doc:mysql-slow-query-sources",
+      "title": "MySQL 慢查询优化资料导读",
+      "time": "2026-10-19T11:19:48.163Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "mysql-slow-query-sources"
+    },
+    {
+      "id": "38af5a1d-42d0-4851-ba33-5c2724680193",
+      "kind": "updated",
+      "entity": "doc:go-singleflight-interview",
+      "title": "Go 的 Singleflight 是怎么实现的？",
+      "time": "2026-10-19T11:21:44.175Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-singleflight-interview"
+    },
+    {
+      "id": "e7514aaf-87ca-42ec-94a3-1601b84bff31",
+      "kind": "updated",
+      "entity": "doc:go-singleflight-sources",
+      "title": "Go 官方源码导读：Singleflight 请求合并",
+      "time": "2026-10-19T11:21:44.175Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "go-singleflight-sources"
+    },
+    {
+      "id": "337ca494-7bd2-4fde-a468-b929f4a5e1fd",
+      "kind": "state-changed",
+      "entity": "doc:go-singleflight-interview",
+      "title": "Go 的 Singleflight 是怎么实现的？",
+      "time": "2026-10-19T11:23:36.924Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-singleflight-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "04f4873f-fd97-4b36-a4f8-3b9fd3aa10e1",
+      "kind": "created",
+      "entity": "doc:agent-checkpoint-interview",
+      "title": "Agent 的 Checkpoint 应该保存什么，才能在中断后恢复？",
+      "time": "2026-10-19T11:36:39.161Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-interview"
+    },
+    {
+      "id": "9bf56b07-2bd1-44e5-9351-0ecb6dfb6e5c",
+      "kind": "updated",
+      "entity": "doc:agent-interview-hub",
+      "title": "Agent 面试题",
+      "time": "2026-10-19T11:36:39.161Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-interview-hub"
+    },
+    {
+      "id": "2a5eea3a-7468-4c8d-a162-7d0bfc6219e4",
+      "kind": "created",
+      "entity": "doc:go-channel-structure-interview",
+      "title": "Go 的 chan 底层数据结构是什么？",
+      "time": "2026-10-19T11:36:39.161Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-channel-structure-interview"
+    },
+    {
+      "id": "57bac617-c5c9-4de2-8654-14da53601113",
+      "kind": "updated",
+      "entity": "doc:go-interview-hub",
+      "title": "Go 面试题",
+      "time": "2026-10-19T11:36:39.161Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-interview-hub"
+    },
+    {
+      "id": "4ab72c8c-9dd4-480b-b262-0e11301d81b5",
+      "kind": "updated",
+      "entity": "doc:interview-resources",
+      "title": "Go 与 Agent 面试资料",
+      "time": "2026-10-19T11:36:39.161Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-resources"
+    },
+    {
+      "id": "1fbba9e6-4b94-45e2-acbd-529d68c831bb",
+      "kind": "created",
+      "entity": "doc:claude-code-checkpoints",
+      "title": "Claude Code：会话接续与文件检查点",
+      "time": "2026-10-19T11:36:39.161Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "claude-code-checkpoints"
+    },
+    {
+      "id": "1a5e3947-f301-4e11-8cf4-75f77e5c7ff1",
+      "kind": "created",
+      "entity": "doc:codex-session-recovery",
+      "title": "Codex：从 rollout 恢复会话",
+      "time": "2026-10-19T11:36:39.161Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "codex-session-recovery"
+    },
+    {
+      "id": "6f00ca6c-6b28-468c-8e7f-45554c0ed303",
+      "kind": "updated",
+      "entity": "doc:eino-checkpoints",
+      "title": "Eino 的检查点与中断恢复",
+      "time": "2026-10-19T11:36:39.161Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "eino-checkpoints"
+    },
+    {
+      "id": "d767afef-1eef-4935-a536-4253cc1345ef",
+      "kind": "created",
+      "entity": "doc:go-channel-sources",
+      "title": "Go runtime 源码导读：Channel 数据结构",
+      "time": "2026-10-19T11:36:39.161Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "go-channel-sources"
+    },
+    {
+      "id": "b0234e46-237c-4dc6-94d9-8d5fc5e78c4f",
+      "kind": "state-changed",
+      "entity": "doc:agent-checkpoint-interview",
+      "title": "Agent 的 Checkpoint 应该保存什么，才能在中断后恢复？",
+      "time": "2026-10-19T11:38:57.384Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "94e81746-fbbd-42e4-9253-9ae34bf5a18d",
+      "kind": "state-changed",
+      "entity": "doc:go-channel-structure-interview",
+      "title": "Go 的 chan 底层数据结构是什么？",
+      "time": "2026-10-19T11:39:47.283Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-channel-structure-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "cac832f2-5be1-4c0b-a68d-27d9fc5d52dd",
+      "kind": "updated",
+      "entity": "doc:agent-checkpoint-interview",
+      "title": "Agent 的 Checkpoint 应该保存什么，才能在中断后恢复？",
+      "time": "2026-10-19T11:39:56.176Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-interview"
+    },
+    {
+      "id": "8e015ea4-4631-4512-b023-f9533b905b81",
+      "kind": "updated",
+      "entity": "doc:go-channel-structure-interview",
+      "title": "Go 的 chan 底层数据结构是什么？",
+      "time": "2026-10-19T11:40:20.212Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-channel-structure-interview"
+    },
+    {
+      "id": "0c4c3753-93c3-4c2c-816e-44ebb4e095a6",
+      "kind": "created",
+      "entity": "doc:redis-cluster-interview",
+      "title": "介绍一下 Redis 的集群模式？",
+      "time": "2026-10-19T11:43:20.183Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-cluster-interview"
+    },
+    {
+      "id": "e5fb4743-12a2-4ba5-a0ed-b6eb20562a34",
+      "kind": "updated",
+      "entity": "doc:redis-interview-index",
+      "title": "Redis 面试题",
+      "time": "2026-10-19T11:43:20.183Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-interview-index"
+    },
+    {
+      "id": "ec993f92-ac98-42b1-81aa-0c9af7b784c7",
+      "kind": "created",
+      "entity": "doc:interview-experiences",
+      "title": "Go 后端与 AI Agent 面经",
+      "time": "2026-10-19T11:44:16.194Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-experiences"
+    },
+    {
+      "id": "bb079204-1987-4b80-a280-7bff70631c97",
+      "kind": "updated",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-19T11:44:16.194Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "10c93261-af13-4687-9eee-a48839ad2292",
+      "kind": "state-changed",
+      "entity": "doc:interview-resources",
+      "title": "Go 与 Agent 面试资料",
+      "time": "2026-10-19T11:44:16.194Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-resources",
+      "from": "organized",
+      "to": "reading"
+    },
+    {
+      "id": "e5b6a533-ad3b-4ec1-83fc-108b02a6b942",
+      "kind": "updated",
+      "entity": "doc:interview-resources",
+      "title": "Go 与 Agent 面试资料",
+      "time": "2026-10-19T11:44:16.194Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-resources"
+    },
+    {
+      "id": "aedbce3e-56ea-4262-a387-7f54318e6a0b",
+      "kind": "updated",
+      "entity": "doc:agent-checkpoint-interview",
+      "title": "Agent 的 Checkpoint 应该保存什么，才能在中断后恢复？",
+      "time": "2026-10-19T11:44:44.191Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-interview"
+    },
+    {
+      "id": "c237942b-e986-40b5-ba28-a1296212e0b9",
+      "kind": "state-changed",
+      "entity": "doc:interview-experiences",
+      "title": "Go 后端与 AI Agent 面经",
+      "time": "2026-10-19T11:47:37.535Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-experiences",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "9c9e8669-3202-4fb0-a0d9-40bb32c1b1c2",
+      "kind": "state-changed",
+      "entity": "doc:redis-cluster-interview",
+      "title": "介绍一下 Redis 的集群模式？",
+      "time": "2026-10-19T11:48:24.978Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-cluster-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "502a29b4-0d9a-454e-aa3d-a9b5bfb2f212",
+      "kind": "state-changed",
+      "entity": "doc:redis-cluster-interview",
+      "title": "介绍一下 Redis 的集群模式？",
+      "time": "2026-10-19T11:49:10.279Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-cluster-interview",
+      "from": "reading",
+      "to": "organized"
     }
   ]
 }

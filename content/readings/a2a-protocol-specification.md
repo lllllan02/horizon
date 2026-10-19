@@ -41,7 +41,7 @@ A2A 统一独立 Agent 服务的外部交互，内部模型与工具无需公开
 
 [§3.2.2](https://a2a-protocol.org/v1.0.0/specification/#322-sendmessageconfiguration)规定默认阻塞发送在任务进入等待输入状态时返回，因此可以直接用原 HTTP 响应交付问题。非阻塞模式先返回任务，客户端后续通过 GetTask 读取当前状态及消息。
 
-[§3.5](https://a2a-protocol.org/v1.0.0/specification/#35-task-update-delivery-mechanisms)另定义流式与推送交付：SSE 在客户端已建立的连接上发送 `statusUpdate`，其中 `status` 可包含询问消息；推送则要求客户端先配置回调 URL，由服务端 POST 更新。Webhook 不是多轮交互的必需条件。流到达等待输入状态可关闭；补输入后需继续查询或重新建立流，不能假定原连接永久存在。
+[§3.5](https://a2a-protocol.org/v1.0.0/specification/#35-task-update-delivery-mechanisms)另定义流式与推送交付：[[sse|SSE]] 在客户端已建立的连接上发送 `statusUpdate`，其中 `status` 可包含询问消息；推送则要求客户端先配置回调 URL，由服务端 POST 更新。Webhook 不是多轮交互的必需条件。流到达等待输入状态可关闭；补输入后需继续查询或重新建立流，不能假定原连接永久存在。
 
 规范定义任务的等待与续接语义，不规定用挂起线程实现。应用可以保存任务及继续所需的输入／进度，结束当前执行，收到补充 Message 后按任务编号再次执行；具体恢复位置和保存方式属于服务端实现。
 

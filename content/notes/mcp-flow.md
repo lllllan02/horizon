@@ -1,44 +1,43 @@
 ---
-learning_status: pending
+learning_status: organized
 title: "MCP 接入流程"
 parent: mcp
 category: "Agent"
 tags: ["MCP", "工具调用", "协议"]
 created_at: "2026-10-09"
-updated_at: "2026-10-16T20:46:14+08:00"
+updated_at: "2026-10-19T13:41:49+08:00"
 reading_suggestions:
   - mcp-capabilities
   - mcp-tool-calling-go
   - mcp-permissions
   - mcp-architecture-summary
+learning_status_changed_at: "2026-10-19T13:51:55.147+08:00"
 ---
 
-**MCP 接入的主线是：连接服务 → 发现工具 → 模型提出调用 → 服务端执行 → 结果交回模型。** 宿主应用（Host）组织模型与上下文，内部的客户端（Client）负责通信，服务端（Server）保存工具定义与执行实现。
+**MCP 接入是将服务端（Server）提供的工具，接入宿主应用（Host）的模型调用循环。** 外部服务按 MCP 暴露能力后，Host 可以统一发现和调用工具，减少为每个服务单独编写接入逻辑；模型仍通过[[tool-calling|工具调用]]提出需求。
 
-![[assets/mcp-flow.png|MCP 接入与工具调用顺序]]
+Host 管理模型和上下文，内部的客户端（Client）负责与 Server 通信。**「定义交给模型，执行留在 Server，Host 连接两者。」**
 
-## 接通服务，取得定义
+![[assets/mcp-flow.png|640]]
 
-Server 注册工具定义和处理函数；Host 配置启动命令或服务地址，按需完成[[mcp-permissions|授权]]。stdio 由 Client 启动本地进程，HTTP 则访问独立运行的 Server。
+## 连接服务，取得工具定义
 
-Client 通过 `tools/list` 获取工具定义，Host 筛选并适配成模型工具格式，同时记录「模型工具名 → Client 与原工具名」的映射。**「定义交给模型，执行代码留在 Server。」**
+Server 先注册工具定义与处理函数，Host 再配置连接：stdio 由 Client 启动本地子进程，Streamable HTTP 则连接独立运行的 Server 地址。需要凭据时，由应用完成[[mcp-permissions|接入授权]]。
 
-图按 `2026-07-28` 版绘制：可先用 `server/discover` 发现版本与能力，每个请求仍携带相应元数据；旧版使用 `initialize` 握手，差异保留在 [[mcp-architecture-summary|官方架构导读]]。
+接通后，Client 用 `tools/list` 取得工具名、描述和参数约束（`inputSchema`）。Host 筛选当前可用工具，将定义转换成模型接口支持的格式，并保存「模型工具名 → 目标 Client 与原工具名」的映射。多个 Server 可能有同名工具，映射保证后续请求能找到正确的执行方。
 
-## 从模型请求到执行结果
+[[mcp-architecture-summary|版本与能力发现]]须匹配实际协议：`2026-07-28` 可先调用 `server/discover`，每个请求仍携带版本与能力元数据；`2025-11-25` 使用 `initialize` 和 `notifications/initialized` 握手。SDK 可能封装这些交互，不能混用两版流程。
 
-模型返回工具名与参数后，Host 校验参数和权限，按映射找到 Client，发送 `tools/call`。Server 查找处理函数、检查业务权限并执行，再经 Client 返回结果。
+## 将模型请求交给 Server
 
-Host 将结果关联到原模型调用，加入上下文再次请求模型。模型可以回答用户，也可继续调用，回到图中③；连接和定义通常可以复用。[[mcp-tool-calling-go|Go 最小实现]]展示了这段循环的接法。
+模型依据定义和上下文，返回工具名与参数。Host 校验参数、判断本次操作是否获准，再按映射找到 Client，发送 `tools/call`；Server 根据原工具名找到处理函数，检查业务权限并执行业务逻辑。
 
-## 后续使用与结束
+**「模型提出调用，不代表调用已经执行。」** Host 可以拒绝请求，Server 也可能因权限或业务条件拒绝操作。[[mcp-tools-summary|工具结果与错误]]需要保留成功、业务失败和协议错误的区别，避免把失败反馈解释为执行成功。
 
-[[mcp-capabilities|资源与提示模板]]由 Host 按需读取并加入上下文，不经过工具调用。工具目录变化时重新发现并更新映射，通知机制见架构导读；不再使用时关闭 Client、订阅及所启动的本地进程。
+## 将结果放回模型上下文
 
-## 服务重连后，能继续使用原来的工具列表吗？
+Client 收到结果后，Host 将它关联到原模型调用，加入上下文并再次请求模型。MCP 的 JSON-RPC 请求 ID 与模型接口的调用 ID 属于两段交互，由 Host 负责衔接。
 
-原连接下工具可用，重连后身份或服务版本可能已经变化。若客户端沿用缓存定义，模型可能继续调用已撤销或参数含义变化的工具。
+模型结合结果回答用户，也可以提出下一次调用；调用循环仍由 Host 驱动，连接与工具定义通常可以复用。[[mcp-tool-calling-go|Go 接入示例]]在普通工具调用程序中替换定义获取和执行入口，保留原有模型循环。[[mcp-capabilities|资源与提示模板]]由 Host 按需获取，用于补充上下文，采用各自的读取接口。
 
-重建连接时重新确认能力与当前可用集合，维护模型可见名称到服务工具的映射；执行时仍由服务端检查权限。旧运行绑定的契约无法继续时，向循环返回可理解的变化原因，再决定刷新定义或结束相关步骤，而不是无提示地换实现。
-
-断线前的在途调用另行处理。读取可以按语义判断是否重做，写操作先核对远端状态。目录刷新解决“现在能调用什么”，不解决“上次究竟执行了没有”。
+工具目录变化或重连后，应刷新定义及映射，防止继续使用已撤销或已变更的工具。**「刷新目录不能确认断线前的调用是否已执行。」** 对写操作先核对远端状态，再决定是否重试；旧调用无法继续时，将变化或不确定性反馈给循环。不再使用时关闭 Client、订阅及由其启动的本地进程。

@@ -1,0 +1,93 @@
+{
+  "MapValues": {
+    "Channels": {
+      "MapValues": {
+        "\"draft\"": {
+          "MapValues": {
+            "Values": {}
+          },
+          "Type": {
+            "PointerNum": 1,
+            "StructType": "_eino_pregel_channel"
+          }
+        },
+        "\"end\"": {
+          "MapValues": {
+            "Values": {}
+          },
+          "Type": {
+            "PointerNum": 1,
+            "StructType": "_eino_pregel_channel"
+          }
+        },
+        "\"publish\"": {
+          "MapValues": {
+            "Values": {}
+          },
+          "Type": {
+            "PointerNum": 1,
+            "StructType": "_eino_pregel_channel"
+          }
+        }
+      }
+    },
+    "Inputs": {
+      "MapValues": {
+        "\"publish\"": {
+          "JSONValue": "草稿：解释 Checkpoint 保存什么",
+          "Type": {
+            "SimpleType": "_eino_string"
+          }
+        }
+      }
+    },
+    "InterruptID2Addr": {
+      "MapValues": {
+        "\"7c513b4d-2905-4e6f-934c-29564791124b\"": {
+          "SliceValues": [
+            {
+              "MapValues": {
+                "ID": {
+                  "JSONValue": "draft_demo"
+                },
+                "SubID": null,
+                "Type": {
+                  "JSONValue": "runnable"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "InterruptID2State": {
+      "MapValues": {
+        "\"7c513b4d-2905-4e6f-934c-29564791124b\"": null
+      }
+    },
+    "RerunNodes": null,
+    "SkipPreHandler": {},
+    "State": {
+      "MapValues": {
+        "Checked": {
+          "JSONValue": true
+        },
+        "Draft": {
+          "JSONValue": "草稿：解释 Checkpoint 保存什么"
+        },
+        "Goal": {
+          "JSONValue": "生成并检查草稿后模拟发布"
+        }
+      },
+      "Type": {
+        "PointerNum": 1,
+        "StructType": "horizon_checkpoint_draft_v1"
+      }
+    },
+    "SubGraphs": null
+  },
+  "Type": {
+    "PointerNum": 1,
+    "StructType": "_eino_checkpoint"
+  }
+}

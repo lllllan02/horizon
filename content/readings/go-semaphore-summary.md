@@ -20,6 +20,6 @@ Go 的 [`golang.org/x/sync/semaphore`](https://pkg.go.dev/golang.org/x/sync/sema
 
 [WorkerPool 示例](https://pkg.go.dev/golang.org/x/sync/semaphore#example-package-WorkerPool)先在提交循环中取得名额，再启动 goroutine，并在任务结束时释放。名额耗尽时，循环暂停派生下一项工作，已有任务结束后再继续。
 
-由这一结构可知，如果先为所有任务创建 goroutine，再让它们等待名额，只能限制正在工作的数量，不能同时限制等待 goroutine 的数量。这是对示例执行顺序的归纳；信号量本身也没有替应用规定队列上限或每秒启动速率。
+由这一结构可知，如果先为所有任务创建 goroutine，再让它们等待名额，只能限制正在工作的数量，不能同时限制等待 goroutine 的数量。这是对示例执行顺序的归纳；信号量本身也没有替应用规定队列上限或[[rate-limiting|每秒启动速率]]。
 
 按 2026-10-18 在线包文档与示例整理，未运行示例，也未据其示例数值推定服务容量。

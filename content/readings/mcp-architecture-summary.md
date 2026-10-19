@@ -32,7 +32,7 @@ reading_suggestions:
 | 方式 | 启动与收发 | 结束 |
 | --- | --- | --- |
 | stdio | Client 启动 Server 子进程，向其 stdin 写入消息，从 stdout 读取；一行一条 JSON-RPC 消息，日志写 stderr | 关闭子进程输入，等待退出，必要时终止进程 |
-| Streamable HTTP | Server 独立运行；Client 向同一个 MCP endpoint 发送 POST，响应为 JSON 或属于该请求的 SSE 流 | 释放 HTTP 连接与订阅流；不关闭远程服务进程 |
+| Streamable HTTP | Server 独立运行；Client 向同一个 MCP endpoint 发送 POST，响应为 JSON 或属于该请求的 [[sse\|SSE]] 流 | 释放 HTTP 连接与订阅流；不关闭远程服务进程 |
 
 `2026-07-28` 的 HTTP 传输移除了协议级会话与独立 GET 流。变更通知通过 `subscriptions/listen` 请求的响应流递送，不能照搬旧版的会话与 SSE 接入方式。需要认证时按服务的授权方案配置；传输连通不替代业务权限检查。
 

@@ -1,5 +1,5 @@
 ---
-learning_status: reading
+learning_status: pending
 title: "Agent 评测"
 parent: agent
 category: "Agent"
@@ -10,7 +10,7 @@ reading_suggestions:
   - anthropic-agent-evals-summary
   - agent-evaluation-practice
   - agent-trace
-learning_status_changed_at: "2026-10-17T23:28:53.406+08:00"
+learning_status_changed_at: "2026-10-19T00:33:12.311+08:00"
 ---
 
 **Agent 评测是在规定任务、环境和资源预算下运行 Agent，再依据实际结果与执行记录判断任务质量、可靠性和成本的方法。** 被测对象包括模型、工具与[[agent-harness|运行系统]]；更换其中一项，都可能改变表现。

@@ -1,0 +1,21 @@
+Use case: infographic-diagram.
+Asset type: Horizon 中文知识笔记的辅助解释图，最终 PNG。
+Primary request: 画清 MCP 的通信位置：Client 属于 AI 应用（Host），通过 MCP 与 Server 双向通信；Server 提供工具、资源与提示模板，并适配实际系统。画归属与连接关系，不画协议时序，不复制正文。
+
+Reference image: /Users/lllllan/lllllan02/horizon/.agents/skills/excalidraw-diagram/assets/diagram-style-reference.png，仅风格参考。迁移对象造型、柔和轮廓、小面积淡彩与清楚标签，不复制其工具注册表内容、布局或大标题。
+
+Style: 克制的二维技术编辑插画，白底，简洁自然的轮廓，细而清晰的灰蓝描边。对象有可辨认造型：应用是带顶栏的窗口，Client 是嵌在窗口右侧的通信端口模块，Server 是容纳三种能力对象的服务机匣，Tool 用小型操作扳手、Resource 用折角数据页、Prompt 用带两条文字线的消息模板表示；实际系统用文件夹、数据库圆柱和 API 小端口组合。避免把所有对象都画成同样的文字方框。无机器人、发光脑球、3D平台、粗黑线、明显渐变、厚阴影、装饰齿轮或徽章。
+Palette: 白 #ffffff，文字与轮廓 #374151，边界 #a8b3c2；MCP 通信关系灰蓝 #416788，局部淡蓝 #eaf0f7；实际系统连接与少量能力细节用暖橙 #b66a43 / #fbf0e6。主画面仍以白色为主。
+Canvas target: 1440 × 864 px，横向紧凑画布，5:3。
+Intended display: 正文显示宽 640px，高度按比例；必须在该尺寸下清楚辨认标签，不把该尺寸说明画入图内。
+
+Composition and relationships:
+左侧约40%是一只应用窗口，顶部标签“AI 应用 · Host”，窗口内部左侧以小型简洁节点连线图标标“模型交互”，右侧嵌入端口模块标“Client”，两者用一根短双向箭头相连。Client 必须完整位于 Host 窗口内。
+中部偏右约28%是一只 Server 服务机匣，标签“Server”。机匣内部上下排列三个小型实际对象与标签：“Tool 操作”“Resource 数据”“Prompt 模板”，标签不要挤到边框外。
+Client 的端口到 Server 端口用一条笔直清晰的双向箭头连接，箭头上标“MCP”。MCP 是连接上的协议标签，绝不能画成第三个运行组件或容器。
+最右侧约18%是文件夹、数据库与 API 端口组成的小组，顶部标“实际系统”。Server 到实际系统用一条短双向连线，标“访问”。让 Server 与实际系统有明确间距，实际系统不嵌在 Server 内。
+模型交互、Client、Server 的水平中心对齐，形成直观左到右关系。三种能力的对象可以在机匣内部纵向排列以保持可读。所有连接均为直线，不绕线、不穿过文字。仅必要边缘留白，不要大量空白或超大对象。
+
+Text, verbatim: “AI 应用 · Host”, “模型交互”, “Client”, “MCP”, “Server”, “Tool 操作”, “Resource 数据”, “Prompt 模板”, “实际系统”, “访问”。
+不要添加总标题、副标题、编号、长段解释、页尾总结、图例、额外英文或说明面板。中文使用规整清晰的无衬线字体，字号层级克制。
+Semantic invariants: Host 包含 Client；模型交互由 Host 组织；只有 Client 与 Server 之间的连接标为 MCP；Server 对接实际系统；三种能力属于 Server。本图不是固定串行调用流程，不把 Tool、Resource、Prompt 用箭头依次串联。
