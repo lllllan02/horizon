@@ -2,7 +2,7 @@
 title: "Saparo 电商 Agent 岗位准备清单"
 aliases: ["四川斯茂瑞 AI Agent 工程师 JD 拆解", "Saparo Agent 面试准备"]
 category: "面试"
-parent: interview-hub
+parent: interview-preparation-index
 tags: ["面试", "Agent"]
 type: practice
 learning_status: pending
@@ -56,7 +56,7 @@ LangGraph、OpenAI Agents SDK、Claude Agent SDK、AutoGen 是框架举例，不
 
 - [ ] **说明模型接入与能力边界**：任务需要哪些模型能力，如何选择调用方式？模型拒绝、输出不符合格式或工具参数无效时，程序怎样识别并处理？
 - [ ] **组织可靠的模型输入**：Prompt 如何表达任务和约束，Structured Output 怎样检查字段与业务含义？用[[agent-context|上下文管理]]说明购物偏好、候选商品、历史操作和最新报价怎样进入当前调用，历史过长时保留什么？
-- [ ] **解释基础原理与适用场景**：Transformer 与 Embedding 在所用模型、检索流程中分别承担什么作用？RAG 的资料从哪里来、怎样检索并参与生成；什么情况下应查询实时商品接口？
+- [ ] **解释基础原理与适用场景**：Transformer 与 Embedding 在所用模型、检索流程中分别承担什么作用？[[rag-workflow-interview|RAG 的资料从哪里来、怎样检索并参与生成]]；什么情况下应查询实时商品接口？
 - [ ] **判断是否需要额外机制**：Memory 应保存哪些偏好、怎样更新；RAG 或多 Agent 针对什么实际问题，如何比较加入前后的效果和成本？允许结论是当前任务尚不需要。
 
 完成证据：模型选择与失败策略、输入输出样例及一次上下文或提示词改动的对照记录。框架、提示词或模型变化的效果需要验证，不能仅凭接入成功判断。

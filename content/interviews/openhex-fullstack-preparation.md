@@ -2,7 +2,7 @@
 title: "迷境智塔 OpenHex 全栈岗位准备清单"
 aliases: ["杭州迷境智塔高级全栈工程师 JD 拆解", "OpenHex 面试准备"]
 category: "面试"
-parent: interview-hub
+parent: interview-preparation-index
 tags: ["面试", "Agent"]
 type: practice
 learning_status: reading

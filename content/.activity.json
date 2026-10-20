@@ -414,16 +414,16 @@
       "title": "Agent 面试题",
       "collection": "interviews",
       "state": "pending",
-      "digest": "864ced1900258751ecffeb01bd3af1a788657755a2b834110ed637b7e86c31ed",
-      "bodyDigest": "270bf9b368d040fc0793b280415875df5c07ebda96434f762da86f30d7920c62",
+      "digest": "73499b4312cf43a80d8fdee073d747ad66de90d7e7dd5297a8565e0ddfd7d149",
+      "bodyDigest": "56a59a2f969b4ff16332017946d750aa115374ab619fd0229f0998e20572f743",
       "updatedAt": "2026-10-20T15:54:42+08:00"
     },
     "agent-memory-leak-interview": {
       "title": "Agent 服务最常见的生产环境内存泄漏有哪几种？如何排查和修复？",
       "collection": "interviews",
       "state": "pending",
-      "digest": "77df6edf806a9682032e5b368d29342f16789aa52034ac22b84ba8402733955c",
-      "bodyDigest": "bf5e55d6a13ccb06b480241416479a359dba9ce3763144b24dc5c50dfa51ce82",
+      "digest": "5a474abfe0bf31845823ece34c00621bc7bcac0bde9155bad962f4b8df077ada",
+      "bodyDigest": "f7ceee245f00192f356aac41dd8d7b287acc10e395c8b47ba93ec7223b26f8b2",
       "updatedAt": "2026-10-18T23:09:04+08:00"
     },
     "agent-progress-interview": {
@@ -454,8 +454,8 @@
       "title": "模型调用响应慢，导致 Agent 链路超时，如何设计分层超时与熔断？高并发下怎么处理？",
       "collection": "interviews",
       "state": "organized",
-      "digest": "4af293462d52ca5e523bf23d08e738cd56a31e3ad4679bebae0aaba1fede8a8b",
-      "bodyDigest": "940a03ec619e7661c717108fecaa84540ff189e762b01fde24b32621ea02a6b4",
+      "digest": "82a3bceb16b4b7e543e8013ed2420ad72fa3456b081a288c2fd72bdd717ccf8c",
+      "bodyDigest": "8ff20611890658f929366ffa29d5bdcd16878f8218cf5b9e8fb9a0910fa161fc",
       "updatedAt": "2026-10-18T23:47:18+08:00"
     },
     "aikan-go-preparation": {
@@ -470,8 +470,8 @@
       "title": "接口响应慢，怎么排查和优化？",
       "collection": "interviews",
       "state": "organized",
-      "digest": "f3eb957d2ac708b4aef91df13e26cdd39333030435a135d2cefb8c44c7eaea31",
-      "bodyDigest": "85049e031845c9f8abbc998c10dff790826a8fe7ffc82fe8abf2907e133a4a6f",
+      "digest": "9a27f73e5dd3d103f28ee997c3f3dc5c13d4e4bf83bc05dbfba0665f595dba58",
+      "bodyDigest": "513a18b480a78608fd480b6a00ab11838ab5937960bdf447a7fc424388cf2daa",
       "updatedAt": "2026-10-19T00:49:59+08:00"
     },
     "bm25-interview": {
@@ -494,8 +494,8 @@
       "title": "数据库和缓存的一致性怎么保障？",
       "collection": "interviews",
       "state": "organized",
-      "digest": "bce7ce25cda0280f010597beb3c12e35f9d6f89be5dcd306267ea007b3641d20",
-      "bodyDigest": "f82a3a2538ce20b9504bb719c0b9c080e042e5fa2c0af1f90ad761fb9e458531",
+      "digest": "05be1f7ae78c9912f6bb246e98b29f3e2b2c06809653c3bcc0f9b3bc5bc2b7ec",
+      "bodyDigest": "be04bbff8d6a2c93e4d5d17a1dbf6bf402592cb7d1a2eea5190f13cb31fbddb8",
       "updatedAt": "2026-10-19T17:01:43+08:00"
     },
     "contest-bottleneck-interview": {
@@ -550,16 +550,16 @@
       "title": "怎么防止 Go Channel 重复关闭？",
       "collection": "interviews",
       "state": "organized",
-      "digest": "02690d3bcf70ee0c65af1eb0419ea26839a6774f0c80ba91e61f46f3127b9a9a",
-      "bodyDigest": "484c70ec20cf78172fcf4200005cf6b490594fc9e125d73e14896c9ea84eec12",
+      "digest": "17ffe92d47e21e884e5e1628a59188626d04a786ac9cb3851849c9c2f3580980",
+      "bodyDigest": "10cf79306c01cb52a8b5b67fc68c0c207d24a7135ca561a00a71aa30a944ca4f",
       "updatedAt": "2026-10-19T11:24:03+08:00"
     },
     "go-channel-interview": {
       "title": "Go 的 Channel 一般怎么用？",
       "collection": "interviews",
       "state": "organized",
-      "digest": "d4aa62a591b8f47ee93184c8bff117badf7f983febbd78c34e74079816990481",
-      "bodyDigest": "ea047992a20891c96a3a13c3d8de409aafae2f096afe5f0550fe7a9887edf715",
+      "digest": "96ee1fc06a2fe7f1d3f2f0fca5ca0d54f1750f0f01267dbe4902050b3fde7dae",
+      "bodyDigest": "8bbf94b0bdb35fec8682bcb7cbf86fc407f8f029050abc0861cb710a3b37f212",
       "updatedAt": "2026-10-19T16:17:49+08:00"
     },
     "go-channel-structure-interview": {
@@ -574,8 +574,8 @@
       "title": "Go 的 WithCancel 和 WithoutCancel 有什么区别？",
       "collection": "interviews",
       "state": "organized",
-      "digest": "e9b56cc33726c79edd08ba1c1879fc4f7b3c0d7213bc4f026271fa2ee4472036",
-      "bodyDigest": "35f03d738861480ad2735404c1461194913af92508467166a4ddc87941a61f43",
+      "digest": "1e6b6fa03a4146a9f72557f0e6dbbb5dd31a68557c9eb0c277269b0e4d8c731e",
+      "bodyDigest": "0908a653dbaad839b5fd54e97be1d15bb0f6ec809efcda5187621c89e576bb22",
       "updatedAt": "2026-10-19T15:24:52+08:00"
     },
     "go-context-interview": {
@@ -606,8 +606,8 @@
       "title": "Go 面试题",
       "collection": "interviews",
       "state": "pending",
-      "digest": "3ec653ce65d9d4a39df17ab0a6edc8b9ffe040d2d7452d807febd47512ad0619",
-      "bodyDigest": "af6671dc6e04b837ea24f6a219b734cd46f4a257140eeb41d8d1f78a6eee5395",
+      "digest": "3ad1ddf7f25c77096d9efedf0ab477e3c33ff224663a6dff5cc336440027e041",
+      "bodyDigest": "b99634ed875794601925dd926fefefe89378f7f87df077866c1af34c5fa0d092",
       "updatedAt": "2026-10-19T16:21:41+08:00"
     },
     "go-mutex-interview": {
@@ -630,8 +630,8 @@
       "title": "Go 协程是怎么抢占的？",
       "collection": "interviews",
       "state": "pending",
-      "digest": "f2b27ec12d6e3090c3cb4c10f4b905c26dd2e47a58de9e44808dfa9e43e2c7cf",
-      "bodyDigest": "07cdbc48d360b785ecfc0a0109a753916386b9ecda85c9ff1faa8a95d43da516",
+      "digest": "9490ec4d933f90bc187904b0fa740c5d02fdab26db08f7bc0699b58905ae21da",
+      "bodyDigest": "410e3cf05a2d214e763474ce8395d736ad4b1005e14836668aa5fdf2dcfa5cd3",
       "updatedAt": "2026-10-19T11:24:21+08:00"
     },
     "go-singleflight-interview": {
@@ -654,8 +654,8 @@
       "title": "引力传媒 Agent 后端岗位准备清单",
       "collection": "interviews",
       "state": "pending",
-      "digest": "a0bee4ae4304d6530102be8580b518f06c76ffa97fc9233b756b893309d1e7f2",
-      "bodyDigest": "4e5652fb6a7f22080a8e778be48fef1ceea4886d0dc5629b934d5b05066a5ebb",
+      "digest": "2d810ac1c5c59b895d5af4704639842ac19343ae7da534be4af00451c24f5201",
+      "bodyDigest": "c263e8846105a6e8293aa378dea1cbd48c8d33225d301cc1dfb616339d3f58fb",
       "updatedAt": "2026-10-20T11:36:34+08:00"
     },
     "interview-experiences": {
@@ -670,9 +670,17 @@
       "title": "面试题",
       "collection": "interviews",
       "state": "reading",
-      "digest": "ffc67265e7a128f359e0851816c832d9e1bab30d552155284fd19c81c1289f30",
-      "bodyDigest": "db688488be22eebc1877dbedc46f04992ac877954941a0cec8a108d4b006e9ed",
+      "digest": "d2ec7ebac1adbb865e35a5933f9fa72e8f9da8694b5271001fbb0533fdc3879b",
+      "bodyDigest": "2f2451609b27dcd123609db4e268242b75f9eb3ff65c10e3d5549da229a1f7e9",
       "updatedAt": "2026-10-19T17:36:41+08:00"
+    },
+    "interview-preparation-index": {
+      "title": "面试准备",
+      "collection": "interviews",
+      "state": "pending",
+      "digest": "e80f947e33b951a095f01775a6769942eccda50db3207db347c501f2c6b1904a",
+      "bodyDigest": "f0b78e6f1d30bd768eab07029482de72442d2540fc8e1bdbcbfcc5276437a353",
+      "updatedAt": "2026-10-20T17:03:51+08:00"
     },
     "interview-resources": {
       "title": "Go 与 Agent 面试资料",
@@ -686,8 +694,8 @@
       "title": "介绍一下 Kafka 的整体架构？",
       "collection": "interviews",
       "state": "pending",
-      "digest": "bf5880298985d6f1f568cbad1a0531484186250e44a6eec15ba79b769675d05a",
-      "bodyDigest": "f13ad380de53537dcf4c0989323a320edd352a1f466b6517d0e037cbee1364a1",
+      "digest": "9b8759330841c53926e2d34ab257b2a4b9e3ba1b7c8af7fbb5cacabaf88a4b75",
+      "bodyDigest": "beefa7ad4c1d5d09e4c8861f189298418e3791bebee6cf7539b351a149ae3fa6",
       "updatedAt": "2026-10-19T17:12:34+08:00"
     },
     "kafka-consumer-lag-interview": {
@@ -710,8 +718,8 @@
       "title": "Kafka 面试题",
       "collection": "interviews",
       "state": "pending",
-      "digest": "cbec3a211eb2f011fc8e059853517a1cf322336013b3ab401d2527633f27be2a",
-      "bodyDigest": "5071b595d8f18b4e72a4a09ea658aec584a29992fa404374ee89b60d38cf6634",
+      "digest": "e397e5d5ab30026c8100dd596c5de4842cb17d835f2489eb11023227faf452ae",
+      "bodyDigest": "d9f9deaea8354babd2d126e4d6e691f211a7bc0b40e743db4fdd59e8d0cad077",
       "updatedAt": "2026-10-19T21:42:14+08:00"
     },
     "kafka-offset-interview": {
@@ -750,8 +758,8 @@
       "title": "Kafka 是怎么实现高吞吐的？",
       "collection": "interviews",
       "state": "organized",
-      "digest": "e084db1148ac1d332a796b1d6e384bf4b6f7a4391e93d734d760e0d6fba54c4c",
-      "bodyDigest": "edc6484c3a66be74edd5376f2f2f7648d5b5793b93924bf9ff6a21f48ad4f7d6",
+      "digest": "4e3111324bc6df85ff671cf8f4ffdbcb912d097388d2fcb31d8d20b570df588e",
+      "bodyDigest": "17e81fc3dc726f0472861bebad999ac25f6c7909671e7084cca91ad706d596b6",
       "updatedAt": "2026-10-19T10:37:47+08:00"
     },
     "learning-plan-agent-fallback": {
@@ -766,32 +774,32 @@
       "title": "介绍一下你做过的学习计划 Agent 项目？",
       "collection": "interviews",
       "state": "organized",
-      "digest": "242d1a4e8b39795218ee1962734ef253e30943bf79f79ac53e0a7130524aa89f",
-      "bodyDigest": "9fbb01a62e577d6b30246c4efcab4d729afcfc4d0d537c04bbceceb91e100275",
+      "digest": "3d468a07750ac00b3c1ed7f811bd9fe2e254d5b72574feb24090f9d12ffe9de0",
+      "bodyDigest": "15547d0c65a6b511f4b1344edbdf1f5a431b8532bcdafb16231717f30643a675",
       "updatedAt": "2026-10-20T12:49:36+08:00"
     },
     "learning-plan-agent-submission": {
       "title": "学习计划 Agent 为什么通过工具提交最终清单？",
       "collection": "interviews",
       "state": "organized",
-      "digest": "c621c86be4710087af79ef47f197f1d0bfb690e5f2cb20b868586326e91cbac4",
-      "bodyDigest": "ee53aa688c669f6b9b6da364867edbdd3ba4be0f389a08cb9fee9fd59ad36d75",
+      "digest": "ed5da871519edd5091a8a5b987bd395238147a25ee6cf6b7783cce7a5bfe71e9",
+      "bodyDigest": "53bf7f32a1b09f05ad6e6e2282403110f57abdf0760861df5f814ca5058ef888",
       "updatedAt": "2026-10-20T12:49:36+08:00"
     },
     "lingdi-agent-preparation": {
       "title": "凌迪科技 Agent 岗位准备清单",
       "collection": "interviews",
       "state": "reading",
-      "digest": "b404189d22f97cb115f604570f7150f6ee2fd20e39b0890dbe3bc1d20dcf28c9",
-      "bodyDigest": "e9a6369312d8e5ee667c2b83c8d1dc3021a9efc26047190fefddd49270a2e277",
+      "digest": "998467e216c10e2c1516aecf2cb11dbfa52ddb9309d0847b414664a8e3b3c9d3",
+      "bodyDigest": "6faa08f021185d6fc815b54d682cdf14b9ab0d65bc0473f06b7a36d7a829c296",
       "updatedAt": "2026-10-20T15:44:24+08:00"
     },
     "lingtong-llm-gateway-preparation": {
       "title": "灵通云智算大模型网关岗位准备清单",
       "collection": "interviews",
       "state": "pending",
-      "digest": "655a93b580cf653171a682372df0821f558bbe34f2bd0663bf27d95411be93c2",
-      "bodyDigest": "c51f84842bbfa48b7a1afe062c63f8bab8b2f0e9d8588bd71db881a045a9f8f0",
+      "digest": "ad6bc93c9e621d09e0fac47e61b03010499320d3b1c8fb9e97341e463937bb4c",
+      "bodyDigest": "d67fdb91bfbf1fa91d0467472527bd2a4c2f4a356e085834a53905f2b1398303",
       "updatedAt": "2026-10-20T11:09:48+08:00"
     },
     "mcp-integration-interview": {
@@ -830,8 +838,8 @@
       "title": "MySQL 面试题",
       "collection": "interviews",
       "state": "pending",
-      "digest": "93caba280130a9fd3e81c5ea5033a68cf11967c2375bf83ead4fb3da16b55472",
-      "bodyDigest": "9a78becd94831acad618e2b759c186d6ea8b7924cf0e936734a941fc4dbb7649",
+      "digest": "6d7793df8c3ca2d01b4f1a7314246e1d3d4f68d842b2965e626d93a3901a1820",
+      "bodyDigest": "a60aead7804ec46867729e88066e3ff0d16371cd70fab208dd2ef8b38c26fa50",
       "updatedAt": "2026-10-20T10:44:42+08:00"
     },
     "mysql-sharding-interview": {
@@ -942,8 +950,8 @@
       "title": "介绍一下 Redis 的集群模式？",
       "collection": "interviews",
       "state": "organized",
-      "digest": "a60ee9a3b76aa9fbe3e0b471baf1c9e9ab40a27bdfa77d2c22319b172c6a5ba8",
-      "bodyDigest": "283943dab71ed6116ac0cd2c0d3ee1f62167555aaa96e273d998683e0c2d37ca",
+      "digest": "d22a32875bccb61216f11c2c51ab5a6a76e995203000549c7d528c098d4d028f",
+      "bodyDigest": "9025625ca0289da0a7b9c601d473adc3b129d6742ba76d4bbaad02053213c753",
       "updatedAt": "2026-10-19T19:42:57+08:00"
     },
     "redis-cluster-routing-interview": {
@@ -974,8 +982,8 @@
       "title": "Redis 面试题",
       "collection": "interviews",
       "state": "pending",
-      "digest": "86f4f33deedd6f40350b997b837bc97ee5d678247dfbec50972523d6fd4051a7",
-      "bodyDigest": "2f73097b87f97e01fe8d31654f337a69c065fb9d8931685af06ff09bd1759052",
+      "digest": "8278810a03d1738d9aacf69ff3e0fee869344bc929e80012d7f5d1548c0f5726",
+      "bodyDigest": "38b4af836f49e60d42622d26f87c8903f00105d8b6b4a9d11e31b9c7040551b6",
       "updatedAt": "2026-10-19T21:05:27+08:00"
     },
     "redis-modes-interview": {
@@ -1014,8 +1022,8 @@
       "title": "稀疏和稠密双路召回怎么混合、怎么配合？",
       "collection": "interviews",
       "state": "organized",
-      "digest": "720669314604879f4264340e2348746d4f542e1e07b9a0d6755dc7166fadf432",
-      "bodyDigest": "af7bd273d3387f24ac4543414840f21df7a1c81d5be46f152caeaf1584f970a0",
+      "digest": "732b138d936c97b13459099d18054195fe530c968512c089e1d4affcfff24e93",
+      "bodyDigest": "60e76304f471152f0c0a927cbcdab1cb18e959cbee9b478fd95e8b2ab3e42d83",
       "updatedAt": "2026-10-18T22:46:36+08:00"
     },
     "retrieval-fusion-weight-interview": {
@@ -1038,8 +1046,8 @@
       "title": "Saparo 电商 Agent 岗位准备清单",
       "collection": "interviews",
       "state": "pending",
-      "digest": "b0274dcaa766270659e77c6988683fd52fff63cf5526e1a7be3512b70b82185c",
-      "bodyDigest": "04a5784dcda9b4b7e71b2661ecf064208d210af39b5f29c4805c9ad5d6369401",
+      "digest": "98b698585e725d2ae7c78aad0507b30a65c1fd9be99669fc399cd6be5bf9b370",
+      "bodyDigest": "c1807b2827f0f162cbab90d8a4fce5034a5d42f18c6d614c77e096fb85201f62",
       "updatedAt": "2026-10-20T11:36:34+08:00"
     },
     "service-degradation-interview": {
@@ -44244,6 +44252,306 @@
       "docId": "agent-conflict-interview",
       "from": "reading",
       "to": "organized"
+    },
+    {
+      "id": "2addcb8c-6838-46e1-8c97-93bafab49e56",
+      "kind": "updated",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-20T09:04:33.233Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "05b46fca-b39d-40f5-a1f8-74f1402b4a6c",
+      "kind": "created",
+      "entity": "doc:interview-preparation-index",
+      "title": "面试准备",
+      "time": "2026-10-20T09:04:33.233Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-preparation-index"
+    },
+    {
+      "id": "31d4ade6-4cb5-46bf-b13f-0359db8b36c0",
+      "kind": "updated",
+      "entity": "doc:agent-interview-hub",
+      "title": "Agent 面试题",
+      "time": "2026-10-20T09:04:57.233Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-interview-hub"
+    },
+    {
+      "id": "4d88b3ae-2ecf-4b22-9c30-f4dd7c3a2748",
+      "kind": "updated",
+      "entity": "doc:go-interview-hub",
+      "title": "Go 面试题",
+      "time": "2026-10-20T09:04:57.233Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-interview-hub"
+    },
+    {
+      "id": "a1f2434a-93f6-45d4-b524-ce4a7c38cf13",
+      "kind": "updated",
+      "entity": "doc:kafka-interview-index",
+      "title": "Kafka 面试题",
+      "time": "2026-10-20T09:04:57.233Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "kafka-interview-index"
+    },
+    {
+      "id": "9cf07f3c-9fad-41b5-81bb-bbeaa50da3ff",
+      "kind": "updated",
+      "entity": "doc:mysql-interview-index",
+      "title": "MySQL 面试题",
+      "time": "2026-10-20T09:04:57.233Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-interview-index"
+    },
+    {
+      "id": "7139f332-9059-4835-b740-58ce53f3e10f",
+      "kind": "updated",
+      "entity": "doc:redis-interview-index",
+      "title": "Redis 面试题",
+      "time": "2026-10-20T09:04:57.233Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-interview-index"
+    },
+    {
+      "id": "9270345f-7bee-4947-a110-9e0bf1d0c3d9",
+      "kind": "updated",
+      "entity": "doc:agent-memory-leak-interview",
+      "title": "Agent 服务最常见的生产环境内存泄漏有哪几种？如何排查和修复？",
+      "time": "2026-10-20T09:05:21.209Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-memory-leak-interview"
+    },
+    {
+      "id": "657b6a7c-567d-41f3-ac7a-8760869ab1c9",
+      "kind": "updated",
+      "entity": "doc:agent-timeout-interview",
+      "title": "模型调用响应慢，导致 Agent 链路超时，如何设计分层超时与熔断？高并发下怎么处理？",
+      "time": "2026-10-20T09:05:21.209Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-timeout-interview"
+    },
+    {
+      "id": "26956dd6-3ae0-4d02-8b40-e75fe171bbf4",
+      "kind": "updated",
+      "entity": "doc:api-latency-interview",
+      "title": "接口响应慢，怎么排查和优化？",
+      "time": "2026-10-20T09:05:21.209Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "api-latency-interview"
+    },
+    {
+      "id": "b97b5269-0896-4d75-bee4-7b375acab62e",
+      "kind": "updated",
+      "entity": "doc:cache-consistency-interview",
+      "title": "数据库和缓存的一致性怎么保障？",
+      "time": "2026-10-20T09:05:21.209Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "cache-consistency-interview"
+    },
+    {
+      "id": "ff5612d7-138a-459c-97da-11a88ccc305d",
+      "kind": "updated",
+      "entity": "doc:go-channel-close-interview",
+      "title": "怎么防止 Go Channel 重复关闭？",
+      "time": "2026-10-20T09:05:21.209Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-channel-close-interview"
+    },
+    {
+      "id": "3066b386-7794-49d3-8e44-879fee695a86",
+      "kind": "updated",
+      "entity": "doc:go-channel-interview",
+      "title": "Go 的 Channel 一般怎么用？",
+      "time": "2026-10-20T09:05:21.209Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-channel-interview"
+    },
+    {
+      "id": "ee02f0e3-1c1a-407c-87ca-7e699bf2e852",
+      "kind": "updated",
+      "entity": "doc:go-context-cancel-interview",
+      "title": "Go 的 WithCancel 和 WithoutCancel 有什么区别？",
+      "time": "2026-10-20T09:05:21.209Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-context-cancel-interview"
+    },
+    {
+      "id": "5f7a2ef2-5183-4f22-b9ae-7d13556b1247",
+      "kind": "updated",
+      "entity": "doc:go-preemption-interview",
+      "title": "Go 协程是怎么抢占的？",
+      "time": "2026-10-20T09:05:21.209Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "go-preemption-interview"
+    },
+    {
+      "id": "a5da9768-285a-4b88-9ff7-6dfaaede1cff",
+      "kind": "updated",
+      "entity": "doc:kafka-architecture-interview",
+      "title": "介绍一下 Kafka 的整体架构？",
+      "time": "2026-10-20T09:05:21.209Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "kafka-architecture-interview"
+    },
+    {
+      "id": "09cda1bb-4dec-4817-a056-d4b7a47ea81a",
+      "kind": "updated",
+      "entity": "doc:kafka-throughput-interview",
+      "title": "Kafka 是怎么实现高吞吐的？",
+      "time": "2026-10-20T09:05:21.209Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "kafka-throughput-interview"
+    },
+    {
+      "id": "3b19c713-2623-492f-8a06-c6c6fa547a0e",
+      "kind": "updated",
+      "entity": "doc:learning-plan-agent-interview",
+      "title": "介绍一下你做过的学习计划 Agent 项目？",
+      "time": "2026-10-20T09:05:21.209Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "learning-plan-agent-interview"
+    },
+    {
+      "id": "5b86df5b-d00e-43de-8bd9-2f5b81cb03fd",
+      "kind": "updated",
+      "entity": "doc:learning-plan-agent-submission",
+      "title": "学习计划 Agent 为什么通过工具提交最终清单？",
+      "time": "2026-10-20T09:05:21.209Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "learning-plan-agent-submission"
+    },
+    {
+      "id": "d3aab7b3-a72a-41a1-b612-3946fcd5023e",
+      "kind": "updated",
+      "entity": "doc:redis-cluster-interview",
+      "title": "介绍一下 Redis 的集群模式？",
+      "time": "2026-10-20T09:05:21.209Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-cluster-interview"
+    },
+    {
+      "id": "dc45bb64-c386-4f25-b69e-44e4839f33d4",
+      "kind": "updated",
+      "entity": "doc:retrieval-fusion-interview",
+      "title": "稀疏和稠密双路召回怎么混合、怎么配合？",
+      "time": "2026-10-20T09:05:21.209Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "retrieval-fusion-interview"
+    },
+    {
+      "id": "11532d39-de08-4a7a-aabe-e22cc1a4c81b",
+      "kind": "updated",
+      "entity": "doc:inly-agent-preparation",
+      "title": "引力传媒 Agent 后端岗位准备清单",
+      "time": "2026-10-20T09:06:17.200Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "inly-agent-preparation"
+    },
+    {
+      "id": "a50fae9c-a72d-4014-8afd-b87341cf28a5",
+      "kind": "updated",
+      "entity": "doc:lingdi-agent-preparation",
+      "title": "凌迪科技 Agent 岗位准备清单",
+      "time": "2026-10-20T09:06:17.200Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "lingdi-agent-preparation"
+    },
+    {
+      "id": "e5034193-907c-4ad2-be53-aa4a919689cb",
+      "kind": "updated",
+      "entity": "doc:lingtong-llm-gateway-preparation",
+      "title": "灵通云智算大模型网关岗位准备清单",
+      "time": "2026-10-20T09:06:17.200Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "lingtong-llm-gateway-preparation"
+    },
+    {
+      "id": "1c8824d4-1d06-4206-b8df-f616ae1b8ad4",
+      "kind": "updated",
+      "entity": "doc:saparo-agent-preparation",
+      "title": "Saparo 电商 Agent 岗位准备清单",
+      "time": "2026-10-20T09:06:17.200Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "saparo-agent-preparation"
     }
   ]
 }

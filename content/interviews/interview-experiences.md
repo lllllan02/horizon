@@ -2,7 +2,7 @@
 title: "Go 后端与 AI Agent 面经"
 aliases: ["面经整理", "个人面经清单", "随机复习题源"]
 category: "面试"
-parent: interview-hub
+parent: interview-preparation-index
 tags: ["面试", "Go", "Agent", "RAG"]
 type: overview
 learning_status: pending

@@ -1,5 +1,6 @@
 ---
 title: "Go 与 Agent 面试资料"
+parent: interview-preparation-index
 aliases: ["面经网站", "面试题库", "社招面试资料"]
 category: "面试"
 tags: ["面试", "Go", "Agent", "RAG"]

@@ -2,7 +2,7 @@
 title: "爱看互动 Go 岗位准备清单"
 aliases: ["爱看互动 Golang 高级开发工程师 JD 拆解", "爱看互动面试准备"]
 category: "面试"
-parent: interview-hub
+parent: interview-preparation-index
 tags: ["面试", "Go"]
 type: practice
 learning_status: pending

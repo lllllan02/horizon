@@ -23,7 +23,6 @@ learning_status_changed_at: "2026-10-18T23:19:25.671+08:00"
 ## 查询与性能
 
 - [[mysql-slow-query-interview|MySQL 慢查询一般怎么优化？]]
-
 - [[mysql-explain-interview|怎么看 MySQL 的 EXPLAIN？]]
 
 ## 容量与拆分
