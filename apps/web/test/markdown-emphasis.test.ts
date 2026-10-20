@@ -39,16 +39,54 @@ test('强调边界分析不改变中文、Unicode 符号、链接目标或代码
   }
 });
 
+test('中文引号与括号中的强调可紧接中文正文', () => {
+  for (const label of [
+    '「读未提交（Read Uncommitted）」',
+    '「读已提交（Read Committed）」',
+    '「可重复读（Repeatable Read）」',
+    '「串行化（Serializable）」',
+    '（重点）',
+    '“重点”',
+    '「重点 *强调* 结论」',
+  ]) {
+    for (const prefix of ['', '正文']) {
+      const body = `${prefix}**${label}**允许继续阅读。`;
+      const result = render(body);
+      assert.match(result.html, /<strong>/, body);
+      assert.doesNotMatch(result.html, /\*\*/, body);
+      assert.equal(result.body, body);
+    }
+  }
+  assert.match(render('正文*「重点」*后文').html, /正文<em>「重点」<\/em>后文/);
+  assert.match(
+    render('正文***「重点」***后文').html,
+    /正文<em><strong>「重点」<\/strong><\/em>后文/,
+  );
+  assert.match(render('正文**「[[target|重点]]」**后文').html, /正文<strong>「<a /);
+});
+
 test('嵌套、转义、表格及围栏代码仍遵守原有语法', () => {
   assert.match(render('***\`代码\`***：').html, /<em><strong><code>代码<\/code><\/strong><\/em>/);
   assert.match(render('**重点 *强调* 结论**。').html, /<strong>重点 <em>强调<\/em> 结论<\/strong>/);
   assert.match(render('__\`代码\`__：').html, /<strong><code>代码<\/code><\/strong>/);
   assert.doesNotMatch(render('\\*\\*`原样`\\*\\*：').html, /<strong>/);
   assert.doesNotMatch(render('foo__bar__baz a**`code`**b').html, /<strong>/);
+  for (const body of [
+    '**「重点」后文',
+    '正文**「重点」',
+    '\\*\\*「重点」\\*\\*后文',
+    '**「重点」\\*\\*后文',
+    '正文**「 spaced 」 **后文',
+    '正文**(重点)**后文',
+    'a**「重点」**b',
+    '`正文**「重点」**后文`',
+  ]) {
+    assert.doesNotMatch(render(body).html, /<strong>/, body);
+  }
   const table = render('| 标题 |\n| --- |\n| **[[target\\|从节点]]**： |');
   assert.match(table.html, /<td><strong><a /);
   assert.equal(table.references.length, 1);
-  const code = render('```text\n**[[missing]]**：\n**`代码`**\n```');
+  const code = render('```text\n**[[missing]]**：\n**`代码`**\n正文**「重点」**后文\n```');
   assert.equal(code.references.length, 0);
   assert.equal(code.issues.length, 0);
   assert.doesNotMatch(code.html, /<strong>|class="wiki-link"/);

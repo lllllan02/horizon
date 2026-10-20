@@ -5,7 +5,14 @@ import type { marked } from 'marked';
 // punctuation too, keeping UTF-16 offsets intact so source text is never rewritten.
 const punctuation = /[\p{P}\p{S}]/u;
 function emphasisBoundaries(source: string) {
-  return source.replace(/[^\x00-\x7f]/gu, (char) =>
+  // Chinese prose commonly places quoted emphasis directly beside Han text.
+  // Treat the inner quote/bracket as text in that case, so Marked can open or
+  // close the delimiter. ASCII punctuation and masked code/links stay unchanged.
+  const chineseBoundaries = source.replace(
+    /(?<=\p{Script=Han}[*_]+)[\p{Ps}\p{Pi}]|[\p{Pe}\p{Pf}](?=[*_]+\p{Script=Han})/gu,
+    (char) => (/[^\x00-\x7f]/u.test(char) ? 'a'.repeat(char.length) : char),
+  );
+  return chineseBoundaries.replace(/[^\x00-\x7f]/gu, (char) =>
     punctuation.test(char) ? '.'.repeat(char.length) : char,
   );
 }
@@ -48,10 +55,10 @@ export class MarkdownTokenizer extends Tokenizer {
       context,
       // Only the character after the opening delimiter is inspected in src;
       // closing delimiters are matched against the cached mask above.
-      src.replace(
-        /^(\*+|_+)([^\x00-\x7f])/u,
-        (_, delimiter: string, char: string) => delimiter + emphasisBoundaries(char),
-      ),
+      src.replace(/^(\*+|_+)([^\x00-\x7f])/u, (_, delimiter: string, char: string) => {
+        const offset = maskedSrc.length - src.length + delimiter.length;
+        return delimiter + mask.slice(offset, offset + char.length);
+      }),
       mask,
       emphasisBoundaries(previous),
     );

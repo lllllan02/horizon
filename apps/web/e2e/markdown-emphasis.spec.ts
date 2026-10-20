@@ -18,6 +18,16 @@ test('中文标点前的加粗内链和代码正常显示，链接仍可跳转',
   expect(await code.evaluate((el) => el.closest('p')!.textContent)).toBe(
     '😀quorum：确认故障所需的哨兵数量。',
   );
+  const isolation = reader
+    .locator('strong')
+    .filter({ hasText: '「读未提交（Read Uncommitted）」' });
+  await expect(isolation).toHaveText('「读未提交（Read Uncommitted）」');
+  expect(await isolation.evaluate((el) => el.closest('p')!.textContent)).toBe(
+    '「读未提交（Read Uncommitted）」允许读取其他事务尚未提交的数据。',
+  );
+  for (const label of ['「重点」', '（重点）', '“重点”']) {
+    await expect(reader.locator('strong').filter({ hasText: label })).toHaveText(label);
+  }
   await page.screenshot({ path: testInfo.outputPath('markdown-emphasis.png') });
   await link.click();
   await expect(page.locator('.document-reader[data-document-id="second"]')).toBeVisible();
