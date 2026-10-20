@@ -414,8 +414,8 @@
       "title": "Agent 面试题",
       "collection": "interviews",
       "state": "pending",
-      "digest": "73499b4312cf43a80d8fdee073d747ad66de90d7e7dd5297a8565e0ddfd7d149",
-      "bodyDigest": "56a59a2f969b4ff16332017946d750aa115374ab619fd0229f0998e20572f743",
+      "digest": "782da168f9157a986945ff6eb9eee6aa4697f8579b895e22d3e9f3fd50867e60",
+      "bodyDigest": "c0cb8e07b24078a2772e98c5cb384b948fdc117367f85b27977f4b820618d94b",
       "updatedAt": "2026-10-20T15:54:42+08:00"
     },
     "agent-memory-leak-interview": {
@@ -457,6 +457,14 @@
       "digest": "82a3bceb16b4b7e543e8013ed2420ad72fa3456b081a288c2fd72bdd717ccf8c",
       "bodyDigest": "8ff20611890658f929366ffa29d5bdcd16878f8218cf5b9e8fb9a0910fa161fc",
       "updatedAt": "2026-10-18T23:47:18+08:00"
+    },
+    "agent-upgrade-interview": {
+      "title": "Agent 升级 Prompt 或工具时，旧任务怎么办？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "7665ba78c8bd86a659fb40e865308041b0ac4bfd772df6eeb9bb13067d7806cd",
+      "bodyDigest": "17b8670492a3555e6e2029f16d46bc76334847dc47add97dffa33f3cab127462",
+      "updatedAt": "2026-10-20T17:39:01+08:00"
     },
     "aikan-go-preparation": {
       "title": "爱看互动 Go 岗位准备清单",
@@ -877,10 +885,10 @@
     "openhex-fullstack-preparation": {
       "title": "迷境智塔 OpenHex 全栈岗位准备清单",
       "collection": "interviews",
-      "state": "reading",
-      "digest": "81b5ac63f7fbd9e651edc971240e8de18bda8bf1c40753ad896d3a2c61750bf6",
-      "bodyDigest": "3f8c3fae9cd428d9d5a12fd46ff29cc282d28906fc3f58a036438eed1fef512c",
-      "updatedAt": "2026-10-20T16:14:30+08:00"
+      "state": "organized",
+      "digest": "9839f909c8acf6f0bab54de895a4e7e766d31bbb6359ff40c9bc2c4753a9c9df",
+      "bodyDigest": "7bc0954918164733984e33f637ee16652a41dac6bebc6ac7d63e25e9ba39dd32",
+      "updatedAt": "2026-10-20T17:39:01+08:00"
     },
     "parent-agent-interview": {
       "title": "父子 Agent 之间如何交互和传递上下文？",
@@ -44552,6 +44560,120 @@
       ],
       "source": "observed",
       "docId": "saparo-agent-preparation"
+    },
+    {
+      "id": "6bd45979-66f9-4396-9667-72816ba0e0be",
+      "kind": "updated",
+      "entity": "doc:openhex-fullstack-preparation",
+      "title": "迷境智塔 OpenHex 全栈岗位准备清单",
+      "time": "2026-10-20T09:11:25.221Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "openhex-fullstack-preparation"
+    },
+    {
+      "id": "5a9c8be7-4e8f-4fd1-ae8d-82d2831c0979",
+      "kind": "updated",
+      "entity": "doc:agent-interview-hub",
+      "title": "Agent 面试题",
+      "time": "2026-10-20T09:39:37.328Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-interview-hub"
+    },
+    {
+      "id": "f617a4fa-f6b3-4899-befe-e78ac70cfdc1",
+      "kind": "created",
+      "entity": "doc:agent-upgrade-interview",
+      "title": "Agent 升级 Prompt 或工具时，旧任务怎么办？",
+      "time": "2026-10-20T09:39:37.328Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-upgrade-interview"
+    },
+    {
+      "id": "9f6235b1-0789-4dcd-9513-64f5f983af7b",
+      "kind": "updated",
+      "entity": "doc:openhex-fullstack-preparation",
+      "title": "迷境智塔 OpenHex 全栈岗位准备清单",
+      "time": "2026-10-20T09:39:37.328Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "openhex-fullstack-preparation"
+    },
+    {
+      "id": "ffaecda6-eca2-4a08-8e7f-5494729f3727",
+      "kind": "updated",
+      "entity": "doc:agent-upgrade-interview",
+      "title": "Agent 升级 Prompt 或工具时，旧任务怎么办？",
+      "time": "2026-10-20T09:46:01.242Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-upgrade-interview"
+    },
+    {
+      "id": "963a60dd-121b-4ccb-99fc-82a77ed12f97",
+      "kind": "updated",
+      "entity": "doc:agent-upgrade-interview",
+      "title": "Agent 升级 Prompt 或工具时，旧任务怎么办？",
+      "time": "2026-10-20T09:46:13.277Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-upgrade-interview"
+    },
+    {
+      "id": "df89717a-32f7-437e-b2d7-9d1ee50fe879",
+      "kind": "state-changed",
+      "entity": "doc:agent-upgrade-interview",
+      "title": "Agent 升级 Prompt 或工具时，旧任务怎么办？",
+      "time": "2026-10-20T10:15:09.288Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-upgrade-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "20920afc-2965-48d6-a4f9-eab4077007b9",
+      "kind": "state-changed",
+      "entity": "doc:agent-upgrade-interview",
+      "title": "Agent 升级 Prompt 或工具时，旧任务怎么办？",
+      "time": "2026-10-20T10:15:09.558Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-upgrade-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "2acae742-9f5a-44eb-ba7d-8f55b14924e4",
+      "kind": "state-changed",
+      "entity": "doc:openhex-fullstack-preparation",
+      "title": "迷境智塔 OpenHex 全栈岗位准备清单",
+      "time": "2026-10-20T10:15:15.741Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "openhex-fullstack-preparation",
+      "from": "reading",
+      "to": "organized"
     }
   ]
 }

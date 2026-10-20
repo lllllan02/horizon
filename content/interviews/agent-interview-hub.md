@@ -44,6 +44,7 @@ updated_at: "2026-10-20T15:54:42+08:00"
 
 - [[agent-checkpoint-interview|Agent 的 Checkpoint 怎么实现？]]
 - [[agent-checkpoint-failures-interview|Agent 在工具执行前后退出，怎样恢复并避免重复写入？]]
+- [[agent-upgrade-interview|Agent 升级 Prompt 或工具时，旧任务怎么办？]]
 
 ## 效果评测
 
