@@ -4,6 +4,13 @@
 
 网页读取与 Pages 导出当前只收录 `content/notes/`、`content/readings/` 与 `content/glossary/`，本目录不参与网页渲染。
 
+## 2026-10-20 新增 JD 剪藏
+
+以下原件为本地保存的 BOSS 直聘页面，剪藏创建日期与页面标注更新时间均为 2026-10-20；页面未提供独立版本号。保留原文和出处，岗位准备清单单独保存。转换依据为剪藏中的职位正文，未重新抓取网页或核实当前招聘状态；原件仍含平台水印、导航和推广内容。
+
+- [引力传媒：后端开发工程师-Agent 原件](「后端开发工程师-Agent招聘」_引力传媒招聘-BOSS直聘.md) → [岗位准备清单](../interviews/inly-agent-preparation.md)。
+- [Saparo：AI Agent 工程师（电商）原件](<「AI Agent 工程师（电商）招聘」_四川斯茂瑞企业管...招聘-BOSS直聘.md>) → [岗位准备清单](../interviews/saparo-agent-preparation.md)。招聘主体名称按剪藏工商信息保留为四川斯茂瑞企业管理咨询有限公司，Saparo 为产品名。
+
 ## Claude Code 沙箱：DeepWiki 问答
 
 - 来源：[DeepWiki 问答页面](https://deepwiki.com/search/-agent-shell-agent-mcp_9db6ff87-1677-4bd8-adbe-496c83efb257?mode=fast)。
