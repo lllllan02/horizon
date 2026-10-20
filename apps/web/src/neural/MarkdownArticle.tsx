@@ -55,7 +55,7 @@ export const MarkdownArticle = memo(function MarkdownArticle({
   return (
     <>
       <article className="markdown" ref={ref} onClick={open} onKeyDown={open} />
-      <CodeAssetPreview root={ref} html={html} />
+      <CodeAssetPreview root={ref} html={html} onImageOpen={setImage} />
       {image && <ImageViewer image={image} onClose={() => setImage(null)} />}
     </>
   );

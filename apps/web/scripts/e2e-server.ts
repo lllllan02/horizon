@@ -26,6 +26,8 @@ tags: [回归]
 
 [[assets/demo.go|完整代码]] · [[assets/missing.go|缺失代码]]
 
+[[assets/diagram.png|架构图片]] · [[assets/missing.png|缺失图片]] · [[assets/broken.png|损坏图片]]
+
 \`\`\`mermaid
 flowchart LR
   Start --> Finish
@@ -104,6 +106,8 @@ await writeFile(
   path.join(root, 'assets/demo.go'),
   'package main\n// <script>window.codeExecuted = true</script>\nfunc main() {}\n',
 );
+await copyFile(path.join(app, 'e2e/fixtures/diagram.png'), path.join(root, 'assets/diagram.png'));
+await writeFile(path.join(root, 'assets/broken.png'), 'not an image');
 try {
   await build({ root: app, mode: 'pages', build: { outDir, emptyOutDir: true } });
   const { library, assets } = await pagesLibrary(root);

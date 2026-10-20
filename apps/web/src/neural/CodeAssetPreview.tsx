@@ -1,15 +1,24 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { CODE_ASSET_LIMIT } from '../code-assets.ts';
+import { type ViewerImage } from './ImageViewer.tsx';
 import './code-asset-preview.css';
 
-type Target = { element: HTMLAnchorElement; href: string; name: string; language: string };
+type Target = {
+  element: HTMLAnchorElement;
+  href: string;
+  name: string;
+  language: string;
+  image: boolean;
+};
 export function CodeAssetPreview({
   root,
   html,
+  onImageOpen,
 }: {
   root: React.RefObject<HTMLElement | null>;
   html: string;
+  onImageOpen(image: ViewerImage): void;
 }) {
   const [target, setTarget] = useState<Target | null>(null);
   const [result, setResult] = useState<{ text: string; highlighted: string } | null>(null);
@@ -50,7 +59,7 @@ export function CodeAssetPreview({
           },
         });
       } else {
-        // Keep the code in normal reading flow when no outside column is available.
+        // Keep the attachment in reading flow when no outside column is available.
         host = document.createElement('div');
         host.className = 'code-asset-preview-host';
         let block: HTMLElement = target.element;
@@ -76,15 +85,16 @@ export function CodeAssetPreview({
     let timer: ReturnType<typeof setTimeout> | undefined;
     const find = (event: Event) =>
       event.target instanceof Element
-        ? event.target.closest<HTMLAnchorElement>('a.code-asset-link')
+        ? event.target.closest<HTMLAnchorElement>('a.code-asset-link, a.image-asset-link')
         : null;
     const open = (link: HTMLAnchorElement) => {
       activeLink.current = link;
       setTarget({
         element: link,
         href: link.getAttribute('href')!,
-        name: link.dataset.codeName!,
-        language: link.dataset.codeLanguage!,
+        name: link.dataset.imageName || link.dataset.codeName!,
+        language: link.dataset.codeLanguage || '',
+        image: link.classList.contains('image-asset-link'),
       });
     };
     const enter = (event: Event) => {
@@ -110,6 +120,7 @@ export function CodeAssetPreview({
       timer = setTimeout(close, 600);
     };
     const click = (event: MouseEvent) => {
+      if ((event.target as Element).closest('.image-viewer')) return;
       const link = find(event);
       if (link && root.current?.contains(link)) {
         event.preventDefault();
@@ -119,6 +130,7 @@ export function CodeAssetPreview({
       } else if (!card.current?.contains(event.target as Node)) close();
     };
     const key = (event: KeyboardEvent) => {
+      if ((event.target as Element).closest('.image-viewer')) return;
       if (
         event.key === 'Tab' &&
         !event.shiftKey &&
@@ -159,7 +171,7 @@ export function CodeAssetPreview({
     setResult(null);
     setError('');
     setCopied('复制代码');
-    if (!target) return;
+    if (!target || target.image) return;
     const controller = new AbortController();
     const load = async () => {
       try {
@@ -207,22 +219,41 @@ export function CodeAssetPreview({
   return createPortal(
     <aside
       ref={card}
-      className={`neural link-preview code-asset-preview${placement.inline ? ' is-inline' : ''}`}
+      className={`neural link-preview code-asset-preview${target.image ? ' image-asset-preview' : ''}${placement.inline ? ' is-inline' : ''}`}
       style={placement.style}
       role="dialog"
-      aria-label={`代码预览：${target.name}`}
+      aria-label={`${target.image ? '图片' : '代码'}预览：${target.name}`}
     >
       <header className="link-preview-header">
         <div>
-          <span className="link-preview-label">代码附件 · {target.language}</span>
+          <span className="link-preview-label">
+            {target.image ? '图片附件' : `代码附件 · ${target.language}`}
+          </span>
           <strong>{target.name}</strong>
         </div>
-        <button type="button" onClick={dismiss} aria-label="关闭代码预览">
+        <button
+          type="button"
+          onClick={dismiss}
+          aria-label={target.image ? '关闭图片附件预览' : '关闭代码预览'}
+        >
           ×
         </button>
       </header>
-      <div className="link-preview-scroll markdown" tabIndex={0} aria-label="代码内容">
-        {error ? (
+      <div
+        className="link-preview-scroll markdown"
+        tabIndex={0}
+        aria-label={target.image ? '图片内容' : '代码内容'}
+      >
+        {target.image ? (
+          <ImageAssetContent
+            key={target.href}
+            target={target}
+            onOpen={(image) => {
+              pinned.current = true;
+              onImageOpen(image);
+            }}
+          />
+        ) : error ? (
           <p role="alert">{error}</p>
         ) : result ? (
           <pre>
@@ -232,15 +263,51 @@ export function CodeAssetPreview({
           <p role="status">正在读取代码…</p>
         )}
       </div>
-      <footer className="link-preview-footer">
-        <button type="button" disabled={!result} onClick={copy}>
-          {copied}
-        </button>
-        <button type="button" disabled={!result} onClick={download}>
-          下载源文件
-        </button>
-      </footer>
+      {!target.image && (
+        <footer className="link-preview-footer">
+          <button type="button" disabled={!result} onClick={copy}>
+            {copied}
+          </button>
+          <button type="button" disabled={!result} onClick={download}>
+            下载源文件
+          </button>
+        </footer>
+      )}
     </aside>,
     placement.host,
+  );
+}
+
+function ImageAssetContent({
+  target,
+  onOpen,
+}: {
+  target: Target;
+  onOpen(image: ViewerImage): void;
+}) {
+  const [loaded, setLoaded] = useState(false);
+  const [failed, setFailed] = useState(target.href === '#');
+  if (failed) return <p role="alert">图片加载失败，文件不存在、损坏或不允许访问。</p>;
+  return (
+    <>
+      {!loaded && <p role="status">正在读取图片…</p>}
+      <button
+        type="button"
+        className="image-asset-enlarge"
+        aria-label={`放大查看：${target.name}`}
+        disabled={!loaded}
+        onClick={(event) =>
+          onOpen({ src: target.href, alt: target.name, trigger: event.currentTarget })
+        }
+      >
+        <img
+          src={target.href}
+          alt={target.name}
+          onLoad={() => setLoaded(true)}
+          onError={() => setFailed(true)}
+        />
+        {loaded && <span>放大查看</span>}
+      </button>
+    </>
   );
 }

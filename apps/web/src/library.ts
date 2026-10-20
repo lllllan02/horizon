@@ -290,6 +290,11 @@ export function renderDocument(
     const url = `/api/asset?path=${encodeURIComponent(target)}&from=${encodeURIComponent(doc.path)}`;
     return `<a class="wiki-link code-asset-link" href="${escape(url)}" data-code-language="${language}" data-code-name="${escape(target.split('/').pop() || target)}">${escape(label)}</a>`;
   };
+  const imageLink = (target: string, label: string) => {
+    if (!/\.(png|jpe?g|gif|webp)$/i.test(target)) return null;
+    const url = `/api/asset?path=${encodeURIComponent(target)}&from=${encodeURIComponent(doc.path)}`;
+    return `<a class="wiki-link image-asset-link" href="${escape(url)}" data-image-name="${escape(target.split('/').pop() || target)}">${escape(label)}</a>`;
+  };
   const config = {
     extensions: [
       {
@@ -309,6 +314,8 @@ export function renderDocument(
           const [target, label] = token.value.replaceAll('\\|', '|').split('|');
           const code = codeLink(target, label || target);
           if (code) return preserve(code);
+          const image = !token.embed && imageLink(target, label || target);
+          if (image) return preserve(image);
           if (/\.(png|jpe?g|gif|webp|svg|pdf|mp3|mp4)$/i.test(target)) {
             const url = `/api/asset?path=${encodeURIComponent(target)}&from=${encodeURIComponent(doc.path)}`;
             const candidate = label && /^[1-9]\d*$/.test(label) ? Number(label) : 0;
@@ -358,6 +365,8 @@ export function renderDocument(
           return `<a href="#/doc/${encodeURIComponent(doc.id)}/${encodeURIComponent(slug(decodeURIComponent(href.slice(1))))}">${text}</a>`;
         if (/^[a-z][a-z0-9+.-]*:/i.test(href) || href.startsWith('//'))
           return `<span>${text}</span>`;
+        const image = imageLink(href, text.replace(/<[^>]*>/g, ''));
+        if (image) return image;
         if (/\.(png|jpe?g|gif|webp|pdf|mp3|mp4)(?:#|$)/i.test(href))
           return `<a href="/api/asset?path=${encodeURIComponent(href)}&from=${encodeURIComponent(doc.path)}" target="_blank" rel="noopener">${text} ↗</a>`;
         return wiki(decodeURIComponent(href), text.replace(/<[^>]*>/g, ''), false);

@@ -12,3 +12,6 @@
 
 .neural.link-preview.code-asset-preview.is-inline { position: relative; width: 100%; max-height: 60vh; margin: 12px 0; z-index: auto; }
 .code-asset-preview-host { width: 100%; min-width: 0; }
+.image-asset-preview .image-asset-enlarge { display: block; width: 100%; padding: 0; border: 0; background: transparent; cursor: zoom-in; }
+.image-asset-enlarge img { display: block; width: auto; max-width: 100%; max-height: 45vh; margin: 0 auto; object-fit: contain; }
+.image-asset-enlarge span { display: block; margin-top: 10px; font-size: 12px; }

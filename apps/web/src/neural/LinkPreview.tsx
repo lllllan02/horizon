@@ -78,7 +78,7 @@ export const LinkPreview = memo(function LinkPreview({
       target instanceof Node && parent?.contains(target);
     const inPreview = (target: EventTarget | null) =>
       contains(cardRef.current, target) ||
-      (target instanceof Element && Boolean(target.closest('.code-asset-preview')));
+      (target instanceof Element && Boolean(target.closest('.code-asset-preview, .image-viewer')));
     const find = (target: EventTarget | null) =>
       target instanceof Element
         ? target.closest<HTMLElement>('.markdown a[href], .read-relation[data-preview-href]')
@@ -143,6 +143,7 @@ export const LinkPreview = memo(function LinkPreview({
         scheduleClose();
     };
     const key = (event: KeyboardEvent) => {
+      if ((event.target as Element).closest('.image-viewer')) return;
       if (!active) return;
       const card = cardRef.current;
       if (event.key === 'Escape') {
@@ -183,7 +184,12 @@ export const LinkPreview = memo(function LinkPreview({
       if (!inPreview(event.target)) close();
     };
     const click = (event: MouseEvent) => {
-      if ((event.target as Element).closest('.code-asset-preview, .code-asset-link')) return;
+      if (
+        (event.target as Element).closest(
+          '.code-asset-preview, .code-asset-link, .image-asset-link, .image-viewer',
+        )
+      )
+        return;
       if ((event.target as Element).closest<HTMLElement>('.link-preview-close') && active) {
         suppressed = active.element;
         suppressed.focus({ preventScroll: true });
