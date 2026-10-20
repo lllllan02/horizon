@@ -91,6 +91,45 @@ const result = 1;
 `,
 );
 await writeFile(
+  path.join(root, 'notes/headings.md'),
+  `---
+title: 标题层级验收
+category: 验收
+---
+# 标题层级验收
+
+正文与标题应在不同阅读字号下保持层次。
+
+## 工具和程序的升级策略
+
+这是章节介绍，下面的三种策略属于同一章节。
+
+### 停止支持旧工具
+
+旧调用到达时返回工具已停用，并提供当前可用的工具定义。
+
+#### 参数与返回结果
+
+比较调用参数和返回格式。
+
+##### 输入校验
+
+检查必填参数。
+
+###### 边界情况
+
+保留异常处理与反馈。
+
+### 保留兼容版本
+
+新任务使用新版本，旧任务继续使用历史版本。
+
+## 包含非常长中文标题以及 LongUnbrokenHeadingIdentifierForResponsiveLayoutVerification 的下一章节
+
+这是新的大节。
+`,
+);
+await writeFile(
   path.join(root, 'notes/second.md'),
   `---
 learning_status: reading

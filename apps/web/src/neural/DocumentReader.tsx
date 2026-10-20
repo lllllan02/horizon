@@ -44,6 +44,7 @@ export function DocumentReader({
   const [copy, setCopy] = useState('');
   const [fontScale, setFontScale] = useReaderFontScale();
   const [tocOpen, setTocOpen] = useViewState(`toc:${node.id}`, false);
+  const tocBaseLevel = node.toc.reduce((level, heading) => Math.min(level, heading.level), 6);
   const [detailsOpen, setDetailsOpen] = useViewState(`details:${node.id}`, false);
   const [copying, setCopying] = useState(false);
   const titleRef = useRef(null);
@@ -345,13 +346,23 @@ export function DocumentReader({
         <span className="read-copy-status" role="status" aria-atomic="true">
           {copy}
         </span>
-        <div id="reader-toc" className="reader-toc-panel" hidden={!tocOpen || !node.toc.length}>
+        <nav
+          id="reader-toc"
+          className="reader-toc-panel"
+          aria-label="文章目录"
+          hidden={!tocOpen || !node.toc.length}
+        >
           {node.toc.map((h) => (
-            <a key={h.id} href={`#/doc/${encodeURIComponent(node.id)}/${encodeURIComponent(h.id)}`}>
+            <a
+              key={h.id}
+              href={`#/doc/${encodeURIComponent(node.id)}/${encodeURIComponent(h.id)}`}
+              data-depth={h.level - tocBaseLevel}
+              style={{ '--toc-depth': h.level - tocBaseLevel } as React.CSSProperties}
+            >
               {h.title}
             </a>
           ))}
-        </div>
+        </nav>
         {article}
         {externalLinks.length > 0 && (
           <section className="read-connections" aria-label="外部链接">

@@ -1,0 +1,39 @@
+/* Spacing and weight separate sections; the h3 rail distinguishes subsections.
+   Relative sizes keep the hierarchy intact on mobile and at every reading scale. */
+.markdown :is(h1, h2, h3, h4, h5, h6) {
+  color: var(--text);
+  font-weight: 650;
+  line-height: 1.5;
+  text-wrap: pretty;
+  overflow-wrap: anywhere;
+  scroll-margin-block-start: 25px;
+}
+.markdown h1 { font-size: 1.85em; margin: 1.8em 0 .8em; }
+.markdown h2 {
+  font-size: 1.55em;
+  margin: 1.8em 0 .85em;
+  padding-block-start: .7em;
+  border-block-start: 1px solid var(--line);
+}
+.markdown h3 {
+  font-size: 1.25em;
+  margin: 1.8em 0 .75em;
+  padding-inline-start: .65em;
+  border-inline-start: 3px solid var(--line-2);
+}
+.markdown h4 { font-size: 1.125em; margin: 1.65em 0 .65em; }
+.markdown h5 { font-size: 1.04em; margin: 1.5em 0 .6em; }
+.markdown h6 { font-size: 1em; margin: 1.4em 0 .6em; font-weight: 600; color: var(--text-2); }
+.markdown :is(h1, h2, h3, h4, h5, h6) strong { font-weight: inherit; }
+/* Consecutive headings belong together; opening headings need no extra top space. */
+.markdown > :is(h1, h2, h3, h4, h5, h6):first-child {
+  margin-block-start: 0;
+}
+.markdown :is(h1, h2, h3, h4, h5, h6) + :is(h3, h4, h5, h6) { margin-block-start: 1em; }
+
+.reader-toc-panel a {
+  padding-inline-start: calc(var(--toc-depth) * 1.1em + .65em);
+  border-inline-start: 1px solid var(--line);
+}
+.reader-toc-panel a[data-depth="0"] { margin-block-start: .45em; font-weight: 600; color: var(--text); }
+.reader-toc-panel a:hover, .reader-toc-panel a:focus-visible { border-inline-start-color: var(--focus); background: var(--hover); }

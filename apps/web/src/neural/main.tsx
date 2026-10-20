@@ -17,6 +17,7 @@ import './controls.css';
 import './layers.css';
 import './mobile-reader.css';
 import './mobile-layout.css';
+import './markdown-headings.css';
 document.title = CONFIG.brand.name;
 function App() {
   const { library, error, updateState, stateAction, revision } = useLibrary();
