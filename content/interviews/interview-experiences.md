@@ -7,7 +7,7 @@ tags: ["面试", "Go", "Agent", "RAG"]
 type: overview
 learning_status: reading
 created_at: "2026-10-19T19:42:43+08:00"
-updated_at: "2026-10-19T22:12:49+08:00"
+updated_at: "2026-10-20T10:49:44+08:00"
 learning_status_changed_at: "2026-10-19T19:47:37.500+08:00"
 ---
 
@@ -16,8 +16,7 @@ learning_status_changed_at: "2026-10-19T19:47:37.500+08:00"
 勾选表示整篇面经的题目已整理入库，不代表已经掌握。
 
 - [x] M01 · [社招五年 Go 面经](https://www.nowcoder.com/discuss/882048490270904320) · 一切顺利鸭哈哈
-- [ ] G01 · [滴滴社招：Java 转 Go](https://www.cnblogs.com/charler/p/19075249) · charler
-- [ ] G02 · [两个月后端面试经历](https://www.v2ex.com/t/1060319) · main1234
+- [x] G01 · [滴滴社招：Java 转 Go](https://www.cnblogs.com/charler/p/19075249) · charler
 - [ ] G03 · [一次 Go 面试失败经历](https://www.v2ex.com/t/1074459) · sagaxu
 - [ ] G04 · [成都滴滴一面（社招）](https://www.nowcoder.com/feed/main/detail/9a87e492ac6345d7b6638b80804b8e29) · 卖萌的鳄鱼等oc
 - [ ] G05 · [滴滴中台开发一面：Golang 社招](https://www.nowcoder.com/feed/main/detail/b1139d27144340418fbe934f43acfefa) · one混子

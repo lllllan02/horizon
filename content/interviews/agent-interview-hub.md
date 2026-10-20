@@ -26,6 +26,7 @@ updated_at: "2026-10-19T16:40:35+08:00"
 - [[agent-design-interview|怎样设计一个 Agent？]]
 - [[react-interview|ReAct 的架构是什么？]]
 - [[agent-intent-interview|Agent 为什么知道调用哪个工具？怎么做意图识别？]]
+- [[tool-calling-interview|Agent 如何执行工具调用，并处理参数异常与工具失败？]]
 - [[mcp-integration-interview|MCP 工具怎么接入？]]
 - [[agent-sandbox-interview|Agent 里为什么要做沙箱？]]
 

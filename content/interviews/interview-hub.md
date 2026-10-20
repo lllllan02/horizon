@@ -25,6 +25,8 @@ learning_status_changed_at: "2026-10-18T20:45:36.275+08:00"
 
 ## 单题
 
+- [[data-sync-interview|如何设计一个数据同步方案]]
+- [[data-sync-initialization-interview|数据同步的全量初始化怎么做？]]
 - [[temperature-interview|模型调用中的 Temperature 是什么，怎样起作用？]]
 - [[websocket-sse-interview|WebSocket 和 SSE 有什么区别？]]
 
