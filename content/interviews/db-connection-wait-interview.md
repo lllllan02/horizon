@@ -1,7 +1,7 @@
 ---
 title: "你们怎么确认耗时主要花在等待数据库连接上？"
 category: "性能排查"
-parent: project-interview-index
+parent: personal-output-index
 tags: ["面试", "性能排查", "连接池"]
 learning_status: organized
 created_at: "2026-10-18T22:56:42+08:00"

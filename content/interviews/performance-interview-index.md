@@ -22,7 +22,7 @@ updated_at: "2026-10-19T16:21:41+08:00"
 
 ## 项目案例
 
-以下题目保留在「项目经历」专题，可结合通用排查思路阅读：
+以下题目归属[[personal-output-index|个人产出]]，可结合通用排查思路阅读：
 
 - [[contest-bottleneck-interview|比赛开赛时出现瞬时洪峰，你们是怎么定位瓶颈的？]]
 - [[db-connection-wait-interview|你们怎么确认耗时主要花在等待数据库连接上？]]

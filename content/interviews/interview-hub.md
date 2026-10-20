@@ -12,6 +12,10 @@ learning_status_changed_at: "2026-10-18T20:45:36.275+08:00"
 
 面试题与口述回答的总入口，按主题浏览已保存的题目。
 
+## 个人产出
+
+- [[personal-output-index|个人产出]]
+
 ## 专题
 
 - [[go-interview-hub|Go 面试题]]：Channel、Context、锁、协程抢占、堆分配与内存排查。
@@ -21,7 +25,6 @@ learning_status_changed_at: "2026-10-18T20:45:36.275+08:00"
 - [[redis-interview-index|Redis 面试题]]：事件驱动、过期机制与数据库缓存一致性。
 - [[kafka-interview-index|Kafka 面试题]]：高吞吐、分区与顺序、日志刷盘、写入可靠性和消费积压。
 - [[performance-interview-index|性能排查与优化面试题]]：接口耗时排查、优化验证与限流保护。
-- [[project-interview-index|项目经历面试题]]：比赛开赛洪峰与数据库连接等待的定位。
 
 ## 单题
 

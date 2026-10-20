@@ -1,7 +1,7 @@
 ---
 title: "比赛开赛时出现瞬时洪峰，你们是怎么定位瓶颈的？"
 category: "性能排查"
-parent: project-interview-index
+parent: personal-output-index
 tags: ["面试", "性能排查", "连接池"]
 learning_status: organized
 created_at: "2026-10-18T22:23:14+08:00"
