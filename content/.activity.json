@@ -358,8 +358,8 @@
       "title": "Agent 面试题",
       "collection": "interviews",
       "state": "pending",
-      "digest": "863ddbdd866bdf2c3409848207f930f42c884b83e44fce9a44267058ec3db1b9",
-      "bodyDigest": "6d501962dd0cb0529ed653643e20653878a222d0055ce47263e59293b3470a69",
+      "digest": "f81a544a45d3b54e53b5f96c56a16988b0a383941029cc89ce04c4a0662eb6f7",
+      "bodyDigest": "e9bdf82009e6708489395d43bc3eaa2d5f85ed18b51a74fc836c9f25b92df3aa",
       "updatedAt": "2026-10-19T16:40:35+08:00"
     },
     "agent-memory-leak-interview": {
@@ -425,6 +425,30 @@
       "digest": "879468e260b36fc135c33a1242a5866370c8e720d47ae2f51207371c38ff22a0",
       "bodyDigest": "42d8228cec59afe00068c2027bae11854f76abda9b642ed60639862d9e58ab46",
       "updatedAt": "2026-10-18T23:51:40+08:00"
+    },
+    "data-sync-initialization-interview": {
+      "title": "数据同步的全量初始化怎么做？",
+      "collection": "interviews",
+      "state": "pending",
+      "digest": "c14d2256acf8aff2166976ce59d5a113f1577afe1d3c4a641ab62103f86855f9",
+      "bodyDigest": "9c1d077725ca307040a97ae50ae1be35aba7034855561dc64a1c4d8c46745989",
+      "updatedAt": "2026-10-20T13:13:44+08:00"
+    },
+    "data-sync-interview": {
+      "title": "如何设计一个数据同步方案",
+      "collection": "interviews",
+      "state": "reading",
+      "digest": "771a01fee3128328d46573d7432cde817deaec8e35edb52c3ade2f1c5132e609",
+      "bodyDigest": "ea4a731e4259b3f8db523bfa2483375a6d04e1b53c6e6dbf3cebaf225cf837e6",
+      "updatedAt": "2026-10-20T11:09:10+08:00"
+    },
+    "database-isolation-interview": {
+      "title": "数据库有哪些事务隔离级别，分别解决什么问题？",
+      "collection": "interviews",
+      "state": "pending",
+      "digest": "77f5415e89a758ed007dc2862f281c51bf7aa5361c3d48f84466dbc77644f5c6",
+      "bodyDigest": "46fadf41d4c61a109a950ffca58666b8c09f3b87715d564a990d575741c8bcb3",
+      "updatedAt": "2026-10-19T22:40:16+08:00"
     },
     "db-connection-wait-interview": {
       "title": "你们怎么确认耗时主要花在等待数据库连接上？",
@@ -538,28 +562,36 @@
       "bodyDigest": "36b69da6523bae618de8a8d948333c7b63b320a2800564776b8f37a18d397a79",
       "updatedAt": "2026-10-18T22:11:42+08:00"
     },
+    "inly-agent-preparation": {
+      "title": "引力传媒 Agent 后端岗位准备清单",
+      "collection": "interviews",
+      "state": "pending",
+      "digest": "a0bee4ae4304d6530102be8580b518f06c76ffa97fc9233b756b893309d1e7f2",
+      "bodyDigest": "4e5652fb6a7f22080a8e778be48fef1ceea4886d0dc5629b934d5b05066a5ebb",
+      "updatedAt": "2026-10-20T11:36:34+08:00"
+    },
     "interview-experiences": {
       "title": "Go 后端与 AI Agent 面经",
       "collection": "interviews",
       "state": "reading",
-      "digest": "e9cfddc1fdc007694238b187e6d3b013189cf222b6dd4952dd2205382414bdfc",
-      "bodyDigest": "4831c53f5c522e8f8166fef63e588b561a8ed4250aad4e0af2b0978129b87715",
-      "updatedAt": "2026-10-19T19:42:43+08:00"
+      "digest": "2ac22751a36478611db46f79fa7b1e6627e01db6fdf142b8c6ab7aeea3aa2cc5",
+      "bodyDigest": "0897693be3c14b38ab1befa025389e8834ef63e777812d672666efdaf67b44dc",
+      "updatedAt": "2026-10-20T10:49:44+08:00"
     },
     "interview-hub": {
       "title": "面试题",
       "collection": "interviews",
       "state": "reading",
-      "digest": "7ae5b4f36d2d1512eae772fbe9a57a80ef3d2e8589136a1e81bf2264f09a7fba",
-      "bodyDigest": "1d23a71cda91f485271a5a74e2b06895d2cd5a5565299aa773af71130144015e",
+      "digest": "bdfa02f922b97a09530a9ec9f2d9648a7cbf701be19b570cc6de1b8a594cc033",
+      "bodyDigest": "963d10ed0a2708d9f18d419455049ddb08e1fcd98ad2ac16b7cb8cc173e82cd2",
       "updatedAt": "2026-10-19T17:36:41+08:00"
     },
     "interview-resources": {
       "title": "Go 与 Agent 面试资料",
       "collection": "interviews",
       "state": "organized",
-      "digest": "841098090ade33e048465ed54723573a59d7e0c9d2f11cc5d59e0b455c232762",
-      "bodyDigest": "6b8b9b03e273856d2a937e121629f94480bf1b674c81534d3ddb1ff55f1d2892",
+      "digest": "e05a3467e8192e284ff19958a0752ffec278cdf82a6513db539078d7b87dfd50",
+      "bodyDigest": "bbc0d12ec0c39ee9526bd5218023c91f33a538c7e71285e9bec0af10c16648ed",
       "updatedAt": "2026-10-19T19:42:43+08:00"
     },
     "kafka-architecture-interview": {
@@ -634,6 +666,46 @@
       "bodyDigest": "edc6484c3a66be74edd5376f2f2f7648d5b5793b93924bf9ff6a21f48ad4f7d6",
       "updatedAt": "2026-10-19T10:37:47+08:00"
     },
+    "learning-plan-agent-fallback": {
+      "title": "学习计划 Agent 选题失败后，为什么直接降级？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "68b5e17090f43c40f95d927545ce969f9340c9c1bf70bfd3635afac82c1ddfe0",
+      "bodyDigest": "24345c3030ecf42dfe3be0edf5982037c0f9dbecd361799ff99a88250d64696e",
+      "updatedAt": "2026-10-20T11:56:23+08:00"
+    },
+    "learning-plan-agent-interview": {
+      "title": "介绍一下你做过的学习计划 Agent 项目？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "242d1a4e8b39795218ee1962734ef253e30943bf79f79ac53e0a7130524aa89f",
+      "bodyDigest": "9fbb01a62e577d6b30246c4efcab4d729afcfc4d0d537c04bbceceb91e100275",
+      "updatedAt": "2026-10-20T12:49:36+08:00"
+    },
+    "learning-plan-agent-submission": {
+      "title": "学习计划 Agent 为什么通过工具提交最终清单？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "c621c86be4710087af79ef47f197f1d0bfb690e5f2cb20b868586326e91cbac4",
+      "bodyDigest": "ee53aa688c669f6b9b6da364867edbdd3ba4be0f389a08cb9fee9fd59ad36d75",
+      "updatedAt": "2026-10-20T12:49:36+08:00"
+    },
+    "lingdi-agent-preparation": {
+      "title": "凌迪科技 Agent 岗位准备清单",
+      "collection": "interviews",
+      "state": "reading",
+      "digest": "594b1cb0c99d0228a95b1aedf63610817f714680f00eadca7d2dd4a7a12b4344",
+      "bodyDigest": "95d72d03c8b398f35c1f7ec7f4970268f0f85800bb659dbc1b316a99ee70ef41",
+      "updatedAt": "2026-10-20T11:00:23+08:00"
+    },
+    "lingtong-llm-gateway-preparation": {
+      "title": "灵通云智算大模型网关岗位准备清单",
+      "collection": "interviews",
+      "state": "pending",
+      "digest": "655a93b580cf653171a682372df0821f558bbe34f2bd0663bf27d95411be93c2",
+      "bodyDigest": "c51f84842bbfa48b7a1afe062c63f8bab8b2f0e9d8588bd71db881a045a9f8f0",
+      "updatedAt": "2026-10-20T11:09:48+08:00"
+    },
     "mcp-integration-interview": {
       "title": "MCP 工具怎么接入？",
       "collection": "interviews",
@@ -670,9 +742,25 @@
       "title": "MySQL 面试题",
       "collection": "interviews",
       "state": "pending",
-      "digest": "a72918ce94077383bb8a46be40855a5c6640bf5be7b5a4805556c576cd627f08",
-      "bodyDigest": "939b0b1b6bd5bfb469a74209dd13e29dd7eb82e9cfda3abed680994cd3e25d61",
-      "updatedAt": "2026-10-19T19:19:47+08:00"
+      "digest": "93caba280130a9fd3e81c5ea5033a68cf11967c2375bf83ead4fb3da16b55472",
+      "bodyDigest": "9a78becd94831acad618e2b759c186d6ea8b7924cf0e936734a941fc4dbb7649",
+      "updatedAt": "2026-10-20T10:44:42+08:00"
+    },
+    "mysql-sharding-interview": {
+      "title": "了解数据库的分库分表吗？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "8a76e3e80375aa06d7611460e8a4f215cb7036c097f5c9b45e306386af166d52",
+      "bodyDigest": "c5d30cb241f9cd5d548350f0805eea0a5a51dc6dee145c744dd424981eceb5f6",
+      "updatedAt": "2026-10-19T22:32:18+08:00"
+    },
+    "mysql-sharding-key-interview": {
+      "title": "分片键怎么选，多种查询维度如何兼顾？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "05f8c231ec622f66933f6461790bd409b3b31c0705d578bc8484e6422de62db8",
+      "bodyDigest": "5f1ef301cd8bdae9c847b225e8f06d736a6d4eaf90fb0dac113e599abb914769",
+      "updatedAt": "2026-10-20T10:44:42+08:00"
     },
     "mysql-slow-query-interview": {
       "title": "MySQL 慢查询一般怎么优化？",
@@ -702,17 +790,17 @@
       "title": "性能排查与优化面试题",
       "collection": "interviews",
       "state": "pending",
-      "digest": "aeb17fc1cecbdae2f26436fa7a9212313424ab0ee586accce80bebd1f2485de2",
-      "bodyDigest": "f11f395bf7e3c7fdb29670ce80b7e2ec63ab186eed3d92b36920e23c3764ddd9",
+      "digest": "62b9776379399c70ee772e97be7723162451e5dc16863e065f2bd6c52f57d579",
+      "bodyDigest": "5dec4b7f39c1ce5b68d8efa4dd4f733d3c6cdb210cf1a13d71d3a02026eb6906",
       "updatedAt": "2026-10-19T16:21:41+08:00"
     },
-    "project-interview-index": {
-      "title": "项目经历面试题",
+    "personal-output-index": {
+      "title": "个人产出",
       "collection": "interviews",
       "state": "pending",
-      "digest": "3548a1a740e1500f03332bfe16c26d4603696cc97e103cdd72fff7d5cd0a959f",
-      "bodyDigest": "67ff6f2444021278d7249927a0c44f67ec746e8235a50cb51a886647e42ea809",
-      "updatedAt": "2026-10-18T23:14:14+08:00"
+      "digest": "bedd3f89d8b63a4c9bd51030395eefc9109e6785ab4294e63c049ca71226797b",
+      "bodyDigest": "7512a5d6d5f06110d71c8c1396ddea0cf349d5aac2622a7b13810fd9ac9d0343",
+      "updatedAt": "2026-10-20T11:41:57+08:00"
     },
     "rate-limiting-interview": {
       "title": "怎么做限流？有哪些常见的限流算法？",
@@ -774,8 +862,8 @@
       "title": "Redis 面试题",
       "collection": "interviews",
       "state": "pending",
-      "digest": "cab1e59829839ee4c243e44539b439c05b8c05277bac6defc0a07ed2d9c5583d",
-      "bodyDigest": "1bc2e9d12e4bd814d86491b0b73e15988fe7cd33421412265bcf73b80dc2e4cd",
+      "digest": "86f4f33deedd6f40350b997b837bc97ee5d678247dfbec50972523d6fd4051a7",
+      "bodyDigest": "2f73097b87f97e01fe8d31654f337a69c065fb9d8931685af06ff09bd1759052",
       "updatedAt": "2026-10-19T21:05:27+08:00"
     },
     "redis-modes-interview": {
@@ -785,6 +873,14 @@
       "digest": "3207a7bbcedbd4f603dfe441fb7127c366448bbcae607ffa8f781dccb9c4387c",
       "bodyDigest": "2d9f23e9ebe70cf10861dc9986ad4e78d74940020d89d21c7b1c8f043f9c0c43",
       "updatedAt": "2026-10-19T20:19:34+08:00"
+    },
+    "redis-performance-interview": {
+      "title": "Redis 为什么快？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "22bcfdc9da3ebd805062e838b93d089ff4565bbdffae96028c52818f04fcbc55",
+      "bodyDigest": "89e336ebcd146327238bfb4c88b050c2c73c711bf0fb0796d5d3e76409bf062b",
+      "updatedAt": "2026-10-19T22:27:03+08:00"
     },
     "redis-replica-promotion-interview": {
       "title": "Redis 哨兵如何选择要提升为主节点的从节点？",
@@ -826,6 +922,14 @@
       "bodyDigest": "a47061f7e810ed73170f1c19c524fa1cea1734a2cc24a3537f0c5d469e53df73",
       "updatedAt": "2026-10-18T23:14:14+08:00"
     },
+    "saparo-agent-preparation": {
+      "title": "Saparo 电商 Agent 岗位准备清单",
+      "collection": "interviews",
+      "state": "pending",
+      "digest": "b0274dcaa766270659e77c6988683fd52fff63cf5526e1a7be3512b70b82185c",
+      "bodyDigest": "04a5784dcda9b4b7e71b2661ecf064208d210af39b5f29c4805c9ad5d6369401",
+      "updatedAt": "2026-10-20T11:36:34+08:00"
+    },
     "service-degradation-interview": {
       "title": "降级是做什么的，大概怎么做？",
       "collection": "interviews",
@@ -849,6 +953,14 @@
       "digest": "08a8689dc7ee776545055ebda493f9585ffe9bb34c175986d9d0b05a540d470a",
       "bodyDigest": "c86ce589e8232e411d3871a55e5421233ee0b069e7562a775b4d6593e854d0ec",
       "updatedAt": "2026-10-18T21:37:01+08:00"
+    },
+    "tool-calling-interview": {
+      "title": "Agent 如何执行工具调用，并处理参数异常与工具失败？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "99d5f2788e13cc93131d8655f452320f37f53781cb81ae00d53c2899027021a9",
+      "bodyDigest": "65bf605fa660aca10c3f8ce8b55e504ff453c9a131263a2363d12fe4b79540c0",
+      "updatedAt": "2026-10-20T13:10:47+08:00"
     },
     "websocket-sse-interview": {
       "title": "WebSocket 和 SSE 有什么区别？",
@@ -2010,6 +2122,22 @@
       "bodyDigest": "b5e8f4d1aa518dad9e47dfe3f8fb3503ec10013d085bcc046ab77f551420fffa",
       "updatedAt": "2026-10-16T19:16:32+08:00"
     },
+    "data-sync-sources": {
+      "title": "数据同步方案官方资料导读",
+      "collection": "readings",
+      "state": "pending",
+      "digest": "11d2cae3cacdaebbe1a8ad6b2e0f7135e5a337ad309c123c38d35ad5c07de1c6",
+      "bodyDigest": "db8e2bbe1d8ec1e15132b4ea1c16916bd800708eaca14e09ba6ccee134c0ab0b",
+      "updatedAt": "2026-10-20T13:10:54+08:00"
+    },
+    "database-isolation-sources": {
+      "title": "事务隔离级别官方资料导读",
+      "collection": "readings",
+      "state": "pending",
+      "digest": "71c5465d929c105dd23cca05b9aa9658e7c39f0245f6f0b8202c3e54daf7ea74",
+      "bodyDigest": "630c1edfff159025813f38addada5cc808c3d40bb1c559d44bd73527512ec407",
+      "updatedAt": "2026-10-19T22:40:16+08:00"
+    },
     "deepagents-context-offloading-summary": {
       "title": "Deep Agents：外置上下文与原文回查",
       "collection": "readings",
@@ -2578,6 +2706,14 @@
       "bodyDigest": "c5fbf729d79eb3ed46c234e8f366cad476b4bf4f8a15f46b1aab95b3127a3596",
       "updatedAt": "2026-10-18T20:45:54+08:00"
     },
+    "mysql-sharding-sources": {
+      "title": "MySQL 分库分表场景资料导读",
+      "collection": "readings",
+      "state": "pending",
+      "digest": "f8f1a51151425b4e55990215bcf15dbb51ad433671d3196eff6dc76e7f3b657d",
+      "bodyDigest": "bffaeb401b753b9185719a042cba26ea912d3f0cd4f30f5d1f1ef7ed9daa8c86",
+      "updatedAt": "2026-10-20T10:44:42+08:00"
+    },
     "mysql-slow-query-sources": {
       "title": "MySQL 慢查询优化资料导读",
       "collection": "readings",
@@ -2881,6 +3017,14 @@
       "digest": "7f9f71455530b1bbe88721d440e0f044685e8fe8fdfdda35c82befdff0be6b2d",
       "bodyDigest": "1358f571e50827fb385c593ad30bcee519f803fcb754f87bb4078680a415ea27",
       "updatedAt": "2026-10-19T10:35:33+08:00"
+    },
+    "redis-performance-sources": {
+      "title": "Redis 性能与线程模型官方资料导读",
+      "collection": "readings",
+      "state": "pending",
+      "digest": "880367218f9fca84b868458a9750ed6100a4ff1cfe93d5b2f3d333dc207e3316",
+      "bodyDigest": "593265fdbbfcab0c268049fdf4d7160444d2bc312b45460b2503a96ab61d3758",
+      "updatedAt": "2026-10-19T22:24:24+08:00"
     },
     "redis-rate-limiting-algorithms": {
       "title": "Redis：限流算法的窗口、突发与排队",
@@ -3630,6 +3774,17 @@
         "assets/kafka-topics-partitions.svg": "aba67d46732f484c13fc4569dc962e515b61277374f88d2239bea1a2673b650f"
       },
       "collections": []
+    },
+    "assets/learning-plan-agent": {
+      "title": "learning-plan-agent",
+      "files": {
+        "assets/learning-plan-agent.excalidraw": "18b404b70aa394a75c9a5f420df2281b0113fcfeeea2952119e77f97ac1cbbb4",
+        "assets/learning-plan-agent.png": "7a80a381162724c129ead8b3884660da38fb5e7e462790763cf3516a4ec821cd",
+        "assets/learning-plan-agent.svg": "623b5ac7425db9e4f2773f5a93fc10e1284e1fe3fcfea6f01b5e7eb00ccd4b84"
+      },
+      "collections": [
+        "interviews"
+      ]
     },
     "assets/mcp-flow": {
       "title": "mcp-flow",
@@ -40973,6 +41128,1130 @@
       "docId": "agent-checkpoint-interview",
       "from": "reading",
       "to": "organized"
+    },
+    {
+      "id": "f01b69b0-5cab-448b-96d6-31fb7a1838d3",
+      "kind": "updated",
+      "entity": "doc:interview-experiences",
+      "title": "Go 后端与 AI Agent 面经",
+      "time": "2026-10-19T14:25:30.638Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-experiences"
+    },
+    {
+      "id": "50dc2031-a70c-4f69-9d91-45c62ac38c99",
+      "kind": "updated",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-19T14:25:30.638Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "c94c54fa-e1c5-4001-9f74-5c0cd5578d23",
+      "kind": "updated",
+      "entity": "doc:interview-resources",
+      "title": "Go 与 Agent 面试资料",
+      "time": "2026-10-19T14:25:30.638Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-resources"
+    },
+    {
+      "id": "12930da5-bb63-4270-938a-fe6a051bf4ce",
+      "kind": "updated",
+      "entity": "doc:redis-interview-index",
+      "title": "Redis 面试题",
+      "time": "2026-10-19T14:25:30.638Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-interview-index"
+    },
+    {
+      "id": "5bb41be8-a4a5-42ed-8c29-70ced82f9eee",
+      "kind": "created",
+      "entity": "doc:redis-performance-interview",
+      "title": "Redis 为什么快？",
+      "time": "2026-10-19T14:25:30.638Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-performance-interview"
+    },
+    {
+      "id": "271270a0-8d89-4022-8eb4-bc23d88ca1c4",
+      "kind": "created",
+      "entity": "doc:redis-performance-sources",
+      "title": "Redis 性能与线程模型官方资料导读",
+      "time": "2026-10-19T14:25:30.638Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "redis-performance-sources"
+    },
+    {
+      "id": "c80dd0fa-164f-4fb3-a253-e15b06ffd069",
+      "kind": "updated",
+      "entity": "doc:redis-performance-interview",
+      "title": "Redis 为什么快？",
+      "time": "2026-10-19T14:28:12.362Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-performance-interview"
+    },
+    {
+      "id": "20ead754-3689-4a27-a696-0ec7b846c6a8",
+      "kind": "state-changed",
+      "entity": "doc:redis-performance-interview",
+      "title": "Redis 为什么快？",
+      "time": "2026-10-19T14:28:35.526Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-performance-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "6ac7be5e-2767-457c-ab8d-e3061311e29f",
+      "kind": "state-changed",
+      "entity": "doc:redis-performance-interview",
+      "title": "Redis 为什么快？",
+      "time": "2026-10-19T14:28:35.860Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "redis-performance-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "c25940af-09be-4186-a1c4-afd2b07d875e",
+      "kind": "updated",
+      "entity": "doc:mysql-interview-index",
+      "title": "MySQL 面试题",
+      "time": "2026-10-19T14:36:07.366Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-interview-index"
+    },
+    {
+      "id": "9f9c7f38-8794-4d89-a3bb-5947e528514d",
+      "kind": "created",
+      "entity": "doc:mysql-sharding-interview",
+      "title": "了解数据库的分库分表吗？",
+      "time": "2026-10-19T14:36:07.366Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-sharding-interview"
+    },
+    {
+      "id": "edac30c2-435d-427f-b18d-72ff7dceb4db",
+      "kind": "created",
+      "entity": "doc:mysql-sharding-sources",
+      "title": "MySQL 分库分表场景资料导读",
+      "time": "2026-10-19T14:36:07.366Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "mysql-sharding-sources"
+    },
+    {
+      "id": "820ac105-7dab-41ce-9af8-12809ebc8f5f",
+      "kind": "state-changed",
+      "entity": "doc:mysql-sharding-interview",
+      "title": "了解数据库的分库分表吗？",
+      "time": "2026-10-19T14:38:07.405Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-sharding-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "032e347b-e79f-421a-97aa-1c94f6400026",
+      "kind": "state-changed",
+      "entity": "doc:mysql-sharding-interview",
+      "title": "了解数据库的分库分表吗？",
+      "time": "2026-10-19T14:38:07.830Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-sharding-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "260530d3-db2c-4436-bb23-f290ba88f0bb",
+      "kind": "created",
+      "entity": "doc:database-isolation-interview",
+      "title": "数据库有哪些事务隔离级别，分别解决什么问题？",
+      "time": "2026-10-19T15:05:26.419Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "database-isolation-interview"
+    },
+    {
+      "id": "be5298b2-bd9e-4ca0-8bd6-5b52818123f5",
+      "kind": "updated",
+      "entity": "doc:mysql-interview-index",
+      "title": "MySQL 面试题",
+      "time": "2026-10-19T15:05:26.419Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-interview-index"
+    },
+    {
+      "id": "e69931a1-14ca-4c7f-97e0-0b57d0c4cd5c",
+      "kind": "updated",
+      "entity": "doc:mysql-sharding-interview",
+      "title": "了解数据库的分库分表吗？",
+      "time": "2026-10-19T15:05:26.419Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-sharding-interview"
+    },
+    {
+      "id": "f44733de-484a-4362-9c8f-6b54f7a7d6fb",
+      "kind": "created",
+      "entity": "doc:database-isolation-sources",
+      "title": "事务隔离级别官方资料导读",
+      "time": "2026-10-19T15:05:26.419Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "database-isolation-sources"
+    },
+    {
+      "id": "e07b63c1-1414-4838-a55a-81cb54957e90",
+      "kind": "updated",
+      "entity": "doc:interview-experiences",
+      "title": "Go 后端与 AI Agent 面经",
+      "time": "2026-10-20T02:46:07.187Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-experiences"
+    },
+    {
+      "id": "9a846252-baaa-4580-afd9-6bc6235dbeb0",
+      "kind": "updated",
+      "entity": "doc:mysql-interview-index",
+      "title": "MySQL 面试题",
+      "time": "2026-10-20T02:46:07.187Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-interview-index"
+    },
+    {
+      "id": "aa093a41-0d27-4685-85d2-5a17301a5869",
+      "kind": "created",
+      "entity": "doc:mysql-sharding-key-interview",
+      "title": "分片键怎么选，多种查询维度如何兼顾？",
+      "time": "2026-10-20T02:46:07.187Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-sharding-key-interview"
+    },
+    {
+      "id": "231910fd-f509-4598-ba33-0047f17d976a",
+      "kind": "updated",
+      "entity": "doc:mysql-sharding-sources",
+      "title": "MySQL 分库分表场景资料导读",
+      "time": "2026-10-20T02:46:07.187Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "mysql-sharding-sources"
+    },
+    {
+      "id": "6758eceb-94f7-449d-8007-43c6d5cc53a4",
+      "kind": "updated",
+      "entity": "doc:mysql-sharding-key-interview",
+      "title": "分片键怎么选，多种查询维度如何兼顾？",
+      "time": "2026-10-20T02:48:22.879Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-sharding-key-interview"
+    },
+    {
+      "id": "0c359510-0480-4c61-8a91-9432c941885d",
+      "kind": "updated",
+      "entity": "doc:interview-experiences",
+      "title": "Go 后端与 AI Agent 面经",
+      "time": "2026-10-20T03:00:09.804Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-experiences"
+    },
+    {
+      "id": "2d4db5da-c160-4621-b1dd-87a92504d715",
+      "kind": "updated",
+      "entity": "doc:mysql-sharding-key-interview",
+      "title": "分片键怎么选，多种查询维度如何兼顾？",
+      "time": "2026-10-20T03:00:09.804Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-sharding-key-interview"
+    },
+    {
+      "id": "b5765c32-6af8-4ee9-9315-0834e69040fa",
+      "kind": "updated",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-20T03:05:35.238Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "28d0df97-9195-4f15-a0f0-f4f90ddf25b2",
+      "kind": "created",
+      "entity": "doc:lingdi-agent-preparation",
+      "title": "凌迪科技 Agent 岗位准备清单",
+      "time": "2026-10-20T03:05:35.238Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "lingdi-agent-preparation"
+    },
+    {
+      "id": "007fab30-55d1-4fd1-8cc4-69fa802dc70b",
+      "kind": "state-changed",
+      "entity": "doc:lingdi-agent-preparation",
+      "title": "凌迪科技 Agent 岗位准备清单",
+      "time": "2026-10-20T03:06:06.960Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "lingdi-agent-preparation",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "2d2e37ec-12fc-4aa9-bc1d-409addbcc26f",
+      "kind": "created",
+      "entity": "doc:data-sync-interview",
+      "title": "如何设计一个数据同步方案",
+      "time": "2026-10-20T03:09:14.078Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "data-sync-interview"
+    },
+    {
+      "id": "2466930b-076b-4ffe-8514-14a4ce1bea97",
+      "kind": "updated",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-20T03:09:14.078Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "c09d53bc-a80b-42e0-9555-da82d4aa9671",
+      "kind": "updated",
+      "entity": "doc:mysql-sharding-key-interview",
+      "title": "分片键怎么选，多种查询维度如何兼顾？",
+      "time": "2026-10-20T03:09:14.078Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-sharding-key-interview"
+    },
+    {
+      "id": "59b97c8a-dfec-4642-af61-a725a913f315",
+      "kind": "created",
+      "entity": "doc:data-sync-sources",
+      "title": "数据同步方案官方资料导读",
+      "time": "2026-10-20T03:09:14.078Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "data-sync-sources"
+    },
+    {
+      "id": "0b70f3ae-f692-44ad-9b4a-a9635c87baf3",
+      "kind": "created",
+      "entity": "doc:lingtong-llm-gateway-preparation",
+      "title": "灵通云智算大模型网关岗位准备清单",
+      "time": "2026-10-20T03:09:50.074Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "lingtong-llm-gateway-preparation"
+    },
+    {
+      "id": "51663a02-7956-4dd4-86d6-2ce138d869bd",
+      "kind": "updated",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-20T03:10:10.098Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "9851a94f-e9c8-46ce-b2fc-6073788381fd",
+      "kind": "updated",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-20T03:35:50.092Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "b26f5d8f-7111-4c2a-9f50-d35ca430d361",
+      "kind": "created",
+      "entity": "doc:learning-plan-agent-interview",
+      "title": "介绍一下你做过的学习计划 Agent 项目？",
+      "time": "2026-10-20T03:35:50.092Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "learning-plan-agent-interview"
+    },
+    {
+      "id": "6be5c03d-4245-4985-a96d-7b0ef9706bf8",
+      "kind": "updated",
+      "entity": "doc:lingdi-agent-preparation",
+      "title": "凌迪科技 Agent 岗位准备清单",
+      "time": "2026-10-20T03:35:50.092Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "lingdi-agent-preparation"
+    },
+    {
+      "id": "ca6a3366-9f31-4b0b-b8db-bc63338764f3",
+      "kind": "updated",
+      "entity": "doc:project-interview-index",
+      "title": "项目经历面试题",
+      "time": "2026-10-20T03:35:50.092Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "project-interview-index"
+    },
+    {
+      "id": "8d6060d5-217d-4535-9be4-68b0d8cc6b36",
+      "kind": "created",
+      "entity": "doc:inly-agent-preparation",
+      "title": "引力传媒 Agent 后端岗位准备清单",
+      "time": "2026-10-20T03:36:10.068Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "inly-agent-preparation"
+    },
+    {
+      "id": "f6411630-a681-49a0-af2e-91f0434ec32b",
+      "kind": "created",
+      "entity": "doc:saparo-agent-preparation",
+      "title": "Saparo 电商 Agent 岗位准备清单",
+      "time": "2026-10-20T03:36:10.068Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "saparo-agent-preparation"
+    },
+    {
+      "id": "ff0f8bec-d151-4849-85d3-802673ef6c28",
+      "kind": "updated",
+      "entity": "doc:inly-agent-preparation",
+      "title": "引力传媒 Agent 后端岗位准备清单",
+      "time": "2026-10-20T03:36:38.091Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "inly-agent-preparation"
+    },
+    {
+      "id": "53ab013a-e0b7-46d3-9218-a22f9323e755",
+      "kind": "updated",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-20T03:36:38.091Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "17589ea6-482c-4ec0-8df7-476b78de1394",
+      "kind": "updated",
+      "entity": "doc:inly-agent-preparation",
+      "title": "引力传媒 Agent 后端岗位准备清单",
+      "time": "2026-10-20T03:37:22.081Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "inly-agent-preparation"
+    },
+    {
+      "id": "6c08aace-0441-4316-b566-fd09dded1af2",
+      "kind": "updated",
+      "entity": "doc:saparo-agent-preparation",
+      "title": "Saparo 电商 Agent 岗位准备清单",
+      "time": "2026-10-20T03:37:22.081Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "saparo-agent-preparation"
+    },
+    {
+      "id": "47d7058d-abd8-4ac2-abf8-6fd024092e5f",
+      "kind": "updated",
+      "entity": "doc:lingdi-agent-preparation",
+      "title": "凌迪科技 Agent 岗位准备清单",
+      "time": "2026-10-20T03:37:46.173Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "lingdi-agent-preparation"
+    },
+    {
+      "id": "974a4231-03ad-49ce-8498-907a19842221",
+      "kind": "updated",
+      "entity": "doc:learning-plan-agent-interview",
+      "title": "介绍一下你做过的学习计划 Agent 项目？",
+      "time": "2026-10-20T03:39:22.083Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "learning-plan-agent-interview"
+    },
+    {
+      "id": "412bb9a2-54dd-4294-a634-e8682292d1bd",
+      "kind": "updated",
+      "entity": "doc:learning-plan-agent-interview",
+      "title": "介绍一下你做过的学习计划 Agent 项目？",
+      "time": "2026-10-20T03:39:42.096Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "learning-plan-agent-interview"
+    },
+    {
+      "id": "2ed50d61-d417-4011-b2ef-216c18e31f44",
+      "kind": "state-changed",
+      "entity": "doc:learning-plan-agent-interview",
+      "title": "介绍一下你做过的学习计划 Agent 项目？",
+      "time": "2026-10-20T03:40:56.592Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "learning-plan-agent-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "6df9dc7b-b288-4c6b-9724-f0040571e87e",
+      "kind": "state-changed",
+      "entity": "doc:learning-plan-agent-interview",
+      "title": "介绍一下你做过的学习计划 Agent 项目？",
+      "time": "2026-10-20T03:40:57.015Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "learning-plan-agent-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "918a8bf5-248a-4fcf-b69f-689e7c9c31d6",
+      "kind": "updated",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-20T03:42:46.162Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "b6703b8c-09d1-4132-98be-a96b96030060",
+      "kind": "created",
+      "entity": "doc:personal-output-index",
+      "title": "个人产出",
+      "time": "2026-10-20T03:42:46.162Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "personal-output-index"
+    },
+    {
+      "id": "d0997124-9df4-459f-bec1-1a48451f95d3",
+      "kind": "updated",
+      "entity": "doc:lingdi-agent-preparation",
+      "title": "凌迪科技 Agent 岗位准备清单",
+      "time": "2026-10-20T03:43:14.068Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "lingdi-agent-preparation"
+    },
+    {
+      "id": "4a465427-704b-418b-99f8-13bf5826b05e",
+      "kind": "updated",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-20T03:47:10.101Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "5e247e3e-abea-4e4b-9048-5545ad3c4481",
+      "kind": "updated",
+      "entity": "doc:performance-interview-index",
+      "title": "性能排查与优化面试题",
+      "time": "2026-10-20T03:47:10.101Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "performance-interview-index"
+    },
+    {
+      "id": "b58086ed-e58c-4bac-8633-834001583cfe",
+      "kind": "state-changed",
+      "entity": "doc:learning-plan-agent-interview",
+      "title": "介绍一下你做过的学习计划 Agent 项目？",
+      "time": "2026-10-20T03:49:48.721Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "learning-plan-agent-interview",
+      "from": "organized",
+      "to": "reading"
+    },
+    {
+      "id": "bf1c1857-efcb-4762-a3ff-5a16c76cf7f6",
+      "kind": "updated",
+      "entity": "doc:learning-plan-agent-interview",
+      "title": "介绍一下你做过的学习计划 Agent 项目？",
+      "time": "2026-10-20T03:49:48.721Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "learning-plan-agent-interview"
+    },
+    {
+      "id": "49ca912b-676a-4fbf-91ea-37473a87bf50",
+      "kind": "image-created",
+      "entity": "image:assets/learning-plan-agent",
+      "title": "learning-plan-agent",
+      "time": "2026-10-20T03:49:48.721Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "files": [
+        "assets/learning-plan-agent.excalidraw",
+        "assets/learning-plan-agent.png",
+        "assets/learning-plan-agent.svg"
+      ]
+    },
+    {
+      "id": "125f0762-a003-4c5c-aa1b-c0d36df5c26b",
+      "kind": "updated",
+      "entity": "doc:lingdi-agent-preparation",
+      "title": "凌迪科技 Agent 岗位准备清单",
+      "time": "2026-10-20T03:51:18.100Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "lingdi-agent-preparation"
+    },
+    {
+      "id": "d0a6de43-4de9-4863-a77a-22021f67b693",
+      "kind": "updated",
+      "entity": "doc:learning-plan-agent-interview",
+      "title": "介绍一下你做过的学习计划 Agent 项目？",
+      "time": "2026-10-20T03:54:12.015Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "learning-plan-agent-interview"
+    },
+    {
+      "id": "4fdc2d14-10b5-436d-9b1b-22ecebe4af3e",
+      "kind": "updated",
+      "entity": "doc:lingdi-agent-preparation",
+      "title": "凌迪科技 Agent 岗位准备清单",
+      "time": "2026-10-20T03:54:12.015Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "lingdi-agent-preparation"
+    },
+    {
+      "id": "a5d13444-70d6-4f35-be1b-afd4efb0c003",
+      "kind": "created",
+      "entity": "doc:learning-plan-agent-fallback",
+      "title": "学习计划 Agent 选题失败后，为什么直接降级？",
+      "time": "2026-10-20T03:58:53.026Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "learning-plan-agent-fallback"
+    },
+    {
+      "id": "3c5dc9ec-9c37-48aa-83fa-d26530dd6e5d",
+      "kind": "updated",
+      "entity": "doc:learning-plan-agent-interview",
+      "title": "介绍一下你做过的学习计划 Agent 项目？",
+      "time": "2026-10-20T03:58:53.026Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "learning-plan-agent-interview"
+    },
+    {
+      "id": "16b0f163-5fe8-4751-bf3f-439b824cc501",
+      "kind": "updated",
+      "entity": "doc:lingdi-agent-preparation",
+      "title": "凌迪科技 Agent 岗位准备清单",
+      "time": "2026-10-20T03:58:53.026Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "lingdi-agent-preparation"
+    },
+    {
+      "id": "40a2a33c-73e9-4acb-9d32-6031c3a98c38",
+      "kind": "updated",
+      "entity": "doc:personal-output-index",
+      "title": "个人产出",
+      "time": "2026-10-20T03:58:53.026Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "personal-output-index"
+    },
+    {
+      "id": "cd66a200-df28-4cd0-8c67-4a9e7e29915c",
+      "kind": "state-changed",
+      "entity": "doc:learning-plan-agent-fallback",
+      "title": "学习计划 Agent 选题失败后，为什么直接降级？",
+      "time": "2026-10-20T03:59:26.340Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "learning-plan-agent-fallback",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "ed2196f8-1dd3-4b0d-b8fa-3e0e3d997fd2",
+      "kind": "state-changed",
+      "entity": "doc:learning-plan-agent-fallback",
+      "title": "学习计划 Agent 选题失败后，为什么直接降级？",
+      "time": "2026-10-20T03:59:26.560Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "learning-plan-agent-fallback",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "14466cb8-ba3b-4ff6-8ac1-7a07df3e3d8f",
+      "kind": "state-changed",
+      "entity": "doc:learning-plan-agent-interview",
+      "title": "介绍一下你做过的学习计划 Agent 项目？",
+      "time": "2026-10-20T03:59:31.155Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "learning-plan-agent-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "dcb0c1ee-fa65-4d33-b158-d47550e7a70d",
+      "kind": "state-changed",
+      "entity": "doc:mysql-sharding-key-interview",
+      "title": "分片键怎么选，多种查询维度如何兼顾？",
+      "time": "2026-10-20T04:46:34.747Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-sharding-key-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "5d36432f-0fd6-4950-be6d-85abe1cb8aef",
+      "kind": "state-changed",
+      "entity": "doc:mysql-sharding-key-interview",
+      "title": "分片键怎么选，多种查询维度如何兼顾？",
+      "time": "2026-10-20T04:46:35.132Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "mysql-sharding-key-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "08ef471c-d5c8-4455-898f-040acc777587",
+      "kind": "state-changed",
+      "entity": "doc:data-sync-interview",
+      "title": "如何设计一个数据同步方案",
+      "time": "2026-10-20T04:46:37.088Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "data-sync-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "5787a9f2-fca6-4401-aa99-60e5889ff7e0",
+      "kind": "state-changed",
+      "entity": "doc:learning-plan-agent-interview",
+      "title": "介绍一下你做过的学习计划 Agent 项目？",
+      "time": "2026-10-20T04:50:14.082Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "learning-plan-agent-interview",
+      "from": "organized",
+      "to": "reading"
+    },
+    {
+      "id": "0271379b-38cf-4e32-ae1b-a9b9b6d18fcf",
+      "kind": "updated",
+      "entity": "doc:learning-plan-agent-interview",
+      "title": "介绍一下你做过的学习计划 Agent 项目？",
+      "time": "2026-10-20T04:50:14.082Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "learning-plan-agent-interview"
+    },
+    {
+      "id": "5d26bdb8-bb44-4c94-b06d-e10c607bddee",
+      "kind": "created",
+      "entity": "doc:learning-plan-agent-submission",
+      "title": "学习计划 Agent 为什么通过工具提交最终清单？",
+      "time": "2026-10-20T04:50:14.082Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "learning-plan-agent-submission"
+    },
+    {
+      "id": "bae6d7d4-b0c4-47b3-9615-5f8329958dd4",
+      "kind": "updated",
+      "entity": "doc:personal-output-index",
+      "title": "个人产出",
+      "time": "2026-10-20T04:50:14.082Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "personal-output-index"
+    },
+    {
+      "id": "a0522afc-f840-4e96-a5a9-9b11cfda4cef",
+      "kind": "updated",
+      "entity": "doc:learning-plan-agent-submission",
+      "title": "学习计划 Agent 为什么通过工具提交最终清单？",
+      "time": "2026-10-20T04:51:22.105Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "learning-plan-agent-submission"
+    },
+    {
+      "id": "e45249da-f057-43e2-bb2e-01acb17cc867",
+      "kind": "state-changed",
+      "entity": "doc:learning-plan-agent-submission",
+      "title": "学习计划 Agent 为什么通过工具提交最终清单？",
+      "time": "2026-10-20T04:52:11.660Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "learning-plan-agent-submission",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "7fec613d-04c5-4059-bd70-1ba5bdf6d243",
+      "kind": "state-changed",
+      "entity": "doc:learning-plan-agent-submission",
+      "title": "学习计划 Agent 为什么通过工具提交最终清单？",
+      "time": "2026-10-20T04:52:11.894Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "learning-plan-agent-submission",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "3f3e8150-265f-416e-b198-ad1ea87d92d4",
+      "kind": "state-changed",
+      "entity": "doc:learning-plan-agent-interview",
+      "title": "介绍一下你做过的学习计划 Agent 项目？",
+      "time": "2026-10-20T04:52:20.544Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "learning-plan-agent-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "f901baad-11a2-4dd2-96b5-e81baa8851b0",
+      "kind": "updated",
+      "entity": "doc:lingdi-agent-preparation",
+      "title": "凌迪科技 Agent 岗位准备清单",
+      "time": "2026-10-20T05:06:59.467Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "lingdi-agent-preparation"
+    },
+    {
+      "id": "b1887462-2050-44d9-a98a-fd2d0452c877",
+      "kind": "updated",
+      "entity": "doc:agent-interview-hub",
+      "title": "Agent 面试题",
+      "time": "2026-10-20T05:10:51.525Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-interview-hub"
+    },
+    {
+      "id": "2bb2da32-04f2-4e9a-8af7-0636cb75e151",
+      "kind": "updated",
+      "entity": "doc:lingdi-agent-preparation",
+      "title": "凌迪科技 Agent 岗位准备清单",
+      "time": "2026-10-20T05:10:51.525Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "lingdi-agent-preparation"
+    },
+    {
+      "id": "2de6e320-60d0-4b0d-983d-72d022061b1b",
+      "kind": "created",
+      "entity": "doc:tool-calling-interview",
+      "title": "Agent 如何执行工具调用，并处理参数异常与工具失败？",
+      "time": "2026-10-20T05:10:51.525Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "tool-calling-interview"
+    },
+    {
+      "id": "a7466c86-8920-4df5-badc-f9b4a0554dcf",
+      "kind": "created",
+      "entity": "doc:data-sync-initialization-interview",
+      "title": "数据同步的全量初始化怎么做？",
+      "time": "2026-10-20T05:11:47.460Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "data-sync-initialization-interview"
+    },
+    {
+      "id": "5aa776f8-268e-4435-bb1e-aec4118174a5",
+      "kind": "updated",
+      "entity": "doc:data-sync-interview",
+      "title": "如何设计一个数据同步方案",
+      "time": "2026-10-20T05:11:47.460Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "data-sync-interview"
+    },
+    {
+      "id": "5dc119f9-fa80-41a2-9872-4242d7ee90ab",
+      "kind": "updated",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-20T05:11:47.460Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "18bad44d-1cd3-4032-b82f-a86e3f9997e1",
+      "kind": "updated",
+      "entity": "doc:data-sync-sources",
+      "title": "数据同步方案官方资料导读",
+      "time": "2026-10-20T05:11:47.460Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "data-sync-sources"
+    },
+    {
+      "id": "7906f30a-e272-4fff-b42c-22dd954fead0",
+      "kind": "state-changed",
+      "entity": "doc:tool-calling-interview",
+      "title": "Agent 如何执行工具调用，并处理参数异常与工具失败？",
+      "time": "2026-10-20T05:11:56.134Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "tool-calling-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "4d98e5bb-d62e-4032-af78-482f9dfff5c5",
+      "kind": "state-changed",
+      "entity": "doc:tool-calling-interview",
+      "title": "Agent 如何执行工具调用，并处理参数异常与工具失败？",
+      "time": "2026-10-20T05:11:56.596Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "tool-calling-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "de0584b3-7ec5-465d-b7a5-7971823e6c0f",
+      "kind": "updated",
+      "entity": "doc:data-sync-initialization-interview",
+      "title": "数据同步的全量初始化怎么做？",
+      "time": "2026-10-20T05:14:07.462Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "data-sync-initialization-interview"
+    },
+    {
+      "id": "da6dc545-276c-4c2e-b65e-a1fce2ff9069",
+      "kind": "updated",
+      "entity": "doc:learning-plan-agent-fallback",
+      "title": "学习计划 Agent 选题失败后，为什么直接降级？",
+      "time": "2026-10-20T05:18:55.477Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "learning-plan-agent-fallback"
     }
   ]
 }
