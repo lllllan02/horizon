@@ -7,7 +7,7 @@ tags: ["面试", "Agent", "Go"]
 type: practice
 learning_status: reading
 created_at: "2026-10-20T11:00:23+08:00"
-updated_at: "2026-10-20T11:00:23+08:00"
+updated_at: "2026-10-20T15:44:24+08:00"
 learning_status_changed_at: "2026-10-20T11:06:06.931+08:00"
 ---
 
@@ -44,9 +44,10 @@ learning_status_changed_at: "2026-10-20T11:06:06.931+08:00"
 
 - [x] [[agent-loop|画出会话与执行状态]]：[[history-storage|会话]]、一次运行、[[agent-checkpoint-runtime|步骤]]、[[tool-calling|工具调用]]分别保存什么？等待模型、等待工具、[[agent-human-in-the-loop|等待审批]]、取消、失败和结束怎样转换？
 - [x] **[[tool-calling-interview|解释模型与工具的契约]]**：谁生成工具名与参数，谁校验和执行，结果怎样按调用 ID 配对？流式参数还没收全、结构化输出不合法、模型拒绝或工具返回错误时分别怎么办？
-- [ ] **设计上下文预算**：Token、上下文窗口、最大输出与调用额度有什么区别？历史和工具结果变长时保留什么、裁剪什么、怎样回查？能结合[[agent-context|上下文管理]]解释策略及其信息损失。
-- [ ] **走通中断恢复的失败窗口**：进程在工具执行前、外部写入成功后但进度未落盘、等待人工审批时退出，重启后各从哪里继续？[[agent-checkpoint-interview|Checkpoint]]保存的执行位置，如何与会话历史、任务状态和外部业务结果配合？用 [LangGraph Interrupts](https://docs.langchain.com/oss/python/langgraph/interrupts) 对照一种节点重跑的实现，说明哪些副作用可能再次执行。
-- [ ] **设计停止与人工介入**：用户取消怎样传播到模型、Go goroutine、Node 请求和子进程？无法确认远端是否停止时返回什么状态？重复批准、审批过期、参数被修改时怎样处理？
+- [x] [[context-budget|设计上下文预算]]：[[claude-context-budget-summary|Token、上下文窗口、最大输出]]与调用额度有什么区别？[[agent-context-input|历史和工具结果]]变长时保留什么、[[context-trimming|裁剪什么]]、[[context-loading|怎样回查]]？能结合[[agent-context|上下文管理]]解释[[context-compaction|压缩]]等策略及其信息损失。
+- [x] [[agent-checkpoint-failures-interview|走通中断恢复的失败窗口]]：进程在工具执行前、外部写入成功后但进度未落盘、等待人工审批时退出，重启后各从哪里继续？[[agent-checkpoint-interview|Checkpoint]]保存的执行位置，如何与会话历史、任务状态和外部业务结果配合？用 [LangGraph Interrupts](https://docs.langchain.com/oss/python/langgraph/interrupts) 对照一种节点重跑的实现，说明哪些副作用可能再次执行。
+- [ ] [[agent-cancellation-interview|设计用户取消与停止确认]]：用户取消怎样传播到模型、Go goroutine、Node 请求和子进程？无法确认远端是否停止时返回什么状态？
+- [ ] [[agent-approval-interview|设计人工介入与审批恢复]]：怎样保存待审批调用并恢复执行？如何处理重复提交与批准后的崩溃？审批有效期与改参能力按业务需要选择。
 
 完成标准：提供状态图与一份恢复记录示例，逐个标出持久化时点和未知状态的处理。能够说明「**保存检查点与防止重复业务效果需要分别设计**」，不能仅靠重跑函数解释恢复正确性。
 
@@ -140,7 +141,7 @@ learning_status_changed_at: "2026-10-20T11:06:06.931+08:00"
 | 验证场景 | 要观察的结果 |
 | --- | --- |
 | 正常执行、工具参数非法、模型返回不符合结构 | 合法请求得到可核验产物；无效参数被拒绝，界面与持久化状态一致 |
-| 人工审批与拒绝 | 审批前不发生目标写入；拒绝、过期与重复提交有明确结果 |
+| 人工审批与拒绝 | 审批前不发生目标写入；拒绝与重复提交有明确结果；若设置有效期，过期不能视为批准 |
 | 外部写成功但确认丢失 | 恢复时核对执行记录和业务状态；不能确认的调用进入明确的待核实/补偿流程，不能盲目重复 |
 | 断流、限流、取消与服务重启 | 遵守预算与停止规则，未完成任务不误报成功；能说明请求是否可能仍在远端执行 |
 | 断线重连与消息重投 | 客户端恢复任务视图，重复事件不导致重复业务效果 |

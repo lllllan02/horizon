@@ -4,7 +4,7 @@ parent: multi-agent
 category: "Agent"
 tags: ["Agent", "多Agent协作", "上下文管理"]
 created_at: "2026-10-13T17:41:05+08:00"
-updated_at: "2026-10-17T23:53:29+08:00"
+updated_at: "2026-10-20T16:29:17+08:00"
 source: ["https://code.claude.com/docs/en/sub-agents", "https://code.claude.com/docs/en/agent-teams"]
 learning_status: pending
 ---
@@ -34,3 +34,7 @@ Claude Code 的子 Agent 适合有界、只需交回成果的工作；Agent Team
 核对时 Teams 仍默认关闭且处于实验阶段，恢复和关闭存在限制；串行任务、同文件编辑和依赖密集的工作会增加协调成本。上述是官方使用建议与产品机制，不是同预算收益的实验结论。
 
 [共享任务列表](https://code.claude.com/docs/en/agent-teams#assign-and-claim-tasks)记录待处理、处理中和已完成状态；未解除的依赖会阻止认领。lead 可指派，成员也可领取未分配且未阻塞的工作，认领时用文件锁避免竞争。它支持持续分配工作与追踪责任，消息仍负责交换任务记录之外的发现。
+
+## 怎样避免文件冲突？
+
+2026-10-20 补核对[避免文件冲突](https://code.claude.com/docs/en/agent-teams#avoid-file-conflicts)：文档指出，两个成员修改同一文件会导致相互覆盖，建议按不同文件集合划分负责人。任务列表的认领锁不能据此理解为工作文件也自动受到保护。由一名负责人汇总同文件的修改建议，是据此可采用的工程方案；原文未承诺自动合并产物或裁决矛盾结论。

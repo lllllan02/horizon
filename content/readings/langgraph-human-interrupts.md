@@ -5,7 +5,7 @@ parent: agent-human-in-the-loop
 category: "Agent"
 tags: ["Agent", "人工介入", "Checkpoint"]
 created_at: "2026-10-13T10:59:51+08:00"
-updated_at: "2026-10-17T14:37:11+08:00"
+updated_at: "2026-10-20T15:44:24+08:00"
 source:
   - "https://docs.langchain.com/oss/python/langgraph/interrupts"
   - "https://docs.langchain.com/oss/python/langchain/human-in-the-loop"
@@ -18,6 +18,8 @@ reading_suggestions:
 ## 中断如何离开节点，又如何回来？
 
 [Interrupts](https://docs.langchain.com/oss/python/langgraph/interrupts) 的 `interrupt(payload)` 通过特殊异常把控制交回 Runtime，由 Checkpointer 保存状态。载荷须可序列化；调用方取得待处理问题后，可以结束当前请求。使用同一个 `thread_id`，通过 `Command(resume=回答)` 再次调用图，回答就成为对应 `interrupt` 的返回值。
+
+官方机制支持无限期等待恢复；生产环境应使用持久化 Checkpointer。只要状态仍保留，等待本身不要求审批过期，有效期由应用按业务需要决定。这一等待语义于 2026-10-20 对照官方文档补核，未运行验证。
 
 恢复会**「从该节点开头重新执行」**。因此不要用宽泛的异常捕获吞掉中断；节点内多个中断的顺序也应保持稳定。并行分支同时等待时，可按 interrupt ID 分别传回答复。
 

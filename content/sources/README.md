@@ -10,6 +10,7 @@
 
 - [引力传媒：后端开发工程师-Agent 原件](「后端开发工程师-Agent招聘」_引力传媒招聘-BOSS直聘.md) → [岗位准备清单](../interviews/inly-agent-preparation.md)。
 - [Saparo：AI Agent 工程师（电商）原件](<「AI Agent 工程师（电商）招聘」_四川斯茂瑞企业管...招聘-BOSS直聘.md>) → [岗位准备清单](../interviews/saparo-agent-preparation.md)。招聘主体名称按剪藏工商信息保留为四川斯茂瑞企业管理咨询有限公司，Saparo 为产品名。
+- [迷境智塔：高级全栈工程师原件](「高级全栈工程师招聘」_杭州迷境智塔科技招聘-BOSS直聘.md) → [OpenHex 全栈岗位准备清单](../interviews/openhex-fullstack-preparation.md)。保留全栈能力与加分经历的区别，页面融资标签与正文的差异列为待确认。
 
 ## Claude Code 沙箱：DeepWiki 问答
 

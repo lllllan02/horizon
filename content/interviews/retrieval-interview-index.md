@@ -6,10 +6,15 @@ tags: ["面试", "检索"]
 type: overview
 learning_status: pending
 created_at: "2026-10-18T23:14:14+08:00"
-updated_at: "2026-10-18T23:14:14+08:00"
+updated_at: "2026-10-20T16:23:41+08:00"
 ---
 
-从词项评分到双路召回、结果融合与比例验证，整理检索相关的面试问题。
+从知识库问答流程到词项评分、双路召回、结果融合与比例验证，整理检索相关的面试问题。
+
+## 知识库问答
+
+- [[rag-workflow-interview|RAG 的完整流程是什么？]]
+- [[rag-document-validity-interview|RAG 怎样处理资料过期或用户无权访问？]]
 
 ## 词项评分
 

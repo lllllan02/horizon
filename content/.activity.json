@@ -58,6 +58,14 @@
       "bodyDigest": "d169958410f499ef3bacf5a3ed6591a7e10274a48c1d620e941abbaab1f7f8c7",
       "updatedAt": "2026-10-19T16:19:44+08:00"
     },
+    "graphql": {
+      "title": "GraphQL（API 查询语言）",
+      "collection": "glossary",
+      "state": "pending",
+      "digest": "6c324b865a20b96f63af9de38350551d1775897b39e3b670197b1eb2a9d9238f",
+      "bodyDigest": "bce2d88463ce3c7792497aa3c48a9cd1f3eff2f0030c4c3826ec3c16ea799d7c",
+      "updatedAt": "2026-10-20T16:20:22+08:00"
+    },
     "jitter": {
       "title": "抖动",
       "collection": "glossary",
@@ -306,6 +314,22 @@
       "bodyDigest": "3dfd1f0963ed466aca498000cd78ecb1c7f05eb9e579dd981b6b7e9061693828",
       "updatedAt": "2026-10-19T12:34:25+08:00"
     },
+    "agent-approval-interview": {
+      "title": "Agent 怎样保存待审批操作并在批准后恢复执行？",
+      "collection": "interviews",
+      "state": "pending",
+      "digest": "bcd72892ec453bedb1359f39e0e28587e198911c9d8489c68adbbefe97d9edec",
+      "bodyDigest": "58c74c5260329ff752103bd6e68783ed0cade76d1b410e44d7112fb5be57f4a6",
+      "updatedAt": "2026-10-20T16:14:30+08:00"
+    },
+    "agent-cancellation-interview": {
+      "title": "Agent 怎样响应用户取消并处理迟到结果？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "f3554de41b1f638e86721d7ea101d232589dd892b8fe339fe2980d71ba749811",
+      "bodyDigest": "2c06dc5e24dbbf7c62ad7c1d087b128197a49def3db189b8d07453c3f4854506",
+      "updatedAt": "2026-10-20T15:12:09+08:00"
+    },
     "agent-career-motivation": {
       "title": "为什么想做 Agent 开发？",
       "collection": "interviews",
@@ -313,6 +337,14 @@
       "digest": "311072468d243dd199742e12bf98ecd14fff711b517e5e487ddd6f05ff335d18",
       "bodyDigest": "6893ab311d85c30b91b9a73a6505a620f0fc969a3e7660656742a43aa0b42bb6",
       "updatedAt": "2026-10-18T20:40:18+08:00"
+    },
+    "agent-checkpoint-failures-interview": {
+      "title": "Agent 在工具执行前后退出，怎样恢复并避免重复写入？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "e08100ab8b8734745ccc82b1b461e4e29a589da2467d445a58b081d41c929f5d",
+      "bodyDigest": "05c47038f517bf6c2d170ea601f127dd009ae94815193dc4e12599f90fd2acc2",
+      "updatedAt": "2026-10-20T14:59:55+08:00"
     },
     "agent-checkpoint-interview": {
       "title": "Agent 的 Checkpoint 怎么实现？",
@@ -330,6 +362,22 @@
       "bodyDigest": "83ff0928d1bb843d94b20c52eaacd8ad3be4f0a19113cfe5dc28d6b1b5bbafe1",
       "updatedAt": "2026-10-19T12:28:23+08:00"
     },
+    "agent-conflict-interview": {
+      "title": "多 Agent 协作发生冲突时怎么处理？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "1af81742355622a7c1d916e12f844b417ac64b2668f0e552dc740fe11c34af04",
+      "bodyDigest": "37762864962262c0539aa4c789cd18c06aff4dcd96ac376fd3abfe80b010581c",
+      "updatedAt": "2026-10-20T16:59:53+08:00"
+    },
+    "agent-delegation-interview": {
+      "title": "什么任务值得拆给多个 Agent？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "652bf3ee1d11c3608c236a8539eced8d3d1098507d7860fc8edc905c6c97672c",
+      "bodyDigest": "ff7b892964f702823d5d4ef2128a1caa1568815be94a071a3704ccc99dcaf5c7",
+      "updatedAt": "2026-10-20T16:49:21+08:00"
+    },
     "agent-design-interview": {
       "title": "怎样设计一个 Agent？",
       "collection": "interviews",
@@ -346,6 +394,14 @@
       "bodyDigest": "6149d7aa9bddec04a9267ae60d722dc97664be6db4315334d790e2f9868f4b26",
       "updatedAt": "2026-10-19T16:40:35+08:00"
     },
+    "agent-followup-interview": {
+      "title": "Agent 执行中怎样接收用户的新要求？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "bbca00c950f6278b3b6b9759333e04a90769cee7b062cb510f8aa3bb6818e149",
+      "bodyDigest": "c6f2172b8f4bce25942552e4b42f8b74e258ce335bdaec62775da1d5df8047e4",
+      "updatedAt": "2026-10-20T16:04:02+08:00"
+    },
     "agent-intent-interview": {
       "title": "Agent 为什么知道调用哪个工具？怎么做意图识别？",
       "collection": "interviews",
@@ -358,9 +414,9 @@
       "title": "Agent 面试题",
       "collection": "interviews",
       "state": "pending",
-      "digest": "f81a544a45d3b54e53b5f96c56a16988b0a383941029cc89ce04c4a0662eb6f7",
-      "bodyDigest": "e9bdf82009e6708489395d43bc3eaa2d5f85ed18b51a74fc836c9f25b92df3aa",
-      "updatedAt": "2026-10-19T16:40:35+08:00"
+      "digest": "864ced1900258751ecffeb01bd3af1a788657755a2b834110ed637b7e86c31ed",
+      "bodyDigest": "270bf9b368d040fc0793b280415875df5c07ebda96434f762da86f30d7920c62",
+      "updatedAt": "2026-10-20T15:54:42+08:00"
     },
     "agent-memory-leak-interview": {
       "title": "Agent 服务最常见的生产环境内存泄漏有哪几种？如何排查和修复？",
@@ -370,6 +426,14 @@
       "bodyDigest": "bf5e55d6a13ccb06b480241416479a359dba9ce3763144b24dc5c50dfa51ce82",
       "updatedAt": "2026-10-18T23:09:04+08:00"
     },
+    "agent-progress-interview": {
+      "title": "Agent 任务运行较久时，前端怎样展示执行进度？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "3f5b73d0a32f00f4cbed66d2c6c14a52fc8a6e487795d8ecc37eae31da4459eb",
+      "bodyDigest": "48c23828fb282b2176b70a14e8c60a7ee1c5a838d61503a697d503a31c2e7e2d",
+      "updatedAt": "2026-10-20T16:02:34+08:00"
+    },
     "agent-sandbox-interview": {
       "title": "Agent 里为什么要做沙箱？",
       "collection": "interviews",
@@ -378,6 +442,14 @@
       "bodyDigest": "8b6010af3ac447ca3a0929d113473a2d1c2f34d21cad8d63e02222b1cfd36016",
       "updatedAt": "2026-10-19T12:36:13+08:00"
     },
+    "agent-stream-recovery-interview": {
+      "title": "页面刷新或断线后，怎样恢复 Agent 任务和流式输出？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "5ab2381711577a113921d894c9c129f6496bd2b026dc383d0bdd934370abc1a4",
+      "bodyDigest": "d758209984eb9b81bb21b579d41ab9556974536f251297fcd77756181c44a853",
+      "updatedAt": "2026-10-20T16:12:06+08:00"
+    },
     "agent-timeout-interview": {
       "title": "模型调用响应慢，导致 Agent 链路超时，如何设计分层超时与熔断？高并发下怎么处理？",
       "collection": "interviews",
@@ -385,6 +457,14 @@
       "digest": "4af293462d52ca5e523bf23d08e738cd56a31e3ad4679bebae0aaba1fede8a8b",
       "bodyDigest": "940a03ec619e7661c717108fecaa84540ff189e762b01fde24b32621ea02a6b4",
       "updatedAt": "2026-10-18T23:47:18+08:00"
+    },
+    "aikan-go-preparation": {
+      "title": "爱看互动 Go 岗位准备清单",
+      "collection": "interviews",
+      "state": "pending",
+      "digest": "4c239de959f040e36713841f58d6ef09c41d360cebe9460d470b5206132df09d",
+      "bodyDigest": "b1fadd9c23b4f62069060db95affbe25faf8dfa0e5554e5c62a905d6a93c5398",
+      "updatedAt": "2026-10-20T14:51:06+08:00"
     },
     "api-latency-interview": {
       "title": "接口响应慢，怎么排查和优化？",
@@ -429,18 +509,26 @@
     "data-sync-initialization-interview": {
       "title": "数据同步的全量初始化怎么做？",
       "collection": "interviews",
+      "state": "organized",
+      "digest": "732409eb33c1beab7f650407554310eb724e08c566ab0709a7919fb3c9e53311",
+      "bodyDigest": "39d5101a53dcfad105b5ed51cfdc64af8347a4d3c8f7a9d4b2789da33110b85e",
+      "updatedAt": "2026-10-20T14:18:08+08:00"
+    },
+    "data-sync-interview-index": {
+      "title": "数据同步面试题",
+      "collection": "interviews",
       "state": "pending",
-      "digest": "c14d2256acf8aff2166976ce59d5a113f1577afe1d3c4a641ab62103f86855f9",
-      "bodyDigest": "9c1d077725ca307040a97ae50ae1be35aba7034855561dc64a1c4d8c46745989",
-      "updatedAt": "2026-10-20T13:13:44+08:00"
+      "digest": "5d535fb6ddd23a55b55d361e56f503bc1776031b3201b16d1f91a3ce0922b25d",
+      "bodyDigest": "203d51cc3fab16940121cf546e3e223e3b2905d7923cd86a228ea201c6747ccf",
+      "updatedAt": "2026-10-20T14:35:14+08:00"
     },
     "data-sync-interview": {
       "title": "如何设计一个数据同步方案",
       "collection": "interviews",
-      "state": "reading",
-      "digest": "771a01fee3128328d46573d7432cde817deaec8e35edb52c3ade2f1c5132e609",
-      "bodyDigest": "ea4a731e4259b3f8db523bfa2483375a6d04e1b53c6e6dbf3cebaf225cf837e6",
-      "updatedAt": "2026-10-20T11:09:10+08:00"
+      "state": "organized",
+      "digest": "17f128601bf275b80a624f081a390f85719661d48aa9d0f29aa1bdde459f7c6e",
+      "bodyDigest": "91968e6ecefc056af843f6c50fb2f4379acb89b013b1fee9ba443ea1c542042a",
+      "updatedAt": "2026-10-20T15:41:23+08:00"
     },
     "database-isolation-interview": {
       "title": "数据库有哪些事务隔离级别，分别解决什么问题？",
@@ -573,7 +661,7 @@
     "interview-experiences": {
       "title": "Go 后端与 AI Agent 面经",
       "collection": "interviews",
-      "state": "reading",
+      "state": "pending",
       "digest": "2ac22751a36478611db46f79fa7b1e6627e01db6fdf142b8c6ab7aeea3aa2cc5",
       "bodyDigest": "0897693be3c14b38ab1befa025389e8834ef63e777812d672666efdaf67b44dc",
       "updatedAt": "2026-10-20T10:49:44+08:00"
@@ -582,14 +670,14 @@
       "title": "面试题",
       "collection": "interviews",
       "state": "reading",
-      "digest": "bdfa02f922b97a09530a9ec9f2d9648a7cbf701be19b570cc6de1b8a594cc033",
-      "bodyDigest": "963d10ed0a2708d9f18d419455049ddb08e1fcd98ad2ac16b7cb8cc173e82cd2",
+      "digest": "ffc67265e7a128f359e0851816c832d9e1bab30d552155284fd19c81c1289f30",
+      "bodyDigest": "db688488be22eebc1877dbedc46f04992ac877954941a0cec8a108d4b006e9ed",
       "updatedAt": "2026-10-19T17:36:41+08:00"
     },
     "interview-resources": {
       "title": "Go 与 Agent 面试资料",
       "collection": "interviews",
-      "state": "organized",
+      "state": "pending",
       "digest": "e05a3467e8192e284ff19958a0752ffec278cdf82a6513db539078d7b87dfd50",
       "bodyDigest": "bbc0d12ec0c39ee9526bd5218023c91f33a538c7e71285e9bec0af10c16648ed",
       "updatedAt": "2026-10-19T19:42:43+08:00"
@@ -694,9 +782,9 @@
       "title": "凌迪科技 Agent 岗位准备清单",
       "collection": "interviews",
       "state": "reading",
-      "digest": "594b1cb0c99d0228a95b1aedf63610817f714680f00eadca7d2dd4a7a12b4344",
-      "bodyDigest": "95d72d03c8b398f35c1f7ec7f4970268f0f85800bb659dbc1b316a99ee70ef41",
-      "updatedAt": "2026-10-20T11:00:23+08:00"
+      "digest": "b404189d22f97cb115f604570f7150f6ee2fd20e39b0890dbe3bc1d20dcf28c9",
+      "bodyDigest": "e9a6369312d8e5ee667c2b83c8d1dc3021a9efc26047190fefddd49270a2e277",
+      "updatedAt": "2026-10-20T15:44:24+08:00"
     },
     "lingtong-llm-gateway-preparation": {
       "title": "灵通云智算大模型网关岗位准备清单",
@@ -778,6 +866,14 @@
       "bodyDigest": "2f33f9ea6a96b0e7eb7d6f6776921ff05684ac36950d388f8dbadc0065b43231",
       "updatedAt": "2026-10-18T21:05:08+08:00"
     },
+    "openhex-fullstack-preparation": {
+      "title": "迷境智塔 OpenHex 全栈岗位准备清单",
+      "collection": "interviews",
+      "state": "reading",
+      "digest": "81b5ac63f7fbd9e651edc971240e8de18bda8bf1c40753ad896d3a2c61750bf6",
+      "bodyDigest": "3f8c3fae9cd428d9d5a12fd46ff29cc282d28906fc3f58a036438eed1fef512c",
+      "updatedAt": "2026-10-20T16:14:30+08:00"
+    },
     "parent-agent-interview": {
       "title": "父子 Agent 之间如何交互和传递上下文？",
       "collection": "interviews",
@@ -801,6 +897,22 @@
       "digest": "bedd3f89d8b63a4c9bd51030395eefc9109e6785ab4294e63c049ca71226797b",
       "bodyDigest": "7512a5d6d5f06110d71c8c1396ddea0cf349d5aac2622a7b13810fd9ac9d0343",
       "updatedAt": "2026-10-20T11:41:57+08:00"
+    },
+    "rag-document-validity-interview": {
+      "title": "RAG 怎样处理资料过期或用户无权访问？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "0a78bc5b8e70194b5fb5a9ca1c53c2c86e1796922a096112464c2c3475aed59a",
+      "bodyDigest": "10fc340f0ea3e34348018e31ed5950a64016edc4a0428a91a1ee0b9bb9d5016f",
+      "updatedAt": "2026-10-20T16:33:40+08:00"
+    },
+    "rag-workflow-interview": {
+      "title": "RAG 的完整流程是什么？",
+      "collection": "interviews",
+      "state": "organized",
+      "digest": "d9431da7f40b78ddcfb80ee019d9d3d048e7c3b45906f86726819bcb4018fd08",
+      "bodyDigest": "73b05f32aae6e483a25b3e91a52f161b53cd6ceb18bc67e0e3b350f005ea06f5",
+      "updatedAt": "2026-10-20T16:30:47+08:00"
     },
     "rate-limiting-interview": {
       "title": "怎么做限流？有哪些常见的限流算法？",
@@ -918,9 +1030,9 @@
       "title": "检索与召回面试题",
       "collection": "interviews",
       "state": "pending",
-      "digest": "f81c760e7282d2849646a964d70b591efba34550c9b1371ae748d4ffbbada5a6",
-      "bodyDigest": "a47061f7e810ed73170f1c19c524fa1cea1734a2cc24a3537f0c5d469e53df73",
-      "updatedAt": "2026-10-18T23:14:14+08:00"
+      "digest": "e233e2178eef85d0ceda86c7a5514944a803f37cbdb06349a1fdd55eed61d166",
+      "bodyDigest": "de404a633d9ccea0a6dc3b465f80153c0ff31553b0a20739514ef643e57e4703",
+      "updatedAt": "2026-10-20T16:23:41+08:00"
     },
     "saparo-agent-preparation": {
       "title": "Saparo 电商 Agent 岗位准备清单",
@@ -1626,6 +1738,14 @@
       "bodyDigest": "b4001d1879421bb3ec9f2b3f952b7751f8b4d39232d057f43e928fa838f78c71",
       "updatedAt": "2026-10-18T00:22:52+08:00"
     },
+    "agent-cancellation-sources": {
+      "title": "Go、Node 与 Redis：取消通知、停止确认和条件提交",
+      "collection": "readings",
+      "state": "pending",
+      "digest": "cc3f95b8102a500cde5685cfb4f3414ff44939056a44d07245f0e5a0a333f539",
+      "bodyDigest": "70497b95938216232b9fb5ca3041ad8ea5d56a72ade042382b10b883ca61a48b",
+      "updatedAt": "2026-10-20T14:47:16+08:00"
+    },
     "agent-evaluation-infrastructure": {
       "title": "Anthropic：资源限制如何改变 Agent 评测结果",
       "collection": "readings",
@@ -1870,9 +1990,9 @@
       "title": "Claude Code：子 Agent 与 Agent Teams",
       "collection": "readings",
       "state": "pending",
-      "digest": "474f814a8f7f9544e49cd0fd7abbe1a5d069e6314d2b618e88ba749c285db81b",
-      "bodyDigest": "a4a299f7924505053b5fe7a2a9031d0472986b192606ff3ba1728ac6ddf52dcf",
-      "updatedAt": "2026-10-17T23:53:29+08:00"
+      "digest": "c8e12bc5e570c4653089cc437f8ee67c6d318dff57a31523fb99055c26f500ea",
+      "bodyDigest": "64f840c0f4696ca043e6260c79b4d3b4cc1c3d18a3e3e1ac9109890a6472f6c3",
+      "updatedAt": "2026-10-20T16:29:17+08:00"
     },
     "claude-code-checkpoints": {
       "title": "Claude Code：会话接续与文件检查点",
@@ -2126,9 +2246,9 @@
       "title": "数据同步方案官方资料导读",
       "collection": "readings",
       "state": "pending",
-      "digest": "11d2cae3cacdaebbe1a8ad6b2e0f7135e5a337ad309c123c38d35ad5c07de1c6",
-      "bodyDigest": "db8e2bbe1d8ec1e15132b4ea1c16916bd800708eaca14e09ba6ccee134c0ab0b",
-      "updatedAt": "2026-10-20T13:10:54+08:00"
+      "digest": "7ef29bc0572dbfa8632447d2a3c2e3ed2139b0a98fbafe546e3303fb2821d40d",
+      "bodyDigest": "437d3efb7bb9dca758d353c02817e44a060417d961e5ef457ae217e339dd52e3",
+      "updatedAt": "2026-10-20T15:34:08+08:00"
     },
     "database-isolation-sources": {
       "title": "事务隔离级别官方资料导读",
@@ -2289,6 +2409,14 @@
       "digest": "191d4de0f10b7c80c426be9912c18f5e67b3c4224681d2356341bf4dd22df4c2",
       "bodyDigest": "e5963ffe3d1398bd9459eb0f2bd4d4c46b9ba486ff6d891703b11051672be4c8",
       "updatedAt": "2026-10-18T22:59:51+08:00"
+    },
+    "graphql-official-guide": {
+      "title": "GraphQL 官方文档基础导读",
+      "collection": "readings",
+      "state": "pending",
+      "digest": "89846facfe41f9c223a68d49f468b8644dee378bbaef41d3c2ac692f6795cf7b",
+      "bodyDigest": "6e265732dc7ef23c8739d61975b857ce633dbd243a07d18a095087e437134b54",
+      "updatedAt": "2026-10-20T16:20:22+08:00"
     },
     "graphrag-docs": {
       "title": "Microsoft GraphRAG：实体、社区与两类查询",
@@ -2526,9 +2654,9 @@
       "title": "LangGraph 与 LangChain：从中断原语到人工决策",
       "collection": "readings",
       "state": "pending",
-      "digest": "99b3b047ba70aa2d68674dbaab90d51ca8fca76ad18e665d674577da70749497",
-      "bodyDigest": "8772c3d937a28b3d731345411519f7ca3f76256063b07f0bb9d081dc395417b3",
-      "updatedAt": "2026-10-17T14:37:11+08:00"
+      "digest": "8d8c76542e5db4eb628e63febed1081900f53c87794674e4d3024fbdb40c7eee",
+      "bodyDigest": "19236ae56f020bd8393132bf809ddf3de06d6559220fed8b83ea7d97661323d4",
+      "updatedAt": "2026-10-20T15:44:24+08:00"
     },
     "langgraph-intent-routing": {
       "title": "LangGraph：结构化分类如何接入条件路由",
@@ -3042,6 +3170,14 @@
       "bodyDigest": "b355b45ac4710b9fce3fc89c684108c8e24281956dc6f7597ce753169544ec51",
       "updatedAt": "2026-10-19T21:11:02+08:00"
     },
+    "redis-stream-replay-sources": {
+      "title": "Redis Streams：按游标补读与实时订阅的边界",
+      "collection": "readings",
+      "state": "pending",
+      "digest": "a1329915f53d43ca02cb465d641c24189fdfc58846fb572cb0dc1ef8104d621e",
+      "bodyDigest": "17f4ef10bf1f346b6af62940b240ba96446994d2e887cd214788afc2e82fff9a",
+      "updatedAt": "2026-10-20T16:07:29+08:00"
+    },
     "reflexion-summary": {
       "title": "Reflexion：把执行反馈写成经验，指导下一次尝试",
       "collection": "readings",
@@ -3179,6 +3315,17 @@
         "assets/agent-checkpoint-boundary.png": "b631d032422fc1206c76a67e82e6739ab3d50f34621aecb9c69d658748c75350"
       },
       "collections": []
+    },
+    "assets/agent-checkpoint-failures": {
+      "title": "agent-checkpoint-failures",
+      "files": {
+        "assets/agent-checkpoint-failures.excalidraw": "ae7e35c77f9d7cbee1594b3efbbd99dcda91ec097949252d8845939d2832ebe9",
+        "assets/agent-checkpoint-failures.png": "983340b36b22b33e579f5b3c8a9400c20f835c4d4385ddcc87c7b121d5f7f38d",
+        "assets/agent-checkpoint-failures.svg": "6b87c7a6d1eefea0da8355e54972447908c35889f3352f0a336fd837ed3eebd5"
+      },
+      "collections": [
+        "interviews"
+      ]
     },
     "assets/agent-checkpoint-recovery-diagram-design": {
       "title": "agent-checkpoint-recovery-diagram-design",
@@ -42252,6 +42399,1851 @@
       ],
       "source": "observed",
       "docId": "learning-plan-agent-fallback"
+    },
+    {
+      "id": "4e215d3b-8078-45e0-9d0a-181ea5210c8d",
+      "kind": "updated",
+      "entity": "doc:data-sync-initialization-interview",
+      "title": "数据同步的全量初始化怎么做？",
+      "time": "2026-10-20T06:22:06.463Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "data-sync-initialization-interview"
+    },
+    {
+      "id": "9c45c020-3d13-4bfe-bf5f-5009a487d454",
+      "kind": "state-changed",
+      "entity": "doc:data-sync-initialization-interview",
+      "title": "数据同步的全量初始化怎么做？",
+      "time": "2026-10-20T06:30:31.942Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "data-sync-initialization-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "7713e53b-e2b7-487c-af52-f2cc60124af4",
+      "kind": "state-changed",
+      "entity": "doc:data-sync-initialization-interview",
+      "title": "数据同步的全量初始化怎么做？",
+      "time": "2026-10-20T06:30:32.243Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "data-sync-initialization-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "1aeab720-65a0-40a1-99d3-d15bce615277",
+      "kind": "updated",
+      "entity": "doc:lingdi-agent-preparation",
+      "title": "凌迪科技 Agent 岗位准备清单",
+      "time": "2026-10-20T06:35:34.224Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "lingdi-agent-preparation"
+    },
+    {
+      "id": "26605eb6-b7db-4b44-9c31-c9db46810d27",
+      "kind": "created",
+      "entity": "doc:data-sync-interview-index",
+      "title": "数据同步面试题",
+      "time": "2026-10-20T06:35:42.128Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "data-sync-interview-index"
+    },
+    {
+      "id": "533927ac-90ec-478b-abb2-e7b101b1cb7a",
+      "kind": "updated",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-20T06:35:42.128Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "a89a0c73-ce91-47c2-a4f0-3cd71ec2b640",
+      "kind": "updated",
+      "entity": "doc:lingdi-agent-preparation",
+      "title": "凌迪科技 Agent 岗位准备清单",
+      "time": "2026-10-20T06:37:06.239Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "lingdi-agent-preparation"
+    },
+    {
+      "id": "4740fbab-8d0c-43c2-a556-c45d306610ae",
+      "kind": "created",
+      "entity": "doc:binlog-subscription-interview",
+      "title": "CDC 工具如何订阅 Binlog？",
+      "time": "2026-10-20T06:37:30.146Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "binlog-subscription-interview"
+    },
+    {
+      "id": "c433228c-db25-4ed0-9f31-a4407b5e2407",
+      "kind": "created",
+      "entity": "doc:cdc-binlog-interview",
+      "title": "CDC 和 Binlog 是什么关系？",
+      "time": "2026-10-20T06:37:30.146Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "cdc-binlog-interview"
+    },
+    {
+      "id": "203eebfa-3bce-4211-86cf-9b2bb8e87dca",
+      "kind": "created",
+      "entity": "doc:data-sync-recovery-interview",
+      "title": "数据同步中途失败，怎么恢复？",
+      "time": "2026-10-20T06:37:30.146Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "data-sync-recovery-interview"
+    },
+    {
+      "id": "81814dcc-07f5-42c9-a09b-b798438d2126",
+      "kind": "created",
+      "entity": "doc:data-sync-target-interview",
+      "title": "捕获到数据变更后，怎么写入目标库？",
+      "time": "2026-10-20T06:37:30.146Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "data-sync-target-interview"
+    },
+    {
+      "id": "1eacd8f8-095a-46d5-aec9-24015098429e",
+      "kind": "updated",
+      "entity": "doc:data-sync-interview",
+      "title": "如何设计一个数据同步方案",
+      "time": "2026-10-20T06:39:42.210Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "data-sync-interview"
+    },
+    {
+      "id": "92b661fe-5e25-44db-aab3-d24affb9002a",
+      "kind": "updated",
+      "entity": "doc:data-sync-sources",
+      "title": "数据同步方案官方资料导读",
+      "time": "2026-10-20T06:39:42.210Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "data-sync-sources"
+    },
+    {
+      "id": "de034dfc-161c-4445-a1fb-44309b93ee1e",
+      "kind": "updated",
+      "entity": "doc:binlog-subscription-interview",
+      "title": "CDC 工具如何订阅 Binlog？",
+      "time": "2026-10-20T06:44:10.964Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "binlog-subscription-interview"
+    },
+    {
+      "id": "1b28a277-26dc-417f-8e21-2e5f3f9572f0",
+      "kind": "updated",
+      "entity": "doc:data-sync-interview-index",
+      "title": "数据同步面试题",
+      "time": "2026-10-20T06:44:10.964Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "data-sync-interview-index"
+    },
+    {
+      "id": "a9dd8e60-edda-49ea-8e5f-4dcf3338c6d8",
+      "kind": "updated",
+      "entity": "doc:data-sync-interview",
+      "title": "如何设计一个数据同步方案",
+      "time": "2026-10-20T06:44:10.964Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "data-sync-interview"
+    },
+    {
+      "id": "20da959a-ff16-4b0e-b3de-a56ea354c59d",
+      "kind": "image-created",
+      "entity": "image:assets/agent-checkpoint-failures",
+      "title": "agent-checkpoint-failures",
+      "time": "2026-10-20T06:44:10.964Z",
+      "collections": [],
+      "source": "observed",
+      "files": [
+        "assets/agent-checkpoint-failures.excalidraw"
+      ]
+    },
+    {
+      "id": "4c8e8848-31ee-460e-a881-b5c7d03f9a2b",
+      "kind": "image-format",
+      "entity": "image:assets/agent-checkpoint-failures",
+      "title": "agent-checkpoint-failures",
+      "time": "2026-10-20T06:44:29.953Z",
+      "collections": [],
+      "source": "observed",
+      "files": [
+        "assets/agent-checkpoint-failures.png",
+        "assets/agent-checkpoint-failures.svg"
+      ]
+    },
+    {
+      "id": "9fb60f7d-5c9b-4334-965f-f9376bca8dbb",
+      "kind": "created",
+      "entity": "doc:agent-checkpoint-failures-interview",
+      "title": "Agent 在工具执行前后退出，怎样恢复并避免重复写入？",
+      "time": "2026-10-20T06:47:23.221Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-failures-interview"
+    },
+    {
+      "id": "e00dfa8d-dd72-445f-80f8-78d07c97f545",
+      "kind": "updated",
+      "entity": "doc:agent-interview-hub",
+      "title": "Agent 面试题",
+      "time": "2026-10-20T06:47:23.221Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-interview-hub"
+    },
+    {
+      "id": "3963107f-b355-4f3c-9e96-3f8ccfbf618b",
+      "kind": "updated",
+      "entity": "doc:data-sync-interview-index",
+      "title": "数据同步面试题",
+      "time": "2026-10-20T06:47:23.221Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "data-sync-interview-index"
+    },
+    {
+      "id": "5526ed69-ed89-4120-bc2c-07560a18308e",
+      "kind": "updated",
+      "entity": "doc:data-sync-interview",
+      "title": "如何设计一个数据同步方案",
+      "time": "2026-10-20T06:47:23.221Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "data-sync-interview"
+    },
+    {
+      "id": "59fac69e-694c-4605-b5a5-ce847b571c6c",
+      "kind": "updated",
+      "entity": "doc:lingdi-agent-preparation",
+      "title": "凌迪科技 Agent 岗位准备清单",
+      "time": "2026-10-20T06:47:23.221Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "lingdi-agent-preparation"
+    },
+    {
+      "id": "8a83c23a-43e5-4a96-9b63-b79241c0f551",
+      "kind": "image-updated",
+      "entity": "image:assets/agent-checkpoint-failures",
+      "title": "agent-checkpoint-failures",
+      "time": "2026-10-20T06:47:23.221Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "files": [
+        "assets/agent-checkpoint-failures.excalidraw",
+        "assets/agent-checkpoint-failures.png",
+        "assets/agent-checkpoint-failures.svg"
+      ]
+    },
+    {
+      "id": "f4313f0c-e60a-4768-8b6f-e6eb47b4b20e",
+      "kind": "created",
+      "entity": "doc:agent-cancellation-interview",
+      "title": "Agent 怎样处理用户取消与人工介入？",
+      "time": "2026-10-20T06:48:42.156Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-cancellation-interview"
+    },
+    {
+      "id": "28004461-a42c-41b6-984d-13ba3b8892fd",
+      "kind": "updated",
+      "entity": "doc:agent-interview-hub",
+      "title": "Agent 面试题",
+      "time": "2026-10-20T06:48:42.156Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-interview-hub"
+    },
+    {
+      "id": "581344e1-db8e-46b9-bda3-6cd254825494",
+      "kind": "updated",
+      "entity": "doc:lingdi-agent-preparation",
+      "title": "凌迪科技 Agent 岗位准备清单",
+      "time": "2026-10-20T06:48:42.156Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "lingdi-agent-preparation"
+    },
+    {
+      "id": "34cfd2bb-46f4-46b2-befa-6a2782c732c9",
+      "kind": "created",
+      "entity": "doc:agent-cancellation-sources",
+      "title": "Go、Node 与 Redis：取消通知、停止确认和条件提交",
+      "time": "2026-10-20T06:48:42.156Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "agent-cancellation-sources"
+    },
+    {
+      "id": "d6d16de2-1868-446a-b67e-78650c865512",
+      "kind": "updated",
+      "entity": "doc:agent-cancellation-interview",
+      "title": "Agent 怎样处理用户取消与人工介入？",
+      "time": "2026-10-20T06:49:02.172Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-cancellation-interview"
+    },
+    {
+      "id": "406fedd7-f3ab-4fc3-9c30-f27d8291796b",
+      "kind": "updated",
+      "entity": "doc:agent-cancellation-sources",
+      "title": "Go、Node 与 Redis：取消通知、停止确认和条件提交",
+      "time": "2026-10-20T06:49:02.172Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "agent-cancellation-sources"
+    },
+    {
+      "id": "64c037e6-38fd-4de7-abc1-844d1f1ffa79",
+      "kind": "state-changed",
+      "entity": "doc:agent-checkpoint-failures-interview",
+      "title": "Agent 在工具执行前后退出，怎样恢复并避免重复写入？",
+      "time": "2026-10-20T06:51:17.662Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-failures-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "39b1b9ee-776f-481c-bd03-f8d3f8d8b384",
+      "kind": "created",
+      "entity": "doc:aikan-go-preparation",
+      "title": "爱看互动 Go 岗位准备清单",
+      "time": "2026-10-20T06:52:26.148Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "aikan-go-preparation"
+    },
+    {
+      "id": "b04a0e1b-2ac4-4634-8bdb-ff3e2bf4e223",
+      "kind": "updated",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-20T06:52:26.148Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "56106cb7-54a7-476a-8d96-39fe1325f4a8",
+      "kind": "updated",
+      "entity": "doc:aikan-go-preparation",
+      "title": "爱看互动 Go 岗位准备清单",
+      "time": "2026-10-20T06:52:58.468Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "aikan-go-preparation"
+    },
+    {
+      "id": "5cb46c39-f64c-4b1e-9521-e3e9858a33ff",
+      "kind": "state-changed",
+      "entity": "doc:agent-cancellation-interview",
+      "title": "Agent 怎样处理用户取消与人工介入？",
+      "time": "2026-10-20T06:53:52.310Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-cancellation-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "29fdf875-fec7-4722-aa59-ef6f9b54b8c6",
+      "kind": "state-changed",
+      "entity": "doc:interview-experiences",
+      "title": "Go 后端与 AI Agent 面经",
+      "time": "2026-10-20T06:54:03.032Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-experiences",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "29d1934a-dd68-48b7-841b-bcac85cef23f",
+      "kind": "state-changed",
+      "entity": "doc:interview-resources",
+      "title": "Go 与 Agent 面试资料",
+      "time": "2026-10-20T06:54:09.678Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-resources",
+      "from": "organized",
+      "to": "pending"
+    },
+    {
+      "id": "e2758f63-5e14-4403-8446-2b7c84091237",
+      "kind": "state-changed",
+      "entity": "doc:interview-experiences",
+      "title": "Go 后端与 AI Agent 面经",
+      "time": "2026-10-20T06:54:12.923Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-experiences",
+      "from": "organized",
+      "to": "pending"
+    },
+    {
+      "id": "43f97525-2ddd-4889-8c57-b344197f6842",
+      "kind": "updated",
+      "entity": "doc:agent-cancellation-interview",
+      "title": "Agent 怎样处理用户取消与人工介入？",
+      "time": "2026-10-20T06:54:18.117Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-cancellation-interview"
+    },
+    {
+      "id": "b9c421e5-7a52-41f5-a6f2-a4bcf455b903",
+      "kind": "updated",
+      "entity": "doc:agent-checkpoint-failures-interview",
+      "title": "Agent 在工具执行前后退出，怎样恢复并避免重复写入？",
+      "time": "2026-10-20T06:54:19.851Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-failures-interview"
+    },
+    {
+      "id": "2ab50e73-569d-4ec1-b09e-d5f54fae0bd4",
+      "kind": "state-changed",
+      "entity": "doc:aikan-go-preparation",
+      "title": "爱看互动 Go 岗位准备清单",
+      "time": "2026-10-20T06:54:23.901Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "aikan-go-preparation",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "5694e92f-2dda-4190-99a6-2bbaba32ee7c",
+      "kind": "updated",
+      "entity": "doc:agent-cancellation-interview",
+      "title": "Agent 怎样处理用户取消与人工介入？",
+      "time": "2026-10-20T06:54:42.132Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-cancellation-interview"
+    },
+    {
+      "id": "9d01d571-996f-485f-afc7-08d7c83c0589",
+      "kind": "updated",
+      "entity": "doc:data-sync-recovery-interview",
+      "title": "数据同步中途失败，怎么恢复？",
+      "time": "2026-10-20T06:57:50.146Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "data-sync-recovery-interview"
+    },
+    {
+      "id": "5a84ca10-446b-41d4-a8f2-de733239febc",
+      "kind": "updated",
+      "entity": "doc:data-sync-sources",
+      "title": "数据同步方案官方资料导读",
+      "time": "2026-10-20T06:57:50.146Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "data-sync-sources"
+    },
+    {
+      "id": "d05359a9-1dc3-43c5-b12d-88a534568425",
+      "kind": "updated",
+      "entity": "doc:agent-checkpoint-failures-interview",
+      "title": "Agent 在工具执行前后退出，怎样恢复并避免重复写入？",
+      "time": "2026-10-20T07:02:14.741Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-failures-interview"
+    },
+    {
+      "id": "404e2f59-4127-46dd-a64b-45e26efa9fc3",
+      "kind": "state-changed",
+      "entity": "doc:agent-checkpoint-failures-interview",
+      "title": "Agent 在工具执行前后退出，怎样恢复并避免重复写入？",
+      "time": "2026-10-20T07:06:45.941Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-checkpoint-failures-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "daeeed96-9440-42f9-a3e3-4d5010547083",
+      "kind": "updated",
+      "entity": "doc:agent-cancellation-interview",
+      "title": "Agent 怎样响应用户取消并处理迟到结果？",
+      "time": "2026-10-20T07:08:46.546Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-cancellation-interview"
+    },
+    {
+      "id": "a9dbefd4-f8c1-4038-9012-2ccba35eb52e",
+      "kind": "updated",
+      "entity": "doc:agent-interview-hub",
+      "title": "Agent 面试题",
+      "time": "2026-10-20T07:08:46.546Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-interview-hub"
+    },
+    {
+      "id": "b4614e4d-f63d-4f35-b46a-fd3587a82f3e",
+      "kind": "updated",
+      "entity": "doc:data-sync-interview-index",
+      "title": "数据同步面试题",
+      "time": "2026-10-20T07:08:46.546Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "data-sync-interview-index"
+    },
+    {
+      "id": "6d905d4b-4d8d-4620-85bc-3fc2b08aa3d6",
+      "kind": "updated",
+      "entity": "doc:data-sync-interview",
+      "title": "如何设计一个数据同步方案",
+      "time": "2026-10-20T07:08:46.546Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "data-sync-interview"
+    },
+    {
+      "id": "7372a7d3-030a-49e7-b1d5-cadfcbb1b4a9",
+      "kind": "updated",
+      "entity": "doc:data-sync-target-interview",
+      "title": "捕获到数据变更后，怎么写入目标库？",
+      "time": "2026-10-20T07:08:46.546Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "data-sync-target-interview"
+    },
+    {
+      "id": "ee7ad5cf-cc34-4919-ab76-de84df5fe9fe",
+      "kind": "updated",
+      "entity": "doc:lingdi-agent-preparation",
+      "title": "凌迪科技 Agent 岗位准备清单",
+      "time": "2026-10-20T07:08:46.546Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "lingdi-agent-preparation"
+    },
+    {
+      "id": "c061afab-b925-4d81-8e86-f93aba41c1ef",
+      "kind": "updated",
+      "entity": "doc:agent-cancellation-interview",
+      "title": "Agent 怎样响应用户取消并处理迟到结果？",
+      "time": "2026-10-20T07:12:58.143Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-cancellation-interview"
+    },
+    {
+      "id": "d301c33e-c205-4a47-b15a-a189281469e4",
+      "kind": "state-changed",
+      "entity": "doc:agent-cancellation-interview",
+      "title": "Agent 怎样响应用户取消并处理迟到结果？",
+      "time": "2026-10-20T07:13:07.705Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-cancellation-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "78a70bd3-a9b6-4385-b236-59a3e491e118",
+      "kind": "updated",
+      "entity": "doc:data-sync-interview-index",
+      "title": "数据同步面试题",
+      "time": "2026-10-20T07:20:35.884Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "data-sync-interview-index"
+    },
+    {
+      "id": "930f4f00-4acb-47db-93dd-f3cdbefbb5f1",
+      "kind": "updated",
+      "entity": "doc:data-sync-interview",
+      "title": "如何设计一个数据同步方案",
+      "time": "2026-10-20T07:20:35.884Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "data-sync-interview"
+    },
+    {
+      "id": "34380c43-8bbc-4d62-b24f-0edfbd5a2f61",
+      "kind": "updated",
+      "entity": "doc:data-sync-interview",
+      "title": "如何设计一个数据同步方案",
+      "time": "2026-10-20T07:21:06.142Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "data-sync-interview"
+    },
+    {
+      "id": "0028bde8-4267-456e-94e8-eff552c09839",
+      "kind": "updated",
+      "entity": "doc:data-sync-sources",
+      "title": "数据同步方案官方资料导读",
+      "time": "2026-10-20T07:21:06.142Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "data-sync-sources"
+    },
+    {
+      "id": "e205087a-6dea-4580-bcc2-15fabdfe5f13",
+      "kind": "updated",
+      "entity": "doc:data-sync-interview",
+      "title": "如何设计一个数据同步方案",
+      "time": "2026-10-20T07:24:06.362Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "data-sync-interview"
+    },
+    {
+      "id": "5b9dd462-8920-4196-b889-be6ace4331b5",
+      "kind": "state-changed",
+      "entity": "doc:aikan-go-preparation",
+      "title": "爱看互动 Go 岗位准备清单",
+      "time": "2026-10-20T07:34:19.741Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "aikan-go-preparation",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "a8055742-2a3b-49d7-86e6-49d4f0ddf092",
+      "kind": "state-changed",
+      "entity": "doc:aikan-go-preparation",
+      "title": "爱看互动 Go 岗位准备清单",
+      "time": "2026-10-20T07:34:21.825Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "aikan-go-preparation",
+      "from": "organized",
+      "to": "pending"
+    },
+    {
+      "id": "5434cdae-f8cf-4222-8f9f-75eee7599fc4",
+      "kind": "updated",
+      "entity": "doc:data-sync-interview",
+      "title": "如何设计一个数据同步方案",
+      "time": "2026-10-20T07:35:54.175Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "data-sync-interview"
+    },
+    {
+      "id": "8e0e97b4-87a9-45e3-987f-de6a9e1aafc2",
+      "kind": "updated",
+      "entity": "doc:interview-hub",
+      "title": "面试题",
+      "time": "2026-10-20T07:35:54.175Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "interview-hub"
+    },
+    {
+      "id": "01f4e499-fbfa-4cb5-97d7-83b4ed7573a5",
+      "kind": "created",
+      "entity": "doc:openhex-fullstack-preparation",
+      "title": "迷境智塔 OpenHex 全栈岗位准备清单",
+      "time": "2026-10-20T07:35:54.175Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "openhex-fullstack-preparation"
+    },
+    {
+      "id": "c92702b2-fb69-4347-ac44-93386c3fe3be",
+      "kind": "updated",
+      "entity": "doc:data-sync-sources",
+      "title": "数据同步方案官方资料导读",
+      "time": "2026-10-20T07:35:54.175Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "data-sync-sources"
+    },
+    {
+      "id": "e85c5482-1023-47c4-aefc-50a96a30f461",
+      "kind": "updated",
+      "entity": "doc:openhex-fullstack-preparation",
+      "title": "迷境智塔 OpenHex 全栈岗位准备清单",
+      "time": "2026-10-20T07:36:26.146Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "openhex-fullstack-preparation"
+    },
+    {
+      "id": "1a80fba2-3d8a-4099-8677-4c6bafd7c4a4",
+      "kind": "updated",
+      "entity": "doc:data-sync-interview",
+      "title": "如何设计一个数据同步方案",
+      "time": "2026-10-20T07:42:19.109Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "data-sync-interview"
+    },
+    {
+      "id": "c3effd2a-1b5a-460e-9da7-ccf10416f2ed",
+      "kind": "updated",
+      "entity": "doc:data-sync-interview",
+      "title": "如何设计一个数据同步方案",
+      "time": "2026-10-20T07:43:14.275Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "data-sync-interview"
+    },
+    {
+      "id": "809edf92-4087-4372-a18a-9e2305ffc397",
+      "kind": "state-changed",
+      "entity": "doc:data-sync-interview",
+      "title": "如何设计一个数据同步方案",
+      "time": "2026-10-20T07:44:07.006Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "data-sync-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "7a2cb5a2-bdcd-472b-8ea9-91dfb5d192ae",
+      "kind": "created",
+      "entity": "doc:agent-approval-interview",
+      "title": "Agent 怎样保存待审批操作并在批准后恢复执行？",
+      "time": "2026-10-20T07:44:54.161Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-approval-interview"
+    },
+    {
+      "id": "ade74999-2609-445b-9623-afb7b5129833",
+      "kind": "updated",
+      "entity": "doc:agent-interview-hub",
+      "title": "Agent 面试题",
+      "time": "2026-10-20T07:44:54.161Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-interview-hub"
+    },
+    {
+      "id": "eab1fb95-20ad-4c5e-b9f4-adbbb4f66032",
+      "kind": "updated",
+      "entity": "doc:lingdi-agent-preparation",
+      "title": "凌迪科技 Agent 岗位准备清单",
+      "time": "2026-10-20T07:44:54.161Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "lingdi-agent-preparation"
+    },
+    {
+      "id": "5d4c0b68-1cf8-4a30-a7b7-ce6691b3d486",
+      "kind": "updated",
+      "entity": "doc:langgraph-human-interrupts",
+      "title": "LangGraph 与 LangChain：从中断原语到人工决策",
+      "time": "2026-10-20T07:44:54.161Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "langgraph-human-interrupts"
+    },
+    {
+      "id": "966b73ac-777a-47b6-a29c-583fea787c0b",
+      "kind": "state-changed",
+      "entity": "doc:openhex-fullstack-preparation",
+      "title": "迷境智塔 OpenHex 全栈岗位准备清单",
+      "time": "2026-10-20T07:47:19.768Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "openhex-fullstack-preparation",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "891720b9-a5c0-4d9b-9b2b-20e42f52bcb8",
+      "kind": "created",
+      "entity": "doc:agent-input-interview",
+      "title": "Agent 执行中需要用户补充信息时，前后端怎样配合？",
+      "time": "2026-10-20T07:55:29.209Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-input-interview"
+    },
+    {
+      "id": "a07228fd-387d-46cb-80ad-78f702fe854e",
+      "kind": "updated",
+      "entity": "doc:agent-interview-hub",
+      "title": "Agent 面试题",
+      "time": "2026-10-20T07:55:29.209Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-interview-hub"
+    },
+    {
+      "id": "a17f19c4-f318-4928-9995-27149fc00864",
+      "kind": "created",
+      "entity": "doc:agent-progress-interview",
+      "title": "Agent 任务运行较久时，前端怎样展示执行进度？",
+      "time": "2026-10-20T07:55:29.209Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-progress-interview"
+    },
+    {
+      "id": "ddf01c54-b155-4aff-936b-24b826da196a",
+      "kind": "updated",
+      "entity": "doc:openhex-fullstack-preparation",
+      "title": "迷境智塔 OpenHex 全栈岗位准备清单",
+      "time": "2026-10-20T07:55:29.209Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "openhex-fullstack-preparation"
+    },
+    {
+      "id": "31167632-79ac-400a-b445-26ae23a43578",
+      "kind": "updated",
+      "entity": "doc:agent-input-interview",
+      "title": "Agent 执行中需要用户补充信息时，前后端怎样配合？",
+      "time": "2026-10-20T07:56:49.209Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-input-interview"
+    },
+    {
+      "id": "3db38489-bab1-4c7d-ba56-3c59623f34eb",
+      "kind": "updated",
+      "entity": "doc:agent-progress-interview",
+      "title": "Agent 任务运行较久时，前端怎样展示执行进度？",
+      "time": "2026-10-20T07:56:49.209Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-progress-interview"
+    },
+    {
+      "id": "db801bde-42a9-4803-b616-4c711890cf3b",
+      "kind": "created",
+      "entity": "doc:agent-followup-interview",
+      "title": "Agent 执行中收到用户追加消息，怎样处理？",
+      "time": "2026-10-20T08:04:05.202Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-followup-interview"
+    },
+    {
+      "id": "ccb5979c-131c-4b89-9238-2326a6ef5f24",
+      "kind": "updated",
+      "entity": "doc:agent-interview-hub",
+      "title": "Agent 面试题",
+      "time": "2026-10-20T08:04:05.202Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-interview-hub"
+    },
+    {
+      "id": "d8880376-007f-42a6-a09c-9c5b737f3449",
+      "kind": "updated",
+      "entity": "doc:agent-progress-interview",
+      "title": "Agent 任务运行较久时，前端怎样展示执行进度？",
+      "time": "2026-10-20T08:04:49.193Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-progress-interview"
+    },
+    {
+      "id": "b92c27b1-e7ae-4c12-8fd9-c69a1c47c1f2",
+      "kind": "state-changed",
+      "entity": "doc:agent-progress-interview",
+      "title": "Agent 任务运行较久时，前端怎样展示执行进度？",
+      "time": "2026-10-20T08:06:02.624Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-progress-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "686b94e6-ee29-463f-ab17-13b64e01e2ce",
+      "kind": "state-changed",
+      "entity": "doc:agent-progress-interview",
+      "title": "Agent 任务运行较久时，前端怎样展示执行进度？",
+      "time": "2026-10-20T08:06:03.469Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-progress-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "421570bf-58aa-4a4c-a5f9-02e2496b20a7",
+      "kind": "updated",
+      "entity": "doc:agent-followup-interview",
+      "title": "Agent 执行中怎样接收用户的新要求？",
+      "time": "2026-10-20T08:07:21.211Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-followup-interview"
+    },
+    {
+      "id": "64ed14da-4ba6-4032-991f-c85bb77ff954",
+      "kind": "updated",
+      "entity": "doc:agent-input-interview",
+      "title": "Agent 缺少信息时，怎样向用户提问并恢复执行？",
+      "time": "2026-10-20T08:07:21.211Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-input-interview"
+    },
+    {
+      "id": "c0aca66a-0eb3-490f-a263-e0042611bfe4",
+      "kind": "updated",
+      "entity": "doc:agent-interview-hub",
+      "title": "Agent 面试题",
+      "time": "2026-10-20T08:07:21.211Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-interview-hub"
+    },
+    {
+      "id": "02c391cc-d986-470c-96d0-e7c3ee8c689d",
+      "kind": "updated",
+      "entity": "doc:openhex-fullstack-preparation",
+      "title": "迷境智塔 OpenHex 全栈岗位准备清单",
+      "time": "2026-10-20T08:07:21.211Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "openhex-fullstack-preparation"
+    },
+    {
+      "id": "b6f7bb5b-321e-42c6-b8d9-1af08dbbe5cc",
+      "kind": "updated",
+      "entity": "doc:agent-interview-hub",
+      "title": "Agent 面试题",
+      "time": "2026-10-20T08:08:09.188Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-interview-hub"
+    },
+    {
+      "id": "51c0fd6a-da1e-48fd-b82f-8d3973943c13",
+      "kind": "created",
+      "entity": "doc:agent-stream-recovery-interview",
+      "title": "页面刷新或断线后，怎样恢复 Agent 任务和流式输出？",
+      "time": "2026-10-20T08:08:09.188Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-stream-recovery-interview"
+    },
+    {
+      "id": "35ec188b-f8f6-4a84-9979-158a02cfced3",
+      "kind": "updated",
+      "entity": "doc:openhex-fullstack-preparation",
+      "title": "迷境智塔 OpenHex 全栈岗位准备清单",
+      "time": "2026-10-20T08:08:09.188Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "openhex-fullstack-preparation"
+    },
+    {
+      "id": "7e18e0f9-96d2-41fb-aa77-56a78baf1cc2",
+      "kind": "created",
+      "entity": "doc:redis-stream-replay-sources",
+      "title": "Redis Streams：按游标补读与实时订阅的边界",
+      "time": "2026-10-20T08:08:09.188Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "redis-stream-replay-sources"
+    },
+    {
+      "id": "e2b1eeca-da23-4c0e-8efc-baa17cb95a75",
+      "kind": "state-changed",
+      "entity": "doc:agent-followup-interview",
+      "title": "Agent 执行中怎样接收用户的新要求？",
+      "time": "2026-10-20T08:10:52.419Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-followup-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "30a86cc3-75f8-48c0-8d7c-e8147561552c",
+      "kind": "state-changed",
+      "entity": "doc:agent-followup-interview",
+      "title": "Agent 执行中怎样接收用户的新要求？",
+      "time": "2026-10-20T08:10:53.195Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-followup-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "21d59c90-2915-41b7-b7c0-eb799af92019",
+      "kind": "updated",
+      "entity": "doc:agent-stream-recovery-interview",
+      "title": "页面刷新或断线后，怎样恢复 Agent 任务和流式输出？",
+      "time": "2026-10-20T08:12:37.216Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-stream-recovery-interview"
+    },
+    {
+      "id": "038e1bd7-1a4a-49c9-b65a-cbc66b65e3ba",
+      "kind": "state-changed",
+      "entity": "doc:agent-stream-recovery-interview",
+      "title": "页面刷新或断线后，怎样恢复 Agent 任务和流式输出？",
+      "time": "2026-10-20T08:13:16.878Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-stream-recovery-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "e7ede1b0-1faf-4403-bc21-3b51709f8e77",
+      "kind": "state-changed",
+      "entity": "doc:agent-stream-recovery-interview",
+      "title": "页面刷新或断线后，怎样恢复 Agent 任务和流式输出？",
+      "time": "2026-10-20T08:13:17.532Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-stream-recovery-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "8a47e01f-cd6c-4f8a-a56e-ddc6e713ad94",
+      "kind": "updated",
+      "entity": "doc:agent-approval-interview",
+      "title": "Agent 怎样保存待审批操作并在批准后恢复执行？",
+      "time": "2026-10-20T08:15:05.217Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-approval-interview"
+    },
+    {
+      "id": "4a897d88-3b55-487a-8512-2b0c0799bd31",
+      "kind": "updated",
+      "entity": "doc:agent-interview-hub",
+      "title": "Agent 面试题",
+      "time": "2026-10-20T08:15:05.217Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-interview-hub"
+    },
+    {
+      "id": "a0cbb98f-31c4-4e79-981e-ddc5af60af6d",
+      "kind": "updated",
+      "entity": "doc:openhex-fullstack-preparation",
+      "title": "迷境智塔 OpenHex 全栈岗位准备清单",
+      "time": "2026-10-20T08:15:05.217Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "openhex-fullstack-preparation"
+    },
+    {
+      "id": "68e19223-5c99-4612-b844-d592f6e5aed8",
+      "kind": "updated",
+      "entity": "doc:openhex-fullstack-preparation",
+      "title": "迷境智塔 OpenHex 全栈岗位准备清单",
+      "time": "2026-10-20T08:19:13.226Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "openhex-fullstack-preparation"
+    },
+    {
+      "id": "70a83a93-763e-4438-9356-061efbbb9196",
+      "kind": "created",
+      "entity": "doc:graphql",
+      "title": "GraphQL（API 查询语言）",
+      "time": "2026-10-20T08:21:37.384Z",
+      "collections": [
+        "glossary"
+      ],
+      "source": "observed",
+      "docId": "graphql"
+    },
+    {
+      "id": "1cdf5693-e91e-4eef-9ba6-eb03f7133a78",
+      "kind": "updated",
+      "entity": "doc:openhex-fullstack-preparation",
+      "title": "迷境智塔 OpenHex 全栈岗位准备清单",
+      "time": "2026-10-20T08:21:37.384Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "openhex-fullstack-preparation"
+    },
+    {
+      "id": "0857ce93-f2c8-4c98-b98c-3de671785dde",
+      "kind": "created",
+      "entity": "doc:graphql-official-guide",
+      "title": "GraphQL 官方文档基础导读",
+      "time": "2026-10-20T08:21:37.384Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "graphql-official-guide"
+    },
+    {
+      "id": "e61cc394-4550-4203-abeb-2056610dbd66",
+      "kind": "updated",
+      "entity": "doc:openhex-fullstack-preparation",
+      "title": "迷境智塔 OpenHex 全栈岗位准备清单",
+      "time": "2026-10-20T08:24:17.240Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "openhex-fullstack-preparation"
+    },
+    {
+      "id": "f8855447-8423-4f4b-a219-3b99c3bfa6db",
+      "kind": "created",
+      "entity": "doc:rag-workflow-interview",
+      "title": "知识库与检索怎样参与回答？RAG 的完整流程是什么？",
+      "time": "2026-10-20T08:24:17.240Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "rag-workflow-interview"
+    },
+    {
+      "id": "538a7b5e-bae8-4c31-9af7-030088cd1b95",
+      "kind": "updated",
+      "entity": "doc:retrieval-interview-index",
+      "title": "检索与召回面试题",
+      "time": "2026-10-20T08:24:17.240Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "retrieval-interview-index"
+    },
+    {
+      "id": "9eadf6e6-bfb3-4d0a-afa6-9dbec872d35d",
+      "kind": "updated",
+      "entity": "doc:rag-workflow-interview",
+      "title": "知识库与检索怎样参与回答？RAG 的完整流程是什么？",
+      "time": "2026-10-20T08:24:49.209Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "rag-workflow-interview"
+    },
+    {
+      "id": "ebae235f-1417-4edb-a777-fddedd42ba16",
+      "kind": "created",
+      "entity": "doc:agent-delegation-interview",
+      "title": "什么任务值得拆给多个 Agent？",
+      "time": "2026-10-20T08:30:25.218Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-delegation-interview"
+    },
+    {
+      "id": "107fb21f-95a2-438d-91b3-d6b1fb5272f5",
+      "kind": "updated",
+      "entity": "doc:agent-interview-hub",
+      "title": "Agent 面试题",
+      "time": "2026-10-20T08:30:25.218Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-interview-hub"
+    },
+    {
+      "id": "04bce1d4-183b-4263-934d-8d56dcb2bf46",
+      "kind": "updated",
+      "entity": "doc:openhex-fullstack-preparation",
+      "title": "迷境智塔 OpenHex 全栈岗位准备清单",
+      "time": "2026-10-20T08:30:25.218Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "openhex-fullstack-preparation"
+    },
+    {
+      "id": "1b9d4c2c-5c1b-4340-95f7-4b05d12b0606",
+      "kind": "updated",
+      "entity": "doc:claude-code-agent-collaboration",
+      "title": "Claude Code：子 Agent 与 Agent Teams",
+      "time": "2026-10-20T08:30:37.215Z",
+      "collections": [
+        "readings"
+      ],
+      "source": "observed",
+      "docId": "claude-code-agent-collaboration"
+    },
+    {
+      "id": "6a8cece9-64ac-4616-93d3-68e4eff83958",
+      "kind": "updated",
+      "entity": "doc:rag-workflow-interview",
+      "title": "RAG 的完整流程是什么？",
+      "time": "2026-10-20T08:31:33.211Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "rag-workflow-interview"
+    },
+    {
+      "id": "ce1390e6-a3cd-4c6d-9865-83a84fe9069f",
+      "kind": "updated",
+      "entity": "doc:retrieval-interview-index",
+      "title": "检索与召回面试题",
+      "time": "2026-10-20T08:31:33.211Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "retrieval-interview-index"
+    },
+    {
+      "id": "126f6675-6e6e-42e0-b06e-4ecc5100eea2",
+      "kind": "updated",
+      "entity": "doc:agent-delegation-interview",
+      "title": "什么任务值得拆给多个 Agent？",
+      "time": "2026-10-20T08:31:49.218Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-delegation-interview"
+    },
+    {
+      "id": "46aea546-9c99-4747-804b-2ba3c6b55a24",
+      "kind": "state-changed",
+      "entity": "doc:rag-workflow-interview",
+      "title": "RAG 的完整流程是什么？",
+      "time": "2026-10-20T08:31:56.191Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "rag-workflow-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "705754e1-2ae5-45c4-bbac-145dc1d73c93",
+      "kind": "state-changed",
+      "entity": "doc:rag-workflow-interview",
+      "title": "RAG 的完整流程是什么？",
+      "time": "2026-10-20T08:31:56.770Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "rag-workflow-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "1ce5ac07-8cd6-4f2b-b560-03a44ecdd04a",
+      "kind": "updated",
+      "entity": "doc:openhex-fullstack-preparation",
+      "title": "迷境智塔 OpenHex 全栈岗位准备清单",
+      "time": "2026-10-20T08:34:25.223Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "openhex-fullstack-preparation"
+    },
+    {
+      "id": "d0a7354c-dfcd-44b4-8b3a-93590f9a5621",
+      "kind": "created",
+      "entity": "doc:rag-document-validity-interview",
+      "title": "RAG 怎样处理资料过期或用户无权访问？",
+      "time": "2026-10-20T08:34:25.223Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "rag-document-validity-interview"
+    },
+    {
+      "id": "cebab6cc-16b7-4957-8571-d778c44daa22",
+      "kind": "updated",
+      "entity": "doc:rag-workflow-interview",
+      "title": "RAG 的完整流程是什么？",
+      "time": "2026-10-20T08:34:25.223Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "rag-workflow-interview"
+    },
+    {
+      "id": "6d33d4b0-6e7c-4c47-9985-919477783287",
+      "kind": "updated",
+      "entity": "doc:retrieval-interview-index",
+      "title": "检索与召回面试题",
+      "time": "2026-10-20T08:34:25.223Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "retrieval-interview-index"
+    },
+    {
+      "id": "7c9549e2-fb5c-4be2-a8a7-6646848fa6a8",
+      "kind": "updated",
+      "entity": "doc:rag-document-validity-interview",
+      "title": "RAG 怎样处理资料过期或用户无权访问？",
+      "time": "2026-10-20T08:34:45.224Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "rag-document-validity-interview"
+    },
+    {
+      "id": "b7f26749-383f-46a4-9f3b-1721d044be19",
+      "kind": "updated",
+      "entity": "doc:agent-delegation-interview",
+      "title": "什么任务值得拆给多个 Agent？",
+      "time": "2026-10-20T08:34:53.221Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-delegation-interview"
+    },
+    {
+      "id": "934ce0fe-9548-41fc-8329-babb51bfdcca",
+      "kind": "updated",
+      "entity": "doc:agent-delegation-interview",
+      "title": "什么任务值得拆给多个 Agent？",
+      "time": "2026-10-20T08:37:45.468Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-delegation-interview"
+    },
+    {
+      "id": "f5054c02-2927-4f5d-be9f-a6642d6d8cf9",
+      "kind": "updated",
+      "entity": "doc:openhex-fullstack-preparation",
+      "title": "迷境智塔 OpenHex 全栈岗位准备清单",
+      "time": "2026-10-20T08:37:45.468Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "openhex-fullstack-preparation"
+    },
+    {
+      "id": "af2ce578-cdac-4354-9e3b-b22ab77f9a38",
+      "kind": "state-changed",
+      "entity": "doc:agent-delegation-interview",
+      "title": "什么任务值得拆给多个 Agent？",
+      "time": "2026-10-20T08:37:47.544Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-delegation-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "cf98a6d7-0348-42f3-8b55-e288d7d6f0bf",
+      "kind": "updated",
+      "entity": "doc:rag-document-validity-interview",
+      "title": "RAG 怎样处理资料过期或用户无权访问？",
+      "time": "2026-10-20T08:38:25.216Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "rag-document-validity-interview"
+    },
+    {
+      "id": "07c84841-a4db-4a83-83e1-89a185302478",
+      "kind": "state-changed",
+      "entity": "doc:rag-document-validity-interview",
+      "title": "RAG 怎样处理资料过期或用户无权访问？",
+      "time": "2026-10-20T08:38:44.297Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "rag-document-validity-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "60156f99-f9cf-450c-bea7-8db28aeea2be",
+      "kind": "state-changed",
+      "entity": "doc:rag-document-validity-interview",
+      "title": "RAG 怎样处理资料过期或用户无权访问？",
+      "time": "2026-10-20T08:38:44.632Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "rag-document-validity-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "6d9582af-b0e3-4cfd-b3b8-3cd18cea01e6",
+      "kind": "updated",
+      "entity": "doc:agent-delegation-interview",
+      "title": "什么任务值得拆给多个 Agent？",
+      "time": "2026-10-20T08:40:05.212Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-delegation-interview"
+    },
+    {
+      "id": "8ce1e5e5-ffd2-49d1-9b5f-40536163fd81",
+      "kind": "updated",
+      "entity": "doc:agent-delegation-interview",
+      "title": "什么任务值得拆给多个 Agent？",
+      "time": "2026-10-20T08:42:37.223Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-delegation-interview"
+    },
+    {
+      "id": "b2b7f0e1-1299-4ef0-8d11-b4ac2dcdaf9a",
+      "kind": "state-changed",
+      "entity": "doc:agent-delegation-interview",
+      "title": "什么任务值得拆给多个 Agent？",
+      "time": "2026-10-20T08:42:44.337Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-delegation-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "ce6279a9-8024-404b-acee-bef0f1c2ae76",
+      "kind": "state-changed",
+      "entity": "doc:agent-delegation-interview",
+      "title": "什么任务值得拆给多个 Agent？",
+      "time": "2026-10-20T08:49:25.230Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-delegation-interview",
+      "from": "organized",
+      "to": "reading"
+    },
+    {
+      "id": "86b0bd30-4479-418a-b64d-3fab3ca90881",
+      "kind": "updated",
+      "entity": "doc:agent-delegation-interview",
+      "title": "什么任务值得拆给多个 Agent？",
+      "time": "2026-10-20T08:49:25.230Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-delegation-interview"
+    },
+    {
+      "id": "e2a697a4-2aa7-4711-8585-9c36ccd55d1f",
+      "kind": "state-changed",
+      "entity": "doc:agent-delegation-interview",
+      "title": "什么任务值得拆给多个 Agent？",
+      "time": "2026-10-20T08:50:22.313Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-delegation-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "69d41a2c-97b3-4920-93d4-fdaab7c2d9f7",
+      "kind": "created",
+      "entity": "doc:agent-conflict-interview",
+      "title": "多 Agent 协作发生冲突时怎么处理？",
+      "time": "2026-10-20T08:53:01.282Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-conflict-interview"
+    },
+    {
+      "id": "fa95d7a5-5000-4c00-84db-81f02dad628c",
+      "kind": "updated",
+      "entity": "doc:agent-interview-hub",
+      "title": "Agent 面试题",
+      "time": "2026-10-20T08:53:01.282Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-interview-hub"
+    },
+    {
+      "id": "6eb50aea-7af1-4aee-bb91-5b8f1a5ce1cc",
+      "kind": "updated",
+      "entity": "doc:openhex-fullstack-preparation",
+      "title": "迷境智塔 OpenHex 全栈岗位准备清单",
+      "time": "2026-10-20T08:53:05.210Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "openhex-fullstack-preparation"
+    },
+    {
+      "id": "5ca9130f-5d04-4972-9d3b-d2592f143226",
+      "kind": "updated",
+      "entity": "doc:agent-conflict-interview",
+      "title": "多 Agent 协作发生冲突时怎么处理？",
+      "time": "2026-10-20T08:53:29.342Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-conflict-interview"
+    },
+    {
+      "id": "675bfcda-0101-4fb2-9430-52454734befb",
+      "kind": "state-changed",
+      "entity": "doc:agent-conflict-interview",
+      "title": "多 Agent 协作发生冲突时怎么处理？",
+      "time": "2026-10-20T08:53:36.104Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-conflict-interview",
+      "from": "pending",
+      "to": "reading"
+    },
+    {
+      "id": "e48d4206-26fc-4ee7-bb48-c948f4db409e",
+      "kind": "updated",
+      "entity": "doc:agent-conflict-interview",
+      "title": "多 Agent 协作发生冲突时怎么处理？",
+      "time": "2026-10-20T08:54:53.226Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-conflict-interview"
+    },
+    {
+      "id": "cb49730d-f713-47cb-a048-a38986813f2f",
+      "kind": "updated",
+      "entity": "doc:agent-conflict-interview",
+      "title": "多 Agent 协作发生冲突时怎么处理？",
+      "time": "2026-10-20T08:55:57.211Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-conflict-interview"
+    },
+    {
+      "id": "c435805d-ceb9-4147-8ed1-9b66ae757a84",
+      "kind": "updated",
+      "entity": "doc:agent-conflict-interview",
+      "title": "多 Agent 协作发生冲突时怎么处理？",
+      "time": "2026-10-20T08:58:17.238Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-conflict-interview"
+    },
+    {
+      "id": "3fe0731a-8738-4e3f-8254-ec90d8c404ed",
+      "kind": "state-changed",
+      "entity": "doc:agent-conflict-interview",
+      "title": "多 Agent 协作发生冲突时怎么处理？",
+      "time": "2026-10-20T08:58:38.589Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-conflict-interview",
+      "from": "reading",
+      "to": "organized"
+    },
+    {
+      "id": "18fc0da3-9fae-4a58-bac1-17fc3cba2f51",
+      "kind": "state-changed",
+      "entity": "doc:agent-conflict-interview",
+      "title": "多 Agent 协作发生冲突时怎么处理？",
+      "time": "2026-10-20T08:59:57.236Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-conflict-interview",
+      "from": "organized",
+      "to": "reading"
+    },
+    {
+      "id": "91f552af-c06f-4572-8b76-d4beefaf5e19",
+      "kind": "updated",
+      "entity": "doc:agent-conflict-interview",
+      "title": "多 Agent 协作发生冲突时怎么处理？",
+      "time": "2026-10-20T08:59:57.236Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-conflict-interview"
+    },
+    {
+      "id": "6b5b93bc-9c8a-49b9-85d5-1d1276dcbc13",
+      "kind": "state-changed",
+      "entity": "doc:agent-conflict-interview",
+      "title": "多 Agent 协作发生冲突时怎么处理？",
+      "time": "2026-10-20T09:00:01.837Z",
+      "collections": [
+        "interviews"
+      ],
+      "source": "observed",
+      "docId": "agent-conflict-interview",
+      "from": "reading",
+      "to": "organized"
     }
   ]
 }

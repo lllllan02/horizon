@@ -5,10 +5,10 @@ category: "面试"
 parent: interview-hub
 tags: ["面试", "Go", "Agent", "RAG"]
 type: overview
-learning_status: reading
+learning_status: pending
 created_at: "2026-10-19T19:42:43+08:00"
 updated_at: "2026-10-20T10:49:44+08:00"
-learning_status_changed_at: "2026-10-19T19:47:37.500+08:00"
+learning_status_changed_at: "2026-10-20T14:54:12.898+08:00"
 ---
 
 收集 Go 后端与 AI Agent 方向的面经，供逐篇学习、整理。题库与学习手册见[[interview-resources|面试资料目录]]。
