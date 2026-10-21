@@ -1,7 +1,7 @@
 import { beijingTimestamp, documentTime } from '../document-dates.ts';
 import type { LibraryDocument } from '../types/library.ts';
 import type { ReviewEvent, ReviewRating, ReviewState } from '../review-model.ts';
-import { reviewDay } from '../review-model.ts';
+import { reviewCounts, reviewDay } from '../review-model.ts';
 
 export type ReviewStatisticsStatus = 'fresh' | 'due' | 'scheduled' | 'paused';
 export type ReviewStatisticsPeriod = 'fresh' | 'overdue' | 'today' | 'future' | 'paused';
@@ -89,9 +89,8 @@ export function buildReviewStatistics(
             b.index - a.index,
         )
         .map(({ event }) => event);
-      const counts = { good: 0, hard: 0, forgot: 0 };
-      for (const event of history) counts[event.rating]++;
-      const total = history.length;
+      const counts = reviewCounts(record);
+      const total = counts.good + counts.hard + counts.forgot;
       const status: ReviewStatisticsStatus = record?.paused
         ? 'paused'
         : total === 0
@@ -109,7 +108,9 @@ export function buildReviewStatistics(
             : dueDay && dueDay < today
               ? 'overdue'
               : 'future';
-      const reviewedToday = Boolean(history[0] && reviewDay(history[0].reviewedAt) === today);
+      const reviewedToday = Boolean(
+        record?.lastReviewedAt && reviewDay(record.lastReviewedAt) === today,
+      );
       return {
         doc,
         topic: doc.category || '未分类',
@@ -119,7 +120,7 @@ export function buildReviewStatistics(
         total,
         counts,
         history,
-        lastReviewedAt: history[0]?.reviewedAt ?? null,
+        lastReviewedAt: record?.lastReviewedAt ?? null,
         dueAt: total ? (record?.dueAt ?? null) : null,
         intervalDays: total ? (record?.intervalDays ?? 0) : 0,
       };

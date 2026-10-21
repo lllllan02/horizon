@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { reviewHistoryPage } from '../src/review-protocol.ts';
 import { createBrowserReviewStore } from '../src/data/review-browser-store.ts';
 import { parseDocument, renderDocument } from '../src/library.ts';
 import { reviewFingerprint, reviewQueue } from '../src/review-model.ts';
@@ -114,4 +115,33 @@ test('损坏记录和存储写失败均显式失败，保留原记录', async ()
   );
   await assert.rejects(blocked.load([doc]), /storage blocked/);
   assert.equal(data.has('reviews'), false);
+});
+
+test('浏览器保留完整历史供分页和旧请求确认，摘要升级不截断localStorage', async () => {
+  const { doc, store, storage } = fixture();
+  let state = await store.load([doc]);
+  const firstInput = {
+    id: doc.id,
+    version: state.version,
+    requestId: 'full-history-first',
+    rating: 'good' as const,
+    documentUpdated: doc.updated,
+    documentFingerprint: reviewFingerprint(doc),
+  };
+  state = await store.update([doc], firstInput);
+  for (let n = 0; n < 43; n++)
+    state = await store.update([doc], {
+      ...firstInput,
+      version: state.version,
+      requestId: `full-history-next-${n}`,
+    });
+  const restored = await createBrowserReviewStore(storage, 'reviews').load([doc]);
+  assert.equal(restored.records[doc.id].counts, undefined);
+  assert.equal(restored.records[doc.id].history.length, 44);
+  const first = reviewHistoryPage(restored, doc.id);
+  const second = reviewHistoryPage(restored, doc.id, first.nextCursor!);
+  const third = reviewHistoryPage(restored, doc.id, second.nextCursor!);
+  assert.deepEqual([first.events.length, second.events.length, third.events.length], [20, 20, 4]);
+  assert.equal(third.events.at(-1)?.requestId, firstInput.requestId);
+  assert.deepEqual(await store.update([doc], firstInput), restored);
 });

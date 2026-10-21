@@ -21,7 +21,7 @@ interface ImageSnapshot {
   files: Record<string, string>;
   collections: string[];
 }
-interface ActivityState {
+export interface ActivityState {
   schema: number;
   startedAt: string | null;
   documents: Record<
@@ -39,13 +39,18 @@ interface ActivityState {
   events: ActivityEvent[];
 }
 import path from 'node:path';
-import { readFile, writeFile, rename, unlink, readdir, lstat, realpath } from 'node:fs/promises';
+import { readFile, readdir, lstat, realpath } from 'node:fs/promises';
 import { createHash, randomUUID } from 'node:crypto';
 import { beijingTimestamp, documentTime } from './document-dates.ts';
 import { safeAsset } from './library.ts';
 import { CONTENT_COLLECTIONS } from './collections.ts';
 import { updateDocumentState } from './update-document-state.ts';
-import { acquireActivityLock } from './activity-lock.ts';
+import type { DatabaseSync } from 'node:sqlite';
+import {
+  applicationDatabaseExists,
+  withApplicationDatabase,
+  withTransaction,
+} from './app-database.ts';
 
 const hash = (value: string | Buffer) => createHash('sha256').update(value).digest('hex');
 const imageExt = /\.(png|jpe?g|webp|gif|svg|excalidraw)$/i;
@@ -159,7 +164,8 @@ async function readState(file: string): Promise<ActivityState | null> {
       !validState(state) ||
       state.schema !== 1 ||
       (state.startedAt !== null && !Number.isFinite(documentTime(state.startedAt))) ||
-      !state.events.every((event) => Number.isFinite(documentTime(event.time)))
+      !state.events.every((event) => Number.isFinite(documentTime(event.time))) ||
+      new Set(state.events.map((event) => event.id)).size !== state.events.length
     )
       throw Error('活动记录格式无效');
     return state;
@@ -167,6 +173,182 @@ async function readState(file: string): Promise<ActivityState | null> {
     if ((e as NodeJS.ErrnoException).code === 'ENOENT') return null;
     throw e;
   }
+}
+const emptyState = (): ActivityState => ({
+  schema: 1,
+  startedAt: null,
+  documents: {},
+  images: {},
+  events: [],
+});
+const imported = (db: DatabaseSync) => {
+  const marker = db.prepare("SELECT value FROM app_metadata WHERE key = 'activity_imported'").get();
+  if (marker && marker.value !== '1') throw Error('活动记录数据库版本无效');
+  if (marker) db.prepare('SELECT seq, id, time, event FROM activity_events LIMIT 0');
+  return Boolean(marker);
+};
+const metadata = (db: DatabaseSync, key: string): string => {
+  const value = db.prepare('SELECT value FROM app_metadata WHERE key = ?').get(key)?.value;
+  if (typeof value !== 'string') throw Error('活动记录数据库元数据无效');
+  return value;
+};
+function putMetadata(db: DatabaseSync, key: string, value: string) {
+  db.prepare(
+    'INSERT INTO app_metadata(key, value) VALUES (?, ?) ON CONFLICT(key) DO UPDATE SET value = excluded.value',
+  ).run(key, value);
+}
+function readSnapshots(db: DatabaseSync): Omit<ActivityState, 'events'> {
+  const documents = Object.fromEntries(
+    db
+      .prepare('SELECT id, data FROM activity_documents ORDER BY rowid')
+      .all()
+      .map((row) => [row.id, JSON.parse(String(row.data))]),
+  );
+  const images = Object.fromEntries(
+    db
+      .prepare('SELECT id, data FROM activity_images ORDER BY rowid')
+      .all()
+      .map((row) => [row.id, JSON.parse(String(row.data))]),
+  );
+  const state = {
+    schema: 1,
+    startedAt: JSON.parse(metadata(db, 'activity_started_at')),
+    documents,
+    images,
+    events: [],
+  };
+  if (
+    !validState(state) ||
+    (state.startedAt !== null && !Number.isFinite(documentTime(state.startedAt)))
+  )
+    throw Error('活动记录数据库快照无效');
+  return state;
+}
+const historyCache = new Map<string, { revision: string; events: ActivityEvent[] }>();
+const publicCache = new Map<string, { key: string; activity: LibraryActivity }>();
+function readEvents(db: DatabaseSync, root: string): ActivityEvent[] {
+  db.prepare('SELECT id, time, event FROM activity_events LIMIT 0');
+  const revision = metadata(db, 'activity_revision');
+  const cached = historyCache.get(root);
+  if (cached?.revision === revision) return cached.events;
+  const events = db
+    .prepare('SELECT id, time, event FROM activity_events ORDER BY seq')
+    .all()
+    .map((row) => {
+      const value: unknown = JSON.parse(String(row.event));
+      if (
+        !isActivityEvent(value) ||
+        !Number.isFinite(documentTime(value.time)) ||
+        value.id !== row.id ||
+        value.time !== row.time
+      )
+        throw Error('活动记录数据库事件无效');
+      return value;
+    });
+  historyCache.set(root, { revision, events });
+  return events;
+}
+function appendEvents(db: DatabaseSync, events: ActivityEvent[]) {
+  const insert = db.prepare('INSERT INTO activity_events(id, time, event) VALUES (?, ?, ?)');
+  for (const event of events) insert.run(event.id, event.time, JSON.stringify(event));
+}
+function updateSnapshots(
+  db: DatabaseSync,
+  table: 'activity_documents' | 'activity_images',
+  old: Record<string, unknown>,
+  current: Record<string, unknown>,
+) {
+  let changed = false;
+  const write = db.prepare(
+    `INSERT INTO ${table}(id, data) VALUES (?, ?) ON CONFLICT(id) DO UPDATE SET data = excluded.data`,
+  );
+  const remove = db.prepare(`DELETE FROM ${table} WHERE id = ?`);
+  for (const [id, value] of Object.entries(current)) {
+    const serialized = JSON.stringify(value);
+    if (!Object.hasOwn(old, id) || JSON.stringify(old[id]) !== serialized) {
+      write.run(id, serialized);
+      changed = true;
+    }
+  }
+  for (const id of Object.keys(old))
+    if (!Object.hasOwn(current, id)) {
+      remove.run(id);
+      changed = true;
+    }
+  return changed;
+}
+function initializeActivity(db: DatabaseSync, state: ActivityState) {
+  // All creation and legacy import share the observation transaction. Failed imports leave no marker.
+  if (
+    db
+      .prepare("SELECT name FROM sqlite_master WHERE type = 'table' AND name LIKE 'activity_%'")
+      .all().length
+  )
+    throw Error('活动记录数据库结构不完整，原记录已保留');
+  db.exec(`
+    CREATE TABLE activity_documents (id TEXT PRIMARY KEY, data TEXT NOT NULL);
+    CREATE TABLE activity_images (id TEXT PRIMARY KEY, data TEXT NOT NULL);
+    CREATE TABLE activity_events (seq INTEGER PRIMARY KEY AUTOINCREMENT, id TEXT NOT NULL UNIQUE, time TEXT NOT NULL, event TEXT NOT NULL);
+    CREATE INDEX activity_events_time ON activity_events(time);
+  `);
+  updateSnapshots(db, 'activity_documents', {}, state.documents);
+  updateSnapshots(db, 'activity_images', {}, state.images);
+  appendEvents(db, state.events);
+  putMetadata(db, 'activity_started_at', JSON.stringify(state.startedAt));
+  putMetadata(db, 'activity_revision', randomUUID());
+  putMetadata(db, 'activity_imported', '1');
+  // An empty migration has not observed the library yet. A null start alone does not
+  // imply emptiness: legacy snapshots and historical events remain valid baselines.
+  const hasBaseline =
+    state.startedAt !== null ||
+    Object.keys(state.documents).length > 0 ||
+    Object.keys(state.images).length > 0 ||
+    state.events.length > 0;
+  putMetadata(db, 'activity_observed', hasBaseline ? '1' : '0');
+}
+async function needsImport(root: string) {
+  return (
+    !(await applicationDatabaseExists(root)) ||
+    !(await withApplicationDatabase(root, imported, { readonly: true }))
+  );
+}
+/** Import without observing documents, for lossless backups and portable JSON restoration. */
+export async function migrateActivity(root: string): Promise<void> {
+  root = await realpath(root);
+  if (!(await needsImport(root))) return;
+  const legacy = await readState(path.join(root, '.activity.json'));
+  await withApplicationDatabase(root, (db) =>
+    withTransaction(db, () => {
+      if (!imported(db)) initializeActivity(db, legacy || emptyState());
+    }),
+  );
+}
+async function storedActivity(root: string): Promise<ActivityState | null> {
+  if (await applicationDatabaseExists(root)) {
+    const state = await withApplicationDatabase(
+      root,
+      (db) => {
+        db.exec('BEGIN');
+        try {
+          const state = imported(db)
+            ? { ...readSnapshots(db), events: readEvents(db, root) }
+            : null;
+          db.exec('COMMIT');
+          return state;
+        } catch (error) {
+          db.exec('ROLLBACK');
+          throw error;
+        }
+      },
+      { readonly: true },
+    );
+    if (state) return state;
+  }
+  return readState(path.join(root, '.activity.json'));
+}
+/** JSON remains the portable interchange format; exporting never creates or migrates storage. */
+export async function exportActivity(root: string): Promise<ActivityState> {
+  return structuredClone((await storedActivity(await realpath(root))) || emptyState());
 }
 const normalizeState = (state: string) =>
   state === 'understood' || state === 'read' ? 'organized' : state === 'unread' ? 'pending' : state;
@@ -177,11 +359,12 @@ export async function reconcileDocumentStates(
   library: Library,
   readLibrary?: () => Promise<Library>,
 ): Promise<Library> {
-  const previous = await readState(path.join(root, '.activity.json'));
+  // Reconciliation precedes first observation, so an existing legacy baseline must remain available.
+  const previous = await readDocumentSnapshots(root);
   if (!previous) return library;
   let current = library;
   for (const doc of library.documents) {
-    const old = Object.hasOwn(previous.documents, doc.id) ? previous.documents[doc.id] : null;
+    const old = Object.hasOwn(previous, doc.id) ? previous[doc.id] : null;
     if (!old || normalizeState(old.state ?? '') !== 'organized' || doc.state !== 'organized')
       continue;
     // updated_at marks a substantive revision; links, formatting and minor edits keep it.
@@ -200,6 +383,17 @@ export async function reconcileDocumentStates(
   }
   return current;
 }
+async function readDocumentSnapshots(root: string): Promise<ActivityState['documents'] | null> {
+  if (await applicationDatabaseExists(root)) {
+    const documents = await withApplicationDatabase(
+      root,
+      (db) => (imported(db) ? readSnapshots(db).documents : null),
+      { readonly: true },
+    );
+    if (documents) return documents;
+  }
+  return (await readState(path.join(root, '.activity.json')))?.documents || null;
+}
 
 export async function activityForLibrary(
   root: string,
@@ -207,133 +401,165 @@ export async function activityForLibrary(
   { observe = false, publicExport = false, now = beijingTimestamp() } = {},
 ) {
   root = await realpath(root);
-  const file = path.join(root, '.activity.json');
-  let release: (() => Promise<void>) | undefined;
   try {
-    if (observe) {
-      release = await acquireActivityLock(file);
-    }
-    const previous = await readState(file);
+    let result: LibraryActivity;
     if (!observe) {
-      const result = publicActivity(
+      const previous = await storedActivity(root);
+      result = publicActivity(
         previous || { events: metadataEvents(library.documents), startedAt: null },
         library.documents,
       );
-      if (publicExport) {
-        const images = new Set<string>();
-        for (const doc of library.documents)
-          for (const match of doc.html.matchAll(/\/api\/asset\?[^"\s<>]+/g)) {
-            const url = new URL(match[0].replaceAll('&amp;', '&'), 'http://local');
-            const asset = await safeAsset(root, url.searchParams.get('path') || '', doc.path);
-            if (asset) images.add(`image:${groupId(asset.path)}`);
+    } else {
+      // Finish all file I/O before acquiring SQLite's synchronous write transaction.
+      const documents = Object.fromEntries(
+        library.documents.map((doc) => [
+          doc.id,
+          {
+            title: doc.title,
+            collection: doc.collection,
+            state: doc.state,
+            digest: hash(doc.title + '\n' + doc.body),
+            bodyDigest: hash(doc.body),
+            updatedAt: doc.updated,
+          },
+        ]),
+      );
+      const images = await imageSnapshot(root, library.documents);
+      const legacy = (await needsImport(root))
+        ? await readState(path.join(root, '.activity.json'))
+        : null;
+      const observed = await withApplicationDatabase(root, (db) =>
+        withTransaction(db, () => {
+          const fresh = !imported(db);
+          if (fresh)
+            initializeActivity(
+              db,
+              legacy || {
+                schema: 1,
+                startedAt: now,
+                documents,
+                images,
+                events: metadataEvents(library.documents),
+              },
+            );
+          const previous = readSnapshots(db);
+          const firstObservation =
+            db.prepare("SELECT value FROM app_metadata WHERE key = 'activity_observed'").get()
+              ?.value === '0';
+          const comparisonDocuments = firstObservation ? documents : previous.documents;
+          const comparisonImages = firstObservation ? images : previous.images;
+          const events: ActivityEvent[] = firstObservation ? metadataEvents(library.documents) : [];
+          const emit = (
+            kind: ActivityKind,
+            entity: string,
+            item: { title: string; collections?: string[]; collection?: string },
+            extra: Partial<ActivityEvent> = {},
+          ) =>
+            events.push({
+              id: randomUUID(),
+              kind,
+              entity,
+              title: item.title,
+              time: now,
+              collections: item.collections || [item.collection!],
+              source: 'observed',
+              ...extra,
+            });
+          for (const [id, doc] of Object.entries(documents)) {
+            const old = Object.hasOwn(comparisonDocuments, id) ? comparisonDocuments[id] : null;
+            if (!old) emit('created', `doc:${id}`, doc, { docId: id });
+            else {
+              if (old.collection !== doc.collection)
+                emit('moved', `doc:${id}`, doc, {
+                  docId: id,
+                  from: old.collection,
+                  to: doc.collection,
+                  collections: [...new Set([old.collection, doc.collection])],
+                });
+              if (
+                old.collection === doc.collection &&
+                old.state != null &&
+                doc.state != null &&
+                normalizeState(old.state) !== doc.state
+              )
+                emit('state-changed', `doc:${id}`, doc, {
+                  docId: id,
+                  from: normalizeState(old.state),
+                  to: doc.state,
+                });
+              if (old.digest !== doc.digest) emit('updated', `doc:${id}`, doc, { docId: id });
+            }
           }
-        result.events = result.events.filter((e) => e.docId || images.has(e.entity));
-        // Static exports expose counts and referenced identities, not unreferenced source filenames.
-        result.events = result.events.map(({ files, ...event }) => event);
-        result.version = hash(JSON.stringify(result.events));
-      }
-      return result;
-    }
-    const documents = Object.fromEntries(
-      library.documents.map((doc) => [
-        doc.id,
-        {
-          title: doc.title,
-          collection: doc.collection,
-          state: doc.state,
-          digest: hash(doc.title + '\n' + doc.body),
-          bodyDigest: hash(doc.body),
-          updatedAt: doc.updated,
-        },
-      ]),
-    );
-    const images = await imageSnapshot(root, library.documents);
-    const state = {
-      schema: 1,
-      startedAt: previous?.startedAt || now,
-      documents,
-      images,
-      events: previous?.events || metadataEvents(library.documents),
-    };
-    const emit = (
-      kind: ActivityKind,
-      entity: string,
-      item: { title: string; collections?: string[]; collection?: string },
-      extra: Partial<ActivityEvent> = {},
-    ) =>
-      state.events.push({
-        id: randomUUID(),
-        kind,
-        entity,
-        title: item.title,
-        time: now,
-        collections: item.collections || [item.collection!],
-        source: 'observed',
-        ...extra,
-      });
-    if (previous) {
-      for (const [id, doc] of Object.entries(documents)) {
-        const old = Object.hasOwn(previous.documents, id) ? previous.documents[id] : null;
-        if (!old) emit('created', `doc:${id}`, doc, { docId: id });
-        else {
-          if (old.collection !== doc.collection)
-            emit('moved', `doc:${id}`, doc, {
-              docId: id,
-              from: old.collection,
-              to: doc.collection,
-              collections: [...new Set([old.collection, doc.collection])],
-            });
-          if (
-            old.collection === doc.collection &&
-            old.state != null &&
-            doc.state != null &&
-            normalizeState(old.state) !== doc.state
-          )
-            emit('state-changed', `doc:${id}`, doc, {
-              docId: id,
-              from: normalizeState(old.state),
-              to: doc.state,
-            });
-          if (old.digest !== doc.digest) emit('updated', `doc:${id}`, doc, { docId: id });
-        }
-      }
-      for (const [id, image] of Object.entries(images)) {
-        const old = Object.hasOwn(previous.images, id) ? previous.images[id] : null;
-        if (!old) emit('image-created', `image:${id}`, image, { files: Object.keys(image.files) });
-        else {
-          const added = Object.keys(image.files).filter((file) => !Object.hasOwn(old.files, file));
-          const changed = Object.keys(image.files).filter(
-            (file) => Object.hasOwn(old.files, file) && old.files[file] !== image.files[file],
+          for (const [id, image] of Object.entries(images)) {
+            const old = Object.hasOwn(comparisonImages, id) ? comparisonImages[id] : null;
+            if (!old)
+              emit('image-created', `image:${id}`, image, { files: Object.keys(image.files) });
+            else {
+              const added = Object.keys(image.files).filter(
+                (file) => !Object.hasOwn(old.files, file),
+              );
+              const changed = Object.keys(image.files).filter(
+                (file) => Object.hasOwn(old.files, file) && old.files[file] !== image.files[file],
+              );
+              if (added.length) emit('image-format', `image:${id}`, image, { files: added });
+              if (changed.length) emit('image-updated', `image:${id}`, image, { files: changed });
+            }
+          }
+          const changedDocuments = updateSnapshots(
+            db,
+            'activity_documents',
+            previous.documents,
+            documents,
           );
-          if (added.length) emit('image-format', `image:${id}`, image, { files: added });
-          if (changed.length) emit('image-updated', `image:${id}`, image, { files: changed });
+          const changedImages = updateSnapshots(db, 'activity_images', previous.images, images);
+          if (events.length) appendEvents(db, events);
+          if (firstObservation) putMetadata(db, 'activity_observed', '1');
+          if (!previous.startedAt) putMetadata(db, 'activity_started_at', JSON.stringify(now));
+          if (events.length || changedDocuments || changedImages || !previous.startedAt)
+            putMetadata(db, 'activity_revision', randomUUID());
+          const revision = metadata(db, 'activity_revision');
+          const key = `${revision}:${library.version}`;
+          const cached = publicCache.get(root);
+          if (cached?.key === key) return cached.activity;
+          const activity = publicActivity(
+            { startedAt: previous.startedAt || now, events: readEvents(db, root) },
+            library.documents,
+          );
+          // Cache publication occurs after the synchronous transaction has committed below.
+          return { activity, key };
+        }),
+      );
+      if ('activity' in observed) {
+        publicCache.set(root, observed);
+        result = observed.activity;
+      } else result = observed;
+    }
+    if (publicExport) {
+      const images = new Set<string>();
+      for (const doc of library.documents)
+        for (const match of doc.html.matchAll(/\/api\/asset\?[^"\s<>]+/g)) {
+          const url = new URL(match[0].replaceAll('&amp;', '&'), 'http://local');
+          const asset = await safeAsset(root, url.searchParams.get('path') || '', doc.path);
+          if (asset) images.add(`image:${groupId(asset.path)}`);
         }
-      }
+      // Static exports expose counts and referenced identities, not unreferenced source filenames.
+      const events = result.events
+        .filter((e) => e.docId || images.has(e.entity))
+        .map(({ files, ...event }) => event);
+      return { ...result, events, version: hash(JSON.stringify(events)) };
     }
-    if (JSON.stringify(state) !== JSON.stringify(previous)) {
-      const temp = `${file}.${randomUUID()}.tmp`;
-      try {
-        await writeFile(temp, JSON.stringify(state, null, 2) + '\n', { flag: 'wx', mode: 0o600 });
-        await rename(temp, file);
-      } finally {
-        await unlink(temp).catch((e) => {
-          if (e.code !== 'ENOENT') throw e;
-        });
-      }
-    }
-    return publicActivity(state, library.documents);
+    return result;
   } catch (error) {
+    historyCache.delete(root);
+    publicCache.delete(root);
     return {
       ...publicActivity(
         { events: metadataEvents(library.documents), startedAt: null },
         library.documents,
       ),
-      error:
-        (error as NodeJS.ErrnoException).code === 'EEXIST'
-          ? '活动记录正被其他服务使用，稍后自动重试。'
-          : '活动记录暂不可用，当前仅展示文档日期；原记录已保留。',
+      error: /locked|busy/i.test(String(error))
+        ? '活动记录正被其他服务使用，稍后自动重试。'
+        : '活动记录暂不可用，当前仅展示文档日期；原记录已保留。',
     };
-  } finally {
-    await release?.();
   }
 }

@@ -13,6 +13,8 @@ import {
 } from '../review-model.ts';
 import {
   fetchReviews,
+  fetchReviewHistory,
+  confirmReviewRequest,
   reviewStorageKey,
   reviewStorageLabel,
   updateReview,
@@ -139,9 +141,8 @@ export function useReviews(graph: ReaderGraph): ReviewController {
           const latestState = await fetchReviews(docsRef.current);
           if (alive.current) {
             publish(latestState);
-            const committed = Object.values(latestState.records).some((record) =>
-              record.history.some((event) => event.requestId === requestId),
-            );
+            const committed = await confirmReviewRequest(docsRef.current, requestId);
+            if (!alive.current) return false;
             if (committed) {
               retries.current.delete(key);
               setError('');
@@ -165,6 +166,17 @@ export function useReviews(graph: ReaderGraph): ReviewController {
     },
     [publish],
   );
+  const loadHistory = useCallback(
+    async (id: string, cursor = 0) => {
+      const page = await fetchReviewHistory(docsRef.current, id, cursor);
+      if (page.version !== current.current?.version) {
+        await refresh();
+        throw new ReviewError('复习记录已更新，请重新加载历史。');
+      }
+      return page;
+    },
+    [refresh],
+  );
   const queue = useMemo(
     () => reviewQueue(documents, state ?? emptyReviewState(), now),
     [documents, state, now],
@@ -185,6 +197,7 @@ export function useReviews(graph: ReaderGraph): ReviewController {
       );
     },
     refresh,
+    loadHistory,
     submit: (doc, rating) => save(doc, { rating }),
     present: (doc) => save(doc, { presented: true }),
     setPaused: (doc, paused) => save(doc, { paused }),

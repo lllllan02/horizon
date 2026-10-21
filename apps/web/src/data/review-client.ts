@@ -1,5 +1,15 @@
 import type { LibraryDocument } from '../types/library.ts';
-import { parseReviewState, ReviewError, type ReviewInput } from '../review-model.ts';
+import {
+  parseReviewState,
+  ReviewError,
+  type ReviewInput,
+  type ReviewState,
+} from '../review-model.ts';
+import {
+  mergeReviewUpdate,
+  parseReviewHistoryPage,
+  reviewHistoryPage,
+} from '../review-protocol.ts';
 import { localEditing } from './library-client.ts';
 import { createBrowserReviewStore } from './review-browser-store.ts';
 import { withBrowserReviewLock } from './review-browser-lock.ts';
@@ -17,8 +27,10 @@ const browserStore = () => {
   }
 };
 
-async function request(input?: ReviewInput) {
-  const response = await fetch('/api/reviews', {
+let snapshot: ReviewState | null = null;
+
+async function requestValue(url: string, input?: ReviewInput) {
+  const response = await fetch(url, {
     cache: 'no-store',
     ...(input
       ? {
@@ -39,13 +51,52 @@ async function request(input?: ReviewInput) {
         : '复习记录保存失败，请重试。';
     throw new ReviewError(message, response.status);
   }
-  return parseReviewState(value);
+  return value;
 }
 
-export function fetchReviews(documents: LibraryDocument[]) {
-  return localEditing ? request() : browserStore().load(documents);
+export async function fetchReviews(documents: LibraryDocument[]) {
+  if (!localEditing) return browserStore().load(documents);
+  snapshot = parseReviewState(await requestValue('/api/reviews'));
+  return snapshot;
 }
 
-export function updateReview(documents: LibraryDocument[], input: ReviewInput) {
-  return localEditing ? request(input) : browserStore().update(documents, input);
+export async function updateReview(documents: LibraryDocument[], input: ReviewInput) {
+  if (!localEditing) return browserStore().update(documents, input);
+  const value = await requestValue('/api/reviews', input);
+  let next: ReviewState | null;
+  try {
+    next = mergeReviewUpdate(snapshot, value);
+  } catch {
+    // The cached snapshot can differ in record ordering after a rename or external write.
+    return fetchReviews(documents);
+  }
+  if (!next) return fetchReviews(documents);
+  snapshot = next;
+  return next;
+}
+
+export async function fetchReviewHistory(documents: LibraryDocument[], id: string, cursor = 0) {
+  if (!localEditing) return reviewHistoryPage(await browserStore().load(documents), id, cursor);
+  const query = new URLSearchParams({ id, limit: '20' });
+  if (cursor) query.set('cursor', String(cursor));
+  return parseReviewHistoryPage(await requestValue(`/api/reviews/history?${query}`));
+}
+
+/** Summary snapshots deliberately omit old request IDs; confirm against persistent events. */
+export async function confirmReviewRequest(documents: LibraryDocument[], requestId: string) {
+  if (!localEditing) {
+    const state = await browserStore().load(documents);
+    return Object.values(state.records).some((record) =>
+      record.history.some((event) => event.requestId === requestId),
+    );
+  }
+  const value = await requestValue(`/api/reviews/request?${new URLSearchParams({ requestId })}`);
+  if (
+    typeof value !== 'object' ||
+    value === null ||
+    !('found' in value) ||
+    typeof value.found !== 'boolean'
+  )
+    throw new ReviewError('复习保存确认响应无效，请用原反馈重试。', 500);
+  return value.found;
 }

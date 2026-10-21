@@ -397,3 +397,33 @@ test('提前练习历史展示实际保留的计划，不按练习时间重新�
   assert.equal(row.history[0].plannedAt, dueAt);
   assert.equal(row.dueAt, dueAt);
 });
+
+test('轻量摘要使用全量评分计数，历史只含最近反馈也不影响汇总和排序', () => {
+  const state = stateOf(
+    record('a', [event('a-last', { rating: 'hard', reviewedAt: '2026-10-21T04:00:00Z' })], {
+      counts: { good: 30, hard: 5, forgot: 2 },
+    }),
+    record('b', [event('b-last')], { counts: { good: 8, hard: 1, forgot: 0 } }),
+  );
+  const stats = buildReviewStatistics([doc('a'), doc('b')], state, now, { sort: 'count' });
+  assert.deepEqual(
+    stats.rows.map((row) => row.doc.id),
+    ['a', 'b'],
+  );
+  assert.deepEqual(stats.totals, {
+    documents: 2,
+    reviewed: 2,
+    total: 46,
+    good: 38,
+    hard: 6,
+    forgot: 2,
+  });
+  assert.equal(stats.rows[0].history.length, 1);
+  assert.equal(stats.rows[0].total, 37);
+  assert.equal(stats.rows[0].reviewedToday, true);
+  assert.equal(
+    buildReviewStatistics([doc('a'), doc('b')], state, now, { period: 'reviewed-today' }).totals
+      .total,
+    37,
+  );
+});

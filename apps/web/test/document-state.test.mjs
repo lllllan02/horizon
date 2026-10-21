@@ -14,7 +14,8 @@ import path from 'node:path';
 import {loadLibrary, createLibraryLoader, parseDocument} from '../src/library.ts';
 import {updateDocumentState, patchDocumentState} from '../src/update-document-state.ts';
 import {documentAppearance, matchesDocumentFilter} from '../src/document-state.ts';
-import {activityForLibrary} from '../src/activity.ts';
+import {activityForLibrary,exportActivity} from '../src/activity.ts';
+import {withApplicationDatabase,APPLICATION_DATABASE} from '../src/app-database.ts';
 import {pagesLibrary} from '../scripts/build-pages.ts';
 async function fixture(t) {
   const root=await mkdtemp(path.join(os.tmpdir(),'horizon-state-'));
@@ -152,7 +153,8 @@ test('旧活动快照先建立实质更新基线，损坏快照不重写文档',
   await writeFile(file,'---\nupdated_at: "2026-01-01"\nlearning_status: organized\n---\n正文');
   await activityForLibrary(root,await loadLibrary(root),{observe:true});
   const activityFile=path.join(root,'.activity.json');
-  const state=JSON.parse(await readFile(activityFile,'utf8'));
+  const state=await exportActivity(root);
+  await rm(path.join(root,APPLICATION_DATABASE));
   delete state.documents.a.bodyDigest;
   delete state.documents.a.updatedAt;
   state.documents.a.state='understood';
@@ -162,7 +164,7 @@ test('旧活动快照先建立实质更新基线，损坏快照不重写文档',
   await activityForLibrary(root,await loadLibrary(root),{observe:true});
   await writeFile(file,(await readFile(file,'utf8')).replace('2026-01-01','2026-02-01')+'\n主要内容更新');
   assert.equal((await reconcileDocumentStates(root,await loadLibrary(root))).documents[0].state,'reading');
-  await writeFile(activityFile,'broken');
+  await withApplicationDatabase(root,db=>db.prepare('UPDATE activity_documents SET data = ? WHERE id = ?').run('broken','a'));
   const before=await readFile(file,'utf8');
   await assert.rejects(reconcileDocumentStates(root,await loadLibrary(root)),/JSON|Unexpected/);
   assert.equal(await readFile(file,'utf8'),before);
@@ -187,10 +189,9 @@ test('补链、换链、格式和小幅润色不降级，正文与更新时间�
   assert.equal(lib.documents[0].state,'organized');
   // Missing or invalid revision history also must not guess.
   for (const value of [null, 'unknown']) {
-    const activityFile=path.join(root,'.activity.json');
-    const snapshot=JSON.parse(await readFile(activityFile,'utf8'));
+    const snapshot=await exportActivity(root);
     snapshot.documents.a.updatedAt=value;
-    await writeFile(activityFile,JSON.stringify(snapshot));
+    await withApplicationDatabase(root,db=>db.prepare('UPDATE activity_documents SET data = ? WHERE id = ?').run(JSON.stringify(snapshot.documents.a),'a'));
     assert.equal((await reconcileDocumentStates(root,await loadLibrary(root))).documents[0].state,'organized');
   }
 });

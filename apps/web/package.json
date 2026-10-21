@@ -14,7 +14,8 @@
     "format": "prettier --config .prettierrc.json --write \"src/**/*.{ts,tsx}\" server.ts \"scripts/*.ts\" vite.config.ts playwright.config.ts \"e2e/**/*.ts\" tsconfig.json package.json \"../../scripts/*.ts\" \"test/**/*.ts\" ../../package.json",
     "format:check": "prettier --config .prettierrc.json --check \"src/**/*.{ts,tsx}\" server.ts \"scripts/*.ts\" vite.config.ts playwright.config.ts \"e2e/**/*.ts\" tsconfig.json package.json \"../../scripts/*.ts\" \"test/**/*.ts\" ../../package.json",
     "test:e2e": "playwright test",
-    "retrieve": "node --import tsx ../../scripts/retrieve.ts"
+    "retrieve": "node --import tsx ../../scripts/retrieve.ts",
+    "storage": "node --import tsx scripts/storage.ts"
   },
   "dependencies": {
     "d3-force-3d": "3.0.6",
@@ -28,7 +29,7 @@
     "vite": "7.3.6"
   },
   "engines": {
-    "node": ">=22.12.0"
+    "node": ">=22.13.0"
   },
   "license": "PolyForm-Noncommercial-1.0.0",
   "devDependencies": {

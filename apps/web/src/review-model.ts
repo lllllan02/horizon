@@ -24,6 +24,8 @@ export interface ReviewRecord {
   intervalDays: number;
   paused: boolean;
   history: ReviewEvent[];
+  /** Full rating totals when history contains only recent scheduling events. */
+  counts?: Record<ReviewRating, number>;
 }
 export interface ReviewState {
   version: string;
@@ -80,11 +82,11 @@ export const reviewDay = (now: number | string = Date.now()) =>
   new Date((typeof now === 'string' ? documentTime(now) : now) + 8 * 3_600_000)
     .toISOString()
     .slice(0, 10);
-const withVersion = (records: ReviewState['records']): ReviewState => ({
+export const reviewStateFromRecords = (records: ReviewState['records']): ReviewState => ({
   version: `reviews-1-${hash(JSON.stringify(records))}`,
   records,
 });
-export const emptyReviewState = (): ReviewState => withVersion({});
+export const emptyReviewState = (): ReviewState => reviewStateFromRecords({});
 
 /** Refuse corrupt or future formats rather than silently discarding history. */
 export function parseReviewState(value: unknown): ReviewState {
@@ -96,7 +98,7 @@ export function parseReviewState(value: unknown): ReviewState {
   // Validate the original representation before inspecting optional additions so
   // old files retain their exact version and need no destructive migration.
   const state = value as unknown as ReviewState;
-  if (withVersion(state.records).version !== state.version) return invalid();
+  if (reviewStateFromRecords(state.records).version !== state.version) return invalid();
   const requestIds = new Set<string>();
   for (const [id, record] of Object.entries(value.records)) {
     if (
@@ -130,6 +132,22 @@ export function parseReviewState(value: unknown): ReviewState {
       requestIds.add(event.requestId);
     }
     const reviews = record.history.filter((event: ReviewEvent) => event.rating !== undefined);
+    if (record.counts !== undefined) {
+      if (!object(record.counts)) return invalid();
+      for (const key of ['good', 'hard', 'forgot'] as const) {
+        const count = record.counts[key];
+        if (
+          typeof count !== 'number' ||
+          !Number.isSafeInteger(count) ||
+          count < reviews.filter((event: ReviewEvent) => event.rating === key).length
+        )
+          return invalid();
+      }
+      const counts = record.counts as Record<ReviewRating, number>;
+      const total = counts.good + counts.hard + counts.forgot;
+      if (!Number.isSafeInteger(total) || total > 0 !== (record.lastReviewedAt !== null))
+        return invalid();
+    }
     const last = reviews.at(-1);
     const lastPresented = record.history.findLast((event: ReviewEvent) => event.presented);
     if (
@@ -217,7 +235,7 @@ export function reconcileReviews(
       configurable: true,
     });
   }
-  const next = withVersion(records);
+  const next = reviewStateFromRecords(records);
   return next.version === state.version ? state : next;
 }
 
@@ -289,14 +307,24 @@ export function reviewQueue<T extends ReviewDocument>(
   const practice = [...scheduled].sort(
     (a, b) =>
       touched(a) - touched(b) ||
-      state.records[a.id].history.filter((event) => event.rating).length -
-        state.records[b.id].history.filter((event) => event.rating).length ||
+      reviewCount(state.records[a.id]) - reviewCount(state.records[b.id]) ||
       difficulty(a) - difficulty(b) ||
       repeatedCategory(a) - repeatedCategory(b) ||
       stable(a, b),
   );
   paused.sort(stable);
   return { due, fresh, scheduled, paused, recommendations: [...due, ...fresh, ...practice] };
+}
+
+export function reviewCounts(record: ReviewRecord | undefined): Record<ReviewRating, number> {
+  if (record?.counts) return record.counts;
+  const counts = { good: 0, hard: 0, forgot: 0 };
+  for (const event of record?.history ?? []) if (event.rating) counts[event.rating]++;
+  return counts;
+}
+export function reviewCount(record: ReviewRecord | undefined) {
+  const counts = reviewCounts(record);
+  return counts.good + counts.hard + counts.forgot;
 }
 
 export function nextReviewInterval(record: ReviewRecord | undefined, value: ReviewRating) {
@@ -319,12 +347,8 @@ export function reviewSchedule(record: ReviewRecord | undefined, value: ReviewRa
   };
 }
 
-export function applyReview(
-  state: ReviewState,
-  documents: ReviewDocument[],
-  input: ReviewInput,
-  now = Date.now(),
-): ReviewState {
+/** Validate before looking up a request ID, including idempotent database retries. */
+export function validateReviewInput(input: unknown): asserts input is ReviewInput {
   if (
     !object(input) ||
     typeof input.version !== 'string' ||
@@ -334,6 +358,15 @@ export function applyReview(
     !action(input)
   )
     throw new ReviewError('复习参数无效。', 400);
+}
+
+export function applyReview(
+  state: ReviewState,
+  documents: ReviewDocument[],
+  input: ReviewInput,
+  now = Date.now(),
+): ReviewState {
+  validateReviewInput(input);
   for (const record of Object.values(state.records)) {
     const previous = record.history.find((event) => event.requestId === input.requestId);
     if (previous) {
@@ -354,6 +387,8 @@ export function applyReview(
     throw new ReviewError('文章已更新，请重新查看后反馈。');
   const reconciled = reconcileReviews(state, documents, now);
   const record = reconciled.records[doc.id];
+  if (input.rating && record.counts && !Number.isSafeInteger(reviewCount(record) + 1))
+    throw new ReviewError('复习次数已超出可保存范围，原记录已保留。', 500);
   const reviewing = input.rating || input.presented;
   if (reviewing && record.paused) throw new ReviewError('请先恢复这篇资料的复习。');
   const reviewedAt = beijingTimestamp(now);
@@ -374,6 +409,9 @@ export function applyReview(
   const next: ReviewRecord = {
     ...record,
     intervalDays,
+    ...(record.counts && input.rating
+      ? { counts: { ...record.counts, [input.rating]: record.counts[input.rating] + 1 } }
+      : {}),
     ...(input.rating
       ? { lastReviewedAt: reviewedAt, dueAt: schedule!.dueAt }
       : input.presented
@@ -393,5 +431,5 @@ export function applyReview(
       },
     ],
   };
-  return withVersion({ ...reconciled.records, [doc.id]: next });
+  return reviewStateFromRecords({ ...reconciled.records, [doc.id]: next });
 }

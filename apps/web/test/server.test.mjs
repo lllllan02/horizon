@@ -6,9 +6,10 @@ import os from 'node:os';
 import { startServer } from '../server.ts';
 import { parseLibrary } from '../src/data/library-schema.ts';
 import { loadLibrary } from '../src/library.ts';
-import { activityForLibrary } from '../src/activity.ts';
+import { activityForLibrary, exportActivity } from '../src/activity.ts';
+import { APPLICATION_DATABASE } from '../src/app-database.ts';
 
-test('旧活动锁残留后恢复快照，修改过的已整理文档可以重新确认且不会弹回', async t => {
+test('旧JSON及遗留活动锁迁入SQLite，修改过的已整理文档可以重新确认且不会弹回', async t => {
   const root=await mkdtemp(path.join(os.tmpdir(),'horizon-stale-lock-'));
   t.after(()=>rm(root,{recursive:true,force:true}));
   await mkdir(path.join(root,'notes'));
@@ -16,7 +17,8 @@ test('旧活动锁残留后恢复快照，修改过的已整理文档可以重�
   await writeFile(file,'---\ntitle: WAL\nlearning_status: understood\n---\n旧正文');
   await activityForLibrary(root,await loadLibrary(root),{observe:true});
   const activityFile=path.join(root,'.activity.json');
-  const old=JSON.parse(await readFile(activityFile,'utf8'));
+  const old=await exportActivity(root);
+  await rm(path.join(root,APPLICATION_DATABASE));
   delete old.documents.wal.bodyDigest;
   await writeFile(activityFile,JSON.stringify(old));
   await writeFile(file,'---\ntitle: WAL\nlearning_status: reading\n---\n新正文');
@@ -44,6 +46,8 @@ test('旧活动锁残留后恢复快照，修改过的已整理文档可以重�
   }
   assert.match(await readFile(file,'utf8'),/learning_status: organized/);
   assert.match(await readFile(file,'utf8'),/新正文$/);
+  assert.deepEqual(JSON.parse(await readFile(activityFile,'utf8')),old);
+  assert.equal((await exportActivity(root)).documents.wal.state,'organized');
 });
 
 test('本地接口条件请求、内容刷新、版本冲突和状态写回保持一致', async t => {

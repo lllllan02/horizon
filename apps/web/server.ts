@@ -11,8 +11,9 @@ import { createServer as createViteServer } from 'vite';
 import { createReaderFrontend } from './src/reader-frontend.ts';
 import { createLibraryLoader, safeAsset } from './src/library.ts';
 import { activityForLibrary, reconcileDocumentStates } from './src/activity.ts';
-import { ReviewError } from './src/review-model.ts';
-import { reviewStore } from './src/review-store.ts';
+import { ReviewError, type ReviewState } from './src/review-model.ts';
+import { reviewStore, reviewHistory, reviewRequest } from './src/review-store.ts';
+import { createReviewUpdate } from './src/review-protocol.ts';
 import {
   updateDocumentState,
   StateError,
@@ -79,8 +80,8 @@ export async function startServer({
   const server = http.createServer(async (req, res) => {
     try {
       const url = new URL(req.url || '/', 'http://localhost');
-      if (url.pathname === '/api/reviews') {
-        if (req.method !== 'GET' && req.method !== 'POST') {
+      if (['/api/reviews', '/api/reviews/history', '/api/reviews/request'].includes(url.pathname)) {
+        if (req.method !== 'GET' && (req.method !== 'POST' || url.pathname !== '/api/reviews')) {
           res.writeHead(405, headers);
           return res.end();
         }
@@ -96,6 +97,24 @@ export async function startServer({
           res.writeHead(403, { ...headers, 'Content-Type': 'application/json' });
           return res.end(JSON.stringify({ error: '复习记录只允许本机同源页面访问。' }));
         }
+        if (url.pathname !== '/api/reviews') {
+          const result = await serialize(async () => {
+            if (url.pathname === '/api/reviews/request')
+              return reviewRequest(root, url.searchParams.get('requestId') || '');
+            const cursor = Number(url.searchParams.get('cursor') || 0);
+            const limit = Number(url.searchParams.get('limit') || 20);
+            if (!Number.isSafeInteger(cursor) || cursor < 0)
+              throw new ReviewError('复习历史分页参数无效。', 400);
+            return reviewHistory(
+              root,
+              url.searchParams.get('id') || '',
+              cursor || undefined,
+              limit,
+            );
+          });
+          res.writeHead(200, { ...headers, 'Content-Type': 'application/json; charset=utf-8' });
+          return res.end(JSON.stringify(result));
+        }
         let input: unknown;
         if (req.method === 'POST') {
           let body = '';
@@ -110,7 +129,15 @@ export async function startServer({
           }
         }
         // Review traffic must never run the activity/state reconciliation writer.
-        const result = await serialize(() => reviewStore(root, readLibrary, input));
+        const result = await serialize(async () => {
+          if (req.method === 'GET') return reviewStore(root, readLibrary);
+          let before: ReviewState | undefined;
+          const next = await reviewStore(root, readLibrary, input, (state) => {
+            before = state;
+          });
+          if (!before) throw new ReviewError('复习记录未能确认，请重新读取后重试。', 500);
+          return createReviewUpdate(before, next);
+        });
         res.writeHead(200, { ...headers, 'Content-Type': 'application/json; charset=utf-8' });
         return res.end(JSON.stringify(result));
       }

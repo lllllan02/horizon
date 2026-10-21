@@ -10,6 +10,7 @@ import {
   reviewDay,
   reviewFingerprint,
   reviewQueue,
+  reviewStateFromRecords,
   type ReviewDocument,
   type ReviewInput,
   type ReviewState,
@@ -480,4 +481,37 @@ test('今日所有到期资料都展示后仍按展示先后轮转，不反复�
   }
   assert.deepEqual(order, ['a', 'b', 'c', 'a', 'b', 'c', 'a']);
   assert.equal(state.records.a.lastReviewedAt, beijingTimestamp(now - 5 * day));
+});
+
+test('摘要计数验证并随评分增量更新，推荐轮转使用全量次数', () => {
+  const documents = [doc('a'), doc('b')];
+  let state = reconcileReviews(emptyReviewState(), documents, now);
+  state = submit(state, documents, 'a');
+  state = submit(state, documents, 'b');
+  const a = { ...state.records.a, counts: { good: 10, hard: 3, forgot: 2 } };
+  const b = { ...state.records.b, counts: { good: 2, hard: 0, forgot: 0 } };
+  const summary = reviewStateFromRecords({ a, b });
+  assert.equal(parseReviewState(summary), summary);
+  assert.deepEqual(
+    reviewQueue(documents, summary, now).recommendations.map((item) => item.id),
+    ['b', 'a'],
+  );
+  const next = submit(summary, documents, 'a', { rating: 'hard' });
+  assert.deepEqual(next.records.a.counts, { good: 10, hard: 4, forgot: 2 });
+  assert.equal(parseReviewState(next), next);
+  assert.deepEqual(summary.records.a.counts, { good: 10, hard: 3, forgot: 2 });
+  const paused = submit(next, documents, 'a', { rating: undefined, paused: true });
+  assert.deepEqual(paused.records.a.counts, next.records.a.counts);
+  for (const counts of [
+    { good: -1, hard: 0, forgot: 0 },
+    { good: 0, hard: 0, forgot: 0 },
+    { good: 1.5, hard: 0, forgot: 0 },
+    { good: Number.MAX_SAFE_INTEGER + 1, hard: 0, forgot: 0 },
+    { good: Number.MAX_SAFE_INTEGER, hard: 1, forgot: 0 },
+    { good: 1, hard: 0 },
+  ])
+    assert.throws(
+      () => parseReviewState(reviewStateFromRecords({ a: { ...a, counts } as typeof a })),
+      /格式/,
+    );
 });

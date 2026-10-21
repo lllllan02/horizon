@@ -3,6 +3,7 @@ import { mkdtemp, mkdir, writeFile, readFile, rm } from 'node:fs/promises';
 import path from 'node:path';
 import os from 'node:os';
 import { startServer } from '../server.ts';
+import { exportReviews } from '../src/review-store.ts';
 
 let app: Awaited<ReturnType<typeof startServer>>;
 let root: string;
@@ -39,22 +40,20 @@ test('本机页面读写独立复习文件，打开和反馈均不改原文及�
     .getByRole('button', { name: '开始复习', exact: true })
     .click();
   await expect(review.locator('.markdown')).toHaveCount(0);
-  const before = JSON.parse(await readFile(path.join(root, '.reviews.json'), 'utf8'));
+  const before = await exportReviews(root);
   expect(before.records['local-review'].lastReviewedAt).toBeNull();
   await review.getByRole('button', { name: '查看原文', exact: true }).click();
   await expect(review.locator('.markdown')).toContainText('原文应完整保留');
   await review.getByRole('button', { name: /^记得/ }).click();
   await expect(review).toContainText('已保存，下次复习');
-  const after = JSON.parse(await readFile(path.join(root, '.reviews.json'), 'utf8'));
+  const after = await exportReviews(root);
   expect(after.records['local-review'].history).toHaveLength(1);
   expect(after.records['local-review'].history[0].rating).toBe('good');
   await review.getByRole('button', { name: '再来一轮', exact: true }).click();
   await expect(review.getByRole('button', { name: /^记得/ })).toBeEnabled();
   await review.getByRole('button', { name: /^记得/ }).click();
   await expect(review.locator('.db-review-saved')).toBeVisible();
-  const repeated = JSON.parse(await readFile(path.join(root, '.reviews.json'), 'utf8')).records[
-    'local-review'
-  ];
+  const repeated = (await exportReviews(root)).records['local-review'];
   expect(repeated.history).toHaveLength(2);
   expect(repeated.dueAt).toBe(after.records['local-review'].dueAt);
   expect(repeated.intervalDays).toBe(after.records['local-review'].intervalDays);
@@ -74,13 +73,9 @@ test('首页复习打开原阅读面板，完成后不改原文与状态', async
   await expect(dock.locator('.home-review-title')).toBeVisible();
   await expect(dock.getByRole('button', { name: '开始复习', exact: true })).toHaveCount(0);
   await expect
-    .poll(
-      async () =>
-        JSON.parse(await readFile(path.join(root, '.reviews.json'), 'utf8')).records['local-review']
-          .lastPresentedAt,
-    )
+    .poll(async () => (await exportReviews(root)).records['local-review'].lastPresentedAt)
     .toBeTruthy();
-  const before = JSON.parse(await readFile(path.join(root, '.reviews.json'), 'utf8'));
+  const before = await exportReviews(root);
   expect(before.records['local-review'].lastReviewedAt).toBeNull();
   expect(before.records['local-review'].dueAt).toBeNull();
   expect(await readFile(path.join(root, 'notes/local-review.md'), 'utf8')).toBe(original);
@@ -92,23 +87,22 @@ test('首页复习打开原阅读面板，完成后不改原文与状态', async
   await expect(dock.getByRole('button', { name: '记得', exact: true })).toBeEnabled();
   await expect(dock.getByRole('button', { name: '完成复习', exact: true })).toHaveCount(0);
   expect(await readFile(path.join(root, 'notes/local-review.md'), 'utf8')).toBe(original);
-  const after = JSON.parse(await readFile(path.join(root, '.reviews.json'), 'utf8'));
+  const after = await exportReviews(root);
   expect(
-    after.records['local-review'].history.find((event: { rating?: string }) => event.rating).rating,
+    after.records['local-review'].history.find((event: { rating?: string }) => event.rating)!
+      .rating,
   ).toBe('forgot');
   const scheduled = after.records['local-review'];
   await dock.getByRole('button', { name: '记得', exact: true }).click();
   await expect
     .poll(async () => {
-      const stored = JSON.parse(await readFile(path.join(root, '.reviews.json'), 'utf8'));
+      const stored = await exportReviews(root);
       return stored.records['local-review'].history.filter(
         (event: { rating?: string }) => event.rating,
       ).length;
     })
     .toBe(2);
-  const secondRound = JSON.parse(await readFile(path.join(root, '.reviews.json'), 'utf8')).records[
-    'local-review'
-  ];
+  const secondRound = (await exportReviews(root)).records['local-review'];
   expect(secondRound.dueAt).toBe(scheduled.dueAt);
   expect(secondRound.intervalDays).toBe(scheduled.intervalDays);
   await expect(dock.getByRole('button', { name: '进入下一题', exact: true })).toHaveCount(0);
@@ -139,13 +133,13 @@ test('本机重启服务后记住展示与完成，原文状态保持不变', as
     const first = await dock.locator('.home-review-title').innerText();
     await expect
       .poll(async () => {
-        const stored = JSON.parse(await readFile(path.join(dir, '.reviews.json'), 'utf8'));
+        const stored = await exportReviews(dir);
         return Object.values(stored.records).some(
           (record: unknown) => !!(record as { lastPresentedAt?: string }).lastPresentedAt,
         );
       })
       .toBe(true);
-    const displayed = JSON.parse(await readFile(path.join(dir, '.reviews.json'), 'utf8'));
+    const displayed = await exportReviews(dir);
     expect(
       Object.values(displayed.records).some(
         (record: unknown) => (record as { lastReviewedAt: string | null }).lastReviewedAt,
@@ -165,7 +159,7 @@ test('本机重启服务后记住展示与完成，原文状态保持不变', as
     await page.goto(serverURL());
     await expect(dock.locator('.home-review-title')).toBeVisible();
     await expect(dock.locator('.home-review-title')).not.toHaveText(remembered);
-    const stored = JSON.parse(await readFile(path.join(dir, '.reviews.json'), 'utf8'));
+    const stored = await exportReviews(dir);
     expect(
       Object.values(stored.records).filter(
         (record: unknown) => (record as { lastReviewedAt: string | null }).lastReviewedAt,

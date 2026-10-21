@@ -14,6 +14,7 @@ import {
   type ReviewStatisticsSort,
   type ReviewStatisticsStatus,
 } from './review-statistics-model.ts';
+import { ReviewHistory } from './ReviewHistory.tsx';
 import './review-statistics.css';
 
 const ratingLabels = { good: '记得', hard: '模糊', forgot: '忘了' } as const;
@@ -298,62 +299,12 @@ export function ReviewStatistics({
                       </dd>
                     </dl>
                   </div>
-                  <details className="db-rstat-history">
-                    <summary title="展开或收起复习历史" aria-label={`复习历史，共 ${row.total} 次`}>
-                      <svg
-                        aria-hidden="true"
-                        width="16"
-                        height="16"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="1.6"
-                      >
-                        <path d="m9 5 7 7-7 7" />
-                      </svg>
-                    </summary>
-                    <div className="db-rstat-history-content">
-                      <div className="db-rstat-history-heading">
-                        <h4>
-                          复习历史 <span>{row.total} 次</span>
-                        </h4>
-                        <span title="当时计划由该次反馈的时间与间隔计算，后续反馈或正文修订可能已调整。">
-                          按反馈时间倒序
-                        </span>
-                        <button
-                          type="button"
-                          className="db-text-button"
-                          disabled={reviews.pending}
-                          onClick={() => void reviews.setPaused(doc, row.status !== 'paused')}
-                        >
-                          {row.status === 'paused' ? '恢复复习' : '暂停复习'}
-                        </button>
-                      </div>
-                      {row.history.length ? (
-                        <ol>
-                          {row.history.map((event) => (
-                            <li key={event.requestId}>
-                              <time dateTime={event.reviewedAt}>
-                                {formatReviewTime(event.reviewedAt)}
-                              </time>
-                              <span className="db-rstat-rating" data-rating={event.rating}>
-                                {ratingLabels[event.rating]}
-                              </span>
-                              <span>间隔 {event.intervalDays} 天</span>
-                              <span>
-                                当时计划{' '}
-                                <time dateTime={event.plannedAt}>
-                                  {formatReviewTime(event.plannedAt)}
-                                </time>
-                              </span>
-                            </li>
-                          ))}
-                        </ol>
-                      ) : (
-                        <p className="db-rstat-note">尚无反馈记录，完成首次复习后会显示在这里。</p>
-                      )}
-                    </div>
-                  </details>
+                  <ReviewHistory
+                    doc={doc}
+                    total={row.total}
+                    paused={row.status === 'paused'}
+                    reviews={reviews}
+                  />
                 </article>
               );
             })}

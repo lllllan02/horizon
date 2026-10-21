@@ -1,3 +1,4 @@
+import type { ReviewHistoryPage } from '../review-protocol.ts';
 import type { LibraryDocument } from './library.ts';
 import type { ReviewRating, ReviewState } from '../review-model.ts';
 
@@ -17,6 +18,7 @@ export interface ReviewController {
   now: number;
   pendingRating(doc: LibraryDocument): ReviewRating | null;
   refresh(): Promise<void>;
+  loadHistory(id: string, cursor?: number): Promise<ReviewHistoryPage>;
   submit(doc: LibraryDocument, rating: ReviewRating): Promise<boolean>;
   present(doc: LibraryDocument): Promise<boolean>;
   setPaused(doc: LibraryDocument, paused: boolean): Promise<boolean>;

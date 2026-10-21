@@ -6,12 +6,18 @@ import { build } from 'vite';
 import { loadLibrary, safeAsset } from '../src/library.ts';
 const app = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
-export async function pagesLibrary(root: string, { includeActivity = false } = {}) {
+export async function pagesLibrary(
+  root: string,
+  {
+    includeActivity = false,
+    snapshotPath = null,
+  }: { includeActivity?: boolean; snapshotPath?: string | null } = {},
+) {
   const library = await loadLibrary(root),
     assets = new Map<string, string>();
   if (includeActivity) {
-    const { activityForLibrary } = await import('../src/activity.ts');
-    library.activity = await activityForLibrary(root, library, { publicExport: true });
+    const { loadPagesActivity } = await import('../src/pages-activity.ts');
+    library.activity = await loadPagesActivity(root, library, snapshotPath);
   }
   for (const doc of library.documents) {
     const urls = [...doc.html.matchAll(/(?:src|href)="(\/api\/asset\?[^" ]+)"/g)];
@@ -36,8 +42,12 @@ export async function pagesLibrary(root: string, { includeActivity = false } = {
 }
 
 export async function buildPages() {
+  const { PAGES_ACTIVITY_SNAPSHOT } = await import('../src/pages-activity.ts');
   const root = path.resolve(app, '../../content');
-  const { library, assets } = await pagesLibrary(root, { includeActivity: true });
+  const { library, assets } = await pagesLibrary(root, {
+    includeActivity: true,
+    snapshotPath: PAGES_ACTIVITY_SNAPSHOT,
+  });
   await build({ root: app, mode: 'pages' });
   const out = path.join(app, 'dist-pages');
   await writeFile(path.join(out, 'library.json'), JSON.stringify(library));
