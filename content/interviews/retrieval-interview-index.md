@@ -15,6 +15,7 @@ learning_status_changed_at: "2026-10-21 10:07:31.126"
 ## 知识库问答
 
 - [[rag-workflow-interview|RAG 的完整流程是什么？]]
+- [[rag-chunking-interview|RAG 的 chunk 策略怎么选？为什么？]]
 - [[rag-document-validity-interview|RAG 怎样处理资料过期或用户无权访问？]]
 
 ## 词项评分

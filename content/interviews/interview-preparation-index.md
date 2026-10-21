@@ -19,6 +19,7 @@ updated_at: "2026-10-20 17:03:51"
 - [[saparo-agent-preparation|Saparo 电商 Agent 岗位准备清单]]：购物任务、模型与上下文、订单支付集成、交付与效果验证。
 - [[aikan-go-preparation|爱看互动 Go 岗位准备清单]]：Go 与网络调优、分布式存储、架构取舍、前端交付和 AI 编程工具。
 - [[openhex-fullstack-preparation|迷境智塔 OpenHex 全栈岗位准备清单]]：Web 端到端交付、Agent 工具与知识库、生产可靠性及加分经历。
+- [[jingzhunxue-fullstack-preparation|精准学全栈岗位准备清单]]：教育 Agent、长连接消息、推理与检索性能、教育数据、多模态及 ML 协作。
 
 ## 资料与面经
 
