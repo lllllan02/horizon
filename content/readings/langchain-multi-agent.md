@@ -1,6 +1,6 @@
 ---
 title: "LangChain：子 Agent、交接与路由的分工"
-parent: multi-agent
+parent: multi-agent-organization
 category: "Agent"
 tags: ["Agent", "多Agent协作", "工程选型"]
 created_at: "2026-10-13 17:41:05"

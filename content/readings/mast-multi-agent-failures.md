@@ -1,6 +1,6 @@
 ---
 title: "MAST：多 Agent 系统为什么失败"
-parent: multi-agent
+parent: multi-agent-organization
 category: "Agent"
 tags: ["Agent", "多Agent协作", "评测"]
 created_at: "2026-10-13 17:41:05"

@@ -11,7 +11,7 @@ reading_suggestions:
 learning_status_changed_at: "2026-10-19 21:48:08.027"
 ---
 
-把[[multi-agent#调用与通信|子 Agent 包装成工具]]后，父层的工具下标只能定位到这个调用，无法表达子 Agent 内部执行到哪里。**需要将单份进度扩成父子调用链，每层保留自己的执行位置。**
+把[[multi-agent-organization|子 Agent 包装成工具]]后，父层的工具下标只能定位到这个调用，无法表达子 Agent 内部执行到哪里。**需要将单份进度扩成父子调用链，每层保留自己的执行位置。**
 
 以下沿用[[agent-checkpoint-runtime|单 Agent Loop 的字段]]，限定父层等待子层返回、各层工具串行执行。共同的持久化与恢复流程见[[agent-checkpoint-recovery|Checkpoint 总览]]。
 

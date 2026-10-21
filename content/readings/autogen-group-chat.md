@@ -1,6 +1,6 @@
 ---
 title: "AutoGen：群聊如何选择下一位 Agent"
-parent: multi-agent
+parent: multi-agent-organization
 category: "Agent"
 tags: ["Agent", "多Agent协作"]
 created_at: "2026-10-13 17:41:05"

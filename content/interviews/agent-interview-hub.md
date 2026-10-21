@@ -22,14 +22,18 @@ learning_status_changed_at: "2026-10-21 10:04:00.041"
 - [[agent-selection-interview|什么时候应该用 Agent，什么时候不需要？]]
 - [[agent-understanding-interview|你怎么理解 Agent 系统？]]
 - [[agent-design-interview|怎样设计一个 Agent？]]
-- [[react-interview|ReAct 的架构是什么？]]
+- [[react-interview|ReAct Agent 的原理是什么？]]
+- [[react-vs-plan-execute-interview|ReAct Agent 和 Plan-and-Execute 分别适合什么场景？]]
 
 ## 工具选择、执行与安全
 
 - [[agent-intent-interview|Agent 为什么知道调用哪个工具？怎么做意图识别？]]
+- [[tool-design-interview|工具怎么设计？]]
 - [[skill-dynamic-interview|Agent 平台按任务动态拼装 Skill 时，哪些内容应固定，哪些可以调整？]]
 - [[tool-calling-interview|Agent 如何执行工具调用，并处理参数异常与工具失败？]]
+- [[agent-output-format-interview|模型输出不符合格式要求，怎么约束？]]
 - [[tool-result-interview|工具或检索结果过大，怎么喂给大模型？]]
+- [[mcp-interview|MCP 是什么，解决了什么问题？]]
 - [[mcp-integration-interview|MCP 工具怎么接入？]]
 - [[agent-sandbox-interview|Agent 里为什么要做沙箱？]]
 
@@ -39,6 +43,7 @@ learning_status_changed_at: "2026-10-21 10:04:00.041"
 - [[parent-agent-interview|父子 Agent 之间如何交互和传递上下文？]]
 - [[agent-communication-interview|父子 Agent 和多 Agent 之间怎么通信？]]
 - [[agent-conflict-interview|多 Agent 协作发生冲突时怎么处理？]]
+- [[agent-task-ping-pong-interview|多 Agent 之间相互推诿任务怎么办？]]
 - [[a2a-interview|你对 A2A 协议了解多少？]]
 
 ## 任务进度与用户交互
@@ -48,8 +53,10 @@ learning_status_changed_at: "2026-10-21 10:04:00.041"
 - [[agent-followup-interview|Agent 执行中怎样接收用户的新要求？]]
 - [[agent-cancellation-interview|如何响应用户取消？]]
 
-## 记忆
+## 上下文与记忆
 
+- [[context-overflow-interview|对话上下文超出窗口怎么办？]]
+- [[agent-memory-types-interview|Agent 的记忆有哪些类型，分别怎么实现？]]
 - [[agent-memory-trigger-interview|Agent 什么时候启动记忆提取？]]
 - [[agent-memory-content-interview|什么内容值得保存为长期记忆？]]
 
@@ -64,5 +71,7 @@ learning_status_changed_at: "2026-10-21 10:04:00.041"
 
 ## 服务运行与排障
 
+- [[agent-trace-interview|Agent 的 Trace 怎么做，线上问题怎么定位？]]
+- [[agent-loop-interview|怎样避免 Agent 死循环和无限调用工具？]]
 - [[agent-memory-leak-interview|Agent 服务最常见的生产环境内存泄漏有哪几种？如何排查和修复？]]
 - [[agent-timeout-interview|模型调用响应慢，如何设计分层超时与熔断？高并发下怎么处理？]]
