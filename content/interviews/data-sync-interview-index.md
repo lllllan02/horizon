@@ -4,9 +4,10 @@ category: "数据处理"
 parent: interview-hub
 tags: ["面试", "数据同步"]
 type: overview
-learning_status: pending
+learning_status: organized
 created_at: "2026-10-20T14:35:14+08:00"
 updated_at: "2026-10-20T14:35:14+08:00"
+learning_status_changed_at: "2026-10-21T10:09:18.735+08:00"
 ---
 
 围绕全量初始化、增量捕获、目标写入和失败恢复，建立数据同步的基本认识。

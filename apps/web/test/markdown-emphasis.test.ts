@@ -65,6 +65,41 @@ test('中文引号与括号中的强调可紧接中文正文', () => {
   assert.match(render('正文**「[[target|重点]]」**后文').html, /正文<strong>「<a /);
 });
 
+test('加粗双链可紧接中文正文且保留链接原文与目标', () => {
+  for (const prefix of ['', '正文']) {
+    for (const label of ['Controller', '控制器', '控制器 *说明*']) {
+      const body = `${prefix}**[[target|${label}]]**负责管理集群。`;
+      const result = render(body);
+      assert.match(result.html, /<strong><a [^>]*href="#\/doc\/target"/);
+      assert.match(result.html, /<\/a><\/strong>负责管理集群。/);
+      assert.doesNotMatch(result.html, /\*\*/);
+      assert.match(result.html, /data-copy-source="\[\[target\|/);
+      assert.equal(result.body, body);
+      assert.equal(result.references.length, 1);
+      assert.equal(result.issues.length, 0);
+    }
+  }
+  assert.match(render('- **[[target|Controller]]**负责管理集群。').html, /<li><strong><a /);
+  assert.match(render('正文**[[target]]**。').html, /正文<strong><a /);
+  assert.match(render('正文*[[target]]*后文').html, /正文<em><a /);
+  assert.match(render('正文***[[target]]***后文').html, /正文<em><strong><a /);
+  assert.match(render('正文**强调 *[[target]]* 结论**后文').html, /<strong>强调 <em><a /);
+  for (const body of [
+    'a**[[target]]**b',
+    '__[[target]]__后文',
+    'a**`code`**b',
+    '正文**(重点)**后文',
+    '正文**[[target]]',
+    '正文**\\[[target|重点]]**后文',
+    '\\*\\*[[target]]\\*\\*后文',
+    '**[[target]]\\*\\*后文',
+    '`正文**[[target]]**后文`',
+    '**[[target]\n]**后文',
+  ]) {
+    assert.doesNotMatch(render(body).html, /<strong>/, body);
+  }
+});
+
 test('嵌套、转义、表格及围栏代码仍遵守原有语法', () => {
   assert.match(render('***\`代码\`***：').html, /<em><strong><code>代码<\/code><\/strong><\/em>/);
   assert.match(render('**重点 *强调* 结论**。').html, /<strong>重点 <em>强调<\/em> 结论<\/strong>/);

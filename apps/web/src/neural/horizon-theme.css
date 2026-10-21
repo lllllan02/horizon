@@ -70,6 +70,9 @@
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
+/* Emphasized links keep the surrounding strong weight instead of resetting to 500. */
+.galaxy-page .markdown strong a.wiki-link,
+.neural.link-preview .markdown strong a.wiki-link { font-weight: inherit; }
 .galaxy-page .markdown a.wiki-link:is(:hover, :focus-visible),
 .neural.link-preview .markdown a.wiki-link:is(:hover, :focus-visible),
 .galaxy-page .reader-parent a.wiki-link:is(:hover, :focus-visible) {

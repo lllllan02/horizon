@@ -4,7 +4,7 @@ category: "计算机基础"
 tags: ["内存管理"]
 learning_status: pending
 created_at: "2026-10-19T15:28:59+08:00"
-updated_at: "2026-10-19T16:01:44+08:00"
+updated_at: "2026-10-20T21:02:14+08:00"
 source:
   - "https://cwe.mitre.org/data/definitions/401.html"
   - "https://go.dev/doc/gc-guide#Tracing_garbage_collection"
@@ -80,3 +80,11 @@ go tool pprof -inuse_space -base heap-before.pprof ./server heap-after.pprof
 这里应先调查 `newCacheValue` 分配出来的数据去了哪里。例如发现它们被写入全局 map，就核对条目是否还有用途、是否设置容量上限及删除逻辑，并记录条目数验证是否与内存同步增长。**「增长定位到分配路径，泄漏判断还要核对对象是否已经无用」**；正常缓存预热或任务积压也会留下更多存活对象。
 
 差值表示这段时间各分配路径对应存活内存的净变化，不表示期间总共分配了多少；采样数值用于定位主要方向，不能把示例中的整数当作精确测量。对于已被 OOM 终止的进程，需要依赖之前保存的快照或复现采集。
+
+## 协程栈辅助定位
+
+[runtime/pprof 的 Profile 文档](https://pkg.go.dev/runtime/pprof#Profile)将 `goroutine` profile 定义为所有当前 goroutine 的栈；[Profile.WriteTo](https://pkg.go.dev/runtime/pprof#Profile.WriteTo)说明，`debug=2` 会按未恢复 panic 的形式打印 goroutine 栈。[HTTP pprof](https://pkg.go.dev/net/http/pprof)通过 `/debug/pprof/goroutine?debug=2` 提供对应的文本输出。
+
+基于这些信息，可以在多个时间点采集并对比栈，检查同一阻塞位置的协程是否不断增加，再回代码核对请求是否已经结束、取消是否被响应、任务是否还有退出路径。这是排查建议：**单次看到很多等待栈，只能说明当前状态；判断泄漏还需要确认任务本应退出。** 正常工作协程也可能长期等待任务，数量增加还可能来自正常负载或任务积压。
+
+本节官方文档核对于 2026-10-20；未对实际服务采集 profile，也未执行泄漏复现或修复实验。

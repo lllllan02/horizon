@@ -3,9 +3,10 @@ title: "怎么看 MySQL 的 EXPLAIN？"
 category: "MySQL"
 parent: mysql-interview-index
 tags: ["面试", "MySQL", "性能排查"]
-learning_status: pending
+learning_status: organized
 created_at: "2026-10-19T19:19:47+08:00"
 updated_at: "2026-10-19T19:19:47+08:00"
+learning_status_changed_at: "2026-10-21T10:11:19.586+08:00"
 ---
 
 [[mysql-slow-query-sources#执行计划要看工作量|EXPLAIN]] 展示优化器预计怎样执行 SQL。看传统表格输出时，先通过 `table` 确认对应的表，再重点看四个方面：

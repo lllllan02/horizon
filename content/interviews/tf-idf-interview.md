@@ -4,9 +4,10 @@ aliases: ["TF-IDF 原理面试题"]
 category: "信息检索"
 parent: retrieval-interview-index
 tags: ["面试", "检索", "全文检索"]
-learning_status: pending
+learning_status: organized
 created_at: "2026-10-18T21:37:01+08:00"
 updated_at: "2026-10-18T21:37:01+08:00"
+learning_status_changed_at: "2026-10-21T10:07:07.963+08:00"
 ---
 
 [[tf-idf|TF-IDF]] 是一种词项权重计算方法，用来衡量一个词对某篇文档有多重要。这些权重可以进一步用于计算查询和文档的相关性，支持搜索排序。

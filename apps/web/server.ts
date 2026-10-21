@@ -11,6 +11,8 @@ import { createServer as createViteServer } from 'vite';
 import { createReaderFrontend } from './src/reader-frontend.ts';
 import { createLibraryLoader, safeAsset } from './src/library.ts';
 import { activityForLibrary, reconcileDocumentStates } from './src/activity.ts';
+import { ReviewError } from './src/review-model.ts';
+import { reviewStore } from './src/review-store.ts';
 import {
   updateDocumentState,
   StateError,
@@ -77,6 +79,41 @@ export async function startServer({
   const server = http.createServer(async (req, res) => {
     try {
       const url = new URL(req.url || '/', 'http://localhost');
+      if (url.pathname === '/api/reviews') {
+        if (req.method !== 'GET' && req.method !== 'POST') {
+          res.writeHead(405, headers);
+          return res.end();
+        }
+        const reviewHost = req.headers.host || '';
+        const localReviewGet =
+          req.method === 'GET' &&
+          /^(?:127\.0\.0\.1|localhost):\d+$/.test(reviewHost) &&
+          (req.headers['sec-fetch-site'] === 'same-origin' ||
+            (!req.headers['sec-fetch-site'] &&
+              (req.headers.origin === `http://${reviewHost}` ||
+                req.headers.referer?.startsWith(`http://${reviewHost}/`))));
+        if (!localReviewGet && !isLocalWriteRequest(req)) {
+          res.writeHead(403, { ...headers, 'Content-Type': 'application/json' });
+          return res.end(JSON.stringify({ error: '复习记录只允许本机同源页面访问。' }));
+        }
+        let input: unknown;
+        if (req.method === 'POST') {
+          let body = '';
+          for await (const chunk of req) {
+            body += chunk;
+            if (Buffer.byteLength(body) > 4096) throw new ReviewError('请求过大。', 413);
+          }
+          try {
+            input = JSON.parse(body);
+          } catch {
+            throw new ReviewError('请求格式无效。', 400);
+          }
+        }
+        // Review traffic must never run the activity/state reconciliation writer.
+        const result = await serialize(() => reviewStore(root, readLibrary, input));
+        res.writeHead(200, { ...headers, 'Content-Type': 'application/json; charset=utf-8' });
+        return res.end(JSON.stringify(result));
+      }
       if (url.pathname === '/api/library') {
         if (req.method !== 'GET') {
           res.writeHead(405);
@@ -173,13 +210,16 @@ export async function startServer({
       });
     } catch (e) {
       console.error(e);
-      res.writeHead(e instanceof StateError ? e.status : 500, {
+      res.writeHead(e instanceof StateError || e instanceof ReviewError ? e.status : 500, {
         ...headers,
         'Content-Type': 'application/json',
       });
       res.end(
         JSON.stringify({
-          error: e instanceof StateError ? e.message : '操作失败，请检查本地终端。',
+          error:
+            e instanceof StateError || e instanceof ReviewError
+              ? e.message
+              : '操作失败，请检查本地终端。',
         }),
       );
     }

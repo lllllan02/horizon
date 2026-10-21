@@ -5,14 +5,15 @@ category: "Go"
 tags: ["Go", "调度", "GMP"]
 learning_status: pending
 created_at: "2026-10-19T17:31:03+08:00"
-updated_at: "2026-10-19T17:31:03+08:00"
+updated_at: "2026-10-20T18:36:58+08:00"
 source:
   - "https://go.dev/src/runtime/HACKING.md"
   - "https://go.dev/src/runtime/proc.go"
+  - "https://go.dev/src/runtime/asm_amd64.s"
   - "https://pkg.go.dev/runtime#GOMAXPROCS"
 ---
 
-Go 调度器把可运行的 goroutine、操作系统线程和执行资源配合起来，通过本地队列、全局队列及工作窃取分配任务。本导读节选官方资料中与 GMP 面试回答直接相关的机制，依据 2026-10-19 查阅的在线版本，未固定发布版本，未运行调度实验。
+Go 调度器把可运行的 [[coroutine#Go 的 goroutine|goroutine]]、[[thread|操作系统线程]]和执行资源配合起来，通过本地队列、全局队列及工作窃取分配任务；协程还使用可动态增缩的小栈。本导读节选官方资料中与 GMP 和协程开销面试回答直接相关的机制，依据 2026-10-19 至 20 日查阅的在线版本，未固定发布版本，未运行调度或性能实验。
 
 ## G、M、P 怎样配合
 
@@ -21,6 +22,12 @@ Go 调度器把可运行的 goroutine、操作系统线程和执行资源配合�
 M 执行用户 Go 代码时需要持有 P；执行系统调用时可以没有 P。P 可供不同 M 使用，调度状态因此不必与某个线程永久绑定。开发说明也指出，P 适合保存为效率而分片、又无须按线程或 goroutine 保存的状态。
 
 P 的数量等于当前 `GOMAXPROCS`。[runtime.GOMAXPROCS](https://pkg.go.dev/runtime#GOMAXPROCS)限制 Go 代码的 CPU 并行执行规模；它不限制 goroutine 总数，也不限制进程线程总数。存在阻塞于系统调用的线程时，M 的数量可以超过 P。
+
+## 小栈与用户态切换
+
+[HACKING 的 Stacks](https://go.dev/src/runtime/HACKING.md)说明，G 的用户栈从很小的空间开始，例如 2 KB，并可动态增长或收缩。因此，简单任务可以只使用较小的栈；这里的 2 KB 是示例，不能当作所有版本、平台和运行条件下固定的初始值，更不能当作协程的全部内存成本。
+
+[proc.go 的 execute](https://go.dev/src/runtime/proc.go#L3337)把 G 调度到当前 M 上执行，末尾调用 `gogo` 恢复上下文。[amd64 的 gogo](https://go.dev/src/runtime/asm_amd64.s#L400)恢复 G、栈指针和执行位置后跳转继续执行。由此可见，同一 M 上的这类 G 切换可在用户态完成，无须为切换 G 本身切换操作系统线程；阻塞系统调用、线程唤醒等仍可能涉及内核。这里核对了 amd64 路径，不据此给出跨平台的固定切换耗时。
 
 ## 本地队列、全局队列与窃取
 

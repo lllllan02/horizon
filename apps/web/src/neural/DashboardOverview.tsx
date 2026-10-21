@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 import type { ReaderDocumentNode, ReaderGraph } from '../types/graph.ts';
 import type { ReadingQueue } from '../types/reading.ts';
 import type { ReadingController } from '../types/ui.ts';
+import type { ReviewController } from '../types/review-ui.ts';
 import { collectionLabel } from '../collections.ts';
 import { stateLabel, type DocumentState } from '../document-state.ts';
 import { CollectionIcon } from './CollectionIcon.tsx';
@@ -48,6 +49,7 @@ export function DashboardOverview({
   graph,
   reading,
   queue,
+  reviews,
   today,
   openLibrary,
   openActivity,
@@ -56,6 +58,7 @@ export function DashboardOverview({
   graph: ReaderGraph;
   reading: ReadingController;
   queue: ReadingQueue;
+  reviews: ReviewController;
   today: string;
   openLibrary(): void;
   openActivity(day?: string): void;
@@ -128,6 +131,17 @@ export function DashboardOverview({
         <div className="db-reading-list">
           <div className="db-section-head">
             <h2>阅读书架</h2>
+            <a className="db-review-entry" href="#/dashboard/review">
+              今日复习
+              <span>
+                {reviews.loading
+                  ? '加载中…'
+                  : reviews.error
+                    ? '待重试'
+                    : `${reviews.queue.due.length + reviews.queue.fresh.length} 篇`}
+                <span aria-hidden="true"> →</span>
+              </span>
+            </a>
           </div>
           <div className="db-switch" aria-label="阅读书架列表">
             {[

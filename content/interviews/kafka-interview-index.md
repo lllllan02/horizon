@@ -4,9 +4,10 @@ category: "Kafka"
 parent: interview-hub
 tags: ["面试", "Kafka", "消息队列"]
 type: overview
-learning_status: pending
+learning_status: organized
 created_at: "2026-10-19T10:51:27+08:00"
 updated_at: "2026-10-19T21:42:14+08:00"
+learning_status_changed_at: "2026-10-21T10:14:24.946+08:00"
 ---
 
 围绕 Kafka 的设计与使用整理已保存的面试题，从整体架构开始，再了解高吞吐机制、分区数量的取舍、消息顺序保证、日志刷盘、写入可靠性、Offset 拉取与恢复，以及消费积压排查。

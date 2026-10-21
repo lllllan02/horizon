@@ -5,7 +5,7 @@
   .galaxy-page.galaxy-reading .analysis-wrap,
   .galaxy-page.galaxy-reading .analysis-wrap.full-reader {
     position: fixed; inset: 0; width: 100%; max-width: none;
-    height: 100dvh; border-radius: 0; border: 0;
+    height: calc(100dvh - 76px - env(safe-area-inset-bottom)); border-radius: 0; border: 0;
   }
   .galaxy-page.galaxy-reading .document-reader {
     height: 100%; border-radius: 0; border: 0;
@@ -32,14 +32,13 @@
   .galaxy-page.galaxy-reading .reader-toc-panel a { box-sizing: border-box; display: flex; align-items: center; font-size: 14px; }
   .galaxy-page.galaxy-reading .galaxy-header,
   .galaxy-page.galaxy-reading .galaxy-views,
-  .galaxy-page.galaxy-reading .galaxy-search-dock,
   .galaxy-page.galaxy-reading .workbench-mode,
   .galaxy-page.galaxy-reading .cluster-fan { visibility: hidden !important; }
   .galaxy-page.galaxy-reading.mobile-list-open .cluster-fan {
     visibility: visible !important; z-index: calc(var(--layer-reader) + 1);
   }
   .galaxy-page.galaxy-reading.mobile-list-open .cluster-list {
-    position: fixed; inset: calc(var(--mobile-toolbar-height) + env(safe-area-inset-top)) 0 0;
+    position: fixed; inset: calc(var(--mobile-toolbar-height) + env(safe-area-inset-top)) 0 calc(76px + env(safe-area-inset-bottom));
     width: auto; height: auto; padding: 12px 16px calc(16px + env(safe-area-inset-bottom));
     background: var(--surface); box-sizing: border-box;
     padding-left: max(16px, env(safe-area-inset-left));

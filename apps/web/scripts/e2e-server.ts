@@ -91,6 +91,21 @@ const result = 1;
 `,
 );
 await writeFile(
+  path.join(root, 'notes/emphasis.md'),
+  `---
+title: 内链加粗验收
+category: 验收
+---
+# 内链加粗验收
+
+- **[[second|Controller]]**负责管理集群。
+- [[second|普通内链]]保留原有样式。
+- **普通加粗**用于比较字重。
+- 正文**[[second|中文紧贴内链]]**后文。
+- ***[[second|嵌套强调内链]]***仍然加粗。
+`,
+);
+await writeFile(
   path.join(root, 'notes/headings.md'),
   `---
 title: 标题层级验收
@@ -138,6 +153,8 @@ category: 验收
 ---
 # 回归终点
 终点正文。返回 [[first|回归起点]]。
+
+预览 [[emphasis|内链加粗验收]]。
 `,
 );
 await mkdir(path.join(root, 'assets'));

@@ -4,9 +4,10 @@ category: "信息检索"
 parent: interview-hub
 tags: ["面试", "检索"]
 type: overview
-learning_status: pending
+learning_status: organized
 created_at: "2026-10-18T23:14:14+08:00"
 updated_at: "2026-10-20T16:23:41+08:00"
+learning_status_changed_at: "2026-10-21T10:07:31.126+08:00"
 ---
 
 从知识库问答流程到词项评分、双路召回、结果融合与比例验证，整理检索相关的面试问题。

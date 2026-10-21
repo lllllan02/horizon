@@ -10,7 +10,7 @@ updated_at: "2026-10-19T17:31:03+08:00"
 learning_status_changed_at: "2026-10-19T21:49:19.755+08:00"
 ---
 
-[[go-gmp-sources|GMP]] 是 Go 运行时的调度模型，用来把大量 goroutine 调度到操作系统线程上执行，复用线程，并利用多核并行处理任务。
+[[go-gmp-sources|GMP]] 是 Go 运行时的调度模型，用来把大量 [[coroutine#Go 的 goroutine|goroutine]] 调度到[[thread|操作系统线程]]上执行，复用线程，并利用多核并行处理任务。
 
 - **G 是 goroutine**，保存协程的栈、执行位置和状态。
 - **M 是操作系统线程**，负责实际执行代码。

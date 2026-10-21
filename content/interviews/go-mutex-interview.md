@@ -9,7 +9,7 @@ updated_at: "2026-10-19T16:12:35+08:00"
 learning_status_changed_at: "2026-10-19T16:18:34.657+08:00"
 ---
 
-这两种锁都是用来保护共享数据的，避免多个 goroutine 同时访问时出问题。
+这两种锁都是用来保护共享数据的，避免多个 [[coroutine#Go 的 goroutine|goroutine]] 同时访问时出问题。
 
 互斥锁就是 `sync.Mutex`，用 `Lock` 和 `Unlock`。可以理解成**「不管读还是写，一次只让一个 goroutine 进来，其他人先等着」**。
 

@@ -12,7 +12,7 @@ reading_suggestions:
   - mcp-flow
 ---
 
-**Streamable HTTP Client 通过 URL 连接已经运行的 MCP Server，发现工具并调用。** 它不启动 Server 子进程，其余调用逻辑与[[mcp-client|stdio Client]]相同。
+**Streamable HTTP Client 通过 URL 连接已经运行的 MCP Server，发现工具并调用。** 它不启动 Server [[process|子进程]]，其余调用逻辑与[[mcp-client|stdio Client]]相同。
 
 固定官方 Go SDK `v1.7.0`，要求 Go 1.25.0 或更新版本；代码尚未本地运行。接口依据[官方 HTTP 实现](https://github.com/modelcontextprotocol/go-sdk/blob/v1.7.0/mcp/streamable.go)。
 

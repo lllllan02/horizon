@@ -1,0 +1,48 @@
+.db-review { max-width: 1000px; margin: 0 auto; min-width: 0; }
+.db-review[data-review-panel=records] { max-width: 1180px; container: review-records / inline-size; }
+.db-review-storage { color: var(--db-dim); font-size: 10px; }
+.db-review-skip-note { color: var(--db-muted); font-size: 12px; margin-top: 16px !important; }
+.db-review-skip-note button { margin-left: 12px; }
+.db-review-session { max-width: 820px; margin: 0 auto; }
+.db-review-session-nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; border-bottom: 1px solid var(--db-line); margin-bottom: 28px; padding-bottom: 10px; font-size: 12px; color: var(--db-dim); }
+.db-review-session > h2 { font-size: clamp(25px,3vw,36px); font-weight: 500; line-height: 1.5; overflow-wrap: anywhere; margin-bottom: 24px; }
+.db-review-recall { padding: 24px 0 36px; color: var(--db-muted); line-height: 1.9; }
+.db-review-recall p + p { margin-top: 12px; }
+.db-review-recall .db-primary { margin-top: 28px; }
+.db-review-body { min-width: 0; padding-top: 8px; }
+/* Restore article rhythm after the dashboard's compact heading/list resets. */
+.workbench .db-review-body .markdown { font-size: 16px; line-height: 1.95; }
+.workbench .db-review-body .markdown p { margin: 0 0 20px; }
+.workbench .db-review-body .markdown :is(ul, ol) { margin: 0 0 22px; padding-left: 22px; }
+.workbench .db-review-body .markdown li p { margin-bottom: 8px; }
+.workbench .db-review-body .markdown h1 { margin: 1.8em 0 .8em; }
+.workbench .db-review-body .markdown h2 { margin: 2em 0 .85em; }
+.workbench .db-review-body .markdown h3 { margin: 1.8em 0 .75em; }
+.workbench .db-review-body .markdown > :is(h1,h2,h3):first-child { margin-top: 0; }
+.workbench .db-review-body .markdown blockquote p:last-child { margin-bottom: 0; }
+.workbench .db-review-body .markdown pre { max-width: 100%; font-size: 13px; }
+.workbench .db-review-body .markdown table { font-size: 13px; }
+.db-review-feedback { border-top: 1px solid var(--db-line); padding: 24px 0 16px; margin-top: 24px; }
+.db-review-feedback h3 { font-size: 17px; font-weight: 500; }
+.db-review-feedback p { font-size: 12px; color: var(--db-muted); margin-top: 8px; }
+.db-review-feedback > div { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; margin-top: 20px; }
+.db-review-feedback button { border: 1px solid var(--db-line); background: var(--db-panel); border-radius: 8px; min-height: 76px; padding: 12px 8px; display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.db-review-feedback button:hover:not(:disabled) { border-color: var(--db-accent); background: #bad5c612; }
+.db-review-feedback button[aria-pressed="true"] { border-color: var(--db-accent); background: #bad5c612; }
+.db-review-complete { border-top: 1px solid var(--db-line); padding: 24px 0; }
+.db-review-complete p { color: var(--db-muted); font-size: 13px; line-height: 1.8; margin-bottom: 16px; }
+.db-review-feedback strong { font-size: 14px; font-weight: 500; }
+.db-review-feedback span { font-size: 12px; color: var(--db-muted); }
+.db-review-saved { padding: 24px 0; color: var(--db-accent); }
+.db-review-saved .db-primary { margin-top: 16px; }
+.db-review-entry { display: inline-flex; gap: 8px; align-items: center; padding: 10px 0; min-height: 44px; font-size: 12px; white-space: nowrap; color: var(--db-accent) !important; }
+.db-review-entry:hover { text-decoration: underline; text-underline-offset: 4px; }
+@media (max-width: 600px) {
+  .db-review-session-nav { font-size: 11px; gap: 8px; }
+  .db-review-feedback > div { gap: 8px; }
+  .db-review-session > h2 { font-size: 26px; }
+}
+
+.db-review-entrybar { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
+.db-review-session .db-text-button { min-height: 44px; }
+.db-review-quota { margin-top: 6px !important; font-size: 12px; line-height: 1.6; color: var(--db-muted); }

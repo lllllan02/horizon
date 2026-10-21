@@ -76,7 +76,7 @@ test('看板独立地址支持刷新、前后退和直接进入，已移除内�
   const dashboard = page.locator('.workbench');
   await expect(page).toHaveURL(/#\/dashboard$/);
   const nav = dashboard.getByRole('navigation', { name: '看板视图' });
-  await expect(nav.getByRole('link')).toHaveCount(2);
+  await expect(nav.getByRole('link')).toHaveCount(3);
   await expect(nav.getByRole('link', { name: '内容地图' })).toHaveCount(0);
   await page.reload();
   await expect(dashboard).toBeVisible();

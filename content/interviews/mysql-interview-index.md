@@ -5,10 +5,10 @@ category: "MySQL"
 parent: interview-hub
 tags: ["面试", "MySQL"]
 type: overview
-learning_status: pending
+learning_status: organized
 created_at: "2026-10-18T12:06:30+08:00"
-updated_at: "2026-10-20T10:44:42+08:00"
-learning_status_changed_at: "2026-10-18T23:19:25.671+08:00"
+updated_at: "2026-10-20T21:14:30+08:00"
+learning_status_changed_at: "2026-10-21T10:11:21.744+08:00"
 ---
 
 按主题整理 MySQL 面试问题与追问，每道题保留简短、自然的口述回答，原理和排查细节由题目中的链接承接。
@@ -16,12 +16,16 @@ learning_status_changed_at: "2026-10-18T23:19:25.671+08:00"
 ## 事务与锁
 
 - [[database-isolation-interview|数据库有哪些事务隔离级别，分别解决什么问题？]]
+- [[mysql-mvcc-interview|为什么 MySQL InnoDB 使用 MVCC 实现事务隔离？]]
 - [[mysql-deadlock-interview|MySQL 遇到死锁，如何排查和优化修复？]]
   - [[mysql-deadlock-victim|发生死锁时，InnoDB 会回滚哪个事务？]]
 - [[mysql-transaction-retry|MySQL 事务失败后，哪些情况可以重试？怎么重试？]]
 
 ## 查询与性能
 
+- [[mysql-index-structure-interview|MySQL 的索引结构是什么？]]
+- [[mysql-covering-index-interview|什么是覆盖索引？]]
+- [[mysql-deep-pagination-interview|MySQL 深分页怎么优化？]]
 - [[mysql-slow-query-interview|MySQL 慢查询一般怎么优化？]]
 - [[mysql-explain-interview|怎么看 MySQL 的 EXPLAIN？]]
 

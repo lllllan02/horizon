@@ -1,5 +1,5 @@
 ---
-title: "Agent 怎样响应用户取消并处理迟到结果？"
+title: "如何响应用户取消？"
 aliases: ["Agent 取消传播与迟到结果处理"]
 category: "Agent"
 parent: agent-interview-hub

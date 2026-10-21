@@ -4,9 +4,10 @@ category: "Agent"
 parent: interview-hub
 tags: ["面试", "Agent"]
 type: overview
-learning_status: pending
+learning_status: organized
 created_at: "2026-10-18T23:14:14+08:00"
 updated_at: "2026-10-20T15:54:42+08:00"
+learning_status_changed_at: "2026-10-21T10:04:00.041+08:00"
 ---
 
 围绕 Agent 开发的求职动机、执行模式、工具选择、协作通信、用户交互、效果评测与服务运行问题整理面试题与回答。
@@ -37,13 +38,11 @@ updated_at: "2026-10-20T15:54:42+08:00"
 - [[agent-progress-interview|Agent 任务运行较久时，前端怎样展示执行进度？]]
 - [[agent-stream-recovery-interview|页面刷新或断线后，怎样恢复 Agent 任务和流式输出？]]
 - [[agent-followup-interview|Agent 执行中怎样接收用户的新要求？]]
-- [[agent-cancellation-interview|Agent 怎样响应用户取消并处理迟到结果？]]
-- [[agent-approval-interview|Agent 怎样保存待审批操作并在批准后恢复执行？]]
+- [[agent-cancellation-interview|如何响应用户取消？]]
 
 ## 状态保存与中断恢复
 
 - [[agent-checkpoint-interview|Agent 的 Checkpoint 怎么实现？]]
-- [[agent-checkpoint-failures-interview|Agent 在工具执行前后退出，怎样恢复并避免重复写入？]]
 - [[agent-upgrade-interview|Agent 升级 Prompt 或工具时，旧任务怎么办？]]
 
 ## 效果评测

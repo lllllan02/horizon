@@ -8,6 +8,8 @@ import { activityDay } from './activity-model.ts';
 import { dashboardData, DASHBOARD_STATES, docDate, shortDate } from './dashboard-data.ts';
 import { DashboardOverview } from './DashboardOverview.tsx';
 import { DashboardActivity } from './DashboardActivity.tsx';
+import { DashboardReview } from './DashboardReview.tsx';
+import type { ReviewController } from '../types/review-ui.ts';
 import './workbench.css';
 
 import { dashboardHref, type DashboardView } from './dashboard-route.ts';
@@ -21,6 +23,11 @@ const views = [
     icon: 'M3 3h7v7H3z M14 3h7v7h-7z M3 14h7v7H3z M14 14h7v7h-7z',
   },
   {
+    id: 'review',
+    title: '复习面板',
+    icon: 'M4 11a8 8 0 1 1 2 6 M4 4v7h7 M12 7v5l3 2',
+  },
+  {
     id: 'activity',
     title: '变更记录',
     icon: 'M4 5h16v16H4z M8 2v6 M16 2v6 M4 11h16 M8 15h2 M14 15h2',
@@ -31,6 +38,7 @@ export const Workbench = memo(function Workbench({
   hidden,
   reading,
   queue,
+  reviews,
   view,
   openLibrary,
 }: {
@@ -38,6 +46,7 @@ export const Workbench = memo(function Workbench({
   hidden: boolean;
   reading: ReturnType<typeof useReadingHistory>;
   queue: ReadingQueue;
+  reviews: ReviewController;
   view: DashboardView;
   openLibrary(): void;
 }) {
@@ -140,11 +149,13 @@ export const Workbench = memo(function Workbench({
             graph={graph}
             reading={reading}
             queue={queue}
+            reviews={reviews}
             today={today}
             openLibrary={openLibrary}
             openActivity={openActivity}
           />
         )}
+        {view === 'review' && !hidden && <DashboardReview graph={graph} reviews={reviews} />}
         {view === 'activity' && (
           <DashboardActivity
             graph={graph}

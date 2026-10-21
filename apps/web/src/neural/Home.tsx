@@ -11,6 +11,8 @@ import type { Focus, ReaderNode } from '../types/graph.ts';
 import type { Cluster } from '../types/reading.ts';
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { Workbench } from './Workbench.tsx';
+import { useReviews } from './useReviews.ts';
+import { HomeReviewCard, useHomeReview } from './HomeReview.tsx';
 import { dashboardRoute, dashboardHref } from './dashboard-route.ts';
 import { useViewState } from './useViewState.ts';
 import { validCluster, validPinnedList, validFocus } from './view-state.ts';
@@ -33,6 +35,8 @@ import '../motion/motion.css';
 import '../galaxy/galaxy.css';
 
 export function Home({ graph, focus, setFocus, reading, reduced, stateAction }: HomeProps) {
+  const reviews = useReviews(graph);
+  const homeReview = useHomeReview(reviews);
   const host = useRef<HTMLDivElement>(null),
     scene = useRef<ReturnType<typeof createGalaxy>>(null),
     searchInput = useRef<HTMLInputElement>(null);
@@ -181,11 +185,6 @@ export function Home({ graph, focus, setFocus, reading, reduced, stateAction }: 
     results: ReaderNode[];
     index: number;
   } | null>(null);
-  const [reviewId, setReviewId] = useViewState<string | null>(
-    'reviewId',
-    null,
-    (value) => value === null || typeof value === 'string',
-  );
   current.current = {
     focus,
     setFocus,
@@ -199,7 +198,6 @@ export function Home({ graph, focus, setFocus, reading, reduced, stateAction }: 
   };
   const documents = useMemo(() => graph.nodes.filter((node) => node.module), [graph]);
   const node = graph.index.get(focus.sel!);
-  const reviewNode = graph.index.get(reviewId!);
   // Keep the panel in place while its contents hand off to the next document.
   const reader = usePresence(
     isDocumentNode(node) ? { node, location: reading.location } : null,
@@ -230,11 +228,6 @@ export function Home({ graph, focus, setFocus, reading, reduced, stateAction }: 
     );
   }, [visualFocus.sel, visualFocus.mod, groupCluster]);
   const syncReaderLayout = useReaderLayout(reader.ref, scene, shownNode?.id);
-  const review = usePresence<ReaderNode | null, HTMLButtonElement>(
-    reviewNode?.module ? reviewNode : null,
-    reviewNode?.module ? reviewNode.id : null,
-    reduced,
-  );
   const go = (id: string, keepCluster = false) => {
     const target = graph.index.get(id);
     if (!target?.module) return;
@@ -243,17 +236,6 @@ export function Home({ graph, focus, setFocus, reading, reduced, stateAction }: 
     setSearchOpen(false);
     searchInput.current?.blur();
     setFocus({ mod: moduleOf(graph, target)!.id, sel: id });
-  };
-  const reviewRandom = () => {
-    const candidates =
-      documents.length > 1 ? documents.filter((n) => n.id !== (reviewId || focus.sel)) : documents;
-    const target = candidates[Math.floor(Math.random() * candidates.length)];
-    if (target) {
-      setQuery('');
-      setSearchOpen(false);
-      searchInput.current?.blur();
-      setReviewId(target.id);
-    }
   };
   const searchIndex = useMemo(() => createSearchIndex(documents), [documents]);
   const results = useMemo(() => searchDocuments(searchIndex, query), [query, searchIndex]);
@@ -426,6 +408,7 @@ export function Home({ graph, focus, setFocus, reading, reduced, stateAction }: 
       />
       <Workbench
         graph={graph}
+        reviews={reviews}
         hidden={!workbenchVisible}
         reading={reading}
         queue={queue}
@@ -463,7 +446,7 @@ export function Home({ graph, focus, setFocus, reading, reduced, stateAction }: 
         </a>
       </header>
       <div
-        className={`galaxy-search-dock${reviewNode?.module ? ' has-review' : ''}`}
+        className="galaxy-search-dock"
         onBlur={(event) => {
           if (!event.currentTarget.contains(event.relatedTarget)) setSearchOpen(false);
         }}
@@ -591,43 +574,12 @@ export function Home({ graph, focus, setFocus, reading, reduced, stateAction }: 
             </button>
           )}
         </form>
-        <div className="galaxy-review">
-          {review.shown && (
-            <button
-              ref={review.ref}
-              inert={review.closing}
-              type="button"
-              className="galaxy-random galaxy-review-title"
-              onClick={() => go(review.shown!.id)}
-              title={review.shown.title}
-              aria-label={`打开正文：${review.shown.title}`}
-            >
-              <span aria-live="polite" aria-atomic="true">
-                {review.shown.title}
-              </span>
-            </button>
-          )}
-          <button
-            key="random"
-            type="button"
-            className={`galaxy-random${reviewNode?.module ? ' galaxy-review-next' : ''}`}
-            onClick={reviewRandom}
-            disabled={!documents.length || (Boolean(reviewNode?.module) && documents.length < 2)}
-            aria-label={reviewNode?.module ? '随机换一篇' : '随机复习一篇笔记'}
-            title={
-              !documents.length
-                ? '暂无可复习的笔记'
-                : reviewNode?.module
-                  ? documents.length < 2
-                    ? '只有一篇笔记'
-                    : '随机换一篇'
-                  : '随机抽取标题，先回忆再打开正文'
-            }
-          >
-            <Icon name="shuffle" size={18} />
-            {!reviewNode?.module && <span>随机复习</span>}
-          </button>
-        </div>
+        <HomeReviewCard
+          visible={!workbenchVisible}
+          reviews={reviews}
+          session={homeReview}
+          onOpen={(doc) => go(doc.id)}
+        />
       </div>
       {status.shown && (
         <div className="galaxy-status" role="status">

@@ -4,9 +4,10 @@ aliases: ["Goroutine 抢占", "协作式抢占与异步抢占"]
 category: "Go"
 parent: go-interview-hub
 tags: ["面试", "Go"]
-learning_status: pending
+learning_status: organized
 created_at: "2026-10-19T11:24:21+08:00"
 updated_at: "2026-10-19T11:24:21+08:00"
+learning_status_changed_at: "2026-10-21T10:01:08.415+08:00"
 ---
 
 Go 的[[go-preemption-sources|协程抢占]]由[[go-gmp-interview|运行时调度器]]负责，主要是为了避免某个协程一直占着执行机会，让其他协程等太久。主要有两种方式：**「协作式抢占」**和**「异步抢占」**。

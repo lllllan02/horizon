@@ -11,7 +11,7 @@ reading_suggestions:
   - sandbox-processes
 ---
 
-**「Codex 的执行会话保存仍在运行的进程，使长命令能跨多次工具调用持续交互。」**
+**「Codex 的执行会话保存仍在运行的[[process|进程]]，使长命令能跨多次工具调用持续交互。」**
 
 ## 工具返回后发生什么
 

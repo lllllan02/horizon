@@ -11,7 +11,7 @@ reading_suggestions:
   - mcp-flow
 ---
 
-**stdio Client 启动 Server 子进程，通过标准输入输出发现工具、发起调用并读取结果。** 本例调用[[mcp-server|订单查询 Server]]。
+**stdio Client 启动 Server [[process|子进程]]，通过标准输入输出发现工具、发起调用并读取结果。** 本例调用[[mcp-server|订单查询 Server]]。
 
 固定官方 Go SDK `v1.7.0`，要求 Go 1.25.0 或更新版本；代码尚未本地运行。[官方 Client 示例](https://github.com/modelcontextprotocol/go-sdk/blob/v1.7.0/README.md#getting-started)
 

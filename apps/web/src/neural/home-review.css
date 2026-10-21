@@ -1,0 +1,150 @@
+.galaxy-page .galaxy-search-dock:has(.home-review-card) {
+  width: max-content;
+  max-width: min(1120px, calc(100% - 40px));
+  height: 48px;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.galaxy-page .galaxy-search-dock:has(.home-review-card) > .galaxy-search {
+  flex: 0 1 360px;
+  width: 360px;
+  min-width: 160px;
+  min-height: 48px;
+  height: 48px;
+  box-sizing: border-box;
+}
+.galaxy-page .home-review-card {
+  position: relative;
+  max-width: none;
+  min-width: 0;
+  align-items: center;
+  flex-shrink: 0;
+  color: #c2d2cf;
+  font-size: 12px;
+  height: 48px;
+}
+.galaxy-page .home-review-card { flex: 0 1 auto; }
+.home-review-card button,
+.home-review-card a {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 8px 12px;
+  box-sizing: border-box;
+  border: 1px solid #93acc03b;
+  border-radius: 10px;
+  background: #10191df0;
+  color: #d5dfe5;
+  font: inherit;
+  line-height: 1.5;
+  white-space: nowrap;
+  cursor: pointer;
+  text-decoration: none;
+}
+.home-review-card .home-review-next {
+  width: 44px;
+  min-height: 44px;
+  padding: 0;
+  border-radius: 10px;
+  font-size: 20px;
+}
+.home-review-card :is(button, a):focus-visible { outline: 2px solid #bad5c6; outline-offset: -3px; }
+.home-review-card :is(button, a):hover:not(:disabled) { border-color: #bad5c68c; color: #fff; }
+.home-review-card button:disabled { opacity: .55; cursor: default; }
+.home-review-content {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 6px;
+  min-width: 0;
+  width: 100%;
+  height: 48px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+}
+.home-review-content::-webkit-scrollbar { display: none; }
+.home-review-content .home-review-title {
+  flex: 0 1 auto;
+  min-width: 64px;
+  justify-content: flex-start;
+  text-align: left;
+  font-size: 13px;
+  overflow: hidden;
+}
+.home-review-title > span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.home-review-feedback { display: flex; flex: none; gap: 6px; flex-wrap: nowrap; }
+.home-review-feedback button[aria-pressed="true"] { box-shadow: inset 0 0 0 1px #bad5c6; }
+.home-review-status {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 8px);
+  width: min(360px, 100%);
+  max-height: min(240px, 35dvh);
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #93acc03b;
+  border-radius: 10px;
+  background: #10191dfa;
+  box-shadow: 0 6px 24px #0004;
+  white-space: normal;
+}
+.home-review-status:empty { display: none; }
+.home-review-card p { margin: 0; line-height: 1.7; }
+.home-review-saved { color: #badfc7; }
+.home-review-error { color: #e6bdad; }
+.home-review-error button { margin-top: 6px; }
+@media (max-width: 900px) {
+  .galaxy-page .galaxy-search-dock:has(.home-review-card) {
+    left: var(--mobile-left);
+    right: var(--mobile-right);
+    width: auto;
+    max-width: none;
+    gap: 6px;
+  }
+  .galaxy-page .galaxy-search-dock:has(.home-review-card) > .galaxy-search {
+    position: relative;
+    flex: 0 0 44px;
+    width: 44px;
+    min-width: 0;
+    min-height: 48px;
+    height: 48px;
+    padding: 0;
+    gap: 0;
+    box-sizing: border-box;
+  }
+  .galaxy-page .galaxy-search-dock:has(.home-review-card) > .galaxy-search > svg {
+    margin: auto;
+    pointer-events: none;
+  }
+  .galaxy-page .galaxy-search-dock:has(.home-review-card) > .galaxy-search input {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    opacity: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .galaxy-page .galaxy-search-dock:has(.home-review-card) > .galaxy-search:not(:focus-within) .galaxy-search-clear { display: none; }
+  .galaxy-page .galaxy-search-dock:has(.home-review-card) > .galaxy-search:focus-within {
+    flex: 0 0 min(52%, 240px);
+    width: auto;
+    padding-inline: 10px;
+    gap: 6px;
+  }
+  .galaxy-page .galaxy-search-dock:has(.home-review-card) > .galaxy-search:focus-within input {
+    position: static;
+    opacity: 1;
+    padding-block: 12px;
+  }
+  .galaxy-page .home-review-card { flex: 0 1 auto; }
+  .home-review-content { gap: 4px; }
+  .home-review-feedback { gap: 4px; }
+  .home-review-card .home-review-feedback button { padding-inline: 7px; }
+  .home-review-content .home-review-title { padding-inline: 8px; }
+}

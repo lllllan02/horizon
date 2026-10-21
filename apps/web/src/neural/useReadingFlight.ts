@@ -48,7 +48,7 @@ export function useReadingFlight(
       const title = card.querySelector('strong') || card;
       const box = title.getBoundingClientRect(),
         style = getComputedStyle(title);
-      const key = crypto.randomUUID();
+      const key = clientId();
       pendingFlight.current = {
         key,
         source: selected,
@@ -74,3 +74,4 @@ export function useReadingFlight(
   };
   return { flight, revealedFlight, revealFlight, finishFlight, selectWithFlight };
 }
+import { clientId } from '../client-id.ts';

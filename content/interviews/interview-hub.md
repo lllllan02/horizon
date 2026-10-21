@@ -31,6 +31,9 @@ learning_status_changed_at: "2026-10-18T20:45:36.275+08:00"
 
 - [[temperature-interview|模型调用中的 Temperature 是什么，怎样起作用？]]
 - [[websocket-sse-interview|WebSocket 和 SSE 有什么区别？]]
+- [[io-multiplexing-interview|IO 多路复用有哪些实现？]]
+- [[epoll-trigger-interview|epoll 有哪些触发方式？]]
+- [[context-switch-interview|什么是上下文切换？通常在什么情况下发生？]]
 
 ## 准备资料
 

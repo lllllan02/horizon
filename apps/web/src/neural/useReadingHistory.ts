@@ -1,4 +1,5 @@
 import { validReadingSession } from './view-state.ts';
+import { clientId } from '../client-id.ts';
 import { dashboardRoute } from './dashboard-route.ts';
 import type { ReaderGraph } from '../types/graph.ts';
 import type { ReadingEntry, TrailSegment } from '../types/reading.ts';
@@ -15,7 +16,7 @@ import {
 } from './reading-history.ts';
 
 const storageKey = `horizon:reading:v1:${location.pathname}`;
-const uid = () => crypto.randomUUID();
+const uid = clientId;
 const read = (storage: 'localStorage' | 'sessionStorage', key: string) => {
   try {
     return window[storage].getItem(key);

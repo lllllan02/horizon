@@ -4,10 +4,10 @@ aliases: ["BM25 原理面试题"]
 category: "信息检索"
 parent: retrieval-interview-index
 tags: ["面试", "检索", "全文检索"]
-learning_status: pending
+learning_status: organized
 created_at: "2026-10-18T21:27:28+08:00"
 updated_at: "2026-10-18T21:27:28+08:00"
-learning_status_changed_at: "2026-10-18T21:30:02.812+08:00"
+learning_status_changed_at: "2026-10-21T10:07:26.547+08:00"
 ---
 
 [[bm25|BM25]] 是一个基于词项匹配的相关性评分算法，用来衡量一篇文档和查询的相关性，并据此对搜索结果排序。

@@ -7,12 +7,23 @@ const punctuation = /[\p{P}\p{S}]/u;
 function emphasisBoundaries(source: string) {
   // Chinese prose commonly places quoted emphasis directly beside Han text.
   // Treat the inner quote/bracket as text in that case, so Marked can open or
-  // close the delimiter. ASCII punctuation and masked code/links stay unchanged.
+  // close the delimiter. Other ASCII punctuation and masked code/links stay unchanged.
   const chineseBoundaries = source.replace(
     /(?<=\p{Script=Han}[*_]+)[\p{Ps}\p{Pi}]|[\p{Pe}\p{Pf}](?=[*_]+\p{Script=Han})/gu,
     (char) => (/[^\x00-\x7f]/u.test(char) ? 'a'.repeat(char.length) : char),
   );
-  return chineseBoundaries.replace(/[^\x00-\x7f]/gu, (char) =>
+  // Wiki links are extension tokens, so Marked does not mask their brackets.
+  // Treat only the outer boundary beside Han prose as text, preserving offsets.
+  const wikiBoundaries = chineseBoundaries.replace(/\[\[[^\]\n]+\]\]/g, (wiki, offset: number) => {
+    const before = chineseBoundaries.slice(0, offset);
+    // An escaped opening bracket is plain text, not a wiki extension token.
+    if ((before.match(/\\*$/)?.[0].length || 0) % 2) return wiki;
+    const after = chineseBoundaries.slice(offset + wiki.length);
+    if (/\p{Script=Han}[*_]+$/u.test(before)) wiki = 'a' + wiki.slice(1);
+    if (/^[*_]+\p{Script=Han}/u.test(after)) wiki = wiki.slice(0, -1) + 'a';
+    return wiki;
+  });
+  return wikiBoundaries.replace(/[^\x00-\x7f]/gu, (char) =>
     punctuation.test(char) ? '.'.repeat(char.length) : char,
   );
 }
@@ -55,7 +66,7 @@ export class MarkdownTokenizer extends Tokenizer {
       context,
       // Only the character after the opening delimiter is inspected in src;
       // closing delimiters are matched against the cached mask above.
-      src.replace(/^(\*+|_+)([^\x00-\x7f])/u, (_, delimiter: string, char: string) => {
+      src.replace(/^(\*+|_+)([\s\S])/u, (_, delimiter: string, char: string) => {
         const offset = maskedSrc.length - src.length + delimiter.length;
         return delimiter + mask.slice(offset, offset + char.length);
       }),

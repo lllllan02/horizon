@@ -70,15 +70,30 @@ test('手机小屏与横屏的工具栏、列表和看板不溢出', async ({ pa
   }
 });
 
-test('触屏搜索与随机复习各自保留完整操作空间', async ({ page }, testInfo) => {
+test('触屏搜索与间隔复习各自保留完整操作空间', async ({ page }, testInfo) => {
   test.skip(testInfo.project.name !== 'narrow', '仅验收触屏布局');
   await page.setViewportSize({ width: 320, height: 568 });
+  await page.route('**/library.json', async (route) => {
+    const response = await route.fetch();
+    const library = await response.json();
+    library.documents.find((doc: { id: string }) => doc.id === 'first').state = 'organized';
+    await route.fulfill({ response, json: library });
+  });
   await page.goto('/');
-  await page.getByRole('button', { name: '随机复习一篇笔记', exact: true }).tap();
-  await expect(page.locator('.galaxy-review-title')).toBeVisible();
+  await expect(
+    page.locator('.home-review-card').getByRole('button', { name: '开始复习', exact: true }),
+  ).toHaveCount(0);
+  await expect(page.locator('.home-review-title')).toBeVisible();
   const search = page.getByRole('combobox', { name: '搜索标题、别名、标签或正文' });
   const searchBox = await page.locator('.galaxy-search').boundingBox();
-  expect(searchBox!.width).toBeGreaterThanOrEqual(280);
+  expect(searchBox!.width).toBe(44);
+  for (const name of ['忘了', '有点模糊', '记得']) {
+    await expect(
+      page.locator('.home-review-card').getByRole('button', { name, exact: true }),
+    ).toBeInViewport({ ratio: 1 });
+  }
+  const reviewBox = (await page.locator('.home-review-card').boundingBox())!;
+  expect(Math.abs(searchBox!.y - reviewBox.y)).toBeLessThan(5);
   await page.screenshot({ animations: 'disabled', path: testInfo.outputPath('home-review.png') });
   await search.tap();
   await search.fill('自动化入口');

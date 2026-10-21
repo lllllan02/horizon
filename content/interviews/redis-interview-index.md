@@ -4,9 +4,10 @@ category: "Redis"
 parent: interview-hub
 tags: ["面试", "Redis"]
 type: overview
-learning_status: pending
+learning_status: organized
 created_at: "2026-10-19T10:51:27+08:00"
 updated_at: "2026-10-19T21:05:27+08:00"
+learning_status_changed_at: "2026-10-21T10:12:32.067+08:00"
 ---
 
 围绕 Redis 的运行机制、集群与缓存使用整理已保存的面试题。
@@ -32,4 +33,5 @@ updated_at: "2026-10-19T21:05:27+08:00"
 ## 缓存一致性与过载保护
 
 - [[cache-consistency-interview|数据库和缓存的一致性怎么保障？]]
+- [[cache-optimization-interview|高并发下，如何优化缓存和数据库访问？]]
 - [[cache-avalanche-interview|缓存雪崩怎么解决？]]
