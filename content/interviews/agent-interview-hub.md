@@ -32,6 +32,7 @@ learning_status_changed_at: "2026-10-21 10:04:00.041"
 - [[skill-dynamic-interview|Agent 平台按任务动态拼装 Skill 时，哪些内容应固定，哪些可以调整？]]
 - [[tool-calling-interview|Agent 如何执行工具调用，并处理参数异常与工具失败？]]
 - [[agent-output-format-interview|模型输出不符合格式要求，怎么约束？]]
+- [[agent-hallucination-interview|Agent 出现幻觉怎么兜底？]]
 - [[tool-result-interview|工具或检索结果过大，怎么喂给大模型？]]
 - [[mcp-interview|MCP 是什么，解决了什么问题？]]
 - [[mcp-integration-interview|MCP 工具怎么接入？]]
@@ -55,6 +56,7 @@ learning_status_changed_at: "2026-10-21 10:04:00.041"
 
 ## 上下文与记忆
 
+- [[agent-history-storage-interview|Agent 的历史消息存数据库还是 JSONL 文件？]]
 - [[context-overflow-interview|对话上下文超出窗口怎么办？]]
 - [[agent-memory-types-interview|Agent 的记忆有哪些类型，分别怎么实现？]]
 - [[agent-memory-trigger-interview|Agent 什么时候启动记忆提取？]]
@@ -68,6 +70,8 @@ learning_status_changed_at: "2026-10-21 10:04:00.041"
 ## 效果评测
 
 - [[agent-evaluation-interview|怎么判断 Agent 的效果？]]
+- [[agent-success-rate-interview|Agent 的任务成功率怎么定义？]]
+- [[agent-token-cost-interview|Agent 的 Token 成本怎么算，怎么降低？]]
 
 ## 服务运行与排障
 

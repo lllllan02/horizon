@@ -7,7 +7,7 @@ tags: ["面试", "Go", "Agent", "RAG"]
 type: overview
 learning_status: reading
 created_at: "2026-10-19 19:42:43"
-updated_at: "2026-10-20 18:24:58"
+updated_at: "2026-10-21 19:25:25"
 learning_status_changed_at: "2026-10-20 19:55:51.741"
 ---
 
@@ -21,7 +21,7 @@ learning_status_changed_at: "2026-10-20 19:55:51.741"
 - [x] G07 · [25 秋招：后端（主 Go）面经回顾 Part.1](https://www.nowcoder.com/feed/main/detail/fdcfe849626a4711abc8d125d9702fc7) · 八奈见
 - [x] G08 · [百度 Golang 实习一面](https://www.nowcoder.com/feed/main/detail/c54ab8969c304c2bb828088763271c1a) · ElvisLin
 - [x] A01 · [Agent 应用社招失败复盘](https://www.nowcoder.com/discuss/926232883432296448) · 讨个offer咯
-- [ ] A02 · [Agent 春招题单与复盘](https://www.nowcoder.com/discuss/917353328109944832) · Musennnn
+- [x] A02 · [Agent 春招题单与复盘](https://www.nowcoder.com/discuss/917353328109944832) · Musennnn。个人评价：虽然标题写的是春招，但内容质量很高，包含题目整理、拆解与反思反馈。
 - [ ] A03 · [两年 Java 转 AI 应用社招一面](https://www.nowcoder.com/discuss/914627656245600256) · 视线归处
 - [ ] A04 · [懂车帝 Agent 开发一面](https://www.nowcoder.com/feed/main/detail/8d84590d7efe4c78943b28708b4395f2) · 赛文X
 - [ ] A05 · [腾讯社招一面](https://www.nowcoder.com/feed/main/detail/668c7f4007b44fc7b878f55eb01e6e11) · kaoyu
