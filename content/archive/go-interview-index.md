@@ -5,8 +5,8 @@ parent: interview-index
 tags: ["面试", "Go"]
 type: overview
 learning_status: pending
-created_at: "2026-10-18T00:59:41+08:00"
-updated_at: "2026-10-18T00:59:41+08:00"
+created_at: "2026-10-18 00:59:41"
+updated_at: "2026-10-18 00:59:41"
 ---
 
 以下按考点合并 Go 题目，只保留问法。括号内为本页来源编号；涉及 map、切片增长、调度与 GC 的实现问题，作答时需要明确 Go 版本。

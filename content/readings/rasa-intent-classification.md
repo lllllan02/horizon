@@ -10,8 +10,8 @@ source:
   - "https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html"
   - "https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html"
 learning_status: pending
-created_at: "2026-10-13T17:38:22+08:00"
-updated_at: "2026-10-18T21:37:01+08:00"
+created_at: "2026-10-13 17:38:22"
+updated_at: "2026-10-18 21:37:01"
 ---
 
 **文本分类把用户的一句话转换成预设类别：先把文字变成可计算的表示，再由模型计算各类分数。** 训练时用正确标签调整模型，预测时复用训练结果。

@@ -2,8 +2,8 @@
 title: "GAIA：以可核验答案评测通用助手"
 category: "Agent"
 tags: ["Agent", "评测"]
-created_at: "2026-10-13T10:54:39+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-13 10:54:39"
+updated_at: "2026-10-13 12:48:15"
 source: ["https://arxiv.org/html/2311.12983v1"]
 ---
 

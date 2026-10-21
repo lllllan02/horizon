@@ -3,8 +3,8 @@ parent: agent-reflection
 title: "CRITIC：先用工具核验，再根据证据纠正"
 category: "Agent"
 tags: ["Agent", "自我纠正"]
-created_at: "2026-10-12T10:15:48+08:00"
-updated_at: "2026-10-16T19:16:32+08:00"
+created_at: "2026-10-12 10:15:48"
+updated_at: "2026-10-16 19:16:32"
 source: "[CRITIC: Large Language Models Can Self-Correct with Tool-Interactive Critiquing](https://arxiv.org/html/2305.11738)"
 ---
 

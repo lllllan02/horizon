@@ -6,8 +6,8 @@ parent: interview-preparation-index
 tags: ["面试", "模型网关", "Go"]
 type: practice
 learning_status: pending
-created_at: "2026-10-20T11:09:48+08:00"
-updated_at: "2026-10-20T11:09:48+08:00"
+created_at: "2026-10-20 11:09:48"
+updated_at: "2026-10-20 11:09:48"
 ---
 
 这份岗位的核心是「**把普通 API 网关能力扩展为可治理、可观测、可持续运行的大模型请求入口**」：既要统一模型接入、适配协议并分发请求，也要处理 Token 限流、计费、缓存和线上故障。本清单沿用“要求 → 能力 → 问题 → 证据”的方法，用于学习、项目复盘与面试自查。

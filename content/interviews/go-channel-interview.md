@@ -4,9 +4,9 @@ category: "Go"
 parent: go-interview-hub
 tags: ["面试", "Go"]
 learning_status: organized
-created_at: "2026-10-19T16:17:49+08:00"
-updated_at: "2026-10-19T16:17:49+08:00"
-learning_status_changed_at: "2026-10-19T16:19:36.546+08:00"
+created_at: "2026-10-19 16:17:49"
+updated_at: "2026-10-19 16:17:49"
+learning_status_changed_at: "2026-10-19 16:19:36.546"
 ---
 
 Channel 主要用于 **「[[coroutine#Go 的 goroutine|goroutine]] 之间的数据传递和同步协作」**。可以用来发送完成通知，也可以传递具体数据，比如分发任务、收集处理结果。

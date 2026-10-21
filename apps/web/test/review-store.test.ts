@@ -89,10 +89,10 @@ test('展示记录在独立文件原子保存，新的服务进程仍记住未�
   const restarted = JSON.parse(output);
   assert.deepEqual(restarted, shown);
   const queue = reviewQueue((await read()).documents, restarted);
-  assert.equal(queue.fresh.length, 5);
-  assert.equal(queue.eligibleFresh.length, 7);
-  assert.notEqual(queue.eligibleFresh[0].id, 'a');
-  assert.equal(queue.eligibleFresh.at(-1)?.id, 'a');
+  assert.equal(queue.fresh.length, 7);
+  assert.equal(queue.recommendations.length, 7);
+  assert.notEqual(queue.recommendations[0].id, 'a');
+  assert.equal(queue.recommendations.at(-1)?.id, 'a');
   const completed = await reviewStore(root, read, {
     ...input,
     version: shown.version,
@@ -208,9 +208,19 @@ test('HTTP复习访问限制、无Origin同源GET、反馈与冲突，不调用�
   assert.deepEqual((await readdir(root)).sort(), ['.reviews.json', 'notes']);
   const current = await (await get()).json();
   const early = await post({ ...input, version: current.version, requestId: 'http-early-review' });
-  assert.equal(early.status, 409);
-  assert.match((await early.json()).error, /尚未到期/);
-  assert.deepEqual(await (await get()).json(), current);
+  assert.equal(early.status, 200);
+  const practiced = await early.json();
+  assert.equal(practiced.records.a.history.length, 2);
+  assert.equal(practiced.records.a.intervalDays, current.records.a.intervalDays);
+  assert.equal(practiced.records.a.dueAt, current.records.a.dueAt);
+  assert.equal(practiced.records.a.history.at(-1).rating, 'good');
+  const earlyRetry = await post({
+    ...input,
+    version: current.version,
+    requestId: 'http-early-review',
+  });
+  assert.equal(earlyRetry.status, 200);
+  assert.deepEqual(await earlyRetry.json(), practiced);
   await writeFile(file, raw.replace('正文。', '修订正文。').replace('2026-10-01', '2026-10-21'));
   assert.equal(
     (await post({ ...input, version: current.version, requestId: 'http-review-3' })).status,

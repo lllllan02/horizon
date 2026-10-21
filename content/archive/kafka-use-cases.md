@@ -5,8 +5,8 @@ category: "Kafka"
 parent: kafka-overview#定位与事件建模
 type: "concept"
 tags: ["Kafka", "消息队列"]
-created_at: "2026-10-12T19:46:06+08:00"
-updated_at: "2026-10-12T20:49:46+08:00"
+created_at: "2026-10-12 19:46:06"
+updated_at: "2026-10-12 20:49:46"
 reading_suggestions:
   - async-messaging
   - load-leveling

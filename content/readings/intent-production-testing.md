@@ -9,8 +9,8 @@ source:
   - "https://docs.cloud.google.com/dialogflow/cx/docs/concept/continuous-tests"
   - "https://rasa.com/blog/rasa-automated-tests"
 read: false
-created_at: "2026-10-13T22:09:24+08:00"
-updated_at: "2026-10-14T13:59:35+08:00"
+created_at: "2026-10-13 22:09:24"
+updated_at: "2026-10-14 13:59:35"
 ---
 
 **对话测试需要沿一次任务检查：数据标注、意图分类、参数收集、跨轮路径和发布后的行为。** 单句分类正确不能证明整个任务完成。

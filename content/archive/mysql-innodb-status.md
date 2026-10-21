@@ -5,8 +5,8 @@ category: "MySQL"
 tags: ["MySQL", "性能排查", "事务"]
 type: practice
 learning_status: pending
-created_at: "2026-10-18T12:09:26+08:00"
-updated_at: "2026-10-18T12:13:17+08:00"
+created_at: "2026-10-18 12:09:26"
+updated_at: "2026-10-18 12:13:17"
 ---
 
 **`SHOW ENGINE INNODB STATUS` 用于查看 InnoDB 的运行状态报告**，包括事务、锁等待、最近一次死锁，以及 I/O、日志和缓冲池等信息，帮助确定排查方向。

@@ -3,8 +3,8 @@ title: "OWASP：提示注入与 Agent 执行边界"
 parent: agent-guardrails
 category: "Agent"
 tags: ["Agent", "行为约束", "权限"]
-created_at: "2026-10-13T10:52:05+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-13 10:52:05"
+updated_at: "2026-10-13 12:48:15"
 source:
   - "[LLM01:2025 Prompt Injection](https://genai.owasp.org/llmrisk/llm01-prompt-injection/)"
   - "[LLM06:2025 Excessive Agency](https://genai.owasp.org/llmrisk/llm062025-excessive-agency/)"

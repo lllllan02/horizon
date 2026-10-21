@@ -2,8 +2,8 @@
 title: "τ²-bench：用户、Agent 与共享环境的交互评测"
 category: "Agent"
 tags: ["Agent", "评测"]
-created_at: "2026-10-13T10:54:39+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-13 10:54:39"
+updated_at: "2026-10-13 12:48:15"
 source: ["https://arxiv.org/html/2506.07982v1", "https://github.com/sierra-research/tau2-bench"]
 ---
 

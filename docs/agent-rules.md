@@ -1,7 +1,7 @@
 ---
 title: "Agent 规则与 Skill 维护"
-created_at: "2026-10-16T20:03:35+08:00"
-updated_at: "2026-10-19T21:20:36+08:00"
+created_at: "2026-10-16 20:03:35"
+updated_at: "2026-10-19 21:20:36"
 category: "知识库管理"
 tags: ["Agent", "操作约束"]
 ---

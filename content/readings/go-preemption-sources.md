@@ -3,8 +3,8 @@ title: "Go 官方源码导读：协作式与异步抢占"
 category: "Go"
 tags: ["Go"]
 learning_status: pending
-created_at: "2026-10-19T11:24:21+08:00"
-updated_at: "2026-10-19T11:24:21+08:00"
+created_at: "2026-10-19 11:24:21"
+updated_at: "2026-10-19 11:24:21"
 source:
   - "https://go.dev/src/runtime/preempt.go"
   - "https://go.dev/src/runtime/proc.go"

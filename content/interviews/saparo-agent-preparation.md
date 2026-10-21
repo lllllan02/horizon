@@ -6,8 +6,8 @@ parent: interview-preparation-index
 tags: ["面试", "Agent"]
 type: practice
 learning_status: pending
-created_at: "2026-10-20T11:36:34+08:00"
-updated_at: "2026-10-20T11:36:34+08:00"
+created_at: "2026-10-20 11:36:34"
+updated_at: "2026-10-20 11:36:34"
 ---
 
 这份岗位围绕「**让购物 Agent 完成搜索、比价、采购规划和下单任务，并对实际执行效果负责**」展开。重点是实际 Agent 项目经验、后端交付能力，以及复杂任务中的可靠性、效率和成本；准备应沿购物任务与业务系统的连接展开。

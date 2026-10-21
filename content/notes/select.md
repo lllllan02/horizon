@@ -5,9 +5,9 @@ category: "操作系统"
 parent: io-multiplexing
 tags: ["IO多路复用"]
 learning_status: organized
-created_at: "2026-10-20T19:46:45+08:00"
-updated_at: "2026-10-20T19:46:45+08:00"
-learning_status_changed_at: "2026-10-20T19:52:28.325+08:00"
+created_at: "2026-10-20 19:46:45"
+updated_at: "2026-10-20 19:46:45"
+learning_status_changed_at: "2026-10-20 19:52:28.325"
 ---
 
 select 是[[io-multiplexing|IO 多路复用]]接口，用「**位图**」表示监听集合。应用把关心的多个连接交给内核统一等待，让一个线程可以处理这些连接的读写事件。

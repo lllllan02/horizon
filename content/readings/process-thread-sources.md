@@ -3,8 +3,8 @@ title: "进程、线程与协程官方资料导读"
 category: "计算机基础"
 tags: ["Go", "并发", "调度"]
 learning_status: pending
-created_at: "2026-10-20T19:21:23+08:00"
-updated_at: "2026-10-20T22:51:31+08:00"
+created_at: "2026-10-20 19:21:23"
+updated_at: "2026-10-20 22:51:31"
 source:
   - "https://learn.microsoft.com/en-us/windows/win32/procthread/processes-and-threads"
   - "https://learn.microsoft.com/en-us/windows/win32/procthread/about-processes-and-threads"

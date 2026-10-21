@@ -4,7 +4,7 @@ title: "Agent"
 category: "Agent"
 tags: ["Agent", "工程选型"]
 created_at: "2026-10-09"
-updated_at: "2026-10-18T00:11:35+08:00"
+updated_at: "2026-10-18 00:11:35"
 reading_suggestions:
   - agent-loop
   - tool-calling
@@ -25,7 +25,7 @@ reading_suggestions:
   - agent-evaluation
   - agent-vs-workflow
   - enterprise-agent-build
-learning_status_changed_at: "2026-10-18T00:15:58.155+08:00"
+learning_status_changed_at: "2026-10-18 00:15:58.155"
 ---
 
 **LLM Agent（智能体）是以大模型为决策核心，在给定目标与约束下选择动作，并根据执行结果调整行动的系统。**

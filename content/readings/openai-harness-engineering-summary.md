@@ -3,8 +3,8 @@ title: "OpenAI：让工程环境可被 Agent 理解、执行和验证"
 parent: agent-harness
 category: "Agent"
 tags: ["Agent", "Harness"]
-created_at: "2026-10-11T11:46:46+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-11 11:46:46"
+updated_at: "2026-10-13 12:48:15"
 source: "[Harness engineering: leveraging Codex in an agent-first world](https://openai.com/index/harness-engineering/)"
 ---
 

@@ -4,9 +4,9 @@ category: "Agent"
 parent: agent-interview-hub
 tags: ["面试", "Agent", "多Agent协作"]
 learning_status: organized
-created_at: "2026-10-20T16:29:17+08:00"
-updated_at: "2026-10-20T16:49:21+08:00"
-learning_status_changed_at: "2026-10-20T16:50:22.273+08:00"
+created_at: "2026-10-20 16:29:17"
+updated_at: "2026-10-20 16:49:21"
+learning_status_changed_at: "2026-10-20 16:50:22.273"
 ---
 
 我会从「能不能拆」和「值不值得拆」两层判断任务是否值得[[multi-agent#哪些工作值得独立委派？|交给多个 Agent]]。

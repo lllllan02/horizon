@@ -5,9 +5,9 @@ category: "Go"
 parent: go-interview-hub
 tags: ["面试", "Go", "并发"]
 learning_status: organized
-created_at: "2026-10-20T18:36:05+08:00"
-updated_at: "2026-10-20T19:26:26+08:00"
-learning_status_changed_at: "2026-10-20T19:32:58.262+08:00"
+created_at: "2026-10-20 18:36:05"
+updated_at: "2026-10-20 19:26:26"
+learning_status_changed_at: "2026-10-20 19:32:58.262"
 ---
 
 - [[process|进程（Process）]]是「**程序的一次运行实例**」，也是资源分配和隔离的基本单位，有独立的虚拟地址空间，创建和切换开销通常较大。

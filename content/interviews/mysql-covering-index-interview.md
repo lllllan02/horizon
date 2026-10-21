@@ -5,9 +5,9 @@ category: "MySQL"
 parent: mysql-interview-index
 tags: ["面试", "MySQL", "性能排查"]
 learning_status: organized
-created_at: "2026-10-21T10:20:48+08:00"
-updated_at: "2026-10-21T10:23:35+08:00"
-learning_status_changed_at: "2026-10-21T10:26:30.677+08:00"
+created_at: "2026-10-21 10:20:48"
+updated_at: "2026-10-21 10:23:35"
+learning_status_changed_at: "2026-10-21 10:26:30.677"
 ---
 
 InnoDB 中可以区分[[mysql-index-structure-sources#叶节点保存什么|聚簇索引和二级索引]]，二级索引也称非聚簇索引。聚簇索引的叶节点保存完整的行记录，二级索引的叶节点保存「**索引列和主键值**」。

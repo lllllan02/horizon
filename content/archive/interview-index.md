@@ -5,8 +5,8 @@ category: "面试"
 tags: ["面试", "Go", "Agent", "RAG"]
 type: overview
 learning_status: pending
-created_at: "2026-10-18T00:59:41+08:00"
-updated_at: "2026-10-18T00:59:41+08:00"
+created_at: "2026-10-18 00:59:41"
+updated_at: "2026-10-18 00:59:41"
 ---
 
 面向 Go 后端与 AI／Agent 应用开发社招，优先依据[[interview-resources|专题网站与仓库]]归并题目。本轮只列问题与出处，不展开答案，不创建空白单题文件，也不把题目出现次数当成实际面试频率。

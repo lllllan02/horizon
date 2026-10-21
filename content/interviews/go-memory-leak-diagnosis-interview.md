@@ -4,9 +4,9 @@ category: "Go"
 parent: go-interview-hub
 tags: ["面试", "Go", "内存管理", "性能排查"]
 learning_status: organized
-created_at: "2026-10-20T21:02:14+08:00"
-updated_at: "2026-10-20T21:05:16+08:00"
-learning_status_changed_at: "2026-10-21T10:01:01.752+08:00"
+created_at: "2026-10-20 21:02:14"
+updated_at: "2026-10-20 21:05:16"
+learning_status_changed_at: "2026-10-21 10:01:01.752"
 ---
 
 整体沿用[[go-oom-interview|内存溢出的排查流程]]；尚未发生 OOM 时，跳过确认 OOM 的步骤。

@@ -4,8 +4,8 @@ aliases: ["Thread", "操作系统线程", "OS Thread"]
 category: "计算机基础"
 tags: ["并发", "调度"]
 learning_status: pending
-created_at: "2026-10-20T19:23:41+08:00"
-updated_at: "2026-10-20T19:23:41+08:00"
+created_at: "2026-10-20 19:23:41"
+updated_at: "2026-10-20 19:23:41"
 ---
 
 **线程（Thread）是进程内的一条执行流，也是操作系统调度的执行单位。** 一个[[process|进程]]可以有多个线程，它们共享进程的地址空间和资源，但[[process-thread-sources#进程与线程|各自保留栈、寄存器等执行上下文]]。

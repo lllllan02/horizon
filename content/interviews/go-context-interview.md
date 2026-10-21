@@ -5,9 +5,9 @@ category: "Go"
 parent: go-interview-hub
 tags: ["面试", "Go"]
 learning_status: organized
-created_at: "2026-10-19T15:27:50+08:00"
-updated_at: "2026-10-19T15:27:50+08:00"
-learning_status_changed_at: "2026-10-19T15:29:51.201+08:00"
+created_at: "2026-10-19 15:27:50"
+updated_at: "2026-10-19 15:27:50"
+learning_status_changed_at: "2026-10-19 15:29:51.201"
 ---
 
 **Context 是一个接口，主要用于在调用链或者多个 [[coroutine#Go 的 goroutine|goroutine]] 之间传递取消信号、截止时间，以及请求相关的数据。** 这样一次请求取消或超时后，下游任务就能收到通知，及时结束工作。

@@ -4,12 +4,12 @@ title: "单 Agent Loop 的 Checkpoint"
 parent: agent-checkpoint-recovery
 category: "Agent"
 tags: ["Agent", "Checkpoint", "持久化"]
-created_at: "2026-10-13T11:07:38+08:00"
-updated_at: "2026-10-19T21:37:28+08:00"
+created_at: "2026-10-13 11:07:38"
+updated_at: "2026-10-19 21:37:28"
 reading_suggestions:
   - agent-loop
   - eino-checkpoint
-learning_status_changed_at: "2026-10-19T21:46:58.097+08:00"
+learning_status_changed_at: "2026-10-19 21:46:58.097"
 ---
 
 在单个 [[agent-loop|Agent Loop]]、工具串行执行的情况下，用阶段与工具下标就能定位下一步。保存与恢复的共同流程见[[agent-checkpoint-recovery|Checkpoint 总览]]。

@@ -4,8 +4,8 @@ parent: agent-checkpoint-recovery
 category: "Agent"
 tags: ["Agent", "Checkpoint", "持久化", "源码阅读"]
 learning_status: pending
-created_at: "2026-10-19T19:27:21+08:00"
-updated_at: "2026-10-19T19:27:21+08:00"
+created_at: "2026-10-19 19:27:21"
+updated_at: "2026-10-19 19:27:21"
 source:
   - "https://learn.chatgpt.com/docs/app-server"
   - "https://github.com/openai/codex/blob/97239fd052db455bd08c41afcdab738e0fe83b87/codex-rs/history/src/lib.rs"

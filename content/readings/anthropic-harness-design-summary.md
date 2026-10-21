@@ -3,8 +3,8 @@ title: "Anthropic：用生成与评估分工改进长任务 Harness"
 parent: agent-harness
 category: "Agent"
 tags: ["Agent", "Harness"]
-created_at: "2026-10-11T11:46:46+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-11 11:46:46"
+updated_at: "2026-10-13 12:48:15"
 source: "[Harness design for long-running application development](https://www.anthropic.com/engineering/harness-design-long-running-apps)"
 ---
 

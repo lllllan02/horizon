@@ -2,8 +2,8 @@
 title: "Rasa：低置信度回退与分阶段澄清"
 category: "Agent"
 tags: ["Agent", "意图识别"]
-created_at: "2026-10-13T17:37:13+08:00"
-updated_at: "2026-10-14T13:59:35+08:00"
+created_at: "2026-10-13 17:37:13"
+updated_at: "2026-10-14 13:59:35"
 source:
   - "https://legacy-docs-oss.rasa.com/docs/rasa/components/#fallbackclassifier"
   - "https://legacy-docs-oss.rasa.com/docs/rasa/fallback-handoff/"

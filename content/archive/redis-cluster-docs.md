@@ -5,8 +5,8 @@ tags: ["Redis", "Sentinel", "Cluster", "故障切换"]
 source:
   - "https://redis.io/docs/latest/operate/oss_and_stack/management/sentinel/"
   - "https://redis.io/docs/latest/operate/oss_and_stack/reference/cluster-spec/"
-created_at: "2026-10-13T11:03:37+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-13 11:03:37"
+updated_at: "2026-10-13 12:48:15"
 ---
 
 这两份官方说明分别讨论非分片部署的自动故障接替和带槽分片的集群。以下节选故障判断、客户端行为与写入安全，不覆盖完整配置手册。

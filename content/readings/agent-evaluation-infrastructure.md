@@ -2,8 +2,8 @@
 title: "Anthropic：资源限制如何改变 Agent 评测结果"
 category: "Agent"
 tags: ["Agent", "评测"]
-created_at: "2026-10-13T10:53:04+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-13 10:53:04"
+updated_at: "2026-10-13 12:48:15"
 source: ["https://www.anthropic.com/engineering/infrastructure-noise"]
 ---
 

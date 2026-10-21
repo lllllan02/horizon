@@ -3,8 +3,8 @@ title: "MemGPT：用分层存储管理有限上下文"
 parent: agent-memory
 category: "Agent"
 tags: ["Agent", "记忆", "上下文管理"]
-created_at: "2026-10-13T10:44:40+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-13 10:44:40"
+updated_at: "2026-10-13 12:48:15"
 source: "https://arxiv.org/html/2310.08560v2"
 read: true
 reading_suggestions:

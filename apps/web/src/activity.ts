@@ -41,7 +41,7 @@ interface ActivityState {
 import path from 'node:path';
 import { readFile, writeFile, rename, unlink, readdir, lstat, realpath } from 'node:fs/promises';
 import { createHash, randomUUID } from 'node:crypto';
-import { documentTime } from './document-dates.ts';
+import { beijingTimestamp, documentTime } from './document-dates.ts';
 import { safeAsset } from './library.ts';
 import { CONTENT_COLLECTIONS } from './collections.ts';
 import { updateDocumentState } from './update-document-state.ts';
@@ -204,7 +204,7 @@ export async function reconcileDocumentStates(
 export async function activityForLibrary(
   root: string,
   library: Library,
-  { observe = false, publicExport = false, now = new Date().toISOString() } = {},
+  { observe = false, publicExport = false, now = beijingTimestamp() } = {},
 ) {
   root = await realpath(root);
   const file = path.join(root, '.activity.json');

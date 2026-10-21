@@ -5,14 +5,14 @@ title: "Agent 按需加载"
 aliases: ["Agent 按需加载", "渐进式披露"]
 category: "Agent"
 tags: ["Agent", "按需加载"]
-created_at: "2026-10-11T21:11:22+08:00"
-updated_at: "2026-10-17T22:23:30+08:00"
+created_at: "2026-10-11 21:11:22"
+updated_at: "2026-10-17 22:23:30"
 reading_suggestions:
   - context-loading
   - tool-loading
   - agent-memory
   - context-budget
-learning_status_changed_at: "2026-10-18T22:57:29.961+08:00"
+learning_status_changed_at: "2026-10-18 22:57:29.961"
 ---
 
 **Agent 按需加载是一种按当前任务需要，将资料、指令或工具定义逐步提供给模型的机制。** 尚未用到的内容保存在文件、数据库或工具目录中，模型先看到必要内容与发现入口。

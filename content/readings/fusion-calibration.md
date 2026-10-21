@@ -4,8 +4,8 @@ category: "RAG"
 tags: ["RAG", "检索", "检索评测"]
 type: "article"
 learning_status: pending
-created_at: "2026-10-18T22:22:00+08:00"
-updated_at: "2026-10-18T22:24:24+08:00"
+created_at: "2026-10-18 22:22:00"
+updated_at: "2026-10-18 22:24:24"
 source:
   - "https://arxiv.org/html/2210.11934"
   - "https://www.elastic.co/search-labs/blog/improving-information-retrieval-elastic-stack-hybrid/"

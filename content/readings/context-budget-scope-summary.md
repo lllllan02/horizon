@@ -3,8 +3,8 @@ title: "压缩与裁剪阈值：不同计数范围的例子"
 parent: context-budget
 category: "Agent"
 tags: ["上下文管理"]
-created_at: "2026-10-11T18:35:33+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-11 18:35:33"
+updated_at: "2026-10-13 12:48:15"
 source:
   - "https://github.com/google-gemini/gemini-cli/blob/main/packages/core/src/context/chatCompressionService.ts"
   - "https://github.com/Aider-AI/aider/blob/main/aider/history.py"

@@ -2,8 +2,8 @@
 title: "Langfuse：可用于调试和评测的 Trace"
 category: "可观测性"
 tags: ["Agent", "Trace", "可观测性", "数据脱敏"]
-created_at: "2026-10-12T23:19:16+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-12 23:19:16"
+updated_at: "2026-10-13 12:48:15"
 source:
   - "https://langfuse.com/docs/observability/best-practices"
   - "https://langfuse.com/docs/observability/data-model"

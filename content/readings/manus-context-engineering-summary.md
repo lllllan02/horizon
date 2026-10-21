@@ -2,8 +2,8 @@
 title: "Manus：上下文怎样影响成本与行动"
 category: "Agent"
 tags: ["Agent", "上下文管理"]
-created_at: "2026-10-11T15:24:08+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-11 15:24:08"
+updated_at: "2026-10-13 12:48:15"
 source: "[Context Engineering for AI Agents: Lessons from Building Manus](https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus)"
 reading_suggestions:
   - context-loading

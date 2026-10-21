@@ -3,8 +3,8 @@ title: "GraphQL（API 查询语言）"
 category: "计算机基础"
 tags: ["GraphQL", "API"]
 learning_status: pending
-created_at: "2026-10-20T16:20:22+08:00"
-updated_at: "2026-10-20T16:20:22+08:00"
+created_at: "2026-10-20 16:20:22"
+updated_at: "2026-10-20 16:20:22"
 ---
 
 **GraphQL 是面向 API 的查询语言，以及在服务端按类型系统执行这些请求的运行时。** 客户端在请求中写明需要哪些字段，服务端校验后提供数据，返回的数据结构与字段选择相对应。

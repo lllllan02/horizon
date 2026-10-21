@@ -4,8 +4,8 @@ aliases: ["Coroutine", "Coroutines"]
 category: "计算机基础"
 tags: ["并发", "调度"]
 learning_status: pending
-created_at: "2026-10-20T19:23:41+08:00"
-updated_at: "2026-10-20T19:23:41+08:00"
+created_at: "2026-10-20 19:23:41"
+updated_at: "2026-10-20 19:23:41"
 ---
 
 **协程（Coroutine）是可以挂起、之后恢复执行的程序执行单元，通常由程序或语言运行时在用户态调度。** [[process-thread-sources#协程的挂起与恢复|挂起时保留继续执行所需的状态]]，让多个任务能够复用[[thread|线程]]，减少为每个任务创建操作系统线程的需要。

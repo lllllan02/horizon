@@ -5,8 +5,8 @@ parent: agent-intent
 category: "Agent"
 tags: ["Agent", "意图识别"]
 learning_status: pending
-created_at: "2026-10-13T17:38:22+08:00"
-updated_at: "2026-10-16T20:55:28+08:00"
+created_at: "2026-10-13 17:38:22"
+updated_at: "2026-10-16 20:55:28"
 reading_suggestions:
   - rasa-nlu-data-practice
   - rasa-intent-classification

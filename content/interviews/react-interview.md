@@ -5,9 +5,9 @@ category: "Agent"
 parent: agent-interview-hub
 tags: ["面试", "Agent", "ReAct"]
 learning_status: organized
-created_at: "2026-10-19T13:36:28+08:00"
-updated_at: "2026-10-19T13:42:21+08:00"
-learning_status_changed_at: "2026-10-19T13:43:59.407+08:00"
+created_at: "2026-10-19 13:36:28"
+updated_at: "2026-10-19 13:42:21"
+learning_status_changed_at: "2026-10-19 13:43:59.407"
 ---
 
 [[react-agent|ReAct]] 是一种 Agent 交互模式，**「核心是推理、行动、观察的循环」**，没有规定固定的软件架构。一个由模型根据工具结果决定下一步的[[agent-loop|最小 Agent Loop]]，就是这种模式的一种实现。

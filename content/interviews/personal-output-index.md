@@ -6,9 +6,9 @@ parent: interview-hub
 tags: ["面试", "项目经历"]
 type: overview
 learning_status: organized
-created_at: "2026-10-20T11:41:57+08:00"
-updated_at: "2026-10-20T11:41:57+08:00"
-learning_status_changed_at: "2026-10-21T10:14:35.495+08:00"
+created_at: "2026-10-20 11:41:57"
+updated_at: "2026-10-20 11:41:57"
+learning_status_changed_at: "2026-10-21 10:14:35.495"
 ---
 
 集中浏览基于自己实际经历整理的项目介绍、口述稿和实践复盘。

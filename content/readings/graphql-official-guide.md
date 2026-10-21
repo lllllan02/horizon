@@ -3,8 +3,8 @@ title: "GraphQL 官方文档基础导读"
 category: "计算机基础"
 tags: ["GraphQL", "API"]
 learning_status: pending
-created_at: "2026-10-20T16:20:22+08:00"
-updated_at: "2026-10-20T16:20:22+08:00"
+created_at: "2026-10-20 16:20:22"
+updated_at: "2026-10-20 16:20:22"
 source:
   - "https://graphql.org/learn/introduction/"
   - "https://graphql.org/learn/schema/"

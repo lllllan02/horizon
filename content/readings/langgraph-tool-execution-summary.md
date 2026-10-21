@@ -3,8 +3,8 @@ title: "LangGraph：同轮工具执行与结果回传"
 parent: tool-scheduling
 category: "Agent"
 tags: ["Agent", "工具调用"]
-created_at: "2026-10-12T12:34:54+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-12 12:34:54"
+updated_at: "2026-10-13 12:48:15"
 source: "[Workflows and agents：Agents 与 ToolNode](https://docs.langchain.com/oss/python/langgraph/workflows-agents#agents)"
 ---
 

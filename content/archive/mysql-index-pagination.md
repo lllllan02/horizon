@@ -4,8 +4,8 @@ title: "分页与索引"
 category: "MySQL"
 parent: mysql-indexes
 tags: ["索引", "SQL优化", "分页"]
-created_at: "2026-10-12T17:42:58+08:00"
-updated_at: "2026-10-12T18:00:18+08:00"
+created_at: "2026-10-12 17:42:58"
+updated_at: "2026-10-12 18:00:18"
 reading_suggestions:
   - mysql-index-ordering
   - mysql-deep-pagination

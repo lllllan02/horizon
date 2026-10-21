@@ -4,8 +4,8 @@ title: "前缀索引"
 category: "MySQL"
 parent: mysql-indexes
 tags: ["MySQL", "索引", "前缀索引"]
-created_at: "2026-10-12T15:29:11+08:00"
-updated_at: "2026-10-12T17:29:15+08:00"
+created_at: "2026-10-12 15:29:11"
+updated_at: "2026-10-12 17:29:15"
 reading_suggestions:
   - mysql-composite-index
   - mysql-covering-index

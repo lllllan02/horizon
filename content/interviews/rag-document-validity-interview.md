@@ -6,9 +6,9 @@ parent: retrieval-interview-index
 tags: ["面试", "RAG", "检索"]
 type: practice
 learning_status: organized
-created_at: "2026-10-20T16:33:40+08:00"
-updated_at: "2026-10-20T16:33:40+08:00"
-learning_status_changed_at: "2026-10-20T16:38:44.602+08:00"
+created_at: "2026-10-20 16:33:40"
+updated_at: "2026-10-20 16:33:40"
+learning_status_changed_at: "2026-10-20 16:38:44.602"
 ---
 
 我会在[[rag-workflow-interview|RAG 流程]]中分两层处理：**先保证检索片段属于当前生效版本，再回源检查文档有效性和当前用户权限**，检查通过后才交给模型。

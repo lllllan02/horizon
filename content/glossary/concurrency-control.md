@@ -4,8 +4,8 @@ aliases: ["Concurrency Control", "Concurrency Limiting", "并发限制"]
 category: "服务治理"
 tags: ["并发", "过载保护"]
 learning_status: pending
-created_at: "2026-10-18T23:47:18+08:00"
-updated_at: "2026-10-18T23:47:18+08:00"
+created_at: "2026-10-18 23:47:18"
+updated_at: "2026-10-18 23:47:18"
 ---
 
 **并发控制在容量保护场景中，是限制同时执行或占用某类资源的任务数量。** 它用于防止多个任务的资源消耗叠加后，耗尽[[thread|线程]]、连接、内存或下游容量；数据库中保证事务正确性的并发控制不在本篇范围内。

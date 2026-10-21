@@ -5,13 +5,13 @@ parent: mcp
 category: "Agent"
 tags: ["MCP", "工具调用", "协议"]
 created_at: "2026-10-09"
-updated_at: "2026-10-19T13:41:49+08:00"
+updated_at: "2026-10-19 13:41:49"
 reading_suggestions:
   - mcp-capabilities
   - mcp-tool-calling-go
   - mcp-permissions
   - mcp-architecture-summary
-learning_status_changed_at: "2026-10-19T13:51:55.147+08:00"
+learning_status_changed_at: "2026-10-19 13:51:55.147"
 ---
 
 **MCP 接入是将服务端（Server）提供的工具，接入宿主应用（Host）的模型调用循环。** 外部服务按 MCP 暴露能力后，Host 可以统一发现和调用工具，减少为每个服务单独编写接入逻辑；模型仍通过[[tool-calling|工具调用]]提出需求。

@@ -3,8 +3,8 @@ title: "Generative Agents：从经历检索到高层反思"
 parent: agent-memory
 category: "Agent"
 tags: ["Agent", "记忆", "检索"]
-created_at: "2026-10-13T10:44:40+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-13 10:44:40"
+updated_at: "2026-10-13 12:48:15"
 source: "https://arxiv.org/html/2304.03442v2"
 ---
 

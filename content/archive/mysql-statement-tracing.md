@@ -6,8 +6,8 @@ category: "MySQL"
 parent: mysql-slow-query
 type: "practice"
 tags: ["MySQL", "性能排查", "Performance Schema"]
-created_at: "2026-10-12T22:06:03+08:00"
-updated_at: "2026-10-12T22:06:03+08:00"
+created_at: "2026-10-12 22:06:03"
+updated_at: "2026-10-12 22:06:03"
 reading_suggestions:
   - mysql-performance-schema-profiling
   - mysql-lock-waits

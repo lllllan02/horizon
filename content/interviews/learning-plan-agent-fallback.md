@@ -5,9 +5,9 @@ parent: personal-output-index
 tags: ["面试", "项目经历", "Agent"]
 type: practice
 learning_status: organized
-created_at: "2026-10-20T11:56:23+08:00"
-updated_at: "2026-10-20T11:56:23+08:00"
-learning_status_changed_at: "2026-10-20T11:59:26.534+08:00"
+created_at: "2026-10-20 11:56:23"
+updated_at: "2026-10-20 11:56:23"
+learning_status_changed_at: "2026-10-20 11:59:26.534"
 ---
 
 在[[learning-plan-agent-interview|学习计划 Agent 项目]]中，我们选择在选题验收失败后直接降级。**初步上线时优先控制延迟和 Token 消耗，接受较低标准的结果，再通过失败样本推进后续优化。**

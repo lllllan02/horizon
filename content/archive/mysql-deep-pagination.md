@@ -4,8 +4,8 @@ title: "深分页优化"
 category: "MySQL"
 parent: mysql-index-pagination
 tags: ["索引", "SQL优化", "分页"]
-created_at: "2026-10-12T17:56:27+08:00"
-updated_at: "2026-10-12T18:04:41+08:00"
+created_at: "2026-10-12 17:56:27"
+updated_at: "2026-10-12 18:04:41"
 reading_suggestions:
   - mysql-index-pagination
   - mysql-covering-index

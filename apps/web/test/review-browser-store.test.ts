@@ -56,7 +56,7 @@ test('展示历史跨浏览器存储实例保留，重载后从全部未复习�
   let state = await store.load(documents);
   const seen: string[] = [];
   for (let i = 0; i < documents.length; i++) {
-    const next = reviewQueue(documents, state).eligibleFresh[0];
+    const next = reviewQueue(documents, state).fresh[0];
     seen.push(next.id);
     const input = {
       version: state.version,
@@ -70,10 +70,10 @@ test('展示历史跨浏览器存储实例保留，重载后从全部未复习�
     assert.deepEqual(await store.update(documents, input), shown);
     state = await createBrowserReviewStore(storage, 'reviews').load(documents);
     assert.deepEqual(state, shown);
-    assert.equal(reviewQueue(documents, state).fresh.length, 5);
+    assert.equal(reviewQueue(documents, state).fresh.length, 8);
   }
   assert.equal(new Set(seen).size, documents.length);
-  assert.equal(reviewQueue(documents, state).eligibleFresh[0].id, seen[0]);
+  assert.equal(reviewQueue(documents, state).fresh[0].id, seen[0]);
   assert.ok(Object.values(state.records).every((record) => record.lastReviewedAt === null));
   assert.equal(JSON.stringify(documents), before);
 });

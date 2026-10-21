@@ -4,8 +4,8 @@ category: "Redis"
 type: article
 tags: ["Redis", "性能", "事件循环"]
 learning_status: pending
-created_at: "2026-10-19T22:24:24+08:00"
-updated_at: "2026-10-19T22:24:24+08:00"
+created_at: "2026-10-19 22:24:24"
+updated_at: "2026-10-19 22:24:24"
 source:
   - "https://redis.io/docs/latest/develop/get-started/faq/"
   - "https://redis.io/docs/latest/commands/get/"

@@ -3,8 +3,8 @@ title: "Anthropic Memory Tool：模型提出操作，应用保存文件"
 parent: agent-memory
 category: "Agent"
 tags: ["Agent", "记忆", "工具调用"]
-created_at: "2026-10-12T23:24:47+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-12 23:24:47"
+updated_at: "2026-10-13 12:48:15"
 source: "https://platform.claude.com/docs/en/agents-and-tools/tool-use/memory-tool"
 ---
 

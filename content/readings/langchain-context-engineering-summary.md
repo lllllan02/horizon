@@ -2,8 +2,8 @@
 title: "LangChain：写入、选择、压缩与隔离上下文"
 category: "Agent"
 tags: ["Agent", "上下文管理"]
-created_at: "2026-10-11T15:24:08+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-11 15:24:08"
+updated_at: "2026-10-13 12:48:15"
 source: "[Context Engineering](https://www.langchain.com/blog/context-engineering-for-agents)"
 reading_suggestions:
   - manus-context-engineering-summary

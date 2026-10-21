@@ -6,7 +6,7 @@ aliases: ["Tool Calling", "Function Calling", "函数调用"]
 category: "Agent"
 tags: ["Agent", "工具调用"]
 created_at: "2026-10-09"
-updated_at: "2026-10-17T15:34:32+08:00"
+updated_at: "2026-10-17 15:34:32"
 reading_suggestions:
   - tool-interface-design
   - tool-registry

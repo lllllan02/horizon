@@ -2,7 +2,7 @@
 learning_status: pending
 title: "令牌桶限流"
 category: "服务治理"
-updated_at: "2026-10-19T16:19:44+08:00"
+updated_at: "2026-10-19 16:19:44"
 tags: ["限流", "令牌桶"]
 aliases: ["令牌桶", "Token Bucket", "令牌桶算法"]
 ---

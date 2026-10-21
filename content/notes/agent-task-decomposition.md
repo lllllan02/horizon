@@ -4,10 +4,10 @@ aliases: ["任务拆分", "任务分解", "Task Decomposition", "何时使用 Pl
 parent: agent-planning
 category: "Agent"
 tags: ["Agent", "任务规划"]
-created_at: "2026-10-17T17:20:29+08:00"
-updated_at: "2026-10-18T11:40:08+08:00"
+created_at: "2026-10-17 17:20:29"
+updated_at: "2026-10-18 11:40:08"
 learning_status: organized
-learning_status_changed_at: "2026-10-18T11:41:34.349+08:00"
+learning_status_changed_at: "2026-10-18 11:41:34.349"
 ---
 
 **任务拆分（Task Decomposition）是把整体目标划分为可分别完成和验收的子任务的过程。**

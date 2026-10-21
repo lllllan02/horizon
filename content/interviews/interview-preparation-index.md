@@ -5,8 +5,8 @@ parent: interview-hub
 tags: ["面试"]
 type: overview
 learning_status: pending
-created_at: "2026-10-20T17:03:51+08:00"
-updated_at: "2026-10-20T17:03:51+08:00"
+created_at: "2026-10-20 17:03:51"
+updated_at: "2026-10-20 17:03:51"
 ---
 
 集中浏览岗位准备清单、通用资料与面经。各岗位保留自己的能力要求、练习与完成证据。

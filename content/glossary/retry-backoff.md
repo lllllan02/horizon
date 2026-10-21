@@ -4,8 +4,8 @@ aliases: ["Backoff", "Retry Backoff", "退避", "Exponential Backoff", "指数�
 category: "服务治理"
 tags: ["重试", "退避"]
 learning_status: pending
-created_at: "2026-10-18T23:47:18+08:00"
-updated_at: "2026-10-19T00:08:11+08:00"
+created_at: "2026-10-18 23:47:18"
+updated_at: "2026-10-19 00:08:11"
 ---
 
 **重试退避（Backoff）是在一次尝试失败后，按策略等待一段时间再重试的方法。** 等待可以降低连续重试的频率，给暂时故障或过载的依赖留出恢复时间。

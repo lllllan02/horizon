@@ -6,12 +6,12 @@ aliases: ["Agent Checkpoint", "Agent 中断恢复", "Agent 的中断恢复机制
 category: "Agent"
 tags: ["Agent", "Checkpoint", "持久化"]
 created_at: "2026-10-09"
-updated_at: "2026-10-19T21:37:28+08:00"
+updated_at: "2026-10-19 21:37:28"
 reading_suggestions:
   - agent-checkpoint-runtime
   - agent-checkpoint-nesting
   - agent-checkpoint-scheduling
-learning_status_changed_at: "2026-10-19T21:57:18.886+08:00"
+learning_status_changed_at: "2026-10-19 21:57:18.886"
 ---
 
 **检查点（Checkpoint）保存程序的执行进度，让 Agent 中断后能够找到接续位置。** 目标与业务进展由[[agent-task-state|任务状态管理]]维护，消息、工具请求和结果由[[history-storage|上下文管理]]保存；Checkpoint 关联这些数据，支撑原[[process|进程]]或新进程继续执行。

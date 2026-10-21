@@ -4,8 +4,8 @@ title: "InnoDB 双写缓冲"
 category: "MySQL"
 parent: mysql-buffer-pool-lifecycle
 tags: ["MySQL", "持久化", "数据恢复"]
-created_at: "2026-10-12T19:10:47+08:00"
-updated_at: "2026-10-12T21:20:50+08:00"
+created_at: "2026-10-12 19:10:47"
+updated_at: "2026-10-12 21:20:50"
 reading_suggestions:
   - wal
   - mysql-manual-recovery

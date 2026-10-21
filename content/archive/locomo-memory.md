@@ -3,8 +3,8 @@ title: "LoCoMo：长对话中的事实、事件与时间关系评测"
 parent: agent-memory
 category: "Agent"
 tags: ["Agent", "记忆", "评测"]
-created_at: "2026-10-13T10:44:40+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-13 10:44:40"
+updated_at: "2026-10-13 12:48:15"
 source:
   - "https://aclanthology.org/2024.acl-long.747/"
   - "https://aclanthology.org/2024.acl-long.747.pdf"

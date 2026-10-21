@@ -6,9 +6,9 @@ parent: interview-preparation-index
 tags: ["面试", "Agent"]
 type: practice
 learning_status: organized
-created_at: "2026-10-20T15:34:10+08:00"
-updated_at: "2026-10-20T17:39:01+08:00"
-learning_status_changed_at: "2026-10-20T18:15:15.710+08:00"
+created_at: "2026-10-20 15:34:10"
+updated_at: "2026-10-20 17:39:01"
+learning_status_changed_at: "2026-10-20 18:15:15.710"
 ---
 
 这份岗位要求「**独立交付 Agent 平台的 Web 全栈功能，从数据库、API 到前端交互，并参与 Agent 能力与生产可靠性的打磨**」。准备主线是一项完整功能的交付经历，前后端能力都要有具体证据，再说明怎样把模型、工具、知识库和协作能力接入产品。

@@ -3,10 +3,10 @@ learning_status: pending
 title: "WAL（预写日志）"
 category: "数据存储"
 created_at: "2026-10-09"
-updated_at: "2026-10-12T21:10:21+08:00"
+updated_at: "2026-10-12 21:10:21"
 tags: ["数据库", "持久化"]
 aliases: ["Write-Ahead Logging", "预写日志", "日志先行"]
-learning_status_changed_at: "2026-10-17T21:29:57.320+08:00"
+learning_status_changed_at: "2026-10-17 21:29:57.320"
 ---
 
 **WAL（Write-Ahead Logging，预写日志）是一种日志机制：修改后的数据页写入数据文件前，先把对应修改日志持久化，以便崩溃后恢复。**

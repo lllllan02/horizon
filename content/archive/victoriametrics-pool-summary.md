@@ -2,7 +2,7 @@
 title: "VictoriaMetrics：Pool：对象复用与回收"
 category: "Go"
 created_at: "2026-10-08"
-updated_at: "2026-10-13T12:48:15+08:00"
+updated_at: "2026-10-13 12:48:15"
 tags: ["Go", "sync.Pool", "源码"]
 aliases: ["sync.Pool victim"]
 parent: victoriametrics-go-concurrency

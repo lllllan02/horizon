@@ -4,8 +4,8 @@ parent: agent-trace
 title: "Agent Trace 调用关联"
 category: "Agent"
 tags: ["Agent", "Trace", "埋点"]
-created_at: "2026-10-12T23:28:23+08:00"
-updated_at: "2026-10-13T01:35:20+08:00"
+created_at: "2026-10-12 23:28:23"
+updated_at: "2026-10-13 01:35:20"
 reading_suggestions:
   - agent-trace-spans
   - agent-trace-viewing

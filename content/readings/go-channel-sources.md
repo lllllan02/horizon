@@ -3,8 +3,8 @@ title: "Go runtime 源码导读：Channel 数据结构"
 category: "Go"
 tags: ["Go"]
 learning_status: pending
-created_at: "2026-10-19T19:27:56+08:00"
-updated_at: "2026-10-19T19:27:56+08:00"
+created_at: "2026-10-19 19:27:56"
+updated_at: "2026-10-19 19:27:56"
 source: "https://go.dev/src/runtime/chan.go"
 ---
 

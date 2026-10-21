@@ -3,8 +3,8 @@ title: "Go 官方并发文章：协程退出与有界并发"
 category: "Go"
 tags: ["Go", "并发"]
 learning_status: pending
-created_at: "2026-10-20T19:44:29+08:00"
-updated_at: "2026-10-20T19:44:29+08:00"
+created_at: "2026-10-20 19:44:29"
+updated_at: "2026-10-20 19:44:29"
 source: "https://go.dev/blog/pipelines"
 ---
 

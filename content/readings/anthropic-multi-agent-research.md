@@ -3,8 +3,8 @@ title: "Anthropic：多 Agent 研究系统的收益与代价"
 parent: multi-agent
 category: "Agent"
 tags: ["Agent", "多Agent协作", "上下文管理"]
-created_at: "2026-10-13T17:41:05+08:00"
-updated_at: "2026-10-17T23:05:45+08:00"
+created_at: "2026-10-13 17:41:05"
+updated_at: "2026-10-17 23:05:45"
 source: "https://www.anthropic.com/engineering/multi-agent-research-system"
 learning_status: pending
 ---

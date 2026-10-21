@@ -2,7 +2,7 @@
 title: "VictoriaMetrics：Cond：等待条件与通知"
 category: "Go"
 created_at: "2026-10-08"
-updated_at: "2026-10-13T12:48:15+08:00"
+updated_at: "2026-10-13 12:48:15"
 tags: ["Go", "sync.Cond", "源码"]
 aliases: ["Cond notifyList"]
 parent: victoriametrics-go-concurrency

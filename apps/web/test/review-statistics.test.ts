@@ -6,7 +6,13 @@ import type {
   ReviewRecord,
   ReviewState,
 } from '../src/review-model.ts';
-import { emptyReviewState, reconcileReviews, reviewQueue } from '../src/review-model.ts';
+import {
+  applyReview,
+  emptyReviewState,
+  reconcileReviews,
+  reviewFingerprint,
+  reviewQueue,
+} from '../src/review-model.ts';
 import {
   buildReviewStatistics,
   formatReviewTime,
@@ -57,14 +63,40 @@ const stateOf = (...records: ReviewRecord[]): ReviewState => ({
   records: Object.fromEntries(records.map((item) => [item.id, item])),
 });
 
-test('统计全部已整理资料，不受今日五篇窗口限制，也不包含孤儿和其他状态', () => {
+test('新旧时间混合时按北京实际时刻排序、判断到期并显示历史计划', () => {
+  const state = stateOf(
+    record('old', [event('old', { reviewedAt: '2026-10-21T04:00:00Z' })], {
+      dueAt: '2026-10-21T12:00:00+08:00',
+    }),
+    record('new', [event('new', { reviewedAt: '2026-10-21 12:00:00.123' })], {
+      dueAt: '2026-10-21 12:30:00.001',
+    }),
+  );
+  const stats = buildReviewStatistics([doc('old'), doc('new')], state, now, { sort: 'recent' });
+  assert.deepEqual(
+    stats.rows.map((row) => row.doc.id),
+    ['new', 'old'],
+  );
+  assert.deepEqual(
+    stats.rows.map((row) => row.status),
+    ['scheduled', 'due'],
+  );
+  assert.ok(stats.rows.every((row) => row.reviewedToday && row.period === 'today'));
+  assert.equal(stats.rows[0].history[0].plannedAt, '2026-10-22 12:00:00.123');
+  assert.equal(
+    formatReviewTime('2026-10-21 12:00:00.123'),
+    formatReviewTime('2026-10-21T04:00:00Z'),
+  );
+});
+
+test('统计全部已整理资料，不包含孤儿和其他状态', () => {
   const documents = [
     ...Array.from({ length: 9 }, (_, i) => doc(`doc-${i}`)),
     doc('reading', { state: 'reading' }),
     doc('pending', { state: 'pending' }),
   ];
   const state = reconcileReviews(emptyReviewState(), documents, now);
-  assert.equal(reviewQueue(documents, state, now).fresh.length, 5);
+  assert.equal(reviewQueue(documents, state, now).fresh.length, 9);
   state.records.orphan = record('orphan', [event('orphan-feedback')]);
   state.records.reading = record('reading', [event('reading-feedback')]);
   const before = structuredClone({ documents, state });
@@ -109,8 +141,8 @@ test('只统计评分，展示和暂停不计次；历史倒序且保留当时�
     row.history.map((item) => item.requestId),
     ['forgot', 'hard', 'good'],
   );
-  assert.equal(row.history[2].plannedAt, '2026-10-13T04:30:00.000Z');
-  assert.equal(row.history[0].plannedAt, '2026-10-15T04:30:00.000Z');
+  assert.equal(row.history[2].plannedAt, '2026-10-13 12:30:00.000');
+  assert.equal(row.history[0].plannedAt, '2026-10-15 12:30:00.000');
   assert.equal(row.dueAt, '2026-10-22T04:30:00Z');
   assert.deepEqual(state, before);
 });
@@ -337,4 +369,31 @@ test('今日已复习只依据最近真实评分日期，包含后续安排与�
     }).rows.length,
     0,
   );
+});
+
+test('提前练习历史展示实际保留的计划，不按练习时间重新推后', () => {
+  const documents = [doc('early')];
+  let state = reconcileReviews(emptyReviewState(), documents, now);
+  const submitAt = (at: number) => {
+    state = applyReview(
+      state,
+      documents,
+      {
+        version: state.version,
+        id: 'early',
+        rating: 'good',
+        requestId: `practice-${at}`,
+        documentUpdated: documents[0].updated,
+        documentFingerprint: reviewFingerprint(documents[0]),
+      },
+      at,
+    );
+  };
+  submitAt(now);
+  const dueAt = state.records.early.dueAt;
+  submitAt(now + 3_600_000);
+  const row = buildReviewStatistics(documents, state, now + 3_600_000).rows[0];
+  assert.equal(row.history.length, 2);
+  assert.equal(row.history[0].plannedAt, dueAt);
+  assert.equal(row.dueAt, dueAt);
 });

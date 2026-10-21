@@ -4,9 +4,9 @@ category: "服务治理"
 parent: performance-interview-index
 tags: ["面试", "服务治理", "过载保护"]
 learning_status: organized
-created_at: "2026-10-19T16:40:22+08:00"
-updated_at: "2026-10-19T16:47:10+08:00"
-learning_status_changed_at: "2026-10-19T16:48:53.601+08:00"
+created_at: "2026-10-19 16:40:22"
+updated_at: "2026-10-19 16:47:10"
+learning_status_changed_at: "2026-10-19 16:48:53.601"
 ---
 
 降级是在流量过大、资源不足或下游故障时，暂时减少部分非核心功能，或者降低结果的实时性、准确性，**「保证核心业务可用」**，避免局部问题拖垮整个系统。

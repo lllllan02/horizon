@@ -4,9 +4,9 @@ category: "Kafka"
 parent: kafka-interview-index
 tags: ["面试", "Kafka", "消息队列", "性能排查"]
 learning_status: organized
-created_at: "2026-10-19T11:12:42+08:00"
-updated_at: "2026-10-19T11:12:42+08:00"
-learning_status_changed_at: "2026-10-19T11:15:06.825+08:00"
+created_at: "2026-10-19 11:12:42"
+updated_at: "2026-10-19 11:12:42"
+learning_status_changed_at: "2026-10-19 11:15:06.825"
 ---
 
 我会先比较消息的**「生产速率和消费处理速率」**，主要从两个方向排查：

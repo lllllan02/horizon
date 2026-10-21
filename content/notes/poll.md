@@ -5,9 +5,9 @@ category: "操作系统"
 parent: io-multiplexing
 tags: ["IO多路复用"]
 learning_status: organized
-created_at: "2026-10-20T19:46:45+08:00"
-updated_at: "2026-10-20T19:46:45+08:00"
-learning_status_changed_at: "2026-10-20T19:52:54.777+08:00"
+created_at: "2026-10-20 19:46:45"
+updated_at: "2026-10-20 19:46:45"
+learning_status_changed_at: "2026-10-20 19:52:54.777"
 ---
 
 poll 是[[io-multiplexing|IO 多路复用]]接口，用「**数组**」表示监听集合。相比[[select|select]]的固定大小位图，它可以按需要组织数组，避开描述符编号小于 1024 的表示限制。

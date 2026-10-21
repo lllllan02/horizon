@@ -2,8 +2,8 @@
 title: "Eino 的 Langfuse Trace 集成"
 category: "Agent"
 tags: ["Agent", "Trace", "可观测性", "埋点"]
-created_at: "2026-10-12T23:48:23+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-12 23:48:23"
+updated_at: "2026-10-13 12:48:15"
 source:
   - "https://langfuse.com/self-hosting/deployment/docker-compose"
   - "https://langfuse.com/self-hosting/administration/headless-initialization"

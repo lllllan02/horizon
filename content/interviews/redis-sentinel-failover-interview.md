@@ -4,9 +4,9 @@ category: "Redis"
 parent: redis-interview-index
 tags: ["面试", "Redis"]
 learning_status: organized
-created_at: "2026-10-19T20:30:13+08:00"
-updated_at: "2026-10-19T20:55:19+08:00"
-learning_status_changed_at: "2026-10-19T21:12:42.042+08:00"
+created_at: "2026-10-19 20:30:13"
+updated_at: "2026-10-19 20:55:19"
+learning_status_changed_at: "2026-10-19 21:12:42.042"
 ---
 
 在[[redis-modes-interview|主从加哨兵模式]]下，主从复制负责同步数据，**「哨兵负责发现故障并协调自动切换」**。

@@ -4,8 +4,8 @@ category: "Redis"
 type: article
 tags: ["分布式锁", "Lua", "性能"]
 learning_status: pending
-created_at: "2026-10-20T21:30:20+08:00"
-updated_at: "2026-10-20T21:30:20+08:00"
+created_at: "2026-10-20 21:30:20"
+updated_at: "2026-10-20 21:30:20"
 source:
   - "https://redis.io/docs/latest/develop/clients/patterns/distributed-locks/"
   - "https://redis.io/docs/latest/develop/programmability/eval-intro/"

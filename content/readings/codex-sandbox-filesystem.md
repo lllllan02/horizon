@@ -4,7 +4,7 @@ title: "Codex 如何保护可写工作区内的敏感路径"
 category: "Agent"
 tags: ["Agent", "沙箱", "源码"]
 created_at: "2026-10-10"
-updated_at: "2026-10-13T12:48:15+08:00"
+updated_at: "2026-10-13 12:48:15"
 source: ["[Linux 后端](https://github.com/openai/codex/blob/5ef96ab2785f3ecddf279639eff7b1b42c906fa4/codex-rs/linux-sandbox/README.md#L53)", "[文件服务 helper](https://github.com/openai/codex/blob/5ef96ab2785f3ecddf279639eff7b1b42c906fa4/codex-rs/exec-server/src/fs_sandbox.rs#L83)"]
 reading_suggestions:
   - sandbox-filesystem

@@ -4,9 +4,9 @@ category: "Agent"
 parent: agent-interview-hub
 tags: ["面试", "Agent", "性能排查", "内存滞留"]
 learning_status: organized
-created_at: "2026-10-18T23:06:28+08:00"
-updated_at: "2026-10-21T10:04:57+08:00"
-learning_status_changed_at: "2026-10-21T10:06:25.129+08:00"
+created_at: "2026-10-18 23:06:28"
+updated_at: "2026-10-21 10:04:57"
+learning_status_changed_at: "2026-10-21 10:06:25.129"
 ---
 
 Agent 服务通常需要**多轮调用模型、保留历史消息和工具结果，模型调用等待较长，并且经常使用流式返回和异步任务**。这些特点容易带来以下几类内存问题：

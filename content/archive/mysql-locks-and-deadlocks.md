@@ -5,8 +5,8 @@ category: "MySQL"
 parent: mysql-overview#事务与并发
 type: "concept"
 tags: ["MySQL", "事务", "并发", "死锁"]
-created_at: "2026-10-12T21:32:30+08:00"
-updated_at: "2026-10-12T21:32:30+08:00"
+created_at: "2026-10-12 21:32:30"
+updated_at: "2026-10-12 21:32:30"
 reading_suggestions:
   - mysql-mvcc
   - mysql-manual-transactions

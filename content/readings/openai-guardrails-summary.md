@@ -4,7 +4,7 @@ parent: agent-human-in-the-loop
 category: "Agent"
 tags: ["Agent", "行为约束", "权限"]
 created_at: "2026-10-10"
-updated_at: "2026-10-13T12:48:15+08:00"
+updated_at: "2026-10-13 12:48:15"
 source:
   - "[Guardrails](https://openai.github.io/openai-agents-python/guardrails/)"
   - "[Guardrails and human review](https://developers.openai.com/api/docs/guides/agents/guardrails-approvals)"

@@ -4,9 +4,9 @@ category: "性能排查"
 parent: personal-output-index
 tags: ["面试", "性能排查", "连接池"]
 learning_status: organized
-created_at: "2026-10-18T22:56:42+08:00"
-updated_at: "2026-10-18T23:53:19+08:00"
-learning_status_changed_at: "2026-10-19T00:04:42.314+08:00"
+created_at: "2026-10-18 22:56:42"
+updated_at: "2026-10-18 23:53:19"
+learning_status_changed_at: "2026-10-19 00:04:42.314"
 ---
 
 我们先通过[[trace-and-span|链路追踪]]分析耗时，并在数据访问层补充分段埋点，分别记录开始获取连接、成功拿到连接和查询完成的时间。这样就能把获取连接的耗时与拿到连接后的查询耗时分开。

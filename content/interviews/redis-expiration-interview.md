@@ -5,9 +5,9 @@ category: "Redis"
 parent: redis-interview-index
 tags: ["面试", "Redis", "过期机制"]
 learning_status: organized
-created_at: "2026-10-19T10:35:33+08:00"
-updated_at: "2026-10-19T10:40:20+08:00"
-learning_status_changed_at: "2026-10-19T10:43:32.599+08:00"
+created_at: "2026-10-19 10:35:33"
+updated_at: "2026-10-19 10:40:20"
+learning_status_changed_at: "2026-10-19 10:43:32.599"
 ---
 
 Redis 的[[redis-expiration-sources|过期机制]]既可以设置一个具体的到期时间，也可以设置一个过期时长，但**「底层最终记录的都是一个具体的到期时间」**。

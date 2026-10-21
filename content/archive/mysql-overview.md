@@ -5,8 +5,8 @@ aliases: ["MySQL", "MySQL 学习入口"]
 category: "MySQL"
 type: "overview"
 tags: ["MySQL", "数据库"]
-created_at: "2026-10-12T14:03:16+08:00"
-updated_at: "2026-10-12T22:16:47+08:00"
+created_at: "2026-10-12 14:03:16"
+updated_at: "2026-10-12 22:16:47"
 reading_suggestions:
   - mysql-query-execution
   - mysql-storage-layout

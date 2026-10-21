@@ -4,8 +4,8 @@ title: "InnoDB 页分裂与合并"
 category: "MySQL"
 parent: mysql-index-structure
 tags: ["MySQL", "B+树", "索引"]
-created_at: "2026-10-12T15:25:39+08:00"
-updated_at: "2026-10-12T15:56:30+08:00"
+created_at: "2026-10-12 15:25:39"
+updated_at: "2026-10-12 15:56:30"
 reading_suggestions:
   - mysql-manual-queries
 ---

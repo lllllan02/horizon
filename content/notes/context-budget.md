@@ -6,13 +6,13 @@ aliases: ["Token Budgeting", "Context Budget", "Token 预算"]
 category: "Agent"
 tags: ["上下文管理"]
 created_at: "2026-10-09"
-updated_at: "2026-10-17T20:39:09+08:00"
+updated_at: "2026-10-17 20:39:09"
 reading_suggestions:
   - agent-context-input
   - context-trimming
   - context-compaction
   - pi-compaction-summary
-learning_status_changed_at: "2026-10-17T20:41:16.143+08:00"
+learning_status_changed_at: "2026-10-17 20:41:16.143"
 ---
 
 **上下文预算（Token Budgeting）是为模型输入设定可用额度，并根据实际占用决定何时缩减内容的工程做法。** 窗口需要同时容纳输入与输出，因此要在耗尽前触发裁剪或压缩。

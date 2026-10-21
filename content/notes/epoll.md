@@ -5,9 +5,9 @@ category: "操作系统"
 parent: io-multiplexing
 tags: ["IO多路复用"]
 learning_status: organized
-created_at: "2026-10-20T19:46:45+08:00"
-updated_at: "2026-10-20T19:46:45+08:00"
-learning_status_changed_at: "2026-10-20T19:54:52.740+08:00"
+created_at: "2026-10-20 19:46:45"
+updated_at: "2026-10-20 19:46:45"
+learning_status_changed_at: "2026-10-20 19:54:52.740"
 ---
 
 epoll 是[[io-multiplexing|IO 多路复用]]机制，在内核中维护「**监听集合和就绪列表**」。当大量连接长期被监听、每次只有少量活跃时，它能复用监听集合，省去像[[select|select]]、[[poll|poll]]那样每轮重新提交完整集合的工作。

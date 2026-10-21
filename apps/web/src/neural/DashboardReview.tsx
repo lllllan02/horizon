@@ -1,8 +1,9 @@
+import { documentTime } from '../document-dates.ts';
 import { useEffect, useRef, useState } from 'react';
 import type { ReaderGraph } from '../types/graph.ts';
 import type { LibraryDocument } from '../types/library.ts';
 import type { ReviewController } from '../types/review-ui.ts';
-import { nextReviewInterval, type ReviewRating } from '../review-model.ts';
+import { reviewSchedule, type ReviewRating } from '../review-model.ts';
 import { MarkdownArticle } from './MarkdownArticle.tsx';
 import { docHref } from './dashboard-data.ts';
 import { ReviewStatistics } from './ReviewStatistics.tsx';
@@ -15,7 +16,7 @@ const dateFormatter = new Intl.DateTimeFormat('zh-CN', {
   day: '2-digit',
 });
 const date = (value: string | null | undefined) =>
-  value ? dateFormatter.format(new Date(value)) : '尚未复习';
+  value ? dateFormatter.format(new Date(documentTime(value))) : '尚未复习';
 const topicOf = (doc: LibraryDocument) => doc.category || '未分类';
 const ratings: { id: ReviewRating; label: string }[] = [
   { id: 'forgot', label: '忘了' },
@@ -36,14 +37,17 @@ export function DashboardReview({
   const [saved, setSaved] = useState(false);
   const [selectedRating, setSelectedRating] = useState<ReviewRating | null>(null);
   const [copyMessage, setCopyMessage] = useState('');
+  const attemptedRating = useRef<ReviewRating | null>(null);
+  const observedReview = useRef<string | null>(null);
   const opener = useRef<string | null>(null);
   const host = useRef<HTMLDivElement>(null);
   const title = useRef<HTMLHeadingElement>(null);
   const body = useRef<HTMLDivElement>(null);
   const { queue, state, pending } = reviews;
-  const available = [...queue.due, ...queue.eligibleFresh].filter(
-    (doc) => !skipped.includes(doc.id),
-  );
+  const pendingRating = session
+    ? (reviews.pendingRating(session) ?? attemptedRating.current)
+    : null;
+  const available = queue.recommendations.filter((doc) => !skipped.includes(doc.id));
   const current = session ? graph.index.get(session.id) : null;
   const changed =
     !!session &&
@@ -51,6 +55,12 @@ export function DashboardReview({
       current.state !== 'organized' ||
       current.body !== session.body ||
       current.updated !== session.updated);
+  const completedElsewhere =
+    !!session &&
+    !saved &&
+    !reviews.pendingRating(session) &&
+    (state?.records[session.id]?.history.findLast((event) => event.rating)?.requestId ?? null) !==
+      observedReview.current;
   const paused = !!session && !!state?.records[session.id]?.paused;
   const close = () => {
     setSession(null);
@@ -89,14 +99,18 @@ export function DashboardReview({
   }, [revealed]);
   const start = (doc: LibraryDocument, element?: HTMLElement) => {
     if (element) opener.current = element.dataset.reviewStart ?? null;
-    setSession(doc);
+    observedReview.current =
+      state?.records[doc.id]?.history.findLast((event) => event.rating)?.requestId ?? null;
+    setSession({ ...doc });
     setRevealed(false);
     setSaved(false);
     setSelectedRating(null);
     setCopyMessage('');
+    attemptedRating.current = null;
   };
   const next = () => {
-    const doc = available.find((item) => item.id !== session?.id);
+    const doc =
+      available.find((item) => item.id !== session?.id) ?? (saved ? available[0] : undefined);
     if (doc) start(doc);
     else close();
   };
@@ -105,11 +119,14 @@ export function DashboardReview({
     next();
   };
   const submit = async (rating: ReviewRating) => {
-    if (!session || changed || paused || saved || pending) return;
+    if (!session || changed || paused || completedElsewhere || saved || pending) return;
+    if (pendingRating && pendingRating !== rating) return;
+    attemptedRating.current = rating;
     if (await reviews.submit(session, rating)) setSaved(true);
   };
   const chooseRating = (rating: ReviewRating) => {
-    if (pending || saved || changed || paused) return;
+    if (pending || saved || changed || paused || completedElsewhere) return;
+    if (pendingRating && pendingRating !== rating) return;
     if (rating === 'good') {
       void submit(rating);
     } else {
@@ -143,11 +160,6 @@ export function DashboardReview({
             <div className="db-review-entrybar">
               <div>
                 <p className="db-review-storage">{reviews.storageLabel} · 北京时间</p>
-                {queue.freshRemaining > 0 && queue.eligibleFresh.length === 0 && (
-                  <p className="db-review-quota">
-                    今日首次复习已满 5 篇，其余未复习资料明日继续；已到期资料仍可复习。
-                  </p>
-                )}
               </div>
               <button
                 className="db-primary"
@@ -155,7 +167,7 @@ export function DashboardReview({
                 disabled={pending || !available.length}
                 onClick={(event) => start(available[0], event.currentTarget)}
               >
-                开始今日复习
+                开始复习
               </button>
             </div>
             <ReviewStatistics graph={graph} reviews={reviews} onStart={start} />
@@ -184,13 +196,13 @@ export function DashboardReview({
               <h2 id="review-session-title" ref={title} tabIndex={-1}>
                 {session.title}
               </h2>
-              {!changed && !paused && (
+              {!changed && !paused && !completedElsewhere && (
                 <>
                   {saved ? (
                     <div className="db-review-saved" role="status">
                       <p>已保存，下次复习：{date(state.records[session.id]?.dueAt)}</p>
                       <button className="db-primary" onClick={next}>
-                        {available.some((doc) => doc.id !== session.id) ? '下一篇' : '返回复习列表'}
+                        {available.some((doc) => doc.id !== session.id) ? '下一篇' : '再来一轮'}
                       </button>
                     </div>
                   ) : (
@@ -201,13 +213,17 @@ export function DashboardReview({
                         {ratings.map((rating) => (
                           <button
                             key={rating.id}
-                            disabled={pending}
+                            disabled={pending || (!!pendingRating && pendingRating !== rating.id)}
                             aria-pressed={selectedRating === rating.id}
                             onClick={() => chooseRating(rating.id)}
                           >
                             <strong>{rating.label}</strong>
                             <span>
-                              {nextReviewInterval(state.records[session.id], rating.id)} 天后
+                              下次：
+                              {date(
+                                reviewSchedule(state.records[session.id], rating.id, reviews.now)
+                                  .dueAt,
+                              )}
                             </span>
                           </button>
                         ))}
@@ -217,12 +233,14 @@ export function DashboardReview({
                   )}
                 </>
               )}
-              {changed || paused ? (
+              {changed || paused || completedElsewhere ? (
                 <div className="db-warning" role="status">
                   <p>
                     {changed
                       ? '资料已更新或不再是已整理，请返回列表重新打开。'
-                      : '这篇资料已暂停复习，请返回列表恢复后再开始。'}
+                      : completedElsewhere
+                        ? '这篇资料已在其他页面完成，请返回列表开始下一轮。'
+                        : '这篇资料已暂停复习，请返回列表恢复后再开始。'}
                   </p>
                   <button className="db-text-button" onClick={close}>
                     返回复习列表

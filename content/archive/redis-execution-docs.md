@@ -7,8 +7,8 @@ source:
   - "https://redis.io/docs/latest/develop/using-commands/pipelining/"
   - "https://redis.io/docs/latest/develop/using-commands/transactions/"
   - "https://redis.io/docs/latest/develop/programmability/eval-intro/"
-created_at: "2026-10-13T11:03:37+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-13 11:03:37"
+updated_at: "2026-10-13 12:48:15"
 ---
 
 本导读选取网络成本、命令交错与条件更新三个问题。官方资料分别描述这些保证，不能把它们合并为笼统的「批量就是原子操作」。

@@ -4,8 +4,8 @@ category: "性能排查"
 type: article
 tags: ["性能排查", "过载保护", "重试"]
 learning_status: pending
-created_at: "2026-10-20T18:39:01+08:00"
-updated_at: "2026-10-20T18:39:01+08:00"
+created_at: "2026-10-20 18:39:01"
+updated_at: "2026-10-20 18:39:01"
 source: "https://sre.google/sre-book/addressing-cascading-failures/"
 ---
 

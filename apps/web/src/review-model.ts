@@ -1,4 +1,5 @@
 import type { LibraryDocument } from './types/library.ts';
+import { beijingTimestamp, documentTime } from './document-dates.ts';
 
 export type ReviewRating = 'forgot' | 'hard' | 'good';
 export type ReviewDocument = Pick<LibraryDocument, 'id' | 'path' | 'body' | 'updated' | 'state'> &
@@ -10,6 +11,7 @@ export interface ReviewEvent {
   presented?: true;
   reviewedAt: string;
   intervalDays: number;
+  dueAt?: string;
 }
 export interface ReviewRecord {
   id: string;
@@ -51,7 +53,7 @@ const own = (value: object, key: PropertyKey) => Object.hasOwn(value, key);
 const object = (value: unknown): value is Record<string, unknown> =>
   typeof value === 'object' && value !== null && !Array.isArray(value);
 const timestamp = (value: unknown): value is string =>
-  typeof value === 'string' && Number.isFinite(Date.parse(value));
+  typeof value === 'string' && Number.isFinite(documentTime(value));
 const nullableTime = (value: unknown) => value === null || timestamp(value);
 const rating = (value: unknown): value is ReviewRating =>
   value === 'forgot' || value === 'hard' || value === 'good';
@@ -75,7 +77,7 @@ function hash(value: string) {
 }
 export const reviewFingerprint = (doc: Pick<ReviewDocument, 'body'>) => hash(doc.body);
 export const reviewDay = (now: number | string = Date.now()) =>
-  new Date((typeof now === 'string' ? Date.parse(now) : now) + 8 * 3_600_000)
+  new Date((typeof now === 'string' ? documentTime(now) : now) + 8 * 3_600_000)
     .toISOString()
     .slice(0, 10);
 const withVersion = (records: ReviewState['records']): ReviewState => ({
@@ -121,6 +123,7 @@ export function parseReviewState(value: unknown): ReviewState {
         !timestamp(event.reviewedAt) ||
         typeof event.intervalDays !== 'number' ||
         ![0, ...intervals].includes(event.intervalDays) ||
+        (event.dueAt !== undefined && (!rating(event.rating) || !timestamp(event.dueAt))) ||
         !action(event)
       )
         return invalid();
@@ -193,7 +196,7 @@ export function reconcileReviews(
       fingerprint !== old.fingerprint &&
       old.documentUpdated !== null &&
       doc.updated !== null &&
-      Date.parse(doc.updated) > Date.parse(old.documentUpdated);
+      documentTime(doc.updated) > documentTime(old.documentUpdated);
     const next = {
       ...old,
       id: doc.id,
@@ -203,7 +206,7 @@ export function reconcileReviews(
       ...(revised && old.lastReviewedAt
         ? {
             intervalDays: 1,
-            dueAt: new Date(Math.min(Date.parse(old.dueAt!), now + DAY)).toISOString(),
+            dueAt: beijingTimestamp(Math.min(documentTime(old.dueAt!), now + DAY)),
           }
         : {}),
     };
@@ -227,17 +230,12 @@ export function reviewQueue<T extends ReviewDocument>(
     fresh: T[] = [],
     scheduled: T[] = [],
     paused: T[] = [];
-  const completed = Object.values(state.records).filter((record) => {
-    const first = record.history.find((event) => event.rating !== undefined);
-    return first && reviewDay(first.reviewedAt) === reviewDay(now);
-  }).length;
-  const capacity = Math.max(0, 5 - completed);
   for (const doc of documents) {
     if (doc.state !== 'organized') continue;
     const record = own(state.records, doc.id) ? state.records[doc.id] : undefined;
     if (record?.paused) paused.push(doc);
     else if (!record?.lastReviewedAt) fresh.push(doc);
-    else if (record.dueAt && Date.parse(record.dueAt) <= now) due.push(doc);
+    else if (record.dueAt && documentTime(record.dueAt) <= now) due.push(doc);
     else scheduled.push(doc);
   }
   const stable = (a: T, b: T) => a.id.localeCompare(b.id, 'zh-CN');
@@ -254,20 +252,22 @@ export function reviewQueue<T extends ReviewDocument>(
     (a, b) =>
       presentedToday(a) - presentedToday(b) ||
       (presentedToday(a) && presentedToday(b)
-        ? Date.parse(presentedAt(a)!) - Date.parse(presentedAt(b)!)
+        ? documentTime(presentedAt(a)!) - documentTime(presentedAt(b)!)
         : 0) ||
-      Date.parse(state.records[a.id].dueAt!) - Date.parse(state.records[b.id].dueAt!) ||
+      documentTime(state.records[a.id].dueAt!) - documentTime(state.records[b.id].dueAt!) ||
       difficulty(a) - difficulty(b) ||
       stable(a, b),
   );
   scheduled.sort(
     (a, b) =>
-      Date.parse(state.records[a.id].dueAt!) - Date.parse(state.records[b.id].dueAt!) ||
+      documentTime(state.records[a.id].dueAt!) - documentTime(state.records[b.id].dueAt!) ||
       stable(a, b),
   );
   const lastPresented = documents
     .filter((doc) => presentedAt(doc))
-    .sort((a, b) => Date.parse(presentedAt(b)!) - Date.parse(presentedAt(a)!) || stable(a, b))[0];
+    .sort(
+      (a, b) => documentTime(presentedAt(b)!) - documentTime(presentedAt(a)!) || stable(a, b),
+    )[0];
   const repeatedCategory = (doc: T) =>
     Number(Boolean(doc.category && doc.category === lastPresented?.category));
   fresh.sort((a, b) => {
@@ -275,17 +275,28 @@ export function reviewQueue<T extends ReviewDocument>(
       bTime = presentedAt(b);
     if (!aTime && !bTime) return repeatedCategory(a) - repeatedCategory(b) || stable(a, b);
     if (!aTime || !bTime) return aTime ? 1 : -1;
-    return Date.parse(aTime) - Date.parse(bTime) || stable(a, b);
+    return documentTime(aTime) - documentTime(bTime) || stable(a, b);
   });
-  paused.sort(stable);
-  return {
-    due,
-    fresh: fresh.slice(0, capacity),
-    eligibleFresh: capacity > 0 ? fresh : [],
-    scheduled,
-    paused,
-    freshRemaining: Math.max(0, fresh.length - capacity),
+  // Scheduled material remains available for voluntary practice. Rotate by the
+  // last participation, so a completed or merely displayed title yields to others.
+  const touched = (doc: T) => {
+    const record = state.records[doc.id];
+    return Math.max(
+      record?.lastReviewedAt ? documentTime(record.lastReviewedAt) : 0,
+      record?.lastPresentedAt ? documentTime(record.lastPresentedAt) : 0,
+    );
   };
+  const practice = [...scheduled].sort(
+    (a, b) =>
+      touched(a) - touched(b) ||
+      state.records[a.id].history.filter((event) => event.rating).length -
+        state.records[b.id].history.filter((event) => event.rating).length ||
+      difficulty(a) - difficulty(b) ||
+      repeatedCategory(a) - repeatedCategory(b) ||
+      stable(a, b),
+  );
+  paused.sort(stable);
+  return { due, fresh, scheduled, paused, recommendations: [...due, ...fresh, ...practice] };
 }
 
 export function nextReviewInterval(record: ReviewRecord | undefined, value: ReviewRating) {
@@ -294,6 +305,18 @@ export function nextReviewInterval(record: ReviewRecord | undefined, value: Revi
   return intervals[
     value === 'good' ? Math.min(intervals.length - 1, index + 1) : Math.max(0, index - 1)
   ];
+}
+
+/** Early practice records feedback without rewarding rapid repetition with a longer interval. */
+export function reviewSchedule(record: ReviewRecord | undefined, value: ReviewRating, now: number) {
+  const early = !!record?.dueAt && documentTime(record.dueAt) > now;
+  if (early && value === 'good') return { intervalDays: record.intervalDays, dueAt: record.dueAt! };
+  const intervalDays = nextReviewInterval(record, value);
+  const dueAt = now + intervalDays * DAY;
+  return {
+    intervalDays,
+    dueAt: beijingTimestamp(early ? Math.min(documentTime(record!.dueAt!), dueAt) : dueAt),
+  };
 }
 
 export function applyReview(
@@ -333,35 +356,26 @@ export function applyReview(
   const record = reconciled.records[doc.id];
   const reviewing = input.rating || input.presented;
   if (reviewing && record.paused) throw new ReviewError('请先恢复这篇资料的复习。');
-  if (reviewing && record.dueAt && Date.parse(record.dueAt) > now)
-    throw new ReviewError('这篇资料已安排下次复习，尚未到期。');
-  if (
-    reviewing &&
-    !record.lastReviewedAt &&
-    !reviewQueue(documents, reconciled, now).eligibleFresh.some((item) => item.id === doc.id)
-  )
-    throw new ReviewError('今天的首次复习名额已用完，或资料尚未进入今日队列。');
-  const reviewedAt = new Date(now).toISOString();
+  const reviewedAt = beijingTimestamp(now);
   // Millisecond ties must still preserve presentation order across refreshes.
   // This clock is used only for recommendation order, never review scheduling.
   const presentedTime = input.presented
-    ? new Date(
+    ? beijingTimestamp(
         Math.max(
           now,
           ...Object.values(reconciled.records).map((item) =>
-            item.lastPresentedAt ? Date.parse(item.lastPresentedAt) + 1 : 0,
+            item.lastPresentedAt ? documentTime(item.lastPresentedAt) + 1 : 0,
           ),
         ),
-      ).toISOString()
+      )
     : reviewedAt;
-  const intervalDays = input.rating
-    ? nextReviewInterval(record, input.rating)
-    : record.intervalDays;
+  const schedule = input.rating ? reviewSchedule(record, input.rating, now) : null;
+  const intervalDays = schedule?.intervalDays ?? record.intervalDays;
   const next: ReviewRecord = {
     ...record,
     intervalDays,
     ...(input.rating
-      ? { lastReviewedAt: reviewedAt, dueAt: new Date(now + intervalDays * DAY).toISOString() }
+      ? { lastReviewedAt: reviewedAt, dueAt: schedule!.dueAt }
       : input.presented
         ? { lastPresentedAt: presentedTime }
         : { paused: input.paused! }),
@@ -372,7 +386,7 @@ export function applyReview(
         reviewedAt: input.presented ? presentedTime : reviewedAt,
         intervalDays,
         ...(input.rating
-          ? { rating: input.rating }
+          ? { rating: input.rating, dueAt: schedule!.dueAt }
           : input.presented
             ? { presented: true as const }
             : { paused: input.paused }),

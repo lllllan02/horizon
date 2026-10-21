@@ -4,8 +4,8 @@ aliases: ["Evaluating Context Compression for AI Agents"]
 parent: context-compaction#效果判断
 category: "Agent"
 tags: ["上下文管理", "文本压缩", "评测"]
-created_at: "2026-10-11T15:37:35+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-11 15:37:35"
+updated_at: "2026-10-13 12:48:15"
 source: "[Evaluating Context Compression for AI Agents](https://factory.com/news/evaluating-compression)"
 reading_suggestions:
   - complexity-trap-summary

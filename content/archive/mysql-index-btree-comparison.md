@@ -4,8 +4,8 @@ title: "B 树与 B+ 树"
 category: "MySQL"
 parent: mysql-index-structure
 tags: ["MySQL", "B+树", "索引"]
-created_at: "2026-10-12T15:25:39+08:00"
-updated_at: "2026-10-12T15:50:46+08:00"
+created_at: "2026-10-12 15:25:39"
+updated_at: "2026-10-12 15:50:46"
 reading_suggestions:
   - mysql-index-height
   - opendsa-b-trees

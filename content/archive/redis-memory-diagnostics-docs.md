@@ -9,8 +9,8 @@ source:
   - "https://redis.io/docs/latest/operate/oss_and_stack/management/optimization/latency/"
   - "https://redis.io/docs/latest/commands/scan/"
   - "https://redis.io/docs/latest/commands/unlink/"
-created_at: "2026-10-13T11:03:37+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-13 11:03:37"
+updated_at: "2026-10-13 12:48:15"
 ---
 
 本导读选取会影响缓存容量与请求延迟的机制。命令可用性、字段名称和配置默认值仍需以目标版本为准。

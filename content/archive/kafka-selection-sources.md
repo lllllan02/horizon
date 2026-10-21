@@ -4,8 +4,8 @@ category: "Kafka"
 parent: kafka-use-cases
 type: "article"
 tags: ["Kafka", "消息队列"]
-created_at: "2026-10-12T20:49:46+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-12 20:49:46"
+updated_at: "2026-10-13 12:48:15"
 source:
   - "https://kafka.apache.org/43/design/design/"
   - "https://kafka.apache.org/43/apis/"

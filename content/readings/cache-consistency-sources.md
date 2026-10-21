@@ -4,8 +4,8 @@ category: "Redis"
 type: article
 tags: ["缓存一致性", "事务", "消息队列"]
 learning_status: pending
-created_at: "2026-10-19T16:55:15+08:00"
-updated_at: "2026-10-19T16:55:15+08:00"
+created_at: "2026-10-19 16:55:15"
+updated_at: "2026-10-19 16:55:15"
 source:
   - "https://learn.microsoft.com/en-us/azure/architecture/patterns/cache-aside"
   - "https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/transactional-outbox.html"

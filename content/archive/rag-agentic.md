@@ -6,8 +6,8 @@ tags: ["RAG", "Agent", "检索"]
 type: "note"
 parent: "rag-advanced"
 aliases: ["Agentic RAG", "智能体检索"]
-created_at: "2026-10-13T10:58:45+08:00"
-updated_at: "2026-10-13T10:58:45+08:00"
+created_at: "2026-10-13 10:58:45"
+updated_at: "2026-10-13 10:58:45"
 ---
 
 **Agentic RAG 让模型在执行任务时决定是否检索、选择什么查询与工具，以及是否继续补查。** 它改变检索控制权，不限定底层用关键词、向量还是数据库。

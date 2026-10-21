@@ -3,8 +3,8 @@ title: "Anthropic：Skill 的分层加载"
 category: "Agent"
 tags: ["Agent", "按需加载"]
 learning_status: pending
-created_at: "2026-10-17T20:56:33+08:00"
-updated_at: "2026-10-17T20:56:33+08:00"
+created_at: "2026-10-17 20:56:33"
+updated_at: "2026-10-17 20:56:33"
 source: "[Equipping agents for the real world with Agent Skills](https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills)"
 ---
 

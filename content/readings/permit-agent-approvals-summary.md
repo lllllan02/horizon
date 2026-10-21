@@ -3,8 +3,8 @@ title: "Permit：Agent 授权与审批如何组合"
 parent: tool-approvals
 category: "Agent"
 tags: ["Agent", "工具调用", "权限"]
-created_at: "2026-10-10T20:24:03+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-10 20:24:03"
+updated_at: "2026-10-13 12:48:15"
 source:
   - "[Human-in-the-Loop Approvals](https://docs.permit.io/permit-mcp-gateway/human-in-the-loop/)"
   - "[Access Request MCP overview](https://docs.permit.io/ai-security/access-request-mcp/overview/)"

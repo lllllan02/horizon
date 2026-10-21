@@ -3,7 +3,7 @@ title: "AWS SDK：按错误语义判断是否重试"
 category: "分布式系统"
 tags: ["重试", "异常分类"]
 created_at: "2026-10-10"
-updated_at: "2026-10-13T12:48:15+08:00"
+updated_at: "2026-10-13 12:48:15"
 source: "[Retry behavior](https://docs.aws.amazon.com/sdkref/latest/guide/feature-retry-behavior.html)"
 ---
 

@@ -4,8 +4,8 @@ aliases: ["Timeout", "Deadline", "超时预算"]
 category: "服务治理"
 tags: ["超时", "服务治理"]
 learning_status: pending
-created_at: "2026-10-18T23:47:18+08:00"
-updated_at: "2026-10-18T23:47:18+08:00"
+created_at: "2026-10-18 23:47:18"
+updated_at: "2026-10-18 23:47:18"
 ---
 
 **超时（Timeout）规定一次操作最多等待多长时间；截止时间（Deadline）规定最晚等到哪个时刻。** 前者是时长，后者是时间点，都用于避免请求无限等待、持续占用资源。

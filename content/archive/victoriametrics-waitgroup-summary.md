@@ -2,7 +2,7 @@
 title: "VictoriaMetrics：WaitGroup：计数、唤醒与对齐"
 category: "Go"
 created_at: "2026-10-08"
-updated_at: "2026-10-13T12:48:15+08:00"
+updated_at: "2026-10-13 12:48:15"
 tags: ["Go", "WaitGroup", "源码"]
 aliases: ["WaitGroup 实现"]
 parent: victoriametrics-go-concurrency

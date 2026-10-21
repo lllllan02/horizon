@@ -6,9 +6,9 @@ parent: agent-interview-hub
 tags: ["面试", "Agent", "上下文管理"]
 type: practice
 learning_status: organized
-created_at: "2026-10-20T16:04:02+08:00"
-updated_at: "2026-10-20T16:04:02+08:00"
-learning_status_changed_at: "2026-10-20T16:10:53.167+08:00"
+created_at: "2026-10-20 16:04:02"
+updated_at: "2026-10-20 16:04:02"
+learning_status_changed_at: "2026-10-20 16:10:53.167"
 ---
 
 我会让用户在 Agent 执行期间继续补充要求，由程序在后续步骤中纳入处理。实现上就是**「接收并保存消息 → 通知执行程序 → 取出消息 → 合入上下文 → 下一次调用模型」**。

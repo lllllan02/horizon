@@ -5,8 +5,8 @@ parent: agent
 category: "Agent"
 tags: ["Agent", "多Agent协作", "工程选型"]
 learning_status: organized
-created_at: "2026-10-13T17:41:05+08:00"
-updated_at: "2026-10-18T00:17:52+08:00"
+created_at: "2026-10-13 17:41:05"
+updated_at: "2026-10-18 00:17:52"
 reading_suggestions:
   - agent-vs-workflow
   - langchain-multi-agent
@@ -14,7 +14,7 @@ reading_suggestions:
   - agent-task-state
   - mast-multi-agent-failures
   - agent-evaluation
-learning_status_changed_at: "2026-10-18T00:18:56.203+08:00"
+learning_status_changed_at: "2026-10-18 00:18:56.203"
 ---
 
 **多 Agent 协作是让多个 Agent 分工执行，通过成果回传、交接或消息交换完成共同目标。**

@@ -1,7 +1,7 @@
 ---
 title: "NDCG@K（归一化折损累计增益）"
 category: "信息检索"
-updated_at: "2026-10-13T11:04:51+08:00"
+updated_at: "2026-10-13 11:04:51"
 tags: ["检索评测", "排序指标", "NDCG"]
 aliases: ["NDCG", "NDCG@K", "归一化折损累计增益"]
 ---

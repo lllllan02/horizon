@@ -4,9 +4,9 @@ category: "Agent"
 parent: agent-interview-hub
 tags: ["面试", "Agent", "多Agent协作", "上下文管理"]
 learning_status: organized
-created_at: "2026-10-19T17:26:36+08:00"
-updated_at: "2026-10-19T17:26:36+08:00"
-learning_status_changed_at: "2026-10-19T17:28:26.196+08:00"
+created_at: "2026-10-19 17:26:36"
+updated_at: "2026-10-19 17:26:36"
+learning_status_changed_at: "2026-10-19 17:28:26.196"
 ---
 
 父子 Agent 通常采用[[multi-agent|委派模式]]：父 Agent 通过工具调用或其他接口，把子任务、必要输入和输出要求交给子 Agent。任务边界清楚时，子 Agent 独立执行，最后返回结果即可，不需要频繁的中间交互。

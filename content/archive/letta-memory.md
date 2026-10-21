@@ -3,8 +3,8 @@ title: "Letta：常驻记忆块与归档检索"
 parent: agent-memory
 category: "Agent"
 tags: ["Agent", "记忆"]
-created_at: "2026-10-12T23:24:47+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-12 23:24:47"
+updated_at: "2026-10-13 12:48:15"
 source:
   - "https://docs.letta.com/v1-sdk/memory/memory-blocks"
   - "https://docs.letta.com/v1-sdk/memory/archival-memory"

@@ -3,10 +3,10 @@ title: "LangGraph 与 LangMem：状态持久化和记忆形成"
 parent: agent-memory
 category: "Agent"
 tags: ["Agent", "记忆", "持久化"]
-created_at: "2026-10-12T23:24:47+08:00"
-updated_at: "2026-10-17T22:29:25+08:00"
+created_at: "2026-10-12 23:24:47"
+updated_at: "2026-10-17 22:29:25"
 learning_status: pending
-learning_status_changed_at: "2026-10-17T22:03:42.246+08:00"
+learning_status_changed_at: "2026-10-17 22:03:42.246"
 source:
   - "https://docs.langchain.com/oss/python/concepts/memory"
   - "https://docs.langchain.com/oss/python/langgraph/persistence"

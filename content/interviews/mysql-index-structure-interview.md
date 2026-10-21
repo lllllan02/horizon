@@ -5,9 +5,9 @@ category: "MySQL"
 parent: mysql-interview-index
 tags: ["面试", "MySQL", "B+树", "索引结构"]
 learning_status: organized
-created_at: "2026-10-20T21:06:38+08:00"
-updated_at: "2026-10-20T21:11:01+08:00"
-learning_status_changed_at: "2026-10-20T21:13:40.895+08:00"
+created_at: "2026-10-20 21:06:38"
+updated_at: "2026-10-20 21:11:01"
+learning_status_changed_at: "2026-10-20 21:13:40.895"
 ---
 
 以常用的 InnoDB 为例，[[mysql-index-structure-sources#InnoDB 的常规索引|主键索引和普通二级索引]]采用「**B+ 树**」。索引结构取决于存储引擎和索引类型，不能把 MySQL 的所有索引都说成 B+ 树。

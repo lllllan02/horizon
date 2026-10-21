@@ -3,7 +3,7 @@ title: "gRPC：错误码怎样表达恢复方式"
 category: "分布式系统"
 tags: ["重试", "异常分类"]
 created_at: "2026-10-10"
-updated_at: "2026-10-13T12:48:15+08:00"
+updated_at: "2026-10-13 12:48:15"
 source: "[Status Codes](https://grpc.io/docs/guides/status-codes/)"
 ---
 

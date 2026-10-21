@@ -6,7 +6,7 @@ tags: ["RAG", "评测", "检索评测"]
 type: "note"
 parent: "rag"
 aliases: ["RAG 评测", "Quality Evaluation"]
-updated_at: "2026-10-13T10:54:36+08:00"
+updated_at: "2026-10-13 10:54:36"
 ---
 
 **RAG 评测先判断任务是否完成，再沿实际数据流定位失败阶段。** 检索分数高、回答流畅、有引用，都不能单独证明系统可用。

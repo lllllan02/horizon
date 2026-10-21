@@ -4,8 +4,8 @@ title: "MCP OAuth 接入"
 parent: mcp-permissions
 category: "Agent"
 tags: ["MCP", "OAuth", "授权"]
-created_at: "2026-10-11T09:58:18+08:00"
-updated_at: "2026-10-11T10:54:33+08:00"
+created_at: "2026-10-11 09:58:18"
+updated_at: "2026-10-11 10:54:33"
 reading_suggestions:
   - mcp-http-client
 ---

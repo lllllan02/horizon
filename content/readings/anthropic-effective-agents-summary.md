@@ -3,8 +3,8 @@ title: "Anthropic：Agent 的定义、运行与选型"
 parent: agent
 category: "Agent"
 tags: ["Agent", "工作流", "工程选型"]
-created_at: "2026-10-12T00:03:00+08:00"
-updated_at: "2026-10-13T17:27:45+08:00"
+created_at: "2026-10-12 00:03:00"
+updated_at: "2026-10-13 17:27:45"
 source: "[Building effective agents](https://www.anthropic.com/engineering/building-effective-agents)"
 read: true
 ---

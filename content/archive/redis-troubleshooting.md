@@ -5,8 +5,8 @@ category: "Redis"
 parent: redis
 tags: ["Redis", "延迟", "排查"]
 type: "practice"
-created_at: "2026-10-13T11:03:37+08:00"
-updated_at: "2026-10-13T11:03:37+08:00"
+created_at: "2026-10-13 11:03:37"
+updated_at: "2026-10-13 11:03:37"
 reading_suggestions:
   - redis-memory-diagnostics-docs
   - redis-go-projects

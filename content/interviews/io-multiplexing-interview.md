@@ -5,9 +5,9 @@ category: "操作系统"
 parent: interview-hub
 tags: ["面试"]
 learning_status: organized
-created_at: "2026-10-20T18:36:37+08:00"
-updated_at: "2026-10-20T19:46:45+08:00"
-learning_status_changed_at: "2026-10-20T19:55:45.279+08:00"
+created_at: "2026-10-20 18:36:37"
+updated_at: "2026-10-20 19:46:45"
+learning_status_changed_at: "2026-10-20 19:55:45.279"
 ---
 
 [[io-multiplexing|IO 多路复用]]让一个线程统一等待多个连接的读写事件，再处理就绪的连接。

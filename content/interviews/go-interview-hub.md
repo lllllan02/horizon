@@ -5,9 +5,9 @@ parent: interview-hub
 tags: ["面试", "Go"]
 type: overview
 learning_status: organized
-created_at: "2026-10-19T16:21:41+08:00"
-updated_at: "2026-10-19T16:21:41+08:00"
-learning_status_changed_at: "2026-10-21T10:01:26.593+08:00"
+created_at: "2026-10-19 16:21:41"
+updated_at: "2026-10-19 16:21:41"
+learning_status_changed_at: "2026-10-21 10:01:26.593"
 ---
 
 围绕 Go 的并发协作、协程调度、内存管理与排障，整理已保存的面试题和口述回答。

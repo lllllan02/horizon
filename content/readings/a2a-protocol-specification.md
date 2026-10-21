@@ -3,8 +3,8 @@ title: "A2A：发现、任务生命周期与协议边界"
 parent: a2a
 category: "Agent"
 tags: ["Agent", "A2A", "协议"]
-created_at: "2026-10-13T17:41:05+08:00"
-updated_at: "2026-10-18T00:22:52+08:00"
+created_at: "2026-10-13 17:41:05"
+updated_at: "2026-10-18 00:22:52"
 source: ["https://a2a-protocol.org/v1.0.0/specification/", "https://a2a-protocol.org/latest/topics/key-concepts/", "https://a2a-protocol.org/latest/topics/life-of-a-task/", "https://a2a-protocol.org/latest/topics/a2a-and-mcp/", "https://a2a-protocol.org/latest/tutorials/python/4-agent-executor/"]
 learning_status: pending
 ---

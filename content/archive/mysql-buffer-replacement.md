@@ -4,8 +4,8 @@ title: "InnoDB 的 LRU 与扫描污染"
 category: "MySQL"
 parent: mysql-buffer-pool-lifecycle
 tags: ["MySQL", "缓存"]
-created_at: "2026-10-12T19:10:47+08:00"
-updated_at: "2026-10-12T20:32:23+08:00"
+created_at: "2026-10-12 19:10:47"
+updated_at: "2026-10-12 20:32:23"
 reading_suggestions:
   - mysql-dirty-page-flushing
   - mysql-scan-resistance-readings

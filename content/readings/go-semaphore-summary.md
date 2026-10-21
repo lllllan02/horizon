@@ -3,8 +3,8 @@ title: "Go：用加权信号量限制并发资源占用"
 category: "Go"
 tags: ["并发", "过载保护"]
 learning_status: pending
-created_at: "2026-10-18T23:47:18+08:00"
-updated_at: "2026-10-18T23:47:18+08:00"
+created_at: "2026-10-18 23:47:18"
+updated_at: "2026-10-18 23:47:18"
 source: "https://pkg.go.dev/golang.org/x/sync/semaphore"
 ---
 

@@ -3,8 +3,8 @@ title: "内存耗尽与泄漏：官方资料导读"
 category: "计算机基础"
 tags: ["内存管理"]
 learning_status: pending
-created_at: "2026-10-19T15:28:59+08:00"
-updated_at: "2026-10-20T21:02:14+08:00"
+created_at: "2026-10-19 15:28:59"
+updated_at: "2026-10-20 21:02:14"
 source:
   - "https://cwe.mitre.org/data/definitions/401.html"
   - "https://go.dev/doc/gc-guide#Tracing_garbage_collection"

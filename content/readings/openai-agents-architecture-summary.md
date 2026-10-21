@@ -3,8 +3,8 @@ title: "OpenAI Agents API：Harness、执行环境与应用的分工"
 parent: agent-harness
 category: "Agent"
 tags: ["Agent", "Harness"]
-created_at: "2026-10-11T11:46:46+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-11 11:46:46"
+updated_at: "2026-10-13 12:48:15"
 source: "[Architecture](https://developers.openai.com/api/docs/guides/agents-api/architecture)"
 ---
 

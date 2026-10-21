@@ -4,9 +4,9 @@ category: "性能排查"
 parent: personal-output-index
 tags: ["面试", "性能排查", "连接池"]
 learning_status: organized
-created_at: "2026-10-18T22:23:14+08:00"
-updated_at: "2026-10-18T23:51:40+08:00"
-learning_status_changed_at: "2026-10-19T00:07:05.102+08:00"
+created_at: "2026-10-18 22:23:14"
+updated_at: "2026-10-18 23:51:40"
+learning_status_changed_at: "2026-10-19 00:07:05.102"
 ---
 
 我们最早支持几千人到一万人的比赛时，监控和故障定位能力还不完善。开赛瞬间出现过服务不可用的问题，但当时缺少足够的观测信息，没能快速定位和修复。

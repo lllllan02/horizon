@@ -4,9 +4,9 @@ category: "数据处理"
 parent: data-sync-interview-index
 tags: ["面试", "数据同步"]
 learning_status: organized
-created_at: "2026-10-20T13:10:54+08:00"
-updated_at: "2026-10-20T14:18:08+08:00"
-learning_status_changed_at: "2026-10-20T14:30:32.211+08:00"
+created_at: "2026-10-20 13:10:54"
+updated_at: "2026-10-20 14:18:08"
+learning_status_changed_at: "2026-10-20 14:30:32.211"
 ---
 
 以 MySQL InnoDB 为例，全量初始化就是先在可重复读事务中建立[[data-sync-sources#全量初始化与一致快照|稳定的一致快照]]，基于同一个快照把已有数据全部导出，再导入目标库。如果后续要接增量同步，还需要在建立快照时协调记录「**快照对应的 Binlog 位点**」，之后从这里衔接变更，避免漏掉导出期间的修改。

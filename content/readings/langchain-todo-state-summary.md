@@ -3,8 +3,8 @@ title: "LangChain：用待办工具维护任务进度"
 parent: agent-task-state
 category: "Agent"
 tags: ["Agent", "状态管理"]
-created_at: "2026-10-11T22:35:33+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-11 22:35:33"
+updated_at: "2026-10-13 12:48:15"
 source: "[Prebuilt middleware — To-do list](https://docs.langchain.com/oss/python/langchain/middleware/built-in#to-do-list)"
 ---
 

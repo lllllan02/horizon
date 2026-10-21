@@ -20,6 +20,7 @@ import { copyDocumentMarkdown } from './document-sources.ts';
 import { useToolbarTitle } from './useToolbarTitle.ts';
 import { useReaderResize } from './useReaderResize.ts';
 import { useReaderFontScale, readerFontScales } from './useReaderFontScale.ts';
+import { formatDocumentTime } from './document-time.ts';
 import './reader-font.css';
 import { DocumentReferenceCopy, SelectionCopy } from './SelectionCopy.tsx';
 export function DocumentReader({
@@ -46,6 +47,8 @@ export function DocumentReader({
   const [tocOpen, setTocOpen] = useViewState(`toc:${node.id}`, false);
   const tocBaseLevel = node.toc.reduce((level, heading) => Math.min(level, heading.level), 6);
   const [detailsOpen, setDetailsOpen] = useViewState(`details:${node.id}`, false);
+  const created = formatDocumentTime(node.created);
+  const updated = formatDocumentTime(node.updated);
   const [copying, setCopying] = useState(false);
   const titleRef = useRef(null);
   useLayoutEffect(() => {
@@ -307,11 +310,16 @@ export function DocumentReader({
         <div id="reader-details" className="reader-details" hidden={!detailsOpen}>
           <div className="read-meta-row">
             <p className="read-meta">
-              {node.updated && (
-                <span title={`更新于 ${node.updated}`}>
+              {created && (
+                <span title={`创建于 ${created}`}>
                   <Icon name="calendar" size={13} />
-                  <span className="sr-only">更新于 </span>
-                  {node.updated}
+                  创建于 <time dateTime={node.created!}>{created}</time>
+                </span>
+              )}
+              {updated && (
+                <span title={`修改于 ${updated}`}>
+                  <Icon name="calendar" size={13} />
+                  修改于 <time dateTime={node.updated!}>{updated}</time>
                 </span>
               )}
               <span title="预计阅读时间">

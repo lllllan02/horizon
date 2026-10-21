@@ -3,8 +3,8 @@ title: "Deep Agents：外置上下文与原文回查"
 parent: context-loading
 category: "Agent"
 tags: ["上下文管理", "按需加载"]
-created_at: "2026-10-11T21:07:40+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-11 21:07:40"
+updated_at: "2026-10-13 12:48:15"
 source:
   - "https://www.langchain.com/blog/context-management-for-deepagents"
   - "https://docs.langchain.com/oss/python/deepagents/context-engineering"

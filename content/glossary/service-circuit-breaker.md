@@ -4,8 +4,8 @@ aliases: ["Circuit Breaker", "Circuit Breaking"]
 category: "服务治理"
 tags: ["熔断", "服务治理"]
 learning_status: pending
-created_at: "2026-10-18T23:47:18+08:00"
-updated_at: "2026-10-18T23:47:18+08:00"
+created_at: "2026-10-18 23:47:18"
+updated_at: "2026-10-18 23:47:18"
 ---
 
 **熔断（Circuit Breaker）是在依赖持续失败或变慢时，暂时停止向它发起调用的保护机制。** 它根据近期调用结果判断是否继续放行，避免大量无效等待继续消耗调用方资源，也减轻故障依赖承受的压力。

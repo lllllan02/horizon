@@ -3,7 +3,7 @@ learning_status: pending
 title: "Trace 与 Span"
 category: "可观测性"
 created_at: "2026-10-09"
-updated_at: "2026-10-18T00:28:03+08:00"
+updated_at: "2026-10-18 00:28:03"
 tags: ["Trace", "Span", "分布式追踪"]
 aliases: ["Trace", "Span", "追踪链路", "操作记录", "操作单元", "分布式追踪", "Tracing"]
 ---

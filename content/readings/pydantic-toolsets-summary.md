@@ -4,7 +4,7 @@ parent: tool-registry
 category: "Agent"
 tags: ["Agent", "工具调用", "工具注册"]
 created_at: "2026-10-10"
-updated_at: "2026-10-13T12:48:15+08:00"
+updated_at: "2026-10-13 12:48:15"
 source: "[Toolsets 官方文档](https://pydantic.dev/docs/ai/tools-toolsets/toolsets/)"
 ---
 

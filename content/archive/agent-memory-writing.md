@@ -4,12 +4,12 @@ title: "Agent 记忆写入"
 parent: agent-memory
 category: "Agent"
 tags: ["Agent", "记忆"]
-created_at: "2026-10-12T23:24:47+08:00"
-updated_at: "2026-10-17T22:23:30+08:00"
+created_at: "2026-10-12 23:24:47"
+updated_at: "2026-10-17 22:23:30"
 reading_suggestions:
   - codex-memory-pipeline
   - mem0-memory
-learning_status_changed_at: "2026-10-17T21:55:24.935+08:00"
+learning_status_changed_at: "2026-10-17 21:55:24.935"
 ---
 
 **长期记忆写入是从交互与执行结果中，提取未来仍有用的信息，形成带条件和依据的记录的过程。** 不要求每次交互都产生记忆。

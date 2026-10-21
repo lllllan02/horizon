@@ -3,7 +3,7 @@ title: "AWS：用幂等 API 保证重试安全"
 category: "分布式系统"
 tags: ["幂等", "重试"]
 created_at: "2026-10-10"
-updated_at: "2026-10-13T12:48:15+08:00"
+updated_at: "2026-10-13 12:48:15"
 source: "[Making retries safe with idempotent APIs](https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/)"
 ---
 

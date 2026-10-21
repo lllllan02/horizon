@@ -2,7 +2,7 @@
 learning_status: pending
 title: "滑动窗口限流"
 category: "服务治理"
-updated_at: "2026-10-19T16:19:44+08:00"
+updated_at: "2026-10-19 16:19:44"
 tags: ["限流", "滑动窗口"]
 aliases: ["滑动窗口", "Sliding Window", "滑动日志", "滑动计数"]
 ---

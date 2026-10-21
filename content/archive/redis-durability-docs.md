@@ -8,8 +8,8 @@ source:
   - "https://redis.io/docs/latest/commands/bgrewriteaof/"
   - "https://redis.io/docs/latest/operate/oss_and_stack/management/replication/"
   - "https://redis.io/docs/latest/commands/wait/"
-created_at: "2026-10-13T11:03:37+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-13 11:03:37"
+updated_at: "2026-10-13 12:48:15"
 ---
 
 这些资料分别回答「本机能恢复什么」与「副本收到什么」。本导读选取恢复与确认边界，不将两个机制合称为不丢数据保证。

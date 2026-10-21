@@ -4,8 +4,8 @@ aliases: ["SSE", "Server-Sent Events", "服务端发送事件", "服务器发送
 category: "计算机网络"
 tags: ["协议"]
 learning_status: pending
-created_at: "2026-10-19T13:43:27+08:00"
-updated_at: "2026-10-19T13:43:27+08:00"
+created_at: "2026-10-19 13:43:27"
+updated_at: "2026-10-19 13:43:27"
 ---
 
 **SSE（Server-Sent Events）是服务端通过 HTTP 响应流，持续向客户端发送文本事件的机制。** 客户端发起请求后可以持续接收更新，适合通知、任务进度和大模型文本流式输出，减少反复查询是否有新内容的需要。

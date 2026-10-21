@@ -2,8 +2,8 @@
 title: "Shell 与 grep 官方文档导读：匹配规则和执行边界"
 category: "开发工具"
 tags: ["Shell", "文件搜索", "正则表达式"]
-created_at: "2026-10-13T17:21:13+08:00"
-updated_at: "2026-10-13T17:21:13+08:00"
+created_at: "2026-10-13 17:21:13"
+updated_at: "2026-10-13 17:21:13"
 source:
   - "[Bash：Filename Expansion](https://www.gnu.org/software/bash/manual/html_node/Filename-Expansion.html)"
   - "[Bash：Pattern Matching](https://www.gnu.org/software/bash/manual/html_node/Pattern-Matching.html)"

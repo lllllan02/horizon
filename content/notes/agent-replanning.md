@@ -5,13 +5,13 @@ title: "重新规划"
 aliases: ["Replan", "重新规划", "计划调整"]
 category: "Agent"
 tags: ["Agent", "任务规划"]
-created_at: "2026-10-12T00:56:04+08:00"
-updated_at: "2026-10-17T18:42:40+08:00"
+created_at: "2026-10-12 00:56:04"
+updated_at: "2026-10-17 18:42:40"
 reading_suggestions:
   - agent-task-state-update
   - langgraph-replanning-summary
   - agent-trace
-learning_status_changed_at: "2026-10-17T18:46:38.383+08:00"
+learning_status_changed_at: "2026-10-17 18:46:38.383"
 ---
 
 **重新规划（Replanning）是根据执行反馈或新要求，调整任务剩余步骤、顺序或策略的过程。**

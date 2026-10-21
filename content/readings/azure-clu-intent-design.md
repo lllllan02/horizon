@@ -6,8 +6,8 @@ source:
   - "https://learn.microsoft.com/en-us/azure/ai-services/language-service/conversational-language-understanding/concepts/best-practices"
   - "https://learn.microsoft.com/en-us/azure/ai-services/language-service/conversational-language-understanding/concepts/evaluation-metrics"
 read: true
-created_at: "2026-10-13T22:09:24+08:00"
-updated_at: "2026-10-14T13:59:35+08:00"
+created_at: "2026-10-13 22:09:24"
+updated_at: "2026-10-14 13:59:35"
 ---
 
 **Azure CLU 把类别设计、模型评估和结果接受条件分开处理。** 先定义用户要做什么，再检查模型是否分对，最后判断当前分数是否足以进入业务。

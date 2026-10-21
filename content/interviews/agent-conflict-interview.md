@@ -4,9 +4,9 @@ category: "Agent"
 parent: agent-interview-hub
 tags: ["面试", "Agent", "多Agent协作"]
 learning_status: organized
-created_at: "2026-10-20T16:52:24+08:00"
-updated_at: "2026-10-20T16:59:53+08:00"
-learning_status_changed_at: "2026-10-20T17:00:01.807+08:00"
+created_at: "2026-10-20 16:52:24"
+updated_at: "2026-10-20 16:59:53"
+learning_status_changed_at: "2026-10-20 17:00:01.807"
 ---
 
 我会先看[[multi-agent#协作组织|协作模式]]有没有明确的主管，再讨论冲突由谁处理。成员之间可以直接沟通，也可能仍有主管统筹；没有固定主管时，我会优先通过任务划分减少协调需求，再约定必要的冲突处理规则。

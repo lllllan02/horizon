@@ -3,8 +3,8 @@ title: "Codex：用可验证里程碑推进长任务"
 parent: agent-task-decomposition
 category: "Agent"
 tags: ["Agent", "任务规划", "状态管理"]
-created_at: "2026-10-17T17:20:29+08:00"
-updated_at: "2026-10-17T19:18:15+08:00"
+created_at: "2026-10-17 17:20:29"
+updated_at: "2026-10-17 19:18:15"
 read: false
 source:
   - "[Using PLANS.md for multi-hour problem solving](https://developers.openai.com/cookbook/articles/codex_exec_plans)"

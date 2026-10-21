@@ -4,8 +4,8 @@ title: "LangGraph 与 LangChain：从中断原语到人工决策"
 parent: agent-human-in-the-loop
 category: "Agent"
 tags: ["Agent", "人工介入", "Checkpoint"]
-created_at: "2026-10-13T10:59:51+08:00"
-updated_at: "2026-10-20T15:44:24+08:00"
+created_at: "2026-10-13 10:59:51"
+updated_at: "2026-10-20 15:44:24"
 source:
   - "https://docs.langchain.com/oss/python/langgraph/interrupts"
   - "https://docs.langchain.com/oss/python/langchain/human-in-the-loop"

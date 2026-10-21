@@ -2,8 +2,8 @@
 title: "AgentDojo：同时测正常任务与提示注入防御"
 category: "Agent"
 tags: ["Agent", "评测"]
-created_at: "2026-10-13T10:54:39+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-13 10:54:39"
+updated_at: "2026-10-13 12:48:15"
 source: ["https://agentdojo.spylab.ai/concepts/task_suite_and_tasks/", "https://agentdojo.spylab.ai/results/", "https://agentdojo.spylab.ai/concepts/attacks/"]
 ---
 

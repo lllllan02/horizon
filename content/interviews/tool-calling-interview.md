@@ -4,9 +4,9 @@ category: "Agent"
 parent: agent-interview-hub
 tags: ["面试", "Agent", "工具调用"]
 learning_status: organized
-created_at: "2026-10-20T13:10:47+08:00"
-updated_at: "2026-10-20T13:10:47+08:00"
-learning_status_changed_at: "2026-10-20T13:11:56.568+08:00"
+created_at: "2026-10-20 13:10:47"
+updated_at: "2026-10-20 13:10:47"
+learning_status_changed_at: "2026-10-20 13:11:56.568"
 ---
 
 [[tool-calling|工具调用]]中，程序先定义工具名称、用途和参数结构，模型选择工具并生成本次调用的参数值。程序负责校验、找到对应实现并执行，再按调用 ID 把结果交回模型，让它继续判断下一步。

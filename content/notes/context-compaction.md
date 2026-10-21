@@ -6,7 +6,7 @@ aliases: ["Context Compaction", "上下文摘要", "上下文压缩怎样执行"
 category: "Agent"
 tags: ["上下文管理", "文本压缩"]
 created_at: "2026-10-09"
-updated_at: "2026-10-17T20:42:38+08:00"
+updated_at: "2026-10-17 20:42:38"
 reading_suggestions:
   - context-budget
   - history-storage
@@ -14,7 +14,7 @@ reading_suggestions:
   - pi-compaction-summary
   - langmem-summarization-summary
   - factory-compression-evaluation-summary
-learning_status_changed_at: "2026-10-17T20:47:43.367+08:00"
+learning_status_changed_at: "2026-10-17 20:47:43.367"
 ---
 
 **上下文压缩（Context Compaction）是把较早历史提炼成摘要，与保留的原始消息组合成后续输入的机制。** 历史接近[[context-budget|输入预算]]时，用它为后续交互腾出空间。

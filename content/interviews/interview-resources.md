@@ -6,9 +6,9 @@ category: "面试"
 tags: ["面试", "Go", "Agent", "RAG"]
 type: overview
 learning_status: pending
-created_at: "2026-10-18T00:54:04+08:00"
-updated_at: "2026-10-19T19:42:43+08:00"
-learning_status_changed_at: "2026-10-20T14:54:09.646+08:00"
+created_at: "2026-10-18 00:54:04"
+updated_at: "2026-10-19 19:42:43"
+learning_status_changed_at: "2026-10-20 14:54:09.646"
 ---
 
 面向 **Go 后端 + AI / Agent 应用开发社招**的资料目录。优先用按主题整理的网站与仓库建立题目储备，再用个人面经补充具体场景、追问和求职经验，避免依靠大量零散帖子拼出准备范围。

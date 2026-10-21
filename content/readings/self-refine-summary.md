@@ -3,8 +3,8 @@ parent: agent-self-correction
 title: "Self-Refine：用具体反馈迭代修改输出"
 category: "Agent"
 tags: ["Agent", "自我纠正"]
-created_at: "2026-10-12T01:12:31+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-12 01:12:31"
+updated_at: "2026-10-13 12:48:15"
 source: "[Self-Refine: Iterative Refinement with Self-Feedback](https://arxiv.org/html/2303.17651)"
 ---
 

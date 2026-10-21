@@ -6,16 +6,16 @@ export interface ReviewController {
   queue: {
     due: LibraryDocument[];
     fresh: LibraryDocument[];
-    eligibleFresh: LibraryDocument[];
     scheduled: LibraryDocument[];
     paused: LibraryDocument[];
-    freshRemaining: number;
+    recommendations: LibraryDocument[];
   };
   loading: boolean;
   pending: boolean;
   error: string;
   storageLabel: string;
   now: number;
+  pendingRating(doc: LibraryDocument): ReviewRating | null;
   refresh(): Promise<void>;
   submit(doc: LibraryDocument, rating: ReviewRating): Promise<boolean>;
   present(doc: LibraryDocument): Promise<boolean>;

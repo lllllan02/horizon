@@ -5,8 +5,8 @@ parent: multi-agent
 category: "Agent"
 tags: ["Agent", "多Agent协作", "工程选型"]
 learning_status: pending
-created_at: "2026-10-17T23:24:09+08:00"
-updated_at: "2026-10-17T23:24:09+08:00"
+created_at: "2026-10-17 23:24:09"
+updated_at: "2026-10-17 23:24:09"
 source: ["https://learn.chatgpt.com/docs/agent-configuration/subagents", "https://github.com/openai/codex/blob/ce0323f2f2d3b25e82806cd555237da3db4e1897/codex-rs/core/src/tools/handlers/multi_agents_spec.rs", "https://github.com/openai/codex/blob/ce0323f2f2d3b25e82806cd555237da3db4e1897/codex-rs/core/src/tools/handlers/multi_agents/spawn.rs", "https://github.com/openai/codex/blob/ce0323f2f2d3b25e82806cd555237da3db4e1897/codex-rs/core/src/tools/handlers/multi_agents_v2/spawn.rs"]
 ---
 

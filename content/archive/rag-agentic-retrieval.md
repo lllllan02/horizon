@@ -1,7 +1,7 @@
 ---
 title: "Agentic RAG（智能体检索）"
 category: "RAG"
-updated_at: "2026-10-13T10:59:48+08:00"
+updated_at: "2026-10-13 10:59:48"
 tags: ["RAG", "智能体", "检索", "Agentic"]
 aliases: ["Agentic RAG", "agentic retrieval", "智能体检索", "代理式检索"]
 ---

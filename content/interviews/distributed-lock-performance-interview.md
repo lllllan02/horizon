@@ -4,9 +4,9 @@ category: "分布式系统"
 parent: performance-interview-index
 tags: ["面试", "分布式锁", "性能"]
 learning_status: organized
-created_at: "2026-10-20T21:30:20+08:00"
-updated_at: "2026-10-20T22:16:55+08:00"
-learning_status_changed_at: "2026-10-21T10:10:11.610+08:00"
+created_at: "2026-10-20 21:30:20"
+updated_at: "2026-10-20 22:16:55"
+learning_status_changed_at: "2026-10-21 10:10:11.610"
 ---
 
 可以从以下几方面减少分布式锁的性能开销：

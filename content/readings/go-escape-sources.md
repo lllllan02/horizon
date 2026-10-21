@@ -3,8 +3,8 @@ title: "Go 官方资料：逃逸与堆分配优化"
 category: "Go"
 tags: ["Go", "内存分配"]
 learning_status: pending
-created_at: "2026-10-19T15:27:25+08:00"
-updated_at: "2026-10-19T15:36:06+08:00"
+created_at: "2026-10-19 15:27:25"
+updated_at: "2026-10-19 15:36:06"
 source:
   - "https://go.dev/doc/faq#stack_or_heap"
   - "https://go.dev/doc/gc-guide"

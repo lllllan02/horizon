@@ -4,8 +4,8 @@ title: "InnoDB 存储结构"
 category: "MySQL"
 parent: mysql-overview#执行流程与存储
 tags: ["MySQL", "页", "存储引擎"]
-created_at: "2026-10-12T19:05:16+08:00"
-updated_at: "2026-10-12T19:05:16+08:00"
+created_at: "2026-10-12 19:05:16"
+updated_at: "2026-10-12 19:05:16"
 reading_suggestions:
   - mysql-clustered-index
   - mysql-row-overflow

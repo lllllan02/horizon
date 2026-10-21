@@ -4,7 +4,7 @@ title: "Claude 的公开沙箱运行时如何包装命令"
 category: "Agent"
 tags: ["Agent", "沙箱", "源码"]
 created_at: "2026-10-10"
-updated_at: "2026-10-13T12:48:15+08:00"
+updated_at: "2026-10-13 12:48:15"
 source: ["[`wrapWithSandbox`](https://github.com/anthropics/sandbox-runtime/blob/4160dcde76f9905268cb76826381665c422bfbf6/src/sandbox/sandbox-manager.ts#L1879)"]
 reading_suggestions:
   - srt-sandbox-practice

@@ -3,7 +3,7 @@ learning_status: understood
 title: "InnoDB 的回表与覆盖索引"
 category: "MySQL"
 parent: mysql-indexes
-updated_at: "2026-10-12T16:25:49+08:00"
+updated_at: "2026-10-12 16:25:49"
 tags: ["覆盖索引", "回表", "索引"]
 aliases: ["覆盖索引", "Covering Index"]
 reading_suggestions:

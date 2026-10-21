@@ -5,8 +5,8 @@ category: "MySQL"
 tags: ["MySQL", "事务", "性能排查", "超时"]
 type: practice
 learning_status: pending
-created_at: "2026-10-18T20:30:25+08:00"
-updated_at: "2026-10-18T20:42:18+08:00"
+created_at: "2026-10-18 20:30:25"
+updated_at: "2026-10-18 20:42:18"
 ---
 
 **锁等待超时是请求等待其他事务释放锁，超过允许时限后报错的情况。** 它避免请求无限等待，但不会自动解决持锁方迟迟不结束的问题。以下以 MySQL 8.4 InnoDB 行锁为主，依据[[mysql-deadlock-reading#锁等待超时的时限与定位|官方参数与阻塞示例]]。

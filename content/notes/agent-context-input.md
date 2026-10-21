@@ -6,11 +6,11 @@ aliases: ["Agent Context", "Agent 上下文组成", "上下文组成"]
 category: "Agent"
 tags: ["Agent", "上下文管理"]
 created_at: "2026-10-09"
-updated_at: "2026-10-17T20:37:59+08:00"
+updated_at: "2026-10-17 20:37:59"
 reading_suggestions:
   - agent-context
   - agent-task-state
-learning_status_changed_at: "2026-10-17T20:40:23.429+08:00"
+learning_status_changed_at: "2026-10-17 20:40:23.429"
 ---
 
 **Agent 上下文（Context）是一次模型调用实际收到、用于本轮判断的输入信息。**

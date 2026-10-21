@@ -4,8 +4,8 @@ aliases: ["Memory Leak", "内存泄露"]
 category: "计算机基础"
 tags: ["内存管理"]
 learning_status: pending
-created_at: "2026-10-19T15:28:59+08:00"
-updated_at: "2026-10-19T15:28:59+08:00"
+created_at: "2026-10-19 15:28:59"
+updated_at: "2026-10-19 15:28:59"
 ---
 
 **内存泄漏（Memory Leak）是程序已经不再需要某部分内存，却因释放或引用管理问题持续保留它，使它无法正常回收或重新利用的现象。** [[memory-oom-leak-sources#有效生命周期结束后未释放|判断重点]]是这部分内存是否已经失去用途，而不只是内存占用有没有增长。

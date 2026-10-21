@@ -4,8 +4,8 @@ aliases: ["Backpressure", "Back Pressure"]
 category: "服务治理"
 tags: ["背压", "流量控制", "队列"]
 learning_status: pending
-created_at: "2026-10-18T23:47:18+08:00"
-updated_at: "2026-10-18T23:47:18+08:00"
+created_at: "2026-10-18 23:47:18"
+updated_at: "2026-10-18 23:47:18"
 ---
 
 **背压（Backpressure）是把下游的接收或处理能力反馈给上游，让上游相应减少提交的工作。** 当生产速度持续超过消费速度时，它通过限制输入避免队列和等待任务无限增长。

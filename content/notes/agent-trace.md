@@ -4,13 +4,13 @@ parent: agent
 title: "Agent Trace（执行追踪）"
 aliases: ["Agent Trace 要记录什么", "Agent Tracing"]
 category: "Agent"
-updated_at: "2026-10-17T23:29:15+08:00"
+updated_at: "2026-10-17 23:29:15"
 tags: ["Agent", "Trace", "可观测性", "错例回流", "数据脱敏"]
 reading_suggestions:
   - trace-and-span
   - eino-langfuse-tracing
   - agent-evaluation
-learning_status_changed_at: "2026-10-18T00:31:14.730+08:00"
+learning_status_changed_at: "2026-10-18 00:31:14.730"
 ---
 
 Agent Trace 按一次任务记录模型、工具和业务步骤，供排障与回归使用；结构沿用 [[trace-and-span|Trace 与 Span]]。

@@ -3,8 +3,8 @@ title: "Codex：命令规则、审批与沙箱如何共同决策"
 parent: tool-permissions
 category: "Agent"
 tags: ["Agent", "工具调用", "权限"]
-created_at: "2026-10-10T20:44:35+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-10 20:44:35"
+updated_at: "2026-10-13 12:48:15"
 source:
   - "https://learn.chatgpt.com/docs/agent-configuration/rules"
   - "https://github.com/openai/codex/blob/main/codex-rs/core/src/exec_policy.rs"

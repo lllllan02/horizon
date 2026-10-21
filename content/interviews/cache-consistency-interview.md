@@ -5,9 +5,9 @@ category: "Redis"
 parent: redis-interview-index
 tags: ["面试", "Redis", "缓存一致性"]
 learning_status: organized
-created_at: "2026-10-19T16:55:15+08:00"
-updated_at: "2026-10-20T21:40:47+08:00"
-learning_status_changed_at: "2026-10-20T21:42:57.464+08:00"
+created_at: "2026-10-19 16:55:15"
+updated_at: "2026-10-20 21:40:47"
+learning_status_changed_at: "2026-10-20 21:42:57.464"
 ---
 
 我会先确认业务「**能不能接受短暂旧数据**」。要求强一致的关键读写直接走数据库，并选择满足要求的事务和读取方式；能容忍短暂不一致的查询，可以用缓存降低读取延迟和数据库压力。

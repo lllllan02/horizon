@@ -2,8 +2,8 @@
 title: "Langfuse：从生产轨迹建立数据集与实验"
 category: "Agent"
 tags: ["Agent", "Trace", "评测", "错例回流"]
-created_at: "2026-10-12T23:28:23+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-12 23:28:23"
+updated_at: "2026-10-13 12:48:15"
 source:
   - "https://langfuse.com/docs/evaluation/experiments/datasets"
   - "https://langfuse.com/docs/evaluation/experiments/experiments-via-sdk"

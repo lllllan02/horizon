@@ -2,8 +2,8 @@
 title: "OpenTelemetry：上下文传播、错误记录与采样"
 category: "可观测性"
 tags: ["OpenTelemetry", "Trace", "采样"]
-created_at: "2026-10-12T23:28:23+08:00"
-updated_at: "2026-10-18T00:28:03+08:00"
+created_at: "2026-10-12 23:28:23"
+updated_at: "2026-10-18 00:28:03"
 source:
   - "https://opentelemetry.io/docs/concepts/context-propagation/"
   - "https://opentelemetry.io/docs/languages/go/instrumentation/"

@@ -4,8 +4,8 @@ title: "MySQL 索引"
 category: "MySQL"
 parent: mysql-overview
 tags: ["MySQL", "索引", "B+树"]
-created_at: "2026-10-12T15:03:03+08:00"
-updated_at: "2026-10-12T18:17:22+08:00"
+created_at: "2026-10-12 15:03:03"
+updated_at: "2026-10-12 18:17:22"
 reading_suggestions:
   - mysql-index-structure
   - mysql-clustered-index

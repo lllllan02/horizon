@@ -4,9 +4,9 @@ category: "Agent"
 parent: agent-interview-hub
 tags: ["面试", "Agent", "评测"]
 learning_status: organized
-created_at: "2026-10-19T16:40:35+08:00"
-updated_at: "2026-10-19T16:40:35+08:00"
-learning_status_changed_at: "2026-10-19T16:49:36.976+08:00"
+created_at: "2026-10-19 16:40:35"
+updated_at: "2026-10-19 16:40:35"
+learning_status_changed_at: "2026-10-19 16:49:36.976"
 ---
 
 我会围绕业务构建[[agent-evaluation|评测集]]，先明确什么算任务成功。已有生产数据就抽取真实任务和失败案例；新项目则按业务场景整理代表性任务，补上信息缺失、工具失败等边界情况。

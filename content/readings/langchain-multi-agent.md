@@ -3,8 +3,8 @@ title: "LangChain：子 Agent、交接与路由的分工"
 parent: multi-agent
 category: "Agent"
 tags: ["Agent", "多Agent协作", "工程选型"]
-created_at: "2026-10-13T17:41:05+08:00"
-updated_at: "2026-10-17T23:53:29+08:00"
+created_at: "2026-10-13 17:41:05"
+updated_at: "2026-10-17 23:53:29"
 source: ["https://docs.langchain.com/oss/python/langchain/multi-agent/index", "https://docs.langchain.com/oss/python/langchain/multi-agent/subagents", "https://docs.langchain.com/oss/python/langchain/multi-agent/router", "https://docs.langchain.com/oss/python/langchain/multi-agent/handoffs"]
 learning_status: pending
 ---

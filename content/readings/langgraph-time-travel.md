@@ -2,8 +2,8 @@
 title: "LangGraph：从检查点重放与分叉"
 category: "Agent"
 tags: ["Agent", "Checkpoint", "重放"]
-created_at: "2026-10-12T23:28:23+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-12 23:28:23"
+updated_at: "2026-10-13 12:48:15"
 source: "https://docs.langchain.com/oss/python/langgraph/use-time-travel"
 reading_suggestions:
   - agent-checkpoint-recovery

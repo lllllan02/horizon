@@ -7,8 +7,8 @@ source:
   - "https://docs.cloud.google.com/dialogflow/cx/docs/concept/intent"
   - "https://docs.cloud.google.com/dialogflow/cx/docs/concept/parameter"
 read: false
-created_at: "2026-10-13T22:09:24+08:00"
-updated_at: "2026-10-14T13:59:35+08:00"
+created_at: "2026-10-13 22:09:24"
+updated_at: "2026-10-14 13:59:35"
 ---
 
 **Dialogflow CX 将理解请求、限制当前可走的流程、收集业务参数分开处理。** 意图说明用户想做什么，路由决定当前能进入什么流程，参数保存完成任务所需的信息。

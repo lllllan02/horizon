@@ -4,9 +4,9 @@ category: "Go"
 parent: go-interview-hub
 tags: ["面试", "Go"]
 learning_status: organized
-created_at: "2026-10-19T11:24:03+08:00"
-updated_at: "2026-10-19T11:24:03+08:00"
-learning_status_changed_at: "2026-10-19T11:26:08.642+08:00"
+created_at: "2026-10-19 11:24:03"
+updated_at: "2026-10-19 11:24:03"
+learning_status_changed_at: "2026-10-19 11:26:08.642"
 ---
 
 我会尽量把 [[go-channel-interview|Channel（通道）]]的关闭权交给生产方，并明确由谁负责关闭。因为**「从已关闭的 Channel 继续接收不会 panic，但继续发送会 panic」**，重复关闭也会 panic。所以应该由生产方判断什么时候已经发送完、后续不会再发送，再执行关闭。

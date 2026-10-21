@@ -4,8 +4,8 @@ category: "Redis"
 type: article
 tags: ["缓存", "过载保护"]
 learning_status: pending
-created_at: "2026-10-19T17:18:29+08:00"
-updated_at: "2026-10-19T17:18:29+08:00"
+created_at: "2026-10-19 17:18:29"
+updated_at: "2026-10-19 17:18:29"
 source:
   - "https://aws.amazon.com/caching/best-practices/"
   - "https://aws.amazon.com/builders-library/caching-challenges-and-strategies/"

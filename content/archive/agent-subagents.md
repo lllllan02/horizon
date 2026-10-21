@@ -5,8 +5,8 @@ parent: multi-agent
 category: "Agent"
 tags: ["Agent", "多Agent协作", "上下文管理"]
 learning_status: pending
-created_at: "2026-10-13T17:41:05+08:00"
-updated_at: "2026-10-16T20:46:14+08:00"
+created_at: "2026-10-13 17:41:05"
+updated_at: "2026-10-16 20:46:14"
 reading_suggestions:
   - agent-harness
   - langchain-multi-agent

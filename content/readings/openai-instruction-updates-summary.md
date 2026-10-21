@@ -2,8 +2,8 @@
 title: "OpenAI：新要求如何替代旧指令"
 category: "Agent"
 tags: ["Agent", "上下文管理"]
-created_at: "2026-10-11T22:52:35+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-11 22:52:35"
+updated_at: "2026-10-13 12:48:15"
 source: "[Model Spec（2025-12-18）：适用指令与澄清](https://model-spec.openai.com/2025-12-18.html#follow-all-applicable-instructions)"
 ---
 

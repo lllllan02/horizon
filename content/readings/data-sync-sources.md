@@ -4,8 +4,8 @@ category: "数据处理"
 tags: ["数据同步"]
 type: article
 learning_status: pending
-created_at: "2026-10-20T11:09:10+08:00"
-updated_at: "2026-10-20T15:34:08+08:00"
+created_at: "2026-10-20 11:09:10"
+updated_at: "2026-10-20 15:34:08"
 source:
   - "https://debezium.io/documentation/reference/stable/connectors/mysql.html"
   - "https://nightlies.apache.org/flink/flink-docs-stable/docs/learn-flink/fault_tolerance/"

@@ -4,9 +4,9 @@ category: "Agent"
 parent: agent-interview-hub
 tags: ["面试", "MCP", "工具调用"]
 learning_status: organized
-created_at: "2026-10-19T13:33:28+08:00"
-updated_at: "2026-10-19T13:33:28+08:00"
-learning_status_changed_at: "2026-10-19T13:37:52.108+08:00"
+created_at: "2026-10-19 13:33:28"
+updated_at: "2026-10-19 13:33:28"
+learning_status_changed_at: "2026-10-19 13:37:52.108"
 ---
 
 接入 [[mcp-flow|MCP 工具]]，首先得有相应的 MCP Server。它可以是本地启动的进程，也可以是已经部署好的远程服务。

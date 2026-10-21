@@ -1,3 +1,4 @@
+import { documentTime } from '../document-dates.ts';
 import { useMemo, useState } from 'react';
 import type { ReaderGraph } from '../types/graph.ts';
 import type { ReviewController } from '../types/review-ui.ts';
@@ -60,9 +61,7 @@ export function ReviewStatistics({
   );
   const { totals } = stats;
   const filtered = !!search.trim() || status !== 'all' || period !== 'all';
-  const eligible = new Set(
-    [...reviews.queue.due, ...reviews.queue.eligibleFresh].map((doc) => doc.id),
-  );
+  const eligible = new Set(reviews.queue.recommendations.map((doc) => doc.id));
   const clear = () => {
     setSearch('');
     setStatus('all');
@@ -245,7 +244,7 @@ export function ReviewStatistics({
                         >
                           {row.period === 'today' &&
                           row.dueAt &&
-                          Date.parse(row.dueAt) > reviews.now
+                          documentTime(row.dueAt) > reviews.now
                             ? '今日稍后'
                             : reviewStatisticsPeriodLabels[row.period]}
                         </span>

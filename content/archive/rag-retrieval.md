@@ -6,7 +6,7 @@ tags: ["RAG", "召回", "检索"]
 type: "overview"
 parent: "rag"
 aliases: ["Retrieval", "RAG 检索"]
-updated_at: "2026-10-18T21:32:19+08:00"
+updated_at: "2026-10-18 21:32:19"
 ---
 
 **检索（Retrieval）根据问题和允许访问的范围，返回可能支持回答的候选材料。** 候选应包含原文、来源、版本与定位信息，而不仅是相似度分数。

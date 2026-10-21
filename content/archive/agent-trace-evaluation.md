@@ -4,8 +4,8 @@ parent: agent-trace
 title: "Agent 错例回归"
 category: "Agent"
 tags: ["Agent", "Trace", "评测", "错例回流"]
-created_at: "2026-10-12T23:28:23+08:00"
-updated_at: "2026-10-13T11:22:00+08:00"
+created_at: "2026-10-12 23:28:23"
+updated_at: "2026-10-13 11:22:00"
 reading_suggestions:
   - anthropic-agent-evals-summary
   - langfuse-dataset-experiments

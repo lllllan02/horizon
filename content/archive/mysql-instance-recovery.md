@@ -6,8 +6,8 @@ category: "MySQL"
 parent: mysql-overview#日志与可靠性
 type: "concept"
 tags: ["MySQL", "事务", "持久化", "数据恢复"]
-created_at: "2026-10-12T21:32:22+08:00"
-updated_at: "2026-10-12T21:32:22+08:00"
+created_at: "2026-10-12 21:32:22"
+updated_at: "2026-10-12 21:32:22"
 reading_suggestions:
   - mysql-transaction-commit
   - mysql-dirty-page-flushing

@@ -5,8 +5,8 @@ category: "Kafka"
 parent: kafka-overview#定位与事件建模
 type: "concept"
 tags: ["Kafka", "分区", "日志"]
-created_at: "2026-10-12T19:46:06+08:00"
-updated_at: "2026-10-12T20:59:44+08:00"
+created_at: "2026-10-12 19:46:06"
+updated_at: "2026-10-12 20:59:44"
 reading_suggestions:
   - kafka-model-sources
 ---

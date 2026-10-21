@@ -4,8 +4,8 @@ category: "Kafka"
 type: article
 tags: ["Kafka", "消息队列"]
 learning_status: pending
-created_at: "2026-10-19T21:42:14+08:00"
-updated_at: "2026-10-19T21:42:14+08:00"
+created_at: "2026-10-19 21:42:14"
+updated_at: "2026-10-19 21:42:14"
 source:
   - "https://kafka.apache.org/43/javadoc/org/apache/kafka/clients/consumer/KafkaConsumer.html"
   - "https://kafka.apache.org/43/design/design/"

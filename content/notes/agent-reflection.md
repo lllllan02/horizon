@@ -5,11 +5,11 @@ title: "Agent 反思"
 aliases: ["Reflection", "Agent Reflection"]
 category: "Agent"
 tags: ["Agent", "反思"]
-created_at: "2026-10-12T10:15:48+08:00"
-updated_at: "2026-10-17T22:23:30+08:00"
+created_at: "2026-10-12 10:15:48"
+updated_at: "2026-10-17 22:23:30"
 reading_suggestions:
   - agent-self-correction
-learning_status_changed_at: "2026-10-17T22:24:12.655+08:00"
+learning_status_changed_at: "2026-10-17 22:24:12.655"
 ---
 
 **反思（Reflection）是对照目标与证据，检查产物或执行过程、分析偏差并提出调整建议的过程。**

@@ -34,7 +34,10 @@ test('本机页面读写独立复习文件，打开和反馈均不改原文及�
   await page.goto(url + '/#/dashboard/review');
   const review = page.locator('.db-review');
   await expect(review).toContainText('进度保存在本机项目中');
-  await review.getByRole('button', { name: '开始今日复习', exact: true }).click();
+  await review
+    .locator('.db-review-entrybar')
+    .getByRole('button', { name: '开始复习', exact: true })
+    .click();
   await expect(review.locator('.markdown')).toHaveCount(0);
   const before = JSON.parse(await readFile(path.join(root, '.reviews.json'), 'utf8'));
   expect(before.records['local-review'].lastReviewedAt).toBeNull();
@@ -45,6 +48,16 @@ test('本机页面读写独立复习文件，打开和反馈均不改原文及�
   const after = JSON.parse(await readFile(path.join(root, '.reviews.json'), 'utf8'));
   expect(after.records['local-review'].history).toHaveLength(1);
   expect(after.records['local-review'].history[0].rating).toBe('good');
+  await review.getByRole('button', { name: '再来一轮', exact: true }).click();
+  await expect(review.getByRole('button', { name: /^记得/ })).toBeEnabled();
+  await review.getByRole('button', { name: /^记得/ }).click();
+  await expect(review.locator('.db-review-saved')).toBeVisible();
+  const repeated = JSON.parse(await readFile(path.join(root, '.reviews.json'), 'utf8')).records[
+    'local-review'
+  ];
+  expect(repeated.history).toHaveLength(2);
+  expect(repeated.dueAt).toBe(after.records['local-review'].dueAt);
+  expect(repeated.intervalDays).toBe(after.records['local-review'].intervalDays);
   expect(await readFile(path.join(root, 'notes/local-review.md'), 'utf8')).toBe(original);
   await page.reload();
   await expect(review.locator('.db-review-statistics')).toBeVisible();
@@ -75,13 +88,29 @@ test('首页复习打开原阅读面板，完成后不改原文与状态', async
   const reader = page.locator('.document-reader[data-document-id="local-review"]');
   await expect(reader).toBeVisible();
   await expect(reader.locator('.markdown')).toContainText('原文应完整保留');
-  await expect(dock).toContainText('今日已无待复习');
+  await expect(dock.locator('.home-review-title')).toHaveText('本机复习样例');
+  await expect(dock.getByRole('button', { name: '记得', exact: true })).toBeEnabled();
   await expect(dock.getByRole('button', { name: '完成复习', exact: true })).toHaveCount(0);
   expect(await readFile(path.join(root, 'notes/local-review.md'), 'utf8')).toBe(original);
   const after = JSON.parse(await readFile(path.join(root, '.reviews.json'), 'utf8'));
   expect(
     after.records['local-review'].history.find((event: { rating?: string }) => event.rating).rating,
   ).toBe('forgot');
+  const scheduled = after.records['local-review'];
+  await dock.getByRole('button', { name: '记得', exact: true }).click();
+  await expect
+    .poll(async () => {
+      const stored = JSON.parse(await readFile(path.join(root, '.reviews.json'), 'utf8'));
+      return stored.records['local-review'].history.filter(
+        (event: { rating?: string }) => event.rating,
+      ).length;
+    })
+    .toBe(2);
+  const secondRound = JSON.parse(await readFile(path.join(root, '.reviews.json'), 'utf8')).records[
+    'local-review'
+  ];
+  expect(secondRound.dueAt).toBe(scheduled.dueAt);
+  expect(secondRound.intervalDays).toBe(scheduled.intervalDays);
   await expect(dock.getByRole('button', { name: '进入下一题', exact: true })).toHaveCount(0);
   await expect(page).not.toHaveURL(/dashboard/);
   await expect(dock).toBeVisible();

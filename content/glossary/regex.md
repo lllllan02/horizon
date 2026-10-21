@@ -3,8 +3,8 @@ title: "正则表达式（Regex）"
 aliases: ["Regex", "Regular Expression", "正则"]
 category: "开发工具"
 tags: ["正则表达式"]
-created_at: "2026-10-17T12:25:00+08:00"
-updated_at: "2026-10-17T12:25:00+08:00"
+created_at: "2026-10-17 12:25:00"
+updated_at: "2026-10-17 12:25:00"
 ---
 
 **正则表达式（Regular Expression，简称 Regex）是一种描述文本匹配规则的语法，用普通字符与特殊符号组合出一个模式。** 程序用这个模式判断文本是否符合规则，也可据此查找、提取或替换匹配片段。

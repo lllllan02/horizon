@@ -4,9 +4,9 @@ category: "Agent"
 parent: agent-interview-hub
 tags: ["面试", "Agent", "A2A", "协议"]
 learning_status: organized
-created_at: "2026-10-19T12:34:25+08:00"
-updated_at: "2026-10-19T12:34:25+08:00"
-learning_status_changed_at: "2026-10-21T10:01:36.026+08:00"
+created_at: "2026-10-19 12:34:25"
+updated_at: "2026-10-19 12:34:25"
+learning_status_changed_at: "2026-10-21 10:01:36.026"
 ---
 
 [[a2a|A2A（Agent2Agent）]] 是用于独立 Agent 服务之间协作的开放协议。比如两个不同团队各自维护一个 Agent，就可以通过这个协议进行交互、委派任务，统一双方的对接方式。

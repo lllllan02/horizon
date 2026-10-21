@@ -4,8 +4,8 @@ title: "溢出页"
 category: "MySQL"
 parent: mysql-clustered-index
 tags: ["MySQL", "聚簇索引", "页"]
-created_at: "2026-10-12T16:12:02+08:00"
-updated_at: "2026-10-12T16:53:52+08:00"
+created_at: "2026-10-12 16:12:02"
+updated_at: "2026-10-12 16:53:52"
 reading_suggestions:
   - mysql-covering-index
   - mysql-manual-queries

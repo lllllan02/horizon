@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { beijingTimestamp, documentTime } from '../src/document-dates.ts';
 import {
   applyReview,
   emptyReviewState,
@@ -49,7 +50,7 @@ function submit(
   );
 }
 
-test('只复习已整理资料，首次每日全局五篇，完成后不会无限补位', () => {
+test('只复习已整理资料，首次不限量，完成后仍可继续下一轮', () => {
   const documents = [
     ...Array.from({ length: 8 }, (_, i) => doc(`doc-${i}`)),
     doc('pending', { state: 'pending' }),
@@ -58,17 +59,15 @@ test('只复习已整理资料，首次每日全局五篇，完成后不会无�
   const untouched = structuredClone(documents);
   let state = reconcileReviews(emptyReviewState(), documents, now);
   assert.equal(Object.keys(state.records).length, 8);
-  assert.equal(reviewQueue(documents, state, now).fresh.length, 5);
-  assert.equal(reviewQueue(documents, state, now).freshRemaining, 3);
-  for (let i = 0; i < 5; i++) {
+  assert.equal(reviewQueue(documents, state, now).fresh.length, 8);
+  for (let i = 0; i < 8; i++) {
     state = submit(state, documents, `doc-${i}`);
-    assert.equal(reviewQueue(documents, state, now).fresh.length, 4 - i);
-    assert.equal(reviewQueue(documents, state, now).freshRemaining, 3);
+    assert.equal(reviewQueue(documents, state, now).fresh.length, 7 - i);
   }
-  assert.throws(() => submit(state, documents, 'doc-5'), /首次复习/);
-  assert.equal(reviewQueue(documents, state, now + day).fresh.length, 3);
-  assert.equal(reviewQueue(documents, state, now + day).due.length, 5);
-  assert.equal(reviewQueue(documents, state, now).scheduled.length, 5);
+  assert.equal(reviewQueue(documents, state, now).recommendations.length, 8);
+  assert.equal(reviewQueue(documents, state, now + day).fresh.length, 0);
+  assert.equal(reviewQueue(documents, state, now + day).due.length, 8);
+  assert.equal(reviewQueue(documents, state, now).scheduled.length, 8);
   assert.throws(() => submit(state, documents, 'reading'), /已整理/);
   assert.deepEqual(documents, untouched);
   assert.deepEqual(parseReviewState(JSON.parse(JSON.stringify(state))), state);
@@ -80,11 +79,11 @@ test('反馈按档位调度，迟复习按实际时间计算，暂停和跳过�
   assert.equal(nextReviewInterval(undefined, 'good'), 1);
   assert.equal(nextReviewInterval(undefined, 'hard'), 1);
   state = submit(state, documents);
-  assert.equal(state.records.a.dueAt, new Date(now + day).toISOString());
+  assert.equal(state.records.a.dueAt, beijingTimestamp(now + day));
   const late = now + day * 4;
   state = submit(state, documents, 'a', {}, late);
   assert.equal(state.records.a.intervalDays, 3);
-  assert.equal(state.records.a.dueAt, new Date(late + day * 3).toISOString());
+  assert.equal(state.records.a.dueAt, beijingTimestamp(late + day * 3));
   state = submit(state, documents, 'a', {}, late + day * 3);
   assert.equal(state.records.a.intervalDays, 7);
   state = submit(state, documents, 'a', { rating: 'hard' }, late + day * 10);
@@ -103,7 +102,7 @@ test('反馈按档位调度，迟复习按实际时间计算，暂停和跳过�
   assert.equal(parseReviewState(state), state);
 });
 
-test('日界固定北京时间，due按到期时间排序且不消耗首次名额', () => {
+test('日界固定北京时间，due按到期时间排序并保留未复习资料', () => {
   assert.equal(reviewDay('2026-10-20T15:59:59Z'), '2026-10-20');
   assert.equal(reviewDay('2026-10-20T16:00:00Z'), '2026-10-21');
   const documents = [doc('a'), doc('b'), doc('c')];
@@ -151,13 +150,13 @@ test('实质修订缩短周期，单独正文或元数据变动保持周期和�
       [original],
       'a',
       {},
-      state.records.a.dueAt ? Date.parse(state.records.a.dueAt) : now - 11 * day,
+      state.records.a.dueAt ? documentTime(state.records.a.dueAt) : now - 11 * day,
     );
   assert.equal(state.records.a.intervalDays, 14);
   const changed = doc('a', { body: '新正文', updated: '2026-10-20' });
   const revised = reconcileReviews(state, [changed], now);
   assert.equal(revised.records.a.intervalDays, 1);
-  assert.equal(revised.records.a.dueAt, new Date(now + day).toISOString());
+  assert.equal(revised.records.a.dueAt, beijingTimestamp(now + day));
   assert.equal(changed.state, 'organized');
   assert.deepEqual(revised.records.a.history, state.records.a.history);
   for (const small of [doc('a', { body: '链接调整' }), doc('a', { updated: '2026-10-20' })]) {
@@ -168,6 +167,31 @@ test('实质修订缩短周期，单独正文或元数据变动保持周期和�
   // interpreting it as a revision or making the review file unreadable.
   const undated = reconcileReviews(emptyReviewState(), [doc('unknown', { updated: '未知' })], now);
   assert.equal(parseReviewState(undated), undated);
+});
+
+test('无偏移的正文更新时间按北京时间比较，早于旧偏移时刻不会缩短周期', () => {
+  const original = doc('a', { updated: '2026-10-20T04:00:00Z' });
+  let state = reconcileReviews(emptyReviewState(), [original], now);
+  for (let i = 0; i < 3; i++)
+    state = submit(
+      state,
+      [original],
+      'a',
+      {},
+      state.records.a.dueAt ? documentTime(state.records.a.dueAt) : now - 4 * day,
+    );
+  assert.equal(state.records.a.intervalDays, 7);
+  for (const updated of ['2026-10-20T11:59:59', '2026-10-20T12:00:00']) {
+    const changed = doc('a', { body: '更新正文', updated });
+    assert.equal(reconcileReviews(state, [changed], now).records.a.intervalDays, 7);
+  }
+  const revised = reconcileReviews(
+    state,
+    [doc('a', { body: '更新正文', updated: '2026-10-20T12:00:01' })],
+    now,
+  );
+  assert.equal(revised.records.a.intervalDays, 1);
+  assert.equal(revised.records.a.dueAt, '2026-10-21 12:00:00.000');
 });
 
 test('幂等重试、版本冲突、迟到正文与参数校验', () => {
@@ -204,7 +228,7 @@ test('幂等重试、版本冲突、迟到正文与参数校验', () => {
     assert.throws(() => parseReviewState(bad), /格式/);
 });
 
-test('已同步的另一会话仍不能重复提交未来复习，同请求可重试且到期可再次反馈', () => {
+test('同请求幂等，提前练习不推长周期，到期评分正常升档', () => {
   const documents = [doc()];
   const state = reconcileReviews(emptyReviewState(), documents, now);
   const input: ReviewInput = {
@@ -218,15 +242,17 @@ test('已同步的另一会话仍不能重复提交未来复习，同请求可�
   const done = applyReview(state, documents, input, now);
   assert.equal(applyReview(done, documents, input, now + 1), done);
   const secondInput = { ...input, version: done.version, requestId: 'second-session' };
-  for (const rating of ['forgot', 'hard', 'good'] as const)
-    assert.throws(
-      () => applyReview(done, documents, { ...secondInput, rating }, now + day - 1),
-      /尚未到期/,
-    );
+  for (const rating of ['forgot', 'hard', 'good'] as const) {
+    const practice = applyReview(done, documents, { ...secondInput, rating }, now + day - 1);
+    assert.equal(practice.records.a.intervalDays, 1);
+    assert.equal(practice.records.a.dueAt, done.records.a.dueAt);
+    assert.equal(practice.records.a.history.length, 2);
+    assert.equal(parseReviewState(practice), practice);
+  }
   const second = applyReview(done, documents, secondInput, now + day);
   assert.equal(second.records.a.history.length, 2);
   assert.equal(second.records.a.intervalDays, 3);
-  assert.equal(second.records.a.dueAt, new Date(now + day * 4).toISOString());
+  assert.equal(second.records.a.dueAt, beijingTimestamp(now + day * 4));
 });
 
 test('旧版记录缺少展示字段仍按原版本读取并保留全部反馈历史', () => {
@@ -261,9 +287,14 @@ test('旧版记录缺少展示字段仍按原版本读取并保留全部反馈�
   assert.equal(reconciled.records.a.lastPresentedAt, undefined);
   assert.deepEqual(reconciled.records.a.history, legacy.records.a.history);
   assert.equal(parseReviewState(reconciled), reconciled);
+  const completed = submit(reconciled, [doc()], 'a', {}, now);
+  assert.deepEqual(completed.records.a.history.slice(0, 1), legacy.records.a.history);
+  assert.equal(completed.records.a.lastReviewedAt, '2026-10-20 12:00:00.000');
+  assert.equal(completed.records.a.dueAt, '2026-10-23 12:00:00.000');
+  assert.equal(parseReviewState(completed), completed);
 });
 
-test('展示可幂等持久化但不构成复习，不改周期、状态和每日完成额度', () => {
+test('展示可幂等持久化但不构成复习，不改周期、状态和完成次数', () => {
   const documents = Array.from({ length: 8 }, (_, i) => doc(`doc-${i}`));
   const untouched = structuredClone(documents);
   const initial = reconcileReviews(emptyReviewState(), documents, now);
@@ -276,12 +307,11 @@ test('展示可幂等持久化但不构成复习，不改周期、状态和每�
     documentFingerprint: reviewFingerprint(documents[7]),
   };
   const shown = applyReview(initial, documents, input, now);
-  assert.equal(shown.records['doc-7'].lastPresentedAt, new Date(now).toISOString());
+  assert.equal(shown.records['doc-7'].lastPresentedAt, beijingTimestamp(now));
   assert.equal(shown.records['doc-7'].lastReviewedAt, null);
   assert.equal(shown.records['doc-7'].dueAt, null);
   assert.equal(shown.records['doc-7'].intervalDays, 0);
-  assert.equal(reviewQueue(documents, shown, now).fresh.length, 5);
-  assert.equal(reviewQueue(documents, shown, now).eligibleFresh.length, 8);
+  assert.equal(reviewQueue(documents, shown, now).fresh.length, 8);
   assert.equal(applyReview(shown, documents, input, now + 100), shown);
   assert.equal(parseReviewState(shown), shown);
   assert.throws(
@@ -299,7 +329,7 @@ test('展示可幂等持久化但不构成复习，不改周期、状态和每�
     );
   const finished = submit(shown, documents, 'doc-7', {}, now + 10);
   assert.equal(finished.records['doc-7'].lastPresentedAt, shown.records['doc-7'].lastPresentedAt);
-  assert.equal(finished.records['doc-7'].lastReviewedAt, new Date(now + 10).toISOString());
+  assert.equal(finished.records['doc-7'].lastReviewedAt, beijingTimestamp(now + 10));
   assert.deepEqual(documents, untouched);
 });
 
@@ -309,9 +339,8 @@ test('刷新后从全部未完成资料轮换，超过五篇也不困在窗口�
   const selected: string[] = [];
   for (let i = 0; i < 16; i++) {
     const queue = reviewQueue(documents, state, now);
-    assert.equal(queue.fresh.length, 5);
-    assert.equal(queue.eligibleFresh.length, 8);
-    const id = queue.eligibleFresh[0].id;
+    assert.equal(queue.fresh.length, 8);
+    const id = queue.fresh[0].id;
     selected.push(id);
     state = submit(state, documents, id, { rating: undefined, presented: true });
     state = parseReviewState(JSON.parse(JSON.stringify(state)));
@@ -331,35 +360,74 @@ test('未展示候选优先切换专题，展示过的资料按最久展示顺�
   let state = reconcileReviews(emptyReviewState(), documents, now);
   const order: string[] = [];
   for (let i = 0; i < 4; i++) {
-    const id = reviewQueue(documents, state, now).eligibleFresh[0].id;
+    const id = reviewQueue(documents, state, now).fresh[0].id;
     order.push(id);
     state = submit(state, documents, id, { rating: undefined, presented: true }, now + i);
   }
   assert.deepEqual(order, ['a', 'c', 'b', 'd']);
   assert.deepEqual(
-    reviewQueue(documents, state, now + 5).eligibleFresh.map((item) => item.id),
+    reviewQueue(documents, state, now + 5).fresh.map((item) => item.id),
     order,
   );
 });
 
-test('任意未完成候选可反馈，但展示和刷新不能绕过每天五篇首次完成额度', () => {
+test('新增已整理资料立即加入推荐，不受当天完成量或已删除资料历史影响', () => {
   const documents = Array.from({ length: 9 }, (_, i) => doc(`doc-${i}`));
   let state = reconcileReviews(emptyReviewState(), documents, now);
-  for (const id of ['doc-8', 'doc-7', 'doc-6', 'doc-5', 'doc-4']) {
-    state = submit(state, documents, id, { rating: undefined, presented: true });
-    state = submit(state, documents, id);
+  for (const document of documents) state = submit(state, documents, document.id);
+  const added = [...documents, doc('new')];
+  state = reconcileReviews(state, added, now);
+  assert.equal(reviewQueue(added, state, now).recommendations[0].id, 'new');
+  state = submit(state, added, 'new');
+  assert.equal(reviewQueue(added, state, now).recommendations.length, 10);
+  assert.equal(reviewQueue(added.slice(-1), state, now).recommendations.length, 1);
+});
+
+test('全部完成后持续轮转多轮，刷新保持顺序且提前记得不改变计划', () => {
+  const documents = [doc('a'), doc('b'), doc('c')];
+  let state = reconcileReviews(emptyReviewState(), documents, now);
+  const order: string[] = [];
+  for (let i = 0; i < 12; i++) {
+    const at = now + i;
+    const id = reviewQueue(documents, state, at).recommendations[0].id;
+    order.push(id);
+    state = submit(state, documents, id, { rating: undefined, presented: true }, at);
+    state = submit(state, documents, id, {}, at);
     state = parseReviewState(JSON.parse(JSON.stringify(state)));
   }
-  assert.equal(reviewQueue(documents, state, now).eligibleFresh.length, 0);
-  assert.equal(reviewQueue(documents, state, now).fresh.length, 0);
-  assert.throws(() => submit(state, documents, 'doc-0'), /首次复习/);
-  assert.throws(
-    () => submit(state, documents, 'doc-0', { rating: undefined, presented: true }),
-    /首次复习/,
+  assert.deepEqual(order, Array.from({ length: 4 }, () => ['a', 'b', 'c']).flat());
+  for (const [index, document] of documents.entries()) {
+    const record = state.records[document.id];
+    assert.equal(record.history.filter((event) => event.rating).length, 4);
+    assert.equal(record.intervalDays, 1);
+    assert.equal(record.dueAt, beijingTimestamp(now + index + day));
+  }
+});
+
+test('提前忘记或模糊可缩短计划，记得不会延长，暂停和未整理不会补入下一轮', () => {
+  const documents = [doc('a'), doc('paused'), doc('reading', { state: 'reading' })];
+  let state = reconcileReviews(emptyReviewState(), documents, now);
+  state = submit(state, documents, 'a', {}, now - 5 * day);
+  state = submit(state, documents, 'a', {}, now - 4 * day);
+  state = submit(state, documents, 'a', {}, now - day);
+  assert.equal(state.records.a.intervalDays, 7);
+  state = submit(state, documents, 'paused', { rating: undefined, paused: true });
+  assert.deepEqual(
+    reviewQueue(documents, state, now).recommendations.map((item) => item.id),
+    ['a'],
   );
-  // Removing completed documents must not restore their consumed quota.
-  assert.equal(reviewQueue(documents.slice(0, 4), state, now).eligibleFresh.length, 0);
-  assert.equal(reviewQueue(documents, state, now + day).eligibleFresh.length, 4);
+  for (const [rating, interval] of [
+    ['good', 7],
+    ['hard', 3],
+    ['forgot', 1],
+  ] as const) {
+    const practiced = submit(state, documents, 'a', { rating });
+    assert.equal(practiced.records.a.intervalDays, interval);
+    assert.equal(
+      practiced.records.a.dueAt,
+      rating === 'good' ? state.records.a.dueAt : beijingTimestamp(now + interval * day),
+    );
+  }
 });
 
 test('到期队列优先未展示资料，同日展示后降位，到期时间相同优先忘记和模糊', () => {
@@ -378,17 +446,19 @@ test('到期队列优先未展示资料，同日展示后降位，到期时间�
   state = submit(state, documents, 'c', { rating: 'forgot' }, now);
   assert.deepEqual(due(), ['b', 'a', 'older']);
   assert.deepEqual(due(now + day), ['older', 'b', 'a', 'c']);
-  assert.equal(reviewQueue(documents, state, now).eligibleFresh[0].id, 'fresh');
+  assert.equal(reviewQueue(documents, state, now).fresh[0].id, 'fresh');
 });
 
-test('展示不能绕过暂停、未来到期、原文变化或整理状态检查', () => {
+test('提前展示不改计划，仍校验暂停、原文变化和整理状态', () => {
   const documents = [doc(), doc('reading', { state: 'reading' })];
   const initial = reconcileReviews(emptyReviewState(), documents, now);
   const shown = { rating: undefined, presented: true } as const;
   const paused = submit(initial, documents, 'a', { rating: undefined, paused: true });
   assert.throws(() => submit(paused, documents, 'a', shown), /先恢复/);
   const done = submit(initial, documents);
-  assert.throws(() => submit(done, documents, 'a', shown), /尚未到期/);
+  const practiced = submit(done, documents, 'a', shown);
+  assert.equal(practiced.records.a.dueAt, done.records.a.dueAt);
+  assert.equal(practiced.records.a.lastReviewedAt, done.records.a.lastReviewedAt);
   assert.throws(() => submit(initial, documents, 'reading', shown), /已整理/);
   assert.throws(
     () => submit(initial, documents, 'a', { ...shown, documentFingerprint: 'stale' }),
@@ -409,5 +479,5 @@ test('今日所有到期资料都展示后仍按展示先后轮转，不反复�
     state = parseReviewState(JSON.parse(JSON.stringify(state)));
   }
   assert.deepEqual(order, ['a', 'b', 'c', 'a', 'b', 'c', 'a']);
-  assert.equal(state.records.a.lastReviewedAt, new Date(now - 5 * day).toISOString());
+  assert.equal(state.records.a.lastReviewedAt, beijingTimestamp(now - 5 * day));
 });

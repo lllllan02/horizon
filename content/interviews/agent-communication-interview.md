@@ -4,9 +4,9 @@ category: "Agent"
 parent: agent-interview-hub
 tags: ["面试", "Agent", "多Agent协作"]
 learning_status: organized
-created_at: "2026-10-19T12:28:23+08:00"
-updated_at: "2026-10-19T12:28:23+08:00"
-learning_status_changed_at: "2026-10-19T12:31:25.297+08:00"
+created_at: "2026-10-19 12:28:23"
+updated_at: "2026-10-19 12:28:23"
+learning_status_changed_at: "2026-10-19 12:31:25.297"
 ---
 
 [[multi-agent|多 Agent 协作]]中，父子 Agent 也是一种协作关系。通信方式可以从**「任务委派」**和**「执行过程中的协调」**两个角度来讲。

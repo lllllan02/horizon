@@ -2,8 +2,8 @@
 title: "Go backoff：用函数包装一次操作"
 category: "服务治理"
 tags: ["重试", "异常分类"]
-created_at: "2026-10-12T11:09:12+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-12 11:09:12"
+updated_at: "2026-10-13 12:48:15"
 source: "[backoff v7.0.0 源码](https://github.com/cenkalti/backoff/blob/v7.0.0/retry.go) · [包文档](https://pkg.go.dev/github.com/cenkalti/backoff/v7)"
 ---
 

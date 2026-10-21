@@ -4,8 +4,8 @@ title: "Agent 基准测试"
 parent: agent-evaluation
 category: "Agent"
 tags: ["Agent", "评测"]
-created_at: "2026-10-13T11:00:15+08:00"
-updated_at: "2026-10-13T11:06:45+08:00"
+created_at: "2026-10-13 11:00:15"
+updated_at: "2026-10-13 11:06:45"
 reading_suggestions:
   - bfcl-evaluation
   - tau-bench-evaluation

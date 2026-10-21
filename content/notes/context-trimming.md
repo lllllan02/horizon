@@ -6,13 +6,13 @@ aliases: ["Context Truncation", "Context Trimming", "Context Filtering", "上下
 category: "Agent"
 tags: ["上下文管理"]
 created_at: "2026-10-09"
-updated_at: "2026-10-17T20:23:32+08:00"
+updated_at: "2026-10-17 20:23:32"
 reading_suggestions:
   - context-budget
   - langchain-message-trimming-summary
   - anthropic-context-editing-summary
   - context-compaction
-learning_status_changed_at: "2026-10-17T20:25:55.430+08:00"
+learning_status_changed_at: "2026-10-17 20:25:55.430"
 ---
 
 历史消息和工具结果不断增长时，可以通过选择保留哪些原文，缩减本轮输入。

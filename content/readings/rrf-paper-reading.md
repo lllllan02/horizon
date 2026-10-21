@@ -4,8 +4,8 @@ category: "信息检索"
 tags: ["检索", "检索评测"]
 type: "article"
 learning_status: pending
-created_at: "2026-10-18T22:46:36+08:00"
-updated_at: "2026-10-18T22:46:36+08:00"
+created_at: "2026-10-18 22:46:36"
+updated_at: "2026-10-18 22:46:36"
 source: "https://cormack.uwaterloo.ca/cormack/cormacksigir09-rrf.pdf"
 ---
 

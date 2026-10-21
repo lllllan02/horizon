@@ -3,8 +3,8 @@ title: "HyDE、RAPTOR 与 ColPali：三种检索表示的改变"
 category: "RAG"
 tags: ["RAG"]
 type: "article"
-created_at: "2026-10-13T10:49:42+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-13 10:49:42"
+updated_at: "2026-10-13 12:48:15"
 source: ["https://arxiv.org/html/2212.10496", "https://arxiv.org/html/2401.18059", "https://arxiv.org/html/2407.01449"]
 ---
 

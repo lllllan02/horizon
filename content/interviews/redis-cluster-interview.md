@@ -5,9 +5,9 @@ category: "Redis"
 parent: redis-interview-index
 tags: ["面试", "Redis"]
 learning_status: organized
-created_at: "2026-10-19T19:42:57+08:00"
-updated_at: "2026-10-19T19:42:57+08:00"
-learning_status_changed_at: "2026-10-19T19:49:10.240+08:00"
+created_at: "2026-10-19 19:42:57"
+updated_at: "2026-10-19 19:42:57"
+learning_status_changed_at: "2026-10-19 19:49:10.240"
 ---
 
 Redis Cluster 主要是为了解决**「单机内存容量和读写能力的瓶颈」**，同时提供一定的高可用能力。它的核心思路是把数据分片：整个集群有 **16384 个哈希槽**，每个主节点负责一部分槽位，承担这部分数据的读写请求。

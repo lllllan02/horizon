@@ -4,8 +4,8 @@ title: "索引分类"
 category: "MySQL"
 parent: mysql-indexes
 tags: ["MySQL", "索引", "主键", "联合索引"]
-created_at: "2026-10-12T16:12:02+08:00"
-updated_at: "2026-10-12T16:12:02+08:00"
+created_at: "2026-10-12 16:12:02"
+updated_at: "2026-10-12 16:12:02"
 reading_suggestions:
   - mysql-clustered-key
   - mysql-composite-index

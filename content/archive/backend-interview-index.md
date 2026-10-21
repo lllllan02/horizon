@@ -5,8 +5,8 @@ parent: interview-index
 tags: ["面试", "系统设计"]
 type: overview
 learning_status: pending
-created_at: "2026-10-18T00:59:41+08:00"
-updated_at: "2026-10-18T00:59:41+08:00"
+created_at: "2026-10-18 00:59:41"
+updated_at: "2026-10-18 00:59:41"
 ---
 
 本页保留 Go 后端与 AI 服务都需要的公共工程问题，语言机制归 [[go-interview-index|Go 目录]]。编号对应本页来源表；问题围绕社招场景重写，不表示某公司的固定考题。

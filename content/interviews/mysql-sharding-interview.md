@@ -4,9 +4,9 @@ category: "MySQL"
 parent: mysql-interview-index
 tags: ["面试", "分库分表"]
 learning_status: organized
-created_at: "2026-10-19T22:32:18+08:00"
-updated_at: "2026-10-19T22:32:18+08:00"
-learning_status_changed_at: "2026-10-19T22:38:07.803+08:00"
+created_at: "2026-10-19 22:32:18"
+updated_at: "2026-10-19 22:32:18"
+learning_status_changed_at: "2026-10-19 22:38:07.803"
 ---
 
 了解。我理解分库分表是把数据拆到多个库表里，主要是「**根据具体瓶颈决定怎么拆**」。

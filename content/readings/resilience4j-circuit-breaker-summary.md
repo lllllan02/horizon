@@ -3,8 +3,8 @@ title: "Resilience4j：熔断状态、统计与并发边界"
 category: "服务治理"
 tags: ["熔断", "过载保护"]
 learning_status: pending
-created_at: "2026-10-18T23:47:18+08:00"
-updated_at: "2026-10-18T23:47:18+08:00"
+created_at: "2026-10-18 23:47:18"
+updated_at: "2026-10-18 23:47:18"
 source: "https://resilience4j.readme.io/docs/circuitbreaker"
 ---
 

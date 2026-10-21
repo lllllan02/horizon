@@ -3,8 +3,8 @@ title: "Go 官方资料：内存滞留与清理责任"
 category: "Go"
 tags: ["Go", "内存管理"]
 learning_status: pending
-created_at: "2026-10-20T20:05:17+08:00"
-updated_at: "2026-10-20T20:05:17+08:00"
+created_at: "2026-10-20 20:05:17"
+updated_at: "2026-10-20 20:05:17"
 source:
   - "https://go.dev/blog/slices-intro#a-possible-gotcha"
   - "https://pkg.go.dev/strings#Clone"

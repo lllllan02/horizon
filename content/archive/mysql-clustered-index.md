@@ -3,7 +3,7 @@ learning_status: understood
 title: "InnoDB 的聚簇索引与二级索引"
 category: "MySQL"
 parent: mysql-indexes
-updated_at: "2026-10-12T16:58:43+08:00"
+updated_at: "2026-10-12 16:58:43"
 tags: ["MySQL", "聚簇索引", "主键", "二级索引"]
 aliases: ["InnoDB 聚簇索引", "聚簇索引", "Clustered Index", "聚簇键"]
 reading_suggestions:

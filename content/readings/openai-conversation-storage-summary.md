@@ -3,8 +3,8 @@ parent: history-storage
 title: "OpenAI：用会话 ID 保存与读取历史"
 category: "Agent"
 tags: ["上下文管理", "持久化"]
-created_at: "2026-10-11T21:36:25+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-11 21:36:25"
+updated_at: "2026-10-13 12:48:15"
 source:
   - "https://developers.openai.com/api/docs/guides/conversation-state"
   - "https://developers.openai.com/api/reference/resources/conversations/subresources/items/methods/list"

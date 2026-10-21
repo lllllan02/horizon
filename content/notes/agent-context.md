@@ -6,7 +6,7 @@ aliases: ["Context Management"]
 category: "Agent"
 tags: ["Agent", "上下文管理"]
 created_at: "2026-10-09"
-updated_at: "2026-10-17T20:37:59+08:00"
+updated_at: "2026-10-17 20:37:59"
 reading_suggestions:
   - agent-context-input
   - agent-task-state
@@ -15,7 +15,7 @@ reading_suggestions:
   - context-compaction
   - history-storage
   - context-loading
-learning_status_changed_at: "2026-10-17T20:48:36.440+08:00"
+learning_status_changed_at: "2026-10-17 20:48:36.440"
 ---
 
 **Agent 上下文管理（Context Management）是在有限窗口内，为每次调用选择、更新和组织[[agent-context-input|模型输入]]的机制。**

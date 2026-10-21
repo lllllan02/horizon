@@ -6,9 +6,9 @@ parent: agent-interview-hub
 tags: ["面试", "Agent", "工具调用"]
 type: practice
 learning_status: organized
-created_at: "2026-10-20T17:39:01+08:00"
-updated_at: "2026-10-20T17:39:01+08:00"
-learning_status_changed_at: "2026-10-20T18:15:09.512+08:00"
+created_at: "2026-10-20 17:39:01"
+updated_at: "2026-10-20 17:39:01"
+learning_status_changed_at: "2026-10-20 18:15:09.512"
 ---
 
 我会把 Prompt 这类文本配置和工具、程序的升级分开处理。

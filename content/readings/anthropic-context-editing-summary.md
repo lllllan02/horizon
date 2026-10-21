@@ -4,8 +4,8 @@ aliases: ["Claude Context editing"]
 parent: context-trimming
 category: "Agent"
 tags: ["Agent", "上下文管理", "工具调用"]
-created_at: "2026-10-11T16:21:13+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-11 16:21:13"
+updated_at: "2026-10-13 12:48:15"
 source: "https://platform.claude.com/docs/en/build-with-claude/context-editing"
 ---
 

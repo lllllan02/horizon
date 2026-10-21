@@ -2,7 +2,7 @@
 learning_status: pending
 title: "幂等"
 category: "分布式系统"
-updated_at: "2026-10-12T11:26:23+08:00"
+updated_at: "2026-10-12 11:26:23"
 tags: ["幂等", "重试", "去重"]
 aliases: ["幂等性", "Idempotency"]
 ---

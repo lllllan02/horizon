@@ -3,8 +3,8 @@ title: "WebSocket 与 SSE 标准要点"
 category: "计算机网络"
 tags: ["协议"]
 learning_status: pending
-created_at: "2026-10-19T13:43:27+08:00"
-updated_at: "2026-10-19T13:43:27+08:00"
+created_at: "2026-10-19 13:43:27"
+updated_at: "2026-10-19 13:43:27"
 source:
   - "https://www.rfc-editor.org/rfc/rfc6455.html"
   - "https://html.spec.whatwg.org/multipage/server-sent-events.html"

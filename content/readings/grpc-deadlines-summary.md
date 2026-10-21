@@ -3,8 +3,8 @@ title: "gRPC：截止时间传播与超时后的工作停止"
 category: "分布式系统"
 tags: ["超时", "取消"]
 learning_status: pending
-created_at: "2026-10-18T23:47:18+08:00"
-updated_at: "2026-10-18T23:47:18+08:00"
+created_at: "2026-10-18 23:47:18"
+updated_at: "2026-10-18 23:47:18"
 source: "https://grpc.io/docs/guides/deadlines/"
 ---
 

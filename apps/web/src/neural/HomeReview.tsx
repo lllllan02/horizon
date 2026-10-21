@@ -15,12 +15,13 @@ export function useHomeReview(reviews: ReviewController) {
   const [doc, setDoc] = useState<LibraryDocument | null>(null);
   const [saved, setSaved] = useState(false);
   const [rating, setRating] = useState<ReviewRating | null>(null);
-  const [visited, setVisited] = useState<string[]>([]);
-  const [initialized, setInitialized] = useState(false);
+  const [turn, setTurn] = useState(0);
   const busy = useRef(false);
   const attempted = useRef<ReviewRating | null>(null);
-  const available = [...reviews.queue.due, ...reviews.queue.eligibleFresh];
-  const all = [...available, ...reviews.queue.scheduled, ...reviews.queue.paused];
+  const observedReview = useRef<string | null>(null);
+  const pendingRating = doc ? (reviews.pendingRating(doc) ?? attempted.current) : null;
+  const available = reviews.queue.recommendations;
+  const all = [...available, ...reviews.queue.paused];
   const current = doc ? all.find((item) => item.id === doc.id) : null;
   const changed =
     !!doc &&
@@ -28,25 +29,31 @@ export function useHomeReview(reviews: ReviewController) {
       current.state !== 'organized' ||
       current.body !== doc.body ||
       current.updated !== doc.updated);
+  const lastReview = (id: string) =>
+    reviews.state?.records[id]?.history.findLast((event) => event.rating)?.requestId ?? null;
+  const completedElsewhere =
+    !!doc && !saved && !reviews.pendingRating(doc) && lastReview(doc.id) !== observedReview.current;
   const paused = !!doc && !!reviews.state?.records[doc.id]?.paused;
   const unavailable = !!doc && !saved && !available.some((item) => item.id === doc.id);
   // An ambiguous save may already have committed. Retrying the same selection
   // lets the controller reuse its request ID instead of silently counting it twice.
-  const blocked = changed || paused || (unavailable && !attempted.current);
+  const blocked = changed || paused || completedElsewhere || (unavailable && !attempted.current);
   useEffect(() => {
-    if (initialized || reviews.loading || !reviews.state) return;
+    if (doc || reviews.loading || !reviews.state) return;
+    observedReview.current = available[0] ? lastReview(available[0].id) : null;
     setDoc(available[0] ?? null);
-    setInitialized(true);
-  }, [initialized, reviews.loading, reviews.state, available]);
+  }, [doc, reviews.loading, reviews.state, available]);
   const select = (nextDoc: LibraryDocument | null) => {
+    observedReview.current = nextDoc ? lastReview(nextDoc.id) : null;
     setDoc(nextDoc);
+    setTurn((value) => value + 1);
     setSaved(false);
     setRating(null);
     attempted.current = null;
   };
   const save = async (choice: ReviewRating) => {
     if (!doc || saved || blocked || reviews.pending || busy.current) return false;
-    if (unavailable && attempted.current !== choice) return false;
+    if (pendingRating && pendingRating !== choice) return false;
     busy.current = true;
     attempted.current = choice;
     try {
@@ -59,46 +66,39 @@ export function useHomeReview(reviews: ReviewController) {
   };
   const choose = async (choice: ReviewRating) => {
     if (!doc || saved || blocked || reviews.pending || busy.current) return false;
-    if (unavailable && attempted.current !== choice) return false;
+    if (pendingRating && pendingRating !== choice) return false;
     setRating(choice);
     return save(choice);
   };
   const next = () => {
     if (reviews.pending || busy.current) return;
-    const seen = doc ? [...visited, doc.id] : visited;
-    setVisited(seen);
-    select(available.find((item) => !seen.includes(item.id)) ?? null);
+    select(available.find((item) => item.id !== doc?.id) ?? available[0] ?? null);
   };
   useEffect(() => {
     if (!saved) return;
-    const seen = doc ? [...visited, doc.id] : visited;
-    setVisited(seen);
-    select(available.find((item) => !seen.includes(item.id)) ?? null);
-  }, [saved, rating, doc, visited, available]);
-  const restart = () => {
-    if (reviews.pending || busy.current) return;
-    setVisited([]);
-    select(available[0] ?? null);
-  };
+    select(available.find((item) => item.id !== doc?.id) ?? available[0] ?? null);
+  }, [saved, doc, available]);
   return {
     doc,
     saved,
     rating,
+    attemptedRating: pendingRating,
     changed,
     blocked,
     canMoveOn: blocked || (unavailable && !!reviews.error),
     remaining: available.length,
-    canRestart: !doc && available.length > 0,
+    turn,
     message: changed
-      ? '资料已更新或不再是已整理，请进入下一题，或重新开始。'
-      : paused
-        ? '这篇资料已暂停复习。'
-        : unavailable && !saved && !attempted.current
-          ? '这篇资料已在其他页面完成，或已不在今日复习范围。'
-          : '',
+      ? '资料已更新或不再是已整理，请进入下一题。'
+      : completedElsewhere
+        ? '这篇资料已在其他页面完成，请进入下一题。'
+        : paused
+          ? '这篇资料已暂停复习。'
+          : unavailable && !saved && !attempted.current
+            ? '这篇资料已不在当前复习范围。'
+            : '',
     choose,
     next,
-    restart,
   };
 }
 
@@ -118,7 +118,12 @@ function Feedback({
           type="button"
           aria-label={choice.label}
           aria-pressed={session.rating === choice.id}
-          disabled={reviews.pending || session.saved || session.blocked}
+          disabled={
+            reviews.pending ||
+            session.saved ||
+            session.blocked ||
+            (!!session.attemptedRating && session.attemptedRating !== choice.id)
+          }
           onClick={async () => {
             const selected = session.doc;
             const success = await session.choose(choice.id);
@@ -179,9 +184,10 @@ export function HomeReviewCard({
         reviews.pending
       )
         return;
-      if (presentationAttempt.current === session.doc.id) return;
-      // One automatic attempt per title; an explicit retry can reset a failed attempt.
-      presentationAttempt.current = session.doc.id;
+      const key = `${session.doc.id}:${session.turn}`;
+      if (presentationAttempt.current === key) return;
+      // One automatic attempt per turn; an explicit retry can reset a failed attempt.
+      presentationAttempt.current = key;
       void reviews.present(session.doc);
     };
     presentVisible();
@@ -190,6 +196,7 @@ export function HomeReviewCard({
   }, [
     visible,
     session.doc,
+    session.turn,
     session.rating,
     session.saved,
     session.blocked,
@@ -248,25 +255,8 @@ export function HomeReviewCard({
           </>
         ) : (
           <span className="home-review-empty" role="status">
-            {reviews.loading
-              ? '正在读取…'
-              : !reviews.state
-                ? '记录未载入'
-                : session.canRestart
-                  ? '本轮已看完'
-                  : '今日已无待复习'}
+            {reviews.loading ? '正在读取…' : !reviews.state ? '记录未载入' : '暂无可复习资料'}
           </span>
-        )}
-        {session.canRestart && (
-          <button
-            type="button"
-            onClick={() => {
-              focusTitle.current = true;
-              session.restart();
-            }}
-          >
-            重新显示
-          </button>
         )}
       </div>
       {(reviews.pending || session.saved || session.message || reviews.error) && (

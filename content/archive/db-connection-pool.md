@@ -3,7 +3,7 @@ learning_status: pending
 title: "数据库连接池排查"
 category: "MySQL"
 parent: mysql-overview#应用接入与运维
-updated_at: "2026-10-12T22:06:03+08:00"
+updated_at: "2026-10-12 22:06:03"
 tags: ["连接池", "排队", "性能排查"]
 type: "practice"
 aliases: ["连接池打满", "连接池耗尽"]

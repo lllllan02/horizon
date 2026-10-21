@@ -6,13 +6,13 @@ aliases: ["Planning", "任务规划", "Agent 的 Planning 与 Replanning"]
 category: "Agent"
 tags: ["Agent", "任务规划"]
 created_at: "2026-10-09"
-updated_at: "2026-10-17T18:57:46+08:00"
+updated_at: "2026-10-17 18:57:46"
 reading_suggestions:
   - react-agent
   - plan-and-execute
   - agent-replanning
   - tool-scheduling
-learning_status_changed_at: "2026-10-17T18:59:57.185+08:00"
+learning_status_changed_at: "2026-10-17 18:59:57.185"
 ---
 
 **任务规划（Planning）是根据目标拆解任务、安排步骤的能力。** 它帮助 Agent 在多步工作中跟踪整体目标，再根据执行反馈调整安排。

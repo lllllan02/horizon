@@ -6,9 +6,9 @@ parent: interview-preparation-index
 tags: ["面试", "Go"]
 type: practice
 learning_status: pending
-created_at: "2026-10-20T14:51:06+08:00"
-updated_at: "2026-10-20T14:51:06+08:00"
-learning_status_changed_at: "2026-10-20T15:34:21.797+08:00"
+created_at: "2026-10-20 14:51:06"
+updated_at: "2026-10-20 14:51:06"
+learning_status_changed_at: "2026-10-20 15:34:21.797"
 ---
 
 这份岗位要求「**独立承担 Go 服务端架构、业务开发与线上调优，同时具备前端页面开发和 AI 编程工具使用能力**」。准备重点是用真实项目证明设计、实现和维护能力，再围绕 Go、网络与存储解释定位问题和验证改动的过程。

@@ -4,7 +4,7 @@ parent: tool-scheduling
 category: "Agent"
 tags: ["Agent", "工具调用"]
 created_at: "2026-10-10"
-updated_at: "2026-10-13T12:48:15+08:00"
+updated_at: "2026-10-13 12:48:15"
 source:
   - "[Advanced Tool Features](https://pydantic.dev/docs/ai/tools-toolsets/tools-advanced/)"
   - "[工具执行源码 _tool_execution.py](https://github.com/pydantic/pydantic-ai/blob/main/pydantic_ai_slim/pydantic_ai/_tool_execution.py)"

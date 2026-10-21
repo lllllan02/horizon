@@ -6,8 +6,8 @@ source:
   - "https://docs.aws.amazon.com/lexv2/latest/dg/using-intent-confidence-scores.html"
   - "https://docs.aws.amazon.com/lexv2/latest/dg/built-in-intent-fallback.html"
 read: false
-created_at: "2026-10-13T22:09:24+08:00"
-updated_at: "2026-10-14T13:59:35+08:00"
+created_at: "2026-10-13 22:09:24"
+updated_at: "2026-10-14 13:59:35"
 ---
 
 **Amazon Lex V2 先提供候选意图，无法接受识别结果时进入回退路径，再由应用决定追问、转交或结束。** 候选分数与恢复动作需要分别处理。

@@ -6,8 +6,8 @@ parent: interview-preparation-index
 tags: ["面试", "Agent"]
 type: practice
 learning_status: pending
-created_at: "2026-10-20T11:36:34+08:00"
-updated_at: "2026-10-20T11:36:34+08:00"
+created_at: "2026-10-20 11:36:34"
+updated_at: "2026-10-20 11:36:34"
 ---
 
 这份岗位围绕「**面向视频自动化业务，开发可复用、可观测的 Agent 运行与交互能力**」展开。准备重点是把任务拆解、工具组件、对话体验和后端系统连接起来，说明一次任务怎样执行、失败后怎样处理，以及如何判断交付效果。

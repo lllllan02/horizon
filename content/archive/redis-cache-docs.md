@@ -5,8 +5,8 @@ tags: ["缓存", "Cache Aside", "一致性"]
 source:
   - "https://learn.microsoft.com/en-gb/azure/architecture/patterns/cache-aside"
   - "https://learn.microsoft.com/en-us/azure/architecture/best-practices/caching"
-created_at: "2026-10-13T11:03:37+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-13 11:03:37"
+updated_at: "2026-10-13 12:48:15"
 ---
 
 这两份架构说明将缓存视为减少重复读取和计算的副本，并讨论如何在失效与容量约束下使用。以下节选通用模式，不展开 Azure 产品部署。

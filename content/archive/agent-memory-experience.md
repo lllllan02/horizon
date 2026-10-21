@@ -4,8 +4,8 @@ title: "Agent 经验记忆"
 parent: agent-memory
 category: "Agent"
 tags: ["Agent", "记忆", "自我纠正"]
-created_at: "2026-10-13T10:44:40+08:00"
-updated_at: "2026-10-17T20:56:21+08:00"
+created_at: "2026-10-13 10:44:40"
+updated_at: "2026-10-17 20:56:21"
 reading_suggestions:
   - agent-self-correction
   - reflexion-summary

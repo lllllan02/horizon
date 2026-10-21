@@ -6,10 +6,10 @@ aliases: ["Harness", "Agent Harness"]
 category: "Agent"
 tags: ["Agent", "Harness"]
 created_at: "2026-10-09"
-updated_at: "2026-10-18T00:32:22+08:00"
+updated_at: "2026-10-18 00:32:22"
 reading_suggestions:
   - langchain-harness-anatomy-summary
-learning_status_changed_at: "2026-10-18T00:33:10.267+08:00"
+learning_status_changed_at: "2026-10-18 00:33:10.267"
 ---
 
 **Agent Harness（运行系统）是围绕模型建立的程序与配置，负责组织模型输入、执行工具调用，并控制运行循环。**

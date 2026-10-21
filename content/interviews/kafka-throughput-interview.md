@@ -4,9 +4,9 @@ category: "Kafka"
 parent: kafka-interview-index
 tags: ["面试", "Kafka", "消息队列"]
 learning_status: organized
-created_at: "2026-10-19T10:34:16+08:00"
-updated_at: "2026-10-19T10:37:47+08:00"
-learning_status_changed_at: "2026-10-19T10:53:59.155+08:00"
+created_at: "2026-10-19 10:34:16"
+updated_at: "2026-10-19 10:37:47"
+learning_status_changed_at: "2026-10-19 10:53:59.155"
 ---
 
 Kafka 有 Topic 分区的概念，不同分区可以分布在不同的 Broker 上，通过并行读写实现水平扩容，提高整体吞吐量。

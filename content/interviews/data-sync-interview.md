@@ -4,9 +4,9 @@ category: "数据处理"
 parent: data-sync-interview-index
 tags: ["面试", "数据同步"]
 learning_status: organized
-created_at: "2026-10-20T11:09:10+08:00"
-updated_at: "2026-10-20T15:41:23+08:00"
-learning_status_changed_at: "2026-10-20T15:44:06.977+08:00"
+created_at: "2026-10-20 11:09:10"
+updated_at: "2026-10-20 15:41:23"
+learning_status_changed_at: "2026-10-20 15:44:06.977"
 ---
 
 我会先确认数据来源、目标、规模和允许的延迟，以及目标保存最新状态还是变更历史。以 MySQL 同步到查询库或数仓为例，主要采用「**全量初始化加增量同步**」。

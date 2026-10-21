@@ -4,9 +4,9 @@ category: "Agent"
 parent: agent-interview-hub
 tags: ["面试", "Agent", "Harness"]
 learning_status: organized
-created_at: "2026-10-19T16:37:33+08:00"
-updated_at: "2026-10-19T16:37:33+08:00"
-learning_status_changed_at: "2026-10-19T16:40:59.146+08:00"
+created_at: "2026-10-19 16:37:33"
+updated_at: "2026-10-19 16:37:33"
+learning_status_changed_at: "2026-10-19 16:40:59.146"
 ---
 
 我会从开发的角度来回答：先明确 Agent 要完成什么业务、怎样算完成，以及成本、响应时间和操作权限这些约束，再**「从一个最小的 Agent Loop 写起，围绕业务逐步补齐能力」**。

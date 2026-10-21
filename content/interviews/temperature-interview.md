@@ -5,9 +5,9 @@ category: "大模型"
 parent: interview-hub
 tags: ["面试"]
 learning_status: organized
-created_at: "2026-10-19T11:35:01+08:00"
-updated_at: "2026-10-19T11:35:01+08:00"
-learning_status_changed_at: "2026-10-21T10:09:12.045+08:00"
+created_at: "2026-10-19 11:35:01"
+updated_at: "2026-10-19 11:35:01"
+learning_status_changed_at: "2026-10-21 10:09:12.045"
 ---
 
 **温度（Temperature）是模型生成时控制随机性的采样参数**，用来调节输出的稳定性和多样性。

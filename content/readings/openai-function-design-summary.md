@@ -3,8 +3,8 @@ title: "OpenAI：怎样定义易于使用的函数工具"
 parent: tool-interface-design
 category: "Agent"
 tags: ["Agent", "工具调用"]
-created_at: "2026-10-12T11:59:43+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-12 11:59:43"
+updated_at: "2026-10-13 12:48:15"
 source: "https://developers.openai.com/api/docs/guides/function-calling#best-practices-for-defining-functions"
 read: true
 ---

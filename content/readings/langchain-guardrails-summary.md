@@ -3,8 +3,8 @@ title: "LangChain：行为检查如何接入 Agent"
 parent: agent-guardrails
 category: "Agent"
 tags: ["Agent", "行为约束"]
-created_at: "2026-10-13T10:52:05+08:00"
-updated_at: "2026-10-17T23:06:59+08:00"
+created_at: "2026-10-13 10:52:05"
+updated_at: "2026-10-17 23:06:59"
 source:
   - "[Guardrails](https://docs.langchain.com/oss/python/langchain/guardrails)"
   - "[Custom middleware](https://docs.langchain.com/oss/python/langchain/middleware/custom)"

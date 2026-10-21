@@ -5,9 +5,9 @@ parent: interview-hub
 tags: ["面试", "Agent"]
 type: overview
 learning_status: organized
-created_at: "2026-10-18T23:14:14+08:00"
-updated_at: "2026-10-20T15:54:42+08:00"
-learning_status_changed_at: "2026-10-21T10:04:00.041+08:00"
+created_at: "2026-10-18 23:14:14"
+updated_at: "2026-10-20 15:54:42"
+learning_status_changed_at: "2026-10-21 10:04:00.041"
 ---
 
 围绕 Agent 开发的求职动机、执行模式、工具选择、协作通信、用户交互、效果评测与服务运行问题整理面试题与回答。
@@ -16,12 +16,20 @@ learning_status_changed_at: "2026-10-21T10:04:00.041+08:00"
 
 - [[agent-career-motivation|为什么想做 Agent 开发？]]
 
-## 工具选择、执行与安全
+## 认知与架构
 
+- [[agent-vs-workflow-interview|Agent 和普通大模型应用、工作流有什么区别？]]
+- [[agent-selection-interview|什么时候应该用 Agent，什么时候不需要？]]
+- [[agent-understanding-interview|你怎么理解 Agent 系统？]]
 - [[agent-design-interview|怎样设计一个 Agent？]]
 - [[react-interview|ReAct 的架构是什么？]]
+
+## 工具选择、执行与安全
+
 - [[agent-intent-interview|Agent 为什么知道调用哪个工具？怎么做意图识别？]]
+- [[skill-dynamic-interview|Agent 平台按任务动态拼装 Skill 时，哪些内容应固定，哪些可以调整？]]
 - [[tool-calling-interview|Agent 如何执行工具调用，并处理参数异常与工具失败？]]
+- [[tool-result-interview|工具或检索结果过大，怎么喂给大模型？]]
 - [[mcp-integration-interview|MCP 工具怎么接入？]]
 - [[agent-sandbox-interview|Agent 里为什么要做沙箱？]]
 
@@ -39,6 +47,11 @@ learning_status_changed_at: "2026-10-21T10:04:00.041+08:00"
 - [[agent-stream-recovery-interview|页面刷新或断线后，怎样恢复 Agent 任务和流式输出？]]
 - [[agent-followup-interview|Agent 执行中怎样接收用户的新要求？]]
 - [[agent-cancellation-interview|如何响应用户取消？]]
+
+## 记忆
+
+- [[agent-memory-trigger-interview|Agent 什么时候启动记忆提取？]]
+- [[agent-memory-content-interview|什么内容值得保存为长期记忆？]]
 
 ## 状态保存与中断恢复
 

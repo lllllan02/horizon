@@ -17,7 +17,8 @@ test('同日精确到秒，时区按实际时间比较，缺失字段回退 mtim
     {id: 'e', updated: '2026-02-30', modified: '2026-10-10T02:00:05Z'},
   ]);
   assert.deepEqual(latest.map(doc => doc.id), ['e', 'd', 'c', 'b', 'a']);
-  assert.ok(Number.isNaN(documentTime('2026-10-10T10:00:00')));
+  assert.equal(documentTime('2026-10-10T10:00:00'), documentTime('2026-10-10T10:00:00+08:00'));
+  assert.equal(documentTime('2026-10-10'), documentTime('2026-10-10T00:00:00+08:00'));
   assert.ok(Number.isNaN(documentTime('2026-02-30')));
   assert.equal(documentTime('2026-10-10T10:00:01+08:00'), documentTime('2026-10-10T02:00:01Z'));
   assert.deepEqual(latestDocuments([
@@ -35,7 +36,7 @@ test('读取和静态导出携带秒级 mtime，未伪造元数据，mtime 改�
     const first = new Date('2026-10-10T02:00:01.500Z');
     await utimes(file, first, first);
     const library = await loadLibrary(root);
-    assert.equal(library.documents[0].modified, '2026-10-10T02:00:01.000Z');
+    assert.equal(library.documents[0].modified, '2026-10-10 10:00:01.000');
     assert.equal(library.documents[0].updated, null);
     assert.equal(library.documents[0].created, null);
     assert.equal(latestDocuments(library.documents).length, 1);

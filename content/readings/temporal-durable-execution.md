@@ -3,8 +3,8 @@ title: "Temporal：通过事件历史恢复，并等待外部决定"
 parent: agent-checkpoint-recovery
 category: "Agent"
 tags: ["Agent", "持久化", "重放", "Go"]
-created_at: "2026-10-13T10:59:51+08:00"
-updated_at: "2026-10-17T20:58:54+08:00"
+created_at: "2026-10-13 10:59:51"
+updated_at: "2026-10-17 20:58:54"
 source:
   - "https://docs.temporal.io/workflow-execution"
   - "https://docs.temporal.io/develop/go/workflows/basics"

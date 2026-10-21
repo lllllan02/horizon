@@ -132,13 +132,13 @@ export function DashboardOverview({
           <div className="db-section-head">
             <h2>阅读书架</h2>
             <a className="db-review-entry" href="#/dashboard/review">
-              今日复习
+              继续复习
               <span>
                 {reviews.loading
                   ? '加载中…'
                   : reviews.error
                     ? '待重试'
-                    : `${reviews.queue.due.length + reviews.queue.fresh.length} 篇`}
+                    : `${reviews.queue.recommendations.length} 篇`}
                 <span aria-hidden="true"> →</span>
               </span>
             </a>

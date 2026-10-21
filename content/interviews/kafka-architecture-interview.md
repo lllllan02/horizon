@@ -4,9 +4,9 @@ category: "Kafka"
 parent: kafka-interview-index
 tags: ["面试", "Kafka", "消息队列"]
 learning_status: organized
-created_at: "2026-10-19T16:59:29+08:00"
-updated_at: "2026-10-21T10:37:55+08:00"
-learning_status_changed_at: "2026-10-21T10:43:10.855+08:00"
+created_at: "2026-10-19 16:59:29"
+updated_at: "2026-10-21 10:37:55"
+learning_status_changed_at: "2026-10-21 10:43:10.855"
 ---
 
 Kafka 是一个分布式事件流平台，通过保存消息，让生产者和消费者解耦，按各自的速度运行。

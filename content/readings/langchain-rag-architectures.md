@@ -3,8 +3,8 @@ title: "LangChain：固定流程、Agentic 与混合 RAG"
 category: "RAG"
 tags: ["RAG"]
 type: "article"
-created_at: "2026-10-13T10:49:42+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-13 10:49:42"
+updated_at: "2026-10-13 12:48:15"
 source: ["https://docs.langchain.com/oss/python/deepagents/retrieval"]
 ---
 

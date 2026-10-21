@@ -4,8 +4,8 @@ category: "Redis"
 type: article
 tags: ["Redis", "过期机制"]
 learning_status: pending
-created_at: "2026-10-19T10:35:33+08:00"
-updated_at: "2026-10-19T10:35:33+08:00"
+created_at: "2026-10-19 10:35:33"
+updated_at: "2026-10-19 10:35:33"
 source:
   - "https://redis.io/docs/latest/commands/expire/"
   - "https://redis.io/docs/latest/commands/expireat/"

@@ -6,9 +6,9 @@ parent: agent-interview-hub
 tags: ["面试", "Agent", "取消"]
 type: practice
 learning_status: organized
-created_at: "2026-10-20T14:47:16+08:00"
-updated_at: "2026-10-20T15:12:09+08:00"
-learning_status_changed_at: "2026-10-20T15:13:07.668+08:00"
+created_at: "2026-10-20 14:47:16"
+updated_at: "2026-10-20 15:12:09"
+learning_status_changed_at: "2026-10-20 15:13:07.668"
 ---
 
 我会分两层处理：**先通知正在执行的任务退出，再拦住迟到结果，避免取消后继续推进任务。**

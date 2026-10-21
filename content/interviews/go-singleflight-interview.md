@@ -4,9 +4,9 @@ category: "Go"
 parent: go-interview-hub
 tags: ["面试", "Go"]
 learning_status: organized
-created_at: "2026-10-19T17:32:33+08:00"
-updated_at: "2026-10-19T19:20:51+08:00"
-learning_status_changed_at: "2026-10-19T19:23:36.892+08:00"
+created_at: "2026-10-19 17:32:33"
+updated_at: "2026-10-19 19:20:51"
+learning_status_changed_at: "2026-10-19 19:23:36.892"
 ---
 
 [[go-singleflight-sources|Singleflight]] 的核心是**「把同一个 key、执行期间重叠的调用合并起来」**，只执行一次查询，其他调用等待并共享结果，减少对数据库的重复查询。

@@ -2,8 +2,8 @@
 title: "Clarify When Necessary：何时值得追问用户"
 category: "Agent"
 tags: ["Agent", "意图识别", "评测"]
-created_at: "2026-10-13T17:27:45+08:00"
-updated_at: "2026-10-14T13:59:35+08:00"
+created_at: "2026-10-13 17:27:45"
+updated_at: "2026-10-14 13:59:35"
 source: "[Clarify When Necessary: Resolving Ambiguity Through Interaction with LMs，v1](https://arxiv.org/html/2311.09469v1)"
 read: false
 ---

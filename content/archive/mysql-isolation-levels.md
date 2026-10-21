@@ -5,7 +5,7 @@ category: "MySQL"
 parent: mysql-overview#事务与并发
 type: "concept"
 created_at: "2026-10-09"
-updated_at: "2026-10-12T21:32:30+08:00"
+updated_at: "2026-10-12 21:32:30"
 tags: ["MySQL", "事务"]
 aliases: ["InnoDB 隔离级别", "Isolation Level"]
 reading_suggestions:

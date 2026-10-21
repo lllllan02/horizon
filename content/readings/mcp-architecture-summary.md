@@ -3,8 +3,8 @@ title: "MCP 官方架构：发现、调用与通知"
 parent: mcp
 category: "Agent"
 tags: ["MCP", "工具调用", "协议"]
-created_at: "2026-10-11T00:40:07+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-11 00:40:07"
+updated_at: "2026-10-13 12:48:15"
 source:
   - "https://modelcontextprotocol.io/docs/2026-07-28/learn/architecture"
   - "https://modelcontextprotocol.io/specification/2026-07-28/server/discover"

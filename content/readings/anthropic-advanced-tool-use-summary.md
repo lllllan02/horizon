@@ -4,7 +4,7 @@ parent: claude-tool-search
 category: "Agent"
 tags: ["Agent", "工具调用", "按需加载"]
 created_at: "2026-10-10"
-updated_at: "2026-10-13T12:48:15+08:00"
+updated_at: "2026-10-13 12:48:15"
 source: "[Introducing advanced tool use](https://www.anthropic.com/engineering/advanced-tool-use)，Anthropic，2025-11-24"
 ---
 

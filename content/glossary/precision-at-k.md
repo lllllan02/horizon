@@ -1,7 +1,7 @@
 ---
 title: "精确率（Precision@K）"
 category: "信息检索"
-updated_at: "2026-10-13T10:59:48+08:00"
+updated_at: "2026-10-13 10:59:48"
 tags: ["检索评测", "Precision"]
 aliases: ["Precision@K", "Precision", "精确率"]
 ---

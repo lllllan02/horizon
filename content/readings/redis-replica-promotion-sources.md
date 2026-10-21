@@ -4,8 +4,8 @@ category: "Redis"
 type: article
 tags: ["Redis", "Sentinel", "故障切换"]
 learning_status: pending
-created_at: "2026-10-19T21:11:02+08:00"
-updated_at: "2026-10-19T21:11:02+08:00"
+created_at: "2026-10-19 21:11:02"
+updated_at: "2026-10-19 21:11:02"
 source:
   - "https://redis.io/docs/latest/operate/oss_and_stack/management/sentinel/#replica-selection-and-priority"
   - "https://github.com/redis/redis/blob/8.0/src/sentinel.c"

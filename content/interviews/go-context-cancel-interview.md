@@ -4,9 +4,9 @@ category: "Go"
 parent: go-interview-hub
 tags: ["面试", "Go"]
 learning_status: organized
-created_at: "2026-10-19T15:24:52+08:00"
-updated_at: "2026-10-19T15:24:52+08:00"
-learning_status_changed_at: "2026-10-19T15:27:59.344+08:00"
+created_at: "2026-10-19 15:24:52"
+updated_at: "2026-10-19 15:24:52"
+learning_status_changed_at: "2026-10-19 15:27:59.344"
 ---
 
 `context.WithCancel` 可以理解为正常派生一个[[go-context-interview|子 Context]]，保留父级的 Value 查询、Deadline 和取消传播，**「再多一个自己的 cancel 函数」**。父级取消时，子级跟着取消；调用自己的 `cancel()` 会取消自己和下游，但不会反过来影响父级。

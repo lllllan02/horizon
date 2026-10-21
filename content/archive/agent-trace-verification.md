@@ -4,8 +4,8 @@ parent: agent-trace
 title: "Agent Trace 的采集可靠性"
 category: "Agent"
 tags: ["Agent", "Trace", "可观测性", "采样"]
-created_at: "2026-10-13T01:24:08+08:00"
-updated_at: "2026-10-13T01:35:20+08:00"
+created_at: "2026-10-13 01:24:08"
+updated_at: "2026-10-13 01:35:20"
 reading_suggestions:
   - agent-trace-capture
   - opentelemetry-collector

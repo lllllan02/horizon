@@ -4,8 +4,8 @@ parent: agent-intent
 category: "Agent"
 tags: ["Agent", "意图识别", "评测"]
 learning_status: pending
-created_at: "2026-10-13T22:19:58+08:00"
-updated_at: "2026-10-16T20:52:39+08:00"
+created_at: "2026-10-13 22:19:58"
+updated_at: "2026-10-16 20:52:39"
 reading_suggestions:
   - intent-production-testing
   - azure-clu-intent-design

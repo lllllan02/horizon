@@ -5,8 +5,8 @@ category: "Go"
 tags: ["Go", "连接池", "性能排查"]
 type: "practice"
 learning_status: pending
-created_at: "2026-10-18T22:59:51+08:00"
-updated_at: "2026-10-18T22:59:51+08:00"
+created_at: "2026-10-18 22:59:51"
+updated_at: "2026-10-18 22:59:51"
 ---
 
 **Go 的 DBStats 是 `database/sql` 提供的连接池统计，包含当前连接数量和累计等待数据。**

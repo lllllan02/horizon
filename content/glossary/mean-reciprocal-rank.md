@@ -1,7 +1,7 @@
 ---
 title: "MRR（平均倒数排名）"
 category: "信息检索"
-updated_at: "2026-10-13T10:59:48+08:00"
+updated_at: "2026-10-13 10:59:48"
 tags: ["检索评测", "排序指标", "MRR"]
 aliases: ["MRR", "Mean Reciprocal Rank", "平均倒数排名"]
 ---

@@ -4,8 +4,8 @@ title: "索引与分组"
 category: "MySQL"
 parent: mysql-indexes
 tags: ["索引", "SQL优化"]
-created_at: "2026-10-12T17:42:58+08:00"
-updated_at: "2026-10-12T17:42:58+08:00"
+created_at: "2026-10-12 17:42:58"
+updated_at: "2026-10-12 17:42:58"
 reading_suggestions:
   - mysql-manual-queries
 ---

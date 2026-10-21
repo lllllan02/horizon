@@ -6,13 +6,13 @@ aliases: ["Guardrails", "Agent Guardrails"]
 category: "Agent"
 tags: ["Agent", "行为约束"]
 created_at: "2026-10-09"
-updated_at: "2026-10-17T23:29:15+08:00"
+updated_at: "2026-10-17 23:29:15"
 reading_suggestions:
   - langchain-guardrails-summary
   - tool-permissions
   - tool-approvals
   - agent-evaluation
-learning_status_changed_at: "2026-10-17T23:29:47.463+08:00"
+learning_status_changed_at: "2026-10-17 23:29:47.463"
 ---
 
 **Agent 行为约束（Guardrails）是让 Agent 在规定的职责、数据与操作边界内工作的规则和控制机制。** 用户 Query、检索资料或工具结果可能包含[[prompt-injection|提示注入]]，模型也可能在正常任务中犯错，需要同时指导其判断、限制其真实能力。

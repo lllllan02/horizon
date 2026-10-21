@@ -4,9 +4,9 @@ category: "Agent"
 parent: agent-interview-hub
 tags: ["面试", "Agent", "意图识别", "工具调用"]
 learning_status: organized
-created_at: "2026-10-19T13:35:14+08:00"
-updated_at: "2026-10-19T13:35:14+08:00"
-learning_status_changed_at: "2026-10-19T13:39:43.024+08:00"
+created_at: "2026-10-19 13:35:14"
+updated_at: "2026-10-19 13:35:14"
+learning_status_changed_at: "2026-10-19 13:39:43.024"
 ---
 
 Agent 的[[agent-intent|意图识别]]**「不一定是一个独立模块」**。模型根据用户要求，判断、选择应该调用哪个工具的过程，本身就包含了意图识别，不一定需要额外增加一个识别环节。

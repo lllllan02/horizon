@@ -4,8 +4,8 @@ category: "Kafka"
 type: article
 tags: ["Kafka", "消息队列"]
 learning_status: pending
-created_at: "2026-10-19T10:51:35+08:00"
-updated_at: "2026-10-19T10:51:35+08:00"
+created_at: "2026-10-19 10:51:35"
+updated_at: "2026-10-19 10:51:35"
 source:
   - "https://kafka.apache.org/43/operations/basic-kafka-operations/"
   - "https://developer.confluent.io/faq/apache-kafka/topics-in-kafka/"

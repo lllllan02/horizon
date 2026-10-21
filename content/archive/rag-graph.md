@@ -6,8 +6,8 @@ tags: ["RAG", "检索", "知识图谱"]
 type: "note"
 parent: "rag-advanced"
 aliases: ["GraphRAG", "图检索增强生成"]
-created_at: "2026-10-13T10:58:45+08:00"
-updated_at: "2026-10-13T10:58:45+08:00"
+created_at: "2026-10-13 10:58:45"
+updated_at: "2026-10-13 10:58:45"
 ---
 
 **GraphRAG 利用实体和关系等结构组织检索证据；Microsoft GraphRAG 还利用社区报告支持全局综合。** 图结构是证据组织方式，不意味着所有问答都要执行图遍历。

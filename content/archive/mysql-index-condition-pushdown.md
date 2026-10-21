@@ -3,7 +3,7 @@ learning_status: understood
 title: "索引条件下推（ICP）"
 category: "MySQL"
 parent: mysql-indexes
-updated_at: "2026-10-12T17:19:22+08:00"
+updated_at: "2026-10-12 17:19:22"
 tags: ["索引条件下推", "ICP", "回表"]
 aliases: ["ICP", "索引条件下推"]
 reading_suggestions:

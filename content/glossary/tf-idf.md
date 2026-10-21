@@ -4,8 +4,8 @@ aliases: ["词频—逆文档频率", "Term Frequency–Inverse Document Frequen
 category: "信息检索"
 tags: ["检索", "全文检索"]
 learning_status: pending
-created_at: "2026-10-18T21:37:01+08:00"
-updated_at: "2026-10-18T21:37:01+08:00"
+created_at: "2026-10-18 21:37:01"
+updated_at: "2026-10-18 21:37:01"
 ---
 
 **TF-IDF（Term Frequency–Inverse Document Frequency，词频—逆文档频率）是一种词项权重计算方法，通过结合词项在当前文档中的出现频率与其在文档集合中的稀有程度，估计词项对该文档的代表性。**

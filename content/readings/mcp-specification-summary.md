@@ -3,8 +3,8 @@ title: "MCP 官方规范：协议约定的范围"
 parent: mcp
 category: "Agent"
 tags: ["MCP", "工具调用", "协议"]
-created_at: "2026-10-11T00:40:07+08:00"
-updated_at: "2026-10-17T17:15:10+08:00"
+created_at: "2026-10-11 00:40:07"
+updated_at: "2026-10-17 17:15:10"
 read: false
 source:
   - "https://modelcontextprotocol.io/specification/2026-07-28"

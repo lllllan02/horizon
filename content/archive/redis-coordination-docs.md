@@ -6,8 +6,8 @@ source:
   - "https://redis.io/docs/latest/develop/clients/patterns/distributed-locks/"
   - "https://redis.io/docs/latest/commands/incr/"
   - "https://redis.io/docs/latest/develop/use-cases/rate-limiter/"
-created_at: "2026-10-13T11:03:37+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-13 11:03:37"
+updated_at: "2026-10-13 12:48:15"
 ---
 
 本导读选取同一 Redis 状态内的条件更新，并区分它与外部业务正确性的关系。

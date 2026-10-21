@@ -3,7 +3,7 @@ title: "AWS：超时、重试、退避与抖动"
 category: "分布式系统"
 tags: ["超时", "重试", "幂等"]
 created_at: "2026-10-10"
-updated_at: "2026-10-13T12:48:15+08:00"
+updated_at: "2026-10-13 12:48:15"
 source: "[Timeouts, retries, and backoff with jitter](https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/)"
 ---
 

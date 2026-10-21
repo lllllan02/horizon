@@ -6,12 +6,12 @@ aliases: ["Plan and Execute", "Plan-and-Execute"]
 category: "Agent"
 tags: ["Agent", "任务规划", "执行模式"]
 created_at: "2026-10-09"
-updated_at: "2026-10-17T17:53:58+08:00"
+updated_at: "2026-10-17 17:53:58"
 reading_suggestions:
   - react-agent
   - agent-replanning
   - langchain-planning-summary
-learning_status_changed_at: "2026-10-17T18:39:03.378+08:00"
+learning_status_changed_at: "2026-10-17 18:39:03.378"
 ---
 
 **Plan-and-Execute（先规划再执行）是一种先生成整体任务计划，再逐步完成计划的 Agent 执行模式。**

@@ -6,11 +6,11 @@ aliases: ["Human-in-the-Loop", "HITL"]
 category: "Agent"
 tags: ["Agent", "人工介入"]
 created_at: "2026-10-09"
-updated_at: "2026-10-17T22:51:18+08:00"
+updated_at: "2026-10-17 22:51:18"
 reading_suggestions:
   - tool-approvals
   - agent-checkpoint-recovery
-learning_status_changed_at: "2026-10-17T22:52:59.955+08:00"
+learning_status_changed_at: "2026-10-17 22:52:59.955"
 ---
 
 **人工介入（Human-in-the-Loop，HITL）是在 Agent 自动执行过程中，把需要补充信息或作出判断的环节交给人处理，再由程序依据回复继续、修改或终止任务的机制。**

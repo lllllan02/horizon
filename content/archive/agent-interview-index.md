@@ -5,8 +5,8 @@ parent: interview-index
 tags: ["面试", "Agent", "RAG"]
 type: overview
 learning_status: pending
-created_at: "2026-10-18T00:59:41+08:00"
-updated_at: "2026-10-18T00:59:41+08:00"
+created_at: "2026-10-18 00:59:41"
+updated_at: "2026-10-18 00:59:41"
 ---
 
 本页围绕应用开发、执行可靠性与项目取舍合并题目，不展开模型训练研究。括号内为本页来源编号；一般服务调用与业务幂等复用[[backend-interview-index#消息、分布式与服务治理|后端公共题]]，不另存同义题。

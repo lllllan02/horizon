@@ -3,8 +3,8 @@ title: "ReAct 论文：让推理与行动相互提供信息"
 parent: react-agent
 category: "Agent"
 tags: ["Agent", "ReAct", "执行模式"]
-created_at: "2026-10-12T00:22:57+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-12 00:22:57"
+updated_at: "2026-10-13 12:48:15"
 source: "[ReAct: Synergizing Reasoning and Acting in Language Models](https://arxiv.org/html/2210.03629v3)"
 ---
 

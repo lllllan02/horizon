@@ -4,8 +4,8 @@ aliases: ["Claude Compaction", "Compaction overview", "Compaction on demand"]
 parent: context-compaction
 category: "Agent"
 tags: ["上下文管理", "文本压缩"]
-created_at: "2026-10-11T16:33:09+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-11 16:33:09"
+updated_at: "2026-10-13 12:48:15"
 source: "https://platform.claude.com/docs/en/build-with-claude/compaction"
 reading_suggestions:
   - anthropic-context-editing-summary

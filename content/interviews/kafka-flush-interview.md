@@ -4,9 +4,9 @@ category: "Kafka"
 parent: kafka-interview-index
 tags: ["面试", "Kafka", "消息队列"]
 learning_status: organized
-created_at: "2026-10-19T11:01:36+08:00"
-updated_at: "2026-10-19T11:01:36+08:00"
-learning_status_changed_at: "2026-10-19T11:08:17.573+08:00"
+created_at: "2026-10-19 11:01:36"
+updated_at: "2026-10-19 11:01:36"
+learning_status_changed_at: "2026-10-19 11:08:17.573"
 ---
 
 Kafka 的顺序追加是它的日志写入设计，但不代表每条消息写入后都会立刻刷到磁盘。写入通常先进入操作系统的页缓存（Page Cache），后续再刷到磁盘。

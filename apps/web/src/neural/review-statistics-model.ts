@@ -1,3 +1,4 @@
+import { beijingTimestamp, documentTime } from '../document-dates.ts';
 import type { LibraryDocument } from '../types/library.ts';
 import type { ReviewEvent, ReviewRating, ReviewState } from '../review-model.ts';
 import { reviewDay } from '../review-model.ts';
@@ -53,10 +54,12 @@ const timeFormatter = new Intl.DateTimeFormat('zh-CN', {
   hourCycle: 'h23',
 });
 export function formatReviewTime(value: string | null) {
-  return value && Number.isFinite(Date.parse(value)) ? timeFormatter.format(new Date(value)) : '—';
+  return value && Number.isFinite(documentTime(value))
+    ? timeFormatter.format(new Date(documentTime(value)))
+    : '—';
 }
 
-/** All organized documents participate, independently of today's first-review quota. */
+/** All organized documents participate, including scheduled and paused material. */
 export function buildReviewStatistics(
   documents: readonly ReviewStatisticsDocument[],
   state: ReviewState | null,
@@ -74,15 +77,16 @@ export function buildReviewStatistics(
         .map((event, index) => ({
           event: {
             ...event,
-            plannedAt: new Date(
-              Date.parse(event.reviewedAt) + event.intervalDays * day,
-            ).toISOString(),
+            plannedAt:
+              event.dueAt ??
+              beijingTimestamp(documentTime(event.reviewedAt) + event.intervalDays * day),
           },
           index,
         }))
         .sort(
           (a, b) =>
-            Date.parse(b.event.reviewedAt) - Date.parse(a.event.reviewedAt) || b.index - a.index,
+            documentTime(b.event.reviewedAt) - documentTime(a.event.reviewedAt) ||
+            b.index - a.index,
         )
         .map(({ event }) => event);
       const counts = { good: 0, hard: 0, forgot: 0 };
@@ -92,7 +96,7 @@ export function buildReviewStatistics(
         ? 'paused'
         : total === 0
           ? 'fresh'
-          : record?.dueAt && Date.parse(record.dueAt) <= now
+          : record?.dueAt && documentTime(record.dueAt) <= now
             ? 'due'
             : 'scheduled';
       const dueDay = record?.dueAt ? reviewDay(record.dueAt) : null;
@@ -137,7 +141,7 @@ export function buildReviewStatistics(
       terms.every((term) => text.includes(term))
     );
   });
-  const time = (value: string | null, fallback: number) => (value ? Date.parse(value) : fallback);
+  const time = (value: string | null, fallback: number) => (value ? documentTime(value) : fallback);
   rows.sort((a, b) => {
     const order =
       filters.sort === 'count'

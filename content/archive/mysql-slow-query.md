@@ -6,8 +6,8 @@ category: "MySQL"
 parent: mysql-overview#查询与性能
 type: "practice"
 tags: ["MySQL", "SQL优化", "性能排查"]
-created_at: "2026-10-12T21:32:44+08:00"
-updated_at: "2026-10-12T22:16:47+08:00"
+created_at: "2026-10-12 21:32:44"
+updated_at: "2026-10-12 22:16:47"
 reading_suggestions:
   - db-connection-pool
   - mysql-statement-tracing

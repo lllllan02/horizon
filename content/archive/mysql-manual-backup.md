@@ -4,8 +4,8 @@ category: "MySQL"
 parent: mysql-point-in-time-recovery
 type: "article"
 tags: ["MySQL", "binlog", "数据恢复"]
-created_at: "2026-10-12T21:32:22+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-12 21:32:22"
+updated_at: "2026-10-13 12:48:15"
 source:
   - "https://dev.mysql.com/doc/refman/8.4/en/point-in-time-recovery.html"
   - "https://dev.mysql.com/doc/refman/8.4/en/point-in-time-recovery-binlog.html"

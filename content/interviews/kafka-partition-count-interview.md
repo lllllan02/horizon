@@ -4,9 +4,9 @@ category: "Kafka"
 parent: kafka-interview-index
 tags: ["面试", "Kafka", "消息队列"]
 learning_status: organized
-created_at: "2026-10-19T10:51:35+08:00"
-updated_at: "2026-10-19T10:53:54+08:00"
-learning_status_changed_at: "2026-10-19T10:57:10.704+08:00"
+created_at: "2026-10-19 10:51:35"
+updated_at: "2026-10-19 10:53:54"
+learning_status_changed_at: "2026-10-19 10:57:10.704"
 ---
 
 分区数需要在**「并行处理能力和管理开销」**之间做权衡：

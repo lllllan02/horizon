@@ -5,7 +5,7 @@ title: "沙箱并发与容量控制"
 category: "Agent"
 tags: ["Agent", "沙箱", "限流", "过载保护"]
 created_at: "2026-10-09"
-updated_at: "2026-10-16T20:55:28+08:00"
+updated_at: "2026-10-16 20:55:28"
 reading_suggestions:
   - sandbox-resources
   - tool-scheduling

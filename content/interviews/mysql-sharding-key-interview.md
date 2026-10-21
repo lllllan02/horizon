@@ -4,9 +4,9 @@ category: "MySQL"
 parent: mysql-interview-index
 tags: ["面试", "分库分表"]
 learning_status: organized
-created_at: "2026-10-20T10:44:42+08:00"
-updated_at: "2026-10-20T10:44:42+08:00"
-learning_status_changed_at: "2026-10-20T12:46:35.102+08:00"
+created_at: "2026-10-20 10:44:42"
+updated_at: "2026-10-20 10:44:42"
+learning_status_changed_at: "2026-10-20 12:46:35.102"
 ---
 
 我会先根据业务主要的查询方式选择[[mysql-sharding-sources#从业务拆库到水平分片|分片键（Sharding Key）]]。比如经常按用户 ID 查订单，就考虑按用户 ID 分片；主要按地区筛选，就考虑按地区分片，同时检查数据和请求是否均衡、字段是否稳定，以及关联操作能否尽量留在同一个分片。

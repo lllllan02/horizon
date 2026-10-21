@@ -5,9 +5,9 @@ category: "RAG"
 parent: retrieval-interview-index
 tags: ["面试", "RAG", "检索"]
 learning_status: organized
-created_at: "2026-10-20T16:23:41+08:00"
-updated_at: "2026-10-20T16:30:47+08:00"
-learning_status_changed_at: "2026-10-20T16:31:56.742+08:00"
+created_at: "2026-10-20 16:23:41"
+updated_at: "2026-10-20 16:30:47"
+learning_status_changed_at: "2026-10-20 16:31:56.742"
 ---
 
 RAG 就是检索增强生成：先找出与问题相关的外部资料，再交给模型回答，让模型能使用业务知识和更新后的内容。下面以向量检索为例，分成两部分。

@@ -2,8 +2,8 @@
 title: "Inspect：任务、执行器、评分器与隔离环境"
 category: "Agent"
 tags: ["Agent", "评测"]
-created_at: "2026-10-13T10:53:04+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-13 10:53:04"
+updated_at: "2026-10-13 12:48:15"
 source: ["https://inspect.aisi.org.uk/tasks.html", "https://inspect.aisi.org.uk/sandboxing.html", "https://inspect.aisi.org.uk/scoring.html", "https://inspect.aisi.org.uk/metrics.html"]
 ---
 

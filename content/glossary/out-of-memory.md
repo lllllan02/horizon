@@ -4,8 +4,8 @@ aliases: ["OOM", "Out of Memory", "内存耗尽"]
 category: "计算机基础"
 tags: ["内存管理"]
 learning_status: pending
-created_at: "2026-10-19T15:28:59+08:00"
-updated_at: "2026-10-19T15:28:59+08:00"
+created_at: "2026-10-19 15:28:59"
+updated_at: "2026-10-19 15:28:59"
 ---
 
 **内存溢出（Out of Memory，OOM）是程序的内存需求超出运行环境能够提供或允许使用的范围，导致无法继续满足内存需求的状态。** 这里的「溢出」指需求超过容量上限，可能表现为分配失败，或[[process|进程]]因内存限制被系统终止。

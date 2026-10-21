@@ -5,9 +5,9 @@ parent: personal-output-index
 tags: ["面试", "项目经历", "Agent"]
 type: practice
 learning_status: organized
-created_at: "2026-10-20T12:49:36+08:00"
-updated_at: "2026-10-20T12:49:36+08:00"
-learning_status_changed_at: "2026-10-20T12:52:11.870+08:00"
+created_at: "2026-10-20 12:49:36"
+updated_at: "2026-10-20 12:49:36"
+learning_status_changed_at: "2026-10-20 12:52:11.870"
 ---
 
 在[[learning-plan-agent-interview|学习计划 Agent 项目]]中，我选择「**通过工具提交并保存题目清单，再让模型回复文字建议**」，分别承载程序要读取的业务数据和面向用户的自然语言内容。

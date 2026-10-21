@@ -7,8 +7,8 @@ source:
   - "https://man7.org/linux/man-pages/man2/select.2.html"
   - "https://man7.org/linux/man-pages/man2/poll.2.html"
   - "https://man7.org/linux/man-pages/man7/epoll.7.html"
-created_at: "2026-10-20T19:43:28+08:00"
-updated_at: "2026-10-20T19:43:28+08:00"
+created_at: "2026-10-20 19:43:28"
+updated_at: "2026-10-20 19:43:28"
 ---
 
 Linux 的[[select|select]]、[[poll|poll]]和[[epoll|epoll]]用于等待文件描述符的就绪事件，再由应用执行读写。这里节选三份 Linux man-pages 中的集合组织、接口使用和触发语义，核对于 2026-10-20；不覆盖全部参数、错误处理及内核源码，未做性能实测。

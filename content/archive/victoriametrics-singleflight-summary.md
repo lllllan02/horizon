@@ -1,7 +1,7 @@
 ---
 title: "VictoriaMetrics：singleflight：合并正在执行的请求"
 category: "Go"
-updated_at: "2026-10-13T12:48:15+08:00"
+updated_at: "2026-10-13 12:48:15"
 tags: ["Go", "singleflight", "缓存击穿"]
 aliases: ["请求合并", "singleflight"]
 parent: victoriametrics-go-concurrency

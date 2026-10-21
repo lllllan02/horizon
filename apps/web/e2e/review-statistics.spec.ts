@@ -339,11 +339,37 @@ test('日期筛选按北京时间整日归类，暂停不进入计划且筛选�
   const laterToday = panel.locator('[data-review-stat-id="stat-5"]');
   await expect(laterToday).toContainText('今日');
   await expect(laterToday).toContainText('23:30');
-  await expect(laterToday.getByRole('button', { name: '开始复习', exact: true })).toHaveCount(0);
+  await expect(laterToday.getByRole('button', { name: '开始复习', exact: true })).toBeEnabled();
   await panel.getByRole('combobox', { name: '复习状态', exact: true }).selectOption('scheduled');
   await expect(panel.locator('[data-review-stat-id]')).toHaveCount(1);
   await expect(laterToday).toBeVisible();
   expect(await page.evaluate((key) => localStorage.getItem(key), storageKey)).toBe(storedBefore);
+});
+
+test('未来安排保留原到期日并可提前打开与反馈', async ({ page }) => {
+  const panel = page.locator('.db-review-statistics');
+  await panel.getByRole('button', { name: '未来安排', exact: true }).click();
+  const row = panel.locator('[data-review-stat-id="stat-1"]');
+  await expect(row).toContainText('2026/10/21 12:00');
+  const before = JSON.parse((await page.evaluate((key) => localStorage.getItem(key), storageKey))!)
+    .records['stat-1'];
+  await row.getByRole('button', { name: '开始复习', exact: true }).click();
+  const session = page.locator('.db-review-session');
+  await expect(session).toContainText('统计样例 1');
+  await session.getByRole('button', { name: /^记得/ }).click();
+  await expect(session.locator('.db-review-saved')).toBeVisible();
+  await session.getByRole('button', { name: '退出复习' }).click();
+  await expect(panel.getByRole('button', { name: '未来安排', exact: true })).toHaveAttribute(
+    'aria-pressed',
+    'true',
+  );
+  await expect(row).toContainText('2026/10/21 12:00');
+  await expect(row.locator('[data-review-count="total"]')).toHaveText('2');
+  const after = JSON.parse((await page.evaluate((key) => localStorage.getItem(key), storageKey))!)
+    .records['stat-1'];
+  expect(after.history.filter((event: { rating?: string }) => event.rating)).toHaveLength(2);
+  expect(after.dueAt).toBe(before.dueAt);
+  expect(after.intervalDays).toBe(before.intervalDays);
 });
 
 test('北京时间跨日更新日期筛选，记录入口退出后保留筛选与历史展开', async ({ page }) => {

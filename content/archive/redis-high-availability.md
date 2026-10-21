@@ -4,8 +4,8 @@ title: "Redis 复制与 Sentinel"
 category: "Redis"
 parent: redis
 tags: ["Redis", "复制", "Sentinel", "故障切换"]
-created_at: "2026-10-13T11:03:37+08:00"
-updated_at: "2026-10-13T11:03:37+08:00"
+created_at: "2026-10-13 11:03:37"
+updated_at: "2026-10-13 11:03:37"
 reading_suggestions:
   - redis-durability-docs
   - redis-cluster-docs

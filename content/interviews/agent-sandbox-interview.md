@@ -4,9 +4,9 @@ category: "Agent"
 parent: agent-interview-hub
 tags: ["面试", "Agent", "沙箱"]
 learning_status: organized
-created_at: "2026-10-19T12:36:13+08:00"
-updated_at: "2026-10-19T12:36:13+08:00"
-learning_status_changed_at: "2026-10-19T13:24:42.305+08:00"
+created_at: "2026-10-19 12:36:13"
+updated_at: "2026-10-19 12:36:13"
+learning_status_changed_at: "2026-10-19 13:24:42.305"
 ---
 
 Agent 会调用工具执行操作，比如执行脚本、运行渲染任务。模型生成的代码可能写错，也可能受到[[prompt-injection|提示注入]]的影响，或者执行到有问题的依赖代码，导致实际行为**「超出任务预期或授权范围」**。

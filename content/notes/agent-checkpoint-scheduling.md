@@ -4,12 +4,12 @@ parent: agent-checkpoint-recovery
 category: "Agent"
 tags: ["Agent", "Checkpoint", "持久化"]
 learning_status: organized
-created_at: "2026-10-19T21:37:28+08:00"
-updated_at: "2026-10-19T21:37:28+08:00"
+created_at: "2026-10-19 21:37:28"
+updated_at: "2026-10-19 21:37:28"
 reading_suggestions:
   - agent-checkpoint-runtime
   - agent-checkpoint-nesting
-learning_status_changed_at: "2026-10-19T21:48:28.526+08:00"
+learning_status_changed_at: "2026-10-19 21:48:28.526"
 ---
 
 **完整的 Checkpoint 要覆盖恢复所需的控制信息，字段随运行时支持的能力增加。** [[agent-checkpoint-runtime|串行 Loop]]只需阶段与下标，[[agent-checkpoint-nesting|串行嵌套]]增加父子进度；支持并行、异步调用和人工等待后，还要区分各个请求的状态。共同的保存与恢复流程仍沿用[[agent-checkpoint-recovery|总览]]。

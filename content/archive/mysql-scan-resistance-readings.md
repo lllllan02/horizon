@@ -4,8 +4,8 @@ category: "MySQL"
 parent: mysql-buffer-replacement
 type: "article"
 tags: ["MySQL", "缓存"]
-created_at: "2026-10-12T19:51:35+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-12 19:51:35"
+updated_at: "2026-10-13 12:48:15"
 source:
   - "https://xiaolincoding.com/mysql/buffer_pool/buffer_pool.html"
   - "https://www.percona.com/blog/mysql-5-6-vs-5-5-on-the-star-schema-benchmark/"

@@ -5,7 +5,7 @@ aliases: ["Long-term Memory", "长期记忆管理"]
 category: "Agent"
 tags: ["Agent", "记忆"]
 created_at: "2026-10-09"
-updated_at: "2026-10-17T22:23:30+08:00"
+updated_at: "2026-10-17 22:23:30"
 ---
 
 **长期记忆（Long-term Memory）是独立于单个会话保存和管理、供 Agent 跨会话复用的信息，包括用户偏好、事实、目标与经验。** 它让新会话能沿用过去的信息，减少重复询问和重复探索。

@@ -1,4 +1,4 @@
-import { documentTime } from './document-dates.ts';
+import { beijingTimestamp, documentTime } from './document-dates.ts';
 import { codeLanguage } from './code-assets.ts';
 import type { marked } from 'marked';
 type MarkedOptions = marked.MarkedOptions;
@@ -484,7 +484,7 @@ export function createLibraryLoader(root: string) {
                 stamp,
                 document: {
                   ...parseDocument(await readFile(absolute, 'utf8'), file),
-                  modified: new Date(Number(info.mtimeNs / 1000000000n) * 1000).toISOString(),
+                  modified: beijingTimestamp(Number(info.mtimeNs / 1000000000n) * 1000),
                 },
               };
         next.set(file, entry);

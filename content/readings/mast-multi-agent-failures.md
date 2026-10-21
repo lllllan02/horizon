@@ -3,8 +3,8 @@ title: "MAST：多 Agent 系统为什么失败"
 parent: multi-agent
 category: "Agent"
 tags: ["Agent", "多Agent协作", "评测"]
-created_at: "2026-10-13T17:41:05+08:00"
-updated_at: "2026-10-17T23:05:45+08:00"
+created_at: "2026-10-13 17:41:05"
+updated_at: "2026-10-17 23:05:45"
 source: "https://arxiv.org/html/2503.13657v3"
 learning_status: pending
 ---

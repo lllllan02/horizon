@@ -4,8 +4,8 @@ category: "Kafka"
 type: article
 tags: ["Kafka", "消息队列"]
 learning_status: pending
-created_at: "2026-10-19T10:34:16+08:00"
-updated_at: "2026-10-19T11:01:36+08:00"
+created_at: "2026-10-19 10:34:16"
+updated_at: "2026-10-19 11:01:36"
 source:
   - "https://kafka.apache.org/43/design/design/"
   - "https://docs.confluent.io/cloud/current/client-apps/optimizing/throughput.html"

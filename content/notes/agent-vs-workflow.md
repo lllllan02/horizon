@@ -3,7 +3,7 @@ learning_status: understood
 parent: agent
 title: "Agent 与工作流"
 category: "Agent"
-updated_at: "2026-10-17T17:08:30+08:00"
+updated_at: "2026-10-17 17:08:30"
 tags: ["Agent", "工作流", "自主决策", "工程选型"]
 reading_suggestions:
   - agent

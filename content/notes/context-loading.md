@@ -6,13 +6,13 @@ aliases: ["Just-in-Time Context", "上下文外置", "外部存储与按需加�
 category: "Agent"
 tags: ["上下文管理", "按需加载"]
 created_at: "2026-10-09"
-updated_at: "2026-10-17T20:41:58+08:00"
+updated_at: "2026-10-17 20:41:58"
 reading_suggestions:
   - agent-loading
   - history-storage
   - context-budget
   - deepagents-context-offloading-summary
-learning_status_changed_at: "2026-10-17T20:48:08.137+08:00"
+learning_status_changed_at: "2026-10-17 20:48:08.137"
 ---
 
 **上下文按需加载（Just-in-Time Context）是将任务资料保留在模型窗口外，需要时再读取相关部分的机制。** 长日志、文档和旧历史无须每轮完整带入，但上下文中要保留能找到它们的入口。这里聚焦资料获取，其他加载对象属于更广的 [[agent-loading|Agent 按需加载]]。

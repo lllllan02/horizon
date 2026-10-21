@@ -6,8 +6,8 @@ source:
   - "https://github.com/redis/go-redis"
   - "https://github.com/hibiken/asynq"
   - "https://github.com/hibiken/asynq/blob/v0.25.1/internal/rdb/rdb.go"
-created_at: "2026-10-13T11:03:37+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-13 11:03:37"
+updated_at: "2026-10-13 12:48:15"
 ---
 
 go-redis 是 Redis 客户端，Asynq 是建立在 Redis 上的任务框架，**「二者层次不同，可以组合使用」**。以下以维护方 README 和固定源码为依据，不将仓库功能声明当作本地实测。

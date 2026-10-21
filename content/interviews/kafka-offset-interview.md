@@ -4,9 +4,9 @@ category: "Kafka"
 parent: kafka-interview-index
 tags: ["面试", "Kafka", "消息队列"]
 learning_status: organized
-created_at: "2026-10-19T21:42:14+08:00"
-updated_at: "2026-10-19T21:42:14+08:00"
-learning_status_changed_at: "2026-10-19T21:50:00.714+08:00"
+created_at: "2026-10-19 21:42:14"
+updated_at: "2026-10-19 21:42:14"
+learning_status_changed_at: "2026-10-19 21:50:00.714"
 ---
 
 Offset 表示消息在某个 Partition 日志中的位置。消费者会为自己负责的每个分区维护一个[[kafka-offset-sources#当前读取位置怎样参与拉取|当前读取位置（position）]]，表示接下来从哪里读。拉取时，客户端向对应 Broker 发送 Fetch 请求，带上分区和起始 Offset，Broker 据此返回一批消息，客户端再推进读取位置。

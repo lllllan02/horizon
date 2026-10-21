@@ -4,7 +4,7 @@ title: "Claude Code 的 Bash 沙箱与 devcontainer 有何区别"
 category: "Agent"
 tags: ["Agent", "沙箱", "源码"]
 created_at: "2026-10-10"
-updated_at: "2026-10-13T12:48:15+08:00"
+updated_at: "2026-10-13 12:48:15"
 source: ["[devcontainer 配置](https://github.com/anthropics/claude-code/blob/2301018b1f61073c501a8e7a4813ef48c239163b/.devcontainer/devcontainer.json#L1)", "[初始化防火墙脚本](https://github.com/anthropics/claude-code/blob/2301018b1f61073c501a8e7a4813ef48c239163b/.devcontainer/init-firewall.sh#L1)"]
 reading_suggestions:
   - claude-sandbox-wrapper

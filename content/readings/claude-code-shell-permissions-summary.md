@@ -3,8 +3,8 @@ title: "Claude Code：Shell 权限规则与无法判定的调用"
 parent: tool-permissions
 category: "Agent"
 tags: ["Agent", "工具调用", "权限"]
-created_at: "2026-10-10T20:44:35+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-10 20:44:35"
+updated_at: "2026-10-13 12:48:15"
 source:
   - "https://code.claude.com/docs/en/permissions"
   - "https://code.claude.com/docs/en/permission-modes"

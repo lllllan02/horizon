@@ -5,9 +5,9 @@ category: "Redis"
 parent: redis-interview-index
 tags: ["面试", "缓存", "过载保护"]
 learning_status: organized
-created_at: "2026-10-20T21:25:08+08:00"
-updated_at: "2026-10-20T21:25:08+08:00"
-learning_status_changed_at: "2026-10-20T21:36:01.336+08:00"
+created_at: "2026-10-20 21:25:08"
+updated_at: "2026-10-20 21:25:08"
+learning_status_changed_at: "2026-10-20 21:36:01.336"
 ---
 
 我会先看压力是「**集中在少数热点 key**」，还是「**整体访问量过大**」，再确认瓶颈在 Redis 还是数据库。

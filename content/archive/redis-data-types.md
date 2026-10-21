@@ -4,8 +4,8 @@ title: "Redis 数据类型与底层编码"
 category: "Redis"
 parent: redis
 tags: ["Redis", "数据结构"]
-created_at: "2026-10-13T11:03:37+08:00"
-updated_at: "2026-10-13T11:03:37+08:00"
+created_at: "2026-10-13 11:03:37"
+updated_at: "2026-10-13 11:03:37"
 reading_suggestions:
   - redis-data-model-docs
   - redis-streams

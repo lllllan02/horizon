@@ -4,8 +4,8 @@ aliases: ["稀疏检索", "Sparse Retrieval"]
 category: "信息检索"
 tags: ["检索", "召回", "全文检索"]
 parent: "retrieval"
-created_at: "2026-10-18T21:32:19+08:00"
-updated_at: "2026-10-18T21:32:19+08:00"
+created_at: "2026-10-18 21:32:19"
+updated_at: "2026-10-18 21:32:19"
 learning_status: pending
 ---
 

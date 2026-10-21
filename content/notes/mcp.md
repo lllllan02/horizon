@@ -6,7 +6,7 @@ aliases: ["MCP", "Model Context Protocol", "模型上下文协议"]
 category: "Agent"
 tags: ["MCP", "工具调用", "协议"]
 created_at: "2026-10-09"
-updated_at: "2026-10-19T13:42:18+08:00"
+updated_at: "2026-10-19 13:42:18"
 reading_suggestions:
   - mcp-capabilities
   - mcp-flow
@@ -16,7 +16,7 @@ reading_suggestions:
   - mcp-http-client
   - mcp-permissions
   - mcp-architecture-summary
-learning_status_changed_at: "2026-10-19T13:45:44.296+08:00"
+learning_status_changed_at: "2026-10-19 13:45:44.296"
 ---
 
 **MCP（Model Context Protocol，模型上下文协议）是 AI 应用与外部服务之间的开放通信协议，统一工具、资源和提示模板的发现与使用方式。**

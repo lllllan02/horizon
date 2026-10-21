@@ -6,10 +6,10 @@ aliases: ["Agent Loop", "Agent 循环"]
 category: "Agent"
 tags: ["Agent", "反馈循环", "工具调用"]
 created_at: "2026-10-09"
-updated_at: "2026-10-17T20:58:21+08:00"
+updated_at: "2026-10-17 20:58:21"
 reading_suggestions:
   - tool-calling
-learning_status_changed_at: "2026-10-17T21:00:22.131+08:00"
+learning_status_changed_at: "2026-10-17 21:00:22.131"
 ---
 
 **Agent Loop 是让模型反复决策、程序执行工具，并将结果交回模型的反馈循环。** 它让 Agent 能根据执行结果决定下一步，逐步推进需要多次操作的任务。

@@ -4,8 +4,8 @@ title: "Go MCP 工具调用"
 parent: mcp-flow
 category: "Agent"
 tags: ["MCP", "工具调用", "Go"]
-created_at: "2026-10-11T10:12:32+08:00"
-updated_at: "2026-10-17T00:04:15+08:00"
+created_at: "2026-10-11 10:12:32"
+updated_at: "2026-10-17 00:04:15"
 reading_suggestions:
   - mcp-server
   - mcp-http-client

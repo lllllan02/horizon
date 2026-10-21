@@ -4,8 +4,8 @@ category: "MySQL"
 parent: mysql-overview
 type: "article"
 tags: ["MySQL", "数据库"]
-created_at: "2026-10-12T14:45:56+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-12 14:45:56"
+updated_at: "2026-10-13 12:48:15"
 source:
   - "https://github.com/Snailclimb/JavaGuide/tree/main/docs/database/mysql"
   - "https://xiaolincoding.com/mysql/"

@@ -4,9 +4,9 @@ category: "性能排查"
 parent: performance-interview-index
 tags: ["面试", "性能排查"]
 learning_status: organized
-created_at: "2026-10-20T19:46:37+08:00"
-updated_at: "2026-10-20T19:48:09+08:00"
-learning_status_changed_at: "2026-10-21T10:09:48.414+08:00"
+created_at: "2026-10-20 19:46:37"
+updated_at: "2026-10-20 19:48:09"
+learning_status_changed_at: "2026-10-21 10:09:48.414"
 ---
 
 我会先从两个方向想：**一次请求本身要花多久，以及多个请求同时到来时，资源能不能承受。**

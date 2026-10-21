@@ -3,8 +3,8 @@ title: "Claude Code 与 Codex：何时使用显式计划"
 parent: agent-task-decomposition
 category: "Agent"
 tags: ["Agent", "任务规划"]
-created_at: "2026-10-17T17:20:29+08:00"
-updated_at: "2026-10-17T17:20:29+08:00"
+created_at: "2026-10-17 17:20:29"
+updated_at: "2026-10-17 17:20:29"
 read: false
 source:
   - "[Claude Code：Best practices](https://code.claude.com/docs/en/best-practices#explore-first-then-plan-then-code)"

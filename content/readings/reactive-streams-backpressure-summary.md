@@ -3,8 +3,8 @@ title: "Reactive Streams：用需求量约束上游发送"
 category: "服务治理"
 tags: ["背压", "流量控制", "队列"]
 learning_status: pending
-created_at: "2026-10-18T23:47:18+08:00"
-updated_at: "2026-10-18T23:47:18+08:00"
+created_at: "2026-10-18 23:47:18"
+updated_at: "2026-10-18 23:47:18"
 source:
   - "https://www.reactive-streams.org/"
   - "https://github.com/reactive-streams/reactive-streams-jvm/blob/v1.0.4/README.md"

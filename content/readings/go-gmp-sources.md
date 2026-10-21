@@ -4,8 +4,8 @@ aliases: ["GMP 调度源码"]
 category: "Go"
 tags: ["Go", "调度", "GMP"]
 learning_status: pending
-created_at: "2026-10-19T17:31:03+08:00"
-updated_at: "2026-10-20T18:36:58+08:00"
+created_at: "2026-10-19 17:31:03"
+updated_at: "2026-10-20 18:36:58"
 source:
   - "https://go.dev/src/runtime/HACKING.md"
   - "https://go.dev/src/runtime/proc.go"

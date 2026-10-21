@@ -4,9 +4,9 @@ title: "工具调用的审批"
 parent: tool-calling
 category: "Agent"
 tags: ["Agent", "工具调用", "权限"]
-created_at: "2026-10-10T20:33:24+08:00"
-updated_at: "2026-10-17T22:43:15+08:00"
-learning_status_changed_at: "2026-10-17T22:46:29.871+08:00"
+created_at: "2026-10-10 20:33:24"
+updated_at: "2026-10-17 22:43:15"
+learning_status_changed_at: "2026-10-17 22:46:29.871"
 reading_suggestions:
   - tool-permissions
   - agent-checkpoint-recovery

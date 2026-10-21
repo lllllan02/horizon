@@ -2,7 +2,7 @@
 learning_status: pending
 title: "漏桶限流"
 category: "服务治理"
-updated_at: "2026-10-19T16:19:44+08:00"
+updated_at: "2026-10-19 16:19:44"
 tags: ["限流", "漏桶"]
 aliases: ["漏桶", "Leaky Bucket", "漏桶算法"]
 ---

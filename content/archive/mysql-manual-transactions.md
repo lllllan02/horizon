@@ -4,8 +4,8 @@ category: "MySQL"
 parent: mysql-overview
 type: "article"
 tags: ["MySQL", "事务", "MVCC"]
-created_at: "2026-10-12T14:03:16+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-12 14:03:16"
+updated_at: "2026-10-13 12:48:15"
 source:
   - "https://dev.mysql.com/doc/refman/8.4/en/innodb-transaction-isolation-levels.html"
   - "https://dev.mysql.com/doc/refman/8.4/en/innodb-consistent-read.html"

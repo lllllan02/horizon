@@ -2,8 +2,8 @@
 title: "OpenTelemetry：GenAI 与 Agent 的追踪约定"
 category: "可观测性"
 tags: ["OpenTelemetry", "Agent", "Trace"]
-created_at: "2026-10-12T23:19:16+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-12 23:19:16"
+updated_at: "2026-10-13 12:48:15"
 source:
   - "https://github.com/open-telemetry/semantic-conventions-genai"
   - "https://github.com/open-telemetry/semantic-conventions-genai/blob/main/docs/gen-ai/gen-ai-agent-spans.md"

@@ -4,8 +4,8 @@ title: "MCP 能力类型"
 parent: mcp
 category: "Agent"
 tags: ["MCP", "工具调用", "协议"]
-created_at: "2026-10-11T10:06:16+08:00"
-updated_at: "2026-10-12T12:27:44+08:00"
+created_at: "2026-10-11 10:06:16"
+updated_at: "2026-10-12 12:27:44"
 reading_suggestions:
   - mcp-tools-summary
   - mcp-resources-prompts-summary

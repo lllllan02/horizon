@@ -5,12 +5,12 @@ parent: multi-agent
 category: "Agent"
 tags: ["Agent", "A2A", "协议"]
 learning_status: organized
-created_at: "2026-10-13T17:41:05+08:00"
-updated_at: "2026-10-18T00:22:52+08:00"
+created_at: "2026-10-13 17:41:05"
+updated_at: "2026-10-18 00:22:52"
 reading_suggestions:
   - multi-agent
   - a2a-protocol-specification
-learning_status_changed_at: "2026-10-18T00:23:55.123+08:00"
+learning_status_changed_at: "2026-10-18 00:23:55.123"
 ---
 
 **A2A（Agent2Agent）是独立 Agent 服务之间交换能力、消息、任务状态与成果的开放协议。**

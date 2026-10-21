@@ -3,8 +3,8 @@ title: "消息通信与事件处理模式导读"
 category: "消息队列"
 type: "article"
 tags: ["消息队列", "发布订阅", "流处理"]
-created_at: "2026-10-12T20:40:35+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-12 20:40:35"
+updated_at: "2026-10-13 12:48:15"
 source:
   - "https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/messaging"
   - "https://learn.microsoft.com/en-us/azure/architecture/patterns/publisher-subscriber"

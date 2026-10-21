@@ -4,7 +4,7 @@ parent: tool-scheduling
 category: "Agent"
 tags: ["Agent", "工具调用"]
 created_at: "2026-10-10"
-updated_at: "2026-10-13T12:48:15+08:00"
+updated_at: "2026-10-13 12:48:15"
 source: "[Cloudflare Code Mode 官方文档](https://developers.cloudflare.com/agents/tools/codemode/)"
 reading_suggestions:
   - anthropic-advanced-tool-use-summary

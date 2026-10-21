@@ -5,8 +5,8 @@ aliases: ["Kafka", "Kafka 学习入口"]
 category: "Kafka"
 type: "overview"
 tags: ["Kafka", "消息队列", "日志"]
-created_at: "2026-10-12T19:38:04+08:00"
-updated_at: "2026-10-12T20:59:44+08:00"
+created_at: "2026-10-12 19:38:04"
+updated_at: "2026-10-12 20:59:44"
 reading_suggestions:
   - kafka-use-cases
   - kafka-event-model

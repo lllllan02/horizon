@@ -4,8 +4,8 @@ title: "行为约束的执行机制"
 parent: agent-guardrails
 category: "Agent"
 tags: ["Agent", "行为约束", "工具调用"]
-created_at: "2026-10-13T11:04:15+08:00"
-updated_at: "2026-10-17T23:30:09+08:00"
+created_at: "2026-10-13 11:04:15"
+updated_at: "2026-10-17 23:30:09"
 reading_suggestions:
   - tool-permissions
   - tool-approvals

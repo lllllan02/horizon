@@ -3,8 +3,8 @@ title: "连接池状态指标"
 category: "Go"
 tags: ["Go", "连接池", "性能排查"]
 learning_status: pending
-created_at: "2026-10-18T23:53:19+08:00"
-updated_at: "2026-10-18T23:53:19+08:00"
+created_at: "2026-10-18 23:53:19"
+updated_at: "2026-10-18 23:53:19"
 ---
 
 连接池状态指标反映池内的连接数量、等待情况和连接回收情况，用于观察连接资源的占用。以 Go `database/sql` 为例，调用 `db.Stats()` 可取得以下[[go-sql-connections#状态和累计计数分别说明什么|DBStats 指标]]，统计范围是对应的单个连接池。

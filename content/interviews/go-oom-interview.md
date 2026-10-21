@@ -4,9 +4,9 @@ category: "Go"
 parent: go-interview-hub
 tags: ["面试", "Go", "性能排查"]
 learning_status: organized
-created_at: "2026-10-19T15:26:44+08:00"
-updated_at: "2026-10-19T16:07:43+08:00"
-learning_status_changed_at: "2026-10-19T16:10:25.425+08:00"
+created_at: "2026-10-19 15:26:44"
+updated_at: "2026-10-19 16:07:43"
+learning_status_changed_at: "2026-10-19 16:10:25.425"
 ---
 
 [[out-of-memory|内存溢出]]就是需要的内存超过了可用上限，也就是 OOM。

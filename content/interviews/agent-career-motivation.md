@@ -4,9 +4,9 @@ category: "面试"
 parent: agent-interview-hub
 tags: ["面试", "Agent", "求职动机"]
 learning_status: organized
-created_at: "2026-10-18T20:40:18+08:00"
-updated_at: "2026-10-18T20:40:18+08:00"
-learning_status_changed_at: "2026-10-18T22:07:32.975+08:00"
+created_at: "2026-10-18 20:40:18"
+updated_at: "2026-10-18 20:40:18"
+learning_status_changed_at: "2026-10-18 22:07:32.975"
 ---
 
 我主要有两个出发点。首先是自己确实感兴趣。我平时会用 Codex、Cursor 这类工具做开发，也会捣鼓一些小东西。在使用过程中，能直接感受到这类 Agent 带来的便利，所以会自然地想进一步了解它们是怎么工作的、能力边界在哪里。我也希望自己能参与开发[[enterprise-agent-build|面向具体场景的 Agent]]，帮助用户解决实际问题。

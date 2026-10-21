@@ -5,8 +5,8 @@ aliases: ["MySQL 查询优化", "Query Optimization"]
 category: "MySQL"
 parent: mysql-overview#查询与性能
 tags: ["MySQL", "SQL优化"]
-created_at: "2026-10-12T21:32:44+08:00"
-updated_at: "2026-10-12T22:52:51+08:00"
+created_at: "2026-10-12 21:32:44"
+updated_at: "2026-10-12 22:52:51"
 reading_suggestions:
   - mysql-explain-reading
   - mysql-index-predicates

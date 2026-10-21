@@ -3,8 +3,8 @@ title: "Go、Node 与 Redis：取消通知、停止确认和条件提交"
 category: "Agent"
 tags: ["Agent", "取消", "Go"]
 learning_status: pending
-created_at: "2026-10-20T14:47:16+08:00"
-updated_at: "2026-10-20T14:47:16+08:00"
+created_at: "2026-10-20 14:47:16"
+updated_at: "2026-10-20 14:47:16"
 source:
   - "https://pkg.go.dev/context#CancelFunc"
   - "https://nodejs.org/api/http.html#httprequesturl-options-callback"

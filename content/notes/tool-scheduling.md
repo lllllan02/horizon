@@ -5,7 +5,7 @@ parent: tool-calling
 category: "Agent"
 tags: ["Agent", "工具调用"]
 created_at: "2026-10-10"
-updated_at: "2026-10-17T15:47:36+08:00"
+updated_at: "2026-10-17 15:47:36"
 reading_suggestions:
   - pydantic-tool-execution-summary
   - llmcompiler-summary

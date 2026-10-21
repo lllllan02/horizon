@@ -4,8 +4,8 @@ aliases: ["Pi Compaction", "firstKeptEntryId"]
 parent: context-compaction
 category: "Agent"
 tags: ["上下文管理", "文本压缩"]
-created_at: "2026-10-11T17:28:47+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-11 17:28:47"
+updated_at: "2026-10-13 12:48:15"
 source:
   - "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/docs/compaction.md"
   - "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/src/core/compaction/compaction.ts"

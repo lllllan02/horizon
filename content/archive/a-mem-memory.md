@@ -3,8 +3,8 @@ title: "A-Mem：让新记忆改变已有记忆的组织"
 parent: agent-memory
 category: "Agent"
 tags: ["Agent", "记忆", "检索"]
-created_at: "2026-10-13T10:44:40+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-13 10:44:40"
+updated_at: "2026-10-13 12:48:15"
 source: "https://arxiv.org/html/2502.12110v11"
 reading_suggestions:
   - graphiti-memory

@@ -6,7 +6,7 @@ aliases: ["Self-Correction", "Self-correction", "Agent Self-Correction"]
 category: "Agent"
 tags: ["Agent", "自我纠正"]
 created_at: "2026-10-09"
-updated_at: "2026-10-17T18:24:22+08:00"
+updated_at: "2026-10-17 18:24:22"
 reading_suggestions:
   - agent-reflection
   - self-refine-summary

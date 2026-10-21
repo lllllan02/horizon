@@ -1,5 +1,5 @@
 import type { LibraryDocument } from '../types/library.ts';
-import { parseReviewState, type ReviewInput } from '../review-model.ts';
+import { parseReviewState, ReviewError, type ReviewInput } from '../review-model.ts';
 import { localEditing } from './library-client.ts';
 import { createBrowserReviewStore } from './review-browser-store.ts';
 import { withBrowserReviewLock } from './review-browser-lock.ts';
@@ -37,7 +37,7 @@ async function request(input?: ReviewInput) {
       typeof value.error === 'string'
         ? value.error
         : '复习记录保存失败，请重试。';
-    throw Error(message);
+    throw new ReviewError(message, response.status);
   }
   return parseReviewState(value);
 }

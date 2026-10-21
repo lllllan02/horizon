@@ -4,8 +4,8 @@ title: "Agent 的反馈与调整机制"
 parent: agent
 category: "Agent"
 tags: ["Agent", "自我纠正", "重试", "任务规划"]
-created_at: "2026-10-12T11:27:16+08:00"
-updated_at: "2026-10-17T19:12:39+08:00"
+created_at: "2026-10-12 11:27:16"
+updated_at: "2026-10-17 19:12:39"
 reading_suggestions:
   - agent-retry
   - agent-reflection
@@ -13,7 +13,7 @@ reading_suggestions:
   - agent-replanning
   - agent-checkpoint-recovery
   - agent-human-in-the-loop
-learning_status_changed_at: "2026-10-18T23:35:00.437+08:00"
+learning_status_changed_at: "2026-10-18 23:35:00.437"
 ---
 
 Agent 遇到执行错误、结果不符要求，或目标与条件变化时，需要依据反馈调整行动。**反馈帮助确定改什么，修改后还要验证是否满足要求。** 重试、反思、自我纠正和重新规划参与这一过程，各机制按需组合。

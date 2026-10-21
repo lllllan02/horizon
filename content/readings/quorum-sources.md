@@ -4,8 +4,8 @@ category: "分布式系统"
 type: article
 tags: ["Quorum", "多数派", "共识"]
 learning_status: pending
-created_at: "2026-10-19T20:39:27+08:00"
-updated_at: "2026-10-19T20:39:27+08:00"
+created_at: "2026-10-19 20:39:27"
+updated_at: "2026-10-19 20:39:27"
 source:
   - "https://etcd.io/docs/v3.6/learning/glossary/#quorum"
   - "https://redis.io/docs/latest/operate/oss_and_stack/management/sentinel/#quorum"

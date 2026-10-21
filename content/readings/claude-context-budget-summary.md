@@ -4,8 +4,8 @@ aliases: ["Context windows", "Token counting"]
 parent: context-budget
 category: "Agent"
 tags: ["上下文管理"]
-created_at: "2026-10-11T17:54:40+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-11 17:54:40"
+updated_at: "2026-10-13 12:48:15"
 source:
   - "https://platform.claude.com/docs/en/build-with-claude/context-windows"
   - "https://platform.claude.com/docs/en/build-with-claude/token-counting"

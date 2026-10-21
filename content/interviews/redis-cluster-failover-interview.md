@@ -4,9 +4,9 @@ category: "Redis"
 parent: redis-interview-index
 tags: ["面试", "Redis"]
 learning_status: organized
-created_at: "2026-10-19T20:30:13+08:00"
-updated_at: "2026-10-19T20:30:13+08:00"
-learning_status_changed_at: "2026-10-21T10:12:27.181+08:00"
+created_at: "2026-10-19 20:30:13"
+updated_at: "2026-10-19 20:30:13"
+learning_status_changed_at: "2026-10-21 10:12:27.181"
 ---
 
 在 [[redis-cluster-interview|Redis Cluster]] 中，**「故障检测和主从切换由集群内部完成」**，不需要额外依赖哨兵。

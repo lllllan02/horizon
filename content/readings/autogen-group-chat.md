@@ -3,8 +3,8 @@ title: "AutoGen：群聊如何选择下一位 Agent"
 parent: multi-agent
 category: "Agent"
 tags: ["Agent", "多Agent协作"]
-created_at: "2026-10-13T17:41:05+08:00"
-updated_at: "2026-10-17T23:05:45+08:00"
+created_at: "2026-10-13 17:41:05"
+updated_at: "2026-10-17 23:05:45"
 source: "https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/selector-group-chat.html"
 learning_status: pending
 ---

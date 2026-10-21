@@ -4,7 +4,7 @@ parent: tool-permissions
 category: "Agent"
 tags: ["Agent", "工具调用", "权限"]
 created_at: "2026-10-10"
-updated_at: "2026-10-13T12:48:15+08:00"
+updated_at: "2026-10-13 12:48:15"
 source: "[Configure permissions](https://code.claude.com/docs/en/agent-sdk/permissions)"
 ---
 

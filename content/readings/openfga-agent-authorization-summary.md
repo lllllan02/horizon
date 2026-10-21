@@ -3,8 +3,8 @@ title: "OpenFGA：Agent 授权关系、条件与变更管理"
 parent: tool-permissions
 category: "Agent"
 tags: ["Agent", "工具调用", "权限"]
-created_at: "2026-10-10T20:24:03+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-10 20:24:03"
+updated_at: "2026-10-13 12:48:15"
 source:
   - "[Dynamic Conditions](https://openfga.dev/blog/dynamic-abac-expressions-announcement)"
   - "[Get Started with Modeling](https://openfga.dev/docs/modeling/getting-started)"

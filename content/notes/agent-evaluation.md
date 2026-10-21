@@ -4,13 +4,13 @@ title: "Agent 评测"
 parent: agent
 category: "Agent"
 tags: ["Agent", "评测"]
-created_at: "2026-10-13T11:03:11+08:00"
-updated_at: "2026-10-17T23:31:15+08:00"
+created_at: "2026-10-13 11:03:11"
+updated_at: "2026-10-17 23:31:15"
 reading_suggestions:
   - anthropic-agent-evals-summary
   - agent-evaluation-practice
   - agent-trace
-learning_status_changed_at: "2026-10-19T00:33:12.311+08:00"
+learning_status_changed_at: "2026-10-19 00:33:12.311"
 ---
 
 **Agent 评测是在规定任务、环境和资源预算下运行 Agent，再依据实际结果与执行记录判断任务质量、可靠性和成本的方法。** 被测对象包括模型、工具与[[agent-harness|运行系统]]；更换其中一项，都可能改变表现。

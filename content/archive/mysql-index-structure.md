@@ -3,7 +3,7 @@ learning_status: understood
 title: "InnoDB 的 B+ 树与数据页"
 category: "MySQL"
 parent: mysql-indexes
-updated_at: "2026-10-12T15:59:40+08:00"
+updated_at: "2026-10-12 15:59:40"
 tags: ["MySQL", "B+树", "索引结构", "页"]
 aliases: ["B+树", "InnoDB 索引结构"]
 reading_suggestions:

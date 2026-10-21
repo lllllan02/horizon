@@ -3,8 +3,8 @@ title: "LongMemEval：跨会话记忆与经验复用评测"
 parent: agent-memory
 category: "Agent"
 tags: ["Agent", "记忆", "评测"]
-created_at: "2026-10-12T23:24:47+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-12 23:24:47"
+updated_at: "2026-10-13 12:48:15"
 source:
   - "https://github.com/xiaowu0162/LongMemEval"
   - "https://github.com/xiaowu0162/LongMemEval-V2"

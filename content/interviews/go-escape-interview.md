@@ -4,9 +4,9 @@ category: "Go"
 parent: go-interview-hub
 tags: ["面试", "Go", "内存分配"]
 learning_status: organized
-created_at: "2026-10-19T15:27:25+08:00"
-updated_at: "2026-10-19T15:41:05+08:00"
-learning_status_changed_at: "2026-10-19T15:41:49.843+08:00"
+created_at: "2026-10-19 15:27:25"
+updated_at: "2026-10-19 15:41:05"
+learning_status_changed_at: "2026-10-19 15:41:49.843"
 ---
 
 [[go-escape-sources#逃逸判断与生命周期|逃逸分析]]是 **Go 编译器在编译期判断对象能否安全放在栈上的分析**。不能保证安全时，对象可能被分配到堆上，这个判断本身是合理的。

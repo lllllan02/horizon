@@ -4,9 +4,9 @@ parent: agent-checkpoint-recovery
 category: "Agent"
 tags: ["Agent", "Checkpoint", "持久化", "Go"]
 learning_status: pending
-created_at: "2026-10-19T20:16:24+08:00"
-updated_at: "2026-10-19T20:24:07+08:00"
-learning_status_changed_at: "2026-10-19T20:34:03.295+08:00"
+created_at: "2026-10-19 20:16:24"
+updated_at: "2026-10-19 20:24:07"
+learning_status_changed_at: "2026-10-19 20:34:03.295"
 ---
 
 **Eino 的 Checkpoint 是一份可持久化的运行快照；Graph 根据其中的节点键、节点输入和组件状态重建待执行任务。** 恢复程序不需要猜测聊天记录意味着什么，也不依赖原进程的代码行号。

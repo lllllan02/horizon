@@ -4,9 +4,9 @@ category: "Redis"
 parent: redis-interview-index
 tags: ["面试", "Redis"]
 learning_status: organized
-created_at: "2026-10-19T10:45:49+08:00"
-updated_at: "2026-10-19T10:45:49+08:00"
-learning_status_changed_at: "2026-10-19T10:46:57.292+08:00"
+created_at: "2026-10-19 10:45:49"
+updated_at: "2026-10-19 10:45:49"
+learning_status_changed_at: "2026-10-19 10:46:57.292"
 ---
 
 Redis 是一个**「事件驱动的服务」**，它的事件主要分为文件事件和时间事件。

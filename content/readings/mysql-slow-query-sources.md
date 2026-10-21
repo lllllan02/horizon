@@ -4,8 +4,8 @@ category: "MySQL"
 tags: ["MySQL", "性能排查"]
 type: article
 learning_status: pending
-created_at: "2026-10-19T17:36:41+08:00"
-updated_at: "2026-10-19T19:19:47+08:00"
+created_at: "2026-10-19 17:36:41"
+updated_at: "2026-10-19 19:19:47"
 source:
   - "https://docs.oracle.com/cd/E17952_01/mysql-8.4-en/slow-query-log.html"
   - "https://docs.oracle.com/cd/E17952_01/mysql-8.4-en/explain-output.html"

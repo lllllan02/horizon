@@ -5,9 +5,9 @@ category: "MySQL"
 parent: mysql-interview-index
 tags: ["面试", "MySQL", "事务"]
 learning_status: organized
-created_at: "2026-10-19T22:40:16+08:00"
-updated_at: "2026-10-21T10:18:34+08:00"
-learning_status_changed_at: "2026-10-21T10:19:57.267+08:00"
+created_at: "2026-10-19 22:40:16"
+updated_at: "2026-10-21 10:18:34"
+learning_status_changed_at: "2026-10-21 10:19:57.267"
 ---
 
 事务隔离级别规定并发事务之间能看到哪些修改，用来权衡一致性保证与并发成本。

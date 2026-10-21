@@ -4,7 +4,7 @@ title: "Codex 遇到沙箱拒绝后如何决定重试"
 category: "Agent"
 tags: ["Agent", "沙箱", "源码"]
 created_at: "2026-10-10"
-updated_at: "2026-10-13T12:48:15+08:00"
+updated_at: "2026-10-13 12:48:15"
 source: ["[`ToolOrchestrator` 的错误分支](https://github.com/openai/codex/blob/5ef96ab2785f3ecddf279639eff7b1b42c906fa4/codex-rs/core/src/tools/orchestrator.rs#L386)", "[重试后端选择](https://github.com/openai/codex/blob/5ef96ab2785f3ecddf279639eff7b1b42c906fa4/codex-rs/core/src/tools/orchestrator.rs#L517)"]
 reading_suggestions:
   - sandbox-execution

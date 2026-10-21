@@ -4,8 +4,8 @@ title: "InnoDB 索引树高"
 category: "MySQL"
 parent: mysql-index-structure
 tags: ["MySQL", "B+树", "索引"]
-created_at: "2026-10-12T15:25:39+08:00"
-updated_at: "2026-10-12T15:39:31+08:00"
+created_at: "2026-10-12 15:25:39"
+updated_at: "2026-10-12 15:39:31"
 reading_suggestions:
   - mysql-index-height-io
   - mysql-manual-queries

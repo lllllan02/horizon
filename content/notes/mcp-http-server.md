@@ -4,8 +4,8 @@ title: "MCP Streamable HTTP 服务端"
 parent: mcp
 category: "Agent"
 tags: ["MCP", "工具调用", "协议"]
-created_at: "2026-10-11T01:16:08+08:00"
-updated_at: "2026-10-16T20:46:14+08:00"
+created_at: "2026-10-11 01:16:08"
+updated_at: "2026-10-16 20:46:14"
 reading_suggestions:
   - mcp-server
   - mcp-http-client

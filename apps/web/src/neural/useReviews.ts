@@ -4,6 +4,7 @@ import type { LibraryDocument } from '../types/library.ts';
 import type { ReviewController } from '../types/review-ui.ts';
 import {
   emptyReviewState,
+  ReviewError,
   reviewFingerprint,
   reviewQueue,
   type ReviewInput,
@@ -32,7 +33,9 @@ export function useReviews(graph: ReaderGraph): ReviewController {
   const busy = useRef(false);
   const generation = useRef(0);
   const alive = useRef(true);
-  const retry = useRef<{ key: string; requestId: string } | null>(null);
+  const retries = useRef(
+    new Map<string, { requestId: string; revision: string; rating?: ReviewRating }>(),
+  );
   const publish = useCallback((next: ReviewState) => {
     current.current = next;
     setState((old) => (old?.version === next.version ? old : next));
@@ -96,14 +99,22 @@ export function useReviews(graph: ReaderGraph): ReviewController {
         setError('资料已更新或不再是已整理，请重新打开后复习。');
         return false;
       }
+      const revision = JSON.stringify([doc.id, doc.updated, reviewFingerprint(doc)]);
+      const key = JSON.stringify([revision, action]);
+      const unresolved = [...retries.current.values()].find(
+        (item) => item.revision === revision && item.rating,
+      );
+      if (unresolved && action.rating && unresolved.rating !== action.rating) {
+        setError('上次评分尚未确认，请先用原反馈重试。');
+        return false;
+      }
+      const requestId = retries.current.get(key)?.requestId ?? clientId();
+      retries.current.set(key, { requestId, revision, rating: action.rating });
       busy.current = true;
       generation.current++;
       setPending(true);
       setError('');
       try {
-        const key = JSON.stringify([doc.id, doc.updated, reviewFingerprint(doc), action]);
-        const requestId = retry.current?.key === key ? retry.current.requestId : clientId();
-        retry.current = { key, requestId };
         const input: ReviewInput = {
           ...action,
           id: doc.id,
@@ -115,15 +126,29 @@ export function useReviews(graph: ReaderGraph): ReviewController {
         const next = await updateReview(docsRef.current, input);
         if (!alive.current) return false;
         publish(next);
-        retry.current = null;
+        retries.current.delete(key);
         setNow(Date.now());
         return true;
       } catch (cause) {
         if (!alive.current) return false;
-        // Refresh conflicts and ambiguous network outcomes without acknowledging a failed save.
+        // A rejected version never committed this request, so it is safe to start
+        // a new attempt after synchronizing instead of retaining an uncertain save.
+        if (cause instanceof ReviewError && cause.status === 409) retries.current.delete(key);
+        // Confirm ambiguous saves from the persisted request ID; otherwise retain the ID for retry.
         try {
           const latestState = await fetchReviews(docsRef.current);
-          if (alive.current) publish(latestState);
+          if (alive.current) {
+            publish(latestState);
+            const committed = Object.values(latestState.records).some((record) =>
+              record.history.some((event) => event.requestId === requestId),
+            );
+            if (committed) {
+              retries.current.delete(key);
+              setError('');
+              setNow(Date.now());
+              return true;
+            }
+          }
         } catch {
           /* Keep the last known state and the original actionable error. */
         }
@@ -152,6 +177,13 @@ export function useReviews(graph: ReaderGraph): ReviewController {
     error,
     storageLabel: reviewStorageLabel,
     now,
+    pendingRating: (doc) => {
+      const revision = JSON.stringify([doc.id, doc.updated, reviewFingerprint(doc)]);
+      return (
+        [...retries.current.values()].find((item) => item.revision === revision && item.rating)
+          ?.rating ?? null
+      );
+    },
     refresh,
     submit: (doc, rating) => save(doc, { rating }),
     present: (doc) => save(doc, { presented: true }),

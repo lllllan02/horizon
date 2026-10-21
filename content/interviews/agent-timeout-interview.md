@@ -4,9 +4,9 @@ category: "Agent"
 parent: agent-interview-hub
 tags: ["面试", "Agent", "超时", "熔断", "背压"]
 learning_status: organized
-created_at: "2026-10-18T23:20:40+08:00"
-updated_at: "2026-10-18T23:47:18+08:00"
-learning_status_changed_at: "2026-10-19T00:06:59.601+08:00"
+created_at: "2026-10-18 23:20:40"
+updated_at: "2026-10-18 23:47:18"
+learning_status_changed_at: "2026-10-19 00:06:59.601"
 ---
 
 我会分三层处理，先控制一次任务能等多久，再防止慢调用把整个服务拖垮。

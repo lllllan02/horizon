@@ -4,8 +4,8 @@ category: "机器学习"
 tags: ["数据标注"]
 source: "https://aws.amazon.com/what-is/data-labeling/"
 read: false
-created_at: "2026-10-14T08:35:47+08:00"
-updated_at: "2026-10-14T08:35:47+08:00"
+created_at: "2026-10-14 08:35:47"
+updated_at: "2026-10-14 08:35:47"
 ---
 
 **AWS 将数据标注解释为给原始数据补充有意义的信息，让模型能够据此学习。** 标签可以是图片中的对象类别、对象所在像素，也可以是一段声音对应的文字；标注的形式由任务决定。

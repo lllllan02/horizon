@@ -2,7 +2,7 @@
 title: "VictoriaMetrics：Mutex：吞吐与公平的取舍"
 category: "Go"
 created_at: "2026-10-08"
-updated_at: "2026-10-13T12:48:15+08:00"
+updated_at: "2026-10-13 12:48:15"
 tags: ["Go", "Mutex", "源码"]
 aliases: ["Mutex 竞争", "Mutex 饥饿模式"]
 parent: victoriametrics-go-concurrency

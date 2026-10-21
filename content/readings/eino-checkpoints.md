@@ -4,9 +4,9 @@ parent: agent-checkpoint-recovery
 category: "Agent"
 tags: ["Agent", "Checkpoint", "持久化", "Go"]
 learning_status: pending
-learning_status_changed_at: "2026-10-17T21:42:39.524+08:00"
-created_at: "2026-10-14T14:43:35+08:00"
-updated_at: "2026-10-19T21:44:24+08:00"
+learning_status_changed_at: "2026-10-17 21:42:39.524"
+created_at: "2026-10-14 14:43:35"
+updated_at: "2026-10-19 21:44:24"
 source:
   - "https://www.cloudwego.io/zh/docs/eino/core_modules/eino_adk/agent_hitl/"
   - "https://www.cloudwego.io/zh/docs/eino/core_modules/chain_and_graph_orchestration/checkpoint_interrupt/"

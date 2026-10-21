@@ -4,8 +4,8 @@ category: "Agent"
 tags: ["Agent", "意图识别", "状态管理"]
 source: "https://rasa.com/docs/reference/primitives/slots/"
 read: false
-created_at: "2026-10-13T17:38:42+08:00"
-updated_at: "2026-10-14T13:59:35+08:00"
+created_at: "2026-10-13 17:38:42"
+updated_at: "2026-10-14 13:59:35"
 ---
 
 **槽位（Slot）是对话中有名称和类型的状态字段，可保存用户参数或业务查询结果。** Rasa 将识别信息、决定写入哪个字段、执行更新分成相连步骤。

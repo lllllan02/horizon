@@ -4,8 +4,8 @@ aliases: ["Process", "操作系统进程"]
 category: "计算机基础"
 tags: ["并发"]
 learning_status: pending
-created_at: "2026-10-20T19:23:41+08:00"
-updated_at: "2026-10-20T19:23:41+08:00"
+created_at: "2026-10-20 19:23:41"
+updated_at: "2026-10-20 19:23:41"
 ---
 
 **进程（Process）是程序的一次运行实例，也是操作系统管理和隔离资源的基本单位。** 它拥有自己的[[process-thread-sources#进程与线程|虚拟地址空间、代码和系统资源]]；同一个程序可以启动多个进程。

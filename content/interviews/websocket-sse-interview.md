@@ -4,9 +4,9 @@ category: "计算机网络"
 parent: interview-hub
 tags: ["面试"]
 learning_status: organized
-created_at: "2026-10-19T13:37:49+08:00"
-updated_at: "2026-10-19T13:37:49+08:00"
-learning_status_changed_at: "2026-10-19T13:51:57.499+08:00"
+created_at: "2026-10-19 13:37:49"
+updated_at: "2026-10-19 13:37:49"
+learning_status_changed_at: "2026-10-19 13:51:57.499"
 ---
 
 [[websocket|WebSocket]] 和 [[sse|SSE]] 都可以实现**「实时通信」**，主要区别是通信方向。

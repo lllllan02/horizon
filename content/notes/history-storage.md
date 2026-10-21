@@ -5,13 +5,13 @@ title: "对话历史的存储"
 category: "Agent"
 tags: ["Agent", "上下文管理", "持久化"]
 created_at: "2026-10-09"
-updated_at: "2026-10-17T20:41:58+08:00"
+updated_at: "2026-10-17 20:41:58"
 reading_suggestions:
   - pi-session-storage-summary
   - openai-conversation-storage-summary
   - context-compaction
   - agent-checkpoint-recovery
-learning_status_changed_at: "2026-10-17T20:48:28.333+08:00"
+learning_status_changed_at: "2026-10-17 20:48:28.333"
 ---
 
 **对话历史存储是按会话持久保存用户消息、模型回复、工具调用与结果的机制。** 它让应用在进程结束后仍能接续对话、回查原文。

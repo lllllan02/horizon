@@ -6,9 +6,9 @@ parent: agent-interview-hub
 tags: ["面试", "Agent"]
 type: practice
 learning_status: organized
-created_at: "2026-10-20T15:54:42+08:00"
-updated_at: "2026-10-20T16:02:34+08:00"
-learning_status_changed_at: "2026-10-20T16:06:03.440+08:00"
+created_at: "2026-10-20 15:54:42"
+updated_at: "2026-10-20 16:02:34"
+learning_status_changed_at: "2026-10-20 16:06:03.440"
 ---
 
 Agent 任务可能运行较长时间，如果一直没有反馈，用户就很难判断任务是否还在执行。所以我会让服务端返回任务状态，让前端展示等待、执行和结束的过程，重点是让用户知道「**任务仍在进行，当前大致在做什么**」。

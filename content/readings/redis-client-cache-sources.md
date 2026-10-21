@@ -4,8 +4,8 @@ category: "Redis"
 type: article
 tags: ["缓存", "缓存一致性"]
 learning_status: pending
-created_at: "2026-10-20T21:25:08+08:00"
-updated_at: "2026-10-20T21:25:08+08:00"
+created_at: "2026-10-20 21:25:08"
+updated_at: "2026-10-20 21:25:08"
 source: "https://redis.io/docs/latest/develop/reference/client-side-caching/"
 ---
 

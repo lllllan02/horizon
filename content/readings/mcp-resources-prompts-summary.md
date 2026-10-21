@@ -3,8 +3,8 @@ title: "MCP Resources 与 Prompts：数据读取与消息模板"
 parent: mcp
 category: "Agent"
 tags: ["MCP", "工具调用", "协议"]
-created_at: "2026-10-12T12:27:44+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-12 12:27:44"
+updated_at: "2026-10-13 12:48:15"
 source:
   - "https://modelcontextprotocol.io/specification/2026-07-28/server/index"
   - "https://modelcontextprotocol.io/specification/2026-07-28/server/resources"

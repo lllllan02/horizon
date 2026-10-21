@@ -4,8 +4,8 @@ category: "MySQL"
 tags: ["MySQL", "B+树", "索引结构"]
 type: article
 learning_status: pending
-created_at: "2026-10-20T21:06:38+08:00"
-updated_at: "2026-10-20T21:06:38+08:00"
+created_at: "2026-10-20 21:06:38"
+updated_at: "2026-10-20 21:06:38"
 source:
   - "https://dev.mysql.com/doc/refman/8.4/en/innodb-physical-structure.html"
   - "https://dev.mysql.com/doc/refman/8.4/en/innodb-index-types.html"

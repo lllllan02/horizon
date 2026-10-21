@@ -4,8 +4,8 @@ aliases: ["标注", "Data Annotation", "Data Labeling", "数据标签"]
 category: "机器学习"
 tags: ["数据标注", "Agent", "评测"]
 learning_status: pending
-created_at: "2026-10-14T08:35:47+08:00"
-updated_at: "2026-10-17T23:29:15+08:00"
+created_at: "2026-10-14 08:35:47"
+updated_at: "2026-10-17 23:29:15"
 ---
 
 **在机器学习与 Agent 开发中，数据标注是按照明确的任务规则，为一条数据补上答案、类别、位置或质量判断的过程。** 这些信息可以用来训练模型，也可以用来检查系统做得对不对。这里的数据可能是一句话、一段回答，或 Agent 完成任务的整段记录。

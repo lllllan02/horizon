@@ -5,9 +5,9 @@ category: "MySQL"
 parent: mysql-interview-index
 tags: ["面试", "MySQL", "死锁", "性能排查"]
 learning_status: organized
-created_at: "2026-10-18T11:52:26+08:00"
-updated_at: "2026-10-18T21:19:19+08:00"
-learning_status_changed_at: "2026-10-18T23:44:09.430+08:00"
+created_at: "2026-10-18 11:52:26"
+updated_at: "2026-10-18 21:19:19"
+learning_status_changed_at: "2026-10-18 23:44:09.430"
 ---
 
 InnoDB 默认开着死锁检测。发生死锁后，它会[[mysql-deadlock-victim|选择一个较轻的事务回滚]]，一般会参考修改了多少行、持有多少锁，尽量选择回滚代价较小的一方，让其他事务有机会继续执行。

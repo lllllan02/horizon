@@ -4,9 +4,9 @@ category: "Kafka"
 parent: kafka-interview-index
 tags: ["面试", "Kafka", "消息队列"]
 learning_status: organized
-created_at: "2026-10-19T11:00:33+08:00"
-updated_at: "2026-10-19T11:00:33+08:00"
-learning_status_changed_at: "2026-10-19T11:01:39.739+08:00"
+created_at: "2026-10-19 11:00:33"
+updated_at: "2026-10-19 11:00:33"
+learning_status_changed_at: "2026-10-19 11:01:39.739"
 ---
 
 Kafka 保证**「分区内有序，分区之间不保证顺序」**，也就是同一个 Partition 中的消息可以按写入日志的顺序读取。

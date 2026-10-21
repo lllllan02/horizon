@@ -5,9 +5,9 @@ parent: interview-hub
 tags: ["面试", "性能排查"]
 type: overview
 learning_status: organized
-created_at: "2026-10-19T10:51:27+08:00"
-updated_at: "2026-10-20T19:46:37+08:00"
-learning_status_changed_at: "2026-10-21T10:10:15.900+08:00"
+created_at: "2026-10-19 10:51:27"
+updated_at: "2026-10-20 19:46:37"
+learning_status_changed_at: "2026-10-21 10:10:15.900"
 ---
 
 围绕请求耗时、系统瓶颈与流量控制整理面试题，串起现象确认、瓶颈定位、优化处理、过载保护与效果验证。

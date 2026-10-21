@@ -4,8 +4,8 @@ title: "InnoDB 预读"
 category: "MySQL"
 parent: mysql-buffer-pool-lifecycle
 tags: ["MySQL", "缓存", "页"]
-created_at: "2026-10-12T19:10:47+08:00"
-updated_at: "2026-10-12T20:47:50+08:00"
+created_at: "2026-10-12 19:10:47"
+updated_at: "2026-10-12 20:47:50"
 reading_suggestions:
   - mysql-buffer-replacement
   - mysql-manual-buffer-pool

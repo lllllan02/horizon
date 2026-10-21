@@ -4,9 +4,9 @@ category: "MySQL"
 parent: mysql-interview-index
 tags: ["面试", "MySQL", "性能排查"]
 learning_status: organized
-created_at: "2026-10-19T17:36:41+08:00"
-updated_at: "2026-10-19T17:39:39+08:00"
-learning_status_changed_at: "2026-10-19T19:19:23.674+08:00"
+created_at: "2026-10-19 17:36:41"
+updated_at: "2026-10-19 17:39:39"
+learning_status_changed_at: "2026-10-19 19:19:23.674"
 ---
 
 先通过[[mysql-slow-query-sources#慢查询日志负责定位候选|慢查询日志]]定位具体 SQL，再用[[mysql-explain-interview|EXPLAIN]] 看索引使用、扫描行数和排序等开销。

@@ -6,13 +6,13 @@ aliases: ["Agent Task State", "Task State"]
 category: "Agent"
 tags: ["Agent", "状态管理"]
 created_at: "2026-10-09"
-updated_at: "2026-10-17T19:44:45+08:00"
+updated_at: "2026-10-17 19:44:45"
 reading_suggestions:
   - agent-context
   - agent-task-state-update
   - langchain-todo-state-summary
   - context-loading
-learning_status_changed_at: "2026-10-17T20:17:20.049+08:00"
+learning_status_changed_at: "2026-10-17 20:17:20.049"
 ---
 
 **Agent 任务状态（Task State）是对当前任务的有效要求、执行进展和关键判断的显式记录。**

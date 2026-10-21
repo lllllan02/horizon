@@ -3,8 +3,8 @@ title: "Mem0 论文：事实提取、更新决策与图记忆"
 parent: agent-memory
 category: "Agent"
 tags: ["Agent", "记忆", "检索"]
-created_at: "2026-10-13T10:44:40+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-13 10:44:40"
+updated_at: "2026-10-13 12:48:15"
 source: "https://arxiv.org/html/2504.19413v1"
 reading_suggestions:
   - mem0-memory

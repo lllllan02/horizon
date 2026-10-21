@@ -3,8 +3,8 @@ title: "Redis Streams：按游标补读与实时订阅的边界"
 category: "Redis"
 tags: ["Redis", "消息队列"]
 learning_status: pending
-created_at: "2026-10-20T16:07:29+08:00"
-updated_at: "2026-10-20T16:07:29+08:00"
+created_at: "2026-10-20 16:07:29"
+updated_at: "2026-10-20 16:07:29"
 source:
   - "https://redis.io/docs/latest/commands/xread/"
   - "https://redis.io/docs/latest/commands/xtrim/"

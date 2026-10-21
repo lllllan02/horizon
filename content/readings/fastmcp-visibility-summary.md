@@ -4,7 +4,7 @@ parent: mcp-permissions
 category: "Agent"
 tags: ["MCP", "工具调用"]
 created_at: "2026-10-10"
-updated_at: "2026-10-13T12:48:15+08:00"
+updated_at: "2026-10-13 12:48:15"
 source:
   - "[Component Visibility](https://gofastmcp.com/servers/visibility)"
   - "[Tools 的可见性说明](https://gofastmcp.com/servers/tools#component-visibility)"

@@ -5,7 +5,7 @@ parent: tool-calling
 category: "Agent"
 tags: ["Agent", "工具调用", "权限"]
 created_at: "2026-10-10"
-updated_at: "2026-10-17T15:08:33+08:00"
+updated_at: "2026-10-17 15:08:33"
 reading_suggestions:
   - tool-approvals
   - openfga-agent-authorization-summary

@@ -3,8 +3,8 @@ title: "Graphiti：随时间变化的事实图"
 parent: agent-memory
 category: "Agent"
 tags: ["Agent", "记忆", "检索"]
-created_at: "2026-10-12T23:24:47+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-12 23:24:47"
+updated_at: "2026-10-13 12:48:15"
 source:
   - "https://github.com/getzep/graphiti"
   - "https://github.com/getzep/graphiti/blob/main/graphiti_core/edges.py"

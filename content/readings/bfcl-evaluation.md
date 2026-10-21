@@ -2,8 +2,8 @@
 title: "BFCL V3：多轮工具调用与状态检查"
 category: "Agent"
 tags: ["Agent", "评测"]
-created_at: "2026-10-13T10:54:39+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-13 10:54:39"
+updated_at: "2026-10-13 12:48:15"
 source: ["https://gorilla.cs.berkeley.edu/blogs/13_bfcl_v3_multi_turn.html"]
 ---
 

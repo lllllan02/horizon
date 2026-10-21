@@ -1,6 +1,6 @@
 ---
 title: "视界（Horizon）"
-updated_at: "2026-10-18T20:56:57+08:00"
+updated_at: "2026-10-18 20:56:57"
 category: "知识库管理"
 tags: ["知识库", "Obsidian", "项目使用", "服务启动"]
 ---

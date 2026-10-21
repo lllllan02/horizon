@@ -2,8 +2,8 @@
 title: "Anthropic：用分类提示与结构化输出处理用户请求"
 category: "Agent"
 tags: ["Agent", "意图识别", "工具调用"]
-created_at: "2026-10-13T17:38:39+08:00"
-updated_at: "2026-10-14T13:59:35+08:00"
+created_at: "2026-10-13 17:38:39"
+updated_at: "2026-10-14 13:59:35"
 source:
   - "[Ticket routing](https://platform.claude.com/docs/en/about-claude/use-case-guides/ticket-routing)"
   - "[Structured outputs](https://platform.claude.com/docs/en/build-with-claude/structured-outputs)"

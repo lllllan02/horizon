@@ -4,8 +4,8 @@ category: "MySQL"
 tags: ["MySQL", "死锁", "事务", "性能排查"]
 type: article
 learning_status: pending
-created_at: "2026-10-18T11:52:26+08:00"
-updated_at: "2026-10-18T20:45:54+08:00"
+created_at: "2026-10-18 11:52:26"
+updated_at: "2026-10-18 20:45:54"
 source:
   - "https://dev.mysql.com/doc/refman/8.4/en/innodb-deadlock-example.html"
   - "https://dev.mysql.com/doc/refman/8.4/en/innodb-deadlocks-handling.html"

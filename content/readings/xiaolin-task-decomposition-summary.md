@@ -2,8 +2,8 @@
 title: "小林：任务拆分为什么有用"
 category: "Agent"
 tags: ["Agent", "任务规划"]
-created_at: "2026-10-18T11:40:08+08:00"
-updated_at: "2026-10-18T11:40:08+08:00"
+created_at: "2026-10-18 11:40:08"
+updated_at: "2026-10-18 11:40:08"
 learning_status: pending
 source: "[小林coding：复杂任务怎么做任务拆分？为什么要拆分？效果如何提升？](https://xiaolinnote.com/ai/agent/7_tasksplit.html)"
 ---

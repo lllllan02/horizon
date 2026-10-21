@@ -29,6 +29,23 @@ test('首次启动只回填明确日期，已有图片仅建基线；重复读�
   assert.equal(metadataEvents([{id:'b',title:'B',collection:'readings',updated:'2026-10-02'}]).length,1);
 });
 
+test('新活动使用北京时间毫秒记录，旧时间表示保留原值',async t=>{
+  const root=await fixture(t);
+  const file=path.join(root,'notes/a.md');
+  const legacy='2026-10-01T00:00:00Z';
+  await writeFile(file,`---\ntitle: A\ncreated_at: ${legacy}\n---\n正文`);
+  const initial=await activityForLibrary(root,await loadLibrary(root),{observe:true,now:legacy});
+  await writeFile(file,`---\ntitle: A\ncreated_at: ${legacy}\n---\n修改正文`);
+  t.mock.method(Date,'now',()=>Date.parse('2026-10-20T16:00:00.123Z'));
+  const updated=await activityForLibrary(root,await loadLibrary(root),{observe:true});
+  assert.equal(updated.startedAt,legacy);
+  assert.deepEqual(updated.events.slice(0,initial.events.length),initial.events);
+  assert.equal(updated.events.at(-1).time,'2026-10-21 00:00:00.123');
+  const newRoot=await fixture(t);
+  const fresh=await activityForLibrary(newRoot,await loadLibrary(newRoot),{observe:true});
+  assert.equal(fresh.startedAt,'2026-10-21 00:00:00.123');
+});
+
 test('记录跨目录迁移、正文变更及新配图和格式，目录筛选不重复计数',async t=>{
   const root=await fixture(t);
   await writeFile(path.join(root,'readings/a.md'),raw);

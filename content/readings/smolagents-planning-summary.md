@@ -3,8 +3,8 @@ parent: agent-replanning
 title: "smolagents：按行动步数更新计划"
 category: "Agent"
 tags: ["Agent", "任务规划"]
-created_at: "2026-10-12T00:56:04+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-12 00:56:04"
+updated_at: "2026-10-13 12:48:15"
 source:
   - "[agents.py（v1.18.0）](https://github.com/huggingface/smolagents/blob/v1.18.0/src/smolagents/agents.py)"
   - "[Agents API（v1.18.0）](https://huggingface.co/docs/smolagents/v1.18.0/reference/agents)"

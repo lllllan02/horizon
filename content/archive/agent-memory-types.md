@@ -4,7 +4,7 @@ title: "长期记忆的内容分类"
 category: "Agent"
 tags: ["Agent", "记忆"]
 created_at: "2026-10-09"
-updated_at: "2026-10-17T22:23:30+08:00"
+updated_at: "2026-10-17 22:23:30"
 ---
 
 **长期记忆按内容和用途分类，是为了决定信息怎样保存、怎样找到，以及取出后怎样使用。** 语义、情景和程序性记忆分别服务于事实查询、经验参考和方法执行。[内容分类的定义](https://docs.langchain.com/oss/python/concepts/memory#long-term-memory)

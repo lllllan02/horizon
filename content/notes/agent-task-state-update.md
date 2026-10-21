@@ -5,12 +5,12 @@ title: "任务状态更新与冲突"
 category: "Agent"
 tags: ["Agent", "状态管理"]
 created_at: "2026-10-09"
-updated_at: "2026-10-17T20:19:49+08:00"
+updated_at: "2026-10-17 20:19:49"
 reading_suggestions:
   - agent-task-state
   - agent-replanning
   - openai-instruction-updates-summary
-learning_status_changed_at: "2026-10-17T20:22:38.210+08:00"
+learning_status_changed_at: "2026-10-17 20:22:38.210"
 ---
 
 **模型依据新信息判断任务状态该改什么，程序校验并保存。更新只改变受影响的内容，保留仍有效的要求与结果，并留下可恢复的历史。**

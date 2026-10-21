@@ -5,9 +5,9 @@ parent: interview-hub
 tags: ["面试", "Redis"]
 type: overview
 learning_status: organized
-created_at: "2026-10-19T10:51:27+08:00"
-updated_at: "2026-10-19T21:05:27+08:00"
-learning_status_changed_at: "2026-10-21T10:12:32.067+08:00"
+created_at: "2026-10-19 10:51:27"
+updated_at: "2026-10-19 21:05:27"
+learning_status_changed_at: "2026-10-21 10:12:32.067"
 ---
 
 围绕 Redis 的运行机制、集群与缓存使用整理已保存的面试题。

@@ -3,8 +3,8 @@ title: "LangChain：从模型的限制推导 Harness 的组成"
 parent: agent-harness
 category: "Agent"
 tags: ["Agent", "Harness"]
-created_at: "2026-10-11T11:46:46+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-11 11:46:46"
+updated_at: "2026-10-13 12:48:15"
 source: "[The Anatomy of an Agent Harness](https://www.langchain.com/blog/the-anatomy-of-an-agent-harness)"
 ---
 

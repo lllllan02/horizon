@@ -6,9 +6,9 @@ parent: interview-hub
 tags: ["面试", "MySQL"]
 type: overview
 learning_status: organized
-created_at: "2026-10-18T12:06:30+08:00"
-updated_at: "2026-10-20T21:14:30+08:00"
-learning_status_changed_at: "2026-10-21T10:11:21.744+08:00"
+created_at: "2026-10-18 12:06:30"
+updated_at: "2026-10-20 21:14:30"
+learning_status_changed_at: "2026-10-21 10:11:21.744"
 ---
 
 按主题整理 MySQL 面试问题与追问，每道题保留简短、自然的口述回答，原理和排查细节由题目中的链接承接。
@@ -26,6 +26,7 @@ learning_status_changed_at: "2026-10-21T10:11:21.744+08:00"
 - [[mysql-index-structure-interview|MySQL 的索引结构是什么？]]
 - [[mysql-covering-index-interview|什么是覆盖索引？]]
 - [[mysql-deep-pagination-interview|MySQL 深分页怎么优化？]]
+  - [[mysql-filter-pagination-interview|MySQL 多条件查询如何支持任意跳页？]]
 - [[mysql-slow-query-interview|MySQL 慢查询一般怎么优化？]]
 - [[mysql-explain-interview|怎么看 MySQL 的 EXPLAIN？]]
 

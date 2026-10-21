@@ -4,8 +4,8 @@ title: "分批读取与导出"
 category: "MySQL"
 parent: mysql-index-pagination
 tags: ["SQL优化", "分页"]
-created_at: "2026-10-12T17:56:27+08:00"
-updated_at: "2026-10-12T17:56:27+08:00"
+created_at: "2026-10-12 17:56:27"
+updated_at: "2026-10-12 17:56:27"
 reading_suggestions:
   - mysql-index-pagination
   - mysql-manual-queries

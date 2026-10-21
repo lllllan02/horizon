@@ -4,8 +4,8 @@ title: "LangGraph：检查点怎样保存执行进度"
 parent: agent-checkpoint-recovery
 category: "Agent"
 tags: ["Agent", "Checkpoint", "持久化"]
-created_at: "2026-10-13T10:59:51+08:00"
-updated_at: "2026-10-17T21:37:05+08:00"
+created_at: "2026-10-13 10:59:51"
+updated_at: "2026-10-17 21:37:05"
 source:
   - "https://docs.langchain.com/oss/python/langgraph/persistence"
   - "https://docs.langchain.com/oss/python/langgraph/checkpointers"

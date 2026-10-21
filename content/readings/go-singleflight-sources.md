@@ -3,8 +3,8 @@ title: "Go 官方源码导读：Singleflight 请求合并"
 category: "Go"
 tags: ["Go"]
 learning_status: pending
-created_at: "2026-10-19T17:32:33+08:00"
-updated_at: "2026-10-19T19:20:51+08:00"
+created_at: "2026-10-19 17:32:33"
+updated_at: "2026-10-19 19:20:51"
 source:
   - "https://github.com/golang/sync/blob/master/singleflight/singleflight.go"
   - "https://pkg.go.dev/golang.org/x/sync/singleflight"

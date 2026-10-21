@@ -3,7 +3,7 @@ learning_status: pending
 title: "EXPLAIN 执行计划读法"
 category: "MySQL"
 parent: mysql-query-plans
-updated_at: "2026-10-12T22:52:51+08:00"
+updated_at: "2026-10-12 22:52:51"
 tags: ["MySQL", "执行计划", "SQL优化"]
 aliases: ["EXPLAIN 字段与取值", "怎么读 EXPLAIN 结果", "EXPLAIN 读法", "EXPLAIN 字段"]
 reading_suggestions:

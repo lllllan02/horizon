@@ -3,8 +3,8 @@ title: "Redis：限流算法的窗口、突发与排队"
 category: "服务治理"
 tags: ["Redis", "限流", "过载保护"]
 learning_status: pending
-created_at: "2026-10-19T16:19:44+08:00"
-updated_at: "2026-10-19T16:19:44+08:00"
+created_at: "2026-10-19 16:19:44"
+updated_at: "2026-10-19 16:19:44"
 source: "https://redis.io/tutorials/howtos/ratelimiting/"
 ---
 

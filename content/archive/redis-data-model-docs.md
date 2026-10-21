@@ -7,8 +7,8 @@ source:
   - "https://redis.io/docs/latest/commands/object-encoding/"
   - "https://redis.io/docs/latest/operate/oss_and_stack/management/optimization/memory-optimization/"
   - "https://github.com/redis/redis/tree/7.2.5/src"
-created_at: "2026-10-13T11:03:37+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-13 11:03:37"
+updated_at: "2026-10-13 12:48:15"
 ---
 
 本导读选取 API 类型与内存编码之间的关系，源码定位固定到 Redis 7.2.5；官方 `latest` 页面会继续变化，不能将其中新增类型或命令都视为旧版本能力。

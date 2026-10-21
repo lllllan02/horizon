@@ -4,8 +4,8 @@ category: "MySQL"
 tags: ["分库分表"]
 type: article
 learning_status: pending
-created_at: "2026-10-19T22:32:18+08:00"
-updated_at: "2026-10-20T10:44:42+08:00"
+created_at: "2026-10-19 22:32:18"
+updated_at: "2026-10-20 10:44:42"
 source:
   - "https://dev.mysql.com/doc/refman/8.4/en/optimize-blob.html"
   - "https://dev.mysql.com/doc/refman/8.4/en/memory-use.html"

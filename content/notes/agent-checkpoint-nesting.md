@@ -4,11 +4,11 @@ parent: agent-checkpoint-recovery
 category: "Agent"
 tags: ["Agent", "Checkpoint", "持久化", "多Agent协作"]
 learning_status: organized
-created_at: "2026-10-19T21:23:30+08:00"
-updated_at: "2026-10-19T21:37:28+08:00"
+created_at: "2026-10-19 21:23:30"
+updated_at: "2026-10-19 21:37:28"
 reading_suggestions:
   - agent-checkpoint-runtime
-learning_status_changed_at: "2026-10-19T21:48:08.027+08:00"
+learning_status_changed_at: "2026-10-19 21:48:08.027"
 ---
 
 把[[multi-agent#调用与通信|子 Agent 包装成工具]]后，父层的工具下标只能定位到这个调用，无法表达子 Agent 内部执行到哪里。**需要将单份进度扩成父子调用链，每层保留自己的执行位置。**

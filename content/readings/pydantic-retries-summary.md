@@ -4,7 +4,7 @@ parent: agent-retry
 category: "Agent"
 tags: ["Agent", "重试"]
 created_at: "2026-10-10"
-updated_at: "2026-10-13T12:48:15+08:00"
+updated_at: "2026-10-13 12:48:15"
 source: "[Retries](https://pydantic.dev/docs/ai/core-concepts/retries/)"
 reading_suggestions:
   - pydantic-tool-execution-summary

@@ -6,8 +6,8 @@ source:
   - "https://redis.io/docs/latest/develop/pubsub/"
   - "https://redis.io/docs/latest/develop/data-types/streams/"
   - "https://redis.io/docs/latest/develop/use-cases/streaming/"
-created_at: "2026-10-13T11:03:37+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-13 11:03:37"
+updated_at: "2026-10-13 12:48:15"
 ---
 
 本导读围绕断线与消费者失败后的处理，Stream 部分采用 7.2 可用的 XREADGROUP、XACK、XPENDING 和 XAUTOCLAIM 语义；不将 `latest` 中新增的确认或删除选项套入旧版本。

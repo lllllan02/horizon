@@ -4,8 +4,8 @@ parent: agent-trace
 title: "Agent Span 生命周期"
 category: "Agent"
 tags: ["Agent", "Trace", "可观测性", "埋点"]
-created_at: "2026-10-13T01:06:26+08:00"
-updated_at: "2026-10-13T01:35:20+08:00"
+created_at: "2026-10-13 01:06:26"
+updated_at: "2026-10-13 01:35:20"
 reading_suggestions:
   - trace-and-span
   - agent-trace-structure

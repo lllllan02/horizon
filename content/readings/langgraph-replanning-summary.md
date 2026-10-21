@@ -3,8 +3,8 @@ parent: agent-replanning
 title: "LangGraph：每步执行后的 Replan 节点"
 category: "Agent"
 tags: ["Agent", "任务规划"]
-created_at: "2026-10-12T00:56:04+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-12 00:56:04"
+updated_at: "2026-10-13 12:48:15"
 source: "[Plan-and-Execute 官方示例（0.2.0 标签）](https://github.com/langchain-ai/langgraph/blob/0.2.0/examples/plan-and-execute/plan-and-execute.ipynb)"
 ---
 

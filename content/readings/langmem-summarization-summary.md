@@ -4,8 +4,8 @@ aliases: ["How to Manage Long Context with Summarization", "RunningSummary", "Su
 parent: context-compaction
 category: "Agent"
 tags: ["上下文管理", "文本压缩"]
-created_at: "2026-10-11T16:33:09+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-11 16:33:09"
+updated_at: "2026-10-13 12:48:15"
 source:
   - "https://langchain-ai.github.io/langmem/guides/summarization/"
   - "https://langchain-ai.github.io/langmem/reference/short_term/"

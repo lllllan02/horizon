@@ -4,8 +4,8 @@ title: "InnoDB 脏页写回与检查点"
 category: "MySQL"
 parent: mysql-buffer-pool-lifecycle
 tags: ["MySQL", "持久化", "页"]
-created_at: "2026-10-12T19:10:47+08:00"
-updated_at: "2026-10-12T20:55:22+08:00"
+created_at: "2026-10-12 19:10:47"
+updated_at: "2026-10-12 20:55:22"
 reading_suggestions:
   - wal
   - mysql-manual-buffer-pool

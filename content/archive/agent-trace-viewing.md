@@ -4,8 +4,8 @@ parent: agent-trace
 title: "Langfuse Trace 查看"
 category: "Agent"
 tags: ["Agent", "Trace", "可观测性"]
-created_at: "2026-10-13T01:24:08+08:00"
-updated_at: "2026-10-13T01:24:08+08:00"
+created_at: "2026-10-13 01:24:08"
+updated_at: "2026-10-13 01:24:08"
 reading_suggestions:
   - agent-trace-structure
   - agent-trace-capture

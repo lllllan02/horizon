@@ -27,6 +27,63 @@ test.afterAll(async () => {
   if (root) await rm(root, { recursive: true, force: true });
 });
 
+test('运行中新增已整理资料从空队列自动进入复习，并在后续推荐中持续可用', async ({
+  page,
+}, testInfo) => {
+  test.skip(testInfo.project.name !== 'wide', '本地内容与复习同步单独覆盖一次');
+  const dir = await mkdtemp(path.join(os.tmpdir(), 'horizon-live-review-'));
+  let service: Awaited<ReturnType<typeof startServer>> | undefined;
+  try {
+    await mkdir(path.join(dir, 'notes'));
+    await writeFile(path.join(dir, 'notes/pending.md'), '---\ntitle: 尚未整理\n---\n正文');
+    service = await startServer({ root: dir, port: 0 });
+    const address = service.server.address();
+    if (!address || typeof address === 'string') throw Error('Missing test server');
+    await page.goto(`http://127.0.0.1:${address.port}`);
+    const dock = page.locator('.home-review-card');
+    await expect(dock).toContainText('暂无可复习资料');
+    const timeOrigin = await page.evaluate(() => performance.timeOrigin);
+    const canvas = await page.locator('.galaxy-viewport canvas').elementHandle();
+    const source = (title: string) =>
+      `---\ntitle: ${title}\nlearning_status: organized\n---\n${title}独立正文。`;
+    // This enabled collection did not exist when the server or page started.
+    await mkdir(path.join(dir, 'interviews/nested'), { recursive: true });
+    const first = path.join(dir, 'interviews/nested/live-first.md');
+    await writeFile(first, source('动态第一题'));
+    await expect(dock.locator('.home-review-title')).toHaveText('动态第一题', {
+      timeout: 20000,
+    });
+    await expect(dock).toHaveAttribute('aria-busy', 'false');
+    const nextLibrary = page.waitForResponse(
+      async (response) =>
+        response.url().endsWith('/api/library') &&
+        response.status() === 200 &&
+        (await response.text()).includes('动态第二题'),
+      { timeout: 20000 },
+    );
+    const second = path.join(dir, 'interviews/nested/live-second.md');
+    await writeFile(second, source('动态第二题'));
+    await nextLibrary;
+    // A newly discovered document joins the queue without replacing the active question.
+    await expect(dock.locator('.home-review-title')).toHaveText('动态第一题');
+    await dock.getByRole('button', { name: '记得', exact: true }).click();
+    await expect(dock.locator('.home-review-title')).toHaveText('动态第二题');
+    await expect(dock).toHaveAttribute('aria-busy', 'false');
+    await unlink(second);
+    await expect(dock).toContainText('资料已更新或不再是已整理', { timeout: 20000 });
+    await dock.getByRole('button', { name: '进入下一题', exact: true }).click();
+    await expect(dock.locator('.home-review-title')).toHaveText('动态第一题');
+    expect(await readFile(first, 'utf8')).toBe(source('动态第一题'));
+    expect(await page.evaluate(() => performance.timeOrigin)).toBe(timeOrigin);
+    expect(
+      await page.locator('.galaxy-viewport canvas').evaluate((el, old) => el === old, canvas),
+    ).toBe(true);
+  } finally {
+    await service?.close();
+    await rm(dir, { recursive: true, force: true });
+  }
+});
+
 test('文档、元数据与图谱自动局部更新，保留阅读段落、图表和画布', async ({ page }, testInfo) => {
   test.setTimeout(180000);
   const errors: string[] = [];

@@ -3,8 +3,8 @@ title: "Claude Code：子 Agent 与 Agent Teams"
 parent: multi-agent
 category: "Agent"
 tags: ["Agent", "多Agent协作", "上下文管理"]
-created_at: "2026-10-13T17:41:05+08:00"
-updated_at: "2026-10-20T16:29:17+08:00"
+created_at: "2026-10-13 17:41:05"
+updated_at: "2026-10-20 16:29:17"
 source: ["https://code.claude.com/docs/en/sub-agents", "https://code.claude.com/docs/en/agent-teams"]
 learning_status: pending
 ---

@@ -3,7 +3,7 @@ learning_status: pending
 title: "EXPLAIN 访问类型"
 category: "MySQL"
 parent: mysql-explain-reading
-updated_at: "2026-10-12T22:13:41+08:00"
+updated_at: "2026-10-12 22:13:41"
 tags: ["MySQL", "执行计划", "索引"]
 aliases: ["EXPLAIN type", "MySQL EXPLAIN type", "访问方式"]
 reading_suggestions:

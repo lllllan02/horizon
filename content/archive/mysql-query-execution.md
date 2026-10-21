@@ -4,8 +4,8 @@ title: "MySQL 的 SQL 执行流程"
 category: "MySQL"
 parent: mysql-overview#执行流程与存储
 tags: ["MySQL", "执行计划", "存储引擎"]
-created_at: "2026-10-12T19:05:16+08:00"
-updated_at: "2026-10-12T19:05:16+08:00"
+created_at: "2026-10-12 19:05:16"
+updated_at: "2026-10-12 19:05:16"
 reading_suggestions:
   - mysql-index-structure
   - mysql-buffer-pool-lifecycle

@@ -4,8 +4,8 @@ category: "MySQL"
 parent: mysql-overview#查询与性能
 type: "article"
 tags: ["MySQL", "SQL优化", "性能排查", "Performance Schema"]
-created_at: "2026-10-12T21:32:44+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-12 21:32:44"
+updated_at: "2026-10-13 12:48:15"
 source:
   - "https://dev.mysql.com/doc/refman/8.4/en/slow-query-log.html"
   - "https://docs.oracle.com/cd/E17952_01/mysql-8.4-en/performance-schema.html"

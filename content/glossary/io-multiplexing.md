@@ -4,8 +4,8 @@ aliases: ["I/O Multiplexing", "I/O 多路复用"]
 category: "操作系统"
 tags: ["IO多路复用"]
 learning_status: pending
-created_at: "2026-10-20T19:46:45+08:00"
-updated_at: "2026-10-20T19:46:45+08:00"
+created_at: "2026-10-20 19:46:45"
+updated_at: "2026-10-20 19:46:45"
 ---
 
 **IO 多路复用（I/O Multiplexing）**让一个[[thread|线程]]统一等待多个文件描述符的就绪事件，再处理已经就绪的对象。文件描述符是操作系统用于标识打开的连接、文件等对象的整数。

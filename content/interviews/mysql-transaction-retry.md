@@ -4,9 +4,9 @@ category: "MySQL"
 parent: mysql-interview-index
 tags: ["面试", "MySQL", "事务", "重试"]
 learning_status: organized
-created_at: "2026-10-18T20:24:42+08:00"
-updated_at: "2026-10-18T21:05:08+08:00"
-learning_status_changed_at: "2026-10-18T23:44:17.632+08:00"
+created_at: "2026-10-18 20:24:42"
+updated_at: "2026-10-18 21:05:08"
+learning_status_changed_at: "2026-10-18 23:44:17.632"
 ---
 
 事务执行失败后，可以先根据错误码判断。比如 `1213` 死锁、`1205` 锁等待超时，再试一次有可能成功，这些情况值得做少量重试。

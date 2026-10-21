@@ -4,7 +4,7 @@ title: "Codex 如何测试文件边界与超时清理"
 category: "Agent"
 tags: ["Agent", "沙箱", "源码"]
 created_at: "2026-10-10"
-updated_at: "2026-10-13T12:48:15+08:00"
+updated_at: "2026-10-13 12:48:15"
 source: ["[保护路径测试](https://github.com/openai/codex/blob/5ef96ab2785f3ecddf279639eff7b1b42c906fa4/codex-rs/linux-sandbox/tests/suite/sandbox.rs#L904)", "[Unix 超时清理测试](https://github.com/openai/codex/blob/5ef96ab2785f3ecddf279639eff7b1b42c906fa4/codex-rs/core/src/exec_tests.rs#L1383)"]
 reading_suggestions:
   - sandbox-verification

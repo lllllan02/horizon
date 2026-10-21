@@ -5,9 +5,9 @@ category: "Go"
 parent: go-interview-hub
 tags: ["面试", "Go", "内存管理"]
 learning_status: organized
-created_at: "2026-10-20T20:05:17+08:00"
-updated_at: "2026-10-20T20:05:17+08:00"
-learning_status_changed_at: "2026-10-20T21:02:44.763+08:00"
+created_at: "2026-10-20 20:05:17"
+updated_at: "2026-10-20 20:05:17"
+learning_status_changed_at: "2026-10-20 21:02:44.763"
 ---
 
 Go 有 GC，但仍然可能发生[[memory-leak|内存泄漏]]：**业务已经不用的内存，只要仍被引用，GC 就无法回收。** 常见原因可以从三个方向来看：

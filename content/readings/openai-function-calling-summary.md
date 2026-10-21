@@ -4,8 +4,8 @@ parent: tool-calling
 category: "Agent"
 tags: ["Agent", "工具调用"]
 read: true
-created_at: "2026-10-17T00:32:36+08:00"
-updated_at: "2026-10-17T00:32:36+08:00"
+created_at: "2026-10-17 00:32:36"
+updated_at: "2026-10-17 00:32:36"
 source: "https://developers.openai.com/api/docs/guides/function-calling"
 ---
 

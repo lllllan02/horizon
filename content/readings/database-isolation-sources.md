@@ -4,8 +4,8 @@ category: "MySQL"
 tags: ["MySQL", "事务"]
 type: article
 learning_status: pending
-created_at: "2026-10-19T22:40:16+08:00"
-updated_at: "2026-10-20T21:14:30+08:00"
+created_at: "2026-10-19 22:40:16"
+updated_at: "2026-10-20 21:14:30"
 source:
   - "https://www.postgresql.org/docs/17/transaction-iso.html"
   - "https://dev.mysql.com/doc/refman/8.4/en/innodb-transaction-isolation-levels.html"

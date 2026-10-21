@@ -4,9 +4,9 @@ category: "Go"
 parent: go-interview-hub
 tags: ["面试", "Go"]
 learning_status: organized
-created_at: "2026-10-19T16:12:35+08:00"
-updated_at: "2026-10-19T16:12:35+08:00"
-learning_status_changed_at: "2026-10-19T16:18:34.657+08:00"
+created_at: "2026-10-19 16:12:35"
+updated_at: "2026-10-19 16:12:35"
+learning_status_changed_at: "2026-10-19 16:18:34.657"
 ---
 
 这两种锁都是用来保护共享数据的，避免多个 [[coroutine#Go 的 goroutine|goroutine]] 同时访问时出问题。

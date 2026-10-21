@@ -4,8 +4,8 @@ title: "B+ 树与哈希索引"
 category: "MySQL"
 parent: mysql-index-structure
 tags: ["MySQL", "B+树", "索引"]
-created_at: "2026-10-12T15:25:39+08:00"
-updated_at: "2026-10-12T15:59:40+08:00"
+created_at: "2026-10-12 15:25:39"
+updated_at: "2026-10-12 15:59:40"
 reading_suggestions:
   - mysql-manual-queries
 ---

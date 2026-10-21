@@ -4,8 +4,8 @@ title: "JOIN 与索引"
 category: "MySQL"
 parent: mysql-indexes
 tags: ["索引", "SQL优化", "JOIN"]
-created_at: "2026-10-12T17:42:58+08:00"
-updated_at: "2026-10-12T17:42:58+08:00"
+created_at: "2026-10-12 17:42:58"
+updated_at: "2026-10-12 17:42:58"
 reading_suggestions:
   - mysql-index-access-cost
   - mysql-manual-queries

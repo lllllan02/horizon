@@ -5,9 +5,9 @@ category: "MySQL"
 parent: mysql-interview-index
 tags: ["面试", "MySQL", "事务"]
 learning_status: organized
-created_at: "2026-10-20T21:14:30+08:00"
-updated_at: "2026-10-20T21:17:10+08:00"
-learning_status_changed_at: "2026-10-20T21:17:55.048+08:00"
+created_at: "2026-10-20 21:14:30"
+updated_at: "2026-10-20 21:17:10"
+learning_status_changed_at: "2026-10-20 21:17:55.048"
 ---
 
 [[database-isolation-sources#多版本读取与锁的分工|MVCC]] 的主要目的，是在满足[[database-isolation-interview|事务隔离要求]]的同时，减少读写之间的阻塞。

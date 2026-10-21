@@ -2,8 +2,8 @@
 title: "WAL 官方文档导读：持久化顺序、提交与恢复"
 category: "数据存储"
 tags: ["数据库", "持久化"]
-created_at: "2026-10-12T19:55:54+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-12 19:55:54"
+updated_at: "2026-10-13 12:48:15"
 source:
   - "https://www.postgresql.org/docs/16/wal-intro.html"
   - "https://www.postgresql.org/docs/16/wal-async-commit.html"

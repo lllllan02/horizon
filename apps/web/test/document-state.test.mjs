@@ -1,4 +1,5 @@
 import test from 'node:test';
+import {documentTime} from '../src/document-dates.ts';
 import assert from 'node:assert/strict';
 import {isLocalWriteRequest} from '../src/update-document-state.ts';
 test('本地写接口必须同源 JSON，拒绝跨站、缺 Origin 和伪造 Host',()=>{
@@ -231,7 +232,7 @@ test('实际状态变化记录独立时间，重复设置同状态及正文编�
   await writeFile(file,'---\nlearning_status: pending\nupdated_at: "2026-01-01"\n---\n正文');
   let lib=await updateDocumentState(root,await request(root,'a','reading'));
   const time=lib.documents[0].stateChangedAt;
-  assert.match(time,/^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{3}\+08:00$/);
+  assert.match(time,/^\d{4}-\d\d-\d\d \d\d:\d\d:\d\d\.\d{3}$/);
   const raw=await readFile(file,'utf8');
   assert.match(raw,/learning_status_changed_at: "/);
   assert.equal(lib.documents[0].updated,'2026-01-01');
@@ -241,6 +242,6 @@ test('实际状态变化记录独立时间，重复设置同状态及正文编�
   lib=await loadLibrary(root);
   assert.equal(lib.documents[0].stateChangedAt,time);
   lib=await updateDocumentState(root,await request(root,'a','organized'));
-  assert.ok(Date.parse(lib.documents[0].stateChangedAt)>=Date.parse(time));
+  assert.ok(documentTime(lib.documents[0].stateChangedAt)>=documentTime(time));
   assert.equal(lib.documents[0].body,'修改正文');
 });

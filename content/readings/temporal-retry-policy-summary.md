@@ -3,7 +3,7 @@ title: "Temporal：用策略约束重试与停止条件"
 category: "分布式系统"
 tags: ["重试", "超时"]
 created_at: "2026-10-10"
-updated_at: "2026-10-13T12:48:15+08:00"
+updated_at: "2026-10-13 12:48:15"
 source: "[Retry Policies](https://docs.temporal.io/encyclopedia/retry-policies)"
 ---
 

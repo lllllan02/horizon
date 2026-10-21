@@ -5,9 +5,9 @@ category: "Go"
 parent: go-interview-hub
 tags: ["面试", "Go", "并发"]
 learning_status: organized
-created_at: "2026-10-20T18:29:13+08:00"
-updated_at: "2026-10-20T18:36:26+08:00"
-learning_status_changed_at: "2026-10-20T19:19:40.376+08:00"
+created_at: "2026-10-20 18:29:13"
+updated_at: "2026-10-20 18:36:26"
+learning_status_changed_at: "2026-10-20 19:19:40.376"
 ---
 
 协程池是让一组 [[coroutine#Go 的 goroutine|goroutine]] 持续接收并执行任务，避免为每个任务都新建协程。我会用「**固定数量的工作协程＋有界任务队列**」实现，在复用协程的同时，[[concurrency-control|限制任务并发]]和排队数量，避免任务不断堆积。

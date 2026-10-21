@@ -4,9 +4,9 @@ category: "Redis"
 parent: redis-interview-index
 tags: ["面试", "Redis"]
 learning_status: organized
-created_at: "2026-10-19T20:27:42+08:00"
-updated_at: "2026-10-19T20:27:42+08:00"
-learning_status_changed_at: "2026-10-19T20:35:24.694+08:00"
+created_at: "2026-10-19 20:27:42"
+updated_at: "2026-10-19 20:27:42"
+learning_status_changed_at: "2026-10-19 20:35:24.694"
 ---
 
 支持 [[redis-cluster-interview|Redis Cluster]] 的客户端连接集群后，会查询并缓存**「哈希槽和节点的映射」**。读写一个 key 时，先算出它属于哪个槽，再按照映射访问对应节点。

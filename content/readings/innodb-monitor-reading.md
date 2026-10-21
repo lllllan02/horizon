@@ -4,8 +4,8 @@ category: "MySQL"
 tags: ["MySQL", "性能排查", "事务"]
 type: article
 learning_status: pending
-created_at: "2026-10-18T12:09:26+08:00"
-updated_at: "2026-10-18T12:09:26+08:00"
+created_at: "2026-10-18 12:09:26"
+updated_at: "2026-10-18 12:09:26"
 source:
   - "https://docs.oracle.com/cd/E17952_01/mysql-8.4-en/show-engine.html"
   - "https://docs.oracle.com/cd/E17952_01/mysql-8.4-en/innodb-standard-monitor.html"

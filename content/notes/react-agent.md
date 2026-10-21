@@ -6,7 +6,7 @@ aliases: ["ReAct", "Reasoning and Acting"]
 category: "Agent"
 tags: ["Agent", "ReAct", "执行模式"]
 created_at: "2026-10-09"
-updated_at: "2026-10-17T17:48:56+08:00"
+updated_at: "2026-10-17 17:48:56"
 reading_suggestions:
   - agent-loop
   - react-paper-summary

@@ -5,8 +5,8 @@ parent: agent-intent
 category: "Agent"
 tags: ["Agent", "意图识别", "状态管理"]
 learning_status: pending
-created_at: "2026-10-13T17:38:42+08:00"
-updated_at: "2026-10-17T14:37:11+08:00"
+created_at: "2026-10-13 17:38:42"
+updated_at: "2026-10-17 14:37:11"
 reading_suggestions:
   - dialogflow-intent-design
   - rasa-slots

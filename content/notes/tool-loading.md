@@ -6,7 +6,7 @@ aliases: ["工具延迟加载", "Deferred Tool Loading"]
 category: "Agent"
 tags: ["Agent", "工具调用", "按需加载"]
 created_at: "2026-10-09"
-updated_at: "2026-10-17T12:19:10+08:00"
+updated_at: "2026-10-17 12:19:10"
 reading_suggestions:
   - tool-registry
   - claude-tool-search

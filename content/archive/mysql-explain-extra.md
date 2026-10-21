@@ -3,7 +3,7 @@ learning_status: pending
 title: "EXPLAIN 附加信息"
 category: "MySQL"
 parent: mysql-explain-reading
-updated_at: "2026-10-12T22:13:41+08:00"
+updated_at: "2026-10-12 22:13:41"
 tags: ["MySQL", "执行计划", "SQL优化"]
 aliases: ["EXPLAIN Extra", "MySQL EXPLAIN Extra"]
 reading_suggestions:

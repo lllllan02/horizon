@@ -5,9 +5,9 @@ category: "计算机基础"
 parent: interview-hub
 tags: ["面试", "并发", "调度"]
 learning_status: organized
-created_at: "2026-10-20T22:51:31+08:00"
-updated_at: "2026-10-20T22:51:31+08:00"
-learning_status_changed_at: "2026-10-20T22:56:04.264+08:00"
+created_at: "2026-10-20 22:51:31"
+updated_at: "2026-10-20 22:51:31"
+learning_status_changed_at: "2026-10-20 22:56:04.264"
 ---
 
 上下文是任务继续执行所需的状态，包括程序计数器、寄存器、栈指针等。这里的任务指操作系统调度的[[thread|线程]]。

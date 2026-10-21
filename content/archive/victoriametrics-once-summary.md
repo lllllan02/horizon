@@ -1,7 +1,7 @@
 ---
 title: "VictoriaMetrics：Once：执行一次与完成可见性"
 category: "Go"
-updated_at: "2026-10-13T12:48:15+08:00"
+updated_at: "2026-10-13 12:48:15"
 tags: ["Go", "Once", "初始化"]
 aliases: ["sync.Once"]
 parent: victoriametrics-go-concurrency

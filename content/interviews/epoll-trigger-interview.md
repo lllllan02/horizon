@@ -5,9 +5,9 @@ category: "操作系统"
 parent: interview-hub
 tags: ["面试"]
 learning_status: organized
-created_at: "2026-10-20T19:43:28+08:00"
-updated_at: "2026-10-21T10:12:02+08:00"
-learning_status_changed_at: "2026-10-21T10:14:17.996+08:00"
+created_at: "2026-10-20 19:43:28"
+updated_at: "2026-10-21 10:12:02"
+learning_status_changed_at: "2026-10-21 10:14:17.996"
 ---
 
 [[epoll|epoll]]用来通知程序哪些连接可以读写，实际数据仍由程序自己读写。它有[[linux-io-sources#epoll 的触发方式|水平触发（LT）和边缘触发（ET）]]两种方式，默认是 LT。

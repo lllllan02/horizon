@@ -5,7 +5,7 @@ category: "RAG"
 tags: ["RAG"]
 type: "overview"
 aliases: ["RAG", "检索增强生成", "Retrieval-Augmented Generation"]
-updated_at: "2026-10-13T10:54:36+08:00"
+updated_at: "2026-10-13 10:54:36"
 ---
 
 **RAG（Retrieval-Augmented Generation）是在生成回答时检索外部资料，并把取回内容作为证据提供给模型的方法。** 它让回答可以使用模型训练之后更新的资料，也能联系到具体来源；正确性仍取决于资料、检索和证据使用。

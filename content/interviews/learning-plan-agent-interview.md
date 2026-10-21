@@ -6,9 +6,9 @@ parent: personal-output-index
 tags: ["面试", "项目经历", "Agent"]
 type: practice
 learning_status: organized
-created_at: "2026-10-20T11:35:19+08:00"
-updated_at: "2026-10-20T12:49:36+08:00"
-learning_status_changed_at: "2026-10-20T12:52:20.514+08:00"
+created_at: "2026-10-20 11:35:19"
+updated_at: "2026-10-20 12:49:36"
+learning_status_changed_at: "2026-10-20 12:52:20.514"
 ---
 
 ## 项目与整体编排

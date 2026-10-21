@@ -4,8 +4,8 @@ category: "MySQL"
 parent: mysql-overview
 type: "article"
 tags: ["MySQL", "索引", "执行计划", "SQL优化"]
-created_at: "2026-10-12T14:03:16+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-12 14:03:16"
+updated_at: "2026-10-13 12:48:15"
 source:
   - "https://dev.mysql.com/blog-archive/mysql-explain-analyze/"
   - "https://docs.oracle.com/cd/E17952_01/mysql-8.4-en/optimizer-statistics.html"

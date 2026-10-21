@@ -3,8 +3,8 @@ title: "OpenDSA：B 树与 B+ 树"
 category: "数据结构"
 type: "article"
 tags: ["B+树", "数据结构"]
-created_at: "2026-10-12T15:23:55+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-12 15:23:55"
+updated_at: "2026-10-13 12:48:15"
 source: "https://opendsa-server.cs.vt.edu/ODSA/Books/CS3/html/BTree.html"
 ---
 

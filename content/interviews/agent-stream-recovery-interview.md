@@ -6,9 +6,9 @@ parent: agent-interview-hub
 tags: ["面试", "Agent"]
 type: practice
 learning_status: organized
-created_at: "2026-10-20T16:07:29+08:00"
-updated_at: "2026-10-20T16:12:06+08:00"
-learning_status_changed_at: "2026-10-20T16:13:17.502+08:00"
+created_at: "2026-10-20 16:07:29"
+updated_at: "2026-10-20 16:12:06"
+learning_status_changed_at: "2026-10-20 16:13:17.502"
 ---
 
 Session 对应一次会话，run 对应其中的一次任务。刷新或重连后，我会先通过 Session ID 找回会话，再查询要恢复的 Run ID。按会话或 run 订阅都可以，但事件里要带上 Run ID，避免不同轮次的输出混在一起。

@@ -4,8 +4,8 @@ title: "InnoDB 聚簇键选择"
 category: "MySQL"
 parent: mysql-clustered-index
 tags: ["MySQL", "聚簇索引", "主键"]
-created_at: "2026-10-12T16:12:02+08:00"
-updated_at: "2026-10-12T16:12:02+08:00"
+created_at: "2026-10-12 16:12:02"
+updated_at: "2026-10-12 16:12:02"
 reading_suggestions:
   - mysql-manual-queries
 ---

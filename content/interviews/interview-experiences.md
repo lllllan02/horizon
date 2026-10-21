@@ -6,9 +6,9 @@ parent: interview-preparation-index
 tags: ["面试", "Go", "Agent", "RAG"]
 type: overview
 learning_status: reading
-created_at: "2026-10-19T19:42:43+08:00"
-updated_at: "2026-10-20T18:24:58+08:00"
-learning_status_changed_at: "2026-10-20T19:55:51.741+08:00"
+created_at: "2026-10-19 19:42:43"
+updated_at: "2026-10-20 18:24:58"
+learning_status_changed_at: "2026-10-20 19:55:51.741"
 ---
 
 收集 Go 后端与 AI Agent 方向的面经，供逐篇学习、整理。题库与学习手册见[[interview-resources|面试资料目录]]。
@@ -20,7 +20,7 @@ learning_status_changed_at: "2026-10-20T19:55:51.741+08:00"
 - [x] G05 · [滴滴中台开发一面：Golang 社招](https://www.nowcoder.com/feed/main/detail/b1139d27144340418fbe934f43acfefa) · one混子
 - [x] G07 · [25 秋招：后端（主 Go）面经回顾 Part.1](https://www.nowcoder.com/feed/main/detail/fdcfe849626a4711abc8d125d9702fc7) · 八奈见
 - [x] G08 · [百度 Golang 实习一面](https://www.nowcoder.com/feed/main/detail/c54ab8969c304c2bb828088763271c1a) · ElvisLin
-- [ ] A01 · [Agent 应用社招失败复盘](https://www.nowcoder.com/discuss/926232883432296448) · 讨个offer咯
+- [x] A01 · [Agent 应用社招失败复盘](https://www.nowcoder.com/discuss/926232883432296448) · 讨个offer咯
 - [ ] A02 · [Agent 春招题单与复盘](https://www.nowcoder.com/discuss/917353328109944832) · Musennnn
 - [ ] A03 · [两年 Java 转 AI 应用社招一面](https://www.nowcoder.com/discuss/914627656245600256) · 视线归处
 - [ ] A04 · [懂车帝 Agent 开发一面](https://www.nowcoder.com/feed/main/detail/8d84590d7efe4c78943b28708b4395f2) · 赛文X

@@ -4,9 +4,9 @@ category: "服务治理"
 parent: performance-interview-index
 tags: ["面试", "限流", "过载保护"]
 learning_status: organized
-created_at: "2026-10-19T16:16:06+08:00"
-updated_at: "2026-10-19T16:16:06+08:00"
-learning_status_changed_at: "2026-10-19T16:30:23.833+08:00"
+created_at: "2026-10-19 16:16:06"
+updated_at: "2026-10-19 16:16:06"
+learning_status_changed_at: "2026-10-19 16:30:23.833"
 ---
 
 [[rate-limiting|限流]]可以控制一段时间内放行的请求量，避免突发流量超过系统的处理能力。

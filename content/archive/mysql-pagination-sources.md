@@ -3,8 +3,8 @@ title: "MySQL 分页优化资料导读"
 category: "MySQL"
 type: "article"
 tags: ["索引", "SQL优化", "分页"]
-created_at: "2026-10-12T18:04:41+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-12 18:04:41"
+updated_at: "2026-10-13 12:48:15"
 source:
   - "https://planetscale.com/learn/courses/mysql-for-developers/examples/deferred-joins"
   - "https://www.percona.com/blog/mysql-order-by-limit-performance-optimization/"

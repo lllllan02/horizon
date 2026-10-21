@@ -5,9 +5,9 @@ category: "Redis"
 parent: redis-interview-index
 tags: ["面试", "缓存", "过载保护"]
 learning_status: organized
-created_at: "2026-10-19T17:18:29+08:00"
-updated_at: "2026-10-19T17:21:53+08:00"
-learning_status_changed_at: "2026-10-19T17:22:24.330+08:00"
+created_at: "2026-10-19 17:18:29"
+updated_at: "2026-10-19 17:21:53"
+learning_status_changed_at: "2026-10-19 17:22:24.330"
 ---
 
 **缓存雪崩是大量缓存集中失效，导致大量并发请求回源，数据库等后端承受突发压力的现象。**

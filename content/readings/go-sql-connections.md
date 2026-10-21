@@ -4,8 +4,8 @@ category: "Go"
 type: "article"
 learning_status: pending
 tags: ["Go", "连接池", "性能排查"]
-created_at: "2026-10-12T22:06:03+08:00"
-updated_at: "2026-10-18T22:59:51+08:00"
+created_at: "2026-10-12 22:06:03"
+updated_at: "2026-10-18 22:59:51"
 source:
   - "https://go.dev/doc/database/manage-connections"
   - "https://pkg.go.dev/database/sql#DBStats"

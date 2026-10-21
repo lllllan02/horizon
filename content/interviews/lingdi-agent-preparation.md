@@ -6,9 +6,9 @@ parent: interview-preparation-index
 tags: ["面试", "Agent", "Go"]
 type: practice
 learning_status: reading
-created_at: "2026-10-20T11:00:23+08:00"
-updated_at: "2026-10-20T15:44:24+08:00"
-learning_status_changed_at: "2026-10-20T11:06:06.931+08:00"
+created_at: "2026-10-20 11:00:23"
+updated_at: "2026-10-20 15:44:24"
+learning_status_changed_at: "2026-10-20 11:06:06.931"
 ---
 
 这份岗位要求围绕「**能交付生产级 Agent 平台**」展开：既要完成模型与工具的执行循环，也要处理持久化、权限、故障、网关、客户端与消息渠道。本清单把 JD 转成可练习的问题和可检查的成果，供学习、项目复盘和面试前自查使用。

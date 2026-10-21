@@ -5,8 +5,8 @@ tags: ["Agent", "意图识别"]
 source:
   - "https://docs.langchain.com/oss/python/langgraph/workflows-agents"
 read: false
-created_at: "2026-10-13T22:09:24+08:00"
-updated_at: "2026-10-14T13:59:35+08:00"
+created_at: "2026-10-13 22:09:24"
+updated_at: "2026-10-14 13:59:35"
 ---
 
 **LangGraph 的路由示例让模型选择类别，再让程序按固定映射执行对应任务。** 路由就是根据识别结果选择处理分支。

@@ -4,8 +4,8 @@ parent: agent-trace
 title: "Agent Trace 内容采集"
 category: "Agent"
 tags: ["Agent", "Trace", "数据脱敏", "采样"]
-created_at: "2026-10-12T23:28:23+08:00"
-updated_at: "2026-10-13T01:35:20+08:00"
+created_at: "2026-10-12 23:28:23"
+updated_at: "2026-10-13 01:35:20"
 reading_suggestions:
   - agent-trace-spans
   - otel-genai-tracing

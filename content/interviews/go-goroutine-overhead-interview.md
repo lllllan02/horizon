@@ -5,9 +5,9 @@ category: "Go"
 parent: go-interview-hub
 tags: ["面试", "Go", "调度"]
 learning_status: organized
-created_at: "2026-10-20T18:36:58+08:00"
-updated_at: "2026-10-20T19:34:07+08:00"
-learning_status_changed_at: "2026-10-20T19:34:53.140+08:00"
+created_at: "2026-10-20 18:36:58"
+updated_at: "2026-10-20 19:34:07"
+learning_status_changed_at: "2026-10-20 19:34:53.140"
 ---
 
 [[coroutine#Go 的 goroutine|Go 的协程]]由[[go-gmp-interview|运行时调度]]，多个协程可以**复用[[thread|操作系统线程]]**，协程之间的切换通常在用户态完成，所以能减少线程创建和调度切换的开销。

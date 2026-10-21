@@ -5,7 +5,7 @@ aliases: ["ToolSearch", "Claude Tool Search"]
 category: "Agent"
 tags: ["按需加载", "工具调用", "Claude"]
 created_at: "2026-10-09"
-updated_at: "2026-10-17T12:25:00+08:00"
+updated_at: "2026-10-17 12:25:00"
 source:
   - "[Claude API：Tool search tool](https://platform.claude.com/docs/en/agents-and-tools/tool-use/tool-search-tool)"
   - "[Claude Code：Scale with MCP tool search](https://code.claude.com/docs/en/mcp#scale-with-mcp-tool-search)"

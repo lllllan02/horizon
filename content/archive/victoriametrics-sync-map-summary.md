@@ -2,7 +2,7 @@
 title: "VictoriaMetrics：sync.Map：双表机制与适用边界"
 category: "Go"
 created_at: "2026-10-08"
-updated_at: "2026-10-13T12:48:15+08:00"
+updated_at: "2026-10-13 12:48:15"
 tags: ["Go", "sync.Map", "源码"]
 aliases: ["sync.Map read dirty"]
 parent: victoriametrics-go-concurrency

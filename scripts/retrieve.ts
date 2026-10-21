@@ -338,7 +338,9 @@ function doLint(lib: Library, options: Options, io: Output) {
       ['updated_at', doc.updated],
     ]) {
       if (value != null && !Number.isFinite(documentTime(value)))
-        findings.date.push(`${doc.id} ${field}=${value} 不是有效日期或带时区、精确到秒的时间`);
+        findings.date.push(
+          `${doc.id} ${field}=${value} 不是有效日期或北京时间（YYYY-MM-DD HH:mm:ss）`,
+        );
     }
     if (documentTime(doc.updated) < documentTime(doc.created)) {
       findings.date.push(`${doc.id} updated_at 早于 created_at`);

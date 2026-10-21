@@ -4,8 +4,8 @@ title: "MCP 授权与权限"
 parent: mcp
 category: "Agent"
 tags: ["MCP", "OAuth", "权限"]
-created_at: "2026-10-11T10:06:16+08:00"
-updated_at: "2026-10-16T20:46:14+08:00"
+created_at: "2026-10-11 10:06:16"
+updated_at: "2026-10-16 20:46:14"
 reading_suggestions:
   - tool-permissions
   - mcp-oauth-client

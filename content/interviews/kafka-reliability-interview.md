@@ -4,9 +4,9 @@ category: "Kafka"
 parent: kafka-interview-index
 tags: ["面试", "Kafka", "消息队列"]
 learning_status: organized
-created_at: "2026-10-19T11:07:51+08:00"
-updated_at: "2026-10-19T11:07:51+08:00"
-learning_status_changed_at: "2026-10-19T11:11:56.811+08:00"
+created_at: "2026-10-19 11:07:51"
+updated_at: "2026-10-19 11:07:51"
+learning_status_changed_at: "2026-10-19 11:11:56.811"
 ---
 
 Kafka 通常不要求每条消息进来后都立即[[kafka-flush-interview|强制刷盘]]再返回确认，它的可靠性设计还依靠多副本：每个分区可以配置多个副本，分布在不同的 Broker 上。

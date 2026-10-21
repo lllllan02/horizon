@@ -5,9 +5,9 @@ category: "Go"
 parent: go-interview-hub
 tags: ["面试", "Go", "并发"]
 learning_status: organized
-created_at: "2026-10-20T18:34:48+08:00"
-updated_at: "2026-10-20T19:35:58+08:00"
-learning_status_changed_at: "2026-10-21T10:01:18.497+08:00"
+created_at: "2026-10-20 18:34:48"
+updated_at: "2026-10-20 19:35:58"
+learning_status_changed_at: "2026-10-21 10:01:18.497"
 ---
 
 **[[coroutine#Go 的 goroutine|协程]]再轻量，机器和系统的承受能力也有上限。** 无限制地创建协程，主要会有三个问题：

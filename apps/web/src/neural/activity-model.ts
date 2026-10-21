@@ -17,7 +17,7 @@ export function activityDay(time: string | null | undefined) {
     year: 'numeric',
     month: '2-digit',
     day: '2-digit',
-  }).formatToParts(new Date(time));
+  }).formatToParts(new Date(documentTime(time)));
   return ['year', 'month', 'day']
     .map((type) => parts.find((p) => p.type === type)!.value)
     .join('-');

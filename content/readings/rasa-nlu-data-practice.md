@@ -5,8 +5,8 @@ tags: ["Agent", "意图识别"]
 source:
   - "https://rasa.com/blog/10-best-practices-for-designing-nlu-training-data"
 read: false
-created_at: "2026-10-13T22:09:24+08:00"
-updated_at: "2026-10-14T13:59:35+08:00"
+created_at: "2026-10-13 22:09:24"
+updated_at: "2026-10-14 13:59:35"
 ---
 
 **训练数据维护是从真实会话收集问题、修正标注，再用旧请求检查有没有退化的持续过程。** NLU 指自然语言理解，这里主要涉及意图和参数的训练数据。

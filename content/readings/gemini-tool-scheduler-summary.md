@@ -4,7 +4,7 @@ parent: tool-scheduling
 category: "Agent"
 tags: ["Agent", "工具调用"]
 created_at: "2026-10-10"
-updated_at: "2026-10-13T12:48:15+08:00"
+updated_at: "2026-10-13 12:48:15"
 source: "[官方仓库 PR #21933](https://github.com/google-gemini/gemini-cli/pull/21933)，2026-03-12 合并"
 ---
 

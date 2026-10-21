@@ -2,7 +2,7 @@
 learning_status: pending
 title: "Quorum（法定人数）"
 category: "分布式系统"
-updated_at: "2026-10-19T20:39:27+08:00"
+updated_at: "2026-10-19 20:39:27"
 tags: ["Quorum", "多数派", "共识"]
 aliases: ["Quorum", "法定人数"]
 ---

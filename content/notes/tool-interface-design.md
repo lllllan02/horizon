@@ -6,7 +6,7 @@ parent: tool-calling
 category: "Agent"
 tags: ["Agent", "工具调用"]
 created_at: "2026-10-10"
-updated_at: "2026-10-17T10:53:24+08:00"
+updated_at: "2026-10-17 10:53:24"
 reading_suggestions:
   - openai-function-design-summary
   - anthropic-tool-design-summary

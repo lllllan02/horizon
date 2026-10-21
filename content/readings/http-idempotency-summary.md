@@ -2,8 +2,8 @@
 title: "RFC 9110：HTTP 幂等语义"
 category: "分布式系统"
 tags: ["幂等", "重试"]
-created_at: "2026-10-12T11:18:36+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-12 11:18:36"
+updated_at: "2026-10-13 12:48:15"
 source: "[RFC 9110 §9.2.1–9.2.2](https://www.rfc-editor.org/rfc/rfc9110.html#section-9.2.2)"
 ---
 

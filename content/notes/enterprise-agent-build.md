@@ -5,8 +5,8 @@ parent: agent
 category: "Agent"
 tags: ["Agent", "MCP", "工程选型"]
 learning_status: organized
-created_at: "2026-10-17T10:41:54+08:00"
-updated_at: "2026-10-17T17:40:56+08:00"
+created_at: "2026-10-17 10:41:54"
+updated_at: "2026-10-17 17:40:56"
 ---
 
 **企业值得自建 Agent 的前提，是通用 Agent 加 MCP 无法满足关键业务要求，或专用实现能带来经验证、足以覆盖维护投入的收益。** 差异若只是企业知识、业务接口和操作方法，通常先补服务与配置。

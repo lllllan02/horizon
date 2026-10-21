@@ -3,8 +3,8 @@ title: "Docling：保留结构与来源的文档解析"
 category: "RAG"
 tags: ["RAG"]
 type: "article"
-created_at: "2026-10-13T10:49:42+08:00"
-updated_at: "2026-10-13T12:48:15+08:00"
+created_at: "2026-10-13 10:49:42"
+updated_at: "2026-10-13 12:48:15"
 source: ["https://docling-project.github.io/docling/concepts/docling_document/", "https://docling-project.github.io/docling/concepts/architecture/"]
 ---
 
