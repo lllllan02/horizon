@@ -33,7 +33,7 @@ tags: ["知识库", "Obsidian", "项目使用", "服务启动"]
 content/       个人内容：notes 知识笔记、interviews 面试题、readings 外部导读、glossary 术语解释、sources 原始资料、archive 归档
 apps/web/      图谱看板代码
 scripts/       Agent 只读检索层（复用看板解析逻辑）
-labs/          本地独立实验仓库，不进入知识库正文或 Horizon Git
+labs/          本地独立学习与实验项目，入口、约定与代码均不进入 Horizon Git
 AGENTS.md      Agent 工作约束与任务入口
 docs/          管理判断、格式约定与个人写作和学习习惯
 .agents/skills/ 保存、维护、学习与工具使用的按需流程
@@ -45,6 +45,8 @@ docs/          管理判断、格式约定与个人写作和学习习惯
 
 ## 本地实验仓库
 
+[Agent 学习与实验入口](labs/README.md)汇总单 Agent、多 Agent 和父子协作等独立 Demo 的学习问题、规划状态和建议顺序。共用要求见 [Labs 约定](labs/AGENTS.md)：启动尽量简单，同时保留真实的模型、工具、状态与执行过程；每个项目的 README 说明本次必须实现和验证的动作。
+
 [Agent Trace 实验](labs/agent-trace/README.md)位于 `labs/agent-trace/`，保留独立 `.git`；Horizon 忽略该目录，笔记构建也不收录它。可以在当前工作区直接维护代码，操作前读取该目录的 `AGENTS.md`；实验运行、测试和 Git 命令以实验仓库为工作目录，例如 `git -C labs/agent-trace status`。
 
-实验代码、配置和报告由实验仓库管理，知识结论按需整理回 `content/`。克隆 Horizon 不会自动获得实验仓库，换机器时需单独恢复或克隆至约定目录。本地配置与实验产物仍遵循实验仓库自己的忽略规则。
+Agent Trace 的代码、配置和报告由其实验仓库管理，知识结论按需整理回 `content/`。克隆 Horizon 不会自动获得该仓库，换机器时需单独恢复或克隆至约定目录；本地配置与实验产物遵循该仓库自己的忽略规则。整个 Labs 的学习目录、入口与约定也不随 Horizon 克隆恢复，需单独备份。

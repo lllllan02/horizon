@@ -11,7 +11,7 @@ test-results/
 playwright-report/
 
 # Independent local experiment repository
-/labs/agent-trace/
+labs/
 
 # Local application state and consistent database backups
 /content/.horizon.sqlite*
