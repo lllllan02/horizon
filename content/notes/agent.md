@@ -20,7 +20,7 @@ reading_suggestions:
   - agent-guardrails
   - agent-sandbox
   - agent-human-in-the-loop
-  - multi-agent
+  - multi-agent-learning
   - agent-trace
   - agent-evaluation
   - agent-vs-workflow
@@ -66,7 +66,7 @@ Agent 能执行命令、修改文件之后，错误就可能影响真实环境�
 
 ## 何时需要多个 Agent？
 
-单个 Agent 的上下文或串行探索成为瓶颈，而任务又能形成独立交付物时，可以引入[[multi-agent|多 Agent 协作]]，让不同执行者各自判断、使用工具，再返回成果或交接任务。它增加了通信与协调成本，是否拆分取决于独立运行的实际收益。
+单个 Agent 的上下文或串行探索成为瓶颈，而任务又能形成独立交付物时，可以引入[[multi-agent-learning|多 Agent 协作]]，让不同执行者各自判断、使用工具，再返回成果或交接任务。它增加了通信与协调成本，是否拆分取决于独立运行的实际收益。
 
 ## 怎样判断这些能力是否值得？
 

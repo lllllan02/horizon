@@ -8,6 +8,7 @@ learning_status: organized
 created_at: "2026-10-13 17:41:05"
 updated_at: "2026-10-21 14:00:28"
 reading_suggestions:
+  - multi-agent-learning
   - multi-agent-organization
 learning_status_changed_at: "2026-10-21 14:03:42.286"
 ---
@@ -25,4 +26,4 @@ learning_status_changed_at: "2026-10-21 14:03:42.286"
 
 仅需专业指令时可用 [[agent-loading|Skill]]，固定步骤可用[[agent-vs-workflow|工作流]]编排。实际是否受益，要用同批任务、相同预算[[agent-evaluation|比较质量、耗时与成本]]。
 
-确定采用多 Agent 后，再安排[[multi-agent-organization|任务委派、执行中协调与通信，以及并发冲突的处理方式]]。
+确定采用多 Agent 后，再安排[[multi-agent-organization|任务委派、执行中协调与通信，以及并发冲突的处理方式]]。学习与实现按[[multi-agent-learning|多 Agent 协作学习入口]]逐步推进。

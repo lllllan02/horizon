@@ -126,7 +126,7 @@ npm --prefix apps/web run storage -- --root /path/to/restored-content import /pa
 ```yaml
 reading_suggestions:
   - agent
-  - multi-agent
+  - multi-agent-learning
 ```
 
 使用唯一文件名，不含 `.md`；解析器也兼容别名、路径和带引号的双链。建议以整篇文档为单位，不跳转到章节。阅读面板提供「建议阅读」入口，列表按配置顺序显示序号，不向正文插入清单。列表顶部可在「建议阅读」与「阅读中」间切换，支持拖动、滚轮与方向键；阅读中显示文档状态为 reading 的内容。列表不提供类型、状态筛选，默认显示建议阅读。未配置时建议列表为空，不推测阅读顺序。

@@ -3,10 +3,10 @@ title: "多 Agent 的协作方式"
 parent: multi-agent
 category: "Agent"
 tags: ["Agent", "多Agent协作", "工程选型"]
-learning_status: reading
+learning_status: pending
 created_at: "2026-10-21 12:56:36"
 updated_at: "2026-10-21 14:40:23"
-learning_status_changed_at: "2026-10-21 14:23:53.000"
+learning_status_changed_at: "2026-10-22 11:39:32.702"
 ---
 
 **多 Agent 的协作方式，规定任务由谁分配、信息怎样交换，以及结果和冲突由谁处理。**

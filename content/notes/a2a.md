@@ -1,14 +1,12 @@
 ---
 title: "A2A（Agent 间通信协议）"
 aliases: ["Agent2Agent", "Agent-to-Agent", "A to A"]
-parent: multi-agent-organization
 category: "Agent"
 tags: ["Agent", "A2A", "协议"]
 learning_status: organized
 created_at: "2026-10-13 17:41:05"
 updated_at: "2026-10-18 00:22:52"
 reading_suggestions:
-  - multi-agent
   - a2a-protocol-specification
 learning_status_changed_at: "2026-10-18 00:23:55.123"
 ---
@@ -31,7 +29,7 @@ learning_status_changed_at: "2026-10-18 00:23:55.123"
 - 服务端：用 A2A SDK 接收请求、维护任务，通过[[a2a-protocol-specification#请求如何接到 Agent 代码|执行器]]调用已有 Agent，把进度和成果交回协议层。
 - Agent 本身：仍需实现读取数据、调用模型与工具、生成报告的业务逻辑。它可通过 [[mcp|MCP]]取数；A2A 负责外部通信，不会自动生成这段业务代码。
 
-它与[[multi-agent-organization|子 Agent]]可以组合：子 Agent 表示委派关系，A2A 承担跨服务通信。
+它与[[langchain-multi-agent#具体怎样实现？|子 Agent]]可以组合：子 Agent 表示委派关系，A2A 承担跨服务通信。
 
 ## 具体报文
 
