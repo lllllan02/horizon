@@ -60,6 +60,8 @@ learning_status_changed_at: "2026-10-21 10:04:00.041"
 - [[agent-memory-types-interview|Agent 的记忆有哪些类型，分别怎么实现？]]
 - [[agent-memory-trigger-interview|Agent 什么时候启动记忆提取？]]
 - [[agent-memory-content-interview|什么内容值得保存为长期记忆？]]
+- [[agent-memory-update-interview|记忆更新的完整流程是什么？]]
+- [[agent-memory-matching-interview|记忆更新时，怎样减少旧记忆漏召回？]]
 
 ## 状态保存与中断恢复
 

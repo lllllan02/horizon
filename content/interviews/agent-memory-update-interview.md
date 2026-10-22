@@ -1,0 +1,19 @@
+---
+title: "记忆更新的完整流程是什么？"
+category: "Agent"
+parent: agent-interview-hub
+tags: ["面试", "Agent", "记忆"]
+learning_status: organized
+created_at: "2026-10-22 09:59:46"
+updated_at: "2026-10-22 10:01:33"
+learning_status_changed_at: "2026-10-22 10:03:02.117"
+---
+
+[[agent-memory#存储与更新|记忆更新]]既要判断当前交互有什么值得保存，也要处理它与已有记忆的关系：
+
+**提取候选新记忆 → 检索旧记忆 → 判断新旧关系 → 执行写入。**
+
+1. **提取候选新记忆**：模型结合 Query 和上下文，提取值得保存的事实、偏好或纠正，先不写入。
+2. **据此检索旧记忆**：根据候选的对象、属性和范围，[[agent-memory-matching-interview|召回可能重叠或冲突的旧内容]]。
+3. **判断新旧关系**：模型核对含义、范围和时间，[[memory-update-matching-sources#Graphiti：重复与冲突分别判定|重复则跳过，互补则合并，有充分依据的事实变更则更新]]；无对应旧内容时考虑新增，范围不同可并存，冲突不明先待确认。
+4. **执行写入**：程序校验目标、权限和版本后，新增或[[memory-update-matching-sources#Trustcall：用局部补丁更新档案|局部修改]]记录，并同步索引。
