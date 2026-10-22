@@ -54,6 +54,7 @@ learning_status_changed_at: "2026-10-21 10:04:00.041"
 
 ## 上下文与记忆
 
+- [[agent-kv-cache-interview|怎样提高 Agent 的 KV Cache 命中率？]]
 - [[agent-history-storage-interview|Agent 的历史消息存数据库还是 JSONL 文件？]]
 - [[context-overflow-interview|对话上下文超出窗口怎么办？]]
 - [[agent-memory-types-interview|Agent 的记忆有哪些类型，分别怎么实现？]]
