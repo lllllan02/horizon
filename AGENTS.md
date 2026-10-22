@@ -24,7 +24,7 @@ tags: ["Agent", "知识库", "操作约束", "链接维护"]
 | 写作、格式和标签 | [[docs/writing-style\|正文写法]]、[[docs/metadata-and-links\|格式规则]]；特殊语法用 [obsidian-markdown](.agents/skills/obsidian-markdown/SKILL.md)，标签选择用 [tag-taxonomy](.agents/skills/tag-taxonomy/SKILL.md) |
 | 学习范围、问题与追问 | [tech-study-map](.agents/skills/tech-study-map/SKILL.md)；[[docs/knowledge-management#学习反馈与修订\|学习反馈]] |
 | 总结原文、生成知识配图 | [summarize](.agents/skills/summarize/SKILL.md)、[excalidraw-diagram](.agents/skills/excalidraw-diagram/SKILL.md)；输出保存与否沿用用户授权 |
-| 网页开发、视觉设计、界面审查 | [[apps/web/README\|实现与验证入口]]；按需使用 frontend-design、web-design-guidelines 或对应 Three.js Skill，能力分工见 [[docs/agent-rules#Skill 选用与替换\|Skill 选用]] |
+| 网页开发、视觉设计、界面审查 | [[apps/web/README\|实现与验证入口]]；涉及新增或调整持久化数据时，先核对 [[apps/web/README#数据与设置存储\|存储边界]]，再选择实现；按需使用 frontend-design、web-design-guidelines 或对应 Three.js Skill，能力分工见 [[docs/agent-rules#Skill 选用与替换\|Skill 选用]] |
 | 维护本文件、项目使用文档、Skills 或角色配置 | [[docs/agent-rules\|规则维护细则]]；按需交项目维护员，不启动知识笔记保存流程 |
 
 ## 保存与修改边界

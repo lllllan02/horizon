@@ -18,6 +18,7 @@ import {
   backupApplicationDatabase,
 } from '../src/app-database.ts';
 import { exportReviews, migrateReviews } from '../src/review-store.ts';
+import { loadReviewPriorities, setReviewPriority } from '../src/review-priority-store.ts';
 import { exportActivity, migrateActivity } from '../src/activity.ts';
 import { exportPagesActivity, PAGES_ACTIVITY_SNAPSHOT } from '../src/pages-activity.ts';
 
@@ -106,11 +107,23 @@ export async function runStorage(args: string[], log = console.log) {
   const [command, destination] = positionals;
   if (values.help || !command) {
     log(
-      '用法：npm run storage -- [--root <content目录>] migrate | export <新目录> | import <导出目录> | backup <新SQLite文件> | pages-snapshot [快照文件]',
+      '用法：npm run storage -- [--root <content目录>] migrate | export <新目录> | import <导出目录> | backup <新SQLite文件> | pages-snapshot [快照文件] | review-priorities [目录 优先级]',
     );
     return;
   }
   const root = await realpath(path.resolve(values.root || defaultRoot));
+  if (command === 'review-priorities') {
+    if (positionals.length !== 1 && positionals.length !== 3)
+      throw Error('优先级命令需要同时提供目录与非负整数，或省略两者查看。');
+    if (positionals.length === 3 && !/^\d+$/.test(positionals[2]))
+      throw Error('复习目录优先级必须是非负整数。');
+    const priorities =
+      positionals.length === 1
+        ? await loadReviewPriorities(root)
+        : await setReviewPriority(root, destination, Number(positionals[2]));
+    log(JSON.stringify(priorities, null, 2));
+    return;
+  }
   if (positionals.length > 2) throw Error('存储命令参数过多。');
   if (command === 'migrate' && !destination) {
     await migrateReviews(root);

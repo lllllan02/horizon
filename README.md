@@ -19,7 +19,7 @@ tags: ["知识库", "Obsidian", "项目使用", "服务启动"]
 
 默认阅读服务不随代码编辑热更新，文档变化自动局部同步，保留当前阅读位置和画布；开发界面可另开 `make dev PORT=4174`。
 
-本机复习与活动数据统一保存在 `content/.horizon.sqlite`；旧 JSON 仅用于升级迁移，迁移并备份后可移除。最新数据库不进入 Git，网页静态构建使用从数据库生成的 `apps/web/data/activity-snapshot.json` 活动快照；备份、快照更新与 JSON 导入导出见 [[apps/web/README#本地学习数据与备份|学习数据备份]]。正文与学习状态仍保存在 Markdown。
+本机复习、活动数据与目录复习优先级统一保存在 `content/.horizon.sqlite`；旧 JSON 仅用于升级迁移，迁移并备份后可移除。最新数据库不进入 Git，网页静态构建使用从数据库生成的 `apps/web/data/activity-snapshot.json` 活动快照；备份、快照更新与 JSON 导入导出见 [[apps/web/README#本地学习数据与备份|学习数据备份]]。正文与学习状态仍保存在 Markdown。
 
 本地服务默认允许局域网访问，其他设备可打开启动日志中的「局域网访问」地址。使用 `make HOST=127.0.0.1` 可限制为仅本机访问；连接条件与状态写回范围见 [[apps/web/README#启动与使用|启动与使用说明]]。
 

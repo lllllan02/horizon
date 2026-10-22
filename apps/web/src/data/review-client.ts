@@ -13,6 +13,7 @@ import {
 import { localEditing } from './library-client.ts';
 import { createBrowserReviewStore } from './review-browser-store.ts';
 import { withBrowserReviewLock } from './review-browser-lock.ts';
+import { defaultReviewPriorities, parseReviewPriorities } from '../review-priorities.ts';
 
 export const reviewStorageKey = `horizon:reviews:v1:${location.pathname}`;
 export const reviewStorageLabel = localEditing
@@ -58,6 +59,11 @@ export async function fetchReviews(documents: LibraryDocument[]) {
   if (!localEditing) return browserStore().load(documents);
   snapshot = parseReviewState(await requestValue('/api/reviews'));
   return snapshot;
+}
+
+export async function fetchReviewPriorities() {
+  if (!localEditing) return defaultReviewPriorities;
+  return parseReviewPriorities(await requestValue('/api/reviews/priorities'));
 }
 
 export async function updateReview(documents: LibraryDocument[], input: ReviewInput) {

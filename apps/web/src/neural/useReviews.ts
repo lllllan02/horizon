@@ -13,6 +13,7 @@ import {
 } from '../review-model.ts';
 import {
   fetchReviews,
+  fetchReviewPriorities,
   fetchReviewHistory,
   confirmReviewRequest,
   reviewStorageKey,
@@ -21,12 +22,14 @@ import {
 } from '../data/review-client.ts';
 import { isDocumentNode } from './graph.ts';
 import { clientId } from '../client-id.ts';
+import { defaultReviewPriorities } from '../review-priorities.ts';
 
 export function useReviews(graph: ReaderGraph): ReviewController {
   const documents = useMemo(() => graph.nodes.filter(isDocumentNode), [graph]);
   const docsRef = useRef<LibraryDocument[]>(documents);
   docsRef.current = documents;
   const [state, setState] = useState<ReviewState | null>(null);
+  const [priorities, setPriorities] = useState(defaultReviewPriorities);
   const current = useRef(state);
   const [loading, setLoading] = useState(true);
   const [pending, setPending] = useState(false);
@@ -46,8 +49,12 @@ export function useReviews(graph: ReaderGraph): ReviewController {
     if (busy.current) return;
     const token = ++generation.current;
     try {
-      const next = await fetchReviews(docsRef.current);
+      const [next, nextPriorities] = await Promise.all([
+        fetchReviews(docsRef.current),
+        fetchReviewPriorities(),
+      ]);
       if (!alive.current || token !== generation.current) return;
+      setPriorities(nextPriorities);
       publish(next);
       setError('');
     } catch (cause) {
@@ -178,8 +185,8 @@ export function useReviews(graph: ReaderGraph): ReviewController {
     [refresh],
   );
   const queue = useMemo(
-    () => reviewQueue(documents, state ?? emptyReviewState(), now),
-    [documents, state, now],
+    () => reviewQueue(documents, state ?? emptyReviewState(), now, priorities),
+    [documents, state, now, priorities],
   );
   return {
     state,

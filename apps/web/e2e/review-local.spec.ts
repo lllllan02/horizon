@@ -28,6 +28,52 @@ test.afterAll(async () => {
   if (root) await rm(root, { recursive: true, force: true });
 });
 
+test('本机从SQLite读取目录优先级，修改后刷新推荐并跨服务重启保留', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== 'wide', '本机优先级集成单独覆盖一次');
+  const dir = await mkdtemp(path.join(os.tmpdir(), 'horizon-review-priorities-'));
+  let service: Awaited<ReturnType<typeof startServer>> | undefined;
+  try {
+    for (const collection of ['notes', 'interviews', 'glossary']) {
+      await mkdir(path.join(dir, collection));
+      await writeFile(
+        path.join(dir, collection, `${collection}-priority.md`),
+        original.replaceAll('本机复习样例', `数据库优先级 ${collection}`),
+      );
+    }
+    service = await startServer({ root: dir, port: 0 });
+    const serverURL = () => {
+      const address = service!.server.address();
+      if (!address || typeof address === 'string') throw Error('Missing test server');
+      return `http://127.0.0.1:${address.port}`;
+    };
+    const update = async (priorities: Record<string, number>) => {
+      const response = await page.request.post(serverURL() + '/api/reviews/priorities', {
+        headers: { Origin: serverURL() },
+        data: { priorities },
+      });
+      expect(response.status()).toBe(200);
+    };
+    await update({ notes: 9, interviews: 3, glossary: 1 });
+    await page.goto(serverURL());
+    const dock = page.locator('.home-review-card');
+    await expect(dock.locator('.home-review-title')).toHaveText('数据库优先级 notes');
+    await expect
+      .poll(async () => (await exportReviews(dir)).records['notes-priority'].lastPresentedAt)
+      .toBeTruthy();
+    await update({ notes: 9, interviews: 3, glossary: 20 });
+    await service.close();
+    service = await startServer({ root: dir, port: 0 });
+    await page.goto(serverURL());
+    await expect(dock.locator('.home-review-title')).toHaveText('数据库优先级 glossary');
+    await expect(dock).toHaveAttribute('aria-busy', 'false');
+    await dock.getByRole('button', { name: '记得', exact: true }).click();
+    await expect(dock.locator('.home-review-title')).toHaveText('数据库优先级 interviews');
+  } finally {
+    await service?.close();
+    await rm(dir, { recursive: true, force: true });
+  }
+});
+
 test('本机页面读写独立复习文件，打开和反馈均不改原文及状态', async ({ page }, testInfo) => {
   test.skip(testInfo.project.name !== 'wide', '本机API集成单独覆盖一次');
   const errors: string[] = [];

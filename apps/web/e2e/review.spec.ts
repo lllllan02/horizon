@@ -67,6 +67,64 @@ test.beforeEach(async ({ page, context }) => {
   await expect(page.locator('[data-review-stat-id]')).toHaveCount(7);
 });
 
+test('底栏按目录优先级推荐，跨目录完成后持续轮换且保留复习计划', async ({ page, context }) => {
+  await context.route('**/library.json', async (route) => {
+    const response = await route.fetch();
+    const library = await response.json();
+    const base = library.documents.find((doc: { id: string }) => doc.id === 'first');
+    library.documents = ['glossary', 'readings', 'notes', 'interviews'].map((collection) => ({
+      ...base,
+      id: `priority-${collection}`,
+      collection,
+      path: `content/${collection}/priority-${collection}.md`,
+      title: `目录复习 ${collection}`,
+      state: 'organized',
+      body: `优先级测试 ${collection}`,
+      html: `<p>优先级测试 ${collection}</p>`,
+      references: [],
+      backlinks: [],
+      readingSuggestions: [],
+      parent: null,
+      parentTarget: null,
+    }));
+    await route.fulfill({ response, json: library });
+  });
+  await page.goto('/');
+  const dock = page.locator('.home-review-card');
+  let original: Record<string, { dueAt: string; intervalDays: number }> = {};
+  for (let round = 0; round < 2; round++) {
+    for (const collection of ['interviews', 'notes', 'glossary', 'readings']) {
+      await expect(dock.locator('.home-review-title')).toHaveText(`目录复习 ${collection}`);
+      await expect(dock).toHaveAttribute('aria-busy', 'false');
+      await dock.getByRole('button', { name: '记得', exact: true }).click();
+      await expect(dock.locator('.home-review-title')).not.toHaveText(`目录复习 ${collection}`);
+    }
+    const state = await progress(page);
+    for (const collection of ['interviews', 'notes', 'glossary', 'readings']) {
+      const id = `priority-${collection}`;
+      expect(
+        state.records[id].history.filter((event: { rating?: string }) => event.rating),
+      ).toHaveLength(round + 1);
+      if (round === 1) {
+        expect(state.records[id].dueAt).toBe(original[id].dueAt);
+        expect(state.records[id].intervalDays).toBe(original[id].intervalDays);
+      }
+    }
+    if (round === 0) original = state.records;
+  }
+  // Presentation is persisted before reload, so the next unseen turn is Notes.
+  await expect
+    .poll(
+      async () =>
+        (await progress(page)).records['priority-interviews'].history.filter(
+          (event: { presented?: boolean }) => event.presented,
+        ).length,
+    )
+    .toBe(3);
+  await page.reload();
+  await expect(dock.locator('.home-review-title')).toHaveText('目录复习 notes');
+});
+
 test('全部已整理记录直接可开始复习，打开和退出不完成，反馈持久化并保留状态', async ({ page }) => {
   const review = page.locator('.db-review');
   await expect(review).not.toContainText('复习样例 7');

@@ -1,9 +1,10 @@
 import type { LibraryDocument } from './types/library.ts';
 import { beijingTimestamp, documentTime } from './document-dates.ts';
+import { defaultReviewPriorities } from './review-priorities.ts';
 
 export type ReviewRating = 'forgot' | 'hard' | 'good';
 export type ReviewDocument = Pick<LibraryDocument, 'id' | 'path' | 'body' | 'updated' | 'state'> &
-  Partial<Pick<LibraryDocument, 'category'>>;
+  Partial<Pick<LibraryDocument, 'category' | 'collection'>>;
 export interface ReviewEvent {
   requestId: string;
   rating?: ReviewRating;
@@ -243,6 +244,7 @@ export function reviewQueue<T extends ReviewDocument>(
   documents: T[],
   state: ReviewState,
   now = Date.now(),
+  priorities: Record<string, number> = defaultReviewPriorities,
 ) {
   const due: T[] = [],
     fresh: T[] = [],
@@ -257,21 +259,29 @@ export function reviewQueue<T extends ReviewDocument>(
     else scheduled.push(doc);
   }
   const stable = (a: T, b: T) => a.id.localeCompare(b.id, 'zh-CN');
-  const presentedAt = (doc: T) => state.records[doc.id]?.lastPresentedAt;
-  const presentedToday = (doc: T) => {
-    const at = presentedAt(doc);
-    return at ? Number(reviewDay(at) === reviewDay(now)) : 0;
+  const priority = (a: T, b: T) =>
+    (b.collection && Object.hasOwn(priorities, b.collection) ? priorities[b.collection] : 0) -
+    (a.collection && Object.hasOwn(priorities, a.collection) ? priorities[a.collection] : 0);
+  const today = reviewDay(now);
+  const todayAt = (at: number) => Number(at > 0 && reviewDay(at) === today);
+  // Priority leads within a group until today's candidates have had a turn.
+  // Once both participated today, oldest participation leads to keep rotation fair.
+  const rotationPriority = (a: T, b: T, time: (doc: T) => number) => {
+    const aTime = time(a),
+      bTime = time(b);
+    const aToday = todayAt(aTime),
+      bToday = todayAt(bTime);
+    return aToday - bToday || (aToday && bToday ? aTime - bTime : 0) || priority(a, b);
   };
+  const presentedAt = (doc: T) => state.records[doc.id]?.lastPresentedAt;
+  const presentationTime = (doc: T) => (presentedAt(doc) ? documentTime(presentedAt(doc)!) : 0);
   const difficulty = (doc: T) => {
     const last = state.records[doc.id]?.history.findLast((event) => event.rating);
     return last?.rating === 'forgot' ? 0 : last?.rating === 'hard' ? 1 : 2;
   };
   due.sort(
     (a, b) =>
-      presentedToday(a) - presentedToday(b) ||
-      (presentedToday(a) && presentedToday(b)
-        ? documentTime(presentedAt(a)!) - documentTime(presentedAt(b)!)
-        : 0) ||
+      rotationPriority(a, b, presentationTime) ||
       documentTime(state.records[a.id].dueAt!) - documentTime(state.records[b.id].dueAt!) ||
       difficulty(a) - difficulty(b) ||
       stable(a, b),
@@ -291,9 +301,14 @@ export function reviewQueue<T extends ReviewDocument>(
   fresh.sort((a, b) => {
     const aTime = presentedAt(a),
       bTime = presentedAt(b);
-    if (!aTime && !bTime) return repeatedCategory(a) - repeatedCategory(b) || stable(a, b);
+    if (!aTime && !bTime)
+      return priority(a, b) || repeatedCategory(a) - repeatedCategory(b) || stable(a, b);
     if (!aTime || !bTime) return aTime ? 1 : -1;
-    return documentTime(aTime) - documentTime(bTime) || stable(a, b);
+    return (
+      rotationPriority(a, b, presentationTime) ||
+      documentTime(aTime) - documentTime(bTime) ||
+      stable(a, b)
+    );
   });
   // Scheduled material remains available for voluntary practice. Rotate by the
   // last participation, so a completed or merely displayed title yields to others.
@@ -306,6 +321,7 @@ export function reviewQueue<T extends ReviewDocument>(
   };
   const practice = [...scheduled].sort(
     (a, b) =>
+      rotationPriority(a, b, touched) ||
       touched(a) - touched(b) ||
       reviewCount(state.records[a.id]) - reviewCount(state.records[b.id]) ||
       difficulty(a) - difficulty(b) ||

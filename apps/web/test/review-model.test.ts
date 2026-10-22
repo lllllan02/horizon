@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { beijingTimestamp, documentTime } from '../src/document-dates.ts';
+import { parseReviewPriorities } from '../src/review-priorities.ts';
 import {
   applyReview,
   emptyReviewState,
@@ -50,6 +51,122 @@ function submit(
     at,
   );
 }
+
+test('目录优先级用于首次推荐，未展示优先，跨目录多轮轮换且不修改历史', () => {
+  const documents = [
+    doc('a-glossary', { collection: 'glossary' }),
+    doc('b-reading', { collection: 'readings' }),
+    doc('c-note', { collection: 'notes', category: '其他专题' }),
+    doc('d-interview', { collection: 'interviews', category: '最近专题' }),
+    doc('e-interview', { collection: 'interviews', category: '最近专题' }),
+  ];
+  let state = reconcileReviews(emptyReviewState(), documents, now);
+  const order: string[] = [];
+  for (let i = 0; i < documents.length * 2; i++) {
+    const before = structuredClone(state);
+    const queue = reviewQueue(documents, state, now);
+    assert.deepEqual(state, before);
+    const id = queue.recommendations[0].id;
+    order.push(id);
+    state = submit(state, documents, id, { rating: undefined, presented: true }, now);
+    state = parseReviewState(JSON.parse(JSON.stringify(state)));
+  }
+  const expected = ['d-interview', 'e-interview', 'c-note', 'a-glossary', 'b-reading'];
+  assert.deepEqual(order, [...expected, ...expected]);
+  assert.ok(Object.values(state.records).every((record) => record.lastReviewedAt === null));
+  // Next Beijing day restores directory preference among previously shown items.
+  assert.equal(reviewQueue(documents, state, now + day).fresh[0].id, 'd-interview');
+  const added = [...documents, doc('new-low', { collection: 'glossary' })];
+  assert.equal(reviewQueue(added, state, now + day).fresh[0].id, 'new-low');
+});
+
+test('推荐使用读取的设置，支持自定义目录、零优先级和未知目录默认值', () => {
+  const documents = [
+    doc('a-interview', { collection: 'interviews' }),
+    doc('b-reference', { collection: 'reference' }),
+    doc('c-note', { collection: 'notes' }),
+    doc('d-unknown', { collection: 'unconfigured' }),
+  ];
+  const priorities = parseReviewPriorities({ interviews: 0, reference: 9, notes: 2 });
+  assert.deepEqual(
+    reviewQueue(documents, emptyReviewState(), now, priorities).fresh.map((item) => item.id),
+    ['b-reference', 'c-note', 'a-interview', 'd-unknown'],
+  );
+  for (const value of [
+    null,
+    [],
+    { notes: -1 },
+    { notes: 0.5 },
+    { notes: '3' },
+    { '../x': 1 },
+    { notes: Number.MAX_SAFE_INTEGER + 1 },
+  ])
+    assert.throws(() => parseReviewPriorities(value), /优先级/);
+});
+
+test('到期仍先于首次和提前练习，同组目录优先并保留同日展示轮换', () => {
+  const documents = [
+    doc('due-note', { collection: 'notes' }),
+    doc('due-interview', { collection: 'interviews' }),
+    doc('fresh-interview', { collection: 'interviews' }),
+    doc('practice-interview', { collection: 'interviews' }),
+    doc('paused-interview', { collection: 'interviews' }),
+    doc('reading-interview', { collection: 'interviews', state: 'reading' }),
+  ];
+  let state = reconcileReviews(emptyReviewState(), documents, now);
+  state = submit(state, documents, 'due-note', {}, now - 5 * day);
+  state = submit(state, documents, 'due-interview', {}, now - 2 * day);
+  state = submit(state, documents, 'practice-interview', {}, now);
+  state = submit(state, documents, 'paused-interview', { rating: undefined, paused: true });
+  assert.deepEqual(
+    reviewQueue(documents, state, now).recommendations.map((item) => item.id),
+    ['due-interview', 'due-note', 'fresh-interview', 'practice-interview'],
+  );
+  state = submit(state, documents, 'due-interview', { rating: undefined, presented: true });
+  assert.deepEqual(
+    reviewQueue(documents, state, now).due.map((item) => item.id),
+    ['due-note', 'due-interview'],
+  );
+});
+
+test('提前练习按目录优先，每日参与后让位并持续轮换，计划列表仍按到期时间', () => {
+  const documents = [
+    doc('a-note', { collection: 'notes' }),
+    doc('b-interview', { collection: 'interviews' }),
+    doc('c-glossary', { collection: 'glossary' }),
+  ];
+  let state = reconcileReviews(emptyReviewState(), documents, now);
+  // Reach a three-day interval with deliberately different participation times.
+  for (const [i, document] of documents.entries()) {
+    state = submit(state, documents, document.id, {}, now - 3 * day + i);
+    state = submit(state, documents, document.id, {}, now - 2 * day + i);
+  }
+  const original = structuredClone(state);
+  assert.deepEqual(
+    reviewQueue(documents, state, now).scheduled.map((item) => item.id),
+    ['a-note', 'b-interview', 'c-glossary'],
+  );
+  const order: string[] = [];
+  for (let i = 0; i < 6; i++) {
+    const id = reviewQueue(documents, state, now + i).recommendations[0].id;
+    order.push(id);
+    // A direct rating also yields, even without a presentation event.
+    state = submit(state, documents, id, {}, now + i);
+    state = parseReviewState(JSON.parse(JSON.stringify(state)));
+  }
+  assert.deepEqual(order, [
+    'b-interview',
+    'a-note',
+    'c-glossary',
+    'b-interview',
+    'a-note',
+    'c-glossary',
+  ]);
+  for (const document of documents) {
+    assert.equal(state.records[document.id].dueAt, original.records[document.id].dueAt);
+    assert.equal(state.records[document.id].intervalDays, 3);
+  }
+});
 
 test('只复习已整理资料，首次不限量，完成后仍可继续下一轮', () => {
   const documents = [

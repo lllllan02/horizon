@@ -13,6 +13,7 @@ import { createLibraryLoader, safeAsset } from './src/library.ts';
 import { activityForLibrary, reconcileDocumentStates } from './src/activity.ts';
 import { ReviewError, type ReviewState } from './src/review-model.ts';
 import { reviewStore, reviewHistory, reviewRequest } from './src/review-store.ts';
+import { loadReviewPriorities, saveReviewPriorities } from './src/review-priority-store.ts';
 import { createReviewUpdate } from './src/review-protocol.ts';
 import {
   updateDocumentState,
@@ -80,8 +81,19 @@ export async function startServer({
   const server = http.createServer(async (req, res) => {
     try {
       const url = new URL(req.url || '/', 'http://localhost');
-      if (['/api/reviews', '/api/reviews/history', '/api/reviews/request'].includes(url.pathname)) {
-        if (req.method !== 'GET' && (req.method !== 'POST' || url.pathname !== '/api/reviews')) {
+      if (
+        [
+          '/api/reviews',
+          '/api/reviews/history',
+          '/api/reviews/request',
+          '/api/reviews/priorities',
+        ].includes(url.pathname)
+      ) {
+        const prioritiesRoute = url.pathname === '/api/reviews/priorities';
+        if (
+          req.method !== 'GET' &&
+          (req.method !== 'POST' || (url.pathname !== '/api/reviews' && !prioritiesRoute))
+        ) {
           res.writeHead(405, headers);
           return res.end();
         }
@@ -97,7 +109,7 @@ export async function startServer({
           res.writeHead(403, { ...headers, 'Content-Type': 'application/json' });
           return res.end(JSON.stringify({ error: '复习记录只允许本机同源页面访问。' }));
         }
-        if (url.pathname !== '/api/reviews') {
+        if (url.pathname !== '/api/reviews' && !prioritiesRoute) {
           const result = await serialize(async () => {
             if (url.pathname === '/api/reviews/request')
               return reviewRequest(root, url.searchParams.get('requestId') || '');
@@ -127,6 +139,21 @@ export async function startServer({
           } catch {
             throw new ReviewError('请求格式无效。', 400);
           }
+        }
+        if (prioritiesRoute) {
+          const result = await serialize(async () => {
+            if (req.method === 'GET') return loadReviewPriorities(root);
+            if (
+              !input ||
+              typeof input !== 'object' ||
+              Array.isArray(input) ||
+              !Object.hasOwn(input, 'priorities')
+            )
+              throw new ReviewError('复习优先级请求格式无效。', 400);
+            return saveReviewPriorities(root, (input as { priorities: unknown }).priorities);
+          });
+          res.writeHead(200, { ...headers, 'Content-Type': 'application/json; charset=utf-8' });
+          return res.end(JSON.stringify(result));
         }
         // Review traffic must never run the activity/state reconciliation writer.
         const result = await serialize(async () => {
