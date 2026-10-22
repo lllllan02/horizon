@@ -29,6 +29,7 @@ learning_status_changed_at: "2026-10-18 20:45:36.275"
 
 ## 单题
 
+- [[mq-reliability-interview|消息队列如何保证可靠性、避免重复消费？]]
 - [[temperature-zero-interview|为什么 Temperature 设为 0，输出仍可能不一致？]]
 - [[llm-sampling-interview|Temperature、Top K、Top P 是什么，有什么区别？]]
 - [[websocket-sse-interview|WebSocket 和 SSE 有什么区别？]]
