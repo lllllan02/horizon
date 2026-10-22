@@ -29,6 +29,8 @@ learning_status_changed_at: "2026-10-21 10:04:00.041"
 
 - [[agent-intent-interview|Agent 为什么知道调用哪个工具？怎么做意图识别？]]
 - [[tool-design-interview|工具怎么设计？]]
+- [[skill-design-interview|怎样让 Agent 支持 Skill？]]
+- [[skill-loading-interview|Skill 的懒加载是怎么实现的？]]
 - [[skill-dynamic-interview|Agent 平台按任务动态拼装 Skill 时，哪些内容应固定，哪些可以调整？]]
 - [[tool-calling-interview|Agent 如何执行工具调用，并处理参数异常与工具失败？]]
 - [[agent-output-format-interview|模型输出不符合格式要求，怎么约束？]]
