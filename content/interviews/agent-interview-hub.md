@@ -22,6 +22,7 @@ learning_status_changed_at: "2026-10-21 10:04:00.041"
 - [[agent-selection-interview|什么时候应该用 Agent，什么时候不需要？]]
 - [[agent-understanding-interview|你怎么理解 Agent 系统？]]
 - [[agent-design-interview|怎样设计一个 Agent？]]
+- [[eino-selection-interview|为什么选择 Eino 框架？]]
 - [[react-interview|ReAct Agent 的原理是什么？]]
 - [[react-vs-plan-execute-interview|ReAct Agent 和 Plan-and-Execute 分别适合什么场景？]]
 
