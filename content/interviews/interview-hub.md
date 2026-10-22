@@ -29,7 +29,8 @@ learning_status_changed_at: "2026-10-18 20:45:36.275"
 
 ## 单题
 
-- [[temperature-interview|模型调用中的 Temperature 是什么，怎样起作用？]]
+- [[temperature-zero-interview|为什么 Temperature 设为 0，输出仍可能不一致？]]
+- [[llm-sampling-interview|Temperature、Top K、Top P 是什么，有什么区别？]]
 - [[websocket-sse-interview|WebSocket 和 SSE 有什么区别？]]
 - [[io-multiplexing-interview|IO 多路复用有哪些实现？]]
 - [[epoll-trigger-interview|epoll 有哪些触发方式？]]
