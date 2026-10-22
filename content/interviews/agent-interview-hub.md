@@ -46,6 +46,7 @@ learning_status_changed_at: "2026-10-21 10:04:00.041"
 
 ## 任务进度与用户交互
 
+- [[agent-clarification-interview|用户描述模糊时，怎样优化 Agent 的处理？]]
 - [[agent-progress-interview|Agent 任务运行较久时，前端怎样展示执行进度？]]
 - [[agent-stream-recovery-interview|页面刷新或断线后，怎样恢复 Agent 任务和流式输出？]]
 - [[agent-followup-interview|Agent 执行中怎样接收用户的新要求？]]
