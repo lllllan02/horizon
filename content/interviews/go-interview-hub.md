@@ -36,7 +36,7 @@ learning_status_changed_at: "2026-10-21 10:01:26.593"
 
 ## 内存管理与排障
 
-- [[go-escape-interview|Go 中哪些堆分配值得优化？怎么优化？]]
+- [[go-escape-interview|Go 程序如何减少堆分配？]]
 - [[go-memory-leak-interview|Go 语言中内存泄漏的常见原因是什么？]]
 - [[go-memory-leak-diagnosis-interview|Go 程序出现内存泄漏，怎么排查？]]
 - [[go-oom-interview|Go 程序什么情况下会内存溢出？怎么排查？]]

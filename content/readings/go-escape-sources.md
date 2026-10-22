@@ -4,7 +4,7 @@ category: "Go"
 tags: ["Go", "内存分配"]
 learning_status: pending
 created_at: "2026-10-19 15:27:25"
-updated_at: "2026-10-19 15:36:06"
+updated_at: "2026-10-22 15:17:20"
 source:
   - "https://go.dev/doc/faq#stack_or_heap"
   - "https://go.dev/doc/gc-guide"
@@ -13,9 +13,13 @@ source:
   - "https://pkg.go.dev/net/http/pprof"
   - "https://pkg.go.dev/runtime/pprof#Profile"
   - "https://go.dev/blog/pprof"
+  - "https://go.dev/ref/spec#Appending_and_copying_slices"
+  - "https://go.dev/ref/spec#String_types"
+  - "https://pkg.go.dev/strings#Join"
+  - "https://go.dev/src/strings/strings.go"
 ---
 
-**「逃逸判断保障存储的安全性，优化则要围绕实际的堆分配和 GC 成本进行。」** 本导读节选官方 FAQ、GC 指南和标准库文档中与逃逸优化相关的部分，核对于 2026-10-19；下文编译实验使用本机 Go 1.25.6、darwin/arm64，未测量业务吞吐或延迟收益。
+**「逃逸判断保障存储的安全性，优化则要围绕实际的堆分配和 GC 成本进行。」** 本导读选取 Go FAQ、语言规范、GC 指南和标准库文档中的相关部分；逃逸与缓冲复用内容核对于 2026-10-19，切片与字符串内容核对于 2026-10-22。下文编译实验使用本机 Go 1.25.6、darwin/arm64，未测量业务吞吐或延迟收益。
 
 ## 逃逸判断与生命周期
 
@@ -81,3 +85,17 @@ go tool pprof -alloc_space 'http://localhost:6060/debug/pprof/allocs?seconds=30'
 [bytes.Buffer.Reset](https://pkg.go.dev/bytes#Buffer.Reset)清空逻辑内容，但保留底层存储供后续写入。这为批量消息处理提供了一种优化方式：上一条数据已经消费完后，在同一个循环中重置并复用缓冲区，容量足够时可减少后续底层数组分配。
 
 这是减少分配次数的方案，并不要求把缓冲区改放到栈上。复用时须避免覆盖仍被使用的数据；保留过大的容量也会增加常驻内存，需要按实际负载权衡。此处仅核对 API 语义，未运行复用基准测试。
+
+## 切片预留容量减少扩容
+
+[语言规范对 append 的说明](https://go.dev/ref/spec#Appending_and_copying_slices)规定：容量足够时，追加元素会复用原有底层数组；容量不足时，会分配足够大的新数组并保留已有元素。因此，批量收集最多 `n` 个整数时，可以先用 `make([]int, 0, n)` 创建长度为零、容量为 `n` 的切片，避免这 `n` 次追加中的扩容分配。
+
+这是减少后续扩容，并不消除初始存储，也不保证底层数组位于栈上。实际追加超过容量仍会扩容；预留过大容量则可能浪费内存，应结合已知数量或合理估计使用。
+
+## 字符串集中构造减少中间结果
+
+[语言规范](https://go.dev/ref/spec#String_types)规定字符串内容不可修改。循环执行 `s += part` 时，需要不断构造包含累计内容的结果，可能反复分配并复制已经拼好的前缀。这一场景是循环累积拼接，不能据此认为所有字符串 `+` 表达式都应改写。
+
+[strings.Join](https://pkg.go.dev/strings#Join)把已有的字符串切片连接为一个字符串。2026-10-22 核对的[官方源码](https://go.dev/src/strings/strings.go#L468)先计算最终长度，再调用 `Builder.Grow` 预留容量并写入各片段，避免逐轮生成累计字符串。已有 `parts` 列表且不需要分隔符时，可用 `strings.Join(parts, "")` 集中构造结果；不应为了使用 Join 而默认额外收集一份片段列表。
+
+本次只核对规范与当前在线源码，未运行切片预分配或字符串拼接基准测试，不承诺固定分配次数或实际加速幅度；上文 Go 1.25.6 的编译实验也不代表已在该版本验证 Join 的分配行为。
