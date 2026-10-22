@@ -16,7 +16,7 @@ learning_status_changed_at: "2026-10-20 21:36:01.336"
 
 ### 缓存失效：合并回源
 
-如果是热点 key，缓存失效时大量请求同时查库，可以用[[go-singleflight-interview|请求合并]]，让一个请求查询并回填，其余共享结果，减少重复回源。它只合并同 key、执行期间重叠的调用，进程内的 Singleflight 也不会自动协调其他实例。
+如果是热点 key，[[cache-breakdown-interview|缓存失效时大量请求同时查库]]，可以用[[go-singleflight-interview|请求合并]]，让一个请求查询并回填，其余共享结果，减少重复回源。它只合并同 key、执行期间重叠的调用，进程内的 Singleflight 也不会自动协调其他实例。
 
 ### 缓存命中：本地分流
 

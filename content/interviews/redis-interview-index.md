@@ -32,6 +32,10 @@ learning_status_changed_at: "2026-10-21 10:12:32.067"
 
 ## 缓存一致性与过载保护
 
+- [[distributed-cache-interview|分布式缓存是什么？]]
 - [[cache-consistency-interview|数据库和缓存的一致性怎么保障？]]
 - [[cache-optimization-interview|高并发下，如何优化缓存和数据库访问？]]
+- [[cache-breakdown-interview|缓存击穿是什么，怎么解决？]]
+- [[cache-penetration-interview|缓存穿透是什么，怎么解决？]]
+- [[bloom-filter-interview|布隆过滤器的原理是什么？]]
 - [[cache-avalanche-interview|缓存雪崩怎么解决？]]
