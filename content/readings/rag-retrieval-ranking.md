@@ -4,7 +4,7 @@ category: "RAG"
 tags: ["RAG"]
 type: "article"
 created_at: "2026-10-13 10:49:42"
-updated_at: "2026-10-21 11:47:42"
+updated_at: "2026-10-22 09:54:21"
 learning_status: pending
 source: ["https://sbert.net/examples/sentence_transformer/applications/retrieve_rerank/README.html", "https://learn.microsoft.com/en-us/azure/search/hybrid-search-ranking", "https://sbert.net/examples/sentence_transformer/applications/semantic-search/README.html", "https://www.elastic.co/blog/practical-bm25-part-2-the-bm25-algorithm-and-its-variables", "https://sbert.net/examples/sparse_encoder/applications/semantic_search/README.html", "https://www.elastic.co/docs/reference/elasticsearch/rest-apis/retrievers/linear-retriever", "https://learn.microsoft.com/en-us/azure/search/hybrid-search-overview", "https://learn.microsoft.com/en-us/azure/search/vector-search-how-to-query"]
 ---
@@ -28,6 +28,8 @@ Sentence Transformers 的语义检索文档区分对称任务与非对称任务�
 Azure 的 [Hybrid search overview · Why use hybrid search](https://learn.microsoft.com/en-us/azure/search/hybrid-search-overview#why-use-hybrid-search)（2026-10-21 核对，节选适用场景）指出，向量检索能找到概念上相似、即便没有共享词项的资料；产品代码、专业黑话、日期和人名等精确查询，则常能从关键词检索中受益。混合检索并行执行词项与向量查询，再融合候选，利用两种信号覆盖不同匹配需求。
 
 这支持按查询与资料的用词关系理解两路互补，不构成「专业术语一律不适合向量」的结论，也不保证混合后每条查询都改善；具体收益需要在目标语料、分析器和模型上验证。
+
+同页 [How does hybrid search work?](https://learn.microsoft.com/en-us/azure/search/hybrid-search-overview#how-does-hybrid-search-work)（2026-10-22 核对）说明，文本字段与向量字段可共存于同一搜索索引中，分别使用全文与向量索引。因此，多路检索不要求多套独立存储，但需要相应的字段、表示和索引支持；不能把它理解成无需准备就能对任意存储使用所有检索方式。
 
 ## 为什么分成召回与重排？
 
