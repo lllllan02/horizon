@@ -23,7 +23,8 @@ learning_status_changed_at: "2026-10-21 10:10:15.900"
 
 ## 流量与过载保护
 
-- [[rate-limiting-interview|怎么做限流？有哪些常见的限流算法？]]
+- [[rate-limiting-interview|什么是限流，怎么做？]]
+- [[service-circuit-breaker-interview|什么是熔断，如何触发和恢复？]]
 - [[service-degradation-interview|降级是做什么的，大概怎么做？]]
 
 ## 项目案例
