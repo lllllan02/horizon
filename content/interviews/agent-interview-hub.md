@@ -78,5 +78,5 @@ learning_status_changed_at: "2026-10-21 10:04:00.041"
 
 - [[agent-trace-interview|Agent 的 Trace 怎么做，线上问题怎么定位？]]
 - [[agent-loop-interview|怎样避免 Agent 死循环和无限调用工具？]]
-- [[agent-memory-leak-interview|Agent 服务最常见的生产环境内存泄漏有哪几种？如何排查和修复？]]
+- [[agent-memory-leak-interview|Agent 服务内存泄漏如何排查与修复？]]
 - [[agent-timeout-interview|模型调用响应慢，如何设计分层超时与熔断？高并发下怎么处理？]]
