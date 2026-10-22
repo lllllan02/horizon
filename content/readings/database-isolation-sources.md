@@ -5,16 +5,17 @@ tags: ["MySQL", "事务"]
 type: article
 learning_status: pending
 created_at: "2026-10-19 22:40:16"
-updated_at: "2026-10-20 21:14:30"
+updated_at: "2026-10-22 10:44:50"
 source:
   - "https://www.postgresql.org/docs/17/transaction-iso.html"
   - "https://dev.mysql.com/doc/refman/8.4/en/innodb-transaction-isolation-levels.html"
   - "https://dev.mysql.com/doc/refman/8.4/en/innodb-consistent-read.html"
   - "https://dev.mysql.com/doc/refman/8.4/en/innodb-next-key-locking.html"
   - "https://dev.mysql.com/doc/refman/8.4/en/innodb-multi-versioning.html"
+  - "https://github.com/mysql/mysql-server/blob/mysql-8.4.0/storage/innobase/include/read0types.h"
 ---
 
-**「隔离级别描述保证，快照与锁描述实现。」** PostgreSQL 17 手册以读异常解释 SQL 标准的最低保证；MySQL 8.4 手册进一步说明 InnoDB 如何用多版本读取和范围加锁落实隔离。以下仅节选四级隔离、读异常、多版本读取与锁的分工及相关实现边界，相关章节核对于 2026-10-19 至 2026-10-20，未运行数据库实验。
+**「隔离级别描述保证，快照与锁描述实现。」** PostgreSQL 17 手册以读异常解释 SQL 标准的最低保证；MySQL 8.4 手册进一步说明 InnoDB 如何用多版本读取和范围加锁落实隔离。以下仅节选四级隔离、读异常、多版本读取与锁的分工及相关实现边界；相关手册章节核对于 2026-10-19 至 2026-10-22，Read View 补充核对 MySQL 8.4.0 源码，未运行数据库实验。
 
 ## 四级隔离与三种读异常
 
@@ -29,6 +30,12 @@ PostgreSQL 的 [Transaction Isolation 定义段与表 13.1](https://www.postgres
 [Consistent Nonlocking Reads](https://dev.mysql.com/doc/refman/8.4/en/innodb-consistent-read.html)说明，一致性读按快照读取可见版本，不给访问的数据设置用于阻止其他会话修改的锁，因此读取期间其他会话仍能修改数据。结合这两处机制，可以将采用 MVCC 的设计收益归纳为：**「让普通读取在满足可见性要求时，减少与写入互相等待。」** 这是对手册机制的归纳；锁也能协调并发访问，隔离要求本身并不限定只能采用多版本。
 
 多版本也有成本：旧版本需要保存、重建和清理；仍有快照需要旧版本时，相应的 update undo 不能丢弃。它主要用于读已提交、可重复读下的普通一致性读；锁定读与写入仍依靠锁，不能据此推出所有隔离级别、所有 SQL 都不需要加锁。
+
+## 行版本与 Read View
+
+[InnoDB Multi-Versioning 的隐藏字段与二级索引小节](https://dev.mysql.com/doc/refman/8.4/en/innodb-multi-versioning.html)说明，聚簇索引记录含有 `DB_TRX_ID` 和 `DB_ROLL_PTR`：前者标识最近插入或更新记录的事务，后者指向 undo 记录，其中保存重建更新前行内容所需的信息。二级索引记录不含这些隐藏字段。沿 undo 信息重建旧版本，是为查询提供历史内容，不会把当前行实际改回去。
+
+MySQL 8.4.0 的 [ReadView::changes_visible()](https://github.com/mysql/mysql-server/blob/mysql-8.4.0/storage/innobase/include/read0types.h#L146-L169)用版本的事务 ID、视图的事务 ID 边界、创建者 ID 和活跃事务集合判断可见性；[成员定义](https://github.com/mysql/mysql-server/blob/mysql-8.4.0/storage/innobase/include/read0types.h#L259-L274)说明集合记录快照创建时活跃的读写事务。Read View 保存这套判断所需的信息，undo 则提供重建旧版本所需的信息，两者共同支持读取可见版本。
 
 ## InnoDB 的快照读
 

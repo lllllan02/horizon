@@ -15,8 +15,10 @@ learning_status_changed_at: "2026-10-21 10:11:21.744"
 
 ## 事务与锁
 
+- [[mysql-acid-interview|讲一下 MySQL 事务的 ACID 特性？]]
 - [[database-isolation-interview|数据库有哪些事务隔离级别，分别解决什么问题？]]
-- [[mysql-mvcc-interview|为什么 MySQL InnoDB 使用 MVCC 实现事务隔离？]]
+- [[mysql-mvcc-interview|MySQL InnoDB 的 MVCC 是怎么实现的？]]
+- [[mysql-logs-interview|MySQL 的三个日志分别有什么用途？]]
 - [[mysql-deadlock-interview|MySQL 遇到死锁，如何排查和优化修复？]]
   - [[mysql-deadlock-victim|发生死锁时，InnoDB 会回滚哪个事务？]]
 - [[mysql-transaction-retry|MySQL 事务失败后，哪些情况可以重试？怎么重试？]]
