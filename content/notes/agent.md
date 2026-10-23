@@ -4,7 +4,7 @@ title: "Agent"
 category: "Agent"
 tags: ["Agent", "工程选型"]
 created_at: "2026-10-09"
-updated_at: "2026-10-18 00:11:35"
+updated_at: "2026-10-23 23:17:09"
 reading_suggestions:
   - agent-loop
   - tool-calling
@@ -20,12 +20,13 @@ reading_suggestions:
   - agent-guardrails
   - agent-sandbox
   - agent-human-in-the-loop
-  - multi-agent-learning
+  - multi-agent-benefits
+  - multi-agent-orchestration
   - agent-trace
   - agent-evaluation
   - agent-vs-workflow
   - enterprise-agent-build
-learning_status_changed_at: "2026-10-18 00:15:58.155"
+learning_status_changed_at: "2026-10-23 23:22:57.773"
 ---
 
 **LLM Agent（智能体）是以大模型为决策核心，在给定目标与约束下选择动作，并根据执行结果调整行动的系统。**
@@ -66,7 +67,7 @@ Agent 能执行命令、修改文件之后，错误就可能影响真实环境�
 
 ## 何时需要多个 Agent？
 
-单个 Agent 的上下文或串行探索成为瓶颈，而任务又能形成独立交付物时，可以引入[[multi-agent-learning|多 Agent 协作]]，让不同执行者各自判断、使用工具，再返回成果或交接任务。它增加了通信与协调成本，是否拆分取决于独立运行的实际收益。
+单个 Agent 的上下文或串行探索成为瓶颈，而任务又能形成独立交付物时，可以引入[[multi-agent-benefits|多 Agent 协作]]，让不同执行者各自判断、使用工具，再返回成果或交接任务。它增加了通信与协调成本，是否拆分取决于独立运行的实际收益；确定分工后，再通过[[multi-agent-orchestration|编排]]组织执行、协作与信息传递。
 
 ## 怎样判断这些能力是否值得？
 

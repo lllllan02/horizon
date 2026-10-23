@@ -1,6 +1,6 @@
 ---
 title: "多 Agent 学习选读：编排术语、源码与工程经验"
-parent: multi-agent-learning
+parent: multi-agent-orchestration
 category: "Agent"
 tags: ["Agent", "多Agent协作", "工程选型"]
 type: article

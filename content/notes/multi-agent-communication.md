@@ -4,26 +4,24 @@ parent: multi-agent-orchestration
 type: overview
 category: "Agent"
 tags: ["Agent", "多Agent协作", "上下文管理"]
-learning_status: reading
+learning_status: organized
 created_at: "2026-10-22 14:41:09"
-updated_at: "2026-10-23 19:54:46"
-learning_status_changed_at: "2026-10-22 15:18:12.027"
+updated_at: "2026-10-23 22:43:08"
+learning_status_changed_at: "2026-10-23 22:45:45.500"
 ---
 
-**多 Agent 的信息传递包含两步：程序交付数据，再将内容放进接收成员的模型输入。** 在[[multi-agent-orchestration|多 Agent 编排]]中，模型可提出工具调用，程序执行实际的收发与读写。
-
-![[assets/multi-agent-communication-methods.png|640]]
+**多 Agent 的信息与成果传递，是将任务、发现和工作结果交给其他成员使用的过程。** 成员需要接续工作时，要约定怎样交付数据、带上哪些内容，以及接收方何时处理。实际调用、收发和读写由程序执行，模型可通过工具提出请求。
 
 ## 信息通过什么传递
 
-- **调用与返回**：调用参数传入任务，子 Agent 的输出作为工具结果交回。[[langchain-multi-agent#具体怎样实现？|工具包装]]决定交付哪些内容。
-- **[[multi-agent-message-passing|消息传递]]**：程序按规则触发，或模型通过工具提出发送请求，再由程序投递、接收并交给模型处理。Channel、HTTP、消息队列是其中的投递实现。
-- **[[multi-agent-shared-state|共享状态]]**：以 LangGraph 的节点增量与 ADK 的会话状态为例，说明共享哪些字段、何时应用更新、后续成员怎样读取，以及并发合并的边界。
+| 交付方式 | 数据怎样交给对方 |
+| --- | --- |
+| [[langchain-multi-agent#具体怎样实现？\|调用与返回]] | 传入任务，再沿本次调用取得选定的返回成果。 |
+| [[multi-agent-message-passing\|消息传递]] | 投递给接收成员，由它的运行程序安排读取和处理。 |
+| [[multi-agent-shared-state\|共享状态]] | 写入共同记录，其他成员通过检查或通知发现更新后读取。 |
 
-三者可以组合：主管用工具委派 A、B，成员通过消息交流，同时把证据写入共享记录。图中的箭头表示数据流转；谁持续负责、谁接手任务，另由[[multi-agent-collaboration-patterns|协作与控制模式]]约定。
+![[assets/multi-agent-communication-methods.png|640]]
 
-## 数据送到了，怎样接回任务
+**这些方式可以组合。** 例如，用调用委派任务、用共享状态保存成果，再用消息通知其他成员读取。谁持续负责、谁接手后续任务，仍由[[multi-agent-collaboration-patterns|协作与控制模式]]约定。
 
-数据都要按需进入接收成员的[[agent-context-input|上下文]]。交任务保留目标、约束和预期输出；交成果保留结论、出处、条件与缺口，并标明完成、失败或待补充。
-
-**数据送达、任务完成、成果通过验收，需要分别判断。** 后台调用只返回编号时，还须取得实际结果；收到结果后，负责人再按任务标准验收。
+需要模型处理的数据，仍须进入接收成员的[[agent-context-input|本轮输入]]。**数据送达、任务完成和成果通过验收，需要分别判断。**

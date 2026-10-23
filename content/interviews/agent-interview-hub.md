@@ -44,7 +44,8 @@ learning_status_changed_at: "2026-10-21 10:04:00.041"
 ## 协作与通信
 
 - [[agent-delegation-interview|什么任务值得拆给多个 Agent？]]
-- [[multi-agent-learning|多 Agent 协作学习入口]]
+- [[multi-agent-benefits|为什么需要多个 Agent]]
+- [[multi-agent-orchestration|多 Agent 的编排]]
 - [[a2a-interview|你对 A2A 协议了解多少？]]
 
 ## 任务进度与用户交互

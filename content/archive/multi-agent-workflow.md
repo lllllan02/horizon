@@ -1,6 +1,6 @@
 ---
 title: "多 Agent 协作怎样完成交付"
-parent: multi-agent-learning
+parent: multi-agent-orchestration
 category: "Agent"
 tags: ["Agent", "多Agent协作"]
 learning_status: pending

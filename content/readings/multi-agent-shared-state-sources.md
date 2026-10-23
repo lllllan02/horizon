@@ -26,6 +26,8 @@ source:
 
 [官方 worker 示例](https://docs.langchain.com/oss/python/langgraph/workflows-agents#creating-workers-in-langgraph)让各 worker 接收各自的 `section`，调用模型生成章节，然后返回 `{"completed_sections": [section.content]}`。共享字段使用 `Annotated[list, operator.add]` 累积章节。图随后安排 `synthesizer` 读取列表并拼接报告；这个汇总函数只是字符串拼接，没有再次调用模型。需要后续模型使用状态时，同页 Agents 示例中的节点显式将 `state["messages"]` 交给模型调用，不能省略输入组装。
 
+![[assets/multi-agent-shared-state-runtime.png|640]]
+
 [Pregel 的三个阶段](https://docs.langchain.com/oss/python/langgraph/pregel#overview)是计划、并行执行、应用更新。本步产生的更新在执行阶段不可见，下一步才可读；节点是否执行仍取决于图的边、条件与调度，不是任意字段变化都会唤醒所有 Agent。同一步并行的 worker 因而不能依赖彼此本步的新结果。
 
 源码固定到 [1.2.16 的提交 `9d68e5b3`](https://github.com/langchain-ai/langgraph/commit/9d68e5b3eb1a63027b05e9f0152149ea0284dcdb)：

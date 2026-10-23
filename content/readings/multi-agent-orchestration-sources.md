@@ -1,6 +1,6 @@
 ---
 title: "多 Agent 编排：官方模式对照"
-parent: multi-agent-learning
+parent: multi-agent-orchestration
 category: "Agent"
 tags: ["Agent", "多Agent协作", "工程选型"]
 type: article

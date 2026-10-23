@@ -1,6 +1,6 @@
 ---
 title: "Anthropic：多 Agent 研究系统的收益与代价"
-parent: multi-agent-learning
+parent: multi-agent-benefits
 category: "Agent"
 tags: ["Agent", "多Agent协作", "上下文管理"]
 created_at: "2026-10-13 17:41:05"
