@@ -4,12 +4,15 @@ aliases: ["Multi-Agent Flow Patterns"]
 parent: multi-agent-orchestration
 category: "Agent"
 tags: ["Agent", "多Agent协作", "工作流"]
-learning_status: pending
+learning_status: organized
 created_at: "2026-10-22 17:16:55"
-updated_at: "2026-10-22 17:23:14"
+updated_at: "2026-10-23 16:47:15"
+learning_status_changed_at: "2026-10-23 16:50:34.843"
 ---
 
 **流程模式是组织任务执行顺序、分支选择与成果汇合的结构。** 在[[multi-agent-orchestration|多 Agent 编排]]中，按任务依赖选择流程，可以减少不必要的等待和调用。
+
+本篇关注「**任务怎样推进**」；[[multi-agent-collaboration-patterns|协作与控制模式]]关注成员怎样分工、谁决定后续处理。顺序流水线与交接都可能画成 `A → B`，但前者表达步骤依赖，后者表达处理权转移，不能只凭图形相似将两者归为同一类。
 
 [[multi-agent-orchestration-sources#LangGraph：从固定依赖走向动态分工|常见的三种基础模式]]分别处理前后依赖、独立分支与路径选择：
 

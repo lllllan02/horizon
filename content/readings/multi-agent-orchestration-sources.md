@@ -6,10 +6,12 @@ tags: ["Agent", "多Agent协作", "工程选型"]
 type: article
 learning_status: pending
 created_at: "2026-10-22 16:56:46"
-updated_at: "2026-10-22 17:01:35"
+updated_at: "2026-10-23 17:53:35"
 source:
   - "https://adk.dev/workflows/patterns/"
   - "https://docs.langchain.com/oss/python/langgraph/workflows-agents"
+  - "https://docs.langchain.com/oss/python/langgraph/graph-api#reducers"
+  - "https://docs.langchain.com/oss/python/langgraph/errors/INVALID_CONCURRENT_GRAPH_UPDATE"
   - "https://learn.microsoft.com/en-us/agent-framework/workflows/orchestrations/"
   - "https://learn.microsoft.com/en-us/agent-framework/workflows/orchestrations/sequential"
   - "https://learn.microsoft.com/en-us/agent-framework/workflows/orchestrations/concurrent"
@@ -35,6 +37,12 @@ source:
 [Workflows and agents](https://docs.langchain.com/oss/python/langgraph/workflows-agents)依次解释 Prompt chaining、Parallelization、Routing、Orchestrator-worker、Evaluator-optimizer，再介绍自主 Agent，并提供图结构、状态与运行示例。
 
 前三者分别处理前后依赖、可独立执行的分支、按输入选择处理路径。[Orchestrator-worker](https://docs.langchain.com/oss/python/langgraph/workflows-agents#orchestrator-worker)让协调者按具体任务动态形成子任务，区别于预先写好的固定并行分支；[Evaluator-optimizer](https://docs.langchain.com/oss/python/langgraph/workflows-agents#evaluator-optimizer)根据评价决定结束或带反馈重做，适合评价标准明确、反馈能指导改进的任务。
+
+[Creating workers](https://docs.langchain.com/oss/python/langgraph/workflows-agents#creating-workers-in-langgraph)示例让各 worker 拥有独立状态，同时将产出的章节汇入共同的输出字段，协调图再读取并综合。这里共享的是约定的输出内容，不表示各 worker 自动看见彼此的完整运行历史。
+
+[Reducers](https://docs.langchain.com/oss/python/langgraph/graph-api#reducers)说明字段可以配置更新函数，由旧值与本次增量计算新值，例如合并各分支提交的列表。[并发更新错误](https://docs.langchain.com/oss/python/langgraph/errors/INVALID_CONCURRENT_GRAPH_UPDATE)则说明：同一步中，多个节点更新一个没有合适合并规则的字段，可能触发 `INVALID_CONCURRENT_GRAPH_UPDATE`；需要明确该字段应怎样接收多个更新，不能把 LangGraph 描述为默认静默保留最后一份写入。
+
+这类规则解决输出怎样保存和汇合，不会自动判断两个结论在事实层面是否矛盾；后者仍需要核对内容与依据。这是从字段更新机制得到的工程区分。共享状态与并发更新说明核对于 2026-10-23，未运行并发示例。
 
 这些是流程模式，示例节点可以只是一次模型调用，不能因有多个节点就称为多 Agent。它们与 [[anthropic-effective-agents-summary|Anthropic 对工作流与自主决策的区分]]一致；在多 Agent 系统中，可以让不同 Agent 承担相应环节。
 
