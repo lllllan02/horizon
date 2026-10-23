@@ -5,10 +5,10 @@ category: "面试"
 parent: interview-preparation-index
 tags: ["面试", "Agent"]
 type: practice
-learning_status: reading
+learning_status: organized
 created_at: "2026-10-21 14:08:02"
 updated_at: "2026-10-21 14:08:02"
-learning_status_changed_at: "2026-10-21 14:11:02.544"
+learning_status_changed_at: "2026-10-22 17:52:02.709"
 ---
 
 这份岗位围绕「**将教育大模型能力做成可复用、可维护、可规模复制的教学系统**」展开：既要实现诊断、讲解、追问和个性化引导，也要支撑实时交互、低延迟推理与大规模教育数据。虽然附件标题为全栈开发工程师，正文主要描述 Agent 与后端工程，前端职责需要另行确认。

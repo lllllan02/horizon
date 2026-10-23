@@ -4,6 +4,10 @@
 
 网页读取与 Pages 导出当前只收录 `content/notes/`、`content/readings/` 与 `content/glossary/`，本目录不参与网页渲染。
 
+## 2026-10-22 新增 JD 剪藏
+
+- [壹零中枢：后端开发工程师（AI agent 行业 Go 语言）原件](<「后端开发工程师（AI agent行业go语言）招聘」_壹零中枢招聘-BOSS直聘.md>) → [岗位准备清单](../interviews/yiling-agent-backend-preparation.md)。剪藏创建日期与页面标注更新时间均为 2026-10-22；2026-10-23 核对全部职责与任职要求，保留年限口径、学历放宽和 0–1 优先条件。未重新抓取网页或核实当前招聘状态。
+
 ## 2026-10-21 新增 JD Word 附件
 
 - [浙江精准学教育有限公司：全栈开发工程师 Markdown 原文](全栈开发工程师-浙江精准学教育有限公司.md)，对应 [Word 原件](全栈开发工程师-浙江精准学教育有限公司.docx) → [岗位准备清单](../interviews/jingzhunxue-fullstack-preparation.md)。完整保留附件正文，转换稿记录保存时间及原件校验值；公司宣传、性能目标与当前招聘状态未独立核实。
